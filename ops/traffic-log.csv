@@ -1,1 +1,2 @@
 date,pages_published,indexnow_urls,google_inspection_requests,google_indexed,bing_indexed,search_impressions,search_clicks,human_sessions,notes
+2026-08-19,14,14,0,0,0,0,0,0,"Production launch; Cloudflare Web Analytics baseline. Search Console verified and sitemap/feed submitted; URL Inspection request blocked by the account's daily quota."

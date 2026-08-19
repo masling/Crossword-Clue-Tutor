@@ -19,7 +19,8 @@ npm run dev
 
 Open `http://127.0.0.1:4173`.
 
-The project has no runtime dependencies. Node.js 20 or newer is required.
+The project has no runtime dependencies. Node.js 22 or newer is required for
+the bundled Cloudflare deployment tooling.
 
 ## Content workflow
 
@@ -35,9 +36,11 @@ npm run content:publish -- ops/intake/YYYY-MM-DD-source.json --dry-run
 npm run content:publish -- ops/intake/YYYY-MM-DD-source.json
 ```
 
-After deployment, notify participating search engines through IndexNow:
+Deploy the production build to the existing Cloudflare Pages project, then
+notify participating search engines through IndexNow:
 
 ```bash
+npm run deploy
 npm run indexnow:submit
 ```
 
@@ -51,8 +54,15 @@ Google discovery uses the generated sitemap and Atom feed plus limited URL Inspe
 
 Private tool queries run in the browser and do not create URLs or indexable pages. Only reviewed data files generate pages included in the sitemap.
 
-## Before deployment
+## Production
 
-Replace the reserved `.example` URL in `site.config.json` with the final HTTPS domain. The build intentionally warns until this is done.
+The canonical production site is <https://crosswordcluetutor.com>. It is hosted
+by the `crossword-clue-tutor` Cloudflare Pages project. Cloudflare Web Analytics
+uses automatic JavaScript injection, and Google Search Console is verified with
+the apex-domain TXT record. Do not remove that verification record.
+
+The Pages project currently uses Direct Upload. A GitHub push verifies and
+builds the site, but production changes are published only after `npm run deploy`.
+This keeps deployment credentials out of the repository.
 
 See [the opportunity research](research/2026-08-18-crossword-opportunity.md) for the market, keyword, sourcing, legal-risk, and validation rationale.

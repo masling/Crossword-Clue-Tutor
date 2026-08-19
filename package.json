@@ -7,6 +7,7 @@
     "build": "node scripts/build.mjs",
     "check": "node scripts/check-build.mjs",
     "content:publish": "node scripts/publish-clue-batch.mjs",
+    "deploy": "npm run build && wrangler pages deploy dist --project-name crossword-clue-tutor --branch main",
     "dev": "node scripts/serve.mjs",
     "indexnow:submit": "node scripts/submit-indexnow.mjs",
     "production:configure": "node scripts/configure-production.mjs",
@@ -14,6 +15,9 @@
     "validate": "node scripts/validate-content.mjs"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "wrangler": "^4.124.0"
   }
 }
