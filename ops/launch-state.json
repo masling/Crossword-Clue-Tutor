@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T10:28:00+08:00",
+  "updatedAt": "2026-08-19T10:30:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -27,6 +27,8 @@
     "bingSitemapStatus": "Processing",
     "bingSitemapDiscoveredPages": 0,
     "bingIndexedPages": 0,
+    "bingSiteScanStatus": "Queued",
+    "bingSiteScanPageLimit": 100,
     "searchImpressions": 0,
     "searchClicks": 0,
     "indexNowSubmittedUrls": 57
@@ -41,6 +43,6 @@
   },
   "nextAction": {
     "notBefore": "2026-08-19T21:00:00+08:00",
-    "action": "Record bot-filtered visits and Google discovery after the 2026-08-19 selected clue batch; next freshness check is 2026-08-20 at 10:15 SGT."
+    "action": "Record bot-filtered visits, Google/Bing discovery, and the Bing Site Scan result after the 2026-08-19 selected clue batch; next freshness check is 2026-08-20 at 10:15 SGT."
   }
 }
