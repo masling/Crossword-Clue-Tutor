@@ -1,12 +1,17 @@
 {
-  "updatedAt": "2026-08-19T10:36:00+08:00",
+  "updatedAt": "2026-08-19T11:24:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
     "deadline": "2026-09-02T09:23:00+08:00",
     "currentNetHumanSessions": 0,
     "operatorQaBaseline": 4,
-    "analyticsFilter": "excludeBots=Yes"
+    "analyticsFilter": "excludeBots=Yes",
+    "analyticsProviders": [
+      "Cloudflare Web Analytics",
+      "Pageview"
+    ],
+    "pageviewConfiguredAt": "2026-08-19T11:24:00+08:00"
   },
   "content": {
     "indexablePages": 94,

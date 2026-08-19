@@ -89,6 +89,10 @@ function breadcrumbs(items) {
 
 function pageTemplate({ title, description, route, body, bodyClass = "", noindex = false, jsonLd = [] }) {
   const fullTitle = title === config.name ? `${config.name} — ${config.tagline}` : `${title} | ${config.name}`;
+  const pageview = config.analytics?.pageview;
+  const pageviewMarkup = pageview
+    ? `<link rel="preconnect" href="${escapeHtml(new URL(pageview.scriptSrc).origin)}" crossorigin>\n  <script defer data-domain="${escapeHtml(pageview.domain)}" src="${escapeHtml(pageview.scriptSrc)}"></script>`
+    : "";
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -103,6 +107,8 @@ function pageTemplate({ title, description, route, body, bodyClass = "", noindex
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${canonicalUrl(route)}">
   <meta name="theme-color" content="oklch(0.48 0.09 210)">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  ${pageviewMarkup}
   <link rel="stylesheet" href="/assets/style.css">
   ${jsonLd.map((item) => `<script type="application/ld+json">${JSON.stringify(item).replaceAll("<", "\\u003c")}</script>`).join("\n  ")}
 </head>
@@ -368,7 +374,7 @@ await writePage("/about/", pageTemplate({ title: "About", description: "Why Clue
 const editorialBody = `<article class="shell prose-page">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Editorial policy" }])}<h1>Editorial policy</h1><p>Indexed explanations are written or materially reviewed for accuracy, usefulness, and clue grammar. Each clue page shows its latest review date.</p><h2>What earns an indexed page</h2><ul><li>A verified clue-answer relationship.</li><li>A specific explanation of the signal, sense, or wordplay.</li><li>Independent value beyond a bare answer or dictionary definition.</li><li>A path for users to report confusing or incorrect guidance.</li></ul><h2>Automation boundary</h2><p>Private tool queries are not automatically published. Empty results, low-confidence suggestions, and unreviewed generated text stay outside the sitemap.</p><h2>Source boundary</h2><p>Selected published clue text may be quoted for identification, commentary, and teaching. Hints, definitions, and explanations are independently written or materially reviewed. We do not scrape or republish complete daily puzzles, grids, or full answer keys.</p></article>`;
 await writePage("/editorial-policy/", pageTemplate({ title: "Editorial policy", description: "How Clue Tutor reviews crossword explanations, separates private tool output from indexed content, and handles sources.", route: "/editorial-policy/", body: editorialBody, bodyClass: "prose-page-body" }));
 
-const privacyBody = `<article class="shell prose-page">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Privacy" }])}<h1>Privacy</h1><p>Clue matching runs in your browser. The clue, pattern, and answer you type are not sent to our application server or saved in an account.</p><h2>Analytics</h2><p>Cloudflare Web Analytics automatically adds a privacy-focused real-user monitoring beacon. It reports aggregate visits, page views, device and country categories, and performance metrics without using cookies or building cross-site profiles. We do not run advertising scripts or session replay.</p><h2>Local behavior</h2><p>The browser downloads the reviewed example data needed for matching. Clearing or closing the page removes form input; the site does not create an account or save history.</p></article>`;
+const privacyBody = `<article class="shell prose-page">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Privacy" }])}<h1>Privacy</h1><p>Clue matching runs in your browser. The clue, pattern, and answer you type are not sent to our application server or saved in an account.</p><h2>Analytics</h2><p>We use Cloudflare Web Analytics for aggregate visits and real-user performance metrics. We also use Pageview to record pageview events; its browser script sends the visited page URL, referrer, site domain, and event name to <code>app.pageview.app</code>. The supplied Pageview script does not set cookies, and both analytics tools ignore common automated-browser signals. We do not run advertising scripts or session replay.</p><h2>Local behavior</h2><p>The browser downloads the reviewed example data needed for matching. Clearing or closing the page removes form input; the site does not create an account or save history.</p></article>`;
 await writePage("/privacy/", pageTemplate({ title: "Privacy", description: "How the Clue Tutor validation build handles crossword clues, patterns, answers, storage, and analytics.", route: "/privacy/", body: privacyBody, bodyClass: "prose-page-body" }));
 
 const notFoundBody = `<section class="shell not-found"><div class="empty-grid" aria-hidden="true"><i>C</i><i>L</i><i>U</i><i>E</i></div><h1>That square is empty.</h1><p>The page does not exist, but the clue solver may still get you moving.</p><a class="button button-primary" href="/solver/">Open the solver</a></section>`;
@@ -379,6 +385,7 @@ await Promise.all([
   cp(path.join(root, "src/style.css"), path.join(dist, "assets/style.css")),
   cp(path.join(root, "src/app.js"), path.join(dist, "assets/app.js")),
   cp(path.join(root, "src/solver.mjs"), path.join(dist, "assets/solver.mjs")),
+  cp(path.join(root, "src/favicon.svg"), path.join(dist, "favicon.svg")),
   writeFile(path.join(dist, "assets/clues.json"), JSON.stringify(clues)),
   writeFile(path.join(dist, "assets/answers.json"), JSON.stringify(answers))
 ]);

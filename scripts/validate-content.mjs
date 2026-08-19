@@ -53,6 +53,15 @@ export function validateContent({ clues, answers, clueTypes, config }) {
   if (config?.indexNowKey && !/^[a-f0-9]{32,128}$/i.test(config.indexNowKey)) {
     errors.push("indexNowKey must be 32-128 hexadecimal characters");
   }
+  if (config?.analytics?.pageview) {
+    const pageview = config.analytics.pageview;
+    try {
+      if (pageview.domain !== new URL(config.siteUrl).hostname) errors.push("Pageview analytics domain must match siteUrl hostname");
+      if (new URL(pageview.scriptSrc).protocol !== "https:") errors.push("Pageview analytics script must use HTTPS");
+    } catch {
+      errors.push("Pageview analytics requires a valid domain and absolute scriptSrc URL");
+    }
+  }
 
   for (const [index, answer] of answers.entries()) {
     const label = `answers[${index}]`;

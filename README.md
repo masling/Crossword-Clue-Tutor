@@ -59,8 +59,9 @@ Private tool queries run in the browser and do not create URLs or indexable page
 
 The canonical production site is <https://crosswordcluetutor.com>. It is hosted
 by the `crossword-clue-tutor` Cloudflare Pages project. Cloudflare Web Analytics
-uses automatic JavaScript injection, and Google Search Console is verified with
-the apex-domain TXT record. Do not remove that verification record.
+uses automatic JavaScript injection, Pageview provides a second pageview
+measurement, and Google Search Console is verified with the apex-domain TXT
+record. Do not remove that verification record.
 
 The Pages project uses Direct Upload through GitHub Actions. Every push to
 `main` runs the editorial and build checks, then deploys that exact verified
