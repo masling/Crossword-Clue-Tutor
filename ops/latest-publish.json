@@ -1,26 +1,27 @@
 {
-  "publishedAt": "2026-08-19T01:43:38.482Z",
-  "input": "ops/intake/2026-08-18-nyt-daily-selected.json",
+  "publishedAt": "2026-08-19T02:15:48.924Z",
+  "input": "ops/intake/2026-08-19-nyt-selected.json",
   "urls": [
-    "/explainers/forfends-nyt-daily/",
-    "/explainers/n-of-naacp-abbr-nyt-daily/",
-    "/explainers/oh-buzz-off-nyt-daily/",
-    "/explainers/high-end-private-jet-familiarly-nyt-daily/",
-    "/explainers/coverers-of-current-events-nyt-daily/",
-    "/explainers/meaning-of-vidi-in-caesars-boast-nyt-daily/",
-    "/explainers/nuts-whose-shells-look-like-little-berets-nyt-daily/",
-    "/explainers/story-of-ones-life-nyt-daily/",
-    "/explainers/eponym-of-a-chess-rating-system-nyt-daily/",
-    "/explainers/environs-nyt-daily/"
+    "/explainers/its-in-a-pickle-nyt-mini/",
+    "/explainers/elevators-in-british-english-nyt-mini/",
+    "/explainers/sports-org-for-chicago-fire-and-new-york-red-bulls-nyt-mini/",
+    "/explainers/do-blank-others-golden-rule-nyt-mini/",
+    "/explainers/pickle-nyt-mini/",
+    "/explainers/private-sleeping-accommodations-nyt-daily/",
+    "/explainers/wipe-from-ones-memory-so-to-speak-nyt-daily/",
+    "/explainers/hybrid-tennis-attire-nyt-daily/",
+    "/explainers/hides-ones-central-point-doubly-homophonic-hint-nyt-daily/",
+    "/explainers/top-three-sights-in-fiji-nyt-daily/",
+    "/explainers/verbal-hesitations-nyt-daily/",
+    "/explainers/word-salary-derives-from-latin-for-this-nyt-daily/"
   ],
   "answerUrls": [
-    "/crosswordese/deters/",
-    "/crosswordese/natl/",
-    "/crosswordese/bite-me/",
-    "/crosswordese/g-six/",
-    "/crosswordese/obit/",
-    "/crosswordese/elo/",
-    "/crosswordese/milieu/"
+    "/crosswordese/brine/",
+    "/crosswordese/unto/",
+    "/crosswordese/unsee/",
+    "/crosswordese/skort/",
+    "/crosswordese/buries-the-lede/",
+    "/crosswordese/ers/"
   ],
   "clinicUrls": [
     "/daily-clue-clinic/2026-08-19/"

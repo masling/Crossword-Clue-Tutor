@@ -21,6 +21,9 @@ The publishing command records new explainer URLs, matching answer-meaning pages
 the daily clinic, and changed hub pages. IndexNow submits that complete update set
 after the production deployment is reachable.
 
+On `main`, steps 7–8 run automatically in GitHub Actions after all verification
+checks pass. The commands above remain the local recovery path.
+
 ## Singapore launch window
 
 - 10:15 SGT: check the newly available U.S. puzzle date and discussion signals.

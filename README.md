@@ -64,7 +64,8 @@ the apex-domain TXT record. Do not remove that verification record.
 
 The Pages project uses Direct Upload through GitHub Actions. Every push to
 `main` runs the editorial and build checks, then deploys that exact verified
-artifact to production. The scoped Cloudflare credentials live only in GitHub
-Actions Secrets. `npm run deploy` remains the manual fallback.
+artifact to production and submits the recorded changed URLs to IndexNow. The
+scoped Cloudflare credentials live only in GitHub Actions Secrets. `npm run
+deploy` and `npm run indexnow:submit` remain manual fallbacks.
 
 See [the opportunity research](research/2026-08-18-crossword-opportunity.md) for the market, keyword, sourcing, legal-risk, and validation rationale.

@@ -286,5 +286,101 @@
     ],
     "otherMeanings": "The term often emphasizes a social or cultural setting rather than merely the physical area around an object.",
     "related": ["epee"]
+  },
+  {
+    "slug": "brine",
+    "answer": "BRINE",
+    "pronunciation": "bryne",
+    "partOfSpeech": "noun; verb",
+    "meaning": "A concentrated salt-and-water solution used to pickle, preserve, or season food.",
+    "crosswordUse": "BRINE is commonly clued as pickle liquid, salty preserving solution, or seawater. A clue may also play on the idiom “in a pickle.”",
+    "whyCommon": "The five-letter word has a concrete food sense, a sea-related sense, and enough familiar crossings to support playful clues.",
+    "cluePatterns": [
+      "Liquid surrounding a pickle",
+      "A salty preserving solution",
+      "Seawater, in a broad sense"
+    ],
+    "otherMeanings": "As a verb, to brine food is to soak or treat it in a salt solution before cooking or preserving it.",
+    "related": []
+  },
+  {
+    "slug": "unto",
+    "answer": "UNTO",
+    "pronunciation": "UN-too",
+    "partOfSpeech": "preposition",
+    "meaning": "An archaic or elevated preposition meaning “to,” especially familiar from biblical translations and traditional sayings.",
+    "crosswordUse": "UNTO often completes quotations such as “Do unto others” or appears when a clue signals old-fashioned, biblical, or poetic language.",
+    "whyCommon": "Its four letters and vowel-friendly pattern fit grids easily, while several famous fixed phrases make the otherwise archaic word fair.",
+    "cluePatterns": [
+      "A biblical-sounding “to”",
+      "The word after “Do” in the Golden Rule",
+      "An archaic preposition in a quotation"
+    ],
+    "otherMeanings": "UNTO is rare in ordinary modern conversation, but it remains recognizable in scripture, ceremony, and deliberately archaic prose.",
+    "related": ["outta"]
+  },
+  {
+    "slug": "unsee",
+    "answer": "UNSEE",
+    "pronunciation": "un-SEE",
+    "partOfSpeech": "verb; informal",
+    "meaning": "To erase or undo the memory of something seen, most often used negatively in the phrase “can’t unsee.”",
+    "crosswordUse": "UNSEE may be clued through removing an image from memory, wishing a sight could be forgotten, or reversing the act of seeing “so to speak.”",
+    "whyCommon": "The transparent UN- prefix makes the modern coinage inferable, and its five letters provide constructors a lively conversational entry.",
+    "cluePatterns": [
+      "Erase a sight from memory, figuratively",
+      "What one cannot do after seeing something",
+      "Reverse seeing, so to speak"
+    ],
+    "otherMeanings": "The verb describes a mental wish rather than literal vision; it does not mean becoming physically unable to see.",
+    "related": []
+  },
+  {
+    "slug": "skort",
+    "answer": "SKORT",
+    "pronunciation": "skort",
+    "partOfSpeech": "noun",
+    "meaning": "A garment combining the appearance of a skirt with built-in or concealed shorts.",
+    "crosswordUse": "SKORT is frequently clued as hybrid athletic wear, tennis attire, or a skirt-shorts portmanteau. “Hybrid” and “blend” are strong signals.",
+    "whyCommon": "The compact five-letter portmanteau has a precise definition and an unusual consonant pattern that can anchor activewear clues.",
+    "cluePatterns": [
+      "Hybrid tennis attire",
+      "A skirt with shorts underneath",
+      "An activewear portmanteau"
+    ],
+    "otherMeanings": "Some designs look primarily like shorts with a front skirt panel, while others resemble a skirt from every angle.",
+    "related": []
+  },
+  {
+    "slug": "buries-the-lede",
+    "answer": "BURIESTHELEDE",
+    "pronunciation": "BAIR-eez thuh leed",
+    "partOfSpeech": "verb phrase",
+    "meaning": "Hides or delays the most important information instead of presenting it at the beginning.",
+    "crosswordUse": "BURIESTHELEDE can be clued as obscuring the main point. Theme clues may exploit the homophones BERRIES/BURIES and LEAD/LEDE.",
+    "whyCommon": "The journalism idiom supports both a direct figurative meaning and rich homophone wordplay, making it useful as a long theme revealer.",
+    "cluePatterns": [
+      "Hides the central point",
+      "Delays the key news in a story",
+      "A journalism idiom with berry and lead homophones"
+    ],
+    "otherMeanings": "LEDE is the journalism spelling for a story’s opening, deliberately distinguished from the metal LEAD in editing contexts.",
+    "related": []
+  },
+  {
+    "slug": "ers",
+    "answer": "ERS",
+    "pronunciation": "urz",
+    "partOfSpeech": "plural interjection; noun",
+    "meaning": "Written representations of hesitant filler sounds made while a speaker pauses to think.",
+    "crosswordUse": "ERS is typically clued as verbal hesitations, speech fillers, or uncertain sounds. The plural S must match a plural clue.",
+    "whyCommon": "Three short letters and a common spoken phenomenon make ERS useful crossword fill even though the spelling is uncommon in prose.",
+    "cluePatterns": [
+      "Verbal hesitations",
+      "Filler sounds during pauses",
+      "Uncertain utterances in the plural"
+    ],
+    "otherMeanings": "American transcriptions often prefer “uh” or “um,” while “er” more closely reflects non-rhotic British speech conventions.",
+    "related": ["ene"]
   }
 ]

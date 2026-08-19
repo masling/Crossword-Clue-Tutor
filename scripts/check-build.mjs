@@ -62,11 +62,16 @@ if (!sitemap.includes("/explainers/contractors-detail-for-short/")) errors.push(
 if (!sitemap.includes("<lastmod>")) errors.push("sitemap is missing lastmod metadata for fresh content");
 if (!sitemap.includes("/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/")) errors.push("sitemap is missing the current NYT Mini batch");
 if (!sitemap.includes("/explainers/forfends-nyt-daily/")) errors.push("sitemap is missing the selected current NYT Daily batch");
+if (!sitemap.includes("/explainers/private-sleeping-accommodations-nyt-daily/")) errors.push("sitemap is missing the latest NYT Daily batch");
 const feed = await readFile(path.join(dist, "feed.xml"), "utf8");
 if (!feed.includes("/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/")) errors.push("feed is missing the current NYT Mini batch");
 if (!feed.includes("/explainers/forfends-nyt-daily/")) errors.push("feed is missing the selected current NYT Daily batch");
+if (!feed.includes("/explainers/private-sleeping-accommodations-nyt-daily/")) errors.push("feed is missing the latest NYT Daily batch");
 const freshPage = await readFile(path.join(dist, "explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/index.html"), "utf8");
 if (!freshPage.includes("NYT Mini crossword clue")) errors.push("fresh explainer does not target the publication long-tail query");
+const latestDailyPage = await readFile(path.join(dist, "explainers/private-sleeping-accommodations-nyt-daily/index.html"), "utf8");
+if (!latestDailyPage.includes("Private sleeping accommodations? The New York Times Crossword clue")) errors.push("latest daily explainer does not target the publication long-tail query");
+if (!latestDailyPage.includes("Why COTS fits")) errors.push("latest daily explainer is missing its reviewed explanation");
 
 if (errors.length) {
   for (const error of errors) console.error(`error: ${error}`);
