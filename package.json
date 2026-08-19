@@ -1,0 +1,18 @@
+{
+  "name": "crossword-clue-tutor",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check-build.mjs",
+    "content:publish": "node scripts/publish-clue-batch.mjs",
+    "dev": "node scripts/serve.mjs",
+    "indexnow:submit": "node scripts/submit-indexnow.mjs",
+    "test": "node --test",
+    "validate": "node scripts/validate-content.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

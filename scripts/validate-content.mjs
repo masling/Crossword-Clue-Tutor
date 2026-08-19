@@ -1,0 +1,111 @@
+import { readFile } from "node:fs/promises";
+import { pathToFileURL } from "node:url";
+
+const REQUIRED_CLUE_FIELDS = [
+  "slug", "clue", "answer", "date", "definition", "explanation", "partOfSpeech",
+  "tags", "clueType", "signal", "hint", "reviewedAt"
+];
+
+export function validateContent({ clues, answers, clueTypes, config }) {
+  const errors = [];
+  const warnings = [];
+  const clueSlugs = new Set();
+  const answerSlugs = new Set();
+  const typeSlugs = new Set();
+
+  if (!config?.name || !config?.description || !config?.siteUrl) {
+    errors.push("site.config.json must include name, description, and siteUrl");
+  } else {
+    try {
+      const siteUrl = new URL(config.siteUrl);
+      if (siteUrl.hostname.endsWith(".example")) {
+        warnings.push("siteUrl uses the reserved .example domain; replace it before deployment");
+      }
+    } catch {
+      errors.push("siteUrl must be a valid absolute URL");
+    }
+  }
+
+  for (const [index, clue] of clues.entries()) {
+    const label = `clues[${index}]`;
+    for (const field of REQUIRED_CLUE_FIELDS) {
+      if (clue[field] === undefined || clue[field] === "") errors.push(`${label} is missing ${field}`);
+    }
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(clue.slug ?? "")) errors.push(`${label} has an invalid slug`);
+    if (clueSlugs.has(clue.slug)) errors.push(`duplicate clue slug: ${clue.slug}`);
+    clueSlugs.add(clue.slug);
+    if (!/^[A-Z]+$/.test(clue.answer ?? "")) errors.push(`${label} answer must contain uppercase A-Z only`);
+    if ((clue.explanation ?? "").length < 55) errors.push(`${label} explanation is too short to be useful`);
+    if ((clue.hint ?? "").toUpperCase().includes(clue.answer ?? "__NO_ANSWER__")) {
+      errors.push(`${label} hint reveals the answer`);
+    }
+    if (!Array.isArray(clue.tags) || clue.tags.length === 0) errors.push(`${label} needs at least one tag`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(clue.reviewedAt ?? "")) errors.push(`${label} reviewedAt must be YYYY-MM-DD`);
+    if (clue.publication) {
+      if (!clue.sourceDate || !/^\d{4}-\d{2}-\d{2}$/.test(clue.sourceDate)) errors.push(`${label} with a publication needs sourceDate in YYYY-MM-DD format`);
+      if (!clue.clueNumber) errors.push(`${label} with a publication needs clueNumber`);
+    }
+  }
+
+  if (config?.contentUpdatedAt && !/^\d{4}-\d{2}-\d{2}$/.test(config.contentUpdatedAt)) {
+    errors.push("contentUpdatedAt must be YYYY-MM-DD");
+  }
+
+  for (const [index, answer] of answers.entries()) {
+    const label = `answers[${index}]`;
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(answer.slug ?? "")) errors.push(`${label} has an invalid slug`);
+    if (answerSlugs.has(answer.slug)) errors.push(`duplicate answer slug: ${answer.slug}`);
+    answerSlugs.add(answer.slug);
+    if (!/^[A-Z]+$/.test(answer.answer ?? "")) errors.push(`${label} answer must contain uppercase A-Z only`);
+    for (const field of ["meaning", "crosswordUse", "whyCommon", "otherMeanings"]) {
+      if ((answer[field] ?? "").length < 35) errors.push(`${label} ${field} is too short`);
+    }
+    if (!Array.isArray(answer.cluePatterns) || answer.cluePatterns.length < 3) {
+      errors.push(`${label} needs at least three clue patterns`);
+    }
+  }
+
+  for (const answer of answers) {
+    for (const related of answer.related ?? []) {
+      if (!answerSlugs.has(related)) errors.push(`answer ${answer.slug} links to unknown related answer ${related}`);
+    }
+  }
+
+  for (const [index, type] of clueTypes.entries()) {
+    const label = `clueTypes[${index}]`;
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(type.slug ?? "")) errors.push(`${label} has an invalid slug`);
+    if (typeSlugs.has(type.slug)) errors.push(`duplicate clue type slug: ${type.slug}`);
+    typeSlugs.add(type.slug);
+    for (const field of ["title", "summary", "exampleClue", "exampleAnswer", "explanation", "advice"]) {
+      if (!type[field]) errors.push(`${label} is missing ${field}`);
+    }
+    if (!Array.isArray(type.signals) || type.signals.length < 3) errors.push(`${label} needs at least three signals`);
+  }
+
+  return { errors, warnings };
+}
+
+async function readJson(path) {
+  return JSON.parse(await readFile(path, "utf8"));
+}
+
+async function main() {
+  const [clues, answers, clueTypes, config] = await Promise.all([
+    readJson("data/clues.json"),
+    readJson("data/answers.json"),
+    readJson("data/clue-types.json"),
+    readJson("site.config.json")
+  ]);
+  const result = validateContent({ clues, answers, clueTypes, config });
+  for (const warning of result.warnings) console.warn(`warning: ${warning}`);
+  if (result.errors.length) {
+    for (const error of result.errors) console.error(`error: ${error}`);
+    process.exitCode = 1;
+    return;
+  }
+  console.log(`Content valid: ${clues.length} clues, ${answers.length} answers, ${clueTypes.length} clue types.`);
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  await main();
+}

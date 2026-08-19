@@ -1,0 +1,178 @@
+[
+  {
+    "slug": "spec",
+    "answer": "SPEC",
+    "pronunciation": "spek",
+    "partOfSpeech": "noun; abbreviation",
+    "meaning": "A specification: a precise requirement or design detail for a job, product, or project.",
+    "crosswordUse": "SPEC usually appears when a clue signals a shortened form with wording such as “briefly” or “for short.” It may also appear after “on,” where “on spec” means without a guaranteed buyer or commission.",
+    "whyCommon": "Its four letters, familiar abbreviation, and two useful senses make SPEC flexible fill without being obscure.",
+    "cluePatterns": [
+      "A work or design detail, shortened",
+      "A requirement shown on a plan, briefly",
+      "After “on,” work done without a guaranteed buyer"
+    ],
+    "otherMeanings": "As part of “on spec,” SPEC is short for speculation rather than specification.",
+    "related": ["sase", "ene"]
+  },
+  {
+    "slug": "sase",
+    "answer": "SASE",
+    "pronunciation": "ess-ay-ess-ee",
+    "partOfSpeech": "initialism",
+    "meaning": "A self-addressed stamped envelope, enclosed so a recipient can mail something back without paying postage.",
+    "crosswordUse": "Clues often mention a manuscript, editor, reply, enclosure, or return mail. Abbreviations such as “encl.” and “MS.” reinforce that the answer is also abbreviated.",
+    "whyCommon": "SASE packs four common letters into a culturally specific publishing term that constructors can clue from several angles.",
+    "cluePatterns": [
+      "A return-mail convenience, initially",
+      "Something enclosed for an editor's reply",
+      "A manuscript sender's postage-paid enclosure"
+    ],
+    "otherMeanings": "Outside this publishing and postal context, SASE can be an unrelated acronym, so the surrounding clue matters.",
+    "related": ["spec", "ene"]
+  },
+  {
+    "slug": "epee",
+    "answer": "EPEE",
+    "pronunciation": "eh-PAY",
+    "partOfSpeech": "noun",
+    "meaning": "A thrusting sword used in fencing, and the fencing discipline that uses it.",
+    "crosswordUse": "EPEE is commonly clued as a fencing weapon, Olympic event, foil alternative, or dueling blade. Accents are normally omitted in a crossword grid.",
+    "whyCommon": "Three vowels and a final E make EPEE especially easy to cross, which is why solvers encounter it far more often in grids than in daily conversation.",
+    "cluePatterns": [
+      "A fencing weapon or event",
+      "A heavier alternative to a foil",
+      "A four-letter blade with a French name"
+    ],
+    "otherMeanings": "The same word names both the weapon and its Olympic event; the clue's grammar indicates which sense is intended.",
+    "related": ["anoa", "iota"]
+  },
+  {
+    "slug": "anoa",
+    "answer": "ANOA",
+    "pronunciation": "uh-NOH-uh",
+    "partOfSpeech": "noun",
+    "meaning": "A small wild buffalo native to the Indonesian island of Sulawesi.",
+    "crosswordUse": "Clues typically point to a dwarf buffalo, Indonesian bovine, Sulawesi ox, or small wild ox.",
+    "whyCommon": "ANOA has three vowels in four letters. That grid-friendly shape made an otherwise uncommon animal a classic piece of crosswordese.",
+    "cluePatterns": [
+      "A small Indonesian buffalo",
+      "A Sulawesi bovine",
+      "A vowel-rich wild ox of crossword fame"
+    ],
+    "otherMeanings": "ANOA is mainly a zoological term; geographical wording in the clue usually confirms it.",
+    "related": ["epee", "emu"]
+  },
+  {
+    "slug": "ante",
+    "answer": "ANTE",
+    "pronunciation": "AN-tee",
+    "partOfSpeech": "noun; verb",
+    "meaning": "A stake placed into a poker pot before cards are dealt.",
+    "crosswordUse": "ANTE is usually clued through poker, an opening stake, or a payment made before play. “Up the ___” uses the same word in a familiar phrase.",
+    "whyCommon": "It is familiar, compact, and alternates consonants and vowels, giving constructors useful crossings.",
+    "cluePatterns": [
+      "A poker payment made first",
+      "An opening stake",
+      "A word after “up the”"
+    ],
+    "otherMeanings": "As a prefix, ante- means before, as in antebellum; that sense may appear in wordplay clues.",
+    "related": ["iota", "spec"]
+  },
+  {
+    "slug": "ene",
+    "answer": "ENE",
+    "pronunciation": "east-northeast",
+    "partOfSpeech": "compass abbreviation",
+    "meaning": "East-northeast, the compass direction halfway between east and northeast.",
+    "crosswordUse": "ENE may be clued directly as a map or compass direction, or indirectly as the opposite of WSW.",
+    "whyCommon": "Directional abbreviations provide short, vowel-friendly fill and have precise opposites that support compact clues.",
+    "cluePatterns": [
+      "A direction between E and NE",
+      "The opposite of WSW",
+      "A map abbreviation pointing right and slightly up"
+    ],
+    "otherMeanings": "ENE is normally an abbreviation rather than a standalone spoken word.",
+    "related": ["sase", "spec"]
+  },
+  {
+    "slug": "iota",
+    "answer": "IOTA",
+    "pronunciation": "eye-OH-tuh",
+    "partOfSpeech": "noun",
+    "meaning": "An extremely small amount; also the ninth letter of the Greek alphabet.",
+    "crosswordUse": "Clues may ask for a tiny bit, the least amount, or a Greek letter. Context decides whether the figurative or alphabetic sense is intended.",
+    "whyCommon": "IOTA combines two clueable meanings with a vowel-rich five-letter shape.",
+    "cluePatterns": [
+      "The smallest amount",
+      "A Greek letter after theta",
+      "Not one tiny bit"
+    ],
+    "otherMeanings": "The figurative meaning grew from the letter's reputation as a very small mark.",
+    "related": ["epee", "ante"]
+  },
+  {
+    "slug": "emu",
+    "answer": "EMU",
+    "pronunciation": "EE-myoo",
+    "partOfSpeech": "noun",
+    "meaning": "A large flightless bird native to Australia.",
+    "crosswordUse": "EMU is often clued by its Australian origin, inability to fly, relation to the cassowary, or appearance on Australia's coat of arms.",
+    "whyCommon": "At three letters with two vowels, EMU is easy to cross and still familiar enough to clue fairly.",
+    "cluePatterns": [
+      "An Australian flightless bird",
+      "The kangaroo's partner on a national emblem",
+      "A cassowary relative"
+    ],
+    "otherMeanings": "In technology EMU can be an acronym, but crossword clues usually intend the bird unless abbreviation signals say otherwise.",
+    "related": ["anoa", "epee"]
+  },
+  {
+    "slug": "intel",
+    "answer": "INTEL",
+    "pronunciation": "IN-tel",
+    "partOfSpeech": "noun; informal shortening",
+    "meaning": "Useful information or intelligence, especially information that is private, strategic, or newly obtained.",
+    "crosswordUse": "INTEL is often clued as inside information, useful information, a briefing product, or intelligence informally. A clue may use “informally” or “briefly” to authorize the shortening.",
+    "whyCommon": "The five-letter form is familiar, crosses cleanly, and can be clued through both everyday information and intelligence-gathering contexts.",
+    "cluePatterns": [
+      "Inside information, informally",
+      "Useful intelligence, shortened",
+      "A spy's collected information"
+    ],
+    "otherMeanings": "Intel is also the name of a semiconductor company. Capitalization and business or computing language usually indicate the company rather than the informal noun.",
+    "related": ["spec", "sase"]
+  },
+  {
+    "slug": "outta",
+    "answer": "OUTTA",
+    "pronunciation": "OW-tuh",
+    "partOfSpeech": "informal contraction",
+    "meaning": "A nonstandard spelling of the spoken phrase “out of.”",
+    "crosswordUse": "OUTTA appears in quoted casual speech and familiar expressions such as “Get outta here” or “Get outta town.” Quotation marks and informal phrasing help justify the spelling.",
+    "whyCommon": "It turns a common spoken contraction into a compact five-letter entry and gives setters recognizable fill-in-the-blank phrases.",
+    "cluePatterns": [
+      "The middle of “Get ___ here!”",
+      "“Out of,” in casual speech",
+      "A contraction heard in an emphatic dismissal"
+    ],
+    "otherMeanings": "OUTTA is appropriate in informal transcription or dialogue but is normally replaced by “out of” in formal writing.",
+    "related": ["intel", "spec"]
+  },
+  {
+    "slug": "noels",
+    "answer": "NOELS",
+    "pronunciation": "noh-ELZ",
+    "partOfSpeech": "plural noun",
+    "meaning": "Christmas songs or carols; the plural of noel in its song sense.",
+    "crosswordUse": "NOELS is commonly clued through Christmas carols, holiday songs, or seasonal music. The clue's plural grammar is an important confirmation.",
+    "whyCommon": "The word offers five grid-friendly letters, a strong seasonal association, and a less obvious plural sense that rewards vocabulary knowledge.",
+    "cluePatterns": [
+      "Christmas carols",
+      "Seasonal songs",
+      "Holiday numbers sung by a choir"
+    ],
+    "otherMeanings": "Noel can also be a personal name or a general word associated with Christmas; the plural NOELS usually points to songs or repeated holiday celebrations.",
+    "related": ["epee", "iota"]
+  }
+]

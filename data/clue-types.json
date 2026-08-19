@@ -1,0 +1,52 @@
+[
+  {
+    "slug": "abbreviations",
+    "title": "Abbreviation clues",
+    "summary": "These clues tell you—sometimes quietly—that the answer will be shortened.",
+    "signals": ["for short", "briefly", "abbr.", "initially", "in addresses", "on a map"],
+    "exampleClue": "Project detail, briefly",
+    "exampleAnswer": "SPEC",
+    "explanation": "“Briefly” changes the expected answer from SPECIFICATION to its familiar four-letter shortening, SPEC.",
+    "advice": "Match the clue's level of shortening. If the clue contains an abbreviation, the answer often does too."
+  },
+  {
+    "slug": "direct-definitions",
+    "title": "Direct-definition clues",
+    "summary": "The clue and answer are close synonyms or a simple category-and-member pair.",
+    "signals": ["matching tense", "matching number", "matching part of speech", "plain wording"],
+    "exampleClue": "Leave out",
+    "exampleAnswer": "OMIT",
+    "explanation": "Both are base-form verbs with the same meaning, so crossings and answer length do the disambiguating.",
+    "advice": "Check grammar before reaching for obscure synonyms. A plural clue usually needs a plural answer; past tense usually stays past tense."
+  },
+  {
+    "slug": "question-marks",
+    "title": "Question-mark clues",
+    "summary": "A question mark often warns that the clue is playful, indirect, or using an unexpected sense.",
+    "signals": ["a final question mark", "a pun", "a surprising definition", "a literal reading that feels wrong"],
+    "exampleClue": "Site of a strike?",
+    "exampleAnswer": "ALLEY",
+    "explanation": "“Strike” shifts from its everyday senses to bowling, where a strike happens in an alley.",
+    "advice": "List two or three meanings of the clue's most noticeable noun or verb. The answer often lives in the less obvious one."
+  },
+  {
+    "slug": "fill-in-the-blank",
+    "title": "Fill-in-the-blank clues",
+    "summary": "The answer completes a familiar phrase, title, quotation, or name.",
+    "signals": ["a visible blank", "quotation marks", "a title fragment", "a fixed expression"],
+    "exampleClue": "Ebb and ___",
+    "exampleAnswer": "FLOW",
+    "explanation": "The fixed phrase “ebb and flow” supplies the missing word directly.",
+    "advice": "Read the completed phrase aloud. Crossings help when several words could sound natural."
+  },
+  {
+    "slug": "proper-nouns",
+    "title": "Names and fact clues",
+    "summary": "These clues rely on a person, place, title, brand, or piece of general knowledge.",
+    "signals": ["quoted titles", "capitalized names", "dates", "nationality", "creator or performer roles"],
+    "exampleClue": "Singer of “Hello”",
+    "exampleAnswer": "ADELE",
+    "explanation": "The quoted work and performer role identify the artist; the answer length confirms the fit.",
+    "advice": "Use every qualifier. Decade, nationality, medium, and quoted title are there to narrow a large name set."
+  }
+]

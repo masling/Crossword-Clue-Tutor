@@ -1,0 +1,9 @@
+{
+  "name": "Crossword Clue Tutor",
+  "shortName": "Clue Tutor",
+  "tagline": "Hints first. Answers when you want them.",
+  "description": "A spoiler-aware crossword clue solver with pattern matching, progressive hints, and clear explanations of why each answer fits.",
+  "siteUrl": "https://cluetutor.example",
+  "locale": "en_US",
+  "contentUpdatedAt": "2026-08-19"
+}
