@@ -63,6 +63,8 @@ if (!sitemap.includes("<lastmod>")) errors.push("sitemap is missing lastmod meta
 if (!sitemap.includes("/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/")) errors.push("sitemap is missing the current NYT Mini batch");
 if (!sitemap.includes("/explainers/forfends-nyt-daily/")) errors.push("sitemap is missing the selected current NYT Daily batch");
 if (!sitemap.includes("/explainers/private-sleeping-accommodations-nyt-daily/")) errors.push("sitemap is missing the latest NYT Daily batch");
+if (!sitemap.includes("/nyt-mini-crossword-clues/")) errors.push("sitemap is missing the NYT Mini publication hub");
+if (!sitemap.includes("/nyt-crossword-clues/")) errors.push("sitemap is missing the NYT daily publication hub");
 const feed = await readFile(path.join(dist, "feed.xml"), "utf8");
 if (!feed.includes("/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/")) errors.push("feed is missing the current NYT Mini batch");
 if (!feed.includes("/explainers/forfends-nyt-daily/")) errors.push("feed is missing the selected current NYT Daily batch");
@@ -72,6 +74,12 @@ if (!freshPage.includes("NYT Mini crossword clue")) errors.push("fresh explainer
 const latestDailyPage = await readFile(path.join(dist, "explainers/private-sleeping-accommodations-nyt-daily/index.html"), "utf8");
 if (!latestDailyPage.includes("Private sleeping accommodations? The New York Times Crossword clue")) errors.push("latest daily explainer does not target the publication long-tail query");
 if (!latestDailyPage.includes("Why COTS fits")) errors.push("latest daily explainer is missing its reviewed explanation");
+const miniHub = await readFile(path.join(dist, "nyt-mini-crossword-clues/index.html"), "utf8");
+if (!miniHub.includes("It’s in a pickle")) errors.push("NYT Mini hub is missing the latest selected clue");
+const dailyHub = await readFile(path.join(dist, "nyt-crossword-clues/index.html"), "utf8");
+if (!dailyHub.includes("Private sleeping accommodations?")) errors.push("NYT daily hub is missing the latest selected clue");
+const privacyPage = await readFile(path.join(dist, "privacy/index.html"), "utf8");
+if (!privacyPage.includes("Cloudflare Web Analytics")) errors.push("privacy page is missing the production analytics disclosure");
 
 if (errors.length) {
   for (const error of errors) console.error(`error: ${error}`);

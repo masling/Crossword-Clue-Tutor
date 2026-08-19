@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T10:30:00+08:00",
+  "updatedAt": "2026-08-19T10:36:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -9,7 +9,7 @@
     "analyticsFilter": "excludeBots=Yes"
   },
   "content": {
-    "indexablePages": 92,
+    "indexablePages": 94,
     "reviewedClues": 51,
     "answerMeaningPages": 24,
     "lastPublishedSourceDates": {
@@ -27,11 +27,11 @@
     "bingSitemapStatus": "Processing",
     "bingSitemapDiscoveredPages": 0,
     "bingIndexedPages": 0,
-    "bingSiteScanStatus": "Queued",
+    "bingSiteScanStatus": "Processing",
     "bingSiteScanPageLimit": 100,
     "searchImpressions": 0,
     "searchClicks": 0,
-    "indexNowSubmittedUrls": 57
+    "indexNowSubmittedUrls": 81
   },
   "deployment": {
     "provider": "Cloudflare Pages",

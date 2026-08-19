@@ -73,6 +73,8 @@ function footer() {
         <a href="/editorial-policy/">Editorial policy</a>
         <a href="/privacy/">Privacy</a>
         <a href="/daily-clue-clinic/">Daily clue clinic</a>
+        <a href="/nyt-mini-crossword-clues/">NYT Mini clues</a>
+        <a href="/nyt-crossword-clues/">NYT daily clues</a>
       </nav>
     </div>
   </footer>`;
@@ -184,6 +186,27 @@ function publicationClueSuffix(publication) {
     : `${publication} crossword clue`;
 }
 
+const publicationHubs = new Map([
+  ["NYT Mini", {
+    route: "/nyt-mini-crossword-clues/",
+    title: "NYT Mini crossword clues: daily hints and explanations",
+    heading: "Selected NYT Mini clues, explained",
+    description: "Get spoiler-light hints and original explanations for selected tricky NYT Mini crossword clues, organized by puzzle date.",
+    maxPerDate: 6
+  }],
+  ["The New York Times Crossword", {
+    route: "/nyt-crossword-clues/",
+    title: "NYT crossword clues: selected daily hints and explanations",
+    heading: "Selected NYT crossword clues, explained",
+    description: "Browse spoiler-light hints and original explanations for selected high-confusion New York Times crossword clues by puzzle date.",
+    maxPerDate: 8
+  }]
+]);
+
+function publicationHubFor(publication) {
+  return publicationHubs.get(publication);
+}
+
 function clueRows(items, { showDate = false } = {}) {
   return `<div class="clue-list">${items.map((clue) => `<a class="clue-row" href="/explainers/${clue.slug}/">
     <span class="clue-row-main"><strong>${escapeHtml(clue.clue)}</strong><small>${escapeHtml(clue.publication ? `${clue.publication} · ${clueTypeLabel(clue.clueType)}` : clueTypeLabel(clue.clueType))}${showDate ? ` · ${escapeHtml(formatDate(clue.date))}` : ""}</small></span>
@@ -232,6 +255,7 @@ const homeBody = `<section class="hero shell">
 <section class="shell latest-section">
   <div class="section-heading"><div><h2>Recently reviewed clues</h2><p>Every indexed explanation has an editorial review date.</p></div><a href="/daily-clue-clinic/">Browse the clinic archive</a></div>
   ${clueRows(latestClues.slice(0, 6))}
+  <div class="daily-hub-links"><a href="/nyt-mini-crossword-clues/">NYT Mini clue hints →</a><a href="/nyt-crossword-clues/">NYT daily clue hints →</a></div>
 </section>
 <section class="answer-strip">
   <div class="shell answer-strip-inner"><div><h2>Meet the words crosswords keep bringing back.</h2><p>Meaning, pronunciation, common clue patterns, and why the fill works so well in a grid.</p></div><div class="answer-links">${answers.slice(0, 5).map((answer) => `<a href="/crosswordese/${answer.slug}/">${answer.answer}</a>`).join("")}</div><a class="button button-secondary" href="/crosswordese/">Explore crosswordese</a></div>
@@ -290,12 +314,26 @@ for (const type of clueTypes) {
   await writePage(route, pageTemplate({ title: `${type.title}: how they work`, description: `${type.summary} See common signals, a worked example, and practical solving advice.`, route, body, bodyClass: "guide-page" }));
 }
 
+for (const [publication, hub] of publicationHubs) {
+  const publicationClues = clues.filter((clue) => clue.publication === publication);
+  const sourceDates = [...new Set(publicationClues.map((clue) => clue.sourceDate))].sort().reverse();
+  const latestReview = publicationClues.map((clue) => clue.reviewedAt).sort().reverse()[0] ?? config.contentUpdatedAt;
+  const dateSections = sourceDates.map((sourceDate) => {
+    const items = publicationClues.filter((clue) => clue.sourceDate === sourceDate).sort((a, b) => b.popularity - a.popularity).slice(0, hub.maxPerDate);
+    return `<section class="shell latest-section"><div class="section-heading"><div><h2>${escapeHtml(formatDate(sourceDate))}</h2><p>${items.length} selected, reviewed clues</p></div></div>${clueRows(items)}</section>`;
+  }).join("");
+  const body = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: hub.heading }])}<p class="content-kind">Hints before spoilers</p><h1>${escapeHtml(hub.heading)}</h1><p>${escapeHtml(hub.description)}</p></section><section class="shell guidance"><h2>Selected explanations, not a complete answer key.</h2><div class="guidance-columns"><p>We prioritize clues whose abbreviation, secondary sense, wordplay, name, or theme is likely to need an explanation.</p><p>Clue text identifies the puzzle entry; every hint, definition, and explanation here is independently written or materially reviewed.</p></div></section>${dateSections}`;
+  const collectionLd = { "@context": "https://schema.org", "@type": "CollectionPage", name: hub.heading, description: hub.description, url: canonicalUrl(hub.route), dateModified: latestReview };
+  await writePage(hub.route, pageTemplate({ title: hub.title, description: hub.description, route: hub.route, body, bodyClass: "publication-hub-page", jsonLd: [collectionLd] }), false, latestReview);
+}
+
 for (const clue of clues) {
   const route = `/explainers/${clue.slug}/`;
   const profile = answerByValue.get(clue.answer);
   const related = clues.filter((item) => item.slug !== clue.slug && (item.answer === clue.answer || item.tags.some((tag) => clue.tags.includes(tag)))).slice(0, 4);
+  const publicationHub = publicationHubFor(clue.publication);
   const sourceContext = clue.publication
-    ? `<section class="source-context"><h2>Where this clue appeared</h2><p>${escapeHtml(clue.clueNumber)} in ${escapeHtml(clue.publication)} puzzle for ${escapeHtml(formatDate(clue.sourceDate))}.</p></section>`
+    ? `<section class="source-context"><h2>Where this clue appeared</h2><p>${escapeHtml(clue.clueNumber)} in ${escapeHtml(clue.publication)} puzzle for ${escapeHtml(formatDate(clue.sourceDate))}.</p>${publicationHub ? `<a class="text-link" href="${publicationHub.route}">Browse selected ${escapeHtml(clue.publication)} clues →</a>` : ""}</section>`
     : "";
   const contentKind = clue.publication
     ? `${clue.publication} · ${clue.clueNumber} · ${clue.answer.length} letters`
@@ -330,7 +368,7 @@ await writePage("/about/", pageTemplate({ title: "About", description: "Why Clue
 const editorialBody = `<article class="shell prose-page">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Editorial policy" }])}<h1>Editorial policy</h1><p>Indexed explanations are written or materially reviewed for accuracy, usefulness, and clue grammar. Each clue page shows its latest review date.</p><h2>What earns an indexed page</h2><ul><li>A verified clue-answer relationship.</li><li>A specific explanation of the signal, sense, or wordplay.</li><li>Independent value beyond a bare answer or dictionary definition.</li><li>A path for users to report confusing or incorrect guidance.</li></ul><h2>Automation boundary</h2><p>Private tool queries are not automatically published. Empty results, low-confidence suggestions, and unreviewed generated text stay outside the sitemap.</p><h2>Source boundary</h2><p>Selected published clue text may be quoted for identification, commentary, and teaching. Hints, definitions, and explanations are independently written or materially reviewed. We do not scrape or republish complete daily puzzles, grids, or full answer keys.</p></article>`;
 await writePage("/editorial-policy/", pageTemplate({ title: "Editorial policy", description: "How Clue Tutor reviews crossword explanations, separates private tool output from indexed content, and handles sources.", route: "/editorial-policy/", body: editorialBody, bodyClass: "prose-page-body" }));
 
-const privacyBody = `<article class="shell prose-page">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Privacy" }])}<h1>Privacy</h1><p>This validation build performs clue matching in your browser. The clue, pattern, and answer you type are not sent to a server or stored by this site.</p><h2>Analytics</h2><p>No analytics or advertising scripts are included in this build. If that changes, this policy will be updated before collection begins.</p><h2>Local behavior</h2><p>The browser downloads the reviewed example data needed for matching. Clearing or closing the page removes form input; the site does not create an account or save history.</p></article>`;
+const privacyBody = `<article class="shell prose-page">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Privacy" }])}<h1>Privacy</h1><p>Clue matching runs in your browser. The clue, pattern, and answer you type are not sent to our application server or saved in an account.</p><h2>Analytics</h2><p>Cloudflare Web Analytics automatically adds a privacy-focused real-user monitoring beacon. It reports aggregate visits, page views, device and country categories, and performance metrics without using cookies or building cross-site profiles. We do not run advertising scripts or session replay.</p><h2>Local behavior</h2><p>The browser downloads the reviewed example data needed for matching. Clearing or closing the page removes form input; the site does not create an account or save history.</p></article>`;
 await writePage("/privacy/", pageTemplate({ title: "Privacy", description: "How the Clue Tutor validation build handles crossword clues, patterns, answers, storage, and analytics.", route: "/privacy/", body: privacyBody, bodyClass: "prose-page-body" }));
 
 const notFoundBody = `<section class="shell not-found"><div class="empty-grid" aria-hidden="true"><i>C</i><i>L</i><i>U</i><i>E</i></div><h1>That square is empty.</h1><p>The page does not exist, but the clue solver may still get you moving.</p><a class="button button-primary" href="/solver/">Open the solver</a></section>`;

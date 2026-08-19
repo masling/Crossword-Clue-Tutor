@@ -29,6 +29,8 @@
   "hubUrls": [
     "/",
     "/crosswordese/",
-    "/daily-clue-clinic/"
+    "/daily-clue-clinic/",
+    "/nyt-mini-crossword-clues/",
+    "/nyt-crossword-clues/"
   ]
 }

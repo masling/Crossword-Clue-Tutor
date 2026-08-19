@@ -43,6 +43,10 @@ if (result.errors.length) throw new Error(result.errors.join("\n"));
 for (const warning of result.warnings) console.warn(`warning: ${warning}`);
 
 const answerByValue = new Map(answers.map((answer) => [answer.answer, answer]));
+const publicationHubByName = new Map([
+  ["NYT Mini", "/nyt-mini-crossword-clues/"],
+  ["The New York Times Crossword", "/nyt-crossword-clues/"]
+]);
 const publishRecord = {
   publishedAt: new Date().toISOString(),
   input: inputPath,
@@ -52,7 +56,12 @@ const publishRecord = {
     .filter(Boolean)
     .map((answer) => `/crosswordese/${answer.slug}/`))],
   clinicUrls: [...new Set(incoming.map((clue) => `/daily-clue-clinic/${clue.date}/`))],
-  hubUrls: ["/", "/crosswordese/", "/daily-clue-clinic/"]
+  hubUrls: [...new Set([
+    "/",
+    "/crosswordese/",
+    "/daily-clue-clinic/",
+    ...incoming.map((clue) => publicationHubByName.get(clue.publication)).filter(Boolean)
+  ])]
 };
 
 if (dryRun) {
