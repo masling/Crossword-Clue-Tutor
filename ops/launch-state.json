@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T10:20:00+08:00",
+  "updatedAt": "2026-08-19T10:28:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -23,6 +23,10 @@
     "googleFeedStatus": "Success",
     "googleFeedDiscoveredPages": 30,
     "googleIndexedPages": 0,
+    "bingSiteVerified": true,
+    "bingSitemapStatus": "Processing",
+    "bingSitemapDiscoveredPages": 0,
+    "bingIndexedPages": 0,
     "searchImpressions": 0,
     "searchClicks": 0,
     "indexNowSubmittedUrls": 57

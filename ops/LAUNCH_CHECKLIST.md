@@ -8,7 +8,7 @@
 - [x] Enable HTTPS and use `https://crosswordcluetutor.com` as the canonical host.
 - [x] Verify `sc-domain:crosswordcluetutor.com` in Google Search Console.
 - [x] Submit `/sitemap.xml` and `/feed.xml` in Search Console.
-- [ ] Verify the site in Bing Webmaster Tools.
+- [x] Verify the site in Bing Webmaster Tools and submit `/sitemap.xml`.
 - [x] Generate an IndexNow key, expose `/<key>.txt`, and submit the first 14 production URLs.
 - [x] Enable Cloudflare Web Analytics with automatic RUM beacon injection.
 
