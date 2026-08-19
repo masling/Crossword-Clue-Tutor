@@ -11,7 +11,7 @@
 - [x] Verify the site in Bing Webmaster Tools and submit `/sitemap.xml`.
 - [x] Generate an IndexNow key, expose `/<key>.txt`, and submit the first 14 production URLs.
 - [x] Enable Cloudflare Web Analytics with automatic RUM beacon injection.
-- [x] Add Pageview analytics with the production domain configuration.
+- [x] Add Pageview's Plausible Community Edition analytics with the production domain configuration.
 
 ## Definition of the traffic target
 

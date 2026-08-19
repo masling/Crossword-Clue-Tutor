@@ -9,7 +9,7 @@
     "analyticsFilter": "excludeBots=Yes",
     "analyticsProviders": [
       "Cloudflare Web Analytics",
-      "Pageview"
+      "Pageview (Plausible Community Edition)"
     ],
     "pageviewConfiguredAt": "2026-08-19T11:24:00+08:00",
     "pageviewStatus": "Verified",
