@@ -46,6 +46,17 @@ function canonicalUrl(route) {
   return new URL(route, config.siteUrl).href;
 }
 
+function seoTitle(subject, suffix) {
+  const separator = " — ";
+  const maxLength = 70;
+  const subjectBudget = maxLength - separator.length - suffix.length;
+  const trimmedSubject = subject.trim();
+  const fittedSubject = trimmedSubject.length <= subjectBudget
+    ? trimmedSubject
+    : `${trimmedSubject.slice(0, subjectBudget - 1).trimEnd()}…`;
+  return `${fittedSubject}${separator}${suffix}`;
+}
+
 function logo() {
   return `<span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>`;
 }
@@ -88,7 +99,10 @@ function breadcrumbs(items) {
 }
 
 function pageTemplate({ title, description, route, body, bodyClass = "", noindex = false, jsonLd = [] }) {
-  const fullTitle = title === config.name ? `${config.name} — ${config.tagline}` : `${title} | ${config.name}`;
+  const brandedTitle = `${title} | ${config.name}`;
+  const fullTitle = title === config.name
+    ? `${config.name} — ${config.tagline}`
+    : brandedTitle.length <= 70 ? brandedTitle : title;
   const pageview = config.analytics?.pageview;
   const pageviewMarkup = pageview
     ? `<link rel="preconnect" href="${escapeHtml(new URL(pageview.scriptSrc).origin)}" crossorigin>\n  <script defer data-domain="${escapeHtml(pageview.domain)}" src="${escapeHtml(pageview.scriptSrc)}"></script>`
@@ -347,9 +361,11 @@ for (const clue of clues) {
   const pageHeading = clue.publication
     ? `${escapeHtml(clue.clue)} ${escapeHtml(publicationClueSuffix(clue.publication))}`
     : `${escapeHtml(clue.clue)} crossword clue`;
-  const pageTitle = clue.publication
-    ? `${clue.clue} ${publicationClueSuffix(clue.publication)}`
-    : `${clue.clue} crossword clue explained`;
+  const pageTitle = clue.publication === "NYT Mini"
+    ? seoTitle(clue.clue, "NYT Mini Crossword Clue")
+    : clue.publication
+      ? seoTitle(clue.clue, "NYT Crossword Clue")
+      : seoTitle(clue.clue, "Crossword Clue Answer");
   const affiliationNote = clue.publication
     ? `${config.name} is not affiliated with or endorsed by ${clue.publication} or its publisher.`
     : "It is not an official answer key from a crossword publisher.";

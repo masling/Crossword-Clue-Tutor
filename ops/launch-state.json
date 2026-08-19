@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-19T11:33:00+08:00",
+  "updatedAt": "2026-08-19T21:23:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
     "deadline": "2026-09-02T09:23:00+08:00",
-    "currentNetHumanSessions": 0,
+    "currentNetHumanSessions": 21,
     "operatorQaBaseline": 4,
     "analyticsFilter": "excludeBots=Yes",
     "analyticsProviders": [
@@ -13,7 +13,18 @@
     ],
     "pageviewConfiguredAt": "2026-08-19T11:24:00+08:00",
     "pageviewStatus": "Verified",
-    "pageviewOperatorQaBaseline": 1
+    "pageviewOperatorQaBaseline": 1,
+    "latestAnalyticsSnapshot": {
+      "recordedAt": "2026-08-19T21:23:00+08:00",
+      "cloudflareVisits": 25,
+      "cloudflarePageviews": 31,
+      "cloudflareNetSessions": 21,
+      "pageviewUniqueVisitors": 17,
+      "pageviewVisits": 18,
+      "pageviewPageviews": 24,
+      "pageviewNetSessions": 17,
+      "pageviewBingVisits": 1
+    }
   },
   "content": {
     "indexablePages": 94,
@@ -26,16 +37,23 @@
   },
   "search": {
     "googleSitemapStatus": "Success",
-    "googleSitemapDiscoveredPages": 57,
+    "googleSitemapDiscoveredPages": 94,
     "googleFeedStatus": "Success",
     "googleFeedDiscoveredPages": 30,
     "googleIndexedPages": 0,
     "bingSiteVerified": true,
-    "bingSitemapStatus": "Processing",
-    "bingSitemapDiscoveredPages": 0,
+    "bingSitemapStatus": "Success",
+    "bingSitemapDiscoveredPages": 92,
     "bingIndexedPages": 0,
-    "bingSiteScanStatus": "Processing",
+    "bingSiteScanStatus": "Completed",
     "bingSiteScanPageLimit": 100,
+    "bingSiteScanPages": 94,
+    "bingSiteScanErrors": 0,
+    "bingSiteScanWarnings": 55,
+    "bingSiteScanWarningTypes": {
+      "Title too long": 55
+    },
+    "bingSiteScanRemediation": "Generated document titles are now capped at 70 characters; verify with a later rescan.",
     "searchImpressions": 0,
     "searchClicks": 0,
     "indexNowSubmittedUrls": 81
@@ -49,7 +67,7 @@
     "tokenExpiresOn": "2027-08-20"
   },
   "nextAction": {
-    "notBefore": "2026-08-19T21:00:00+08:00",
-    "action": "Record bot-filtered visits, Google/Bing discovery, and the Bing Site Scan result after the 2026-08-19 selected clue batch; next freshness check is 2026-08-20 at 10:15 SGT."
+    "notBefore": "2026-08-20T10:15:00+08:00",
+    "action": "Check only newly available NYT Mini and New York Times Crossword source dates; publish a small explanation-first batch only if fresh puzzle dates are available."
   }
 }

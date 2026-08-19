@@ -12,7 +12,9 @@ for (const file of htmlFiles) {
   const html = await readFile(file, "utf8");
   const h1Count = (html.match(/<h1(?:\s|>)/g) ?? []).length;
   if (h1Count !== 1) errors.push(`${relative}: expected one h1, found ${h1Count}`);
-  if (!/<title>[^<]+<\/title>/.test(html)) errors.push(`${relative}: missing title`);
+  const title = html.match(/<title>([^<]+)<\/title>/)?.[1];
+  if (!title) errors.push(`${relative}: missing title`);
+  else if (title.replace(/&(?:amp|quot|#039|lt|gt);/g, "x").length > 70) errors.push(`${relative}: title exceeds 70 characters`);
   if (!/<meta name="description" content="[^"]+">/.test(html)) errors.push(`${relative}: missing meta description`);
   if (!/<link rel="canonical" href="https:\/\/[^\"]+">/.test(html)) errors.push(`${relative}: missing absolute canonical`);
   const pageviewScripts = html.match(/<script defer data-domain="crosswordcluetutor\.com" src="https:\/\/app\.pageview\.app\/js\/script\.js"><\/script>/g) ?? [];
