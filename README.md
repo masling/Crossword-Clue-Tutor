@@ -62,8 +62,9 @@ by the `crossword-clue-tutor` Cloudflare Pages project. Cloudflare Web Analytics
 uses automatic JavaScript injection, and Google Search Console is verified with
 the apex-domain TXT record. Do not remove that verification record.
 
-The Pages project currently uses Direct Upload. A GitHub push verifies and
-builds the site, but production changes are published only after `npm run deploy`.
-This keeps deployment credentials out of the repository.
+The Pages project uses Direct Upload through GitHub Actions. Every push to
+`main` runs the editorial and build checks, then deploys that exact verified
+artifact to production. The scoped Cloudflare credentials live only in GitHub
+Actions Secrets. `npm run deploy` remains the manual fallback.
 
 See [the opportunity research](research/2026-08-18-crossword-opportunity.md) for the market, keyword, sourcing, legal-risk, and validation rationale.

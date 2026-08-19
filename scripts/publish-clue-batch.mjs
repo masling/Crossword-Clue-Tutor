@@ -32,21 +32,23 @@ for (const clue of incoming) {
   existingPairs.add(pairKey(clue));
 }
 
-const mergedClues = [...currentClues, ...incoming].sort((a, b) =>
-  b.reviewedAt.localeCompare(a.reviewedAt) || b.date.localeCompare(a.date) || b.popularity - a.popularity
-);
+// Preserve editorial history order in the source file. Page builders apply the
+// presentation sort they need, while stable source ordering keeps daily diffs
+// small and reviewable.
+const mergedClues = [...currentClues, ...incoming];
 const latestReview = mergedClues.map((clue) => clue.reviewedAt).sort().reverse()[0];
 const nextConfig = { ...config, contentUpdatedAt: latestReview };
 const result = validateContent({ clues: mergedClues, answers, clueTypes, config: nextConfig });
 if (result.errors.length) throw new Error(result.errors.join("\n"));
 for (const warning of result.warnings) console.warn(`warning: ${warning}`);
 
+const answerByValue = new Map(answers.map((answer) => [answer.answer, answer]));
 const publishRecord = {
   publishedAt: new Date().toISOString(),
   input: inputPath,
   urls: incoming.map((clue) => `/explainers/${clue.slug}/`),
   answerUrls: [...new Set(incoming
-    .map((clue) => answers.find((answer) => answer.answer === clue.answer))
+    .map((clue) => answerByValue.get(clue.answer))
     .filter(Boolean)
     .map((answer) => `/crosswordese/${answer.slug}/`))],
   clinicUrls: [...new Set(incoming.map((clue) => `/daily-clue-clinic/${clue.date}/`))],

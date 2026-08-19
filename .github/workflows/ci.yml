@@ -4,6 +4,10 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   verify:
@@ -13,6 +17,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+          cache: npm
+      - run: npm ci
       - run: npm test
       - run: npm run validate
       - run: npm run build
@@ -21,3 +27,35 @@ jobs:
         with:
           name: crossword-clue-tutor-dist
           path: dist
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: crossword-clue-tutor-production
+      cancel-in-progress: true
+    environment:
+      name: production
+      url: https://crosswordcluetutor.com
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with:
+          name: crossword-clue-tutor-dist
+          path: dist
+      - name: Deploy verified build to Cloudflare Pages
+        run: >-
+          npx wrangler pages deploy dist
+          --project-name crossword-clue-tutor
+          --branch main
+          --commit-hash "${{ github.sha }}"
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}

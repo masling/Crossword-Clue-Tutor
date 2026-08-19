@@ -4,6 +4,7 @@
 
 - [x] Register `crosswordcluetutor.com` and configure it as the canonical production domain.
 - [x] Deploy the production build to the `crossword-clue-tutor` Cloudflare Pages project.
+- [x] Automatically deploy the verified `main` artifact through GitHub Actions.
 - [x] Enable HTTPS and use `https://crosswordcluetutor.com` as the canonical host.
 - [x] Verify `sc-domain:crosswordcluetutor.com` in Google Search Console.
 - [x] Submit `/sitemap.xml` and `/feed.xml` in Search Console.

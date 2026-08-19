@@ -1,0 +1,42 @@
+{
+  "updatedAt": "2026-08-19T10:08:00+08:00",
+  "launchStartedAt": "2026-08-19T09:23:00+08:00",
+  "trafficGoal": {
+    "netHumanSessions": 100,
+    "deadline": "2026-09-02T09:23:00+08:00",
+    "currentNetHumanSessions": 0,
+    "operatorQaBaseline": 4,
+    "analyticsFilter": "excludeBots=Yes"
+  },
+  "content": {
+    "indexablePages": 74,
+    "reviewedClues": 39,
+    "answerMeaningPages": 18,
+    "lastPublishedSourceDates": {
+      "NYT Mini": "2026-08-18",
+      "The New York Times Crossword": "2026-08-18"
+    }
+  },
+  "search": {
+    "googleSitemapStatus": "Success",
+    "googleSitemapDiscoveredPages": 57,
+    "googleFeedStatus": "Success",
+    "googleFeedDiscoveredPages": 30,
+    "googleIndexedPages": 0,
+    "searchImpressions": 0,
+    "searchClicks": 0,
+    "indexNowSubmittedUrls": 35
+  },
+  "deployment": {
+    "provider": "Cloudflare Pages",
+    "project": "crossword-clue-tutor",
+    "mode": "GitHub Actions verified artifact direct upload",
+    "workflow": ".github/workflows/ci.yml",
+    "productionBranch": "main",
+    "tokenExpiresOn": "2027-08-20"
+  },
+  "nextAction": {
+    "notBefore": "2026-08-19T10:08:00+08:00",
+    "action": "Check whether the 2026-08-19 U.S. puzzle date is publicly available; if so, score and publish only high-explanation-value clues."
+  }
+}
