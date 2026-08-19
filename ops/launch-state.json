@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-19T11:24:00+08:00",
+  "updatedAt": "2026-08-19T11:33:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -11,7 +11,9 @@
       "Cloudflare Web Analytics",
       "Pageview"
     ],
-    "pageviewConfiguredAt": "2026-08-19T11:24:00+08:00"
+    "pageviewConfiguredAt": "2026-08-19T11:24:00+08:00",
+    "pageviewStatus": "Verified",
+    "pageviewOperatorQaBaseline": 1
   },
   "content": {
     "indexablePages": 94,
