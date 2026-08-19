@@ -1,23 +1,33 @@
 {
-  "status": "prepared",
-  "preparedAt": "2026-08-19T00:00:00Z",
-  "source": "NYT Mini 2026-08-18",
+  "publishedAt": "2026-08-19T01:43:38.482Z",
+  "input": "ops/intake/2026-08-18-nyt-daily-selected.json",
   "urls": [
-    "/explainers/big-cuddling-partner-nyt-mini/",
-    "/explainers/mickey-mouses-pet-dog-nyt-mini/",
-    "/explainers/foamy-coffee-order-nyt-mini/",
-    "/explainers/inside-information-informally-nyt-mini/",
-    "/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/",
-    "/explainers/divide-as-the-check-nyt-mini/",
-    "/explainers/it-comes-with-wings-on-the-side-nyt-mini/",
-    "/explainers/get-blank-town-nyt-mini/",
-    "/explainers/furry-animal-swimming-around-a-kelp-forest-nyt-mini/",
-    "/explainers/christmas-carols-nyt-mini/",
-    "/crosswordese/intel/",
-    "/crosswordese/outta/",
-    "/crosswordese/noels/"
+    "/explainers/forfends-nyt-daily/",
+    "/explainers/n-of-naacp-abbr-nyt-daily/",
+    "/explainers/oh-buzz-off-nyt-daily/",
+    "/explainers/high-end-private-jet-familiarly-nyt-daily/",
+    "/explainers/coverers-of-current-events-nyt-daily/",
+    "/explainers/meaning-of-vidi-in-caesars-boast-nyt-daily/",
+    "/explainers/nuts-whose-shells-look-like-little-berets-nyt-daily/",
+    "/explainers/story-of-ones-life-nyt-daily/",
+    "/explainers/eponym-of-a-chess-rating-system-nyt-daily/",
+    "/explainers/environs-nyt-daily/"
+  ],
+  "answerUrls": [
+    "/crosswordese/deters/",
+    "/crosswordese/natl/",
+    "/crosswordese/bite-me/",
+    "/crosswordese/g-six/",
+    "/crosswordese/obit/",
+    "/crosswordese/elo/",
+    "/crosswordese/milieu/"
   ],
   "clinicUrls": [
     "/daily-clue-clinic/2026-08-19/"
+  ],
+  "hubUrls": [
+    "/",
+    "/crosswordese/",
+    "/daily-clue-clinic/"
   ]
 }

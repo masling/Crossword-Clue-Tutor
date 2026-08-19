@@ -17,6 +17,20 @@ Discover, review, publish, deploy, and submit high-intent clue pages on the same
 9. In Google Search Console, submit the sitemap once and request URL Inspection indexing only for the top few new pages. Do not use Google’s Indexing API for crossword pages; it is restricted to job-posting and livestream pages.
 10. Record discovery, publish, deploy, submission, indexing, and traffic timestamps.
 
+The publishing command records new explainer URLs, matching answer-meaning pages,
+the daily clinic, and changed hub pages. IndexNow submits that complete update set
+after the production deployment is reachable.
+
+## Singapore launch window
+
+- 10:15 SGT: check the newly available U.S. puzzle date and discussion signals.
+- 10:15–11:30 SGT: select only high-confusion clues, write original teaching copy,
+  validate, deploy, and submit updated URLs.
+- 21:00 SGT: record bot-filtered visits, search discovery, and any query impressions.
+
+Publisher release times can change, so freshness is measured from confirmed public
+availability rather than from a hard-coded date assumption.
+
 ## Candidate score
 
 Score each candidate from 0–3 on:

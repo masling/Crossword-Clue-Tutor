@@ -10,7 +10,12 @@ if (site.hostname.endsWith(".example") && !dryRun) throw new Error("Replace the 
 
 const key = process.env.INDEXNOW_KEY ?? config.indexNowKey;
 if (!key && !dryRun) throw new Error("Set indexNowKey in site.config.json or INDEXNOW_KEY in the environment before submission");
-const paths = [...new Set([...(publishRecord.urls ?? []), ...(publishRecord.clinicUrls ?? [])])];
+const paths = [...new Set([
+  ...(publishRecord.urls ?? []),
+  ...(publishRecord.answerUrls ?? []),
+  ...(publishRecord.clinicUrls ?? []),
+  ...(publishRecord.hubUrls ?? [])
+])];
 const urlList = paths.map((route) => new URL(route, site).href);
 const payload = {
   host: site.hostname,

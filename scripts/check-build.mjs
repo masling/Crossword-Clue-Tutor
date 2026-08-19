@@ -15,6 +15,9 @@ for (const file of htmlFiles) {
   if (!/<title>[^<]+<\/title>/.test(html)) errors.push(`${relative}: missing title`);
   if (!/<meta name="description" content="[^"]+">/.test(html)) errors.push(`${relative}: missing meta description`);
   if (!/<link rel="canonical" href="https:\/\/[^\"]+">/.test(html)) errors.push(`${relative}: missing absolute canonical`);
+  if (/crossword crossword clue/i.test(html)) errors.push(`${relative}: duplicated “crossword” in clue target`);
+  if (/\bin the The\b/.test(html)) errors.push(`${relative}: duplicated article in publication context`);
+  if (/<h1>“[“”]/.test(html)) errors.push(`${relative}: duplicated quotation marks in heading`);
 
   const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
   for (const href of hrefs) {
@@ -58,8 +61,10 @@ if (!sitemap.includes("/crosswordese/spec/")) errors.push("sitemap is missing th
 if (!sitemap.includes("/explainers/contractors-detail-for-short/")) errors.push("sitemap is missing the reviewed SPEC explainer");
 if (!sitemap.includes("<lastmod>")) errors.push("sitemap is missing lastmod metadata for fresh content");
 if (!sitemap.includes("/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/")) errors.push("sitemap is missing the current NYT Mini batch");
+if (!sitemap.includes("/explainers/forfends-nyt-daily/")) errors.push("sitemap is missing the selected current NYT Daily batch");
 const feed = await readFile(path.join(dist, "feed.xml"), "utf8");
 if (!feed.includes("/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/")) errors.push("feed is missing the current NYT Mini batch");
+if (!feed.includes("/explainers/forfends-nyt-daily/")) errors.push("feed is missing the selected current NYT Daily batch");
 const freshPage = await readFile(path.join(dist, "explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/index.html"), "utf8");
 if (!freshPage.includes("NYT Mini crossword clue")) errors.push("fresh explainer does not target the publication long-tail query");
 

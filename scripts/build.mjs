@@ -178,6 +178,12 @@ function clueTypeLabel(type) {
   })[type] ?? "Crossword clue";
 }
 
+function publicationClueSuffix(publication) {
+  return /crossword$/i.test(publication.trim())
+    ? `${publication} clue`
+    : `${publication} crossword clue`;
+}
+
 function clueRows(items, { showDate = false } = {}) {
   return `<div class="clue-list">${items.map((clue) => `<a class="clue-row" href="/explainers/${clue.slug}/">
     <span class="clue-row-main"><strong>${escapeHtml(clue.clue)}</strong><small>${escapeHtml(clue.publication ? `${clue.publication} · ${clueTypeLabel(clue.clueType)}` : clueTypeLabel(clue.clueType))}${showDate ? ` · ${escapeHtml(formatDate(clue.date))}` : ""}</small></span>
@@ -289,16 +295,16 @@ for (const clue of clues) {
   const profile = answerByValue.get(clue.answer);
   const related = clues.filter((item) => item.slug !== clue.slug && (item.answer === clue.answer || item.tags.some((tag) => clue.tags.includes(tag)))).slice(0, 4);
   const sourceContext = clue.publication
-    ? `<section class="source-context"><h2>Where this clue appeared</h2><p>${escapeHtml(clue.clueNumber)} in the ${escapeHtml(clue.publication)} puzzle for ${escapeHtml(formatDate(clue.sourceDate))}.</p></section>`
+    ? `<section class="source-context"><h2>Where this clue appeared</h2><p>${escapeHtml(clue.clueNumber)} in ${escapeHtml(clue.publication)} puzzle for ${escapeHtml(formatDate(clue.sourceDate))}.</p></section>`
     : "";
   const contentKind = clue.publication
     ? `${clue.publication} · ${clue.clueNumber} · ${clue.answer.length} letters`
     : `Reviewed crossword explanation · ${clue.answer.length} letters`;
   const pageHeading = clue.publication
-    ? `“${escapeHtml(clue.clue)}” ${escapeHtml(clue.publication)} crossword clue`
-    : `“${escapeHtml(clue.clue)}” crossword clue`;
+    ? `${escapeHtml(clue.clue)} ${escapeHtml(publicationClueSuffix(clue.publication))}`
+    : `${escapeHtml(clue.clue)} crossword clue`;
   const pageTitle = clue.publication
-    ? `${clue.clue} ${clue.publication} crossword clue`
+    ? `${clue.clue} ${publicationClueSuffix(clue.publication)}`
     : `${clue.clue} crossword clue explained`;
   const affiliationNote = clue.publication
     ? `${config.name} is not affiliated with or endorsed by ${clue.publication} or its publisher.`

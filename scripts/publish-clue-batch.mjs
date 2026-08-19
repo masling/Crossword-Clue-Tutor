@@ -45,7 +45,12 @@ const publishRecord = {
   publishedAt: new Date().toISOString(),
   input: inputPath,
   urls: incoming.map((clue) => `/explainers/${clue.slug}/`),
-  clinicUrls: [...new Set(incoming.map((clue) => `/daily-clue-clinic/${clue.date}/`))]
+  answerUrls: [...new Set(incoming
+    .map((clue) => answers.find((answer) => answer.answer === clue.answer))
+    .filter(Boolean)
+    .map((answer) => `/crosswordese/${answer.slug}/`))],
+  clinicUrls: [...new Set(incoming.map((clue) => `/daily-clue-clinic/${clue.date}/`))],
+  hubUrls: ["/", "/crosswordese/", "/daily-clue-clinic/"]
 };
 
 if (dryRun) {

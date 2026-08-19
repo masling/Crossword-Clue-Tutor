@@ -13,7 +13,7 @@
 
 ## Definition of the traffic target
 
-Primary launch metric: at least 100 human sessions during the first 14 complete days after production deployment. Secondary metrics: Google organic clicks, indexed explainer pages, and returning users.
+Primary launch metric: at least 100 human sessions during the first 14 complete days after production deployment. Operator launch-QA visits are recorded separately and excluded. Secondary metrics: Google organic clicks, indexed explainer pages, and returning users.
 
 ## Daily measurements
 

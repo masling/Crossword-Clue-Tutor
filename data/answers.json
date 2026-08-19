@@ -174,5 +174,117 @@
     ],
     "otherMeanings": "Noel can also be a personal name or a general word associated with Christmas; the plural NOELS usually points to songs or repeated holiday celebrations.",
     "related": ["epee", "iota"]
+  },
+  {
+    "slug": "deters",
+    "answer": "DETERS",
+    "pronunciation": "dih-TURZ",
+    "partOfSpeech": "verb",
+    "meaning": "Discourages or prevents someone from doing something, usually by making the action seem risky, difficult, or unpleasant.",
+    "crosswordUse": "DETERS appears for clues such as “discourages,” “prevents,” “puts off,” or the older “forfends.” The final S must match third-person singular clue grammar.",
+    "whyCommon": "It is a familiar six-letter verb with several fair synonym clues, while older clue vocabulary can make the pairing less immediate to solvers.",
+    "cluePatterns": [
+      "Discourages from acting",
+      "Prevents through fear of consequences",
+      "Forfends, in modern wording"
+    ],
+    "otherMeanings": "DETERS does not necessarily mean physically blocks; it often describes changing someone’s willingness to act.",
+    "related": []
+  },
+  {
+    "slug": "natl",
+    "answer": "NATL",
+    "pronunciation": "NAT-uhl",
+    "partOfSpeech": "abbreviation",
+    "meaning": "A compact written abbreviation for “national,” normally used where space is limited.",
+    "crosswordUse": "NATL is usually supported by an explicit “Abbr.” signal, an abbreviated organization name, or wording about a national association, league, or title.",
+    "whyCommon": "It compresses an eight-letter adjective into four useful consonant-heavy cells and pairs naturally with abbreviation signals in the clue.",
+    "cluePatterns": [
+      "National, in an abbreviation",
+      "The N in an organization’s initials, shortened",
+      "A compact form seen in names or listings"
+    ],
+    "otherMeanings": "NATL is not normally used as a spoken standalone word and should not be confused with an organization’s complete initialism.",
+    "related": ["ene", "spec"]
+  },
+  {
+    "slug": "bite-me",
+    "answer": "BITEME",
+    "pronunciation": "BYTE mee",
+    "partOfSpeech": "informal phrase",
+    "meaning": "A rude or defiant retort roughly meaning “go away,” “leave me alone,” or “I reject what you just said.”",
+    "crosswordUse": "BITEME is entered without a space. Quotation marks, dismissive dialogue, and informal wording such as “buzz off” usually point to the idiomatic retort.",
+    "whyCommon": "The familiar six-letter phrase gives constructors lively quoted dialogue and lets a clue exploit the difference between literal and idiomatic readings.",
+    "cluePatterns": [
+      "A rude “buzz off”",
+      "A defiant two-word comeback",
+      "Dismissive words entered without a space"
+    ],
+    "otherMeanings": "Read literally, the words could be a physical command, but conversational crossword clues almost always intend the dismissive idiom.",
+    "related": ["outta"]
+  },
+  {
+    "slug": "g-six",
+    "answer": "GSIX",
+    "pronunciation": "jee SIKS",
+    "partOfSpeech": "informal noun",
+    "meaning": "The letters-only crossword rendering of “G6,” an informal name associated with a high-end Gulfstream private jet.",
+    "crosswordUse": "A clue about a luxury jet, Gulfstream nickname, or the phrase “like a G6” may produce GSIX because standard crossword grids spell the numeral as SIX.",
+    "whyCommon": "The answer turns a spoken letter-number name into four legal grid letters and supports clues spanning aviation and pop-culture usage.",
+    "cluePatterns": [
+      "A luxury private jet, familiarly",
+      "A Gulfstream nickname written with letters",
+      "The jet in “like a G6,” in grid form"
+    ],
+    "otherMeanings": "G6 can label unrelated products or groups outside aviation, so the clue’s jet or luxury context is essential.",
+    "related": []
+  },
+  {
+    "slug": "obit",
+    "answer": "OBIT",
+    "pronunciation": "OH-bit",
+    "partOfSpeech": "noun; informal shortening",
+    "meaning": "A shortened form of “obituary,” a notice or article reporting a person’s death and summarizing the person’s life.",
+    "crosswordUse": "OBIT can be clued directly as a death notice or indirectly through a “life story?” question-mark clue that points to its biographical content.",
+    "whyCommon": "The compact four-letter shortening is familiar in journalism and gives setters both direct definitions and darkly playful clue possibilities.",
+    "cluePatterns": [
+      "A death notice, briefly",
+      "A newspaper life summary",
+      "A person’s final published story?"
+    ],
+    "otherMeanings": "In formal prose, “obituary” is usually preferred; OBIT is common newsroom shorthand and casual speech.",
+    "related": []
+  },
+  {
+    "slug": "elo",
+    "answer": "ELO",
+    "pronunciation": "EE-loh",
+    "partOfSpeech": "proper noun; rating term",
+    "meaning": "A rating system used to estimate the relative strength of chess players, named for its creator Arpad Elo.",
+    "crosswordUse": "ELO may be clued as a chess rating, a ranking system, or the surname of the physicist who devised it. Eponym wording asks for the person’s name.",
+    "whyCommon": "Its short vowel-rich form crosses easily, and the answer can be clued through chess, rankings, mathematics, or its eponym.",
+    "cluePatterns": [
+      "A chess rating system",
+      "Arpad behind a ranking method",
+      "The eponym of competitive chess ratings"
+    ],
+    "otherMeanings": "ELO can also refer to the rock band Electric Light Orchestra; music language or capitalization context distinguishes that use.",
+    "related": ["iota"]
+  },
+  {
+    "slug": "milieu",
+    "answer": "MILIEU",
+    "pronunciation": "mil-YOO",
+    "partOfSpeech": "noun",
+    "meaning": "A person’s social, cultural, or physical environment; the surroundings in which someone or something exists.",
+    "crosswordUse": "MILIEU is commonly clued by “environment,” “setting,” “surroundings,” or “environs.” Its French origin can also be signaled explicitly.",
+    "whyCommon": "The six-letter word offers four vowels, several clean synonyms, and a less everyday vocabulary sense that remains fairly inferable from crossings.",
+    "cluePatterns": [
+      "One’s social environment",
+      "Surroundings or environs",
+      "A setting, with a French-derived word"
+    ],
+    "otherMeanings": "The term often emphasizes a social or cultural setting rather than merely the physical area around an object.",
+    "related": ["epee"]
   }
 ]
