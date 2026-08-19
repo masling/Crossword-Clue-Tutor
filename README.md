@@ -7,7 +7,8 @@ A validation MVP for a spoiler-aware crossword clue assistant. It combines:
 - a verified `Explain my answer` flow;
 - indexable crosswordese meaning pages;
 - reviewed clue explainers and clue-type guides;
-- a daily teaching set made from independent examples, not reproduced publisher puzzles.
+- a daily teaching set made from reviewed examples and selected clue references,
+  never a reproduced complete publisher puzzle.
 
 ## Run locally
 
