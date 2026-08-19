@@ -41,6 +41,17 @@ for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "
   }
 }
 
+const config = JSON.parse(await readFile(path.resolve("site.config.json"), "utf8"));
+if (config.indexNowKey) {
+  const keyFile = path.join(dist, `${config.indexNowKey}.txt`);
+  try {
+    const keyContents = (await readFile(keyFile, "utf8")).trim();
+    if (keyContents !== config.indexNowKey) errors.push("IndexNow key file content does not match site.config.json");
+  } catch {
+    errors.push("missing IndexNow key file in dist");
+  }
+}
+
 const sitemap = await readFile(path.join(dist, "sitemap.xml"), "utf8");
 if (sitemap.includes("404.html")) errors.push("sitemap must not include the 404 page");
 if (!sitemap.includes("/crosswordese/spec/")) errors.push("sitemap is missing the SPEC answer entity");

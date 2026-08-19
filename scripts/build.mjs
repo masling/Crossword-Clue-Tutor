@@ -348,7 +348,8 @@ const feedUpdated = `${feedClues[0]?.reviewedAt ?? config.contentUpdatedAt}T00:0
 const feed = `<?xml version="1.0" encoding="utf-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom"><title>${xmlEscape(config.name)} fresh crossword clues</title><id>${xmlEscape(canonicalUrl("/feed.xml"))}</id><link href="${xmlEscape(canonicalUrl("/feed.xml"))}" rel="self"/><link href="${xmlEscape(canonicalUrl("/"))}"/><updated>${feedUpdated}</updated>${feedClues.map((clue) => `<entry><title>${xmlEscape(`${clue.clue} crossword clue`)}</title><id>${xmlEscape(canonicalUrl(`/explainers/${clue.slug}/`))}</id><link href="${xmlEscape(canonicalUrl(`/explainers/${clue.slug}/`))}"/><updated>${clue.reviewedAt}T00:00:00Z</updated><summary>${xmlEscape(clue.explanation)}</summary></entry>`).join("")}</feed>\n`;
 await writeFile(path.join(dist, "feed.xml"), feed);
 await writeFile(path.join(dist, "robots.txt"), `User-agent: *\nAllow: /\n\nSitemap: ${canonicalUrl("/sitemap.xml")}\nSitemap: ${canonicalUrl("/feed.xml")}\n`);
-if (process.env.INDEXNOW_KEY) await writeFile(path.join(dist, `${process.env.INDEXNOW_KEY}.txt`), process.env.INDEXNOW_KEY);
+const indexNowKey = process.env.INDEXNOW_KEY ?? config.indexNowKey;
+if (indexNowKey) await writeFile(path.join(dist, `${indexNowKey}.txt`), indexNowKey);
 
 console.log(`Built ${pages.length} pages (${indexableRoutes.length} indexable) in dist/.`);
 

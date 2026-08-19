@@ -8,7 +8,7 @@
 - [ ] Verify a domain property in Google Search Console.
 - [ ] Submit `/sitemap.xml` and `/feed.xml` in Search Console.
 - [ ] Verify the site in Bing Webmaster Tools.
-- [ ] Generate an IndexNow key and expose `/<key>.txt` through the production build.
+- [x] Generate an IndexNow key and expose `/<key>.txt` through the production build.
 - [ ] Enable traffic measurement through hosting analytics or a privacy-appropriate analytics provider.
 
 ## Definition of the traffic target

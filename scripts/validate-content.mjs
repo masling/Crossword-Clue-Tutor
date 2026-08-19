@@ -50,6 +50,9 @@ export function validateContent({ clues, answers, clueTypes, config }) {
   if (config?.contentUpdatedAt && !/^\d{4}-\d{2}-\d{2}$/.test(config.contentUpdatedAt)) {
     errors.push("contentUpdatedAt must be YYYY-MM-DD");
   }
+  if (config?.indexNowKey && !/^[a-f0-9]{32,128}$/i.test(config.indexNowKey)) {
+    errors.push("indexNowKey must be 32-128 hexadecimal characters");
+  }
 
   for (const [index, answer] of answers.entries()) {
     const label = `answers[${index}]`;

@@ -38,7 +38,13 @@ npm run content:publish -- ops/intake/YYYY-MM-DD-source.json
 After deployment, notify participating search engines through IndexNow:
 
 ```bash
-INDEXNOW_KEY=your_public_key npm run indexnow:submit
+npm run indexnow:submit
+```
+
+Configure the final HTTPS domain before the production build:
+
+```bash
+npm run production:configure -- https://your-domain.com
 ```
 
 Google discovery uses the generated sitemap and Atom feed plus limited URL Inspection requests; Google’s Indexing API is not used because ordinary crossword pages are not eligible.

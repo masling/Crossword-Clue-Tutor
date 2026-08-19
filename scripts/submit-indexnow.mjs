@@ -8,8 +8,8 @@ const publishRecord = JSON.parse(await readFile(path.join(root, "ops/latest-publ
 const site = new URL(config.siteUrl);
 if (site.hostname.endsWith(".example") && !dryRun) throw new Error("Replace the .example siteUrl before submitting URLs");
 
-const key = process.env.INDEXNOW_KEY;
-if (!key && !dryRun) throw new Error("Set INDEXNOW_KEY before submission");
+const key = process.env.INDEXNOW_KEY ?? config.indexNowKey;
+if (!key && !dryRun) throw new Error("Set indexNowKey in site.config.json or INDEXNOW_KEY in the environment before submission");
 const paths = [...new Set([...(publishRecord.urls ?? []), ...(publishRecord.clinicUrls ?? [])])];
 const urlList = paths.map((route) => new URL(route, site).href);
 const payload = {

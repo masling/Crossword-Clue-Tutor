@@ -9,6 +9,7 @@
     "content:publish": "node scripts/publish-clue-batch.mjs",
     "dev": "node scripts/serve.mjs",
     "indexnow:submit": "node scripts/submit-indexnow.mjs",
+    "production:configure": "node scripts/configure-production.mjs",
     "test": "node --test",
     "validate": "node scripts/validate-content.mjs"
   },
