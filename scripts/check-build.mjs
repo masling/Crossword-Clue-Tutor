@@ -23,6 +23,7 @@ for (const file of htmlFiles) {
   if (/crossword crossword clue/i.test(html)) errors.push(`${relative}: duplicated “crossword” in clue target`);
   if (/\bin the The\b/.test(html)) errors.push(`${relative}: duplicated article in publication context`);
   if (/<h1>“[“”]/.test(html)) errors.push(`${relative}: duplicated quotation marks in heading`);
+  if (html.includes('class="breadcrumbs"') && !html.includes('"@type":"BreadcrumbList"')) errors.push(`${relative}: visible breadcrumbs are missing BreadcrumbList structured data`);
 
   const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
   for (const href of hrefs) {

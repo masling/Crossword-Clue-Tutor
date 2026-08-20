@@ -103,10 +103,21 @@ function footer() {
 }
 
 function breadcrumbs(items) {
-  return `<nav class="breadcrumbs" aria-label="Breadcrumb">${items.map((item, index) => {
+  const navigation = `<nav class="breadcrumbs" aria-label="Breadcrumb">${items.map((item, index) => {
     const separator = index ? `<span aria-hidden="true">/</span>` : "";
     return `${separator}${item.href ? `<a href="${item.href}">${escapeHtml(item.label)}</a>` : `<span aria-current="page">${escapeHtml(item.label)}</span>`}`;
   }).join("")}</nav>`;
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.label,
+      ...(item.href ? { item: canonicalUrl(item.href) } : {})
+    }))
+  };
+  return `${navigation}<script type="application/ld+json">${JSON.stringify(structuredData).replaceAll("<", "\\u003c")}</script>`;
 }
 
 function pageTemplate({ title, description, route, body, bodyClass = "", noindex = false, jsonLd = [] }) {
