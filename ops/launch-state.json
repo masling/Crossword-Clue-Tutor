@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T21:08:32+08:00",
+  "updatedAt": "2026-08-20T21:12:53+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -228,7 +228,19 @@
       "XWord Blog",
       "American Crossword Puzzle Tournament Links"
     ],
-    "approvalNeeded": "Approved sender identity plus authorization to submit the OneLook and ACPT forms and send two outreach emails."
+    "approvalNeeded": "Approve the USD 5/month Workers Paid email plan and domain-email activation, or approve the existing Gmail identity as the sender; external forms and emails still require action-time confirmation.",
+    "senderSetup": {
+      "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
+      "inboundDestination": "masling@gmail.com",
+      "destinationAlreadyVerified": true,
+      "existingDomainMailRecords": 0,
+      "existingDomainRoutingRules": 0,
+      "inboundPlan": "Cloudflare Email Routing",
+      "outboundPlan": "Cloudflare Email Sending SMTP through Gmail send-as",
+      "workersPaidRequired": true,
+      "status": "Awaiting explicit recurring-charge and credential approval",
+      "runbook": "ops/EMAIL_SETUP.md"
+    }
   },
   "nextAction": {
     "notBefore": "2026-08-21T12:15:00+08:00",

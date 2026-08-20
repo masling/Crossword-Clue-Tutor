@@ -3,6 +3,10 @@
 No message or form has been submitted. Each item requires action-time approval and a
 real sender identity. The OneLook and ACPT forms require an approved contact email.
 
+Preferred sender setup is documented in `../EMAIL_SETUP.md`. Until its inbound and
+outbound deliverability checks pass, do not replace the approved Gmail fallback in any
+live submission.
+
 ## Ready 1 — OneLook Dictionary Search
 
 - Channel: official feedback form linked from OneLook's dictionary-inclusion guidelines.
