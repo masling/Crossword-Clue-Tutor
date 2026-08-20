@@ -55,6 +55,11 @@ Google discovery uses the generated sitemap and Atom feed plus limited URL Inspe
 
 Private tool queries run in the browser and do not create URLs or indexable pages. Only reviewed data files generate pages included in the sitemap.
 
+Supported monitored publications are defined in `data/publications.json`: NYT Mini,
+The New York Times Crossword, LA Times Crossword, and USA TODAY Crossword. A
+publication hub is generated only after at least one selected, reviewed clue has
+been published, so monitoring a source does not create an empty SEO page.
+
 ## Production
 
 The canonical production site is <https://crosswordcluetutor.com>. It is hosted

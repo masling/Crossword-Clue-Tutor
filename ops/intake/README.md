@@ -28,3 +28,7 @@ Create one JSON file per publication/date batch:
 ```
 
 Use `date` for the Clue Tutor publishing/clinic date and `sourceDate` for the original puzzle date.
+
+`publication` must match a supported name in `data/publications.json`. Adding a
+source to that file enables intake and a future hub, but the hub remains unpublished
+until the first reviewed clue batch exists.

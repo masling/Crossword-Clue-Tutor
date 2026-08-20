@@ -60,6 +60,8 @@ if (config.indexNowKey) {
 }
 
 const sitemap = await readFile(path.join(dist, "sitemap.xml"), "utf8");
+const clues = JSON.parse(await readFile(path.resolve("data/clues.json"), "utf8"));
+const publications = JSON.parse(await readFile(path.resolve("data/publications.json"), "utf8"));
 if (sitemap.includes("404.html")) errors.push("sitemap must not include the 404 page");
 if (!sitemap.includes("/crosswordese/spec/")) errors.push("sitemap is missing the SPEC answer entity");
 if (!sitemap.includes("/explainers/contractors-detail-for-short/")) errors.push("sitemap is missing the reviewed SPEC explainer");
@@ -67,8 +69,12 @@ if (!sitemap.includes("<lastmod>")) errors.push("sitemap is missing lastmod meta
 if (!sitemap.includes("/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/")) errors.push("sitemap is missing the current NYT Mini batch");
 if (!sitemap.includes("/explainers/forfends-nyt-daily/")) errors.push("sitemap is missing the selected current NYT Daily batch");
 if (!sitemap.includes("/explainers/private-sleeping-accommodations-nyt-daily/")) errors.push("sitemap is missing the latest NYT Daily batch");
-if (!sitemap.includes("/nyt-mini-crossword-clues/")) errors.push("sitemap is missing the NYT Mini publication hub");
-if (!sitemap.includes("/nyt-crossword-clues/")) errors.push("sitemap is missing the NYT daily publication hub");
+for (const publication of publications) {
+  const hasPublishedClues = clues.some((clue) => clue.publication === publication.name);
+  const routeInSitemap = sitemap.includes(publication.route);
+  if (hasPublishedClues && !routeInSitemap) errors.push(`sitemap is missing the ${publication.name} publication hub`);
+  if (!hasPublishedClues && routeInSitemap) errors.push(`sitemap includes an empty ${publication.name} publication hub`);
+}
 const feed = await readFile(path.join(dist, "feed.xml"), "utf8");
 if (!feed.includes("/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/")) errors.push("feed is missing the current NYT Mini batch");
 if (!feed.includes("/explainers/forfends-nyt-daily/")) errors.push("feed is missing the selected current NYT Daily batch");

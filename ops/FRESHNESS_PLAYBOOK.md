@@ -6,7 +6,8 @@ Discover, review, publish, deploy, and submit high-intent clue pages on the same
 
 ## Daily operating loop
 
-1. Check official puzzle releases and visible daily discussion/search activity.
+1. Check official puzzle releases and visible daily discussion/search activity for
+   NYT Mini, The New York Times Crossword, LA Times Crossword, and USA TODAY Crossword.
 2. Capture candidate clue-answer pairs with publication, date, and clue number.
 3. Prioritize clues with ambiguity, abbreviations, unfamiliar names, wordplay, or a likely “why?” query.
 4. Write an original hint, clue signal, definition, and explanation.
@@ -26,13 +27,15 @@ checks pass. The commands above remain the local recovery path.
 
 ## Singapore launch window
 
-- 10:15 SGT: check the newly available U.S. puzzle date and discussion signals.
-- 10:15–11:30 SGT: select only high-confusion clues, write original teaching copy,
+- 12:15 SGT: check the newly available U.S. puzzle dates and discussion signals.
+- 12:15–13:30 SGT: select only high-confusion clues, write original teaching copy,
   validate, deploy, and submit updated URLs.
 - 21:00 SGT: record bot-filtered visits, search discovery, and any query impressions.
 
 Publisher release times can change, so freshness is measured from confirmed public
-availability rather than from a hard-coded date assumption.
+availability rather than from a hard-coded date assumption. Free play does not grant
+republication rights: never mirror a full grid or answer list, and never bypass a
+publisher login or subscription boundary.
 
 ## Candidate score
 

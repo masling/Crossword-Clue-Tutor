@@ -9,14 +9,15 @@ async function readJson(relativePath) {
   return JSON.parse(await readFile(path.join(root, relativePath), "utf8"));
 }
 
-const [config, clues, answers, clueTypes] = await Promise.all([
+const [config, clues, answers, clueTypes, publications] = await Promise.all([
   readJson("site.config.json"),
   readJson("data/clues.json"),
   readJson("data/answers.json"),
-  readJson("data/clue-types.json")
+  readJson("data/clue-types.json"),
+  readJson("data/publications.json")
 ]);
 
-const validation = validateContent({ clues, answers, clueTypes, config });
+const validation = validateContent({ clues, answers, clueTypes, publications, config });
 for (const warning of validation.warnings) console.warn(`warning: ${warning}`);
 if (validation.errors.length) throw new Error(validation.errors.join("\n"));
 
@@ -76,6 +77,9 @@ function header() {
 }
 
 function footer() {
+  const publicationLinks = activePublicationHubs()
+    .map((hub) => `<a href="${hub.route}">${escapeHtml(hub.linkLabel)}</a>`)
+    .join("");
   return `<footer class="site-footer">
     <div class="shell footer-grid">
       <div><a class="brand footer-brand" href="/">${logo()}<span>${escapeHtml(config.name)}</span></a><p>${escapeHtml(config.tagline)}</p></div>
@@ -84,8 +88,7 @@ function footer() {
         <a href="/editorial-policy/">Editorial policy</a>
         <a href="/privacy/">Privacy</a>
         <a href="/daily-clue-clinic/">Daily clue clinic</a>
-        <a href="/nyt-mini-crossword-clues/">NYT Mini clues</a>
-        <a href="/nyt-crossword-clues/">NYT daily clues</a>
+        ${publicationLinks}
       </nav>
     </div>
   </footer>`;
@@ -206,25 +209,14 @@ function publicationClueSuffix(publication) {
     : `${publication} crossword clue`;
 }
 
-const publicationHubs = new Map([
-  ["NYT Mini", {
-    route: "/nyt-mini-crossword-clues/",
-    title: "NYT Mini crossword clues: daily hints and explanations",
-    heading: "Selected NYT Mini clues, explained",
-    description: "Get spoiler-light hints and original explanations for selected tricky NYT Mini crossword clues, organized by puzzle date.",
-    maxPerDate: 6
-  }],
-  ["The New York Times Crossword", {
-    route: "/nyt-crossword-clues/",
-    title: "NYT crossword clues: selected daily hints and explanations",
-    heading: "Selected NYT crossword clues, explained",
-    description: "Browse spoiler-light hints and original explanations for selected high-confusion New York Times crossword clues by puzzle date.",
-    maxPerDate: 8
-  }]
-]);
+const publicationHubs = new Map(publications.map((publication) => [publication.name, publication]));
 
 function publicationHubFor(publication) {
   return publicationHubs.get(publication);
+}
+
+function activePublicationHubs() {
+  return publications.filter((publication) => clues.some((clue) => clue.publication === publication.name));
 }
 
 function clueRows(items, { showDate = false } = {}) {
@@ -275,7 +267,7 @@ const homeBody = `<section class="hero shell">
 <section class="shell latest-section">
   <div class="section-heading"><div><h2>Recently reviewed clues</h2><p>Every indexed explanation has an editorial review date.</p></div><a href="/daily-clue-clinic/">Browse the clinic archive</a></div>
   ${clueRows(latestClues.slice(0, 6))}
-  <div class="daily-hub-links"><a href="/nyt-mini-crossword-clues/">NYT Mini clue hints →</a><a href="/nyt-crossword-clues/">NYT daily clue hints →</a></div>
+  <div class="daily-hub-links">${activePublicationHubs().map((hub) => `<a href="${hub.route}">${escapeHtml(hub.linkLabel)} →</a>`).join("")}</div>
 </section>
 <section class="answer-strip">
   <div class="shell answer-strip-inner"><div><h2>Meet the words crosswords keep bringing back.</h2><p>Meaning, pronunciation, common clue patterns, and why the fill works so well in a grid.</p></div><div class="answer-links">${answers.slice(0, 5).map((answer) => `<a href="/crosswordese/${answer.slug}/">${answer.answer}</a>`).join("")}</div><a class="button button-secondary" href="/crosswordese/">Explore crosswordese</a></div>
@@ -336,6 +328,7 @@ for (const type of clueTypes) {
 
 for (const [publication, hub] of publicationHubs) {
   const publicationClues = clues.filter((clue) => clue.publication === publication);
+  if (publicationClues.length === 0) continue;
   const sourceDates = [...new Set(publicationClues.map((clue) => clue.sourceDate))].sort().reverse();
   const latestReview = publicationClues.map((clue) => clue.reviewedAt).sort().reverse()[0] ?? config.contentUpdatedAt;
   const dateSections = sourceDates.map((sourceDate) => {
@@ -361,11 +354,9 @@ for (const clue of clues) {
   const pageHeading = clue.publication
     ? `${escapeHtml(clue.clue)} ${escapeHtml(publicationClueSuffix(clue.publication))}`
     : `${escapeHtml(clue.clue)} crossword clue`;
-  const pageTitle = clue.publication === "NYT Mini"
-    ? seoTitle(clue.clue, "NYT Mini Crossword Clue")
-    : clue.publication
-      ? seoTitle(clue.clue, "NYT Crossword Clue")
-      : seoTitle(clue.clue, "Crossword Clue Answer");
+  const pageTitle = clue.publication
+    ? seoTitle(clue.clue, publicationHub?.titleSuffix ?? "Crossword Clue")
+    : seoTitle(clue.clue, "Crossword Clue Answer");
   const affiliationNote = clue.publication
     ? `${config.name} is not affiliated with or endorsed by ${clue.publication} or its publisher.`
     : "It is not an official answer key from a crossword publisher.";

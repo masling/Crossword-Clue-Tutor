@@ -6,12 +6,14 @@ const REQUIRED_CLUE_FIELDS = [
   "tags", "clueType", "signal", "hint", "reviewedAt"
 ];
 
-export function validateContent({ clues, answers, clueTypes, config }) {
+export function validateContent({ clues, answers, clueTypes, publications, config }) {
   const errors = [];
   const warnings = [];
   const clueSlugs = new Set();
   const answerSlugs = new Set();
   const typeSlugs = new Set();
+  const publicationNames = new Set();
+  const publicationRoutes = new Set();
 
   if (!config?.name || !config?.description || !config?.siteUrl) {
     errors.push("site.config.json must include name, description, and siteUrl");
@@ -23,6 +25,23 @@ export function validateContent({ clues, answers, clueTypes, config }) {
       }
     } catch {
       errors.push("siteUrl must be a valid absolute URL");
+    }
+  }
+
+  if (!Array.isArray(publications) || publications.length === 0) {
+    errors.push("data/publications.json must define at least one supported publication");
+  } else {
+    for (const [index, publication] of publications.entries()) {
+      const label = `publications[${index}]`;
+      for (const field of ["name", "route", "title", "heading", "description", "titleSuffix", "linkLabel"]) {
+        if (!publication[field]) errors.push(`${label} is missing ${field}`);
+      }
+      if (!/^\/[a-z0-9-]+\/$/.test(publication.route ?? "")) errors.push(`${label} has an invalid route`);
+      if (!Number.isInteger(publication.maxPerDate) || publication.maxPerDate < 1) errors.push(`${label} maxPerDate must be a positive integer`);
+      if (publicationNames.has(publication.name)) errors.push(`duplicate publication name: ${publication.name}`);
+      if (publicationRoutes.has(publication.route)) errors.push(`duplicate publication route: ${publication.route}`);
+      publicationNames.add(publication.name);
+      publicationRoutes.add(publication.route);
     }
   }
 
@@ -42,6 +61,7 @@ export function validateContent({ clues, answers, clueTypes, config }) {
     if (!Array.isArray(clue.tags) || clue.tags.length === 0) errors.push(`${label} needs at least one tag`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(clue.reviewedAt ?? "")) errors.push(`${label} reviewedAt must be YYYY-MM-DD`);
     if (clue.publication) {
+      if (!publicationNames.has(clue.publication)) errors.push(`${label} uses unsupported publication ${clue.publication}`);
       if (!clue.sourceDate || !/^\d{4}-\d{2}-\d{2}$/.test(clue.sourceDate)) errors.push(`${label} with a publication needs sourceDate in YYYY-MM-DD format`);
       if (!clue.clueNumber) errors.push(`${label} with a publication needs clueNumber`);
     }
@@ -102,13 +122,14 @@ async function readJson(path) {
 }
 
 async function main() {
-  const [clues, answers, clueTypes, config] = await Promise.all([
+  const [clues, answers, clueTypes, publications, config] = await Promise.all([
     readJson("data/clues.json"),
     readJson("data/answers.json"),
     readJson("data/clue-types.json"),
+    readJson("data/publications.json"),
     readJson("site.config.json")
   ]);
-  const result = validateContent({ clues, answers, clueTypes, config });
+  const result = validateContent({ clues, answers, clueTypes, publications, config });
   for (const warning of result.warnings) console.warn(`warning: ${warning}`);
   if (result.errors.length) {
     for (const error of result.errors) console.error(`error: ${error}`);
