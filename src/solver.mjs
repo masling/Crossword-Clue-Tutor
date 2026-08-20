@@ -77,6 +77,31 @@ export function solveClues(clues, { pattern = "", clue = "", length } = {}) {
     .map(({ item }) => item);
 }
 
+export function clueHubCandidates(clueHubs = []) {
+  return clueHubs.flatMap((hub) => {
+    const preferredOrder = new Map((hub.preferredAnswers ?? []).map((answer, index) => [answer, index]));
+    return hub.answers.map((option, index) => {
+      const preferredIndex = preferredOrder.get(option.answer);
+      const popularity = preferredIndex === undefined ? Math.max(10, 40 - index) : 80 - preferredIndex;
+      return {
+        slug: `hub-${hub.slug}-${option.answer.toLowerCase()}`,
+        clue: hub.clue,
+        answer: option.answer,
+        definition: option.sense,
+        explanation: `${option.answer} can answer “${hub.clue}” when the clue uses this sense: ${option.sense} The grid must also match ${answerCells(option.answer).length} letters and every crossing.`,
+        signal: "This recurring one-word clue has several legitimate senses; answer length and crossings select the intended one.",
+        hint: `Look for a ${answerCells(option.answer).length}-letter answer matching this sense: ${option.sense}`,
+        tags: ["recurring clue", "multiple answers", hub.clue, option.sense],
+        clueType: "multi-answer",
+        popularity,
+        reviewedAt: hub.reviewedAt,
+        hubSlug: hub.slug,
+        sourceKind: "clue-hub"
+      };
+    });
+  });
+}
+
 export function answerCells(answer) {
   return [...answer].filter((character) => /[A-Z]/i.test(character));
 }

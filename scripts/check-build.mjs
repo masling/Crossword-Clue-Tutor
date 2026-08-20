@@ -64,6 +64,11 @@ for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "
   }
 }
 
+const appScript = await readFile(path.join(dist, "assets/app.js"), "utf8");
+const solverScript = await readFile(path.join(dist, "assets/solver.mjs"), "utf8");
+if (!appScript.includes('fetch("/assets/clue-hubs.json")') || !appScript.includes("solverClues")) errors.push("solver app is not loading the multi-answer clue hub candidate pool");
+if (!solverScript.includes("clueHubCandidates")) errors.push("solver module is missing the clue-hub adapter");
+
 for (const [asset, expectedWidth, expectedHeight] of [["assets/social-card.png", 1200, 630], ["assets/logo-512.png", 512, 512]]) {
   try {
     const image = await readFile(path.join(dist, asset));

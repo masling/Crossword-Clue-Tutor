@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { normalizeClue, normalizePattern, patternToRegExp, scoreClueMatch, solveClues } from "../src/solver.mjs";
+import { clueHubCandidates, normalizeClue, normalizePattern, patternToRegExp, scoreClueMatch, solveClues } from "../src/solver.mjs";
 
 const clues = [
   { answer: "SPEC", clue: "Contractor's detail, for short", definition: "A specification", tags: ["work"], popularity: 10 },
@@ -39,4 +39,41 @@ test("filters by answer length when no pattern is supplied", () => {
 test("returns popular matches first", () => {
   const results = solveClues(clues, { pattern: "S???" });
   assert.deepEqual(results.map((item) => item.answer), ["SPEC", "SEAR", "SAFE"]);
+});
+
+test("turns a multi-answer clue hub into solver candidates", () => {
+  const candidates = clueHubCandidates([{
+    slug: "sharp",
+    clue: "Sharp",
+    reviewedAt: "2026-08-20",
+    preferredAnswers: ["KEEN", "ACUTE"],
+    answers: [
+      { answer: "ACID", sense: "Sharp or biting in taste or tone." },
+      { answer: "KEEN", sense: "Sharp-edged or mentally perceptive." },
+      { answer: "ACUTE", sense: "Sharp in angle, pain, or perception." }
+    ]
+  }]);
+
+  assert.equal(candidates.length, 3);
+  assert.equal(candidates[1].hubSlug, "sharp");
+  assert.equal(candidates[1].sourceKind, "clue-hub");
+  assert.equal(candidates[1].hint.toUpperCase().includes("KEEN"), false);
+});
+
+test("uses length, crossings, and preferred order for hub candidates", () => {
+  const candidates = clueHubCandidates([{
+    slug: "sharp",
+    clue: "Sharp",
+    reviewedAt: "2026-08-20",
+    preferredAnswers: ["KEEN", "ACUTE", "ACID"],
+    answers: [
+      { answer: "ACID", sense: "Sharp or biting in taste or tone." },
+      { answer: "KEEN", sense: "Sharp-edged or mentally perceptive." },
+      { answer: "ACUTE", sense: "Sharp in angle, pain, or perception." }
+    ]
+  }]);
+
+  const fourLetters = solveClues(candidates, { clue: "sharp", length: 4 });
+  assert.deepEqual(fourLetters.map((item) => item.answer), ["KEEN", "ACID"]);
+  assert.deepEqual(solveClues(candidates, { clue: "sharp", pattern: "K?E?" }).map((item) => item.answer), ["KEEN"]);
 });

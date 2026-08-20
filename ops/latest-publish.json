@@ -1,16 +1,12 @@
 {
-  "publishedAt": "2026-08-20T10:43:13.000Z",
-  "input": "data/clue-hubs.json#2026-08-20-sharp-light",
+  "publishedAt": "2026-08-20T10:56:24.000Z",
+  "input": "src/solver.mjs#clue-hub-candidates",
   "urls": [],
   "answerUrls": [],
   "clinicUrls": [],
   "hubUrls": [
-    "/crossword-clues/",
-    "/crossword-clues/sharp/",
-    "/crossword-clues/light/",
-    "/guides/answer-length-and-crossings/",
-    "/research/ambiguous-crossword-clues/",
-    "/assets/clue-hubs.json",
-    "/assets/clue-hubs.csv"
+    "/",
+    "/solver/",
+    "/explain/"
   ]
 }

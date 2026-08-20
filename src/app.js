@@ -1,9 +1,13 @@
-import { normalizeClue, normalizePattern, solveClues } from "/assets/solver.mjs";
+import { clueHubCandidates, normalizeClue, normalizePattern, solveClues } from "/assets/solver.mjs";
 
 const dataPromise = Promise.all([
   fetch("/assets/clues.json").then((response) => response.json()),
-  fetch("/assets/answers.json").then((response) => response.json())
-]).then(([clues, answers]) => ({ clues, answers }));
+  fetch("/assets/answers.json").then((response) => response.json()),
+  fetch("/assets/clue-hubs.json").then((response) => response.json())
+]).then(([clues, answers, clueHubs]) => {
+  const hubClues = clueHubCandidates(clueHubs);
+  return { clues, answers, clueHubs, hubClues, solverClues: [...clues, ...hubClues] };
+});
 
 for (const link of document.querySelectorAll(".primary-nav a")) {
   if (link.pathname !== "/" && location.pathname.startsWith(link.pathname)) link.setAttribute("aria-current", "page");
@@ -170,8 +174,8 @@ function setupSolveForm(root) {
       showError(error, "Answer length must be between 2 and 30 letters.");
       return;
     }
-    const { clues } = await dataPromise;
-    const matches = solveClues(clues, { clue, pattern, length }).slice(0, 5);
+    const { solverClues } = await dataPromise;
+    const matches = solveClues(solverClues, { clue, pattern, length }).slice(0, 5);
     renderSolveResults(results, matches, { clue, pattern, length });
   });
 }
@@ -193,7 +197,7 @@ function setupExplainForm(root) {
       return;
     }
     const data = await dataPromise;
-    const candidates = solveClues(data.clues, { clue, length: answer.length }).filter((item) => item.answer === answer);
+    const candidates = solveClues(data.solverClues, { clue, length: answer.length }).filter((item) => item.answer === answer);
     const exact = candidates.find((item) => normalizeClue(item.clue) === normalizeClue(clue));
     const close = candidates[0];
     const profile = data.answers.find((item) => item.answer === answer);
@@ -267,6 +271,11 @@ function solveResult(item, index) {
   });
 
   article.append(head, signal, hint, answerBlock, why, actions);
+  if (item.hubSlug) {
+    const compare = element("a", "text-link hub-result-link", `Compare all ${item.clue} answers by length →`);
+    compare.href = `/crossword-clues/${item.hubSlug}/`;
+    article.append(compare);
+  }
   return article;
 }
 
@@ -303,8 +312,8 @@ function renderExplanation(container, item, profile, query) {
     explanationSection("Clue signal", item.signal),
     explanationSection(`${item.answer} meaning here`, item.definition)
   );
-  const link = element("a", "text-link", "Open the full reviewed explanation →");
-  link.href = `/explainers/${item.slug}/`;
+  const link = element("a", "text-link", item.hubSlug ? `Compare all ${item.clue} answers by length →` : "Open the full reviewed explanation →");
+  link.href = item.hubSlug ? `/crossword-clues/${item.hubSlug}/` : `/explainers/${item.slug}/`;
   article.append(status, title, cells, grid, link);
   container.append(article);
 }

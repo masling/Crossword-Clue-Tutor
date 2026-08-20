@@ -53,6 +53,10 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
         if (possibleAnswers.has(option.answer)) errors.push(`${label} has duplicate answer ${option.answer}`);
         possibleAnswers.add(option.answer);
       }
+      if (!Array.isArray(hub.preferredAnswers) || hub.preferredAnswers.length === 0) errors.push(`${label} needs at least one preferred answer`);
+      for (const answer of hub.preferredAnswers ?? []) {
+        if (!possibleAnswers.has(answer)) errors.push(`${label} preferred answer ${answer} is not in its answer list`);
+      }
       if (!Array.isArray(hub.relatedQueries) || hub.relatedQueries.length < 2) errors.push(`${label} needs at least two related queries`);
     }
   }
