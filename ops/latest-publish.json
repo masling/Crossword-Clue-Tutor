@@ -1,14 +1,19 @@
 {
-  "publishedAt": "2026-08-20T12:05:58.000Z",
-  "input": "data/clue-hubs.json#noble-demand-gap",
+  "publishedAt": "2026-08-20T12:18:20.000Z",
+  "input": "data/answers.json#hub-answer-meaning-links",
   "urls": [],
-  "answerUrls": [],
+  "answerUrls": [
+    "/crosswordese/biting/",
+    "/crosswordese/inborn/",
+    "/crosswordese/swollen/",
+    "/crosswordese/grand/"
+  ],
   "clinicUrls": [],
   "hubUrls": [
-    "/crossword-clues/noble/",
-    "/crossword-clues/",
-    "/solver/",
-    "/explain/",
-    "/research/ambiguous-crossword-clues/"
+    "/crosswordese/",
+    "/crossword-clues/nipping/",
+    "/crossword-clues/congenital/",
+    "/crossword-clues/inflated/",
+    "/crossword-clues/noble/"
   ]
 }

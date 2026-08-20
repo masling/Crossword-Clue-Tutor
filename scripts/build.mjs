@@ -59,6 +59,13 @@ function feedbackUrl({ mode = "general", pagePath = "/", clue = "", answer = "" 
   return `/feedback/?${query}`;
 }
 
+function answerEntityLabel(value, { variant = false } = {}) {
+  const profile = answerByValue.get(value);
+  const content = `<strong>${escapeHtml(value)}</strong>${variant ? `<small>${value.length} letters</small>` : ""}`;
+  if (!profile) return variant ? `<span>${content}</span>` : content;
+  return `<a class="${variant ? "variant-answer-link" : "answer-entity-link"}" href="/crosswordese/${profile.slug}/" aria-label="${escapeHtml(value)} meaning and crossword use">${content}</a>`;
+}
+
 function seoTitle(subject, suffix) {
   const separator = " — ";
   const maxLength = 70;
@@ -377,8 +384,8 @@ for (const hub of clueHubs) {
     if (!groupedAnswers.has(length)) groupedAnswers.set(length, []);
     groupedAnswers.get(length).push(answer);
   }
-  const answerGroups = [...groupedAnswers.entries()].sort(([a], [b]) => a - b).map(([length, items]) => `<section class="answer-length-group"><h3>${length} letters</h3><div>${items.map((answer) => `<article><strong>${escapeHtml(answer.answer)}</strong><span>${escapeHtml(answer.sense)}</span></article>`).join("")}</div></section>`).join("");
-  const queryVariants = hub.queryVariants?.length ? `<section><h2>Common ${escapeHtml(hub.clue)} clue variants</h2><div class="clue-variant-reference">${hub.queryVariants.map((variant) => `<article><h3>${escapeHtml(variant.query)}</h3><p>${escapeHtml(variant.guidance)}</p><div class="variant-answer-list">${variant.answers.map((answer) => `<span><strong>${escapeHtml(answer)}</strong><small>${answer.length} letters</small></span>`).join("")}</div></article>`).join("")}</div></section>` : "";
+  const answerGroups = [...groupedAnswers.entries()].sort(([a], [b]) => a - b).map(([length, items]) => `<section class="answer-length-group"><h3>${length} letters</h3><div>${items.map((answer) => `<article>${answerEntityLabel(answer.answer)}<span>${escapeHtml(answer.sense)}</span></article>`).join("")}</div></section>`).join("");
+  const queryVariants = hub.queryVariants?.length ? `<section><h2>Common ${escapeHtml(hub.clue)} clue variants</h2><div class="clue-variant-reference">${hub.queryVariants.map((variant) => `<article><h3>${escapeHtml(variant.query)}</h3><p>${escapeHtml(variant.guidance)}</p><div class="variant-answer-list">${variant.answers.map((answer) => answerEntityLabel(answer, { variant: true })).join("")}</div></article>`).join("")}</div></section>` : "";
   const body = `<article class="shell article-layout clue-dictionary-entry"><div class="article-main">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Clue dictionary", href: "/crossword-clues/" }, { label: hub.clue }])}<header><p class="content-kind">Recurring crossword clue · multiple possible answers</p><h1>${escapeHtml(hub.clue)} crossword clue</h1><p class="review-date">Editorially reviewed ${escapeHtml(formatDate(hub.reviewedAt))}</p></header><section><h2>Best starting answer</h2><p>${escapeHtml(hub.answerGuidance)}</p></section><section><h2>${escapeHtml(hub.clue)} answers by length</h2><p>The correct fill depends on the number of squares, crossing letters, and the sense intended by the setter.</p><div class="answer-length-groups">${answerGroups}</div></section><section><h2>Meanings to check</h2><ul class="pattern-list">${hub.meaningBuckets.map((meaning) => `<li>${escapeHtml(meaning)}</li>`).join("")}</ul></section>${queryVariants}<section><h2>Related searches</h2><ul class="pattern-list">${hub.relatedQueries.map((query) => `<li>${escapeHtml(query)}</li>`).join("")}</ul></section><p class="source-note">This page groups independently reviewed possibilities for a recurring clue. It is not tied to one publisher or reproduced puzzle.</p></div><aside class="article-aside"><p>Use your crossings</p><span>Match the number of squares first, then compare the letters you already trust.</span><a class="aside-all" href="/solver/">Open the pattern solver →</a><a class="aside-all" href="/guides/answer-length-and-crossings/">Read the ambiguity guide →</a><a class="aside-all" href="${feedbackUrl({ mode: "hub", pagePath: route, clue: hub.clue })}">Report an issue →</a></aside></article>`;
   const itemListLd = { "@context": "https://schema.org", "@type": "ItemList", name: `${hub.clue} crossword clue answers`, itemListElement: hub.answers.map((answer, index) => ({ "@type": "ListItem", position: index + 1, name: answer.answer, description: answer.sense })) };
   await writePage(route, pageTemplate({ title: `${hub.clue} crossword clue: answers by length`, description: hub.summary, route, body, bodyClass: "article-page clue-dictionary-page", jsonLd: [itemListLd] }), false, hub.reviewedAt);

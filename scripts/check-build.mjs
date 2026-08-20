@@ -194,7 +194,15 @@ if (!usaTodayHub.includes("Arthur for whom the ESPYs&#039; Courage Award is name
 if (!usaTodayHub.includes("&quot;Hidden Figures&quot; star Janelle") || !usaTodayHub.includes("August 20, 2026")) errors.push("USA TODAY hub is missing its August 20 selected batch");
 const latestUsaTodayPage = await readFile(path.join(dist, "explainers/hidden-figures-star-janelle-usa-today/index.html"), "utf8");
 if (!latestUsaTodayPage.includes("Why MONAE fits") || !latestUsaTodayPage.includes("USA TODAY Crossword · 44-Across")) errors.push("latest USA TODAY explainer is missing its reviewed answer or source context");
-for (const [slug, answer, target] of [["mia", "MIA", "missing in action"], ["una", "UNA", "Spanish feminine singular"], ["goya", "GOYA", "Francisco Goya"]]) {
+for (const [slug, answer, target] of [
+  ["mia", "MIA", "missing in action"],
+  ["una", "UNA", "Spanish feminine singular"],
+  ["goya", "GOYA", "Francisco Goya"],
+  ["biting", "BITING", "Sharply cold"],
+  ["inborn", "INBORN", "Present from birth"],
+  ["swollen", "SWOLLEN", "Enlarged beyond normal size"],
+  ["grand", "GRAND", "one thousand dollars"]
+]) {
   const answerPage = await readFile(path.join(dist, `crosswordese/${slug}/index.html`), "utf8");
   if (!answerPage.includes(`${answer} in crosswords`) || !answerPage.includes(target) || !answerPage.includes('"@type":"DefinedTerm"')) errors.push(`${answer} answer page is missing its meaning target or DefinedTerm data`);
 }
@@ -214,6 +222,10 @@ const sharpHub = await readFile(path.join(dist, "crossword-clues/sharp/index.htm
 if (!sharpHub.includes("Sharp crossword clue") || !sharpHub.includes("KEEN") || !sharpHub.includes("ACUTE") || !sharpHub.includes("ASTUTE") || !sharpHub.includes("Sharp or biting in taste") || !sharpHub.includes("mentally sharp crossword clue") || !sharpHub.includes("looking sharp crossword clue")) errors.push("Sharp clue hub is missing its search target, reviewed answers, meanings, or query variants");
 const lightHub = await readFile(path.join(dist, "crossword-clues/light/index.html"), "utf8");
 if (!lightHub.includes("Light crossword clue") || !lightHub.includes("GLOW") || !lightHub.includes("PALE") || !lightHub.includes("IGNITE") || !lightHub.includes("Illumination, a beam") || !lightHub.includes("flashing light crossword clue") || !lightHub.includes("before it gets light crossword clue") || !lightHub.includes("STROBE") || !lightHub.includes("PREDAWN")) errors.push("Light clue hub is missing its search target, reviewed answers, meanings, or query variants");
+for (const [hubSlug, answerSlug] of [["nipping", "biting"], ["congenital", "inborn"], ["inflated", "swollen"], ["noble", "grand"]]) {
+  const hubPage = await readFile(path.join(dist, `crossword-clues/${hubSlug}/index.html`), "utf8");
+  if (!hubPage.includes(`/crosswordese/${answerSlug}/`) || !hubPage.includes("answer-entity-link")) errors.push(`${hubSlug} clue hub is missing its answer-meaning internal link`);
+}
 const ambiguityGuide = await readFile(path.join(dist, "guides/answer-length-and-crossings/index.html"), "utf8");
 if (!ambiguityGuide.includes("How answer length and crossings solve ambiguous crossword clues")) errors.push("ambiguity guide is missing its search target");
 if (!ambiguityGuide.includes("/crossword-clues/diffuse/") || !ambiguityGuide.includes("/crossword-clues/pitch/") || !ambiguityGuide.includes("/crossword-clues/charge/") || !ambiguityGuide.includes("/crossword-clues/issue/") || !ambiguityGuide.includes("/crossword-clues/sharp/") || !ambiguityGuide.includes("/crossword-clues/light/") || !ambiguityGuide.includes("/solver/")) errors.push("ambiguity guide is missing its useful internal links");

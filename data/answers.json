@@ -430,5 +430,73 @@
     ],
     "otherMeanings": "Goya Foods is a separate American food company associated with Latin American products; clue context distinguishes the brand from the artist.",
     "related": ["mia", "elo"]
+  },
+  {
+    "slug": "biting",
+    "answer": "BITING",
+    "pronunciation": "BY-ting",
+    "partOfSpeech": "adjective; present participle",
+    "meaning": "Sharply cold, cutting, or severe; it can describe weather, criticism, wit, or another painfully penetrating effect.",
+    "crosswordUse": "BITING commonly answers clues such as “Nipping,” “Cutting,” “Acerbic,” or “Sharply cold.” The clue may use physical cold, figurative criticism, or the literal action of using the teeth.",
+    "whyCommon": "The six-letter answer carries several fair senses and a familiar -ING ending, so answer length and crossings can separate it from CHILLY, CUTTING, or SNAPPING.",
+    "cluePatterns": [
+      "Nipping or sharply cold",
+      "Cutting in tone or criticism",
+      "Using the teeth",
+      "Severe, as winter wind"
+    ],
+    "otherMeanings": "As the present participle of BITE, BITING can describe an animal, insect, or person closing the teeth or mouthparts on something.",
+    "related": []
+  },
+  {
+    "slug": "inborn",
+    "answer": "INBORN",
+    "pronunciation": "in-BORN",
+    "partOfSpeech": "adjective",
+    "meaning": "Present from birth or naturally part of a person, rather than learned or acquired later.",
+    "crosswordUse": "INBORN is a frequent six-letter answer for “Congenital,” “Innate,” “From birth,” or “Not acquired.” Crossings distinguish it from the same-length INNATE and INBRED.",
+    "whyCommon": "Its transparent IN + BORN construction makes the meaning inferable, while three plausible six-letter synonyms create useful ambiguity for setters and solvers.",
+    "cluePatterns": [
+      "Congenital, in six letters",
+      "Present from birth",
+      "Innate rather than learned",
+      "Natural, as an ability"
+    ],
+    "otherMeanings": "INBORN does not necessarily mean hereditary. A trait or condition can be present at birth without being genetically transmitted from an ancestor.",
+    "related": []
+  },
+  {
+    "slug": "swollen",
+    "answer": "SWOLLEN",
+    "pronunciation": "SWOH-luhn",
+    "partOfSpeech": "adjective; past participle",
+    "meaning": "Enlarged beyond normal size through fluid, pressure, injury, expansion, or another internal cause.",
+    "crosswordUse": "SWOLLEN commonly fits “Inflated,” “Puffy,” “Enlarged,” or “Like a sprained ankle.” Figurative wording can also describe an exaggerated ego, river, budget, or total.",
+    "whyCommon": "The seven-letter word connects a concrete physical state with several figurative kinds of expansion, giving constructors multiple fair clue angles.",
+    "cluePatterns": [
+      "Inflated, in seven letters",
+      "Puffy after an injury",
+      "Enlarged by fluid or pressure",
+      "Excessively expanded, figuratively"
+    ],
+    "otherMeanings": "SWOLLEN is also the past participle of SWELL. Context determines whether it describes a current condition or an action completed over time.",
+    "related": []
+  },
+  {
+    "slug": "grand",
+    "answer": "GRAND",
+    "pronunciation": "grand",
+    "partOfSpeech": "adjective; noun; informal noun",
+    "meaning": "Magnificent, impressive, dignified, or elevated in scale or character; informally, one thousand dollars.",
+    "crosswordUse": "GRAND may answer “Noble,” “Impressive,” “Majestic,” or “Thousand bucks, informally.” Piano, hotel, canyon, and family-prefix clues can point to other familiar uses.",
+    "whyCommon": "Five common letters support many independent clue senses, from high character and large scale to money, music, geography, and family relationships.",
+    "cluePatterns": [
+      "Noble or impressive",
+      "A thousand dollars, informally",
+      "Kind of piano",
+      "Word before jury, slam, or canyon"
+    ],
+    "otherMeanings": "GRAND can name a grand piano, serve as a family prefix in GRANDPARENT, or appear in fixed names such as Grand Canyon and grand jury.",
+    "related": []
   }
 ]
