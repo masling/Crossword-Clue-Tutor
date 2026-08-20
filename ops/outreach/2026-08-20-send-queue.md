@@ -1,11 +1,11 @@
 # Outreach send queue — 2026-08-20
 
-No message or form has been submitted. Each item requires action-time approval and a
-real sender identity. The OneLook and ACPT forms require an approved contact email.
+No message or form has been submitted. Each item still requires action-time approval.
+The domain sender identity and inbound route are configured; SMTP authentication and an
+end-to-end delivery test remain before live outreach.
 
-Preferred sender setup is documented in `../EMAIL_SETUP.md`. Until its inbound and
-outbound deliverability checks pass, do not replace the approved Gmail fallback in any
-live submission.
+The active Cloudflare-inbound/Zoho-outbound setup is documented in `../EMAIL_SETUP.md`.
+Gmail Send mail as is a temporary manual interface through 2026, not a separate relay.
 
 ## Ready 1 — OneLook Dictionary Search
 

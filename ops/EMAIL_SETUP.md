@@ -1,8 +1,7 @@
 # Crossword Clue Tutor domain email setup
 
-Status: prepared, not activated. The preferred route is Zoho Mail Free when available in
-the selected data center. Account creation, DNS changes, and any credentials still require
-explicit action-time approval.
+Status: inbound routing and DNS authentication activated on 2026-08-20. Outbound code is
+prepared for Zoho SMTP, but no password is stored and no external message has been sent.
 
 ## Proposed public identity
 
@@ -14,75 +13,78 @@ explicit action-time approval.
 ## Verified preflight — 2026-08-20
 
 - `crosswordcluetutor.com` uses Cloudflare DNS.
-- No MX record currently exists on the domain.
-- No mail SPF, DKIM, or DMARC record currently exists. The only root TXT record is Google
-  Search Console verification.
+- Cloudflare Email Routing owns the root MX records.
+- Root SPF authorizes both Cloudflare forwarding and Zoho sending.
+- Cloudflare routing DKIM, Zoho sending DKIM, and DMARC monitoring records are present.
 - `masling@gmail.com` is already a verified Cloudflare Email Routing destination.
-- No account routing rule currently uses `crosswordcluetutor.com`.
+- The exact `hello@crosswordcluetutor.com` rule forwards to `masling@gmail.com`.
 - Existing routing rules belong to other domains and must remain unchanged.
 
-The domain is therefore clear for onboarding, with no existing mailbox configuration to
-migrate or replace.
+Catch-all stays disabled. No unrelated domain routing rule was changed.
 
-## Preferred free option — Zoho Mail Free
+## Active hybrid setup — Cloudflare inbound, Zoho outbound
 
-Zoho's current free organization plan supports one custom domain, up to five users, and
-5 GB per user, with web-only mailbox access. Availability is limited to selected data
-centers. IMAP, POP, automatic forwarding, and ActiveSync are paid-plan features.
+This intentionally separates inbound routing from outbound SMTP:
 
-Use this option only if the free plan is shown during signup:
+- Inbound MX: Cloudflare Email Routing
+- Exact route: `hello@crosswordcluetutor.com` → `masling@gmail.com`
+- Outbound SMTP: Zoho Mail account `hello@crosswordcluetutor.com`
+- Temporary mailbox UI: Gmail “Send mail as” through Zoho SMTP, only through 2026
+- Code sender: `npm run outreach:send`
 
-1. Create a Zoho Mail organization in the appropriate data center.
-2. Add and verify `crosswordcluetutor.com` with a temporary TXT or CNAME record.
-3. Create the user `hello@crosswordcluetutor.com` with display name
-   `Crossword Clue Tutor`.
-4. Replace the domain's mail records with the MX, SPF, and DKIM values shown by Zoho.
-5. Add a DMARC record in monitoring mode before sending external mail.
-6. Use Zoho Webmail for inbound replies. Do not expect Gmail forwarding or POP retrieval
-   on the free plan.
-7. If Zoho exposes SMTP for the free organization in the selected data center, use the
-   exact server settings shown inside that account; do not copy settings from another
-   region.
+The root MX records must remain Cloudflare's. Do not add Zoho MX records while this hybrid
+setup is active. Zoho may therefore continue to show an MX warning even when SPF and DKIM
+are valid for outbound mail.
 
-Cloudflare Email Routing and Zoho cannot both own the root MX records. If Zoho is chosen,
-do not onboard Cloudflare Email Routing for this domain.
+Current DNS policy:
 
-## Paid all-Cloudflare fallback — inbound mail
+- SPF at `@`: `v=spf1 include:_spf.mx.cloudflare.net include:zohomail.com ~all`
+- Zoho DKIM at `zmail._domainkey`: value issued by this Zoho organization
+- Cloudflare routing DKIM at `cf2024-1._domainkey`: managed by Email Routing
+- DMARC at `_dmarc`: `v=DMARC1; p=none; adkim=r; aspf=r; pct=100`
 
-Requires approval to modify DNS and Cloudflare Email Routing.
+## Code sender
 
-1. Open Cloudflare Email Service → Email Routing.
-2. Onboard `crosswordcluetutor.com`.
-3. Allow Cloudflare to create the required root MX, SPF, and routing DKIM records.
-4. Create the exact rule:
-   - Match: `hello@crosswordcluetutor.com`
-   - Action: forward
-   - Destination: `masling@gmail.com`
-5. Keep the catch-all rule disabled so unrequested addresses are not accepted.
-6. Send an inbound test from an unrelated external mailbox and verify delivery to Gmail.
+The sender is dry-run by default and supports exactly one recipient per invocation. It
+will not accept a password on the command line, and a real send requires both `--send`
+and an exact matching `--confirm-recipient`.
 
-## Paid all-Cloudflare fallback — outbound mail
+Set credentials only in the current shell or a secret manager; never write them into the
+repository:
 
-Cloudflare Email Sending to arbitrary recipients requires Workers Paid. The current public
-price is a USD 5 monthly account minimum; Email Sending includes 3,000 outbound messages
-per month before usage charges.
+```sh
+export ZOHO_SMTP_USER='hello@crosswordcluetutor.com'
+export ZOHO_SMTP_PASSWORD='use-a-Zoho-app-password-when-2FA-is-enabled'
+npm run outreach:send -- --verify
+```
 
-Requires separate action-time approval for the recurring charge and API credential.
+Preview an individual message without transmitting it:
 
-1. Enable Workers Paid for the Cloudflare account.
-2. Open Email Service → Email Sending and onboard `crosswordcluetutor.com`.
-3. Allow Cloudflare to create the `cf-bounce` MX/SPF records, sending DKIM record, and
-   DMARC record.
-4. Create an account-owned API token scoped only to `Email Sending: Edit` for this account.
-5. Never store the token in Git, project files, shell history, analytics, or D1.
-6. Add the address to Gmail's “Send mail as” configuration:
-   - Email: `hello@crosswordcluetutor.com`
-   - SMTP host: `smtp.mx.cloudflare.net`
-   - Port: `465`
-   - Security: implicit TLS / SSL
-   - Username: literal `api_token`
-   - Password: the scoped Cloudflare API token
-7. Complete Gmail's verification message through the Phase 1 forwarding rule.
+```sh
+npm run outreach:send -- \
+  --to editor@example.com \
+  --subject 'A useful crossword clue resource' \
+  --text-file /absolute/path/to/message.txt
+```
+
+After reviewing the preview, add `--send --confirm-recipient editor@example.com`. Every
+external send still requires action-time approval.
+
+## Gmail transition and 2027 cutover
+
+Through December 2026, Gmail may be configured to send as
+`hello@crosswordcluetutor.com` using Zoho's SMTP host, port 465, SSL, and the Zoho mailbox
+credential or app password. Complete the verification message through Cloudflare Email
+Routing.
+
+Google has announced the end of third-party SMTP “Send mail as” support in January 2027.
+Before that date:
+
+1. Stop using the Gmail alias for new outbound mail.
+2. Remove the alias from Gmail after confirming no workflow depends on it.
+3. Use Zoho Webmail for manual sends and the repository sender for coded sends.
+4. Keep the public From and Reply-To address unchanged.
+5. Re-run Gmail and Outlook deliverability checks after the cutover.
 
 ## Deliverability checks
 
@@ -108,8 +110,7 @@ for the prepared directory and editorial pitches.
 ## Rollback
 
 1. Disable the `hello@` routing rule.
-2. Remove Gmail's send-as alias and delete/revoke the scoped API token.
-3. Disable Email Sending for the domain.
-4. Remove only DNS records created by Email Service onboarding; preserve website and
-   Search Console records.
-5. Cancel Workers Paid only after confirming no other project in the account depends on it.
+2. Remove Gmail's send-as alias and revoke any Zoho app password used only by Gmail.
+3. Disable the Zoho SMTP credential used by code.
+4. Remove only the Zoho SPF include and `zmail._domainkey` record if Zoho sending is being
+   retired; preserve Cloudflare Email Routing, website, and Search Console records.

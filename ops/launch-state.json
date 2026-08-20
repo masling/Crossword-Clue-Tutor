@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T21:22:07+08:00",
+  "updatedAt": "2026-08-20T21:46:32+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -34,19 +34,19 @@
     }
   },
   "content": {
-    "indexablePages": 158,
+    "indexablePages": 160,
     "reviewedClues": 78,
-    "answerMeaningPages": 35,
+    "answerMeaningPages": 36,
     "latestMeaningExpansion": {
-      "answers": ["BITING", "INBORN", "SWOLLEN", "GRAND", "COAX", "ROUTE", "RICHES", "LEAD"],
-      "sourceHubs": ["Nipping", "Congenital", "Inflated", "Noble", "Cajole", "Path", "Wealth", "Forefront"],
+      "answers": ["BITING", "INBORN", "SWOLLEN", "GRAND", "COAX", "ROUTE", "RICHES", "LEAD", "ALLSPICE"],
+      "sourceHubs": ["Nipping", "Congenital", "Inflated", "Noble", "Cajole", "Path", "Wealth", "Forefront", "Pimento"],
       "internalLinking": "Matching hub candidates and query variants link automatically to their meaning pages"
     },
-    "evergreenClueHubs": 14,
-    "evergreenClueHubCandidates": 314,
+    "evergreenClueHubs": 15,
+    "evergreenClueHubCandidates": 328,
     "solverReviewedClueCandidates": 78,
-    "solverHubCandidates": 314,
-    "solverCandidatePool": 392,
+    "solverHubCandidates": 328,
+    "solverCandidatePool": 406,
     "linkableGuides": 1,
     "linkableResearchPages": 1,
     "datasetDownloadFormats": [
@@ -57,20 +57,20 @@
       {
         "name": "OneLook dictionary headword index",
         "route": "/assets/onelook-dictionary.txt",
-        "entries": 35,
+        "entries": 36,
         "format": "One absolute definition link per line"
       }
     ],
     "dictionaryStructuredData": {
       "type": "DefinedTermSet",
       "route": "/crosswordese/",
-      "members": 35,
+      "members": 36,
       "productionStatus": "Verified"
     },
-    "structuredDataPages": 158,
-    "breadcrumbStructuredDataPages": 157,
-    "articleStructuredDataPages": 84,
-    "socialPreviewPages": 160,
+    "structuredDataPages": 160,
+    "breadcrumbStructuredDataPages": 159,
+    "articleStructuredDataPages": 85,
+    "socialPreviewPages": 162,
     "faviconTheme": "Crossword grid with teal crossing entries and a gold intersection on a dark ink field",
     "faviconAssets": [
       "SVG",
@@ -109,20 +109,20 @@
       "Homepage navigation to demand-backed clue and meaning pages"
     ],
     "homepageDemandNavigation": {
-      "featuredClueHubs": 8,
-      "featuredMeaningPages": 8,
+      "featuredClueHubs": 9,
+      "featuredMeaningPages": 9,
       "desktopLayout": "Compact scan rows",
       "mobileLayout": "Responsive stacked rows",
       "visualQa": "Verified at 1280x900 and 390x844"
     },
     "internalLinkAudit": {
-      "verifiedAt": "2026-08-20T21:22:07+08:00",
+      "verifiedAt": "2026-08-20T21:46:32+08:00",
       "orphanPages": 0,
       "unreachableFromHome": 0,
       "maximumClickDepth": 3,
       "depthDistribution": {
         "0": 1,
-        "1": 40,
+        "1": 42,
         "2": 96,
         "3": 21
       },
@@ -130,11 +130,11 @@
     },
     "selectionPolicy": "Routine same-day coverage is independent of trends and historical keyword volume. Use Bing, Google Trends, and Search Console afterward to backfill missed dates and expand materially undercovered queries or topics.",
     "latestDemandBackfill": {
-      "keyword": "forefront crossword clue",
-      "bingImpressions": 488,
+      "keyword": "pimento crossword clue",
+      "bingImpressions": 500,
       "bingPeriod": "2026-05-20 to 2026-08-17 worldwide",
-      "publishedRoute": "/crossword-clues/forefront/",
-      "reviewedCandidates": 20,
+      "publishedRoute": "/crossword-clues/pimento/",
+      "reviewedCandidates": 14,
       "queryVariants": 5
     },
     "rejectedDemandSignals": [
@@ -205,7 +205,7 @@
     "bingSiteScanRemediation": "Generated document titles are now capped at 70 characters; verify with a later rescan.",
     "searchImpressions": 0,
     "searchClicks": 0,
-    "indexNowSubmittedUrls": 455
+    "indexNowSubmittedUrls": 463
   },
   "deployment": {
     "provider": "Cloudflare Pages",
@@ -214,11 +214,11 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "147b9c6",
+    "lastVerifiedCommit": "370f726",
     "lastDeployStatus": "Success"
   },
   "outreach": {
-    "verifiedAt": "2026-08-20T20:35:23+08:00",
+    "verifiedAt": "2026-08-20T21:46:32+08:00",
     "readyForApproval": 4,
     "sent": 0,
     "responses": 0,
@@ -233,14 +233,19 @@
       "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
       "inboundDestination": "masling@gmail.com",
       "destinationAlreadyVerified": true,
-      "existingDomainMailRecords": 0,
-      "existingDomainRoutingRules": 0,
-      "preferredPlan": "Zoho Mail Free custom-domain mailbox",
+      "existingDomainMailRecords": 7,
+      "existingDomainRoutingRules": 1,
+      "preferredPlan": "Cloudflare Email Routing inbound plus Zoho Mail Free SMTP outbound",
       "preferredPlanLimitations": "Selected data centers only; webmail access; no IMAP, POP, automatic forwarding, or ActiveSync",
-      "paidFallback": "Cloudflare Email Routing plus Email Sending SMTP on Workers Paid",
+      "temporaryManualSender": "Gmail Send mail as through Zoho SMTP until third-party SMTP support ends in January 2027",
+      "planned2027Cutover": "Zoho Webmail for manual sending; Zoho SMTP code sender remains unchanged",
+      "codeSender": "scripts/send-outreach.mjs; dry-run by default; one confirmed recipient per send",
+      "dnsAuthentication": "Cloudflare and Zoho combined SPF; separate Cloudflare and Zoho DKIM; DMARC monitoring",
+      "catchAll": "Disabled",
+      "paidFallback": "Cloudflare Email Sending on Workers Paid, only if Zoho SMTP is retired",
       "workersPaidRequiredForPreferredPlan": false,
       "rejectedRelay": "Resend Free because its AUP prohibits cold outreach",
-      "status": "Awaiting explicit Zoho account-creation and DNS-change approval",
+      "status": "Inbound route and DNS authentication verified; awaiting local Zoho SMTP credential entry and end-to-end test",
       "runbook": "ops/EMAIL_SETUP.md"
     }
   },
