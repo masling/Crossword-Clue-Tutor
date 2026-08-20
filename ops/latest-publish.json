@@ -1,28 +1,19 @@
 {
-  "publishedAt": "2026-08-20T09:56:05.921Z",
-  "input": "ops/intake/2026-08-20-usa-today-routine.json",
+  "publishedAt": "2026-08-20T10:22:33.000Z",
+  "input": "data/answers.json#2026-08-20-evergreen-entities",
   "urls": [
     "/explainers/una-corte-de-rosas-y-espinas-sarah-j-maas-usa-today/",
-    "/explainers/hidden-figures-star-janelle-usa-today/",
-    "/explainers/vegas-venue-worlds-largest-led-screen-usa-today/",
-    "/explainers/carol-star-mara-usa-today/",
     "/explainers/el-perro-painter-francisco-usa-today/",
     "/explainers/princess-diaries-2-protagonist-usa-today/"
   ],
-  "answerUrls": [],
-  "clinicUrls": [
-    "/daily-clue-clinic/2026-08-20/"
+  "answerUrls": [
+    "/crosswordese/mia/",
+    "/crosswordese/una/",
+    "/crosswordese/goya/"
   ],
+  "clinicUrls": [],
   "hubUrls": [
     "/",
-    "/crosswordese/",
-    "/daily-clue-clinic/",
-    "/crossword-answers-today/",
-    "/crossword-answers-by-length/",
-    "/crossword-answers/3-letters/",
-    "/crossword-answers/5-letters/",
-    "/crossword-answers/6-letters/",
-    "/crossword-answers/4-letters/",
-    "/usa-today-crossword-answers/"
+    "/crosswordese/"
   ]
 }

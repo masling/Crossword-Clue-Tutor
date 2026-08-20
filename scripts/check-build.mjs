@@ -91,6 +91,9 @@ const clues = JSON.parse(await readFile(path.resolve("data/clues.json"), "utf8")
 const publications = JSON.parse(await readFile(path.resolve("data/publications.json"), "utf8"));
 if (sitemap.includes("404.html")) errors.push("sitemap must not include the 404 page");
 if (!sitemap.includes("/crosswordese/spec/")) errors.push("sitemap is missing the SPEC answer entity");
+for (const answer of ["mia", "una", "goya"]) {
+  if (!sitemap.includes(`/crosswordese/${answer}/`)) errors.push(`sitemap is missing the ${answer.toUpperCase()} answer entity`);
+}
 if (!sitemap.includes("/explainers/contractors-detail-for-short/")) errors.push("sitemap is missing the reviewed SPEC explainer");
 if (!sitemap.includes("<lastmod>")) errors.push("sitemap is missing lastmod metadata for fresh content");
 if (!sitemap.includes("/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/")) errors.push("sitemap is missing the current NYT Mini batch");
@@ -136,6 +139,10 @@ if (!usaTodayHub.includes("Arthur for whom the ESPYs&#039; Courage Award is name
 if (!usaTodayHub.includes("&quot;Hidden Figures&quot; star Janelle") || !usaTodayHub.includes("August 20, 2026")) errors.push("USA TODAY hub is missing its August 20 selected batch");
 const latestUsaTodayPage = await readFile(path.join(dist, "explainers/hidden-figures-star-janelle-usa-today/index.html"), "utf8");
 if (!latestUsaTodayPage.includes("Why MONAE fits") || !latestUsaTodayPage.includes("USA TODAY Crossword · 44-Across")) errors.push("latest USA TODAY explainer is missing its reviewed answer or source context");
+for (const [slug, answer, target] of [["mia", "MIA", "missing in action"], ["una", "UNA", "Spanish feminine singular"], ["goya", "GOYA", "Francisco Goya"]]) {
+  const answerPage = await readFile(path.join(dist, `crosswordese/${slug}/index.html`), "utf8");
+  if (!answerPage.includes(`${answer} in crosswords`) || !answerPage.includes(target) || !answerPage.includes('"@type":"DefinedTerm"')) errors.push(`${answer} answer page is missing its meaning target or DefinedTerm data`);
+}
 const diffuseHub = await readFile(path.join(dist, "crossword-clues/diffuse/index.html"), "utf8");
 if (!diffuseHub.includes("Diffuse crossword clue")) errors.push("Diffuse clue hub is missing its search target");
 if (!diffuseHub.includes("SPREAD") || !diffuseHub.includes("OSMOSE") || !diffuseHub.includes("PROLIX")) errors.push("Diffuse clue hub is missing reviewed multi-sense answers");
