@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T16:50:00+08:00",
+  "updatedAt": "2026-08-20T16:53:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -59,11 +59,25 @@
   "search": {
     "googleSitemapStatus": "Success",
     "googleSitemapDiscoveredPages": 94,
+    "googleSitemapLastRead": "2026-08-20",
     "googleFeedStatus": "Success",
-    "googleFeedDiscoveredPages": 30,
-    "googleIndexedPages": 0,
+    "googleFeedDiscoveredPages": 31,
+    "googleFeedLastRead": "2026-08-20",
+    "googleIndexedPages": 1,
+    "googleIndexedPagesEvidence": "Minimum confirmed by URL Inspection; aggregate Pages report is still processing",
+    "googleHomepageIndexStatus": "URL is on Google; page is indexed; HTTPS valid",
+    "googleDiffuseIndexStatus": "URL unknown to Google; no crawl yet; no referring sitemap detected in URL Inspection",
+    "googlePerformanceLastUpdate": "2026-08-20T11:53:00+08:00",
+    "googleIndexingReportStatus": "Processing data; check again in a day or so",
+    "googleLinksReportStatus": "Processing data; check again in a day or so",
+    "manualIndexingCandidates": [
+      "https://crosswordcluetutor.com/crossword-clues/diffuse/",
+      "https://crosswordcluetutor.com/crossword-answers-today/",
+      "https://crosswordcluetutor.com/guides/answer-length-and-crossings/"
+    ],
+    "manualIndexingStatus": "Candidates prepared; no request submitted without action-time confirmation",
     "publicSearchCheckedAt": "2026-08-20T16:49:00+08:00",
-    "publicSearchSiteQueryStatus": "No Crossword Clue Tutor result detected yet",
+    "publicSearchSiteQueryStatus": "No stable site-query result detected yet; GSC URL Inspection confirms the homepage is indexed",
     "productionSitemapStatus": "Verified",
     "productionSitemapUrls": 130,
     "productionRobotsStatus": "search=yes; Allow: /; sitemap and feed declared",
