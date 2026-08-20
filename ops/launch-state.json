@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T17:47:01+08:00",
+  "updatedAt": "2026-08-20T17:59:35+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -29,16 +29,16 @@
     }
   },
   "content": {
-    "indexablePages": 131,
-    "reviewedClues": 72,
+    "indexablePages": 137,
+    "reviewedClues": 78,
     "answerMeaningPages": 24,
     "evergreenClueHubs": 4,
     "linkableGuides": 1,
     "linkableResearchPages": 1,
-    "structuredDataPages": 131,
-    "breadcrumbStructuredDataPages": 130,
-    "articleStructuredDataPages": 78,
-    "socialPreviewPages": 133,
+    "structuredDataPages": 137,
+    "breadcrumbStructuredDataPages": 136,
+    "articleStructuredDataPages": 84,
+    "socialPreviewPages": 139,
     "expandedSeoGuides": 5,
     "crossPublicationTodayHubs": 1,
     "answerLengthIndexes": 1,
@@ -59,7 +59,7 @@
       "NYT Mini": "2026-08-20",
       "The New York Times Crossword": "2026-08-20",
       "LA Times Crossword": "2026-08-20",
-      "USA TODAY Crossword": "2026-08-19"
+      "USA TODAY Crossword": "2026-08-20"
     }
   },
   "search": {
@@ -85,7 +85,7 @@
     "publicSearchCheckedAt": "2026-08-20T16:49:00+08:00",
     "publicSearchSiteQueryStatus": "No stable site-query result detected yet; GSC URL Inspection confirms the homepage is indexed",
     "productionSitemapStatus": "Verified",
-    "productionSitemapUrls": 131,
+    "productionSitemapUrls": 137,
     "productionRobotsStatus": "search=yes; Allow: /; sitemap and feed declared",
     "productionCrawlStatus": 200,
     "bingSiteVerified": true,
@@ -105,7 +105,7 @@
     "bingSiteScanRemediation": "Generated document titles are now capped at 70 characters; verify with a later rescan.",
     "searchImpressions": 0,
     "searchClicks": 0,
-    "indexNowSubmittedUrls": 351
+    "indexNowSubmittedUrls": 368
   },
   "deployment": {
     "provider": "Cloudflare Pages",
@@ -114,7 +114,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "3c3349c",
+    "lastVerifiedCommit": "6eebe20",
     "lastDeployStatus": "Success"
   },
   "outreach": {
@@ -131,6 +131,6 @@
   },
   "nextAction": {
     "notBefore": "2026-08-20T18:15:00+08:00",
-    "action": "Recheck every monitored source still missing August 20 coverage, especially USA TODAY's later public clue release. After current-date coverage, use search evidence only to backfill missed or undercovered content."
+    "action": "Run the evening evidence check: Cloudflare Web Analytics with bots excluded, Pageview, Google Search Console, Bing sitemap/index/performance, and the latest Bing Site Scan. Count only verified non-operator search-referred human sessions."
   }
 }
