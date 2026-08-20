@@ -92,6 +92,22 @@ The hint must not contain the answer. The explanation must state why this exact 
 - Bing and participating engines: IndexNow after the deployed key file is reachable.
 - Submission only announces URLs; it does not guarantee crawling, indexing, or ranking.
 
+## Cloudflare Web Analytics evidence query
+
+Use the GraphQL Analytics API dataset `rumPageloadEventsAdaptiveGroups` for repeatable
+traffic evidence. Filter with both:
+
+- `siteTag: 9540d1c383b3452f99aa21ece1938246`
+- `bot: 0`
+
+Within this dataset, `count` is page-load count and `sum.visits` is visit count. Group a
+second query by `dimensions.refererHost` to separate direct/self traffic from external
+search referrals. The fixed historical window from `2026-08-19T01:20:00Z` through
+`2026-08-19T13:23:00Z` reproduces the audited dashboard baseline exactly: 31 pageviews
+and 25 visits, all direct or self-referred. This replay is the regression check for future
+automation. Do not count a visit toward the acquisition goal unless its external search
+referrer is present and the visit is outside the operator QA baseline.
+
 ## Daily target during launch
 
 - 5–10 reviewed fresh clue pages.

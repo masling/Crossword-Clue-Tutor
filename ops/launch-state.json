@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T17:59:35+08:00",
+  "updatedAt": "2026-08-20T18:19:12+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -16,15 +16,20 @@
     "pageviewStatus": "Verified",
     "pageviewOperatorQaBaseline": 1,
     "latestAnalyticsSnapshot": {
-      "recordedAt": "2026-08-19T21:23:00+08:00",
-      "cloudflareVisits": 25,
-      "cloudflarePageviews": 31,
-      "cloudflareNonBotVisitsAfterQa": 21,
-      "pageviewUniqueVisitors": 17,
-      "pageviewVisits": 18,
-      "pageviewPageviews": 24,
-      "pageviewVisitsAfterQa": 17,
-      "unverifiedBingReferrals": 1,
+      "recordedAt": "2026-08-20T18:15:25+08:00",
+      "cloudflarePeriod": "Cumulative from 2026-08-19T09:20:00+08:00",
+      "cloudflareVisits": 38,
+      "cloudflarePageviews": 44,
+      "cloudflareBotVisits": 1,
+      "cloudflareNonBotVisitsAfterQa": 34,
+      "cloudflareExternalReferrerVisits": 0,
+      "pageviewPeriod": "2026-08-20 Today",
+      "pageviewUniqueVisitors": 11,
+      "pageviewVisits": 12,
+      "pageviewPageviews": 11,
+      "pageviewVisitsAfterQa": 11,
+      "pageviewDirectVisits": 12,
+      "unverifiedBingReferrals": 0,
       "verifiedSearchSessions": 0
     }
   },
@@ -35,6 +40,10 @@
     "evergreenClueHubs": 4,
     "linkableGuides": 1,
     "linkableResearchPages": 1,
+    "datasetDownloadFormats": [
+      "JSON",
+      "CSV"
+    ],
     "structuredDataPages": 137,
     "breadcrumbStructuredDataPages": 136,
     "articleStructuredDataPages": 84,
@@ -74,6 +83,8 @@
     "googleHomepageIndexStatus": "URL is on Google; page is indexed; HTTPS valid",
     "googleDiffuseIndexStatus": "URL unknown to Google; no crawl yet; no referring sitemap detected in URL Inspection",
     "googlePerformanceLastUpdate": "2026-08-20T11:53:00+08:00",
+    "googlePerformanceCheckedAt": "2026-08-20T18:15:00+08:00",
+    "googlePerformanceDashboardFreshness": "Last update 3.5 hours ago",
     "googleIndexingReportStatus": "Processing data; check again in a day or so",
     "googleLinksReportStatus": "Processing data; check again in a day or so",
     "manualIndexingCandidates": [
@@ -94,6 +105,7 @@
     "bingSitemapLastCrawl": "2026-08-19",
     "bingIndexedPages": 0,
     "bingSearchPerformanceStatus": "No pages found",
+    "bingCheckedAt": "2026-08-20T18:15:00+08:00",
     "bingSiteScanStatus": "Completed",
     "bingSiteScanPageLimit": 100,
     "bingSiteScanPages": 94,
@@ -114,7 +126,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "6eebe20",
+    "lastVerifiedCommit": "090bea7",
     "lastDeployStatus": "Success"
   },
   "outreach": {
@@ -130,7 +142,7 @@
     "approvalNeeded": "Sender name plus authorization to send two emails; sender email is also required for the ACPT form."
   },
   "nextAction": {
-    "notBefore": "2026-08-20T18:15:00+08:00",
-    "action": "Run the evening evidence check: Cloudflare Web Analytics with bots excluded, Pageview, Google Search Console, Bing sitemap/index/performance, and the latest Bing Site Scan. Count only verified non-operator search-referred human sessions."
+    "notBefore": "2026-08-21T12:15:00+08:00",
+    "action": "Check each monitored publication for a newly public August 21 puzzle date, publish a small entity-led subset with original explanations, and use trends/search evidence only for later coverage gaps."
   }
 }

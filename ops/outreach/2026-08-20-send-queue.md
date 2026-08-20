@@ -7,7 +7,7 @@ real sender name. The ACPT form also requires the sender email.
 
 - Channel: email to `crosswordlinks@gmail.com`
 - Evidence: its current About/Support pages invite tips, guest essays, and new sites.
-- Asset: `/research/ambiguous-crossword-clues/`
+- Asset: `/research/ambiguous-crossword-clues/` with JSON and CSV downloads
 - Draft: “Newsletter/news-note pitch” in `2026-08-20-drafts.md`
 - Expected value: the most relevant direct community audience in this queue.
 
@@ -16,7 +16,7 @@ real sender name. The ACPT form also requires the sender email.
 - Channel: email to `info@xwordinfo.com`
 - Evidence: its current Home page explicitly says it is interested in guest submissions;
   its Contact page publishes this address.
-- Asset: dataset plus `/guides/answer-length-and-crossings/`
+- Asset: JSON/CSV dataset plus `/guides/answer-length-and-crossings/`
 - Draft: “XWord Blog guest-essay pitch” in `2026-08-20-drafts.md`
 - Expected value: editorial link and credibility if the proposed essay is accepted.
 
