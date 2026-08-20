@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T19:14:54+08:00",
+  "updatedAt": "2026-08-20T19:36:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -59,6 +59,23 @@
       "16x16 PNG",
       "180x180 Apple Touch Icon"
     ],
+    "feedbackFeature": {
+      "status": "Production verified",
+      "page": "/feedback/",
+      "api": "/api/feedback",
+      "storage": "Dedicated Cloudflare D1 database",
+      "optionalEmail": true,
+      "contextualEntrypoints": [
+        "Solver results and empty results",
+        "Explain results",
+        "Reviewed clue pages",
+        "Answer meaning pages",
+        "Recurring clue hubs",
+        "Site footer"
+      ],
+      "privacy": "No raw IP address or browser user agent stored; reports are not published automatically",
+      "productionQaReportId": "1c78cc5d-527d-4968-8f86-d891277d76de"
+    },
     "expandedSeoGuides": 5,
     "crossPublicationTodayHubs": 1,
     "answerLengthIndexes": 1,
@@ -67,7 +84,8 @@
       "Atom feed discovery",
       "Crossword Answers Today return hub",
       "Browser-local saved clues",
-      "Hub-powered multi-answer Solver and Explain flows"
+      "Hub-powered multi-answer Solver and Explain flows",
+      "Contextual feedback and correction flow"
     ],
     "internalLinkAudit": {
       "verifiedAt": "2026-08-20T18:46:09+08:00",
@@ -144,7 +162,7 @@
     "bingSiteScanRemediation": "Generated document titles are now capped at 70 characters; verify with a later rescan.",
     "searchImpressions": 0,
     "searchClicks": 0,
-    "indexNowSubmittedUrls": 392
+    "indexNowSubmittedUrls": 396
   },
   "deployment": {
     "provider": "Cloudflare Pages",
@@ -153,7 +171,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "53ff811",
+    "lastVerifiedCommit": "6c266e5",
     "lastDeployStatus": "Success"
   },
   "outreach": {
