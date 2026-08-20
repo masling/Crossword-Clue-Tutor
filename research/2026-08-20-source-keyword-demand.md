@@ -79,3 +79,17 @@ translator record, 20th Century Studios' cast page, Sphere's official display ov
 the Museo del Prado's Goya collection, Disney's film description, and a film reference
 identifying Rooney Mara as a “Carol” star. Only these six selected clue relationships
 were published; the grid and complete clue/answer list were not copied.
+
+## 20:00 SGT evergreen coverage-gap check
+
+Bing Keyword Research for `crossword clue`, worldwide, 20 May–17 August 2026,
+reported 10.4K impressions overall and 4.6K in the United States. Its related-keyword
+table exposed a material uncovered query: `nipping crossword clue` at 7.1K impressions.
+The site had no Nipping page or reviewed Nipping candidates at the time of the check.
+
+Nipping is also a genuine multi-answer problem rather than a thin exact-query page. It
+can describe penetrating cold, biting criticism, a physical pinch or bite, trimming off
+a small part, snapping at a target, or narrowly defeating a competitor. A reviewed hub
+was therefore added with answer-length groupings, sense guidance, query variants, and
+Solver/Explain candidates. Lower-volume suggestions from the same table were recorded
+for future comparison but were not published merely to increase page count.

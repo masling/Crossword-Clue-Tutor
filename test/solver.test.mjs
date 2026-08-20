@@ -1,5 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import { clueHubCandidates, normalizeClue, normalizePattern, patternToRegExp, scoreClueMatch, solveClues } from "../src/solver.mjs";
 
 const clues = [
@@ -76,4 +77,12 @@ test("uses length, crossings, and preferred order for hub candidates", () => {
   const fourLetters = solveClues(candidates, { clue: "sharp", length: 4 });
   assert.deepEqual(fourLetters.map((item) => item.answer), ["KEEN", "ACID"]);
   assert.deepEqual(solveClues(candidates, { clue: "sharp", pattern: "K?E?" }).map((item) => item.answer), ["KEEN"]);
+});
+
+test("serves the demand-backed Nipping hub through the live solver data", async () => {
+  const hubs = JSON.parse(await readFile(new URL("../data/clue-hubs.json", import.meta.url), "utf8"));
+  const candidates = clueHubCandidates(hubs);
+
+  assert.equal(solveClues(candidates, { clue: "nipping", length: 6 })[0].answer, "BITING");
+  assert.equal(solveClues(candidates, { clue: "nipping off", pattern: "S???????" })[0].answer, "SNIPPING");
 });

@@ -317,5 +317,72 @@
       "before it gets light crossword clue",
       "light in color crossword clue"
     ]
+  },
+  {
+    "slug": "nipping",
+    "clue": "Nipping",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Nipping depend on whether the clue means sharply cold, biting, pinching, cutting off a small piece, snapping at, or narrowly defeating someone.",
+    "answerGuidance": "Start with BITING for six letters when Nipping describes cold or criticism, NIPPY for five letters when the weather is briskly cold, and PINCHING or SNIPPING for eight letters when the clue describes a physical action.",
+    "meaningBuckets": [
+      "Sharply or penetratingly cold, especially when describing air, wind, or weather.",
+      "Biting, cutting, or caustic in tone, criticism, humor, taste, or effect.",
+      "Pinching or biting with the teeth, fingers, claws, or a small tool.",
+      "Snipping, clipping, or cropping a small part from something.",
+      "Defeating someone narrowly or snapping repeatedly at a nearby target."
+    ],
+    "preferredAnswers": ["BITING", "NIPPY", "ICY", "KEEN", "PINCHING", "SNIPPING"],
+    "answers": [
+      { "answer": "ICY", "sense": "Very cold or producing a sharp, penetrating chill." },
+      { "answer": "COLD", "sense": "Having a low temperature; nipping when unpleasantly sharp." },
+      { "answer": "KEEN", "sense": "Piercing or biting, especially when describing cold air or wind." },
+      { "answer": "NIPPY", "sense": "Briskly or sharply cold, especially of weather." },
+      { "answer": "BRISK", "sense": "Quick and energetic, or pleasantly sharp and cold in weather." },
+      { "answer": "SHARP", "sense": "Piercingly cold, keen, or biting in sensation or tone." },
+      { "answer": "BITING", "sense": "Sharply cold, painfully cutting, or severe in criticism." },
+      { "answer": "CHILLY", "sense": "Uncomfortably or noticeably cold rather than warm." },
+      { "answer": "FROSTY", "sense": "Very cold, covered with frost, or cold and unfriendly in manner." },
+      { "answer": "FRIGID", "sense": "Extremely cold or lacking warmth in manner or response." },
+      { "answer": "EDGING", "sense": "Narrowly defeating or moving just ahead of a rival." },
+      { "answer": "CUTTING", "sense": "Bitingly cold or hurtfully sharp in language and criticism." },
+      { "answer": "ACERBIC", "sense": "Sharp, biting, and forthright in tone or expression." },
+      { "answer": "CAUSTIC", "sense": "Bitingly sarcastic or severe enough to feel cutting." },
+      { "answer": "BEATING", "sense": "Defeating another person or side, sometimes by a narrow margin." },
+      { "answer": "PINCHING", "sense": "Nipping by squeezing sharply between fingers, claws, or opposing edges." },
+      { "answer": "SNIPPING", "sense": "Nipping off a small piece with quick cutting motions." },
+      { "answer": "CLIPPING", "sense": "Cutting or nipping a small amount from an edge or end." },
+      { "answer": "CROPPING", "sense": "Nipping, trimming, or cutting something short." },
+      { "answer": "SNAPPING", "sense": "Nipping or making quick biting movements at a nearby target." }
+    ],
+    "queryVariants": [
+      {
+        "query": "nipping cold crossword clue",
+        "guidance": "Weather wording points to a cold adjective; use the entry length to separate an icy chill from brisk, keen, frosty, or biting air.",
+        "answers": ["ICY", "COLD", "KEEN", "NIPPY", "BRISK", "SHARP", "BITING", "CHILLY", "FROSTY", "FRIGID", "CUTTING"]
+      },
+      {
+        "query": "nipping at the heels crossword clue",
+        "guidance": "An animal or pursuing-at-the-heels context describes repeated quick bites rather than cold weather or sharp criticism.",
+        "answers": ["BITING", "SNAPPING"]
+      },
+      {
+        "query": "nipping off crossword clue",
+        "guidance": "Wording about removing a small part calls for a cutting or trimming action, with crossings distinguishing the exact tool motion.",
+        "answers": ["SNIPPING", "CLIPPING", "CROPPING"]
+      },
+      {
+        "query": "nipping someone at the finish crossword clue",
+        "guidance": "Competition wording uses Nipping for a narrow victory, so look for a present-participle verb meaning just getting ahead or defeating.",
+        "answers": ["EDGING", "BEATING"]
+      }
+    ],
+    "relatedQueries": [
+      "nipping crossword clue",
+      "nipping crossword answer",
+      "nipping 6 letters crossword clue",
+      "nipping cold crossword clue",
+      "nipping at the heels crossword clue",
+      "nipping off crossword clue"
+    ]
   }
 ]

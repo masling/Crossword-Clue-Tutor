@@ -1,13 +1,14 @@
 {
-  "publishedAt": "2026-08-20T11:33:53.000Z",
-  "input": "functions/api/feedback.js#d1-feedback",
+  "publishedAt": "2026-08-20T11:48:12.000Z",
+  "input": "data/clue-hubs.json#nipping-demand-gap",
   "urls": [],
   "answerUrls": [],
   "clinicUrls": [],
   "hubUrls": [
-    "/",
+    "/crossword-clues/nipping/",
+    "/crossword-clues/",
     "/solver/",
     "/explain/",
-    "/privacy/"
+    "/research/ambiguous-crossword-clues/"
   ]
 }
