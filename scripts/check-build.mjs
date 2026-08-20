@@ -94,6 +94,44 @@ for (const [index, entry] of sitemapEntries.entries()) {
   if (!entry[1]) errors.push(`sitemap URL ${index + 1} is missing lastmod`);
   else if (!/^\d{4}-\d{2}-\d{2}$/.test(entry[1])) errors.push(`sitemap URL ${index + 1} has an invalid lastmod`);
 }
+const sitemapRoutes = [...sitemap.matchAll(/<loc>(https:\/\/crosswordcluetutor\.com[^<]*)<\/loc>/g)].map((match) => new URL(match[1]).pathname);
+const sitemapRouteSet = new Set(sitemapRoutes);
+const routeEdges = new Map(sitemapRoutes.map((route) => [route, new Set()]));
+const routeInbound = new Map(sitemapRoutes.map((route) => [route, new Set()]));
+for (const route of sitemapRoutes) {
+  const relative = route === "/" ? "index.html" : path.join(route.slice(1), "index.html");
+  const html = await readFile(path.join(dist, relative), "utf8");
+  for (const match of html.matchAll(/href="([^"]+)"/g)) {
+    let target;
+    try {
+      const resolved = new URL(match[1], `https://crosswordcluetutor.com${route}`);
+      if (resolved.origin !== "https://crosswordcluetutor.com") continue;
+      target = resolved.pathname;
+    } catch {
+      continue;
+    }
+    if (!sitemapRouteSet.has(target) || target === route) continue;
+    routeEdges.get(route).add(target);
+    routeInbound.get(target).add(route);
+  }
+}
+for (const route of sitemapRoutes) {
+  if (route !== "/" && routeInbound.get(route).size === 0) errors.push(`${route}: indexable orphan page has no inbound HTML link`);
+}
+const routeDepth = new Map([["/", 0]]);
+const routeQueue = ["/"];
+while (routeQueue.length) {
+  const route = routeQueue.shift();
+  for (const target of routeEdges.get(route)) {
+    if (routeDepth.has(target)) continue;
+    routeDepth.set(target, routeDepth.get(route) + 1);
+    routeQueue.push(target);
+  }
+}
+for (const route of sitemapRoutes) {
+  if (!routeDepth.has(route)) errors.push(`${route}: indexable page is unreachable from the homepage`);
+  else if (routeDepth.get(route) > 3) errors.push(`${route}: homepage click depth ${routeDepth.get(route)} exceeds 3`);
+}
 if (sitemap.includes("404.html")) errors.push("sitemap must not include the 404 page");
 if (!sitemap.includes("/crosswordese/spec/")) errors.push("sitemap is missing the SPEC answer entity");
 for (const answer of ["mia", "una", "goya"]) {
