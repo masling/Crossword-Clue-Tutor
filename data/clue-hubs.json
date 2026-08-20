@@ -899,5 +899,72 @@
       "technological forefront crossword clue",
       "bring to the forefront crossword clue"
     ]
+  },
+  {
+    "slug": "pimento",
+    "clue": "Pimento",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Pimento depend on whether the clue means the mild red pimiento pepper, Jamaican allspice, a spice or condiment, a source of paprika, or the vivid red color also called signal red.",
+    "answerGuidance": "Start with ALLSPICE for eight letters when the clue uses the Jamaican or British spice sense, PEPPER for six when it means the mild red vegetable, and PIMIENTO for the eight-letter variant spelling.",
+    "meaningBuckets": [
+      "A thick-fleshed mild sweet red pepper, commonly spelled pimiento.",
+      "Allspice, especially in Jamaican and some British usage, or its aromatic berry.",
+      "A spice, condiment, or pepper used in food, pimento cheese, and olive stuffing.",
+      "A red pepper used as a source of paprika or belonging to the capsicum group.",
+      "A vivid red color also called signal red or Chinese vermilion."
+    ],
+    "preferredAnswers": ["ALLSPICE", "PEPPER", "PIMIENTO", "SPICE", "PAPRIKA"],
+    "answers": [
+      { "answer": "SPICE", "sense": "An aromatic food seasoning; pimento may mean allspice in some regions." },
+      { "answer": "BERRY", "sense": "The dried unripe allspice berry called pimento in Jamaica." },
+      { "answer": "PEPPER", "sense": "A mild, thick-fleshed sweet red pepper of the pimiento type." },
+      { "answer": "PAPRIKA", "sense": "A red seasoning whose source can include dried pimiento-type peppers." },
+      { "answer": "ALLSPICE", "sense": "The aromatic spice called pimento or Jamaica pepper in Caribbean usage." },
+      { "answer": "PIMIENTO", "sense": "The standard variant spelling for the mild sweet red pepper." },
+      { "answer": "CAPSICUM", "sense": "The pepper genus and a general term for sweet or hot pepper fruits." },
+      { "answer": "REDPEPPER", "sense": "A ripe red capsicum, including the mild pepper called pimento." },
+      { "answer": "CONDIMENT", "sense": "A seasoning or relish added to food, a broad category for pimento preparations." },
+      { "answer": "VEGETABLE", "sense": "The culinary category of a fresh pimento or sweet pepper fruit." },
+      { "answer": "VERMILION", "sense": "A vivid red color related to the pimento color name." },
+      { "answer": "SIGNALRED", "sense": "A bright red color also used as a name for pimento red." },
+      { "answer": "CHERRYPEPPER", "sense": "A small red, heart-shaped sweet pepper variety associated with pimento." },
+      { "answer": "JAMAICAPEPPER", "sense": "Another name for allspice, the Jamaican meaning of pimento." }
+    ],
+    "queryVariants": [
+      {
+        "query": "pimento 8 letters crossword clue",
+        "guidance": "Eight-letter possibilities depend on whether the clue wants the Jamaican spice, the pepper's variant spelling, or the broader capsicum classification.",
+        "answers": ["ALLSPICE", "PIMIENTO", "CAPSICUM"]
+      },
+      {
+        "query": "pimento pepper crossword clue",
+        "guidance": "Pepper or vegetable wording points to the mild red capsicum rather than Jamaican allspice, with length distinguishing the general and specific names.",
+        "answers": ["PEPPER", "PIMIENTO", "CAPSICUM", "REDPEPPER", "CHERRYPEPPER"]
+      },
+      {
+        "query": "Jamaican pimento crossword clue",
+        "guidance": "Jamaican context changes the intended sense from sweet red pepper to the allspice tree, spice, or aromatic berry.",
+        "answers": ["BERRY", "ALLSPICE", "JAMAICAPEPPER"]
+      },
+      {
+        "query": "pimento spice crossword clue",
+        "guidance": "Spice and seasoning language may indicate the broad food category, paprika, Jamaican allspice, or a prepared condiment rather than a fresh vegetable.",
+        "answers": ["SPICE", "PAPRIKA", "ALLSPICE", "CONDIMENT"]
+      },
+      {
+        "query": "pimento color crossword clue",
+        "guidance": "A color clue does not ask for a food: it points to the vivid red shade known as vermilion or signal red.",
+        "answers": ["VERMILION", "SIGNALRED"]
+      }
+    ],
+    "relatedQueries": [
+      "pimento crossword clue",
+      "pimento crossword answer",
+      "pimento 8 letters crossword clue",
+      "pimento pepper crossword clue",
+      "Jamaican pimento crossword clue",
+      "pimento spice crossword clue",
+      "pimento color crossword clue"
+    ]
   }
 ]

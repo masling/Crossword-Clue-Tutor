@@ -142,3 +142,9 @@ VAN as the standard three-letter answer, while dictionary review supports LEAD, 
 VANGUARD, SPEARHEAD, and longer cutting-edge forms for other lengths and contexts. The
 hub groups 20 candidates and five variants, and its linked LEAD page explains the answer's
 multiple crossword senses and the separate “leed” and “led” pronunciations.
+
+`pimento crossword clue` showed 500 impressions and passed the multi-sense gate after
+regional review. In American usage pimento usually means the mild red pimiento pepper;
+in Jamaican and some British usage it can mean allspice, and dictionaries also record a
+vivid red color sense. The hub groups 14 reviewed candidates and five context variants,
+while the linked ALLSPICE page captures the strongest eight-letter crossword answer.

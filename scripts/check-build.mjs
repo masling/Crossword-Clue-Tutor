@@ -157,10 +157,10 @@ for (const route of sitemapRoutes) {
 }
 const homePage = await readFile(path.join(dist, "index.html"), "utf8");
 if (!homePage.includes("Popular clues with more than one answer")) errors.push("homepage is missing its demand-backed clue navigation");
-for (const slug of ["nipping", "congenital", "inflated", "noble", "cajole", "wealth", "forefront", "path"]) {
+for (const slug of ["nipping", "congenital", "inflated", "noble", "cajole", "wealth", "pimento", "forefront", "path"]) {
   if (!homePage.includes(`/crossword-clues/${slug}/`)) errors.push(`homepage is missing the featured ${slug} clue hub`);
 }
-for (const slug of ["biting", "inborn", "swollen", "grand", "coax", "riches", "lead", "route"]) {
+for (const slug of ["biting", "inborn", "swollen", "grand", "coax", "riches", "allspice", "lead", "route"]) {
   if (!homePage.includes(`/crosswordese/${slug}/`)) errors.push(`homepage is missing the featured ${slug} meaning page`);
 }
 if (sitemap.includes("404.html")) errors.push("sitemap must not include the 404 page");
@@ -226,7 +226,8 @@ for (const [slug, answer, target] of [
   ["coax", "COAX", "persuade gently"],
   ["route", "ROUTE", "planned or established path"],
   ["riches", "RICHES", "Things that make a person rich"],
-  ["lead", "LEAD", "foremost or guiding position"]
+  ["lead", "LEAD", "foremost or guiding position"],
+  ["allspice", "ALLSPICE", "aromatic spice made from dried unripe berries"]
 ]) {
   const answerPage = await readFile(path.join(dist, `crosswordese/${slug}/index.html`), "utf8");
   if (!answerPage.includes(`${answer} in crosswords`) || !answerPage.includes(target) || !answerPage.includes('"@type":"DefinedTerm"')) errors.push(`${answer} answer page is missing its meaning target or DefinedTerm data`);
@@ -247,7 +248,7 @@ const sharpHub = await readFile(path.join(dist, "crossword-clues/sharp/index.htm
 if (!sharpHub.includes("Sharp crossword clue") || !sharpHub.includes("KEEN") || !sharpHub.includes("ACUTE") || !sharpHub.includes("ASTUTE") || !sharpHub.includes("Sharp or biting in taste") || !sharpHub.includes("mentally sharp crossword clue") || !sharpHub.includes("looking sharp crossword clue")) errors.push("Sharp clue hub is missing its search target, reviewed answers, meanings, or query variants");
 const lightHub = await readFile(path.join(dist, "crossword-clues/light/index.html"), "utf8");
 if (!lightHub.includes("Light crossword clue") || !lightHub.includes("GLOW") || !lightHub.includes("PALE") || !lightHub.includes("IGNITE") || !lightHub.includes("Illumination, a beam") || !lightHub.includes("flashing light crossword clue") || !lightHub.includes("before it gets light crossword clue") || !lightHub.includes("STROBE") || !lightHub.includes("PREDAWN")) errors.push("Light clue hub is missing its search target, reviewed answers, meanings, or query variants");
-for (const [hubSlug, answerSlug] of [["nipping", "biting"], ["congenital", "inborn"], ["inflated", "swollen"], ["noble", "grand"], ["cajole", "coax"], ["path", "route"], ["wealth", "riches"], ["forefront", "lead"]]) {
+for (const [hubSlug, answerSlug] of [["nipping", "biting"], ["congenital", "inborn"], ["inflated", "swollen"], ["noble", "grand"], ["cajole", "coax"], ["path", "route"], ["wealth", "riches"], ["forefront", "lead"], ["pimento", "allspice"]]) {
   const hubPage = await readFile(path.join(dist, `crossword-clues/${hubSlug}/index.html`), "utf8");
   if (!hubPage.includes(`/crosswordese/${answerSlug}/`) || !hubPage.includes("answer-entity-link")) errors.push(`${hubSlug} clue hub is missing its answer-meaning internal link`);
 }

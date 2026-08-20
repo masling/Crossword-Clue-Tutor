@@ -567,5 +567,22 @@
     ],
     "otherMeanings": "LEAD can also mean a news-story opening, a piece of evidence, a leash, an electrical wire, a first card played, or the principal performer in a cast.",
     "related": []
+  },
+  {
+    "slug": "allspice",
+    "answer": "ALLSPICE",
+    "pronunciation": "AWL-spyse",
+    "partOfSpeech": "noun",
+    "meaning": "An aromatic spice made from dried unripe berries of the tropical tree Pimenta dioica, also called Jamaica pepper or pimento in Caribbean usage.",
+    "crosswordUse": "ALLSPICE is the strongest eight-letter answer for “Pimento” when the clue uses the Jamaican spice sense. Clues may also mention Jamaica pepper, a spice suggesting several flavors, or an ingredient in jerk seasoning.",
+    "whyCommon": "The eight-letter word has a precise regional relationship to PIMENTO and several recognizable culinary clues, while answer length separates it from PEPPER and PIMIENTO.",
+    "cluePatterns": [
+      "Pimento, in eight letters",
+      "Jamaica pepper",
+      "Spice named for several flavors",
+      "A jerk-seasoning ingredient"
+    ],
+    "otherMeanings": "Despite its English name, ALLSPICE is not a mixture of spices. The single berry's flavor is often compared with cinnamon, nutmeg, and cloves.",
+    "related": []
   }
 ]

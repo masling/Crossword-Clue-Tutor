@@ -285,8 +285,8 @@ function clueRows(items, { showDate = false } = {}) {
 const dates = [...new Set(clues.map((clue) => clue.date))].sort().reverse();
 const latestDate = dates[0];
 const latestClues = clues.filter((clue) => clue.date === latestDate).sort((a, b) => b.popularity - a.popularity);
-const featuredClueHubs = ["nipping", "congenital", "inflated", "noble", "cajole", "wealth", "forefront", "path"].map((slug) => clueHubs.find((hub) => hub.slug === slug)).filter(Boolean);
-const featuredAnswers = ["BITING", "INBORN", "SWOLLEN", "GRAND", "COAX", "RICHES", "LEAD", "ROUTE"].map((value) => answerByValue.get(value)).filter(Boolean);
+const featuredClueHubs = ["nipping", "congenital", "inflated", "noble", "cajole", "wealth", "pimento", "forefront", "path"].map((slug) => clueHubs.find((hub) => hub.slug === slug)).filter(Boolean);
+const featuredAnswers = ["BITING", "INBORN", "SWOLLEN", "GRAND", "COAX", "RICHES", "ALLSPICE", "LEAD", "ROUTE"].map((value) => answerByValue.get(value)).filter(Boolean);
 
 const organizationId = canonicalUrl("/#organization");
 const organizationEntity = {

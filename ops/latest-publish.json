@@ -1,13 +1,13 @@
 {
-  "publishedAt": "2026-08-20T13:19:18.000Z",
-  "input": "data/clue-hubs.json#forefront-with-lead-meaning",
+  "publishedAt": "2026-08-20T13:27:30.000Z",
+  "input": "data/clue-hubs.json#pimento-with-allspice-meaning",
   "urls": [],
   "answerUrls": [
-    "/crosswordese/lead/"
+    "/crosswordese/allspice/"
   ],
   "clinicUrls": [],
   "hubUrls": [
-    "/crossword-clues/forefront/",
+    "/crossword-clues/pimento/",
     "/crossword-clues/",
     "/crosswordese/",
     "/solver/",
