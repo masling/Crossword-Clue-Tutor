@@ -1,19 +1,16 @@
 {
-  "publishedAt": "2026-08-20T12:18:20.000Z",
-  "input": "data/answers.json#hub-answer-meaning-links",
+  "publishedAt": "2026-08-20T12:24:44.000Z",
+  "input": "data/clue-hubs.json#cajole-with-coax-meaning",
   "urls": [],
   "answerUrls": [
-    "/crosswordese/biting/",
-    "/crosswordese/inborn/",
-    "/crosswordese/swollen/",
-    "/crosswordese/grand/"
+    "/crosswordese/coax/"
   ],
   "clinicUrls": [],
   "hubUrls": [
+    "/crossword-clues/cajole/",
+    "/crossword-clues/",
     "/crosswordese/",
-    "/crossword-clues/nipping/",
-    "/crossword-clues/congenital/",
-    "/crossword-clues/inflated/",
-    "/crossword-clues/noble/"
+    "/solver/",
+    "/explain/"
   ]
 }

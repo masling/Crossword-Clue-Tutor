@@ -498,5 +498,22 @@
     ],
     "otherMeanings": "GRAND can name a grand piano, serve as a family prefix in GRANDPARENT, or appear in fixed names such as Grand Canyon and grand jury.",
     "related": []
+  },
+  {
+    "slug": "coax",
+    "answer": "COAX",
+    "pronunciation": "kohks",
+    "partOfSpeech": "verb",
+    "meaning": "To persuade gently and persistently, especially by patient words or actions rather than force.",
+    "crosswordUse": "COAX is the strongest four-letter answer for “Cajole.” It can also fit “Gently persuade,” “Urge patiently,” or a clue about drawing an animal or object out carefully.",
+    "whyCommon": "The compact four-letter verb is familiar, has a distinctive X ending, and supports both social persuasion and careful physical-action clues.",
+    "cluePatterns": [
+      "Cajole, in four letters",
+      "Persuade gently",
+      "Draw out with patience",
+      "Urge without force"
+    ],
+    "otherMeanings": "COAX can also mean to manipulate something gradually into a desired state, as when coaxing a flame to life or coaxing a cable through an opening.",
+    "related": []
   }
 ]

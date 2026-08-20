@@ -118,3 +118,9 @@ senses: a titled aristocrat, high birth or rank, morally honorable character, an
 or exalted style. The query family also includes `noble gas crossword clue`, where the
 grid may want either a specific element or a property such as INERT. The hub keeps these
 branches separate and groups 36 reviewed candidates by answer length and context.
+
+`cajole crossword clue` followed at 666 impressions. Dictionary comparison distinguishes
+gentle persistent coaxing from persuasion by flattery, artful wheedling, insincere smooth
+talk, and more deceptive inveigling. The hub groups 17 candidates across these methods,
+while a linked COAX meaning page captures the strongest four-letter answer and the
+answer-plus-definition query family from the first release.

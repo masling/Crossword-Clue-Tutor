@@ -599,5 +599,69 @@
       "noble birth crossword clue",
       "noble gas crossword clue"
     ]
+  },
+  {
+    "slug": "cajole",
+    "clue": "Cajole",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Cajole depend on whether the clue means gently coax, persuade with flattery, use smooth insincere talk, charm, entice, or inveigle someone into acting.",
+    "answerGuidance": "Start with COAX for four letters, WHEEDLE or FLATTER for seven letters when persuasion uses appealing words, and INVEIGLE or BLANDISH for eight letters when the clue emphasizes artful flattery.",
+    "meaningBuckets": [
+      "Coax or gently urge a reluctant person toward a desired action.",
+      "Persuade by praise, attention, affection, or deliberate flattery.",
+      "Use smooth, ingratiating, or somewhat insincere talk for personal advantage.",
+      "Charm, entice, beguile, or artfully draw someone into agreement.",
+      "Persuade someone into doing something or giving up something desired."
+    ],
+    "preferredAnswers": ["COAX", "WHEEDLE", "INVEIGLE", "SWEETTALK", "BLANDISH"],
+    "answers": [
+      { "answer": "WOO", "sense": "Seek support, approval, or agreement through attentive persuasion." },
+      { "answer": "COAX", "sense": "Persuade gently and persistently, especially in the face of reluctance." },
+      { "answer": "URGE", "sense": "Press, encourage, or try strongly to persuade someone to act." },
+      { "answer": "CHARM", "sense": "Win someone over through pleasing manner, attention, or appeal." },
+      { "answer": "TEMPT", "sense": "Entice or persuade by offering something attractive or desirable." },
+      { "answer": "ENTICE", "sense": "Draw or persuade someone by offering pleasure, advantage, or attraction." },
+      { "answer": "INDUCE", "sense": "Persuade or cause someone to do something." },
+      { "answer": "FLATTER", "sense": "Praise someone, often excessively, to please or influence them." },
+      { "answer": "WHEEDLE", "sense": "Persuade through flattering, artful, or appealing words." },
+      { "answer": "BEGUILE", "sense": "Charm or divert someone, sometimes in order to persuade or deceive." },
+      { "answer": "PERSUADE", "sense": "Cause someone to agree or act through reasoning, urging, or appeal." },
+      { "answer": "INVEIGLE", "sense": "Persuade through flattery, artful talk, or deception." },
+      { "answer": "BLANDISH", "sense": "Coax or influence with flattering words and affectionate attention." },
+      { "answer": "SOFTSOAP", "sense": "Use smooth, flattering, and often insincere talk to persuade." },
+      { "answer": "BUTTERUP", "sense": "Flatter someone in order to gain favor or obtain something." },
+      { "answer": "SCHMOOZE", "sense": "Talk sociably and ingratiatingly, often to cultivate influence." },
+      { "answer": "SWEETTALK", "sense": "Persuade with charm, flattery, or pleasing words." }
+    ],
+    "queryVariants": [
+      {
+        "query": "cajole 4 letters crossword clue",
+        "guidance": "COAX is the strongest four-letter fit for gentle persistent persuasion; URGE is possible when the clue stresses encouragement rather than flattery.",
+        "answers": ["COAX", "URGE"]
+      },
+      {
+        "query": "cajole with flattery crossword clue",
+        "guidance": "Flattery wording favors verbs that use praise or smooth talk deliberately, with answer length separating direct praise from artful wheedling.",
+        "answers": ["FLATTER", "WHEEDLE", "INVEIGLE", "BLANDISH", "SOFTSOAP", "BUTTERUP", "SWEETTALK"]
+      },
+      {
+        "query": "cajole into doing crossword clue",
+        "guidance": "An “into doing” construction asks for a persuasion verb; crossings determine whether the method is gentle, attractive, general, or deceptive.",
+        "answers": ["COAX", "TEMPT", "ENTICE", "INDUCE", "PERSUADE", "INVEIGLE"]
+      },
+      {
+        "query": "cajole deceptively crossword clue",
+        "guidance": "A deceptive or self-serving signal narrows the answer toward artful persuasion, beguiling charm, or insincere smooth talk.",
+        "answers": ["WHEEDLE", "BEGUILE", "INVEIGLE", "SOFTSOAP", "BUTTERUP"]
+      }
+    ],
+    "relatedQueries": [
+      "cajole crossword clue",
+      "cajole crossword answer",
+      "cajole 4 letters crossword clue",
+      "cajole with flattery crossword clue",
+      "cajole into doing crossword clue",
+      "cajole meaning"
+    ]
   }
 ]
