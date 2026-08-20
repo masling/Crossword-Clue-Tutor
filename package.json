@@ -13,6 +13,7 @@
     "indexnow:submit": "node scripts/submit-indexnow.mjs",
     "outreach:check": "node scripts/validate-outreach.mjs",
     "outreach:send": "node scripts/send-outreach.mjs",
+    "seo:audit-production": "node scripts/audit-production-seo.mjs",
     "production:configure": "node scripts/configure-production.mjs",
     "test": "node --test",
     "validate": "node scripts/validate-content.mjs"

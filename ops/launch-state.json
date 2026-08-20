@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T22:53:24+08:00",
+  "updatedAt": "2026-08-20T22:59:37+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -247,7 +247,28 @@
     "bingSiteScanWarningTypes": {
       "Title too long": 55
     },
-    "bingSiteScanRemediation": "Generated document titles are now capped at 70 characters; verify with a later rescan.",
+    "bingSiteScanRemediation": "Generated titles are capped at 70 characters. A full production crawl verified 0 long-title pages; Bing rescan remains unavailable until its page quota resets.",
+    "bingSiteScanRescanStatus": "Start-new-scan form reports 0 pages of quota remaining",
+    "productionSeoAudit": {
+      "auditedAt": "2026-08-20T22:59:28+08:00",
+      "command": "npm run seo:audit-production",
+      "sitemapUrls": 160,
+      "pagesAudited": 160,
+      "pagesWithErrors": 0,
+      "titleTooLong": 0,
+      "longestTitleCharacters": 70,
+      "longestTitleRoute": "/clue-types/question-marks/",
+      "checks": [
+        "HTTP 200 and HTML content type",
+        "Canonical URL",
+        "One H1",
+        "One meta description",
+        "Indexable robots directive",
+        "Valid JSON-LD",
+        "Exactly one Pageview script",
+        "Wildcard search crawling allowed in robots.txt"
+      ]
+    },
     "searchImpressions": 0,
     "searchClicks": 0,
     "indexNowSubmittedUrls": 463
