@@ -76,9 +76,10 @@ for (const publication of publications) {
   if (!hasPublishedClues && routeInSitemap) errors.push(`sitemap includes an empty ${publication.name} publication hub`);
 }
 const feed = await readFile(path.join(dist, "feed.xml"), "utf8");
-if (!feed.includes("/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/")) errors.push("feed is missing the current NYT Mini batch");
-if (!feed.includes("/explainers/forfends-nyt-daily/")) errors.push("feed is missing the selected current NYT Daily batch");
-if (!feed.includes("/explainers/private-sleeping-accommodations-nyt-daily/")) errors.push("feed is missing the latest NYT Daily batch");
+const latestPublish = JSON.parse(await readFile(path.resolve("ops/latest-publish.json"), "utf8"));
+for (const url of latestPublish.urls ?? []) {
+  if (!feed.includes(url)) errors.push(`feed is missing latest published URL ${url}`);
+}
 const freshPage = await readFile(path.join(dist, "explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/index.html"), "utf8");
 if (!freshPage.includes("NYT Mini crossword clue")) errors.push("fresh explainer does not target the publication long-tail query");
 const latestDailyPage = await readFile(path.join(dist, "explainers/private-sleeping-accommodations-nyt-daily/index.html"), "utf8");

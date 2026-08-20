@@ -1,13 +1,10 @@
 {
-  "publishedAt": "2026-08-20T03:43:58.152Z",
-  "input": "ops/intake/2026-08-20-lat-usa-demand-selected.json",
+  "publishedAt": "2026-08-20T04:20:33.140Z",
+  "input": "ops/intake/2026-08-20-la-times-demand-selected.json",
   "urls": [
-    "/explainers/all-eyez-on-me-rapper-la-times/",
-    "/explainers/future-nostalgia-singer-lipa-la-times/",
-    "/explainers/disney-villain-with-hair-of-blue-flame-la-times/",
-    "/explainers/arthur-for-whom-espys-courage-award-is-named-usa-today/",
-    "/explainers/taylor-swifts-the-blank-tour-usa-today/",
-    "/explainers/handheld-game-that-shouts-instructions-usa-today/"
+    "/explainers/ethan-of-the-before-trilogy-la-times/",
+    "/explainers/mars-rover-org-la-times/",
+    "/explainers/marketplace-with-personalized-gifts-la-times/"
   ],
   "answerUrls": [],
   "clinicUrls": [
@@ -17,7 +14,6 @@
     "/",
     "/crosswordese/",
     "/daily-clue-clinic/",
-    "/la-times-crossword-answers/",
-    "/usa-today-crossword-answers/"
+    "/la-times-crossword-answers/"
   ]
 }

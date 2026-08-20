@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T11:47:00+08:00",
+  "updatedAt": "2026-08-20T12:21:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -29,8 +29,8 @@
     }
   },
   "content": {
-    "indexablePages": 103,
-    "reviewedClues": 57,
+    "indexablePages": 106,
+    "reviewedClues": 60,
     "answerMeaningPages": 24,
     "selectionPolicy": "Require measurable publication/query-family demand plus a current rising query or entity/root signal; explanation quality is a publishing floor, not a selection reason.",
     "monitoredPublications": [
@@ -42,7 +42,7 @@
     "lastPublishedSourceDates": {
       "NYT Mini": "2026-08-19",
       "The New York Times Crossword": "2026-08-19",
-      "LA Times Crossword": "2026-08-19",
+      "LA Times Crossword": "2026-08-20",
       "USA TODAY Crossword": "2026-08-19"
     }
   },
@@ -80,7 +80,7 @@
     "lastDeployStatus": "Success"
   },
   "nextAction": {
-    "notBefore": "2026-08-20T12:15:00+08:00",
-    "action": "Check newly available dates for all four publications, then publish only candidates that pass the base-demand and near-term trend gates."
+    "notBefore": "2026-08-20T21:15:00+08:00",
+    "action": "Record verified search-referred traffic, updated discovery/indexing evidence, and technical scan status; exclude direct and operator traffic."
   }
 }

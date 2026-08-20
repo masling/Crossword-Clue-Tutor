@@ -1181,5 +1181,74 @@
     "publication": "USA TODAY Crossword",
     "sourceDate": "2026-08-19",
     "clueNumber": "61-Across"
+  },
+  {
+    "slug": "ethan-of-the-before-trilogy-la-times",
+    "clue": "Ethan of the \"Before\" trilogy",
+    "answer": "HAWKE",
+    "date": "2026-08-20",
+    "popularity": 100,
+    "definition": "Ethan Hawke is the actor who stars as Jesse in Richard Linklater's “Before” film trilogy.",
+    "explanation": "The “Before” trilogy stars Ethan Hawke opposite Julie Delpy, so the clue asks for Ethan's five-letter surname, HAWKE.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "film",
+      "actor",
+      "before-trilogy",
+      "trending-entity"
+    ],
+    "clueType": "proper-noun",
+    "signal": "A first name plus a distinctive film-series credit identifies the actor's surname.",
+    "hint": "He plays Jesse opposite Julie Delpy's Céline.",
+    "reviewedAt": "2026-08-20",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "Selected clue"
+  },
+  {
+    "slug": "mars-rover-org-la-times",
+    "clue": "Mars rover org.",
+    "answer": "NASA",
+    "date": "2026-08-20",
+    "popularity": 99,
+    "definition": "NASA is the United States space agency responsible for Mars rovers including Curiosity and Perseverance.",
+    "explanation": "“Org.” signals an abbreviated organization name, and NASA operates the best-known American Mars rover missions.",
+    "partOfSpeech": "abbreviation",
+    "tags": [
+      "space",
+      "mars",
+      "rover",
+      "organization"
+    ],
+    "clueType": "abbreviation",
+    "signal": "The shortened “org.” signals that the answer should also be an abbreviated organization name.",
+    "hint": "Think of the U.S. agency behind Curiosity and Perseverance.",
+    "reviewedAt": "2026-08-20",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "Selected clue"
+  },
+  {
+    "slug": "marketplace-with-personalized-gifts-la-times",
+    "clue": "Marketplace with personalized gifts",
+    "answer": "ETSY",
+    "date": "2026-08-20",
+    "popularity": 98,
+    "definition": "Etsy is an online marketplace known for handmade, vintage, and personalized products.",
+    "explanation": "Personalized gifts are a signature Etsy category, and the four-letter marketplace name matches the clue directly.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "shopping",
+      "marketplace",
+      "gifts",
+      "brand"
+    ],
+    "clueType": "proper-noun",
+    "signal": "The product category points to a specific online marketplace brand.",
+    "hint": "Its sellers commonly offer custom names, dates, and messages on handmade items.",
+    "reviewedAt": "2026-08-20",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "Selected clue"
   }
 ]

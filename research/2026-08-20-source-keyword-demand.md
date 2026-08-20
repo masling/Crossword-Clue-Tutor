@@ -26,3 +26,18 @@ direction. Values are relative indices, not absolute search volume.
 The six selected clue pages therefore meet both gates: a high-demand publication
 family and an entity/root showing current demand above its recent average. Explanation
 quality remains a publishing requirement, but it is not a selection reason.
+
+## 12:15 SGT freshness run
+
+LA Times Crossword had a publicly verifiable August 20 puzzle while USA TODAY and the
+public NYT Mini answer source still showed August 19. The NYT daily August 20 discussion
+was public, but no candidate was published without a verifiable exact clue-answer pair.
+
+For the LA Times August 20 candidates, Google Trends US Web Search showed:
+
+- `Ethan Hawke`: latest 29 versus seven-day average 16.
+- `NASA`: latest 26 versus seven-day average 24, with substantially higher absolute
+  interest than the lower-volume comparison set.
+- `Etsy`: latest 86 versus seven-day average 80.
+
+Only these three above-average entity roots were selected from that puzzle date.
