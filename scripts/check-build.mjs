@@ -89,6 +89,11 @@ if (config.indexNowKey) {
 const sitemap = await readFile(path.join(dist, "sitemap.xml"), "utf8");
 const clues = JSON.parse(await readFile(path.resolve("data/clues.json"), "utf8"));
 const publications = JSON.parse(await readFile(path.resolve("data/publications.json"), "utf8"));
+const sitemapEntries = [...sitemap.matchAll(/<url><loc>[^<]+<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?<\/url>/g)];
+for (const [index, entry] of sitemapEntries.entries()) {
+  if (!entry[1]) errors.push(`sitemap URL ${index + 1} is missing lastmod`);
+  else if (!/^\d{4}-\d{2}-\d{2}$/.test(entry[1])) errors.push(`sitemap URL ${index + 1} has an invalid lastmod`);
+}
 if (sitemap.includes("404.html")) errors.push("sitemap must not include the 404 page");
 if (!sitemap.includes("/crosswordese/spec/")) errors.push("sitemap is missing the SPEC answer entity");
 for (const answer of ["mia", "una", "goya"]) {

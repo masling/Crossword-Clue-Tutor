@@ -317,7 +317,7 @@ const homeBody = `<section class="hero shell">
   <div class="shell answer-strip-inner"><div><h2>Meet the words crosswords keep bringing back.</h2><p>Meaning, pronunciation, common clue patterns, and why the fill works so well in a grid.</p></div><div class="answer-links">${answers.slice(0, 5).map((answer) => `<a href="/crosswordese/${answer.slug}/">${answer.answer}</a>`).join("")}</div><a class="button button-secondary" href="/crosswordese/">Explore crosswordese</a></div>
 </section>`;
 
-await writePage("/", pageTemplate({ title: config.name, description: config.description, route: "/", body: homeBody, bodyClass: "home-page", jsonLd: [organizationLd, websiteLd] }));
+await writePage("/", pageTemplate({ title: config.name, description: config.description, route: "/", body: homeBody, bodyClass: "home-page", jsonLd: [organizationLd, websiteLd] }), false, config.contentUpdatedAt);
 
 function toolPage(mode) {
   const isSolve = mode === "solve";
@@ -332,7 +332,7 @@ function toolPage(mode) {
 
 for (const mode of ["solve", "explain"]) {
   const item = toolPage(mode);
-  await writePage(item.route, item.html);
+  await writePage(item.route, item.html, false, config.contentUpdatedAt);
 }
 
 const savedCluesBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Saved clues" }])}<h1>Saved crossword clues</h1><p>Keep useful explanations together on this device. Saved clues stay in your browser and are never uploaded to Clue Tutor.</p></section><section class="shell saved-clues-shell" data-saved-clues-root><div class="empty-state" data-saved-empty><div class="empty-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></div><h2>No saved clues yet</h2><p>Open any reviewed clue and choose “Save clue.” It will appear here for quick return visits.</p><a class="button button-primary" href="/crossword-answers-today/">Browse today's clues</a></div><div class="saved-clues-list" data-saved-list hidden><div class="section-heading"><div><h2>Your saved clues</h2><p data-saved-count aria-live="polite"></p></div><a href="/crossword-answers-today/">Find more clues</a></div><div class="clue-list" data-saved-items></div></div></section>`;
@@ -397,7 +397,7 @@ await writePage(ambiguityGuideRoute, pageTemplate({ title: "Solve ambiguous cros
 
 const answerIndexBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Crosswordese" }])}<h1>Crosswordese, explained.</h1><p>Words that show up in grids more often than conversation—plus their meaning, pronunciation, and recurring clue patterns.</p></section>
 <section class="shell directory-layout"><aside><p>Why these words?</p><span>Short answers with vowel-rich or flexible letter patterns help constructors connect a grid. Good clues keep them fair.</span></aside><div class="word-directory">${answers.map((answer) => `<a href="/crosswordese/${answer.slug}/"><span class="word-name">${answer.answer}</span><span>${escapeHtml(answer.meaning)}</span><span class="row-arrow" aria-hidden="true">→</span></a>`).join("")}</div></section>`;
-await writePage("/crosswordese/", pageTemplate({ title: "Crosswordese meanings and definitions", description: "Learn the meaning, pronunciation, common clue patterns, and grid logic behind frequently seen crossword answers.", route: "/crosswordese/", body: answerIndexBody }));
+await writePage("/crosswordese/", pageTemplate({ title: "Crosswordese meanings and definitions", description: "Learn the meaning, pronunciation, common clue patterns, and grid logic behind frequently seen crossword answers.", route: "/crosswordese/", body: answerIndexBody }), false, config.contentUpdatedAt);
 
 for (const answer of answers) {
   const relatedClues = clues.filter((clue) => clue.answer === answer.answer);
@@ -422,7 +422,7 @@ for (const answer of answers) {
 }
 
 const typesIndexBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Clue types" }])}<h1>Read the clue before you solve it.</h1><p>Small signals reveal the answer's grammar, format, and intended sense. Learn the patterns setters use most often.</p></section><section class="shell type-directory">${clueTypes.map((type) => `<a href="/clue-types/${type.slug}/"><span>${escapeHtml(type.title)}</span><p>${escapeHtml(type.summary)}</p><b>Learn this clue type <i aria-hidden="true">→</i></b></a>`).join("")}</section>`;
-await writePage("/clue-types/", pageTemplate({ title: "Crossword clue types and signals", description: "Learn how abbreviation clues, direct definitions, question marks, blanks, and proper-name clues work.", route: "/clue-types/", body: typesIndexBody }));
+await writePage("/clue-types/", pageTemplate({ title: "Crossword clue types and signals", description: "Learn how abbreviation clues, direct definitions, question marks, blanks, and proper-name clues work.", route: "/clue-types/", body: typesIndexBody }), false, "2026-08-20");
 
 for (const type of clueTypes) {
   const route = `/clue-types/${type.slug}/`;
@@ -512,7 +512,7 @@ for (const clue of clues) {
 }
 
 const clinicIndexBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Daily clue clinic" }])}<h1>Daily Clue Clinic</h1><p>Curated, independently explained clues for learning how clues work. No reproduced grids or complete publisher answer keys.</p></section><section class="shell clinic-archive">${dates.map((date) => { const items = clues.filter((clue) => clue.date === date); return `<a href="/daily-clue-clinic/${date}/"><time datetime="${date}">${escapeHtml(formatDate(date))}</time><span>${items.length} reviewed clues</span><b aria-hidden="true">→</b></a>`; }).join("")}</section>`;
-await writePage("/daily-clue-clinic/", pageTemplate({ title: "Daily crossword clue clinic", description: "Browse curated daily crossword clues with progressive hints and independently written explanations.", route: "/daily-clue-clinic/", body: clinicIndexBody }));
+await writePage("/daily-clue-clinic/", pageTemplate({ title: "Daily crossword clue clinic", description: "Browse curated daily crossword clues with progressive hints and independently written explanations.", route: "/daily-clue-clinic/", body: clinicIndexBody }), false, latestDate);
 
 for (const date of dates) {
   const items = clues.filter((clue) => clue.date === date).sort((a, b) => b.popularity - a.popularity);
@@ -522,13 +522,13 @@ for (const date of dates) {
 }
 
 const aboutBody = `<article class="shell prose-page">${breadcrumbs([{ label: "Home", href: "/" }, { label: "About" }])}<h1>Less spoiling. More solving.</h1><p>Clue Tutor is an independent crossword learning tool. It helps solvers use crossing letters, notice clue signals, and understand why an answer fits instead of dropping an unexplained answer at the top of the page.</p><h2>What we are building</h2><p>A fast pattern-aware solver, a clear “explain my answer” workflow, and an editorial library of crosswordese and clue-reading guides.</p><h2>What we are not</h2><p>We are not affiliated with any crossword publisher, and we do not reproduce complete commercial puzzles or present automatically generated text as reviewed guidance.</p></article>`;
-await writePage("/about/", pageTemplate({ title: "About", description: "Why Clue Tutor puts progressive hints and clear explanations ahead of instant crossword spoilers.", route: "/about/", body: aboutBody, bodyClass: "prose-page-body" }));
+await writePage("/about/", pageTemplate({ title: "About", description: "Why Clue Tutor puts progressive hints and clear explanations ahead of instant crossword spoilers.", route: "/about/", body: aboutBody, bodyClass: "prose-page-body" }), false, "2026-08-19");
 
 const editorialBody = `<article class="shell prose-page">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Editorial policy" }])}<h1>Editorial policy</h1><p>Indexed explanations are written or materially reviewed for accuracy, usefulness, and clue grammar. Each clue page shows its latest review date.</p><h2>What earns an indexed page</h2><ul><li>A verified clue-answer relationship.</li><li>A specific explanation of the signal, sense, or wordplay.</li><li>Independent value beyond a bare answer or dictionary definition.</li><li>A path for users to report confusing or incorrect guidance.</li></ul><h2>Automation boundary</h2><p>Private tool queries are not automatically published. Empty results, low-confidence suggestions, and unreviewed generated text stay outside the sitemap.</p><h2>Source boundary</h2><p>Selected published clue text may be quoted for identification, commentary, and teaching. Hints, definitions, and explanations are independently written or materially reviewed. We do not scrape or republish complete daily puzzles, grids, or full answer keys.</p></article>`;
-await writePage("/editorial-policy/", pageTemplate({ title: "Editorial policy", description: "How Clue Tutor reviews crossword explanations, separates private tool output from indexed content, and handles sources.", route: "/editorial-policy/", body: editorialBody, bodyClass: "prose-page-body" }));
+await writePage("/editorial-policy/", pageTemplate({ title: "Editorial policy", description: "How Clue Tutor reviews crossword explanations, separates private tool output from indexed content, and handles sources.", route: "/editorial-policy/", body: editorialBody, bodyClass: "prose-page-body" }), false, "2026-08-20");
 
 const privacyBody = `<article class="shell prose-page">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Privacy" }])}<h1>Privacy</h1><p>Clue matching runs in your browser. The clue, pattern, and answer you type are not sent to our application server or saved in an account.</p><h2>Analytics</h2><p>We use Cloudflare Web Analytics for aggregate visits and real-user performance metrics. We also use Pageview, a self-managed Plausible Community Edition instance, to record pageview events. Its browser script sends the visited page URL, referrer, site domain, and event name to <code>app.pageview.app</code>. The supplied script does not set cookies, and both analytics tools ignore common automated-browser signals. We do not run advertising scripts or session replay.</p><h2>Saved clues</h2><p>If you choose “Save clue,” the clue's public page identifier is stored only in this browser using local storage. It is not uploaded to Clue Tutor or attached to an account. Remove clues from the Saved Clues page or clear this site's browser data to delete them.</p><h2>Local behavior</h2><p>The browser downloads the reviewed example data needed for matching. Closing a page removes unsaved form input; the site does not create an account or retain a server-side search history.</p></article>`;
-await writePage("/privacy/", pageTemplate({ title: "Privacy", description: "How the Clue Tutor validation build handles crossword clues, patterns, answers, storage, and analytics.", route: "/privacy/", body: privacyBody, bodyClass: "prose-page-body" }));
+await writePage("/privacy/", pageTemplate({ title: "Privacy", description: "How the Clue Tutor validation build handles crossword clues, patterns, answers, storage, and analytics.", route: "/privacy/", body: privacyBody, bodyClass: "prose-page-body" }), false, "2026-08-20");
 
 const notFoundBody = `<section class="shell not-found"><div class="empty-grid" aria-hidden="true"><i>C</i><i>L</i><i>U</i><i>E</i></div><h1>That square is empty.</h1><p>The page does not exist, but the clue solver may still get you moving.</p><a class="button button-primary" href="/solver/">Open the solver</a></section>`;
 await writePage("/404.html", pageTemplate({ title: "Page not found", description: "The requested page could not be found.", route: "/404.html", body: notFoundBody, noindex: true }), true);
