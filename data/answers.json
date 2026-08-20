@@ -549,5 +549,23 @@
     ],
     "otherMeanings": "RICHES can refer figuratively to valuable nonfinancial things, such as cultural riches, natural riches, or a wealth of knowledge and experience.",
     "related": []
+  },
+  {
+    "slug": "lead",
+    "answer": "LEAD",
+    "pronunciation": "leed; led",
+    "partOfSpeech": "noun; verb; adjective",
+    "meaning": "The foremost or guiding position, an advantage, or the act of directing; pronounced “led,” it also names the metallic element Pb.",
+    "crosswordUse": "LEAD may answer “Forefront,” “Advantage,” “Direct,” “Main role,” or “Clue for a reporter.” A clue mentioning Pb, metal, weight, or pencil history signals the separate pronunciation “led.”",
+    "whyCommon": "Four familiar letters support many unrelated clue senses and two pronunciations, making crossings and grammar essential for choosing the intended definition.",
+    "cluePatterns": [
+      "Forefront, in four letters",
+      "An advantage in a race",
+      "Direct or guide",
+      "Main role in a production",
+      "Pb on the periodic table"
+    ],
+    "otherMeanings": "LEAD can also mean a news-story opening, a piece of evidence, a leash, an electrical wire, a first card played, or the principal performer in a cast.",
+    "related": []
   }
 ]

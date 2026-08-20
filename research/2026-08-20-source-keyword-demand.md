@@ -136,3 +136,9 @@ can mean money, total assets and property, stored valuables, prosperity, persona
 or a nonfinancial abundance in constructions such as “a wealth of information.” The hub
 groups 28 candidates and five contextual variants, while the linked RICHES meaning page
 captures the strongest six-letter answer and its familiar rags-to-riches phrase family.
+
+`forefront crossword clue` showed 488 impressions. Public crossword evidence confirmed
+VAN as the standard three-letter answer, while dictionary review supports LEAD, FRONT,
+VANGUARD, SPEARHEAD, and longer cutting-edge forms for other lengths and contexts. The
+hub groups 20 candidates and five variants, and its linked LEAD page explains the answer's
+multiple crossword senses and the separate “leed” and “led” pronunciations.

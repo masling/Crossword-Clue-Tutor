@@ -1,10 +1,18 @@
 {
-  "publishedAt": "2026-08-20T13:00:43.000Z",
-  "input": "scripts/build.mjs#homepage-featured-demand-links",
+  "publishedAt": "2026-08-20T13:19:18.000Z",
+  "input": "data/clue-hubs.json#forefront-with-lead-meaning",
   "urls": [],
-  "answerUrls": [],
+  "answerUrls": [
+    "/crosswordese/lead/"
+  ],
   "clinicUrls": [],
   "hubUrls": [
+    "/crossword-clues/forefront/",
+    "/crossword-clues/",
+    "/crosswordese/",
+    "/solver/",
+    "/explain/",
+    "/research/ambiguous-crossword-clues/",
     "/"
   ]
 }

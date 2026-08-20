@@ -826,5 +826,78 @@
       "wealth of information crossword clue",
       "great wealth crossword clue"
     ]
+  },
+  {
+    "slug": "forefront",
+    "clue": "Forefront",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Forefront depend on whether the clue means the extreme front, a leading position, the vanguard of a movement, an innovative cutting edge, or something made prominent in attention.",
+    "answerGuidance": "Start with VAN for three letters, LEAD or HEAD for four, FRONT for five, VANGUARD for eight, and SPEARHEAD for nine. Technology or innovation wording may require CUTTINGEDGE or LEADINGEDGE.",
+    "meaningBuckets": [
+      "The extreme front, head, tip, fore, leading edge, or foremost physical part.",
+      "The lead or position of greatest importance, prominence, or activity.",
+      "The van, vanguard, spearhead, front line, or pioneering group of a movement.",
+      "The cutting edge, leading edge, frontier, or avant-garde of innovation and ideas.",
+      "Something foregrounded, highlighted, spotlighted, or brought to public attention."
+    ],
+    "preferredAnswers": ["VAN", "LEAD", "FRONT", "VANGUARD", "SPEARHEAD", "CUTTINGEDGE"],
+    "answers": [
+      { "answer": "VAN", "sense": "The forefront or leading part of an army, movement, or cultural group." },
+      { "answer": "TIP", "sense": "The extreme end or foremost point of something." },
+      { "answer": "FORE", "sense": "The front or forward part, especially of a ship or position." },
+      { "answer": "HEAD", "sense": "The front, top, or leading position of a line or group." },
+      { "answer": "LEAD", "sense": "The foremost position, advantage, or role of guiding others." },
+      { "answer": "EDGE", "sense": "The advanced boundary or cutting edge of a field or activity." },
+      { "answer": "FRONT", "sense": "The foremost part, side, or leading position." },
+      { "answer": "POINT", "sense": "The forward tip, sharp end, or leading position of an advance." },
+      { "answer": "ADVANCE", "sense": "The forward or leading part of a movement or force." },
+      { "answer": "PIONEER", "sense": "A person or group at the forefront of a new field or method." },
+      { "answer": "VANGUARD", "sense": "The leading position or foremost group in a movement or field." },
+      { "answer": "FRONTIER", "sense": "The outer limit or forefront of knowledge, research, or development." },
+      { "answer": "SPEARHEAD", "sense": "The person, group, or force leading an activity or movement." },
+      { "answer": "FRONTLINE", "sense": "The most active, advanced, or exposed position in an effort or conflict." },
+      { "answer": "HIGHLIGHT", "sense": "Bring something into prominence or make it a focus of attention." },
+      { "answer": "SPOTLIGHT", "sense": "Place something at the forefront of public notice and attention." },
+      { "answer": "FOREGROUND", "sense": "The most prominent position, or the act of bringing something forward in attention." },
+      { "answer": "AVANTGARDE", "sense": "People or work at the innovative forefront of art, ideas, or culture." },
+      { "answer": "CUTTINGEDGE", "sense": "The most advanced, innovative, or leading position in a field." },
+      { "answer": "LEADINGEDGE", "sense": "The foremost or most advanced position, especially in technology and research." }
+    ],
+    "queryVariants": [
+      {
+        "query": "forefront 3 letters crossword clue",
+        "guidance": "VAN is the established three-letter answer for the leading part of an army or movement; TIP fits when the clue points to the extreme physical point.",
+        "answers": ["VAN", "TIP"]
+      },
+      {
+        "query": "forefront 4 letters crossword clue",
+        "guidance": "Four-letter choices separate a front position from a physical forward part or advanced edge, so crossings distinguish LEAD, HEAD, FORE, and EDGE.",
+        "answers": ["FORE", "HEAD", "LEAD", "EDGE"]
+      },
+      {
+        "query": "at the forefront crossword clue",
+        "guidance": "A leadership or movement context favors a word for the leading position or group rather than the literal front of an object.",
+        "answers": ["VAN", "LEAD", "FRONT", "VANGUARD", "SPEARHEAD", "FRONTLINE"]
+      },
+      {
+        "query": "technological forefront crossword clue",
+        "guidance": "Technology and innovation wording points to the advanced boundary of a field, from a short EDGE to FRONTIER, VANGUARD, AVANTGARDE, or a longer edge phrase.",
+        "answers": ["EDGE", "VANGUARD", "FRONTIER", "AVANTGARDE", "CUTTINGEDGE", "LEADINGEDGE"]
+      },
+      {
+        "query": "bring to the forefront crossword clue",
+        "guidance": "A verb clue about making something prominent asks for an action that raises it in attention rather than a noun naming the leading position.",
+        "answers": ["HIGHLIGHT", "SPOTLIGHT", "FOREGROUND"]
+      }
+    ],
+    "relatedQueries": [
+      "forefront crossword clue",
+      "forefront crossword answer",
+      "forefront 3 letters crossword clue",
+      "forefront 4 letters crossword clue",
+      "at the forefront crossword clue",
+      "technological forefront crossword clue",
+      "bring to the forefront crossword clue"
+    ]
   }
 ]
