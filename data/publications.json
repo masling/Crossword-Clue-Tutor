@@ -21,22 +21,22 @@
   },
   {
     "name": "LA Times Crossword",
-    "route": "/la-times-crossword-clues/",
-    "title": "LA Times crossword clues: hints and explanations",
-    "heading": "Selected LA Times crossword clues, explained",
-    "description": "Browse spoiler-light hints and original explanations for selected high-confusion LA Times crossword clues by puzzle date.",
+    "route": "/la-times-crossword-answers/",
+    "title": "LA Times crossword answers today: selected clue hints",
+    "heading": "LA Times crossword answers today — selected clues",
+    "description": "Find spoiler-light hints and independently written explanations for selected LA Times crossword answers with current search demand, organized by puzzle date.",
     "maxPerDate": 6,
     "titleSuffix": "LA Times Crossword Clue",
-    "linkLabel": "LA Times clue hints"
+    "linkLabel": "LA Times answers today"
   },
   {
     "name": "USA TODAY Crossword",
-    "route": "/usa-today-crossword-clues/",
-    "title": "USA TODAY crossword clues: hints and explanations",
-    "heading": "Selected USA TODAY crossword clues, explained",
-    "description": "Browse spoiler-light hints and original explanations for selected high-confusion USA TODAY crossword clues by puzzle date.",
+    "route": "/usa-today-crossword-answers/",
+    "title": "USA TODAY crossword answers: selected clue hints",
+    "heading": "USA TODAY crossword answers — selected clues",
+    "description": "Find spoiler-light hints and independently written explanations for selected USA TODAY crossword answers with current search demand, organized by puzzle date.",
     "maxPerDate": 6,
     "titleSuffix": "USA TODAY Crossword Clue",
-    "linkLabel": "USA TODAY clue hints"
+    "linkLabel": "USA TODAY answers"
   }
 ]

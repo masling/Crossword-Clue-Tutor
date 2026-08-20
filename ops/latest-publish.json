@@ -1,36 +1,23 @@
 {
-  "publishedAt": "2026-08-19T02:15:48.924Z",
-  "input": "ops/intake/2026-08-19-nyt-selected.json",
+  "publishedAt": "2026-08-20T03:43:58.152Z",
+  "input": "ops/intake/2026-08-20-lat-usa-demand-selected.json",
   "urls": [
-    "/explainers/its-in-a-pickle-nyt-mini/",
-    "/explainers/elevators-in-british-english-nyt-mini/",
-    "/explainers/sports-org-for-chicago-fire-and-new-york-red-bulls-nyt-mini/",
-    "/explainers/do-blank-others-golden-rule-nyt-mini/",
-    "/explainers/pickle-nyt-mini/",
-    "/explainers/private-sleeping-accommodations-nyt-daily/",
-    "/explainers/wipe-from-ones-memory-so-to-speak-nyt-daily/",
-    "/explainers/hybrid-tennis-attire-nyt-daily/",
-    "/explainers/hides-ones-central-point-doubly-homophonic-hint-nyt-daily/",
-    "/explainers/top-three-sights-in-fiji-nyt-daily/",
-    "/explainers/verbal-hesitations-nyt-daily/",
-    "/explainers/word-salary-derives-from-latin-for-this-nyt-daily/"
+    "/explainers/all-eyez-on-me-rapper-la-times/",
+    "/explainers/future-nostalgia-singer-lipa-la-times/",
+    "/explainers/disney-villain-with-hair-of-blue-flame-la-times/",
+    "/explainers/arthur-for-whom-espys-courage-award-is-named-usa-today/",
+    "/explainers/taylor-swifts-the-blank-tour-usa-today/",
+    "/explainers/handheld-game-that-shouts-instructions-usa-today/"
   ],
-  "answerUrls": [
-    "/crosswordese/brine/",
-    "/crosswordese/unto/",
-    "/crosswordese/unsee/",
-    "/crosswordese/skort/",
-    "/crosswordese/buries-the-lede/",
-    "/crosswordese/ers/"
-  ],
+  "answerUrls": [],
   "clinicUrls": [
-    "/daily-clue-clinic/2026-08-19/"
+    "/daily-clue-clinic/2026-08-20/"
   ],
   "hubUrls": [
     "/",
     "/crosswordese/",
     "/daily-clue-clinic/",
-    "/nyt-mini-crossword-clues/",
-    "/nyt-crossword-clues/"
+    "/la-times-crossword-answers/",
+    "/usa-today-crossword-answers/"
   ]
 }

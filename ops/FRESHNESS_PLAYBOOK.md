@@ -9,7 +9,9 @@ Discover, review, publish, deploy, and submit high-intent clue pages on the same
 1. Check official puzzle releases and visible daily discussion/search activity for
    NYT Mini, The New York Times Crossword, LA Times Crossword, and USA TODAY Crossword.
 2. Capture candidate clue-answer pairs with publication, date, and clue number.
-3. Prioritize clues with ambiguity, abbreviations, unfamiliar names, wordplay, or a likely “why?” query.
+3. Apply the demand gate before writing: require a high-volume publication/query family
+   plus either a rising 2–3 day Google Trends root, a Bing newly discovered query, or
+   actual Search Console impressions. Do not publish solely because a clue is interesting.
 4. Write an original hint, clue signal, definition, and explanation.
 5. Run a dry review: `npm run content:publish -- ops/intake/<file>.json --dry-run`.
 6. Publish the reviewed batch: `npm run content:publish -- ops/intake/<file>.json`.
@@ -37,14 +39,18 @@ availability rather than from a hard-coded date assumption. Free play does not g
 republication rights: never mirror a full grid or answer list, and never bypass a
 publisher login or subscription boundary.
 
-## Candidate score
+## Demand gate and candidate score
+
+No search signal means no page. Explanation quality is a pass/fail publishing
+requirement, not a reason to select a candidate.
 
 Score each candidate from 0–3 on:
 
-- Freshness: appeared today and has not saturated the search results.
-- Confusion: answer is not obvious even after reveal.
-- Search language: clue can be pasted verbatim into Google.
-- Explanation value: the page can add a real definition, signal, or wordplay explanation.
+- Base demand: the publication/query family has measurable Bing impressions.
+- Near-term momentum: the related entity/root is above its recent Google Trends average
+  or appears in rising/newly discovered queries during the latest 2–3 days.
+- Search language: the clue can be pasted verbatim into a search engine.
+- Freshness: the clue appeared on the latest publicly verifiable puzzle date.
 - Competition gap: current results are thin, incorrect, slow, or answer-only.
 
 Publish the highest total first. Avoid creating separate pages for punctuation-only clue variants.

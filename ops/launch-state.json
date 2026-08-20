@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T11:20:00+08:00",
+  "updatedAt": "2026-08-20T11:44:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -29,9 +29,10 @@
     }
   },
   "content": {
-    "indexablePages": 94,
-    "reviewedClues": 51,
+    "indexablePages": 103,
+    "reviewedClues": 57,
     "answerMeaningPages": 24,
+    "selectionPolicy": "Require measurable publication/query-family demand plus a current rising query or entity/root signal; explanation quality is a publishing floor, not a selection reason.",
     "monitoredPublications": [
       "NYT Mini",
       "The New York Times Crossword",
@@ -40,7 +41,9 @@
     ],
     "lastPublishedSourceDates": {
       "NYT Mini": "2026-08-19",
-      "The New York Times Crossword": "2026-08-19"
+      "The New York Times Crossword": "2026-08-19",
+      "LA Times Crossword": "2026-08-19",
+      "USA TODAY Crossword": "2026-08-19"
     }
   },
   "search": {
@@ -76,6 +79,6 @@
   },
   "nextAction": {
     "notBefore": "2026-08-20T12:15:00+08:00",
-    "action": "Check only newly available NYT Mini, New York Times Crossword, LA Times Crossword, and USA TODAY Crossword source dates; publish a small explanation-first batch only when a fresh puzzle date is publicly verifiable."
+    "action": "Check newly available dates for all four publications, then publish only candidates that pass the base-demand and near-term trend gates."
   }
 }

@@ -88,6 +88,10 @@ const miniHub = await readFile(path.join(dist, "nyt-mini-crossword-clues/index.h
 if (!miniHub.includes("It’s in a pickle")) errors.push("NYT Mini hub is missing the latest selected clue");
 const dailyHub = await readFile(path.join(dist, "nyt-crossword-clues/index.html"), "utf8");
 if (!dailyHub.includes("Private sleeping accommodations?")) errors.push("NYT daily hub is missing the latest selected clue");
+const latHub = await readFile(path.join(dist, "la-times-crossword-answers/index.html"), "utf8");
+if (!latHub.includes("&quot;All Eyez on Me&quot; rapper")) errors.push("LA Times demand hub is missing its selected current clue");
+const usaTodayHub = await readFile(path.join(dist, "usa-today-crossword-answers/index.html"), "utf8");
+if (!usaTodayHub.includes("Arthur for whom the ESPYs&#039; Courage Award is named")) errors.push("USA TODAY demand hub is missing its selected current clue");
 const privacyPage = await readFile(path.join(dist, "privacy/index.html"), "utf8");
 if (!privacyPage.includes("Cloudflare Web Analytics")) errors.push("privacy page is missing the production analytics disclosure");
 if (!privacyPage.includes("app.pageview.app")) errors.push("privacy page is missing the Pageview analytics disclosure");
