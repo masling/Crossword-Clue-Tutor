@@ -74,6 +74,7 @@ if (!sitemap.includes("/crossword-clues/")) errors.push("sitemap is missing the 
 if (!sitemap.includes("/crossword-clues/diffuse/")) errors.push("sitemap is missing the Diffuse clue hub");
 if (!sitemap.includes("/crossword-clues/pitch/")) errors.push("sitemap is missing the Pitch clue hub");
 if (!sitemap.includes("/crossword-clues/charge/")) errors.push("sitemap is missing the Charge clue hub");
+if (!sitemap.includes("/crossword-clues/issue/")) errors.push("sitemap is missing the Issue clue hub");
 if (!sitemap.includes("/guides/answer-length-and-crossings/")) errors.push("sitemap is missing the ambiguity solving guide");
 if (!sitemap.includes("/crossword-answers-today/")) errors.push("sitemap is missing the cross-publication answers-today hub");
 if (!sitemap.includes("/crossword-answers-by-length/")) errors.push("sitemap is missing the answers-by-length index");
@@ -113,9 +114,12 @@ if (!pitchHub.includes("TAR") || !pitchHub.includes("TONE") || !pitchHub.include
 const chargeHub = await readFile(path.join(dist, "crossword-clues/charge/index.html"), "utf8");
 if (!chargeHub.includes("Charge crossword clue")) errors.push("Charge clue hub is missing its search target");
 if (!chargeHub.includes("FEE") || !chargeHub.includes("ONUS") || !chargeHub.includes("IONIZE")) errors.push("Charge clue hub is missing reviewed multi-sense answers");
+const issueHub = await readFile(path.join(dist, "crossword-clues/issue/index.html"), "utf8");
+if (!issueHub.includes("Issue crossword clue")) errors.push("Issue clue hub is missing its search target");
+if (!issueHub.includes("EMIT") || !issueHub.includes("TOPIC") || !issueHub.includes("EDITION")) errors.push("Issue clue hub is missing reviewed multi-sense answers");
 const ambiguityGuide = await readFile(path.join(dist, "guides/answer-length-and-crossings/index.html"), "utf8");
 if (!ambiguityGuide.includes("How answer length and crossings solve ambiguous crossword clues")) errors.push("ambiguity guide is missing its search target");
-if (!ambiguityGuide.includes("/crossword-clues/diffuse/") || !ambiguityGuide.includes("/crossword-clues/pitch/") || !ambiguityGuide.includes("/crossword-clues/charge/") || !ambiguityGuide.includes("/solver/")) errors.push("ambiguity guide is missing its useful internal links");
+if (!ambiguityGuide.includes("/crossword-clues/diffuse/") || !ambiguityGuide.includes("/crossword-clues/pitch/") || !ambiguityGuide.includes("/crossword-clues/charge/") || !ambiguityGuide.includes("/crossword-clues/issue/") || !ambiguityGuide.includes("/solver/")) errors.push("ambiguity guide is missing its useful internal links");
 const answersTodayPage = await readFile(path.join(dist, "crossword-answers-today/index.html"), "utf8");
 if (!answersTodayPage.includes("Crossword answers today — selected clues")) errors.push("answers-today hub is missing its search target");
 for (const publication of ["NYT Mini", "The New York Times Crossword", "LA Times Crossword", "USA TODAY Crossword"]) {

@@ -21,6 +21,9 @@
     "/crossword-answers-by-length/",
     "/crossword-answers/3-letters/",
     "/crossword-answers/5-letters/",
-    "/nyt-mini-crossword-clues/"
+    "/nyt-mini-crossword-clues/",
+    "/crossword-clues/",
+    "/crossword-clues/issue/",
+    "/guides/answer-length-and-crossings/"
   ]
 }

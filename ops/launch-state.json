@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T17:40:00+08:00",
+  "updatedAt": "2026-08-20T16:48:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -29,10 +29,10 @@
     }
   },
   "content": {
-    "indexablePages": 129,
+    "indexablePages": 130,
     "reviewedClues": 72,
     "answerMeaningPages": 24,
-    "evergreenClueHubs": 3,
+    "evergreenClueHubs": 4,
     "linkableGuides": 1,
     "crossPublicationTodayHubs": 1,
     "answerLengthIndexes": 1,

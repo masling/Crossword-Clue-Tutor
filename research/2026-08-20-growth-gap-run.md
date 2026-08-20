@@ -38,6 +38,13 @@ burdens, prices, custody, and electrical ionization.
 - https://crosswordtracker.com/clue/charge/
 - https://crosswordbuzz.com/clue/charge/
 
+“Issue” was selected as the fourth evergreen hub after public databases showed more than
+20 recent cross-publisher appearances and distinct meanings including topic, problem,
+publication edition, offspring, result, and issuing or flowing outward.
+
+- https://crosswordtracker.com/answer/issue/
+- https://crosswordheaven.com/clues/issue
+
 ## Outreach opportunity
 
 Several established resource and community sites maintain curated link directories,

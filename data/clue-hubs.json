@@ -99,5 +99,38 @@
       "service charge crossword clue",
       "electrical charge crossword clue"
     ]
+  },
+  {
+    "slug": "issue",
+    "clue": "Issue",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Issue depend on whether the clue means a topic, problem, publication edition, offspring, outcome, or the act of sending or flowing out.",
+    "answerGuidance": "Start with EMIT for four letters when issue means send forth, TOPIC for five letters when it means a discussion subject, MATTER for six letters when it means a concern, and EDITION or PROGENY for seven letters when it means a publication installment or offspring.",
+    "answers": [
+      { "answer": "EMIT", "sense": "Issue, send out, or give off something such as light or sound." },
+      { "answer": "SEED", "sense": "Offspring or descendants viewed collectively as issue." },
+      { "answer": "FLOW", "sense": "Issue or move outward in a continuous stream." },
+      { "answer": "TOPIC", "sense": "A subject or issue being discussed." },
+      { "answer": "SCION", "sense": "A descendant or member of a notable family; issue." },
+      { "answer": "MATTER", "sense": "A subject, concern, or issue requiring attention." },
+      { "answer": "EMERGE", "sense": "Issue or come forth from a place or source." },
+      { "answer": "RESULT", "sense": "An outcome or consequence that issues from an action." },
+      { "answer": "RELEASE", "sense": "Issue or make something available to the public." },
+      { "answer": "EDITION", "sense": "A particular issue of a newspaper, magazine, or book." },
+      { "answer": "PROGENY", "sense": "Children, descendants, or issue." },
+      { "answer": "EMANATE", "sense": "Issue or originate from a source." },
+      { "answer": "PROBLEM", "sense": "A difficulty or issue that needs resolution." },
+      { "answer": "OUTCOME", "sense": "The result or issue of a process or event." },
+      { "answer": "QUESTION", "sense": "A disputed issue or matter for consideration." },
+      { "answer": "DISPENSE", "sense": "Issue or distribute supplies, medicine, or funds." },
+      { "answer": "OFFSPRING", "sense": "Children or descendants; a person's issue." }
+    ],
+    "relatedQueries": [
+      "issue crossword clue",
+      "issue crossword answer",
+      "issue 5 letters crossword clue",
+      "magazine issue crossword clue",
+      "issue offspring crossword clue"
+    ]
   }
 ]
