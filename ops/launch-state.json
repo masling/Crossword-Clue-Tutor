@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T12:21:00+08:00",
+  "updatedAt": "2026-08-20T12:23:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -67,7 +67,7 @@
     "bingSiteScanRemediation": "Generated document titles are now capped at 70 characters; verify with a later rescan.",
     "searchImpressions": 0,
     "searchClicks": 0,
-    "indexNowSubmittedUrls": 93
+    "indexNowSubmittedUrls": 101
   },
   "deployment": {
     "provider": "Cloudflare Pages",
@@ -76,7 +76,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "f7373ab",
+    "lastVerifiedCommit": "1e015cc",
     "lastDeployStatus": "Success"
   },
   "nextAction": {
