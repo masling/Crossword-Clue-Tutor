@@ -60,6 +60,23 @@ coverage to find:
 Trend and search-volume work is a backfill and expansion loop, not the daily publishing
 gate. Evidence-backed gap pages may be added after the current-date batch is complete.
 
+## Tool-query consolidation rule
+
+Treat broad tool and directory phrases differently from same-day clue queries:
+
+- Measure roots such as `crossword solver`, `crossword puzzle answers`, `crossword
+  dictionary`, `crossword clues and answers`, and answer-length phrases in Bing Keyword
+  Research before expanding the information architecture.
+- If an existing useful page already satisfies the intent, refine its title, heading,
+  description, structured-data name, and internal anchor text instead of creating a
+  competing URL.
+- Create a new directory page only when the phrase has measurable demand and the page can
+  expose at least five reviewed entries or a genuinely distinct tool action.
+- No measurable signal means no new broad landing page. Keep useful existing pages, but
+  record rejected expansions so the same zero-demand research is not repeated.
+- Re-run build checks after changing an evergreen search target; every optimized page
+  must retain canonical, social, breadcrumb, and collection/dictionary structured data.
+
 ## Gap candidate score
 
 Score each candidate from 0–3 on:

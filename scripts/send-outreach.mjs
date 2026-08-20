@@ -2,6 +2,7 @@ import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
 import nodemailer from "nodemailer";
+import { checkMailDns } from "./check-mail-dns.mjs";
 
 const DEFAULT_FROM = "hello@crosswordcluetutor.com";
 const DEFAULT_NAME = "Crossword Clue Tutor";
@@ -100,6 +101,8 @@ export async function run(argv = process.argv.slice(2), env = process.env) {
   const smtp = smtpConfig(env);
   if (options.verify) {
     if (!smtp.password) throw new Error("Set ZOHO_SMTP_PASSWORD before --verify");
+    const dns = await checkMailDns();
+    if (dns.errors.length) throw new Error(`Mail DNS preflight failed: ${dns.errors.join("; ")}`);
     const transport = nodemailer.createTransport({
       host: smtp.host,
       port: smtp.port,
@@ -139,6 +142,8 @@ export async function run(argv = process.argv.slice(2), env = process.env) {
     throw new Error("--confirm-recipient must exactly match --to");
   }
   if (!smtp.password) throw new Error("Set ZOHO_SMTP_PASSWORD before sending");
+  const dns = await checkMailDns();
+  if (dns.errors.length) throw new Error(`Mail DNS preflight failed: ${dns.errors.join("; ")}`);
 
   const transport = nodemailer.createTransport({
     host: smtp.host,

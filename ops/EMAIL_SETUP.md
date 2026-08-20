@@ -1,7 +1,9 @@
 # Crossword Clue Tutor domain email setup
 
-Status: inbound routing and DNS authentication activated on 2026-08-20. Outbound code is
-prepared for Zoho SMTP, but no password is stored and no external message has been sent.
+Status: inbound routing and the Gmail Send As identity were confirmed on 2026-08-20.
+External QA mail reaches an independent Gmail inbox through Zoho over TLS 1.3. SPF and
+DMARC pass; a final DKIM recheck remains after Gmail's earlier missing-key cache expires.
+No outreach message or form has been submitted, and no password is stored.
 
 ## Proposed public identity
 
@@ -36,6 +38,11 @@ The root MX records must remain Cloudflare's. Do not add Zoho MX records while t
 setup is active. Zoho may therefore continue to show an MX warning even when SPF and DKIM
 are valid for outbound mail.
 
+Do not use Zoho's “Configure automatically” DNS action after the hybrid setup is active.
+It may replace or remove records that Cloudflare Email Routing and Zoho SMTP must share.
+Use the exact records below and run the repository DNS preflight after every mail-setting
+change.
+
 Current DNS policy:
 
 - SPF at `@`: `v=spf1 include:_spf.mx.cloudflare.net include:zohomail.com ~all`
@@ -47,12 +54,14 @@ Current DNS policy:
 
 The sender is dry-run by default and supports exactly one recipient per invocation. It
 will not accept a password on the command line, and a real send requires both `--send`
-and an exact matching `--confirm-recipient`.
+and an exact matching `--confirm-recipient`. A real send also performs a public DNS
+preflight and stops if Cloudflare MX, the combined SPF, Zoho DKIM, or DMARC is missing.
 
 Set credentials only in the current shell or a secret manager; never write them into the
 repository:
 
 ```sh
+npm run email:check-dns
 export ZOHO_SMTP_USER='hello@crosswordcluetutor.com'
 export ZOHO_SMTP_PASSWORD='use-a-Zoho-app-password-when-2FA-is-enabled'
 npm run outreach:send -- --verify
@@ -107,6 +116,20 @@ confirm:
 - replies reach `masling@gmail.com` through Email Routing.
 
 Do not send the prepared outreach batch until these checks pass.
+
+### 2026-08-20 QA evidence
+
+- The Gmail alias confirmation addressed to `hello@crosswordcluetutor.com` arrived at
+  `masling@gmail.com`, proving the Cloudflare inbound route.
+- Gmail confirmed that the account may send as `hello@crosswordcluetutor.com`.
+- External mail reached the operator's independent Gmail inbox through a Zoho outbound
+  host with TLS 1.3 in under ten seconds; visible From and Reply-To were correct.
+- The first external check exposed missing SPF and `zmail` DKIM records. They were
+  restored, Cloudflare Email Routing returned to `ready`, and both Cloudflare and Google
+  Public DNS subsequently returned the expected values.
+- A later external check reported SPF PASS and DMARC PASS. Google still used the earlier
+  negative DKIM cache for that message, although Zoho's ARC result reported DKIM PASS.
+- Keep outreach paused until a fresh independent-recipient message reports DKIM PASS too.
 
 ## Rejected free relay option
 

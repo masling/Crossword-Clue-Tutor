@@ -88,7 +88,7 @@ function header() {
       <nav class="primary-nav" aria-label="Primary navigation">
         <a href="/solver/">Solve</a>
         <a href="/explain/">Explain</a>
-        <a href="/crosswordese/">Crosswordese</a>
+        <a href="/crosswordese/">Dictionary</a>
         <a href="/clue-types/">Clue types</a>
       </nav>
     </div>
@@ -107,10 +107,10 @@ function footer() {
         <a href="/editorial-policy/">Editorial policy</a>
         <a href="/privacy/">Privacy</a>
         <a href="/feedback/">Feedback</a>
-        <a href="/crossword-answers-today/">Answers today</a>
+        <a href="/crossword-answers-today/">Puzzle answers today</a>
         <a href="/saved-clues/">Saved clues</a>
         <a href="/daily-clue-clinic/">Daily clue clinic</a>
-        <a href="/crossword-clues/">Clue dictionary</a>
+        <a href="/crossword-clues/">Clues and answers</a>
         <a href="/crossword-answers-by-length/">Answers by length</a>
         <a href="/guides/answer-length-and-crossings/">Solving guide</a>
         <a href="/research/ambiguous-crossword-clues/">Ambiguity data</a>
@@ -331,10 +331,10 @@ const homeBody = `<section class="hero shell">
 <section class="shell latest-section">
   <div class="section-heading"><div><h2>Recently reviewed clues</h2><p>Every indexed explanation has an editorial review date.</p></div><a href="/daily-clue-clinic/">Browse the clinic archive</a></div>
   ${clueRows(latestClues.slice(0, 6))}
-  <div class="daily-hub-links"><a href="/crossword-answers-today/">Crossword answers today →</a><a href="/crossword-answers-by-length/">Answers by length →</a>${activePublicationHubs().map((hub) => `<a href="${hub.route}">${escapeHtml(hub.linkLabel)} →</a>`).join("")}</div>
+  <div class="daily-hub-links"><a href="/crossword-answers-today/">Crossword puzzle answers today →</a><a href="/crossword-answers-by-length/">Answers by length →</a>${activePublicationHubs().map((hub) => `<a href="${hub.route}">${escapeHtml(hub.linkLabel)} →</a>`).join("")}</div>
 </section>
 <section class="shell popular-clue-section">
-  <div class="section-heading"><div><h2>Popular clues with more than one answer</h2><p>Start with the entry length, then use the clue's exact sense and your crossings.</p></div><a href="/crossword-clues/">Browse the clue dictionary</a></div>
+  <div class="section-heading"><div><h2>Popular clues with more than one answer</h2><p>Start with the entry length, then use the clue's exact sense and your crossings.</p></div><a href="/crossword-clues/">Browse clues and answers</a></div>
   <div class="popular-clue-list">${featuredClueHubs.map((hub) => `<a href="/crossword-clues/${hub.slug}/"><strong>${escapeHtml(hub.clue)} crossword clue</strong><span>${hub.answers.length} reviewed possibilities</span><small>${hub.preferredAnswers.slice(0, 3).map(escapeHtml).join(" · ")}</small><i aria-hidden="true">→</i></a>`).join("")}</div>
 </section>
 <section class="answer-strip">
@@ -378,9 +378,9 @@ for (const { length, items } of answerLengthGroups) {
 }
 
 const clueHubLatestReview = clueHubs.map((hub) => hub.reviewedAt).sort().reverse()[0] ?? config.contentUpdatedAt;
-const clueHubIndexBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Crossword clue dictionary" }])}<h1>Crossword clues with more than one answer.</h1><p>Use answer length, crossings, and clue sense to choose among reviewed possibilities for recurring clues.</p></section><section class="shell directory-layout"><aside><p>Why multiple answers?</p><span>A short clue can point to different synonyms in different grids. These pages organize the useful candidates instead of pretending one answer always fits.</span></aside><div class="word-directory">${clueHubs.map((hub) => `<a href="/crossword-clues/${hub.slug}/"><span class="word-name">${escapeHtml(hub.clue)}</span><span>${escapeHtml(hub.summary)}</span><span class="row-arrow" aria-hidden="true">→</span></a>`).join("")}</div></section>`;
-const clueHubIndexLd = { "@context": "https://schema.org", "@type": "CollectionPage", name: "Crossword clue dictionary", description: "Recurring crossword clues organized by answer length and meaning.", url: canonicalUrl("/crossword-clues/") };
-await writePage("/crossword-clues/", pageTemplate({ title: "Crossword clue dictionary", description: "Find possible crossword answers by clue, length, crossings, and meaning.", route: "/crossword-clues/", body: clueHubIndexBody, bodyClass: "clue-dictionary-page", jsonLd: [clueHubIndexLd] }), false, clueHubLatestReview);
+const clueHubIndexBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Crossword clues and answers" }])}<h1>Crossword clues and answers by length and meaning</h1><p>Compare reviewed answers for recurring clues, then use entry length, crossings, and clue sense to choose the fill that fits your grid.</p></section><section class="shell directory-layout"><aside><p>Why multiple answers?</p><span>A short clue can point to different synonyms in different grids. These pages organize the useful candidates instead of pretending one answer always fits.</span><a class="text-link" href="/crosswordese/">Look up crossword answer meanings →</a></aside><div class="word-directory">${clueHubs.map((hub) => `<a href="/crossword-clues/${hub.slug}/"><span class="word-name">${escapeHtml(hub.clue)}</span><span>${escapeHtml(hub.summary)}</span><span class="row-arrow" aria-hidden="true">→</span></a>`).join("")}</div></section>`;
+const clueHubIndexLd = { "@context": "https://schema.org", "@type": "CollectionPage", name: "Crossword clues and answers by length and meaning", description: "Recurring crossword clues and possible answers organized by letter count and exact meaning.", url: canonicalUrl("/crossword-clues/") };
+await writePage("/crossword-clues/", pageTemplate({ title: "Crossword clues and answers by length", description: "Find possible crossword answers by clue, letter count, crossings, and meaning, with reviewed guidance for ambiguous fills.", route: "/crossword-clues/", body: clueHubIndexBody, bodyClass: "clue-dictionary-page", jsonLd: [clueHubIndexLd] }), false, clueHubLatestReview);
 
 for (const hub of clueHubs) {
   const route = `/crossword-clues/${hub.slug}/`;
@@ -420,10 +420,10 @@ const ambiguityGuideBody = `<article class="shell prose-page">${breadcrumbs([{ l
 const ambiguityGuideLd = { "@context": "https://schema.org", "@type": "Article", headline: "How answer length and crossings solve ambiguous crossword clues", description: "A practical method for using entry length, crossings, grammar, and clue signals to choose the right crossword answer.", datePublished: "2026-08-20", dateModified: "2026-08-20", mainEntityOfPage: canonicalUrl(ambiguityGuideRoute), author: organizationEntity, publisher: organizationEntity };
 await writePage(ambiguityGuideRoute, pageTemplate({ title: "Solve ambiguous crossword clues with length and crossings", description: "Learn how answer length, crossing letters, grammar, and clue signals narrow ambiguous crossword answers.", route: ambiguityGuideRoute, body: ambiguityGuideBody, bodyClass: "prose-page-body guide-page", jsonLd: [ambiguityGuideLd] }), false, "2026-08-20");
 
-const answerIndexBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Crosswordese" }])}<h1>Crosswordese, explained.</h1><p>Words that show up in grids more often than conversation—plus their meaning, pronunciation, and recurring clue patterns.</p></section>
-<section class="shell directory-layout"><aside><p>Why these words?</p><span>Short answers with vowel-rich or flexible letter patterns help constructors connect a grid. Good clues keep them fair.</span></aside><div class="word-directory">${answers.map((answer) => `<a href="/crosswordese/${answer.slug}/"><span class="word-name">${answer.answer}</span><span>${escapeHtml(answer.meaning)}</span><span class="row-arrow" aria-hidden="true">→</span></a>`).join("")}</div></section>`;
-const answerIndexLd = { "@context": "https://schema.org", "@type": "DefinedTermSet", name: "Crossword answer meanings and clue patterns", description: "Independently written meanings, definitions, pronunciations, and common crossword clue patterns for recurring answers.", url: canonicalUrl("/crosswordese/"), hasDefinedTerm: answers.map((answer) => ({ "@type": "DefinedTerm", name: answer.answer, url: canonicalUrl(`/crosswordese/${answer.slug}/`) })) };
-await writePage("/crosswordese/", pageTemplate({ title: "Crosswordese meanings and definitions", description: "Learn the meaning, pronunciation, common clue patterns, and grid logic behind frequently seen crossword answers.", route: "/crosswordese/", body: answerIndexBody, jsonLd: [answerIndexLd] }), false, config.contentUpdatedAt);
+const answerIndexBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Crossword dictionary" }])}<h1>Crossword dictionary: answer meanings and clue patterns</h1><p>Look up crosswordese and other recurring answers that show up in grids more often than conversation. Each entry explains its meaning, pronunciation, common clues, and grid use.</p></section>
+<section class="shell directory-layout"><aside><p>Why these words?</p><span>Short answers with vowel-rich or flexible letter patterns help constructors connect a grid. Good clues keep them fair.</span><a class="text-link" href="/crossword-clues/">Compare ambiguous clues and answers →</a></aside><div class="word-directory">${answers.map((answer) => `<a href="/crosswordese/${answer.slug}/"><span class="word-name">${answer.answer}</span><span>${escapeHtml(answer.meaning)}</span><span class="row-arrow" aria-hidden="true">→</span></a>`).join("")}</div></section>`;
+const answerIndexLd = { "@context": "https://schema.org", "@type": "DefinedTermSet", name: "Crossword dictionary of answer meanings and clue patterns", description: "Independently written meanings, definitions, pronunciations, and common crossword clue patterns for recurring answers and crosswordese.", url: canonicalUrl("/crosswordese/"), hasDefinedTerm: answers.map((answer) => ({ "@type": "DefinedTerm", name: answer.answer, url: canonicalUrl(`/crosswordese/${answer.slug}/`) })) };
+await writePage("/crosswordese/", pageTemplate({ title: "Crossword dictionary: meanings & clue patterns", description: "Use this crossword dictionary to learn answer meanings, pronunciations, common clue patterns, and why recurring crosswordese fits the grid.", route: "/crosswordese/", body: answerIndexBody, jsonLd: [answerIndexLd] }), false, config.contentUpdatedAt);
 
 for (const answer of answers) {
   const relatedClues = clues.filter((clue) => clue.answer === answer.answer);
@@ -507,10 +507,10 @@ const answersTodayGroups = activePublicationHubs().map((hub) => {
 });
 const answersTodayLatestReview = answersTodayGroups.flatMap((group) => group.items.map((clue) => clue.reviewedAt)).sort().reverse()[0] ?? config.contentUpdatedAt;
 const answersTodaySections = answersTodayGroups.map(({ hub, sourceDate, items }) => `<section class="shell latest-section"><div class="section-heading"><div><p class="content-kind">${escapeHtml(hub.name)}</p><h2>${escapeHtml(formatDate(sourceDate))}</h2><p>${items.length} selected clues with hints before spoilers</p></div><a href="${hub.route}">Browse this source</a></div>${clueRows(items)}</section>`).join("");
-const answersTodayBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Crossword answers today" }])}<p class="content-kind">Updated from publicly verifiable puzzle dates</p><h1>Crossword answers today — selected clues</h1><p>Open a clue for a spoiler-light hint, answer, definition, and independently written explanation. Dates are shown per publication because daily release schedules differ.</p></section><section class="shell guidance"><h2>Current help without a full answer dump.</h2><div class="guidance-columns"><p>This page brings the latest reviewed NYT, NYT Mini, LA Times, and USA TODAY coverage into one return destination.</p><p>We publish selected clue explanations and clearly label the original puzzle date instead of reproducing complete grids or answer keys.</p></div></section>${answersTodaySections}`;
+const answersTodayBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Crossword puzzle answers today" }])}<p class="content-kind">Updated from publicly verifiable puzzle dates</p><h1>Crossword puzzle answers today — selected clues</h1><p>Browse selected current puzzle answers by publication. Open a clue for a spoiler-light hint, answer, definition, and independently written explanation. Dates are shown per publication because daily release schedules differ.</p></section><section class="shell guidance"><h2>Current help without a full answer dump.</h2><div class="guidance-columns"><p>This page brings the latest reviewed NYT, NYT Mini, LA Times, and USA TODAY coverage into one return destination.</p><p>We publish selected clue explanations and clearly label the original puzzle date instead of reproducing complete grids or answer keys.</p></div></section>${answersTodaySections}`;
 const answersTodayItems = answersTodayGroups.flatMap((group) => group.items);
-const answersTodayLd = { "@context": "https://schema.org", "@type": "CollectionPage", name: "Crossword answers today — selected clues", description: "Selected current crossword clues with hints, answers, definitions, and explanations across major publications.", url: canonicalUrl(answersTodayRoute), dateModified: answersTodayLatestReview, mainEntity: { "@type": "ItemList", itemListElement: answersTodayItems.map((clue, index) => ({ "@type": "ListItem", position: index + 1, name: clue.clue, url: canonicalUrl(`/explainers/${clue.slug}/`) })) } };
-await writePage(answersTodayRoute, pageTemplate({ title: "Crossword answers today: selected hints", description: "Browse selected current crossword clues with spoiler-light hints, answers, definitions, and explanations across major publications.", route: answersTodayRoute, body: answersTodayBody, bodyClass: "answers-today-page publication-hub-page", jsonLd: [answersTodayLd] }), false, answersTodayLatestReview);
+const answersTodayLd = { "@context": "https://schema.org", "@type": "CollectionPage", name: "Crossword puzzle answers today — selected clues", description: "Selected current crossword puzzle answers with hints, definitions, and explanations across major publications.", url: canonicalUrl(answersTodayRoute), dateModified: answersTodayLatestReview, mainEntity: { "@type": "ItemList", itemListElement: answersTodayItems.map((clue, index) => ({ "@type": "ListItem", position: index + 1, name: clue.clue, url: canonicalUrl(`/explainers/${clue.slug}/`) })) } };
+await writePage(answersTodayRoute, pageTemplate({ title: "Crossword puzzle answers today", description: "Browse selected current crossword puzzle answers with spoiler-light hints, definitions, and explanations across major publications.", route: answersTodayRoute, body: answersTodayBody, bodyClass: "answers-today-page publication-hub-page", jsonLd: [answersTodayLd] }), false, answersTodayLatestReview);
 
 for (const clue of clues) {
   const route = `/explainers/${clue.slug}/`;

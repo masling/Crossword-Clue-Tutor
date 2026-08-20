@@ -9,6 +9,7 @@
     "content:publish": "node scripts/publish-clue-batch.mjs",
     "deploy": "npm run build && wrangler pages deploy dist --project-name crossword-clue-tutor --branch main",
     "dev": "node scripts/serve.mjs",
+    "email:check-dns": "node scripts/check-mail-dns.mjs",
     "indexnow:submit": "node scripts/submit-indexnow.mjs",
     "outreach:check": "node scripts/validate-outreach.mjs",
     "outreach:send": "node scripts/send-outreach.mjs",

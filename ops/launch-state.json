@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T22:03:11+08:00",
+  "updatedAt": "2026-08-20T22:32:54+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -137,6 +137,37 @@
       "reviewedCandidates": 14,
       "queryVariants": 5
     },
+    "toolKeywordOptimization": {
+      "verifiedAt": "2026-08-20T22:32:54+08:00",
+      "bingPeriod": "2026-05-20 to 2026-08-17 worldwide and United States",
+      "optimizedRoutes": [
+        {
+          "keyword": "crossword puzzle answers",
+          "worldwideImpressions": 1200,
+          "unitedStatesImpressions": 1000,
+          "route": "/crossword-answers-today/"
+        },
+        {
+          "keyword": "crossword dictionary",
+          "worldwideImpressions": 2300,
+          "unitedStatesImpressions": 1600,
+          "route": "/crosswordese/"
+        },
+        {
+          "keyword": "crossword clues",
+          "worldwideImpressions": 5000,
+          "unitedStatesImpressions": 3600,
+          "route": "/crossword-clues/"
+        }
+      ],
+      "alreadyCovered": {
+        "keyword": "crossword solver",
+        "worldwideImpressions": 106300,
+        "unitedStatesImpressions": 20100,
+        "route": "/solver/"
+      },
+      "rejectedExpansion": "No measurable data for tested 7–10 letter answer phrases or crossword answers by length; no new pages created."
+    },
     "rejectedDemandSignals": [
       {
         "keyword": "x video game franchise crossword clue",
@@ -218,7 +249,7 @@
     "lastDeployStatus": "Success"
   },
   "outreach": {
-    "verifiedAt": "2026-08-20T22:03:11+08:00",
+    "verifiedAt": "2026-08-20T22:32:54+08:00",
     "readyForApproval": 4,
     "sent": 0,
     "responses": 0,
@@ -236,24 +267,28 @@
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 36 meaning entries",
       "transmissionStatus": "No email or form submitted"
     },
-    "approvalNeeded": "Enter the Zoho SMTP password or app password locally, then explicitly approve the first end-to-end test message; every external outreach form or email still requires action-time confirmation.",
+    "approvalNeeded": "Wait for the Gmail recipient-side DKIM negative cache to expire and repeat the external authentication test. After DKIM also passes, explicitly approve each outreach email or form; code sending still requires a locally supplied Zoho password or app password.",
     "senderSetup": {
       "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
       "inboundDestination": "masling@gmail.com",
       "destinationAlreadyVerified": true,
-      "existingDomainMailRecords": 7,
+      "existingDomainMailRecords": 9,
       "existingDomainRoutingRules": 1,
       "preferredPlan": "Cloudflare Email Routing inbound plus Zoho Mail Free SMTP outbound",
       "preferredPlanLimitations": "Selected data centers only; webmail access; no IMAP, POP, automatic forwarding, or ActiveSync",
       "temporaryManualSender": "Gmail Send mail as through Zoho SMTP until third-party SMTP support ends in January 2027",
+      "gmailSendAsStatus": "Confirmed for hello@crosswordcluetutor.com",
+      "inboundQa": "Verified by the Gmail alias confirmation message delivered through Cloudflare Email Routing",
+      "externalDeliveryQa": "Delivered to the operator's independent Gmail inbox through Zoho with TLS 1.3; SPF and DMARC pass; Google recipient-side DKIM cache still reports the earlier missing-key state",
       "planned2027Cutover": "Zoho Webmail for manual sending; Zoho SMTP code sender remains unchanged",
       "codeSender": "scripts/send-outreach.mjs; dry-run by default; one confirmed recipient per send",
+      "dnsPreflight": "scripts/check-mail-dns.mjs; real code sends stop when Cloudflare MX, combined SPF, Zoho DKIM, or DMARC is missing",
       "dnsAuthentication": "Cloudflare and Zoho combined SPF; separate Cloudflare and Zoho DKIM; DMARC monitoring",
       "catchAll": "Disabled",
       "paidFallback": "Cloudflare Email Sending on Workers Paid, only if Zoho SMTP is retired",
       "workersPaidRequiredForPreferredPlan": false,
       "rejectedRelay": "Resend Free because its AUP prohibits cold outreach",
-      "status": "Inbound route and DNS authentication verified; awaiting local Zoho SMTP credential entry and end-to-end test",
+      "status": "Inbound and Gmail Send As confirmed; external Zoho delivery works and DMARC passes, but outreach remains paused until a fresh Gmail message reports DKIM pass",
       "runbook": "ops/EMAIL_SETUP.md"
     }
   },

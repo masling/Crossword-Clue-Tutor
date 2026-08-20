@@ -148,3 +148,37 @@ regional review. In American usage pimento usually means the mild red pimiento p
 in Jamaican and some British usage it can mean allspice, and dictionaries also record a
 vivid red color sense. The hub groups 14 reviewed candidates and five context variants,
 while the linked ALLSPICE page captures the strongest eight-letter crossword answer.
+
+## 22:20 SGT tool-keyword coverage check
+
+Bing Keyword Research for 20 May–17 August 2026 reported `crossword solver` at
+106.3K worldwide impressions and 20.1K in the United States. The existing Solver already
+matches that intent with clue text, answer length, crossing patterns, and progressive
+hints, so no duplicate landing page was created.
+
+`crossword puzzle answers` showed 1.2K worldwide impressions and 1K in the United States.
+The existing cross-publication current-answers hub was therefore refined to use that
+query family in its title, heading, description, structured data, and a homepage link.
+The page still exposes selected explanations rather than a complete answer dump.
+
+The tested expansion phrases `7 letter crossword answers`, `8 letter crossword answers`,
+`9 letter crossword answers`, `10 letter crossword answers`, and `crossword answers by
+length` returned no measurable Bing Keyword Research data. Search results were also
+dominated by mature general-purpose solver directories. The current 3–6 letter pages
+remain available because they contain reviewed clue-answer pairs, but no 7–10 letter
+pages were added without a demand signal.
+
+`crossword dictionary` showed 2.3K worldwide impressions and 1.6K in the United
+States. Its related table included `dictionary crossword puzzle` at 2.5K and
+`dictionary crossword puzzle free` at 605, while the specialist term `crosswordese`
+returned no measurable data. The existing `/crosswordese/` DefinedTermSet already
+contains 36 original answer-meaning entries, so its title, heading, description, and
+navigation label were refined around the stronger `crossword dictionary` intent. No
+duplicate dictionary page was created.
+
+The same related-keyword table showed `crossword clues and answers` at 1.3K
+impressions. A direct lookup of `crossword clues` showed 5K worldwide impressions and
+3.6K in the United States. The existing `/crossword-clues/` collection already groups 328 reviewed
+possibilities across 15 ambiguous clue families, so that index was differentiated from
+the answer dictionary and aligned with the measured query: clues and answers by length
+and meaning. Again, the existing useful page was improved instead of cloning it.

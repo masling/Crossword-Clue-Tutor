@@ -108,10 +108,13 @@ for (const answer of answers) {
   if (!oneLookLines.includes(expected)) errors.push(`OneLook dictionary index is missing ${answer.answer}`);
 }
 const answerIndexPage = await readFile(path.join(dist, "crosswordese/index.html"), "utf8");
+if (!answerIndexPage.includes("Crossword dictionary: answer meanings and clue patterns")) errors.push("crossword dictionary index is missing its demand-backed search target");
 const answerIndexStructuredData = [...answerIndexPage.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
 const definedTermSet = answerIndexStructuredData.find((item) => item["@type"] === "DefinedTermSet");
 if (!definedTermSet) errors.push("crosswordese index is missing DefinedTermSet structured data");
 else if (definedTermSet.hasDefinedTerm?.length !== answers.length) errors.push(`DefinedTermSet must contain all ${answers.length} answer entities`);
+const clueHubIndexPage = await readFile(path.join(dist, "crossword-clues/index.html"), "utf8");
+if (!clueHubIndexPage.includes("Crossword clues and answers by length and meaning")) errors.push("clue hub index is missing its demand-backed search target");
 const sitemapEntries = [...sitemap.matchAll(/<url><loc>[^<]+<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?<\/url>/g)];
 for (const [index, entry] of sitemapEntries.entries()) {
   if (!entry[1]) errors.push(`sitemap URL ${index + 1} is missing lastmod`);
@@ -264,7 +267,7 @@ const ambiguityCsv = await readFile(path.join(dist, "assets/clue-hubs.csv"), "ut
 if (!ambiguityCsv.startsWith("clue,answer,length,sense,reviewed_at\n")) errors.push("ambiguity CSV is missing its stable header");
 if (ambiguityCsv.trimEnd().split("\n").length !== clueHubCandidateCount + 1) errors.push(`ambiguity CSV must contain one header plus ${clueHubCandidateCount} reviewed rows`);
 const answersTodayPage = await readFile(path.join(dist, "crossword-answers-today/index.html"), "utf8");
-if (!answersTodayPage.includes("Crossword answers today — selected clues")) errors.push("answers-today hub is missing its search target");
+if (!answersTodayPage.includes("Crossword puzzle answers today — selected clues")) errors.push("answers-today hub is missing its demand-backed search target");
 for (const publication of ["NYT Mini", "The New York Times Crossword", "LA Times Crossword", "USA TODAY Crossword"]) {
   if (!answersTodayPage.includes(publication)) errors.push(`answers-today hub is missing ${publication}`);
 }
