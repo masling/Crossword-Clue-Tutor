@@ -130,3 +130,9 @@ a foot-worn trail, constructed pedestrian passage, travel route, moving object's
 and figurative career or life direction. The hub groups 29 candidates and five contextual
 variants, while a linked ROUTE meaning page captures the preferred five-letter answer and
 keeps the clue-to-definition path intact from publication.
+
+`wealth crossword clue` showed 525 impressions and passed the same utility gate. Wealth
+can mean money, total assets and property, stored valuables, prosperity, personal means,
+or a nonfinancial abundance in constructions such as “a wealth of information.” The hub
+groups 28 candidates and five contextual variants, while the linked RICHES meaning page
+captures the strongest six-letter answer and its familiar rags-to-riches phrase family.

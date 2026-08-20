@@ -1,13 +1,13 @@
 {
-  "publishedAt": "2026-08-20T12:46:34.000Z",
-  "input": "data/clue-hubs.json#path-with-route-meaning",
+  "publishedAt": "2026-08-20T12:53:42.000Z",
+  "input": "data/clue-hubs.json#wealth-with-riches-meaning",
   "urls": [],
   "answerUrls": [
-    "/crosswordese/route/"
+    "/crosswordese/riches/"
   ],
   "clinicUrls": [],
   "hubUrls": [
-    "/crossword-clues/path/",
+    "/crossword-clues/wealth/",
     "/crossword-clues/",
     "/crosswordese/",
     "/solver/",

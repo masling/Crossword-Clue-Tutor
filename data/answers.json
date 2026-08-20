@@ -532,5 +532,22 @@
     ],
     "otherMeanings": "ROUTE can describe a road itinerary, delivery circuit, transit line, data-network path, or the act of directing traffic, messages, or objects.",
     "related": []
+  },
+  {
+    "slug": "riches",
+    "answer": "RICHES",
+    "pronunciation": "RICH-iz",
+    "partOfSpeech": "plural noun",
+    "meaning": "Things that make a person rich, especially money, valuable property, and accumulated material wealth.",
+    "crosswordUse": "RICHES is a strong six-letter answer for “Wealth,” “Fortune,” or “Valuable possessions.” Phrase clues often use “rags to ___” or contrast riches with poverty.",
+    "whyCommon": "The six-letter plural noun defines wealth directly, appears in familiar fixed phrases, and crosses cleanly while remaining distinct from ASSETS and ESTATE.",
+    "cluePatterns": [
+      "Wealth, in six letters",
+      "Things that make one wealthy",
+      "Rags-to-___",
+      "A fortune in possessions"
+    ],
+    "otherMeanings": "RICHES can refer figuratively to valuable nonfinancial things, such as cultural riches, natural riches, or a wealth of knowledge and experience.",
+    "related": []
   }
 ]

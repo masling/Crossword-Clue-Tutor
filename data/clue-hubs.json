@@ -745,5 +745,86 @@
       "career path crossword clue",
       "garden path crossword clue"
     ]
+  },
+  {
+    "slug": "wealth",
+    "clue": "Wealth",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Wealth depend on whether the clue means money, total assets and property, stored valuables, financial prosperity, personal means, or an abundant supply of something nonfinancial.",
+    "answerGuidance": "Start with MONEY or MEANS for five letters, RICHES or ASSETS for six, FORTUNE or CAPITAL for seven, and AFFLUENCE for nine. Wording such as “a wealth of” usually points to PLENTY, ABUNDANCE, or PROFUSION instead of finance.",
+    "meaningBuckets": [
+      "Money, funds, savings, or other directly available financial resources.",
+      "Assets, capital, property, estate, possessions, and total net worth.",
+      "Riches, fortune, treasure, a valuable store, hoard, cache, or stash.",
+      "Affluence, opulence, prosperity, or the condition of being financially well supplied.",
+      "An abundant supply, plenty, profusion, or wealth of information, choices, or resources."
+    ],
+    "preferredAnswers": ["RICHES", "MONEY", "ASSETS", "FORTUNE", "AFFLUENCE"],
+    "answers": [
+      { "answer": "MONEY", "sense": "Currency and financial resources considered as wealth." },
+      { "answer": "MEANS", "sense": "Financial resources or income sufficient to support a person." },
+      { "answer": "LUCRE", "sense": "Money or profit, often with a disapproving implication." },
+      { "answer": "FUNDS", "sense": "Money set aside or available for a particular person or purpose." },
+      { "answer": "WORTH", "sense": "The monetary or exchange value of a person, asset, or holding." },
+      { "answer": "STORE", "sense": "An accumulated supply of valuables, resources, or useful material." },
+      { "answer": "HOARD", "sense": "A stored accumulation of money, valuables, or prized resources." },
+      { "answer": "CACHE", "sense": "A hidden or stored collection of valuable or useful items." },
+      { "answer": "STASH", "sense": "A privately stored supply of money, valuables, or resources." },
+      { "answer": "RICHES", "sense": "Things that make someone rich; wealth in money, property, or valuables." },
+      { "answer": "ASSETS", "sense": "Property and resources with economic value owned by a person or organization." },
+      { "answer": "PLENTY", "sense": "A large or more-than-sufficient supply; abundance rather than specifically money." },
+      { "answer": "ESTATE", "sense": "The total property, money, rights, and possessions belonging to a person." },
+      { "answer": "CAPITAL", "sense": "Wealth available for investment or used to produce additional economic value." },
+      { "answer": "FORTUNE", "sense": "A very large amount of money or valuable property." },
+      { "answer": "SAVINGS", "sense": "Money accumulated and kept rather than spent." },
+      { "answer": "TREASURE", "sense": "Valuable objects, money, or riches collected and preserved." },
+      { "answer": "OPULENCE", "sense": "Great wealth displayed through luxury, abundance, and expense." },
+      { "answer": "RICHNESS", "sense": "The quality of being rich, abundant, valuable, or full in character." },
+      { "answer": "PROPERTY", "sense": "Things and land owned by a person, forming part of that person's wealth." },
+      { "answer": "NETWORTH", "sense": "The value of assets remaining after liabilities are subtracted." },
+      { "answer": "AFFLUENCE", "sense": "The state of having abundant money, property, and material comfort." },
+      { "answer": "ABUNDANCE", "sense": "A very large quantity or plentiful supply, financial or otherwise." },
+      { "answer": "RESOURCES", "sense": "Available money, property, materials, knowledge, or other useful supplies." },
+      { "answer": "PROFUSION", "sense": "A plentiful, even lavish, abundance of something." },
+      { "answer": "PROSPERITY", "sense": "The condition of being financially successful, flourishing, and well supplied." },
+      { "answer": "WHEREWITHAL", "sense": "The money or other means needed for a particular purpose." },
+      { "answer": "POSSESSIONS", "sense": "Owned property and belongings that form part of material wealth." }
+    ],
+    "queryVariants": [
+      {
+        "query": "wealth 5 letters crossword clue",
+        "guidance": "Five-letter options separate direct finances from value or an accumulated store; clue tone and crossings distinguish money, means, funds, worth, or lucre.",
+        "answers": ["MONEY", "MEANS", "LUCRE", "FUNDS", "WORTH", "STORE", "HOARD", "CACHE", "STASH"]
+      },
+      {
+        "query": "wealth 6 letters crossword clue",
+        "guidance": "Six-letter answers divide between riches themselves, owned assets, an estate, and a general plentiful supply rather than strictly financial wealth.",
+        "answers": ["RICHES", "ASSETS", "PLENTY", "ESTATE"]
+      },
+      {
+        "query": "personal wealth crossword clue",
+        "guidance": "Personal-finance wording points to owned money, assets, property, savings, estate, capital, fortune, net worth, or possessions after considering entry length.",
+        "answers": ["MONEY", "MEANS", "ASSETS", "ESTATE", "CAPITAL", "FORTUNE", "SAVINGS", "PROPERTY", "NETWORTH", "POSSESSIONS"]
+      },
+      {
+        "query": "wealth of information crossword clue",
+        "guidance": "The construction “a wealth of” is nonfinancial and means a plentiful supply, so favor quantity words rather than money or property terms.",
+        "answers": ["PLENTY", "ABUNDANCE", "RESOURCES", "PROFUSION"]
+      },
+      {
+        "query": "great wealth crossword clue",
+        "guidance": "Wording that stresses very great wealth favors riches, fortune, treasure, luxury, affluence, or prosperity rather than a neutral accounting term.",
+        "answers": ["RICHES", "FORTUNE", "TREASURE", "OPULENCE", "AFFLUENCE", "PROSPERITY"]
+      }
+    ],
+    "relatedQueries": [
+      "wealth crossword clue",
+      "wealth crossword answer",
+      "wealth 5 letters crossword clue",
+      "wealth 6 letters crossword clue",
+      "personal wealth crossword clue",
+      "wealth of information crossword clue",
+      "great wealth crossword clue"
+    ]
   }
 ]
