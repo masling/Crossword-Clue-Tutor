@@ -76,6 +76,10 @@ if (!sitemap.includes("/crossword-clues/pitch/")) errors.push("sitemap is missin
 if (!sitemap.includes("/crossword-clues/charge/")) errors.push("sitemap is missing the Charge clue hub");
 if (!sitemap.includes("/guides/answer-length-and-crossings/")) errors.push("sitemap is missing the ambiguity solving guide");
 if (!sitemap.includes("/crossword-answers-today/")) errors.push("sitemap is missing the cross-publication answers-today hub");
+if (!sitemap.includes("/crossword-answers-by-length/")) errors.push("sitemap is missing the answers-by-length index");
+for (const length of [3, 4, 5, 6]) {
+  if (!sitemap.includes(`/crossword-answers/${length}-letters/`)) errors.push(`sitemap is missing the ${length}-letter answers page`);
+}
 for (const publication of publications) {
   const hasPublishedClues = clues.some((clue) => clue.publication === publication.name);
   const routeInSitemap = sitemap.includes(publication.route);
@@ -118,6 +122,13 @@ for (const publication of ["NYT Mini", "The New York Times Crossword", "LA Times
   if (!answersTodayPage.includes(publication)) errors.push(`answers-today hub is missing ${publication}`);
 }
 if (!answersTodayPage.includes('"@type":"ItemList"')) errors.push("answers-today hub is missing ItemList structured data");
+const answerLengthIndex = await readFile(path.join(dist, "crossword-answers-by-length/index.html"), "utf8");
+if (!answerLengthIndex.includes("Crossword answers by length")) errors.push("answers-by-length index is missing its search target");
+for (const length of [3, 4, 5, 6]) {
+  const lengthPage = await readFile(path.join(dist, `crossword-answers/${length}-letters/index.html`), "utf8");
+  if (!lengthPage.includes(`${length}-letter crossword answers`)) errors.push(`${length}-letter page is missing its search target`);
+  if (!lengthPage.includes('"@type":"ItemList"')) errors.push(`${length}-letter page is missing ItemList structured data`);
+}
 const privacyPage = await readFile(path.join(dist, "privacy/index.html"), "utf8");
 if (!privacyPage.includes("Cloudflare Web Analytics")) errors.push("privacy page is missing the production analytics disclosure");
 if (!privacyPage.includes("app.pageview.app")) errors.push("privacy page is missing the Pageview analytics disclosure");

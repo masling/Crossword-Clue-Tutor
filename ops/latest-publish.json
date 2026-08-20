@@ -22,6 +22,11 @@
     "/crossword-clues/",
     "/crossword-clues/pitch/",
     "/crossword-clues/charge/",
-    "/crossword-answers-today/"
+    "/crossword-answers-today/",
+    "/crossword-answers-by-length/",
+    "/crossword-answers/3-letters/",
+    "/crossword-answers/4-letters/",
+    "/crossword-answers/5-letters/",
+    "/crossword-answers/6-letters/"
   ]
 }

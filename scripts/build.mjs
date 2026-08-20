@@ -91,6 +91,7 @@ function footer() {
         <a href="/crossword-answers-today/">Answers today</a>
         <a href="/daily-clue-clinic/">Daily clue clinic</a>
         <a href="/crossword-clues/">Clue dictionary</a>
+        <a href="/crossword-answers-by-length/">Answers by length</a>
         <a href="/guides/answer-length-and-crossings/">Solving guide</a>
         <a href="/feed.xml">Fresh clue feed</a>
         ${publicationLinks}
@@ -273,7 +274,7 @@ const homeBody = `<section class="hero shell">
 <section class="shell latest-section">
   <div class="section-heading"><div><h2>Recently reviewed clues</h2><p>Every indexed explanation has an editorial review date.</p></div><a href="/daily-clue-clinic/">Browse the clinic archive</a></div>
   ${clueRows(latestClues.slice(0, 6))}
-  <div class="daily-hub-links"><a href="/crossword-answers-today/">Crossword answers today →</a>${activePublicationHubs().map((hub) => `<a href="${hub.route}">${escapeHtml(hub.linkLabel)} →</a>`).join("")}</div>
+  <div class="daily-hub-links"><a href="/crossword-answers-today/">Crossword answers today →</a><a href="/crossword-answers-by-length/">Answers by length →</a>${activePublicationHubs().map((hub) => `<a href="${hub.route}">${escapeHtml(hub.linkLabel)} →</a>`).join("")}</div>
 </section>
 <section class="answer-strip">
   <div class="shell answer-strip-inner"><div><h2>Meet the words crosswords keep bringing back.</h2><p>Meaning, pronunciation, common clue patterns, and why the fill works so well in a grid.</p></div><div class="answer-links">${answers.slice(0, 5).map((answer) => `<a href="/crosswordese/${answer.slug}/">${answer.answer}</a>`).join("")}</div><a class="button button-secondary" href="/crosswordese/">Explore crosswordese</a></div>
@@ -295,6 +296,21 @@ function toolPage(mode) {
 for (const mode of ["solve", "explain"]) {
   const item = toolPage(mode);
   await writePage(item.route, item.html);
+}
+
+const answerLengths = [3, 4, 5, 6];
+const answersByLengthRoute = "/crossword-answers-by-length/";
+const answerLengthGroups = answerLengths.map((length) => ({ length, items: clues.filter((clue) => clue.answer.length === length).sort((a, b) => b.popularity - a.popularity) })).filter((group) => group.items.length >= 5);
+const answerLengthIndexBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Crossword answers by length" }])}<h1>Crossword answers by length</h1><p>Start with the number of squares, then use the clue and crossing letters to narrow reviewed answer candidates.</p></section><section class="shell type-directory">${answerLengthGroups.map(({ length, items }) => `<a href="/crossword-answers/${length}-letters/"><span>${length}-letter answers</span><p>${items.length} reviewed clue-answer pairs with hints, definitions, and explanations.</p><b>Browse ${length}-letter clues <i aria-hidden="true">→</i></b></a>`).join("")}</section>`;
+const answerLengthIndexLd = { "@context": "https://schema.org", "@type": "CollectionPage", name: "Crossword answers by length", description: "Reviewed crossword clue-answer pairs organized by answer length.", url: canonicalUrl(answersByLengthRoute), mainEntity: { "@type": "ItemList", itemListElement: answerLengthGroups.map((group, index) => ({ "@type": "ListItem", position: index + 1, name: `${group.length}-letter crossword answers`, url: canonicalUrl(`/crossword-answers/${group.length}-letters/`) })) } };
+await writePage(answersByLengthRoute, pageTemplate({ title: "Crossword answers by length", description: "Browse reviewed crossword answers by letter count, then use clue wording and crossings to choose the right fill.", route: answersByLengthRoute, body: answerLengthIndexBody, bodyClass: "answer-length-index-page", jsonLd: [answerLengthIndexLd] }), false, config.contentUpdatedAt);
+
+for (const { length, items } of answerLengthGroups) {
+  const route = `/crossword-answers/${length}-letters/`;
+  const lastmod = items.map((clue) => clue.reviewedAt).sort().reverse()[0] ?? config.contentUpdatedAt;
+  const body = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Answers by length", href: answersByLengthRoute }, { label: `${length}-letter answers` }])}<p class="content-kind">${items.length} reviewed clue-answer pairs</p><h1>${length}-letter crossword answers</h1><p>Use the clue wording and known crossing letters to choose among current and evergreen ${length}-letter fills. Open any clue for hints before the answer.</p></section><section class="shell guidance"><h2>Length removes noise. Crossings confirm the fill.</h2><div class="guidance-columns"><p>These are reviewed examples, not every word with ${length} letters. Results preserve the clue, publication context when available, and an explanation of why the answer fits.</p><p>If several clues look plausible, enter the letters you already trust in the pattern-aware solver before revealing an answer.</p></div><p><a class="button button-primary" href="/solver/">Open the clue solver</a></p></section><section class="shell latest-section"><div class="section-heading"><div><h2>Browse ${length}-letter clue matches</h2><p>Sorted by current editorial priority.</p></div><a href="${answersByLengthRoute}">All lengths</a></div>${clueRows(items, { showDate: true })}</section>`;
+  const collectionLd = { "@context": "https://schema.org", "@type": "CollectionPage", name: `${length}-letter crossword answers`, description: `Reviewed ${length}-letter crossword clue-answer pairs with hints and explanations.`, url: canonicalUrl(route), dateModified: lastmod, mainEntity: { "@type": "ItemList", itemListElement: items.map((clue, index) => ({ "@type": "ListItem", position: index + 1, name: clue.clue, url: canonicalUrl(`/explainers/${clue.slug}/`) })) } };
+  await writePage(route, pageTemplate({ title: `${length}-letter crossword answers`, description: `Browse reviewed ${length}-letter crossword answers with clue context, spoiler-light hints, definitions, and explanations.`, route, body, bodyClass: "answer-length-page", jsonLd: [collectionLd] }), false, lastmod);
 }
 
 const clueHubLatestReview = clueHubs.map((hub) => hub.reviewedAt).sort().reverse()[0] ?? config.contentUpdatedAt;
