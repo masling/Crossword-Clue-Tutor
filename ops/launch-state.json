@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T16:53:00+08:00",
+  "updatedAt": "2026-08-20T16:55:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -85,7 +85,9 @@
     "bingSiteVerified": true,
     "bingSitemapStatus": "Success",
     "bingSitemapDiscoveredPages": 92,
+    "bingSitemapLastCrawl": "2026-08-19",
     "bingIndexedPages": 0,
+    "bingSearchPerformanceStatus": "No pages found",
     "bingSiteScanStatus": "Completed",
     "bingSiteScanPageLimit": 100,
     "bingSiteScanPages": 94,
