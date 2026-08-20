@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T22:50:04+08:00",
+  "updatedAt": "2026-08-20T22:53:24+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -119,7 +119,8 @@
       "organizationContactPoint": "Verified on homepage",
       "aboutPage": "/about/",
       "contactPage": "/feedback/",
-      "feedbackIndexing": "Noindex utility page"
+      "feedbackIndexing": "Noindex utility page",
+      "productionStatus": "Verified; Cloudflare email-address obfuscation active"
     },
     "homepageDemandNavigation": {
       "featuredClueHubs": 9,
@@ -258,7 +259,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "372c48d",
+    "lastVerifiedCommit": "3c8761a",
     "lastDeployStatus": "Success"
   },
   "outreach": {
