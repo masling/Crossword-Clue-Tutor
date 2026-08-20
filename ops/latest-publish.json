@@ -1,19 +1,16 @@
 {
-  "publishedAt": "2026-08-20T10:22:33.000Z",
-  "input": "data/answers.json#2026-08-20-evergreen-entities",
-  "urls": [
-    "/explainers/una-corte-de-rosas-y-espinas-sarah-j-maas-usa-today/",
-    "/explainers/el-perro-painter-francisco-usa-today/",
-    "/explainers/princess-diaries-2-protagonist-usa-today/"
-  ],
-  "answerUrls": [
-    "/crosswordese/mia/",
-    "/crosswordese/una/",
-    "/crosswordese/goya/"
-  ],
+  "publishedAt": "2026-08-20T10:43:13.000Z",
+  "input": "data/clue-hubs.json#2026-08-20-sharp-light",
+  "urls": [],
+  "answerUrls": [],
   "clinicUrls": [],
   "hubUrls": [
-    "/",
-    "/crosswordese/"
+    "/crossword-clues/",
+    "/crossword-clues/sharp/",
+    "/crossword-clues/light/",
+    "/guides/answer-length-and-crossings/",
+    "/research/ambiguous-crossword-clues/",
+    "/assets/clue-hubs.json",
+    "/assets/clue-hubs.csv"
   ]
 }

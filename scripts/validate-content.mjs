@@ -42,6 +42,10 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
       }
       if (!/^\d{4}-\d{2}-\d{2}$/.test(hub.reviewedAt ?? "")) errors.push(`${label} reviewedAt must be YYYY-MM-DD`);
       if (!Array.isArray(hub.answers) || hub.answers.length < 3) errors.push(`${label} needs at least three possible answers`);
+      if (!Array.isArray(hub.meaningBuckets) || hub.meaningBuckets.length < 3) errors.push(`${label} needs at least three meaning buckets`);
+      for (const meaning of hub.meaningBuckets ?? []) {
+        if (meaning.length < 25) errors.push(`${label} has a meaning bucket that is too short`);
+      }
       const possibleAnswers = new Set();
       for (const option of hub.answers ?? []) {
         if (!/^[A-Z]+$/.test(option.answer ?? "")) errors.push(`${label} possible answers must contain uppercase A-Z only`);

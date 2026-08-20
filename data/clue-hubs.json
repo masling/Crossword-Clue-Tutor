@@ -5,6 +5,13 @@
     "reviewedAt": "2026-08-20",
     "summary": "Possible answers for Diffuse depend on the entry length and whether the clue means spread, seep, emit, permeate, or wordy.",
     "answerGuidance": "Start with SPREAD for a six-letter general verb. Use the crossings to distinguish physical spreading from gradual absorption, emission, or the adjective sense meaning wordy.",
+    "meaningBuckets": [
+      "Spread, scatter, or distribute something over an area.",
+      "Pass gradually through a material, opening, or membrane.",
+      "Emit light, heat, liquid, or another output.",
+      "Permeate a place or fill something with a quality.",
+      "Wordy or not concise, in the adjective sense."
+    ],
     "answers": [
       { "answer": "SEEP", "sense": "Pass or spread gradually through small openings." },
       { "answer": "SHED", "sense": "Emit or diffuse light, heat, or another output." },
@@ -34,6 +41,13 @@
     "reviewedAt": "2026-08-20",
     "summary": "Possible answers for Pitch depend on whether the clue means throw, slope, sound level, sales talk, playing field, sticky material, or a baseball delivery.",
     "answerGuidance": "Start with TAR for three letters when pitch means a dark sticky material, TONE for four letters when it means sound level, and SLOPE or SPIEL for five letters depending on whether the clue means an incline or a sales presentation.",
+    "meaningBuckets": [
+      "Throw or send something through the air.",
+      "A slope, tilt, incline, or slanted position.",
+      "The level, key, or tonal quality of a sound.",
+      "A persuasive proposal, spiel, or sales presentation.",
+      "A sticky material, playing field, or specific baseball delivery."
+    ],
     "answers": [
       { "answer": "TAR", "sense": "Dark sticky material historically overlapping with pitch." },
       { "answer": "LOB", "sense": "Throw something in a high arc." },
@@ -68,6 +82,13 @@
     "reviewedAt": "2026-08-20",
     "summary": "Possible answers for Charge depend on whether the clue means a fee, accusation, attack, burden, price, dependent, electrical process, or instruction.",
     "answerGuidance": "Start with FEE for three letters when charge means a cost, ONUS or RATE for four letters when it means a burden or price, and ACCUSE or IONIZE for six letters when it means allege wrongdoing or create an electrical charge.",
+    "meaningBuckets": [
+      "A fee, price, fare, toll, or amount placed on an account.",
+      "An accusation or formal allegation of wrongdoing.",
+      "A rush, lunge, or forceful attack toward a target.",
+      "A duty, burden, instruction, dependent, or person in one's care.",
+      "An electrical state or the process of creating ions."
+    ],
     "answers": [
       { "answer": "FEE", "sense": "A sum charged for a service or privilege." },
       { "answer": "RAP", "sense": "An accusation or criminal charge, informally." },
@@ -106,6 +127,13 @@
     "reviewedAt": "2026-08-20",
     "summary": "Possible answers for Issue depend on whether the clue means a topic, problem, publication edition, offspring, outcome, or the act of sending or flowing out.",
     "answerGuidance": "Start with EMIT for four letters when issue means send forth, TOPIC for five letters when it means a discussion subject, MATTER for six letters when it means a concern, and EDITION or PROGENY for seven letters when it means a publication installment or offspring.",
+    "meaningBuckets": [
+      "A topic, question, matter, or problem under discussion.",
+      "A particular edition or installment of a publication.",
+      "Children, descendants, seed, or offspring.",
+      "An outcome, result, or consequence of an action.",
+      "To emit, release, dispense, emerge, or flow from a source."
+    ],
     "answers": [
       { "answer": "EMIT", "sense": "Issue, send out, or give off something such as light or sound." },
       { "answer": "SEED", "sense": "Offspring or descendants viewed collectively as issue." },
@@ -131,6 +159,102 @@
       "issue 5 letters crossword clue",
       "magazine issue crossword clue",
       "issue offspring crossword clue"
+    ]
+  },
+  {
+    "slug": "sharp",
+    "clue": "Sharp",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Sharp depend on whether the clue means keen-edged, mentally quick, sudden, intense, biting, stylish, precisely defined, or piercing in sound.",
+    "answerGuidance": "Start with KEEN for four letters in the general edge or intellect sense, ACUTE for five letters when the clue suggests an angle or pain, ASTUTE for six letters when it means mentally perceptive, and TART or ACID for a biting taste or tone.",
+    "meaningBuckets": [
+      "Having a keen edge, point, angle, or projection.",
+      "Mentally quick, perceptive, alert, or astute.",
+      "Sudden, severe, exact, or clearly defined.",
+      "Biting, tart, acidic, pungent, or cutting in tone.",
+      "Stylish in appearance or piercing in sound."
+    ],
+    "answers": [
+      { "answer": "WRY", "sense": "Dryly or sharply humorous in tone." },
+      { "answer": "KEEN", "sense": "Sharp-edged, perceptive, intense, or highly sensitive." },
+      { "answer": "ACID", "sense": "Sharp or biting in taste, language, or tone." },
+      { "answer": "TART", "sense": "Sharp-tasting, sour, or biting in manner." },
+      { "answer": "CHIC", "sense": "Stylish or fashionable; looking sharp." },
+      { "answer": "ACUTE", "sense": "Sharp in angle, pain, perception, or intensity." },
+      { "answer": "SMART", "sense": "Mentally sharp, stylish, or causing a stinging pain." },
+      { "answer": "ALERT", "sense": "Mentally sharp, attentive, and quick to notice." },
+      { "answer": "SPIKY", "sense": "Covered with or shaped into sharp points." },
+      { "answer": "CRISP", "sense": "Sharp, clear, cleanly defined, or brisk." },
+      { "answer": "EXACT", "sense": "Sharp in the sense of precise or exactly on time." },
+      { "answer": "ASTUTE", "sense": "Mentally sharp and perceptive in judgment." },
+      { "answer": "POINTY", "sense": "Having a narrow, sharp, or projecting end." },
+      { "answer": "BITING", "sense": "Sharp and severe in cold, taste, wit, or criticism." },
+      { "answer": "ABRUPT", "sense": "Sharp or sudden in change, manner, or movement." },
+      { "answer": "SHRILL", "sense": "Sharp, high-pitched, and piercing in sound." },
+      { "answer": "CUTTING", "sense": "Sharp-edged or hurtfully critical in speech." },
+      { "answer": "PUNGENT", "sense": "Sharp and strong in smell, taste, or language." },
+      { "answer": "STYLISH", "sense": "Fashionable, polished, or looking sharp." },
+      { "answer": "PIQUANT", "sense": "Pleasantly sharp in taste or stimulating in interest." },
+      { "answer": "PIERCING", "sense": "Extremely sharp in sound, sight, pain, or perception." },
+      { "answer": "INCISIVE", "sense": "Intellectually sharp, direct, and clear in analysis." }
+    ],
+    "relatedQueries": [
+      "sharp crossword clue",
+      "sharp crossword answer",
+      "sharp 4 letters crossword clue",
+      "mentally sharp crossword clue",
+      "sharp taste crossword clue",
+      "sharp sound crossword clue"
+    ]
+  },
+  {
+    "slug": "light",
+    "clue": "Light",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Light depend on whether the clue means illumination, a lamp, pale color, low weight, gentle intensity, ignition, descent, or something bright and luminous.",
+    "answerGuidance": "Start with RAY for three letters when light is a beam, GLOW or LAMP for four letters when it is illumination or a fixture, PALE for four letters when it describes color, and LITE or AIRY when it means not heavy or less substantial.",
+    "meaningBuckets": [
+      "Illumination, a beam, glow, lamp, gleam, or shine.",
+      "Not heavy, airy, delicate, or apparently weightless.",
+      "Pale, faint, blond, or low in color intensity.",
+      "To ignite, kindle, illuminate, or become lit.",
+      "Mild, easy, low-calorie, bright, or to descend and land."
+    ],
+    "answers": [
+      { "answer": "RAY", "sense": "A narrow beam or line of light." },
+      { "answer": "LIT", "sense": "Illuminated or set alight; made to produce light." },
+      { "answer": "GLOW", "sense": "A steady soft light or the act of emitting it." },
+      { "answer": "LAMP", "sense": "A device or fixture that produces light." },
+      { "answer": "BEAM", "sense": "A ray or directed stream of light." },
+      { "answer": "PALE", "sense": "Light in color or lacking strong saturation." },
+      { "answer": "LITE", "sense": "A commercial or informal spelling meaning light or reduced." },
+      { "answer": "AIRY", "sense": "Light in weight, texture, atmosphere, or appearance." },
+      { "answer": "DAWN", "sense": "The first natural light at the start of day." },
+      { "answer": "MILD", "sense": "Light rather than strong in flavor, weather, or effect." },
+      { "answer": "EASY", "sense": "Light in the sense of not difficult or demanding." },
+      { "answer": "LAND", "sense": "To light or alight on a surface after moving through air." },
+      { "answer": "AGLOW", "sense": "Glowing with or filled by light." },
+      { "answer": "FAINT", "sense": "Light, weak, or barely visible in intensity." },
+      { "answer": "BLOND", "sense": "Light-colored, especially when describing hair." },
+      { "answer": "GLEAM", "sense": "A small, brief, or reflected light." },
+      { "answer": "SHINE", "sense": "To emit or reflect light brightly." },
+      { "answer": "TORCH", "sense": "A portable source of light, especially in British usage." },
+      { "answer": "BRIGHT", "sense": "Giving off, filled with, or reflecting much light." },
+      { "answer": "IGNITE", "sense": "To light something so that it begins to burn." },
+      { "answer": "KINDLE", "sense": "To light a fire or cause something to begin burning." },
+      { "answer": "ALIGHT", "sense": "Illuminated, on fire, or descending to a surface." },
+      { "answer": "LUCENT", "sense": "Shining, glowing, or giving off light." },
+      { "answer": "LUMINOUS", "sense": "Emitting light or appearing brightly illuminated." },
+      { "answer": "DELICATE", "sense": "Light, fine, or gentle in texture, touch, or effect." },
+      { "answer": "WEIGHTLESS", "sense": "Having no apparent weight; extremely light." }
+    ],
+    "relatedQueries": [
+      "light crossword clue",
+      "light crossword answer",
+      "light 4 letters crossword clue",
+      "flashing light crossword clue",
+      "reflected light crossword clue",
+      "before it gets light crossword clue"
     ]
   }
 ]

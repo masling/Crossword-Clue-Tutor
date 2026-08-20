@@ -89,6 +89,9 @@ if (config.indexNowKey) {
 const sitemap = await readFile(path.join(dist, "sitemap.xml"), "utf8");
 const clues = JSON.parse(await readFile(path.resolve("data/clues.json"), "utf8"));
 const publications = JSON.parse(await readFile(path.resolve("data/publications.json"), "utf8"));
+const clueHubs = JSON.parse(await readFile(path.resolve("data/clue-hubs.json"), "utf8"));
+const clueHubCandidateCount = clueHubs.reduce((total, hub) => total + hub.answers.length, 0);
+const clueHubUniqueAnswerCount = new Set(clueHubs.flatMap((hub) => hub.answers.map((answer) => answer.answer))).size;
 const sitemapEntries = [...sitemap.matchAll(/<url><loc>[^<]+<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?<\/url>/g)];
 for (const [index, entry] of sitemapEntries.entries()) {
   if (!entry[1]) errors.push(`sitemap URL ${index + 1} is missing lastmod`);
@@ -148,6 +151,8 @@ if (!sitemap.includes("/crossword-clues/diffuse/")) errors.push("sitemap is miss
 if (!sitemap.includes("/crossword-clues/pitch/")) errors.push("sitemap is missing the Pitch clue hub");
 if (!sitemap.includes("/crossword-clues/charge/")) errors.push("sitemap is missing the Charge clue hub");
 if (!sitemap.includes("/crossword-clues/issue/")) errors.push("sitemap is missing the Issue clue hub");
+if (!sitemap.includes("/crossword-clues/sharp/")) errors.push("sitemap is missing the Sharp clue hub");
+if (!sitemap.includes("/crossword-clues/light/")) errors.push("sitemap is missing the Light clue hub");
 if (!sitemap.includes("/guides/answer-length-and-crossings/")) errors.push("sitemap is missing the ambiguity solving guide");
 if (!sitemap.includes("/research/ambiguous-crossword-clues/")) errors.push("sitemap is missing the ambiguity research page");
 if (!sitemap.includes("/crossword-answers-today/")) errors.push("sitemap is missing the cross-publication answers-today hub");
@@ -198,17 +203,21 @@ if (!chargeHub.includes("FEE") || !chargeHub.includes("ONUS") || !chargeHub.incl
 const issueHub = await readFile(path.join(dist, "crossword-clues/issue/index.html"), "utf8");
 if (!issueHub.includes("Issue crossword clue")) errors.push("Issue clue hub is missing its search target");
 if (!issueHub.includes("EMIT") || !issueHub.includes("TOPIC") || !issueHub.includes("EDITION")) errors.push("Issue clue hub is missing reviewed multi-sense answers");
+const sharpHub = await readFile(path.join(dist, "crossword-clues/sharp/index.html"), "utf8");
+if (!sharpHub.includes("Sharp crossword clue") || !sharpHub.includes("KEEN") || !sharpHub.includes("ACUTE") || !sharpHub.includes("ASTUTE") || !sharpHub.includes("Sharp or biting in taste")) errors.push("Sharp clue hub is missing its search target, reviewed answers, or meanings");
+const lightHub = await readFile(path.join(dist, "crossword-clues/light/index.html"), "utf8");
+if (!lightHub.includes("Light crossword clue") || !lightHub.includes("GLOW") || !lightHub.includes("PALE") || !lightHub.includes("IGNITE") || !lightHub.includes("Illumination, a beam")) errors.push("Light clue hub is missing its search target, reviewed answers, or meanings");
 const ambiguityGuide = await readFile(path.join(dist, "guides/answer-length-and-crossings/index.html"), "utf8");
 if (!ambiguityGuide.includes("How answer length and crossings solve ambiguous crossword clues")) errors.push("ambiguity guide is missing its search target");
-if (!ambiguityGuide.includes("/crossword-clues/diffuse/") || !ambiguityGuide.includes("/crossword-clues/pitch/") || !ambiguityGuide.includes("/crossword-clues/charge/") || !ambiguityGuide.includes("/crossword-clues/issue/") || !ambiguityGuide.includes("/solver/")) errors.push("ambiguity guide is missing its useful internal links");
+if (!ambiguityGuide.includes("/crossword-clues/diffuse/") || !ambiguityGuide.includes("/crossword-clues/pitch/") || !ambiguityGuide.includes("/crossword-clues/charge/") || !ambiguityGuide.includes("/crossword-clues/issue/") || !ambiguityGuide.includes("/crossword-clues/sharp/") || !ambiguityGuide.includes("/crossword-clues/light/") || !ambiguityGuide.includes("/solver/")) errors.push("ambiguity guide is missing its useful internal links");
 const ambiguityResearchPage = await readFile(path.join(dist, "research/ambiguous-crossword-clues/index.html"), "utf8");
 if (!ambiguityResearchPage.includes("Ambiguous crossword clues by answer length and meaning")) errors.push("ambiguity research page is missing its primary target");
-if (!ambiguityResearchPage.includes("71 reviewed clue-answer possibilities") || !ambiguityResearchPage.includes("71 unique answers")) errors.push("ambiguity research page is missing its current dataset totals");
+if (!ambiguityResearchPage.includes(`${clueHubCandidateCount} reviewed clue-answer possibilities`) || !ambiguityResearchPage.includes(`${clueHubUniqueAnswerCount} unique answers`)) errors.push("ambiguity research page is missing its current dataset totals");
 if (!ambiguityResearchPage.includes('"@type":"Dataset"')) errors.push("ambiguity research page is missing Dataset structured data");
 if (!ambiguityResearchPage.includes("/assets/clue-hubs.json") || !ambiguityResearchPage.includes("/assets/clue-hubs.csv")) errors.push("ambiguity research page is missing a dataset download format");
 const ambiguityCsv = await readFile(path.join(dist, "assets/clue-hubs.csv"), "utf8");
 if (!ambiguityCsv.startsWith("clue,answer,length,sense,reviewed_at\n")) errors.push("ambiguity CSV is missing its stable header");
-if (ambiguityCsv.trimEnd().split("\n").length !== 72) errors.push("ambiguity CSV must contain one header plus 71 reviewed rows");
+if (ambiguityCsv.trimEnd().split("\n").length !== clueHubCandidateCount + 1) errors.push(`ambiguity CSV must contain one header plus ${clueHubCandidateCount} reviewed rows`);
 const answersTodayPage = await readFile(path.join(dist, "crossword-answers-today/index.html"), "utf8");
 if (!answersTodayPage.includes("Crossword answers today — selected clues")) errors.push("answers-today hub is missing its search target");
 for (const publication of ["NYT Mini", "The New York Times Crossword", "LA Times Crossword", "USA TODAY Crossword"]) {
