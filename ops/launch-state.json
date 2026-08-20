@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T17:28:01+08:00",
+  "updatedAt": "2026-08-20T17:32:08+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -35,6 +35,8 @@
     "evergreenClueHubs": 4,
     "linkableGuides": 1,
     "linkableResearchPages": 1,
+    "structuredDataPages": 131,
+    "breadcrumbStructuredDataPages": 130,
     "expandedSeoGuides": 5,
     "crossPublicationTodayHubs": 1,
     "answerLengthIndexes": 1,
@@ -110,7 +112,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "f6e3217",
+    "lastVerifiedCommit": "5652708",
     "lastDeployStatus": "Success"
   },
   "nextAction": {
