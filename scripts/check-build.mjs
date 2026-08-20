@@ -132,6 +132,12 @@ for (const answer of ["SPEC", "NATL", "ENE", "CPU", "MLS", "NASA"]) {
   if (!abbreviationGuide.includes(answer)) errors.push(`abbreviation guide is missing reviewed example ${answer}`);
 }
 if (!abbreviationGuide.includes('"@type":"Article"')) errors.push("abbreviation guide is missing Article structured data");
+const questionMarkGuide = await readFile(path.join(dist, "clue-types/question-marks/index.html"), "utf8");
+if (!questionMarkGuide.includes("What does a question mark mean in a crossword clue?")) errors.push("question-mark guide is missing its primary search target");
+for (const answer of ["OBIT", "COTS", "DOTS", "LIGHT"]) {
+  if (!questionMarkGuide.includes(answer)) errors.push(`question-mark guide is missing reviewed example ${answer}`);
+}
+if (!questionMarkGuide.includes('"@type":"Article"')) errors.push("question-mark guide is missing Article structured data");
 const answerLengthIndex = await readFile(path.join(dist, "crossword-answers-by-length/index.html"), "utf8");
 if (!answerLengthIndex.includes("Crossword answers by length")) errors.push("answers-by-length index is missing its search target");
 for (const length of [3, 4, 5, 6]) {
