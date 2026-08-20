@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T21:50:12+08:00",
+  "updatedAt": "2026-08-20T21:58:03+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -16,19 +16,19 @@
     "pageviewStatus": "Verified",
     "pageviewOperatorQaBaseline": 1,
     "latestAnalyticsSnapshot": {
-      "recordedAt": "2026-08-20T19:48:00+08:00",
+      "recordedAt": "2026-08-20T21:58:03+08:00",
       "cloudflarePeriod": "Cumulative from 2026-08-19T09:20:00+08:00",
-      "cloudflareVisits": 39,
-      "cloudflarePageviews": 45,
+      "cloudflareVisits": 40,
+      "cloudflarePageviews": 46,
       "cloudflareBotVisits": 1,
-      "cloudflareNonBotVisitsAfterQa": 35,
+      "cloudflareNonBotVisitsAfterQa": 36,
       "cloudflareExternalReferrerVisits": 0,
       "pageviewPeriod": "2026-08-20 Today",
-      "pageviewUniqueVisitors": 12,
-      "pageviewVisits": 13,
-      "pageviewPageviews": 12,
-      "pageviewVisitsAfterQa": 12,
-      "pageviewDirectVisits": 13,
+      "pageviewUniqueVisitors": 13,
+      "pageviewVisits": 14,
+      "pageviewPageviews": 13,
+      "pageviewVisitsAfterQa": 13,
+      "pageviewDirectVisits": 14,
       "unverifiedBingReferrals": 0,
       "verifiedSearchSessions": 0
     }
@@ -169,8 +169,8 @@
     "googleHomepageIndexStatus": "URL is on Google; page is indexed; HTTPS valid",
     "googleDiffuseIndexStatus": "URL unknown to Google; no crawl yet; no referring sitemap detected in URL Inspection",
     "googlePerformanceLastUpdate": "2026-08-20T11:53:00+08:00",
-    "googlePerformanceCheckedAt": "2026-08-20T19:48:00+08:00",
-    "googlePerformanceDashboardFreshness": "Last update 4 hours ago",
+    "googlePerformanceCheckedAt": "2026-08-20T21:58:03+08:00",
+    "googlePerformanceDashboardFreshness": "Last update 5.5 hours ago",
     "googleIndexingReportStatus": "Processing data; check again in a day or so",
     "googleLinksReportStatus": "Processing data; check again in a day or so",
     "manualIndexingCandidates": [
@@ -192,8 +192,8 @@
     "bingSitemapDiscoveredPages": 92,
     "bingSitemapLastCrawl": "2026-08-19",
     "bingIndexedPages": 0,
-    "bingSearchPerformanceStatus": "No pages found",
-    "bingCheckedAt": "2026-08-20T19:48:00+08:00",
+    "bingSearchPerformanceStatus": "Preparing data; Bing requests another check after 48 hours",
+    "bingCheckedAt": "2026-08-20T21:58:03+08:00",
     "bingSiteScanStatus": "Completed",
     "bingSiteScanPageLimit": 100,
     "bingSiteScanPages": 94,
@@ -228,7 +228,7 @@
       "XWord Blog",
       "American Crossword Puzzle Tournament Links"
     ],
-    "approvalNeeded": "Approve Zoho Mail Free account creation and domain DNS changes if the free plan is available in the selected data center; external forms and emails still require action-time confirmation.",
+    "approvalNeeded": "Enter the Zoho SMTP password or app password locally, then explicitly approve the first end-to-end test message; every external outreach form or email still requires action-time confirmation.",
     "senderSetup": {
       "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
       "inboundDestination": "masling@gmail.com",
