@@ -150,6 +150,12 @@ for (const answer of ["PLUTO", "TUPACSHAKUR", "ASHE", "HAWKE", "DUA", "LINUS", "
   if (!properNounGuide.includes(answer)) errors.push(`proper-noun guide is missing reviewed example ${answer}`);
 }
 if (!properNounGuide.includes('"@type":"Article"')) errors.push("proper-noun guide is missing Article structured data");
+const directDefinitionGuide = await readFile(path.join(dist, "clue-types/direct-definitions/index.html"), "utf8");
+if (!directDefinitionGuide.includes("How to solve direct definition crossword clues")) errors.push("direct-definition guide is missing its primary search target");
+for (const answer of ["LIFTS", "MESS", "ERS", "LATTE", "SPLIT", "NOELS", "DETERS", "LAB"]) {
+  if (!directDefinitionGuide.includes(answer)) errors.push(`direct-definition guide is missing reviewed example ${answer}`);
+}
+if (!directDefinitionGuide.includes('"@type":"Article"')) errors.push("direct-definition guide is missing Article structured data");
 const answerLengthIndex = await readFile(path.join(dist, "crossword-answers-by-length/index.html"), "utf8");
 if (!answerLengthIndex.includes("Crossword answers by length")) errors.push("answers-by-length index is missing its search target");
 for (const length of [3, 4, 5, 6]) {
