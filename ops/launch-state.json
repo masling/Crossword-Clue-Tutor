@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T20:08:11+08:00",
+  "updatedAt": "2026-08-20T20:20:41+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -34,9 +34,14 @@
     }
   },
   "content": {
-    "indexablePages": 146,
+    "indexablePages": 150,
     "reviewedClues": 78,
-    "answerMeaningPages": 27,
+    "answerMeaningPages": 31,
+    "latestMeaningExpansion": {
+      "answers": ["BITING", "INBORN", "SWOLLEN", "GRAND"],
+      "sourceHubs": ["Nipping", "Congenital", "Inflated", "Noble"],
+      "internalLinking": "Matching hub candidates and query variants link automatically to their meaning pages"
+    },
     "evergreenClueHubs": 10,
     "evergreenClueHubCandidates": 220,
     "solverReviewedClueCandidates": 78,
@@ -48,10 +53,10 @@
       "JSON",
       "CSV"
     ],
-    "structuredDataPages": 146,
-    "breadcrumbStructuredDataPages": 145,
+    "structuredDataPages": 150,
+    "breadcrumbStructuredDataPages": 149,
     "articleStructuredDataPages": 84,
-    "socialPreviewPages": 148,
+    "socialPreviewPages": 152,
     "faviconTheme": "Crossword grid with teal crossing entries and a gold intersection on a dark ink field",
     "faviconAssets": [
       "SVG",
@@ -85,17 +90,18 @@
       "Crossword Answers Today return hub",
       "Browser-local saved clues",
       "Hub-powered multi-answer Solver and Explain flows",
-      "Contextual feedback and correction flow"
+      "Contextual feedback and correction flow",
+      "Clue-to-answer meaning links for continued reading"
     ],
     "internalLinkAudit": {
-      "verifiedAt": "2026-08-20T20:08:11+08:00",
+      "verifiedAt": "2026-08-20T20:20:41+08:00",
       "orphanPages": 0,
       "unreachableFromHome": 0,
       "maximumClickDepth": 3,
       "depthDistribution": {
         "0": 1,
         "1": 29,
-        "2": 97,
+        "2": 101,
         "3": 19
       },
       "buildGate": "Fail when any indexable page has no inbound HTML link, is unreachable from home, or exceeds depth 3."
@@ -177,7 +183,7 @@
     "bingSiteScanRemediation": "Generated document titles are now capped at 70 characters; verify with a later rescan.",
     "searchImpressions": 0,
     "searchClicks": 0,
-    "indexNowSubmittedUrls": 416
+    "indexNowSubmittedUrls": 425
   },
   "deployment": {
     "provider": "Cloudflare Pages",
@@ -186,7 +192,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "1a179e4",
+    "lastVerifiedCommit": "9e8c27a",
     "lastDeployStatus": "Success"
   },
   "outreach": {
