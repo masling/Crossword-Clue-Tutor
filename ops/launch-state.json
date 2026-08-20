@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T20:26:57+08:00",
+  "updatedAt": "2026-08-20T20:35:23+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -52,6 +52,14 @@
     "datasetDownloadFormats": [
       "JSON",
       "CSV"
+    ],
+    "externalDiscoveryAssets": [
+      {
+        "name": "OneLook dictionary headword index",
+        "route": "/assets/onelook-dictionary.txt",
+        "entries": 32,
+        "format": "One absolute definition link per line"
+      }
     ],
     "structuredDataPages": 152,
     "breadcrumbStructuredDataPages": 151,
@@ -192,20 +200,21 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "11541e4",
+    "lastVerifiedCommit": "f289f7a",
     "lastDeployStatus": "Success"
   },
   "outreach": {
-    "verifiedAt": "2026-08-20T17:47:01+08:00",
-    "readyForApproval": 3,
+    "verifiedAt": "2026-08-20T20:35:23+08:00",
+    "readyForApproval": 4,
     "sent": 0,
     "responses": 0,
     "readyTargets": [
+      "OneLook Dictionary Search",
       "Daily Crossword Links",
       "XWord Blog",
       "American Crossword Puzzle Tournament Links"
     ],
-    "approvalNeeded": "Sender name plus authorization to send two emails; sender email is also required for the ACPT form."
+    "approvalNeeded": "Approved sender identity plus authorization to submit the OneLook and ACPT forms and send two outreach emails."
   },
   "nextAction": {
     "notBefore": "2026-08-21T12:15:00+08:00",

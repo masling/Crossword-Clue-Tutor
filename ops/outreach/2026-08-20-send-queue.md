@@ -3,7 +3,7 @@
 No message or form has been submitted. Each item requires action-time approval and a
 real sender identity. The OneLook and ACPT forms require an approved contact email.
 
-## Ready 0 — OneLook Dictionary Search
+## Ready 1 — OneLook Dictionary Search
 
 - Channel: official feedback form linked from OneLook's dictionary-inclusion guidelines.
 - Evidence: the FAQ explicitly asks owners of missing dictionary sites to tell OneLook;
@@ -15,7 +15,7 @@ real sender identity. The OneLook and ACPT forms require an approved contact ema
 - Expected value: durable discovery links from a word-search service with a dedicated
   crossword mode and more than 1,000 indexed dictionaries.
 
-## Ready 1 — Daily Crossword Links
+## Ready 2 — Daily Crossword Links
 
 - Channel: email to `crosswordlinks@gmail.com`
 - Evidence: its current About/Support pages invite tips, guest essays, and new sites.
@@ -23,7 +23,7 @@ real sender identity. The OneLook and ACPT forms require an approved contact ema
 - Draft: “Newsletter/news-note pitch” in `2026-08-20-drafts.md`
 - Expected value: the most relevant direct community audience in this queue.
 
-## Ready 2 — XWord Blog
+## Ready 3 — XWord Blog
 
 - Channel: email to `info@xwordinfo.com`
 - Evidence: its current Home page explicitly says it is interested in guest submissions;
@@ -32,7 +32,7 @@ real sender identity. The OneLook and ACPT forms require an approved contact ema
 - Draft: “XWord Blog guest-essay pitch” in `2026-08-20-drafts.md`
 - Expected value: editorial link and credibility if the proposed essay is accepted.
 
-## Ready 3 — American Crossword Puzzle Tournament Links
+## Ready 4 — American Crossword Puzzle Tournament Links
 
 - Channel: public “Add a Link” Zoho form linked from the current ACPT Links page.
 - Category: `Dictionaries and Solving aids`.
