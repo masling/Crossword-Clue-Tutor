@@ -1,7 +1,32 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#f4f8f9"/>
-  <rect x="5" y="5" width="9" height="9" rx="1" fill="#087286"/>
-  <rect x="18" y="5" width="9" height="9" rx="1" fill="#e2a12c"/>
-  <rect x="5" y="18" width="9" height="9" rx="1" fill="#e2a12c"/>
-  <rect x="18" y="18" width="9" height="9" rx="1" fill="#087286"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Crossword Clue Tutor grid">
+  <rect width="64" height="64" rx="12" fill="#12343b"/>
+
+  <g fill="#f4f8f9">
+    <rect x="8" y="8" width="8" height="8"/>
+    <rect x="18" y="8" width="8" height="8"/>
+    <rect x="38" y="8" width="8" height="8"/>
+    <rect x="48" y="8" width="8" height="8"/>
+
+    <rect x="8" y="18" width="8" height="8"/>
+    <rect x="18" y="18" width="8" height="8"/>
+    <rect x="38" y="18" width="8" height="8"/>
+
+    <rect x="18" y="38" width="8" height="8"/>
+    <rect x="38" y="38" width="8" height="8"/>
+    <rect x="48" y="38" width="8" height="8"/>
+
+    <rect x="8" y="48" width="8" height="8"/>
+    <rect x="18" y="48" width="8" height="8"/>
+    <rect x="38" y="48" width="8" height="8"/>
+    <rect x="48" y="48" width="8" height="8"/>
+  </g>
+
+  <g fill="#087286">
+    <rect x="28" y="18" width="8" height="8"/>
+    <rect x="18" y="28" width="8" height="8"/>
+    <rect x="38" y="28" width="8" height="8"/>
+    <rect x="28" y="38" width="8" height="8"/>
+  </g>
+
+  <rect x="28" y="28" width="8" height="8" fill="#e2a12c"/>
 </svg>

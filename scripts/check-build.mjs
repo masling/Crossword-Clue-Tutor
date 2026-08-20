@@ -17,6 +17,8 @@ for (const file of htmlFiles) {
   else if (title.replace(/&(?:amp|quot|#039|lt|gt);/g, "x").length > 70) errors.push(`${relative}: title exceeds 70 characters`);
   if (!/<meta name="description" content="[^"]+">/.test(html)) errors.push(`${relative}: missing meta description`);
   if (!/<link rel="canonical" href="https:\/\/[^\"]+">/.test(html)) errors.push(`${relative}: missing absolute canonical`);
+  if (!/<link rel="icon" href="\/favicon-32x32\.png" type="image\/png" sizes="32x32">/.test(html)) errors.push(`${relative}: missing 32px PNG favicon`);
+  if (!/<link rel="apple-touch-icon" href="\/apple-touch-icon\.png" sizes="180x180">/.test(html)) errors.push(`${relative}: missing Apple touch icon`);
   if (!/<meta property="og:image" content="https:\/\/crosswordcluetutor\.com\/assets\/social-card\.png">/.test(html)) errors.push(`${relative}: missing absolute Open Graph image`);
   if (!/<meta name="twitter:card" content="summary_large_image">/.test(html)) errors.push(`${relative}: missing Twitter large-image card`);
   if (!/<link rel="alternate" type="application\/atom\+xml" title="[^"]+" href="https:\/\/crosswordcluetutor\.com\/feed\.xml">/.test(html)) errors.push(`${relative}: missing Atom feed discovery link`);
@@ -56,7 +58,7 @@ for (const file of htmlFiles) {
   }
 }
 
-for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/social-card.png", "assets/logo-512.png", "assets/clues.json", "assets/answers.json", "assets/clue-hubs.json", "assets/clue-hubs.csv", "favicon.svg", "robots.txt", "sitemap.xml", "feed.xml"]) {
+for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/social-card.png", "assets/logo-512.png", "assets/clues.json", "assets/answers.json", "assets/clue-hubs.json", "assets/clue-hubs.csv", "favicon.svg", "favicon-32x32.png", "favicon-16x16.png", "apple-touch-icon.png", "robots.txt", "sitemap.xml", "feed.xml"]) {
   try {
     await access(path.join(dist, asset));
   } catch {
@@ -69,7 +71,7 @@ const solverScript = await readFile(path.join(dist, "assets/solver.mjs"), "utf8"
 if (!appScript.includes('fetch("/assets/clue-hubs.json")') || !appScript.includes("solverClues")) errors.push("solver app is not loading the multi-answer clue hub candidate pool");
 if (!solverScript.includes("clueHubCandidates")) errors.push("solver module is missing the clue-hub adapter");
 
-for (const [asset, expectedWidth, expectedHeight] of [["assets/social-card.png", 1200, 630], ["assets/logo-512.png", 512, 512]]) {
+for (const [asset, expectedWidth, expectedHeight] of [["assets/social-card.png", 1200, 630], ["assets/logo-512.png", 512, 512], ["favicon-32x32.png", 32, 32], ["favicon-16x16.png", 16, 16], ["apple-touch-icon.png", 180, 180]]) {
   try {
     const image = await readFile(path.join(dist, asset));
     const width = image.readUInt32BE(16);

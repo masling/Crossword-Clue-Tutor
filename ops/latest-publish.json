@@ -1,12 +1,10 @@
 {
-  "publishedAt": "2026-08-20T10:56:24.000Z",
-  "input": "src/solver.mjs#clue-hub-candidates",
+  "publishedAt": "2026-08-20T11:06:44.000Z",
+  "input": "src/favicon.svg#crossword-grid-theme",
   "urls": [],
   "answerUrls": [],
   "clinicUrls": [],
   "hubUrls": [
-    "/",
-    "/solver/",
-    "/explain/"
+    "/"
   ]
 }

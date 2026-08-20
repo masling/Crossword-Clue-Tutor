@@ -162,6 +162,9 @@ function pageTemplate({ title, description, route, body, bodyClass = "", noindex
   <meta name="twitter:image:alt" content="${escapeHtml(config.name)} — hints first, answers when you want them">
   <meta name="theme-color" content="oklch(0.48 0.09 210)">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+  <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180">
   ${pageviewMarkup}
   <link rel="stylesheet" href="/assets/style.css">
   ${jsonLd.map((item) => `<script type="application/ld+json">${JSON.stringify(item).replaceAll("<", "\\u003c")}</script>`).join("\n  ")}
@@ -541,6 +544,9 @@ await Promise.all([
   cp(path.join(root, "src/social-card.png"), path.join(dist, "assets/social-card.png")),
   cp(path.join(root, "src/logo-512.png"), path.join(dist, "assets/logo-512.png")),
   cp(path.join(root, "src/favicon.svg"), path.join(dist, "favicon.svg")),
+  cp(path.join(root, "src/favicon-32x32.png"), path.join(dist, "favicon-32x32.png")),
+  cp(path.join(root, "src/favicon-16x16.png"), path.join(dist, "favicon-16x16.png")),
+  cp(path.join(root, "src/apple-touch-icon.png"), path.join(dist, "apple-touch-icon.png")),
   writeFile(path.join(dist, "assets/clues.json"), JSON.stringify(clues)),
   writeFile(path.join(dist, "assets/answers.json"), JSON.stringify(answers)),
   writeFile(path.join(dist, "assets/clue-hubs.json"), JSON.stringify(clueHubs, null, 2)),
