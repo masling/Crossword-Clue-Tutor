@@ -273,6 +273,24 @@ const privacyPage = await readFile(path.join(dist, "privacy/index.html"), "utf8"
 if (!privacyPage.includes("Cloudflare Web Analytics")) errors.push("privacy page is missing the production analytics disclosure");
 if (!privacyPage.includes("app.pageview.app")) errors.push("privacy page is missing the Pageview analytics disclosure");
 if (!privacyPage.includes("Saved clues") || !privacyPage.includes("local storage")) errors.push("privacy page is missing the local saved-clue disclosure");
+if (!privacyPage.includes("When you submit feedback") || !privacyPage.includes("Email is optional") || !privacyPage.includes("raw IP address")) errors.push("privacy page is missing the feedback data disclosure");
+const feedbackPage = await readFile(path.join(dist, "feedback/index.html"), "utf8");
+if (!feedbackPage.includes("data-feedback-form") || !feedbackPage.includes("Email for follow-up") || !feedbackPage.includes("not added to a mailing list")) errors.push("feedback page is missing its form or optional-email disclosure");
+if (!feedbackPage.includes("noindex,nofollow")) errors.push("feedback utility page must remain out of the search index");
+if (sitemap.includes("/feedback/")) errors.push("sitemap must not include the feedback utility page");
+const feedbackCluePage = await readFile(path.join(dist, "explainers/scientists-workplace-nyt-mini/index.html"), "utf8");
+if (!feedbackCluePage.includes("/feedback/?mode=clue") || !diffuseHub.includes("/feedback/?mode=hub")) errors.push("reviewed clue and hub pages are missing contextual feedback links");
+const specAnswerPage = await readFile(path.join(dist, "crosswordese/spec/index.html"), "utf8");
+if (!specAnswerPage.includes("/feedback/?mode=answer")) errors.push("answer meaning pages are missing contextual feedback links");
+for (const source of ["functions/api/feedback.js", "migrations/0001_create_feedback.sql"]) {
+  try {
+    await access(path.resolve(source));
+  } catch {
+    errors.push(`missing feedback backend source: ${source}`);
+  }
+}
+const wranglerConfig = await readFile(path.resolve("wrangler.jsonc"), "utf8");
+if (!wranglerConfig.includes('"binding": "FEEDBACK_DB"') || !wranglerConfig.includes('"database_name": "crossword-clue-tutor-feedback"')) errors.push("wrangler config is missing the feedback D1 binding");
 const savedCluesPage = await readFile(path.join(dist, "saved-clues/index.html"), "utf8");
 if (!savedCluesPage.includes("data-saved-clues-root")) errors.push("saved clues page is missing its local rendering root");
 if (!savedCluesPage.includes("noindex,nofollow")) errors.push("saved clues page must remain out of the search index");

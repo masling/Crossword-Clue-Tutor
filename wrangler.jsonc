@@ -2,5 +2,13 @@
   "$schema": "./node_modules/wrangler/config-schema.json",
   "name": "crossword-clue-tutor",
   "pages_build_output_dir": "./dist",
-  "compatibility_date": "2026-08-19"
+  "compatibility_date": "2026-08-19",
+  "d1_databases": [
+    {
+      "binding": "FEEDBACK_DB",
+      "database_name": "crossword-clue-tutor-feedback",
+      "database_id": "6467e7f0-2ec7-4653-a886-e0c99be163de",
+      "migrations_dir": "migrations"
+    }
+  ]
 }

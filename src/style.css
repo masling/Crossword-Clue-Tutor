@@ -96,6 +96,13 @@ p { text-wrap: pretty; }
 .field input:hover { border-color: var(--primary); }
 .field input:focus { border-color: var(--primary-dark); box-shadow: 0 0 0 3px var(--primary-pale); }
 .field input::placeholder { color: oklch(0.48 0.018 215); opacity: 1; }
+.field select, .field textarea { width: 100%; border: 1px solid var(--line-strong); border-radius: var(--radius-small); background: var(--surface-elevated); color: var(--ink); padding: 11px 14px; outline: 0; transition: border-color 160ms var(--ease-out), box-shadow 160ms var(--ease-out); }
+.field select { min-height: 54px; }
+.field textarea { resize: vertical; line-height: 1.55; }
+.field select:hover, .field textarea:hover { border-color: var(--primary); }
+.field select:focus, .field textarea:focus { border-color: var(--primary-dark); box-shadow: 0 0 0 3px var(--primary-pale); }
+.field textarea::placeholder { color: oklch(0.48 0.018 215); opacity: 1; }
+.field label span { color: var(--muted); font-weight: 560; }
 .field small { color: var(--muted); font-size: 0.75rem; }
 .form-actions { display: flex; align-items: center; gap: 18px; margin-top: 2px; }
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; border-radius: 9px; padding: 10px 18px; font-weight: 760; text-decoration: none; cursor: pointer; transition: background-color 170ms var(--ease-out), border-color 170ms var(--ease-out), color 170ms var(--ease-out), transform 170ms var(--ease-out); }
@@ -124,6 +131,7 @@ p { text-wrap: pretty; }
 .hint-line p, .result-why p { margin: 0; max-width: 70ch; }
 .hint-secondary { padding-top: 14px; border-top: 1px dashed var(--line-strong); }
 .result-actions { display: flex; flex-wrap: wrap; gap: 10px 12px; margin-top: 20px; padding-left: 104px; }
+.result-feedback-link { align-self: center; font-size: 0.82rem; }
 .answer-cells { display: flex; flex-wrap: wrap; gap: 5px; }
 .answer-cells span { display: inline-flex; width: 38px; height: 42px; align-items: center; justify-content: center; border: 1px solid var(--ink); background: var(--bg); font-size: 1.05rem; font-weight: 820; line-height: 1; }
 .empty-state { padding: 32px 0 8px; max-width: 620px; }
@@ -136,6 +144,7 @@ p { text-wrap: pretty; }
 .explanation-status { display: flex; align-items: center; gap: 9px; color: var(--muted); font-size: 0.78rem; font-weight: 700; }
 .explanation-status p { margin: 0; }
 .explanation-result h3 { margin: 13px 0 19px; font-size: 1.4rem; }
+.explanation-feedback-link { display: inline-flex; margin-left: 20px; font-size: 0.84rem; }
 .explanation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; margin: 25px 0 20px; border-block: 1px solid var(--line-strong); }
 .explanation-grid section { padding: 22px; border-right: 1px solid var(--line); }
 .explanation-grid section:first-child { padding-left: 0; }
@@ -315,6 +324,25 @@ p { text-wrap: pretty; }
 .research-table-wrap tbody tr:last-child th, .research-table-wrap tbody tr:last-child td { border-bottom: 0; }
 .research-table-wrap tbody th a { color: var(--primary-dark); }
 .research-table-wrap td:nth-child(2), .research-table-wrap td:nth-child(3) { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.feedback-page { padding-block: 54px 110px; }
+.feedback-page > .breadcrumbs { margin-bottom: 48px; }
+.feedback-page > header { max-width: 720px; margin-bottom: 48px; }
+.feedback-page > header h1 { font-size: clamp(2.6rem, 5vw, 4.5rem); }
+.feedback-page > header p { max-width: 64ch; color: var(--muted); font-size: 1.05rem; }
+.feedback-layout { display: grid; grid-template-columns: minmax(0, 680px) minmax(240px, 1fr); gap: 64px; align-items: start; }
+.feedback-form { position: relative; display: grid; gap: 23px; }
+.feedback-pair { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 18px; }
+.feedback-context { padding: 13px 15px; border-block: 1px solid var(--line); background: var(--surface); color: var(--muted); font-size: 0.82rem; overflow-wrap: anywhere; }
+.feedback-form > .button { width: max-content; }
+.feedback-status { margin: -8px 0 0; font-size: 0.9rem; font-weight: 680; }
+.feedback-status[data-state="success"] { color: var(--primary-dark); }
+.feedback-status[data-state="error"] { color: var(--danger); }
+.feedback-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.feedback-note { padding-top: 18px; border-top: 1px solid var(--line-strong); }
+.feedback-note h2 { font-size: 1.2rem; }
+.feedback-note p, .feedback-note li { color: var(--muted); font-size: 0.9rem; }
+.feedback-note ul { padding-left: 20px; }
+.feedback-note a { display: inline-flex; min-height: 44px; align-items: center; color: var(--primary-dark); font-size: 0.86rem; font-weight: 720; text-decoration: none; }
 .footer-grid { min-height: 190px; display: flex; align-items: center; justify-content: space-between; gap: 50px; }
 .footer-brand { margin-bottom: 8px; }
 .footer-grid p { margin: 0; color: var(--muted); font-size: 0.88rem; }
@@ -331,6 +359,7 @@ p { text-wrap: pretty; }
   .today-note { max-width: 420px; }
   .section-split, .article-layout, .directory-layout { grid-template-columns: 1fr; gap: 45px; }
   .article-aside, .directory-layout aside { position: static; }
+  .feedback-layout { grid-template-columns: 1fr; gap: 40px; }
   .answer-length-group { grid-template-columns: 1fr; gap: 9px; }
   .answer-strip-inner { grid-template-columns: 1fr; }
   .answer-strip-inner > .button { width: max-content; }
@@ -359,6 +388,7 @@ p { text-wrap: pretty; }
   .result-rank { grid-column: 1 / -1; }
   .hint-line, .result-answer, .result-why { grid-template-columns: 1fr; gap: 5px; }
   .result-actions { padding-left: 0; }
+  .explanation-feedback-link { display: flex; margin: 12px 0 0; }
   .answer-cells span { width: 34px; height: 38px; }
   .section-split { gap: 30px; }
   .section-heading { align-items: flex-start; flex-direction: column; }
@@ -378,6 +408,7 @@ p { text-wrap: pretty; }
   .clue-variant-reference { grid-template-columns: 1fr; }
   .saved-clue-remove { width: max-content; margin-bottom: 8px; }
   .answer-length-group article { grid-template-columns: 1fr; gap: 3px; }
+  .feedback-pair { grid-template-columns: 1fr; }
   .clinic-list article { grid-template-columns: 38px minmax(0, 1fr); gap: 12px; }
   .clinic-archive a { grid-template-columns: 1fr 24px; padding-block: 18px; }
   .clinic-archive a span { grid-column: 1; grid-row: 2; }

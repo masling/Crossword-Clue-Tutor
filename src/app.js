@@ -24,6 +24,69 @@ const savedCluesKey = "crossword-clue-tutor:saved-clues";
 
 setupSavedClueButtons();
 setupSavedCluesPage();
+setupFeedbackForm();
+
+function feedbackHref({ mode = "general", pagePath = location.pathname, clue = "", answer = "" } = {}) {
+  const query = new URLSearchParams({ mode, page: pagePath });
+  if (clue) query.set("clue", clue);
+  if (answer) query.set("answer", answer);
+  return `/feedback/?${query}`;
+}
+
+function setupFeedbackForm() {
+  const form = document.querySelector("[data-feedback-form]");
+  if (!form) return;
+
+  const params = new URLSearchParams(location.search);
+  const context = form.querySelector("[data-feedback-context]");
+  const pagePath = params.get("page")?.startsWith("/") && !params.get("page").startsWith("//") ? params.get("page") : "/feedback/";
+  const mode = ["solver", "explain", "clue", "answer", "hub", "general"].includes(params.get("mode")) ? params.get("mode") : "general";
+  const clue = params.get("clue")?.slice(0, 300) ?? "";
+  const answer = params.get("answer")?.replace(/[^A-Za-z]/g, "").toUpperCase().slice(0, 50) ?? "";
+
+  form.elements.pagePath.value = pagePath;
+  form.elements.mode.value = mode;
+  form.elements.clue.value = clue;
+  form.elements.answer.value = answer;
+  if (pagePath !== "/feedback/" || clue || answer) {
+    const details = [pagePath, clue ? `Clue: ${clue}` : "", answer ? `Answer: ${answer}` : ""].filter(Boolean);
+    context.textContent = `Attached context · ${details.join(" · ")}`;
+    context.hidden = false;
+  }
+
+  const submit = form.querySelector("[data-feedback-submit]");
+  const status = form.querySelector("[data-feedback-status]");
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (!form.reportValidity()) return;
+
+    submit.disabled = true;
+    submit.textContent = "Sending…";
+    status.hidden = true;
+    status.dataset.state = "";
+    const payload = Object.fromEntries(new FormData(form));
+
+    try {
+      const response = await fetch("/api/feedback", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.ok) throw new Error(result.error || "Feedback could not be sent.");
+      status.textContent = result.id ? `Thank you. Your report ID is ${result.id}.` : "Thank you. Your feedback was received.";
+      status.dataset.state = "success";
+      status.hidden = false;
+      submit.textContent = "Feedback sent";
+    } catch (error) {
+      status.textContent = error.message || "Feedback could not be sent. Please try again.";
+      status.dataset.state = "error";
+      status.hidden = false;
+      submit.disabled = false;
+      submit.textContent = "Send feedback";
+    }
+  });
+}
 
 function readSavedClues() {
   try {
@@ -208,10 +271,14 @@ function setupExplainForm(root) {
 function renderSolveResults(container, matches, query) {
   container.replaceChildren();
   if (!matches.length) {
-    container.append(emptyState(
+    const state = emptyState(
       "No reviewed match yet",
       "Try fewer clue words or remove one uncertain crossing letter. This validation build does not invent an answer when its reviewed set has no fit."
-    ));
+    );
+    const report = element("a", "text-link", "Report a missing answer →");
+    report.href = feedbackHref({ mode: "solver", clue: query.clue });
+    state.append(report);
+    container.append(state);
     return;
   }
 
@@ -251,8 +318,11 @@ function solveResult(item, index) {
   const nextHint = button("Show another hint", "button button-quiet");
   const reveal = button("Reveal answer", "button button-outline");
   const explain = button("Explain the answer", "button button-quiet");
+  const report = element("a", "text-link result-feedback-link", "Report this result →");
+  report.href = feedbackHref({ mode: "solver", clue: item.clue, answer: item.answer });
+  report.hidden = true;
   explain.hidden = true;
-  actions.append(nextHint, reveal, explain);
+  actions.append(nextHint, reveal, explain, report);
 
   nextHint.addEventListener("click", () => {
     hint.hidden = false;
@@ -264,6 +334,7 @@ function solveResult(item, index) {
     nextHint.hidden = true;
     reveal.hidden = true;
     explain.hidden = false;
+    report.hidden = false;
   });
   explain.addEventListener("click", () => {
     why.hidden = false;
@@ -314,7 +385,9 @@ function renderExplanation(container, item, profile, query) {
   );
   const link = element("a", "text-link", item.hubSlug ? `Compare all ${item.clue} answers by length →` : "Open the full reviewed explanation →");
   link.href = item.hubSlug ? `/crossword-clues/${item.hubSlug}/` : `/explainers/${item.slug}/`;
-  article.append(status, title, cells, grid, link);
+  const report = element("a", "text-link explanation-feedback-link", "Report this explanation →");
+  report.href = feedbackHref({ mode: "explain", clue: query.clue, answer: query.answer });
+  article.append(status, title, cells, grid, link, report);
   container.append(article);
 }
 

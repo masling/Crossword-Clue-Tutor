@@ -3,4 +3,5 @@
 .env.*
 node_modules/
 dist/
+.wrangler/
 ops/submission-log.json
