@@ -4,6 +4,8 @@
   "tagline": "Hints first. Answers when you want them.",
   "description": "A spoiler-aware crossword clue solver with pattern matching, progressive hints, and clear explanations of why each answer fits.",
   "siteUrl": "https://crosswordcluetutor.com/",
+  "socialImage": "/assets/social-card.png",
+  "logoImage": "/assets/logo-512.png",
   "locale": "en_US",
   "contentUpdatedAt": "2026-08-20",
   "indexNowKey": "eaacfcd750633c1b486510c94254977f",

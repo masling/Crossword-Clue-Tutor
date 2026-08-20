@@ -17,6 +17,8 @@ for (const file of htmlFiles) {
   else if (title.replace(/&(?:amp|quot|#039|lt|gt);/g, "x").length > 70) errors.push(`${relative}: title exceeds 70 characters`);
   if (!/<meta name="description" content="[^"]+">/.test(html)) errors.push(`${relative}: missing meta description`);
   if (!/<link rel="canonical" href="https:\/\/[^\"]+">/.test(html)) errors.push(`${relative}: missing absolute canonical`);
+  if (!/<meta property="og:image" content="https:\/\/crosswordcluetutor\.com\/assets\/social-card\.png">/.test(html)) errors.push(`${relative}: missing absolute Open Graph image`);
+  if (!/<meta name="twitter:card" content="summary_large_image">/.test(html)) errors.push(`${relative}: missing Twitter large-image card`);
   if (!/<link rel="alternate" type="application\/atom\+xml" title="[^"]+" href="https:\/\/crosswordcluetutor\.com\/feed\.xml">/.test(html)) errors.push(`${relative}: missing Atom feed discovery link`);
   const pageviewScripts = html.match(/<script defer data-domain="crosswordcluetutor\.com" src="https:\/\/app\.pageview\.app\/js\/script\.js"><\/script>/g) ?? [];
   if (pageviewScripts.length !== 1) errors.push(`${relative}: expected exactly one Pageview analytics script`);
@@ -24,6 +26,18 @@ for (const file of htmlFiles) {
   if (/\bin the The\b/.test(html)) errors.push(`${relative}: duplicated article in publication context`);
   if (/<h1>“[“”]/.test(html)) errors.push(`${relative}: duplicated quotation marks in heading`);
   if (html.includes('class="breadcrumbs"') && !html.includes('"@type":"BreadcrumbList"')) errors.push(`${relative}: visible breadcrumbs are missing BreadcrumbList structured data`);
+  const structuredDataBlocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
+  for (const block of structuredDataBlocks) {
+    try {
+      const structuredData = JSON.parse(block[1]);
+      if (structuredData["@type"] === "Article") {
+        if (structuredData.author?.["@type"] !== "Organization" || !structuredData.author?.name || !structuredData.author?.url) errors.push(`${relative}: Article author entity is incomplete`);
+        if (structuredData.publisher?.["@type"] !== "Organization" || !structuredData.publisher?.name || !structuredData.publisher?.logo?.url) errors.push(`${relative}: Article publisher entity is incomplete`);
+      }
+    } catch {
+      errors.push(`${relative}: invalid JSON-LD block`);
+    }
+  }
 
   const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
   for (const href of hrefs) {
@@ -42,11 +56,22 @@ for (const file of htmlFiles) {
   }
 }
 
-for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/clues.json", "assets/answers.json", "assets/clue-hubs.json", "favicon.svg", "robots.txt", "sitemap.xml", "feed.xml"]) {
+for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/social-card.png", "assets/logo-512.png", "assets/clues.json", "assets/answers.json", "assets/clue-hubs.json", "favicon.svg", "robots.txt", "sitemap.xml", "feed.xml"]) {
   try {
     await access(path.join(dist, asset));
   } catch {
     errors.push(`missing build asset: ${asset}`);
+  }
+}
+
+for (const [asset, expectedWidth, expectedHeight] of [["assets/social-card.png", 1200, 630], ["assets/logo-512.png", 512, 512]]) {
+  try {
+    const image = await readFile(path.join(dist, asset));
+    const width = image.readUInt32BE(16);
+    const height = image.readUInt32BE(20);
+    if (width !== expectedWidth || height !== expectedHeight) errors.push(`${asset}: expected ${expectedWidth}x${expectedHeight}, found ${width}x${height}`);
+  } catch {
+    errors.push(`${asset}: unable to verify PNG dimensions`);
   }
 }
 

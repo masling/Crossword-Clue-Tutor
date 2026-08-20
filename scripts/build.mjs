@@ -129,6 +129,8 @@ function pageTemplate({ title, description, route, body, bodyClass = "", noindex
   const pageviewMarkup = pageview
     ? `<link rel="preconnect" href="${escapeHtml(new URL(pageview.scriptSrc).origin)}" crossorigin>\n  <script defer data-domain="${escapeHtml(pageview.domain)}" src="${escapeHtml(pageview.scriptSrc)}"></script>`
     : "";
+  const openGraphType = jsonLd.some((item) => item["@type"] === "Article") ? "article" : "website";
+  const socialImageUrl = canonicalUrl(config.socialImage);
   return `<!doctype html>
 <html lang="en">
 <head>
@@ -139,10 +141,21 @@ function pageTemplate({ title, description, route, body, bodyClass = "", noindex
   <meta name="robots" content="${noindex ? "noindex,nofollow" : "index,follow,max-image-preview:large"}">
   <link rel="canonical" href="${canonicalUrl(route)}">
   <link rel="alternate" type="application/atom+xml" title="${escapeHtml(config.name)} fresh crossword clues" href="${canonicalUrl("/feed.xml")}">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="${openGraphType}">
+  <meta property="og:site_name" content="${escapeHtml(config.name)}">
+  <meta property="og:locale" content="${escapeHtml(config.locale)}">
   <meta property="og:title" content="${escapeHtml(fullTitle)}">
   <meta property="og:description" content="${escapeHtml(description)}">
   <meta property="og:url" content="${canonicalUrl(route)}">
+  <meta property="og:image" content="${socialImageUrl}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="${escapeHtml(config.name)} — hints first, answers when you want them">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${escapeHtml(fullTitle)}">
+  <meta name="twitter:description" content="${escapeHtml(description)}">
+  <meta name="twitter:image" content="${socialImageUrl}">
+  <meta name="twitter:image:alt" content="${escapeHtml(config.name)} — hints first, answers when you want them">
   <meta name="theme-color" content="oklch(0.48 0.09 210)">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   ${pageviewMarkup}
@@ -251,13 +264,20 @@ const dates = [...new Set(clues.map((clue) => clue.date))].sort().reverse();
 const latestDate = dates[0];
 const latestClues = clues.filter((clue) => clue.date === latestDate).sort((a, b) => b.popularity - a.popularity);
 
-const organizationLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
+const organizationId = canonicalUrl("/#organization");
+const organizationEntity = {
+  "@type": "Organization",
+  "@id": organizationId,
   name: config.name,
   url: config.siteUrl,
-  description: config.description
+  logo: { "@type": "ImageObject", url: canonicalUrl(config.logoImage), width: 512, height: 512 }
 };
+const organizationLd = {
+  "@context": "https://schema.org",
+  ...organizationEntity,
+  description: config.description,
+};
+const websiteLd = { "@context": "https://schema.org", "@type": "WebSite", name: config.name, url: config.siteUrl, description: config.description, publisher: { "@id": organizationId } };
 
 const homeBody = `<section class="hero shell">
   <div class="hero-copy">
@@ -293,7 +313,7 @@ const homeBody = `<section class="hero shell">
   <div class="shell answer-strip-inner"><div><h2>Meet the words crosswords keep bringing back.</h2><p>Meaning, pronunciation, common clue patterns, and why the fill works so well in a grid.</p></div><div class="answer-links">${answers.slice(0, 5).map((answer) => `<a href="/crosswordese/${answer.slug}/">${answer.answer}</a>`).join("")}</div><a class="button button-secondary" href="/crosswordese/">Explore crosswordese</a></div>
 </section>`;
 
-await writePage("/", pageTemplate({ title: config.name, description: config.description, route: "/", body: homeBody, bodyClass: "home-page", jsonLd: [organizationLd] }));
+await writePage("/", pageTemplate({ title: config.name, description: config.description, route: "/", body: homeBody, bodyClass: "home-page", jsonLd: [organizationLd, websiteLd] }));
 
 function toolPage(mode) {
   const isSolve = mode === "solve";
@@ -364,7 +384,7 @@ await writePage(ambiguityResearchRoute, pageTemplate({ title: "Ambiguous crosswo
 
 const ambiguityGuideRoute = "/guides/answer-length-and-crossings/";
 const ambiguityGuideBody = `<article class="shell prose-page">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Answer length and crossings" }])}<p class="content-kind">Crossword solving guide</p><h1>How answer length and crossings solve ambiguous crossword clues</h1><p>A short clue can have many legitimate answers. The grid—not a generic synonym list—decides which one fits. This guide shows how to combine entry length, crossing letters, grammar, and clue signals before revealing an answer.</p><h2>1. Treat the answer length as evidence</h2><p>For the recurring clue “Diffuse,” four squares might suggest <strong>SEEP</strong> or <strong>SHED</strong>, six squares might suggest <strong>SPREAD</strong>, <strong>OSMOSE</strong>, or <strong>PROLIX</strong>, and eight squares might suggest <strong>PERMEATE</strong> or <strong>DISPERSE</strong>. The clue has not changed; the grid has narrowed the intended sense.</p><p>“Pitch” shows the same ambiguity across meanings: <strong>TAR</strong> is a three-letter sticky material, <strong>TONE</strong> is a four-letter sound quality, while five letters might be <strong>SLOPE</strong> or <strong>SPIEL</strong>. “Charge” may instead mean a <strong>FEE</strong>, <strong>ONUS</strong>, <strong>RUSH</strong>, <strong>ACCUSE</strong>, or <strong>IONIZE</strong>. “Issue” can be <strong>EMIT</strong>, <strong>TOPIC</strong>, <strong>EDITION</strong>, or <strong>PROGENY</strong>.</p><p><a class="text-link" href="/crossword-clues/diffuse/">Compare Diffuse answers by length →</a><br><a class="text-link" href="/crossword-clues/pitch/">Compare Pitch answers by length →</a><br><a class="text-link" href="/crossword-clues/charge/">Compare Charge answers by length →</a><br><a class="text-link" href="/crossword-clues/issue/">Compare Issue answers by length →</a></p><h2>2. Add only crossing letters you trust</h2><p>One confirmed crossing can remove most candidates. A six-letter pattern <code>S?R?A?</code> points strongly toward SPREAD, while <code>O?M?S?</code> points toward OSMOSE. Do not lock in a speculative crossing just because it produces a familiar word.</p><h2>3. Match the clue's grammar</h2><p>Plural clues usually need plural fills, past-tense clues need past-tense answers, and abbreviations in the clue often license abbreviations in the grid. A clue using “org.” is evidence that a shortened organization name may be expected.</p><h2>4. Check punctuation and register</h2><p>A question mark can signal a pun or nonliteral reading. Quotation marks can indicate a spoken phrase. Words such as “briefly,” “for short,” “informally,” and “in texts” tell you what register or shortened form the setter wants.</p><h2>5. Confirm the exact sense</h2><p>Before entering the fill, read the clue and candidate together as a definition. If the answer fits only vaguely, keep it provisional. A strong solution satisfies the length, crossings, grammar, and meaning at the same time.</p><h2>A repeatable solving order</h2><ol><li>Count the squares.</li><li>Mark reliable crossing letters.</li><li>Identify tense, number, abbreviation, and punctuation signals.</li><li>Generate candidates for the intended sense.</li><li>Confirm every letter through crossings where possible.</li></ol><p><a class="button button-primary" href="/solver/">Try the pattern-aware clue solver</a></p><p class="source-note">This guide teaches a general solving method and does not reproduce a publisher's grid or answer key.</p></article>`;
-const ambiguityGuideLd = { "@context": "https://schema.org", "@type": "Article", headline: "How answer length and crossings solve ambiguous crossword clues", description: "A practical method for using entry length, crossing letters, grammar, and clue signals to choose the right crossword answer.", datePublished: "2026-08-20", dateModified: "2026-08-20", mainEntityOfPage: canonicalUrl(ambiguityGuideRoute), publisher: { "@type": "Organization", name: config.name } };
+const ambiguityGuideLd = { "@context": "https://schema.org", "@type": "Article", headline: "How answer length and crossings solve ambiguous crossword clues", description: "A practical method for using entry length, crossings, grammar, and clue signals to choose the right crossword answer.", datePublished: "2026-08-20", dateModified: "2026-08-20", mainEntityOfPage: canonicalUrl(ambiguityGuideRoute), author: organizationEntity, publisher: organizationEntity };
 await writePage(ambiguityGuideRoute, pageTemplate({ title: "Solve ambiguous crossword clues with length and crossings", description: "Learn how answer length, crossing letters, grammar, and clue signals narrow ambiguous crossword answers.", route: ambiguityGuideRoute, body: ambiguityGuideBody, bodyClass: "prose-page-body guide-page", jsonLd: [ambiguityGuideLd] }), false, "2026-08-20");
 
 const answerIndexBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Crosswordese" }])}<h1>Crosswordese, explained.</h1><p>Words that show up in grids more often than conversation—plus their meaning, pronunciation, and recurring clue patterns.</p></section>
@@ -426,7 +446,7 @@ for (const type of clueTypes) {
   const description = isAbbreviationGuide ? "Learn common crossword abbreviation signals, answer formats, map directions, initialisms, and reviewed examples." : isQuestionMarkGuide ? "Learn why crossword clues use question marks, how they signal wordplay and misdirection, and see reviewed examples." : isFillInBlankGuide ? "Learn how crossword blanks complete idioms, quotations, titles, names, and informal speech using context and crossings." : isProperNounGuide ? "Learn how crossword clues identify people, characters, works, eponyms, products, and brands using precise context and crossings." : isDirectDefinitionGuide ? "Learn how answer length, grammar, qualifiers, regional usage, and crossings solve direct definition crossword clues." : `${type.summary} See common signals, a worked example, and practical solving advice.`;
   const datedClues = isQuestionMarkGuide ? questionMarkClues : isProperNounGuide ? properNounClues : isDirectDefinitionGuide ? directDefinitionClues : matchingClues;
   const lastmod = datedClues.map((clue) => clue.reviewedAt).sort().reverse()[0] ?? config.contentUpdatedAt;
-  const articleLd = { "@context": "https://schema.org", "@type": "Article", headline: pageHeading, description, datePublished: config.contentUpdatedAt, dateModified: lastmod, mainEntityOfPage: canonicalUrl(route), publisher: { "@type": "Organization", name: config.name } };
+  const articleLd = { "@context": "https://schema.org", "@type": "Article", headline: pageHeading, description, datePublished: config.contentUpdatedAt, dateModified: lastmod, mainEntityOfPage: canonicalUrl(route), author: organizationEntity, publisher: organizationEntity };
   await writePage(route, pageTemplate({ title: pageTitle, description, route, body, bodyClass: "guide-page", jsonLd: [articleLd] }), false, lastmod);
 }
 
@@ -479,7 +499,7 @@ for (const clue of clues) {
     ? `${config.name} is not affiliated with or endorsed by ${clue.publication} or its publisher.`
     : "It is not an official answer key from a crossword publisher.";
   const body = `<article class="shell article-layout clue-article"><div class="article-main">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Explanations", href: "/daily-clue-clinic/" }, { label: clue.clue }])}<header><p class="content-kind">${escapeHtml(contentKind)}</p><h1>${pageHeading}</h1><p class="review-date">Editorially reviewed ${escapeHtml(formatDate(clue.reviewedAt))}</p></header><section class="answer-reveal"><p>Answer</p><div class="answer-cells" aria-label="${clue.answer.split("").join(" ")}">${[...clue.answer].map((letter) => `<span>${letter}</span>`).join("")}</div></section><section><h2>Why ${clue.answer} fits</h2><p>${escapeHtml(clue.explanation)}</p></section><section class="mechanism-grid"><div><h2>Clue signal</h2><p>${escapeHtml(clue.signal)}</p></div><div><h2>${clue.answer} meaning</h2><p>${escapeHtml(clue.definition)}</p></div></section>${sourceContext}${profile ? `<p><a class="text-link" href="/crosswordese/${profile.slug}/">See ${profile.answer} meaning and common clue patterns →</a></p>` : ""}${related.length ? `<section><h2>Related reviewed clues</h2>${clueRows(related)}</section>` : ""}<p class="source-note">This independently written explanation is for learning and clue analysis. ${escapeHtml(affiliationNote)}</p></div><aside class="article-aside hint-aside"><p>Try it without the spoiler</p><span>${escapeHtml(clue.hint)}</span><a class="aside-all" href="/solver/">Open the hint-first solver →</a><div class="save-clue-control"><button class="button button-outline save-clue-button" type="button" data-save-clue data-clue-slug="${clue.slug}" aria-pressed="false">Save clue</button><span class="save-clue-status" data-save-clue-status aria-live="polite"></span></div></aside></article>`;
-  const articleLd = { "@context": "https://schema.org", "@type": "Article", headline: `${clue.clue} crossword clue explained`, description: clue.explanation, datePublished: clue.reviewedAt, dateModified: clue.reviewedAt, mainEntityOfPage: canonicalUrl(route), publisher: { "@type": "Organization", name: config.name } };
+  const articleLd = { "@context": "https://schema.org", "@type": "Article", headline: `${clue.clue} crossword clue explained`, description: clue.explanation, datePublished: clue.reviewedAt, dateModified: clue.reviewedAt, mainEntityOfPage: canonicalUrl(route), author: organizationEntity, publisher: organizationEntity };
   await writePage(route, pageTemplate({ title: pageTitle, description: `The answer is ${clue.answer}. Learn why it fits, what the clue signal means, and the definition used here.`, route, body, bodyClass: "article-page", jsonLd: [articleLd] }), false, clue.reviewedAt);
 }
 
@@ -510,6 +530,8 @@ await Promise.all([
   cp(path.join(root, "src/style.css"), path.join(dist, "assets/style.css")),
   cp(path.join(root, "src/app.js"), path.join(dist, "assets/app.js")),
   cp(path.join(root, "src/solver.mjs"), path.join(dist, "assets/solver.mjs")),
+  cp(path.join(root, "src/social-card.png"), path.join(dist, "assets/social-card.png")),
+  cp(path.join(root, "src/logo-512.png"), path.join(dist, "assets/logo-512.png")),
   cp(path.join(root, "src/favicon.svg"), path.join(dist, "favicon.svg")),
   writeFile(path.join(dist, "assets/clues.json"), JSON.stringify(clues)),
   writeFile(path.join(dist, "assets/answers.json"), JSON.stringify(answers)),
