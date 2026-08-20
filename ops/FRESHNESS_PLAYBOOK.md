@@ -9,9 +9,10 @@ Discover, review, publish, deploy, and submit high-intent clue pages on the same
 1. Check official puzzle releases and visible daily discussion/search activity for
    NYT Mini, The New York Times Crossword, LA Times Crossword, and USA TODAY Crossword.
 2. Capture candidate clue-answer pairs with publication, date, and clue number.
-3. Apply the demand gate before writing: require a high-volume publication/query family
-   plus either a rising 2–3 day Google Trends root, a Bing newly discovered query, or
-   actual Search Console impressions. Do not publish solely because a clue is interesting.
+3. Treat every newly verifiable publication/date as requiring an update. Same-day exact
+   clue queries have no history yet, so the absence of keyword data must never block the
+   date. Use publication demand, Google Trends roots, Bing newly discovered queries, and
+   Search Console impressions only to rank which clues are published first.
 4. Write an original hint, clue signal, definition, and explanation.
 5. Run a dry review: `npm run content:publish -- ops/intake/<file>.json --dry-run`.
 6. Publish the reviewed batch: `npm run content:publish -- ops/intake/<file>.json`.
@@ -29,9 +30,11 @@ checks pass. The commands above remain the local recovery path.
 
 ## Singapore launch window
 
-- 12:15 SGT: check the newly available U.S. puzzle dates and discussion signals.
-- 12:15–13:30 SGT: select only high-confusion clues, write original teaching copy,
+- 12:15 SGT: check NYT and LA Times dates after the U.S. midnight release window.
+- 12:15–13:30 SGT: rank current clues by forward-looking demand signals, write original copy,
   validate, deploy, and submit updated URLs.
+- 18:15 SGT: recheck sources such as USA TODAY whose public clue pages appear later in
+  the U.S. morning, and cover any monitored date still missing from the site.
 - 21:00 SGT: record bot-filtered visits, search discovery, and any query impressions.
 
 Publisher release times can change, so freshness is measured from confirmed public
@@ -39,21 +42,24 @@ availability rather than from a hard-coded date assumption. Free play does not g
 republication rights: never mirror a full grid or answer list, and never bypass a
 publisher login or subscription boundary.
 
-## Demand gate and candidate score
+## Daily coverage rule and candidate score
 
-No search signal means no page. Explanation quality is a pass/fail publishing
-requirement, not a reason to select a candidate.
+Every monitored source/date must receive selected clue coverage once exact clue-answer
+pairs are publicly verifiable. Historical keyword volume is not required for a same-day
+clue. Explanation quality is a pass/fail publishing requirement, not a selection reason.
 
 Score each candidate from 0–3 on:
 
-- Base demand: the publication/query family has measurable Bing impressions.
-- Near-term momentum: the related entity/root is above its recent Google Trends average
-  or appears in rising/newly discovered queries during the latest 2–3 days.
+- Source demand: the publication/query family has measurable Bing impressions.
+- Near-term momentum: when available, the related entity/root is above its recent Google
+  Trends average or appears in rising/newly discovered queries during the latest 2–3 days.
 - Search language: the clue can be pasted verbatim into a search engine.
 - Freshness: the clue appeared on the latest publicly verifiable puzzle date.
 - Competition gap: current results are thin, incorrect, slow, or answer-only.
 
-Publish the highest total first. Avoid creating separate pages for punctuation-only clue variants.
+Publish the highest total first, but do not leave a newly available monitored date
+uncovered merely because its exact queries are new. Avoid creating separate pages for
+punctuation-only clue variants.
 
 ## Required intake fields
 

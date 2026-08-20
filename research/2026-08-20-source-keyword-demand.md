@@ -41,3 +41,11 @@ For the LA Times August 20 candidates, Google Trends US Web Search showed:
 - `Etsy`: latest 86 versus seven-day average 80.
 
 Only these three above-average entity roots were selected from that puzzle date.
+
+## Same-day policy correction
+
+Exact clue queries do not exist before a puzzle is published, so historical keyword
+volume cannot be a hard gate for a new date. From this point forward, every newly
+verifiable monitored publication/date receives selected clue coverage. Source-level
+demand and near-term root trends determine publishing order and batch size; they do not
+block same-day coverage. Complete grids and full answer lists remain out of scope.
