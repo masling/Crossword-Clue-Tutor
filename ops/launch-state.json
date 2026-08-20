@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T22:45:15+08:00",
+  "updatedAt": "2026-08-20T22:50:04+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -84,15 +84,21 @@
       "api": "/api/feedback",
       "storage": "Dedicated Cloudflare D1 database",
       "optionalEmail": true,
+      "publicContactEmail": "hello@crosswordcluetutor.com",
+      "publicContactRoutes": [
+        "/about/#contact",
+        "/feedback/"
+      ],
       "contextualEntrypoints": [
         "Solver results and empty results",
         "Explain results",
         "Reviewed clue pages",
         "Answer meaning pages",
         "Recurring clue hubs",
-        "Site footer"
+        "Site footer",
+        "About contact section and Feedback direct-email fallback"
       ],
-      "privacy": "No raw IP address or browser user agent stored; reports are not published automatically",
+      "privacy": "No raw IP address or browser user agent stored; reports are not published automatically; direct email is used only for the conversation the sender starts",
       "productionQaReportId": "1c78cc5d-527d-4968-8f86-d891277d76de"
     },
     "expandedSeoGuides": 5,
@@ -106,8 +112,15 @@
       "Hub-powered multi-answer Solver and Explain flows",
       "Contextual feedback and correction flow",
       "Clue-to-answer meaning links for continued reading",
-      "Homepage navigation to demand-backed clue and meaning pages"
+      "Homepage navigation to demand-backed clue and meaning pages",
+      "Verified domain-email contact path with privacy disclosure"
     ],
+    "contactStructuredData": {
+      "organizationContactPoint": "Verified on homepage",
+      "aboutPage": "/about/",
+      "contactPage": "/feedback/",
+      "feedbackIndexing": "Noindex utility page"
+    },
     "homepageDemandNavigation": {
       "featuredClueHubs": 9,
       "featuredMeaningPages": 9,

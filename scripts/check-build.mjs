@@ -159,6 +159,9 @@ for (const route of sitemapRoutes) {
   else if (routeDepth.get(route) > 3) errors.push(`${route}: homepage click depth ${routeDepth.get(route)} exceeds 3`);
 }
 const homePage = await readFile(path.join(dist, "index.html"), "utf8");
+const homeStructuredData = [...homePage.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
+const organization = homeStructuredData.find((item) => item["@type"] === "Organization");
+if (organization?.email !== "mailto:hello@crosswordcluetutor.com" || organization?.contactPoint?.email !== "hello@crosswordcluetutor.com" || organization?.contactPoint?.contactType !== "customer support") errors.push("homepage Organization data is missing the verified contact point");
 if (!homePage.includes("Popular clues with more than one answer")) errors.push("homepage is missing its demand-backed clue navigation");
 for (const slug of ["nipping", "congenital", "inflated", "noble", "cajole", "wealth", "pimento", "forefront", "path"]) {
   if (!homePage.includes(`/crossword-clues/${slug}/`)) errors.push(`homepage is missing the featured ${slug} clue hub`);
@@ -315,10 +318,14 @@ if (!privacyPage.includes("Cloudflare Web Analytics")) errors.push("privacy page
 if (!privacyPage.includes("app.pageview.app")) errors.push("privacy page is missing the Pageview analytics disclosure");
 if (!privacyPage.includes("Saved clues") || !privacyPage.includes("local storage")) errors.push("privacy page is missing the local saved-clue disclosure");
 if (!privacyPage.includes("When you submit feedback") || !privacyPage.includes("Email is optional") || !privacyPage.includes("raw IP address")) errors.push("privacy page is missing the feedback data disclosure");
+if (!privacyPage.includes("mailto:hello@crosswordcluetutor.com") || !privacyPage.includes("processed by our email providers")) errors.push("privacy page is missing the direct-email disclosure");
 const feedbackPage = await readFile(path.join(dist, "feedback/index.html"), "utf8");
 if (!feedbackPage.includes("data-feedback-form") || !feedbackPage.includes("Email for follow-up") || !feedbackPage.includes("not added to a mailing list")) errors.push("feedback page is missing its form or optional-email disclosure");
+if (!feedbackPage.includes("mailto:hello@crosswordcluetutor.com") || !feedbackPage.includes('"@type":"ContactPage"')) errors.push("feedback page is missing its verified contact route or ContactPage data");
 if (!feedbackPage.includes("noindex,nofollow")) errors.push("feedback utility page must remain out of the search index");
 if (sitemap.includes("/feedback/")) errors.push("sitemap must not include the feedback utility page");
+const aboutPage = await readFile(path.join(dist, "about/index.html"), "utf8");
+if (!aboutPage.includes('id="contact"') || !aboutPage.includes("mailto:hello@crosswordcluetutor.com") || !aboutPage.includes('"@type":"AboutPage"')) errors.push("about page is missing its contact section, verified email, or AboutPage data");
 const feedbackCluePage = await readFile(path.join(dist, "explainers/scientists-workplace-nyt-mini/index.html"), "utf8");
 if (!feedbackCluePage.includes("/feedback/?mode=clue") || !diffuseHub.includes("/feedback/?mode=hub")) errors.push("reviewed clue and hub pages are missing contextual feedback links");
 const specAnswerPage = await readFile(path.join(dist, "crosswordese/spec/index.html"), "utf8");
