@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T17:18:00+08:00",
+  "updatedAt": "2026-08-20T17:28:01+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -29,11 +29,12 @@
     }
   },
   "content": {
-    "indexablePages": 130,
+    "indexablePages": 131,
     "reviewedClues": 72,
     "answerMeaningPages": 24,
     "evergreenClueHubs": 4,
     "linkableGuides": 1,
+    "linkableResearchPages": 1,
     "expandedSeoGuides": 5,
     "crossPublicationTodayHubs": 1,
     "answerLengthIndexes": 1,
@@ -80,7 +81,7 @@
     "publicSearchCheckedAt": "2026-08-20T16:49:00+08:00",
     "publicSearchSiteQueryStatus": "No stable site-query result detected yet; GSC URL Inspection confirms the homepage is indexed",
     "productionSitemapStatus": "Verified",
-    "productionSitemapUrls": 130,
+    "productionSitemapUrls": 131,
     "productionRobotsStatus": "search=yes; Allow: /; sitemap and feed declared",
     "productionCrawlStatus": 200,
     "bingSiteVerified": true,
@@ -100,7 +101,7 @@
     "bingSiteScanRemediation": "Generated document titles are now capped at 70 characters; verify with a later rescan.",
     "searchImpressions": 0,
     "searchClicks": 0,
-    "indexNowSubmittedUrls": 325
+    "indexNowSubmittedUrls": 351
   },
   "deployment": {
     "provider": "Cloudflare Pages",
@@ -109,7 +110,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "3590d78",
+    "lastVerifiedCommit": "f6e3217",
     "lastDeployStatus": "Success"
   },
   "nextAction": {
