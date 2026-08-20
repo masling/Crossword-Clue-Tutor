@@ -61,5 +61,43 @@
       "sales pitch crossword clue",
       "baseball pitch crossword clue"
     ]
+  },
+  {
+    "slug": "charge",
+    "clue": "Charge",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Charge depend on whether the clue means a fee, accusation, attack, burden, price, dependent, electrical process, or instruction.",
+    "answerGuidance": "Start with FEE for three letters when charge means a cost, ONUS or RATE for four letters when it means a burden or price, and ACCUSE or IONIZE for six letters when it means allege wrongdoing or create an electrical charge.",
+    "answers": [
+      { "answer": "FEE", "sense": "A sum charged for a service or privilege." },
+      { "answer": "RAP", "sense": "An accusation or criminal charge, informally." },
+      { "answer": "ASK", "sense": "Name or request a price for something." },
+      { "answer": "TAB", "sense": "A bill recording charges owed." },
+      { "answer": "ONUS", "sense": "A burden, duty, or responsibility placed on someone." },
+      { "answer": "RATE", "sense": "The price charged per unit or period." },
+      { "answer": "FARE", "sense": "The charge for a journey on public transport." },
+      { "answer": "TOLL", "sense": "A charge for using a road, bridge, or service." },
+      { "answer": "COST", "sense": "The amount charged or required to obtain something." },
+      { "answer": "RUSH", "sense": "A sudden forceful movement or charge forward." },
+      { "answer": "LEVY", "sense": "Impose or collect a tax, fee, or other charge." },
+      { "answer": "DEBIT", "sense": "An amount charged against an account." },
+      { "answer": "LUNGE", "sense": "A sudden forward charge or thrust." },
+      { "answer": "ACCUSE", "sense": "Charge someone with wrongdoing." },
+      { "answer": "INDICT", "sense": "Formally charge someone with a crime." },
+      { "answer": "ASSESS", "sense": "Determine and impose a fee, tax, or charge." },
+      { "answer": "IONIZE", "sense": "Give atoms or molecules an electrical charge by creating ions." },
+      { "answer": "ATTACK", "sense": "Charge at or act aggressively against a target." },
+      { "answer": "COMMAND", "sense": "Give an authoritative instruction or charge." },
+      { "answer": "CUSTODY", "sense": "Care or guardianship of a person placed in one's charge." },
+      { "answer": "TUTELAGE", "sense": "Protection, instruction, or guardianship under someone's charge." },
+      { "answer": "ALLEGATION", "sense": "A formal or informal charge that someone did something wrong." }
+    ],
+    "relatedQueries": [
+      "charge crossword clue",
+      "charge crossword answer",
+      "charge 3 letters crossword clue",
+      "service charge crossword clue",
+      "electrical charge crossword clue"
+    ]
   }
 ]

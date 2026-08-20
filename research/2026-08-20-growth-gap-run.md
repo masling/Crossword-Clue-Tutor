@@ -26,6 +26,14 @@ Evidence checked:
 - https://crosswordtracker.com/clue/pitch/
 - https://www.crosswordsolver.com/clue/PITCH
 
+“Charge” was selected next because current public evidence showed more than 20 tracked
+cross-publisher occurrences, a current 2026 appearance, and a separate database reporting
+459 appearances with 59 unique answers. Its meanings span fees, accusations, attacks,
+burdens, prices, custody, and electrical ionization.
+
+- https://crosswordtracker.com/clue/charge/
+- https://crosswordbuzz.com/clue/charge/
+
 ## Outreach opportunity
 
 Several established resource and community sites maintain curated link directories,
