@@ -56,7 +56,7 @@ for (const file of htmlFiles) {
   }
 }
 
-for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/social-card.png", "assets/logo-512.png", "assets/clues.json", "assets/answers.json", "assets/clue-hubs.json", "favicon.svg", "robots.txt", "sitemap.xml", "feed.xml"]) {
+for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/social-card.png", "assets/logo-512.png", "assets/clues.json", "assets/answers.json", "assets/clue-hubs.json", "assets/clue-hubs.csv", "favicon.svg", "robots.txt", "sitemap.xml", "feed.xml"]) {
   try {
     await access(path.join(dist, asset));
   } catch {
@@ -155,7 +155,10 @@ const ambiguityResearchPage = await readFile(path.join(dist, "research/ambiguous
 if (!ambiguityResearchPage.includes("Ambiguous crossword clues by answer length and meaning")) errors.push("ambiguity research page is missing its primary target");
 if (!ambiguityResearchPage.includes("71 reviewed clue-answer possibilities") || !ambiguityResearchPage.includes("71 unique answers")) errors.push("ambiguity research page is missing its current dataset totals");
 if (!ambiguityResearchPage.includes('"@type":"Dataset"')) errors.push("ambiguity research page is missing Dataset structured data");
-if (!ambiguityResearchPage.includes("/assets/clue-hubs.json")) errors.push("ambiguity research page is missing the JSON download");
+if (!ambiguityResearchPage.includes("/assets/clue-hubs.json") || !ambiguityResearchPage.includes("/assets/clue-hubs.csv")) errors.push("ambiguity research page is missing a dataset download format");
+const ambiguityCsv = await readFile(path.join(dist, "assets/clue-hubs.csv"), "utf8");
+if (!ambiguityCsv.startsWith("clue,answer,length,sense,reviewed_at\n")) errors.push("ambiguity CSV is missing its stable header");
+if (ambiguityCsv.trimEnd().split("\n").length !== 72) errors.push("ambiguity CSV must contain one header plus 71 reviewed rows");
 const answersTodayPage = await readFile(path.join(dist, "crossword-answers-today/index.html"), "utf8");
 if (!answersTodayPage.includes("Crossword answers today — selected clues")) errors.push("answers-today hub is missing its search target");
 for (const publication of ["NYT Mini", "The New York Times Crossword", "LA Times Crossword", "USA TODAY Crossword"]) {
