@@ -1,9 +1,9 @@
 # Crossword Clue Tutor domain email setup
 
 Status: inbound routing and the Gmail Send As identity were confirmed on 2026-08-20.
-External QA mail reaches an independent Gmail inbox through Zoho over TLS 1.3. SPF and
-DMARC pass; a final DKIM recheck remains after Gmail's earlier missing-key cache expires.
-No outreach message or form has been submitted, and no password is stored.
+External QA mail reached an independent Gmail inbox through Zoho over TLS 1.3 in seven
+seconds. SPF, 2048-bit DKIM, and DMARC all passed. No outreach message or form has been
+submitted, and no password is stored.
 
 ## Proposed public identity
 
@@ -46,7 +46,8 @@ change.
 Current DNS policy:
 
 - SPF at `@`: `v=spf1 include:_spf.mx.cloudflare.net include:zohomail.com ~all`
-- Zoho DKIM at `zmail._domainkey`: value issued by this Zoho organization
+- Primary Zoho DKIM at `cct2026._domainkey`: verified 2048-bit key
+- Legacy Zoho DKIM at `zmail._domainkey`: verified 1024-bit key retained during transition
 - Cloudflare routing DKIM at `cf2024-1._domainkey`: managed by Email Routing
 - DMARC at `_dmarc`: `v=DMARC1; p=none; adkim=r; aspf=r; pct=100`
 
@@ -127,9 +128,11 @@ Do not send the prepared outreach batch until these checks pass.
 - The first external check exposed missing SPF and `zmail` DKIM records. They were
   restored, Cloudflare Email Routing returned to `ready`, and both Cloudflare and Google
   Public DNS subsequently returned the expected values.
-- A later external check reported SPF PASS and DMARC PASS. Google still used the earlier
-  negative DKIM cache for that message, although Zoho's ARC result reported DKIM PASS.
-- Keep outreach paused until a fresh independent-recipient message reports DKIM PASS too.
+- A later external check reported SPF PASS and DMARC PASS while Google still held the
+  earlier negative cache for the old selector.
+- Zoho then verified a new 2048-bit `cct2026` selector and made it primary. A fresh
+  independent-recipient message arrived in seven seconds with SPF PASS, DKIM PASS, and
+  DMARC PASS. Gmail showed the signing domain as `crosswordcluetutor.com`.
 
 ## Rejected free relay option
 

@@ -26,10 +26,11 @@ export function validateMailDns({ mx = [], rootTxt = [], dkimTxt = [], dmarcTxt 
   if (spf.length !== 1) errors.push("exactly one SPF record is required");
   if (spf.length === 1 && !spf[0].includes("include:_spf.mx.cloudflare.net")) errors.push("SPF does not authorize Cloudflare Email Routing");
   if (spf.length === 1 && !spf[0].includes("include:zohomail.com")) errors.push("SPF does not authorize Zoho Mail");
-  if (dkim.length !== 1 || !/\bp=[A-Za-z0-9+/=]+/.test(dkim[0])) errors.push("Zoho zmail DKIM key is missing or malformed");
+  const dkimKey = dkim[0]?.match(/\bp=([A-Za-z0-9+/=]+)/)?.[1] ?? "";
+  if (dkim.length !== 1 || dkimKey.length < 300) errors.push("Zoho cct2026 2048-bit DKIM key is missing or malformed");
   if (dmarc.length !== 1 || !/\bp=(none|quarantine|reject)\b/.test(dmarc[0])) errors.push("DMARC record is missing or malformed");
 
-  return { errors, mx: [...mxHosts].sort(), spf, dkimSelectors: dkim.length ? ["zmail"] : [], dmarc };
+  return { errors, mx: [...mxHosts].sort(), spf, dkimSelectors: dkim.length ? ["cct2026"] : [], dmarc };
 }
 
 export async function checkMailDns(resolver = { resolveMx, resolveTxt }) {
@@ -39,7 +40,7 @@ export async function checkMailDns(resolver = { resolveMx, resolveTxt }) {
   const [mx, rootTxt, dkimTxt, dmarcTxt] = await Promise.all([
     resolver.resolveMx(DOMAIN).catch(() => []),
     safeTxt(DOMAIN),
-    safeTxt(`zmail._domainkey.${DOMAIN}`),
+    safeTxt(`cct2026._domainkey.${DOMAIN}`),
     safeTxt(`_dmarc.${DOMAIN}`)
   ]);
   return validateMailDns({ mx, rootTxt, dkimTxt, dmarcTxt });

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T22:32:54+08:00",
+  "updatedAt": "2026-08-20T22:41:41+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -245,11 +245,11 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "f561596",
+    "lastVerifiedCommit": "372c48d",
     "lastDeployStatus": "Success"
   },
   "outreach": {
-    "verifiedAt": "2026-08-20T22:32:54+08:00",
+    "verifiedAt": "2026-08-20T22:41:41+08:00",
     "readyForApproval": 4,
     "sent": 0,
     "responses": 0,
@@ -267,28 +267,28 @@
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 36 meaning entries",
       "transmissionStatus": "No email or form submitted"
     },
-    "approvalNeeded": "Wait for the Gmail recipient-side DKIM negative cache to expire and repeat the external authentication test. After DKIM also passes, explicitly approve each outreach email or form; code sending still requires a locally supplied Zoho password or app password.",
+    "approvalNeeded": "Explicitly approve each outreach email or form before transmission; code sending also requires a locally supplied Zoho password or app password.",
     "senderSetup": {
       "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
       "inboundDestination": "masling@gmail.com",
       "destinationAlreadyVerified": true,
-      "existingDomainMailRecords": 9,
+      "existingDomainMailRecords": 10,
       "existingDomainRoutingRules": 1,
       "preferredPlan": "Cloudflare Email Routing inbound plus Zoho Mail Free SMTP outbound",
       "preferredPlanLimitations": "Selected data centers only; webmail access; no IMAP, POP, automatic forwarding, or ActiveSync",
       "temporaryManualSender": "Gmail Send mail as through Zoho SMTP until third-party SMTP support ends in January 2027",
       "gmailSendAsStatus": "Confirmed for hello@crosswordcluetutor.com",
       "inboundQa": "Verified by the Gmail alias confirmation message delivered through Cloudflare Email Routing",
-      "externalDeliveryQa": "Delivered to the operator's independent Gmail inbox through Zoho with TLS 1.3; SPF and DMARC pass; Google recipient-side DKIM cache still reports the earlier missing-key state",
+      "externalDeliveryQa": "Delivered to the operator's independent Gmail inbox through Zoho with TLS 1.3 in seven seconds; SPF PASS, 2048-bit DKIM PASS, and DMARC PASS",
       "planned2027Cutover": "Zoho Webmail for manual sending; Zoho SMTP code sender remains unchanged",
       "codeSender": "scripts/send-outreach.mjs; dry-run by default; one confirmed recipient per send",
       "dnsPreflight": "scripts/check-mail-dns.mjs; real code sends stop when Cloudflare MX, combined SPF, Zoho DKIM, or DMARC is missing",
-      "dnsAuthentication": "Cloudflare and Zoho combined SPF; separate Cloudflare and Zoho DKIM; DMARC monitoring",
+      "dnsAuthentication": "Cloudflare and Zoho combined SPF; Cloudflare routing DKIM; verified 2048-bit Zoho cct2026 DKIM primary with legacy zmail selector retained; DMARC monitoring",
       "catchAll": "Disabled",
       "paidFallback": "Cloudflare Email Sending on Workers Paid, only if Zoho SMTP is retired",
       "workersPaidRequiredForPreferredPlan": false,
       "rejectedRelay": "Resend Free because its AUP prohibits cold outreach",
-      "status": "Inbound and Gmail Send As confirmed; external Zoho delivery works and DMARC passes, but outreach remains paused until a fresh Gmail message reports DKIM pass",
+      "status": "Ready for individually approved manual outreach through Gmail Send As; code transport awaits a locally supplied Zoho secret",
       "runbook": "ops/EMAIL_SETUP.md"
     }
   },

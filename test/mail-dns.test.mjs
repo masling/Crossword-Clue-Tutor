@@ -9,7 +9,7 @@ const validRecords = {
     { exchange: "route3.mx.cloudflare.net", priority: 65 }
   ],
   rootTxt: ["v=spf1 include:_spf.mx.cloudflare.net include:zohomail.com ~all"],
-  dkimTxt: ["v=DKIM1; k=rsa; p=ABC123"],
+  dkimTxt: [`v=DKIM1; k=rsa; p=${"A".repeat(392)}`],
   dmarcTxt: ["v=DMARC1; p=none; adkim=r; aspf=r; pct=100"]
 };
 
@@ -17,7 +17,7 @@ test("accepts the Cloudflare inbound and Zoho outbound DNS policy", () => {
   assert.deepEqual(validateMailDns(validRecords).errors, []);
 });
 
-test("blocks sending when SPF or Zoho DKIM disappears", () => {
+test("blocks sending when SPF or the 2048-bit Zoho DKIM key disappears", () => {
   assert.match(validateMailDns({ ...validRecords, rootTxt: [] }).errors.join(" "), /SPF/);
   assert.match(validateMailDns({ ...validRecords, dkimTxt: [] }).errors.join(" "), /DKIM/);
 });
