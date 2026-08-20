@@ -1,8 +1,9 @@
 # Outreach send queue — 2026-08-20
 
 No message or form has been submitted. Each item still requires action-time approval.
-The domain sender identity and inbound route are configured; SMTP authentication and an
-end-to-end delivery test remain before live outreach.
+The domain sender, inbound route, and SPF/DKIM/DMARC delivery checks are verified. The
+two email items now exist as Gmail drafts from `hello@crosswordcluetutor.com` and are
+ready for review; neither has been sent.
 
 The active Cloudflare-inbound/Zoho-outbound setup is documented in `../EMAIL_SETUP.md`.
 Gmail Send mail as is a temporary manual interface through 2026, not a separate relay.
@@ -28,6 +29,7 @@ file, form payload, and unsent status.
 - Asset: `/research/ambiguous-crossword-clues/` with JSON and CSV downloads
 - Message: `messages/daily-crossword-links.txt`
 - Dry-run: `npm run outreach:send -- --outreach-id daily-crossword-links`
+- Gmail: draft created and ready for review on 2026-08-20.
 - Expected value: the most relevant direct community audience in this queue.
 
 ## Ready 3 — XWord Blog
@@ -38,6 +40,7 @@ file, form payload, and unsent status.
 - Asset: JSON/CSV dataset plus `/guides/answer-length-and-crossings/`
 - Message: `messages/xword-blog.txt`
 - Dry-run: `npm run outreach:send -- --outreach-id xword-blog`
+- Gmail: draft created and ready for review on 2026-08-20.
 - Expected value: editorial link and credibility if the proposed essay is accepted.
 
 ## Ready 4 — American Crossword Puzzle Tournament Links

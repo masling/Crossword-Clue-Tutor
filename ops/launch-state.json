@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T22:41:41+08:00",
+  "updatedAt": "2026-08-20T22:45:15+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -249,7 +249,7 @@
     "lastDeployStatus": "Success"
   },
   "outreach": {
-    "verifiedAt": "2026-08-20T22:41:41+08:00",
+    "verifiedAt": "2026-08-20T22:45:15+08:00",
     "readyForApproval": 4,
     "sent": 0,
     "responses": 0,
@@ -262,12 +262,13 @@
     "executionAssets": {
       "manifest": "ops/outreach/manifest.json",
       "individualEmailDrafts": 2,
+      "gmailDraftsReadyForReview": 2,
       "structuredFormPayloads": 2,
       "validationCommand": "npm run outreach:check",
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 36 meaning entries",
-      "transmissionStatus": "No email or form submitted"
+      "transmissionStatus": "Two Gmail drafts created; no outreach email or form submitted"
     },
-    "approvalNeeded": "Explicitly approve each outreach email or form before transmission; code sending also requires a locally supplied Zoho password or app password.",
+    "approvalNeeded": "Review and explicitly approve each of the two Gmail drafts before sending, and separately approve each prepared form submission; code sending also requires a locally supplied Zoho password or app password.",
     "senderSetup": {
       "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
       "inboundDestination": "masling@gmail.com",

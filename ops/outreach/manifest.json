@@ -4,7 +4,7 @@
     "name": "Crossword Clue Tutor",
     "email": "hello@crosswordcluetutor.com"
   },
-  "status": "prepared_not_sent",
+  "status": "gmail_drafts_created_not_sent",
   "datasetEvidence": {
     "clueFamilies": 15,
     "reviewedCandidates": 328,
@@ -18,6 +18,8 @@
       "recipient": "crosswordlinks@gmail.com",
       "subject": "News & Notes tip: 328 reviewed answers for 15 ambiguous clues",
       "textFile": "messages/daily-crossword-links.txt",
+      "gmailDraftStatus": "ready_for_review",
+      "gmailDraftCreatedAt": "2026-08-20T22:44:42+08:00",
       "approvalRequired": true,
       "sentAt": null
     },
@@ -28,6 +30,8 @@
       "recipient": "info@xwordinfo.com",
       "subject": "Guest essay idea: how crossings disambiguate one-word clues",
       "textFile": "messages/xword-blog.txt",
+      "gmailDraftStatus": "ready_for_review",
+      "gmailDraftCreatedAt": "2026-08-20T22:44:53+08:00",
       "approvalRequired": true,
       "sentAt": null
     },
