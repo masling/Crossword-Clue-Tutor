@@ -515,5 +515,89 @@
       "inflated figures crossword clue",
       "inflated language crossword clue"
     ]
+  },
+  {
+    "slug": "noble",
+    "clue": "Noble",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Noble depend on whether the clue means an aristocrat or title, high birth or rank, honorable character, exalted style, or a chemically unreactive noble gas.",
+    "answerGuidance": "Start with GRAND for five letters when Noble means impressive or elevated, AUGUST for six letters when it means dignified, EXALTED for seven letters when it means high in rank, and LORD or PEER for a four-letter aristocrat.",
+    "meaningBuckets": [
+      "A titled aristocrat, peer, lord, lady, duke, earl, baron, or other person of high rank.",
+      "Of high birth, royal standing, patrician background, or elevated social station.",
+      "Honorable, virtuous, gallant, generous, or morally elevated in character and conduct.",
+      "Grand, august, lofty, majestic, dignified, sublime, or exalted in style or status.",
+      "Chemically stable or largely unreactive, or an element belonging to the noble-gas group."
+    ],
+    "preferredAnswers": ["GRAND", "AUGUST", "EXALTED", "LORD", "HONORABLE", "ARISTOCRAT", "INERT"],
+    "answers": [
+      { "answer": "LORD", "sense": "A titled nobleman or person holding high rank." },
+      { "answer": "EARL", "sense": "A British noble whose rank is below a marquess and above a viscount." },
+      { "answer": "DUKE", "sense": "A nobleman of the highest hereditary rank below a monarch." },
+      { "answer": "PEER", "sense": "A member of the nobility, especially one entitled to sit in a peerage." },
+      { "answer": "LADY", "sense": "A title used for a noblewoman or the wife of a titled noble." },
+      { "answer": "NEON", "sense": "A chemically unreactive element in the noble-gas group." },
+      { "answer": "ROYAL", "sense": "Belonging to a monarch or royal family; of very high rank." },
+      { "answer": "REGAL", "sense": "Royal, majestic, or suggestive of a monarch's dignity." },
+      { "answer": "BARON", "sense": "A titled noble, generally at the lowest rank of the British peerage." },
+      { "answer": "GRAND", "sense": "Impressive, elevated, dignified, or noble in appearance and conception." },
+      { "answer": "LOFTY", "sense": "Noble, elevated, or high-minded in character, purpose, or style." },
+      { "answer": "INERT", "sense": "Largely unreactive, as the elements historically called noble gases." },
+      { "answer": "ARGON", "sense": "A colorless noble gas whose name may fit a five-letter entry." },
+      { "answer": "XENON", "sense": "A heavy noble gas used in lamps, imaging, and propulsion." },
+      { "answer": "RADON", "sense": "A naturally occurring radioactive element in the noble-gas group." },
+      { "answer": "AUGUST", "sense": "Respected, dignified, impressive, and noble in bearing." },
+      { "answer": "WORTHY", "sense": "Deserving honor or respect because of good character or merit." },
+      { "answer": "ARISTO", "sense": "An informal shortening for an aristocrat or member of the nobility." },
+      { "answer": "GENTLE", "sense": "Historically of noble birth or belonging to a well-born class." },
+      { "answer": "STABLE", "sense": "Not readily changing or reacting, a property associated with noble gases." },
+      { "answer": "HELIUM", "sense": "A light, chemically unreactive element in the noble-gas group." },
+      { "answer": "EXALTED", "sense": "Raised to a high rank, status, dignity, or level of praise." },
+      { "answer": "GALLANT", "sense": "Brave, honorable, and noble in action or conduct." },
+      { "answer": "SUBLIME", "sense": "Of outstanding grandeur, beauty, or nobility." },
+      { "answer": "KRYPTON", "sense": "A colorless noble gas whose name fits a seven-letter entry." },
+      { "answer": "HIGHBORN", "sense": "Born into a noble, aristocratic, or socially elevated family." },
+      { "answer": "PRINCELY", "sense": "Suitable for a prince; noble, generous, or splendid." },
+      { "answer": "VIRTUOUS", "sense": "Showing high moral standards and noble character." },
+      { "answer": "MAJESTIC", "sense": "Impressively grand, dignified, and noble in appearance." },
+      { "answer": "DIGNIFIED", "sense": "Having a composed, serious, and respect-worthy nobility of manner." },
+      { "answer": "HONORABLE", "sense": "Guided by integrity, duty, and conduct worthy of respect." },
+      { "answer": "PATRICIAN", "sense": "An aristocrat or a person of noble birth and refined bearing." },
+      { "answer": "ARISTOCRAT", "sense": "A member of the nobility or hereditary upper class." },
+      { "answer": "CHIVALROUS", "sense": "Brave, courteous, honorable, and noble in conduct." },
+      { "answer": "UNREACTIVE", "sense": "Not readily entering chemical reactions, as with noble gases." },
+      { "answer": "MAGNANIMOUS", "sense": "Generous, forgiving, and noble in spirit, especially toward a rival." }
+    ],
+    "queryVariants": [
+      {
+        "query": "noble person crossword clue",
+        "guidance": "A person or title clue points to a member of the aristocracy; entry length distinguishes the exact rank from a general term for a noble.",
+        "answers": ["LORD", "EARL", "DUKE", "PEER", "LADY", "BARON", "ARISTO", "PATRICIAN", "ARISTOCRAT"]
+      },
+      {
+        "query": "noble character crossword clue",
+        "guidance": "Character or conduct wording moves away from social rank and toward courage, integrity, generosity, virtue, or high-minded behavior.",
+        "answers": ["LOFTY", "WORTHY", "GALLANT", "VIRTUOUS", "HONORABLE", "CHIVALROUS", "MAGNANIMOUS"]
+      },
+      {
+        "query": "noble birth crossword clue",
+        "guidance": "Birth, family, or class context calls for royal, highborn, princely, patrician, or aristocratic status rather than moral goodness.",
+        "answers": ["ROYAL", "REGAL", "HIGHBORN", "PRINCELY", "PATRICIAN", "ARISTOCRAT"]
+      },
+      {
+        "query": "noble gas crossword clue",
+        "guidance": "Use the entry length to decide whether the puzzle wants a gas name or a property such as chemical stability and low reactivity.",
+        "answers": ["NEON", "INERT", "ARGON", "XENON", "RADON", "STABLE", "HELIUM", "KRYPTON", "UNREACTIVE"]
+      }
+    ],
+    "relatedQueries": [
+      "noble crossword clue",
+      "noble crossword answer",
+      "noble 5 letters crossword clue",
+      "noble person crossword clue",
+      "noble character crossword clue",
+      "noble birth crossword clue",
+      "noble gas crossword clue"
+    ]
   }
 ]

@@ -90,4 +90,7 @@ test("serves demand-backed clue hubs through the live solver data", async () => 
   assert.equal(solveClues(candidates, { clue: "inflated", length: 7 })[0].answer, "SWOLLEN");
   assert.equal(solveClues(candidates, { clue: "inflated prices", pattern: "H???" })[0].answer, "HIGH");
   assert.equal(solveClues(candidates, { clue: "inflated language", length: 6 })[0].answer, "TURGID");
+  assert.equal(solveClues(candidates, { clue: "noble", length: 5 })[0].answer, "GRAND");
+  assert.equal(solveClues(candidates, { clue: "noble person", pattern: "L???" })[0].answer, "LORD");
+  assert.equal(solveClues(candidates, { clue: "noble gas", pattern: "?E??" })[0].answer, "NEON");
 });

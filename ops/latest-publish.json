@@ -1,11 +1,11 @@
 {
-  "publishedAt": "2026-08-20T11:59:41.000Z",
-  "input": "data/clue-hubs.json#inflated-demand-gap",
+  "publishedAt": "2026-08-20T12:05:58.000Z",
+  "input": "data/clue-hubs.json#noble-demand-gap",
   "urls": [],
   "answerUrls": [],
   "clinicUrls": [],
   "hubUrls": [
-    "/crossword-clues/inflated/",
+    "/crossword-clues/noble/",
     "/crossword-clues/",
     "/solver/",
     "/explain/",
