@@ -1,17 +1,10 @@
 {
-  "publishedAt": "2026-08-20T12:53:42.000Z",
-  "input": "data/clue-hubs.json#wealth-with-riches-meaning",
+  "publishedAt": "2026-08-20T13:00:43.000Z",
+  "input": "scripts/build.mjs#homepage-featured-demand-links",
   "urls": [],
-  "answerUrls": [
-    "/crosswordese/riches/"
-  ],
+  "answerUrls": [],
   "clinicUrls": [],
   "hubUrls": [
-    "/crossword-clues/wealth/",
-    "/crossword-clues/",
-    "/crosswordese/",
-    "/solver/",
-    "/explain/",
-    "/research/ambiguous-crossword-clues/"
+    "/"
   ]
 }

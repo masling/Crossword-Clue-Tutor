@@ -285,6 +285,8 @@ function clueRows(items, { showDate = false } = {}) {
 const dates = [...new Set(clues.map((clue) => clue.date))].sort().reverse();
 const latestDate = dates[0];
 const latestClues = clues.filter((clue) => clue.date === latestDate).sort((a, b) => b.popularity - a.popularity);
+const featuredClueHubs = ["nipping", "congenital", "inflated", "noble", "cajole", "wealth", "path"].map((slug) => clueHubs.find((hub) => hub.slug === slug)).filter(Boolean);
+const featuredAnswers = ["BITING", "INBORN", "SWOLLEN", "GRAND", "COAX", "RICHES", "ROUTE"].map((value) => answerByValue.get(value)).filter(Boolean);
 
 const organizationId = canonicalUrl("/#organization");
 const organizationEntity = {
@@ -331,8 +333,12 @@ const homeBody = `<section class="hero shell">
   ${clueRows(latestClues.slice(0, 6))}
   <div class="daily-hub-links"><a href="/crossword-answers-today/">Crossword answers today →</a><a href="/crossword-answers-by-length/">Answers by length →</a>${activePublicationHubs().map((hub) => `<a href="${hub.route}">${escapeHtml(hub.linkLabel)} →</a>`).join("")}</div>
 </section>
+<section class="shell popular-clue-section">
+  <div class="section-heading"><div><h2>Popular clues with more than one answer</h2><p>Start with the entry length, then use the clue's exact sense and your crossings.</p></div><a href="/crossword-clues/">Browse the clue dictionary</a></div>
+  <div class="popular-clue-list">${featuredClueHubs.map((hub) => `<a href="/crossword-clues/${hub.slug}/"><strong>${escapeHtml(hub.clue)} crossword clue</strong><span>${hub.answers.length} reviewed possibilities</span><small>${hub.preferredAnswers.slice(0, 3).map(escapeHtml).join(" · ")}</small><i aria-hidden="true">→</i></a>`).join("")}</div>
+</section>
 <section class="answer-strip">
-  <div class="shell answer-strip-inner"><div><h2>Meet the words crosswords keep bringing back.</h2><p>Meaning, pronunciation, common clue patterns, and why the fill works so well in a grid.</p></div><div class="answer-links">${answers.slice(0, 5).map((answer) => `<a href="/crosswordese/${answer.slug}/">${answer.answer}</a>`).join("")}</div><a class="button button-secondary" href="/crosswordese/">Explore crosswordese</a></div>
+  <div class="shell answer-strip-inner"><div><h2>Meanings behind popular answers.</h2><p>Move from the clue to the answer's definition, pronunciation, and recurring clue patterns.</p></div><div class="answer-links">${featuredAnswers.map((answer) => `<a href="/crosswordese/${answer.slug}/">${answer.answer}</a>`).join("")}</div><a class="button button-secondary" href="/crosswordese/">Explore all meanings</a></div>
 </section>`;
 
 await writePage("/", pageTemplate({ title: config.name, description: config.description, route: "/", body: homeBody, bodyClass: "home-page", jsonLd: [organizationLd, websiteLd] }), false, config.contentUpdatedAt);

@@ -155,6 +155,14 @@ for (const route of sitemapRoutes) {
   if (!routeDepth.has(route)) errors.push(`${route}: indexable page is unreachable from the homepage`);
   else if (routeDepth.get(route) > 3) errors.push(`${route}: homepage click depth ${routeDepth.get(route)} exceeds 3`);
 }
+const homePage = await readFile(path.join(dist, "index.html"), "utf8");
+if (!homePage.includes("Popular clues with more than one answer")) errors.push("homepage is missing its demand-backed clue navigation");
+for (const slug of ["nipping", "congenital", "inflated", "noble", "cajole", "wealth", "path"]) {
+  if (!homePage.includes(`/crossword-clues/${slug}/`)) errors.push(`homepage is missing the featured ${slug} clue hub`);
+}
+for (const slug of ["biting", "inborn", "swollen", "grand", "coax", "riches", "route"]) {
+  if (!homePage.includes(`/crosswordese/${slug}/`)) errors.push(`homepage is missing the featured ${slug} meaning page`);
+}
 if (sitemap.includes("404.html")) errors.push("sitemap must not include the 404 page");
 if (!sitemap.includes("/crosswordese/spec/")) errors.push("sitemap is missing the SPEC answer entity");
 for (const answer of ["mia", "una", "goya"]) {
