@@ -46,6 +46,7 @@ for (const warning of result.warnings) console.warn(`warning: ${warning}`);
 
 const answerByValue = new Map(answers.map((answer) => [answer.answer, answer]));
 const publicationHubByName = new Map(publications.map((publication) => [publication.name, publication.route]));
+const supportedAnswerLengths = new Set([3, 4, 5, 6]);
 const publishRecord = {
   publishedAt: new Date().toISOString(),
   input: inputPath,
@@ -59,6 +60,12 @@ const publishRecord = {
     "/",
     "/crosswordese/",
     "/daily-clue-clinic/",
+    "/crossword-answers-today/",
+    "/crossword-answers-by-length/",
+    ...incoming
+      .map((clue) => clue.answer.length)
+      .filter((length) => supportedAnswerLengths.has(length))
+      .map((length) => `/crossword-answers/${length}-letters/`),
     ...incoming.map((clue) => publicationHubByName.get(clue.publication)).filter(Boolean)
   ])]
 };

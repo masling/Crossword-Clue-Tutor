@@ -1385,5 +1385,139 @@
     "publication": "The New York Times Crossword",
     "sourceDate": "2026-08-20",
     "clueNumber": "56-Down"
+  },
+  {
+    "slug": "scientists-workplace-nyt-mini",
+    "clue": "Scientist's workplace",
+    "answer": "LAB",
+    "date": "2026-08-20",
+    "popularity": 100,
+    "definition": "A lab is a laboratory equipped for scientific experiments, research, testing, or measurement.",
+    "explanation": "Scientists commonly conduct experiments and analyze results in a laboratory, shortened to the three-letter fill LAB.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "science",
+      "workplace",
+      "short-form"
+    ],
+    "clueType": "direct-definition",
+    "signal": "The clue asks for a common place associated with a profession.",
+    "hint": "Experiments are often conducted in this three-letter room.",
+    "reviewedAt": "2026-08-20",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "1-Across"
+  },
+  {
+    "slug": "best-friend-of-charlie-brown-nyt-mini",
+    "clue": "Best friend of Charlie Brown",
+    "answer": "LINUS",
+    "date": "2026-08-20",
+    "popularity": 99,
+    "definition": "Linus van Pelt is Charlie Brown's thoughtful, blanket-carrying friend in the Peanuts comic strip.",
+    "explanation": "In Peanuts, LINUS is one of Charlie Brown's closest friends and is recognizable by his security blanket.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "peanuts",
+      "comics",
+      "character"
+    ],
+    "clueType": "proper-noun",
+    "signal": "The named comic-strip protagonist asks for another character's first name.",
+    "hint": "He is Lucy's younger brother and often carries a blue blanket.",
+    "reviewedAt": "2026-08-20",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "4-Across"
+  },
+  {
+    "slug": "looking-for-a-fight-informally-nyt-mini",
+    "clue": "Looking for a fight, informally",
+    "answer": "AGGRO",
+    "date": "2026-08-20",
+    "popularity": 98,
+    "definition": "Aggro is informal British usage for aggressive, confrontational behavior or trouble.",
+    "explanation": "“Informally” licenses slang, and someone seeking a confrontation may be described as AGGRO.",
+    "partOfSpeech": "adjective",
+    "tags": [
+      "slang",
+      "british",
+      "informal"
+    ],
+    "clueType": "informal",
+    "signal": "The explicit “informally” tag signals a slang answer rather than a formal adjective.",
+    "hint": "The five-letter slang term is shortened from aggressive or aggression.",
+    "reviewedAt": "2026-08-20",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "6-Across"
+  },
+  {
+    "slug": "turtles-hiding-place-nyt-mini",
+    "clue": "Turtle's hiding place",
+    "answer": "SHELL",
+    "date": "2026-08-20",
+    "popularity": 97,
+    "definition": "A shell is the hard protective structure covering a turtle's body.",
+    "explanation": "A turtle can retract its head and limbs into its protective SHELL, making it the animal's literal hiding place.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "animal",
+      "turtle",
+      "anatomy"
+    ],
+    "clueType": "direct-definition",
+    "signal": "The possessive clue asks for a protective place belonging to the animal.",
+    "hint": "It is both the turtle's armor and the place it retreats into.",
+    "reviewedAt": "2026-08-20",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "7-Across"
+  },
+  {
+    "slug": "plant-food-question-mark-nyt-mini",
+    "clue": "Plant food?",
+    "answer": "LIGHT",
+    "date": "2026-08-20",
+    "popularity": 96,
+    "definition": "Light supplies the energy plants use during photosynthesis to produce sugars.",
+    "explanation": "The question mark signals a playful definition: plants do not eat LIGHT, but they use its energy to make food through photosynthesis.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "plants",
+      "photosynthesis",
+      "question-mark",
+      "wordplay"
+    ],
+    "clueType": "wordplay",
+    "signal": "The question mark warns that “food” is being used conceptually rather than as a literal meal.",
+    "hint": "Think of the energy source required for photosynthesis.",
+    "reviewedAt": "2026-08-20",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "1-Down"
+  },
+  {
+    "slug": "dont-look-back-in-blank-oasis-hit-nyt-mini",
+    "clue": "\"Don't Look Back in ___\" (Oasis hit)",
+    "answer": "ANGER",
+    "date": "2026-08-20",
+    "popularity": 95,
+    "definition": "“Don't Look Back in Anger” is a 1996 single by the English rock band Oasis.",
+    "explanation": "The official Oasis song title completes the blank with the five-letter word ANGER.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "music",
+      "oasis",
+      "song-title",
+      "fill-in-the-blank"
+    ],
+    "clueType": "fill-in-the-blank",
+    "signal": "Quotation marks and the parenthetical artist identify a song-title completion.",
+    "hint": "The missing title word names a strong feeling of displeasure.",
+    "reviewedAt": "2026-08-20",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "2-Down"
   }
 ]

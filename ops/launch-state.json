@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T17:28:00+08:00",
+  "updatedAt": "2026-08-20T17:36:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -29,8 +29,8 @@
     }
   },
   "content": {
-    "indexablePages": 123,
-    "reviewedClues": 66,
+    "indexablePages": 129,
+    "reviewedClues": 72,
     "answerMeaningPages": 24,
     "evergreenClueHubs": 3,
     "linkableGuides": 1,
@@ -45,7 +45,7 @@
       "USA TODAY Crossword"
     ],
     "lastPublishedSourceDates": {
-      "NYT Mini": "2026-08-19",
+      "NYT Mini": "2026-08-20",
       "The New York Times Crossword": "2026-08-20",
       "LA Times Crossword": "2026-08-20",
       "USA TODAY Crossword": "2026-08-19"

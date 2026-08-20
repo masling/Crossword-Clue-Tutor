@@ -1,13 +1,13 @@
 {
-  "publishedAt": "2026-08-20T08:13:47.004Z",
-  "input": "ops/intake/2026-08-20-nyt-daily-routine.json",
+  "publishedAt": "2026-08-20T08:35:50.249Z",
+  "input": "ops/intake/2026-08-20-nyt-mini-routine.json",
   "urls": [
-    "/explainers/practice-japanese-nyt-daily/",
-    "/explainers/visionary-hint-to-down-clues-nyt-daily/",
-    "/explainers/distinctive-expression-hint-to-across-clues-nyt-daily/",
-    "/explainers/shift-gears-hint-to-across-clues-nyt-daily/",
-    "/explainers/forum-discussion-popular-once-nyt-daily/",
-    "/explainers/arthur-ashe-courage-award-eg-nyt-daily/"
+    "/explainers/scientists-workplace-nyt-mini/",
+    "/explainers/best-friend-of-charlie-brown-nyt-mini/",
+    "/explainers/looking-for-a-fight-informally-nyt-mini/",
+    "/explainers/turtles-hiding-place-nyt-mini/",
+    "/explainers/plant-food-question-mark-nyt-mini/",
+    "/explainers/dont-look-back-in-blank-oasis-hit-nyt-mini/"
   ],
   "answerUrls": [],
   "clinicUrls": [
@@ -17,16 +17,10 @@
     "/",
     "/crosswordese/",
     "/daily-clue-clinic/",
-    "/nyt-crossword-clues/",
-    "/guides/answer-length-and-crossings/",
-    "/crossword-clues/",
-    "/crossword-clues/pitch/",
-    "/crossword-clues/charge/",
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
     "/crossword-answers/3-letters/",
-    "/crossword-answers/4-letters/",
     "/crossword-answers/5-letters/",
-    "/crossword-answers/6-letters/"
+    "/nyt-mini-crossword-clues/"
   ]
 }

@@ -16,6 +16,10 @@ of August 20 while the site still stopped at August 19. Six independently explai
 clues were selected to cover the reverse-word-order theme, its revealers, and durable
 entities without mirroring the complete puzzle.
 
+The public NYT Mini source later advanced to August 20. Six selected clues were added,
+and the intake workflow was corrected so every fresh batch also submits the dynamically
+changed Answers Today and answer-length aggregation pages to IndexNow.
+
 Public clue databases also showed that “Pitch” appears across many publishers and has
 more than 20 recorded occurrences, with answer sets spanning material, throwing, sound,
 slope, sales, sports fields, and baseball. A reviewed answers-by-length hub was added as
