@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T20:20:41+08:00",
+  "updatedAt": "2026-08-20T20:26:57+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -34,29 +34,29 @@
     }
   },
   "content": {
-    "indexablePages": 150,
+    "indexablePages": 152,
     "reviewedClues": 78,
-    "answerMeaningPages": 31,
+    "answerMeaningPages": 32,
     "latestMeaningExpansion": {
-      "answers": ["BITING", "INBORN", "SWOLLEN", "GRAND"],
-      "sourceHubs": ["Nipping", "Congenital", "Inflated", "Noble"],
+      "answers": ["BITING", "INBORN", "SWOLLEN", "GRAND", "COAX"],
+      "sourceHubs": ["Nipping", "Congenital", "Inflated", "Noble", "Cajole"],
       "internalLinking": "Matching hub candidates and query variants link automatically to their meaning pages"
     },
-    "evergreenClueHubs": 10,
-    "evergreenClueHubCandidates": 220,
+    "evergreenClueHubs": 11,
+    "evergreenClueHubCandidates": 237,
     "solverReviewedClueCandidates": 78,
-    "solverHubCandidates": 220,
-    "solverCandidatePool": 298,
+    "solverHubCandidates": 237,
+    "solverCandidatePool": 315,
     "linkableGuides": 1,
     "linkableResearchPages": 1,
     "datasetDownloadFormats": [
       "JSON",
       "CSV"
     ],
-    "structuredDataPages": 150,
-    "breadcrumbStructuredDataPages": 149,
+    "structuredDataPages": 152,
+    "breadcrumbStructuredDataPages": 151,
     "articleStructuredDataPages": 84,
-    "socialPreviewPages": 152,
+    "socialPreviewPages": 154,
     "faviconTheme": "Crossword grid with teal crossing entries and a gold intersection on a dark ink field",
     "faviconAssets": [
       "SVG",
@@ -94,25 +94,25 @@
       "Clue-to-answer meaning links for continued reading"
     ],
     "internalLinkAudit": {
-      "verifiedAt": "2026-08-20T20:20:41+08:00",
+      "verifiedAt": "2026-08-20T20:26:57+08:00",
       "orphanPages": 0,
       "unreachableFromHome": 0,
       "maximumClickDepth": 3,
       "depthDistribution": {
         "0": 1,
         "1": 29,
-        "2": 101,
+        "2": 103,
         "3": 19
       },
       "buildGate": "Fail when any indexable page has no inbound HTML link, is unreachable from home, or exceeds depth 3."
     },
     "selectionPolicy": "Routine same-day coverage is independent of trends and historical keyword volume. Use Bing, Google Trends, and Search Console afterward to backfill missed dates and expand materially undercovered queries or topics.",
     "latestDemandBackfill": {
-      "keyword": "noble crossword clue",
-      "bingImpressions": 711,
+      "keyword": "cajole crossword clue",
+      "bingImpressions": 666,
       "bingPeriod": "2026-05-20 to 2026-08-17 worldwide",
-      "publishedRoute": "/crossword-clues/noble/",
-      "reviewedCandidates": 36,
+      "publishedRoute": "/crossword-clues/cajole/",
+      "reviewedCandidates": 17,
       "queryVariants": 4
     },
     "rejectedDemandSignals": [
@@ -183,7 +183,7 @@
     "bingSiteScanRemediation": "Generated document titles are now capped at 70 characters; verify with a later rescan.",
     "searchImpressions": 0,
     "searchClicks": 0,
-    "indexNowSubmittedUrls": 425
+    "indexNowSubmittedUrls": 431
   },
   "deployment": {
     "provider": "Cloudflare Pages",
@@ -192,7 +192,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "9e8c27a",
+    "lastVerifiedCommit": "11541e4",
     "lastDeployStatus": "Success"
   },
   "outreach": {
