@@ -57,6 +57,22 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
       for (const answer of hub.preferredAnswers ?? []) {
         if (!possibleAnswers.has(answer)) errors.push(`${label} preferred answer ${answer} is not in its answer list`);
       }
+      const variantQueries = new Set();
+      for (const [variantIndex, variant] of (hub.queryVariants ?? []).entries()) {
+        const variantLabel = `${label}.queryVariants[${variantIndex}]`;
+        if (!variant.query || !variant.guidance) errors.push(`${variantLabel} needs query and guidance`);
+        if ((variant.guidance ?? "").length < 50) errors.push(`${variantLabel} guidance is too short`);
+        if (variantQueries.has(variant.query)) errors.push(`${label} has duplicate query variant ${variant.query}`);
+        variantQueries.add(variant.query);
+        if (!Array.isArray(variant.answers) || variant.answers.length < 2) errors.push(`${variantLabel} needs at least two candidate answers`);
+        const variantAnswers = new Set();
+        for (const answer of variant.answers ?? []) {
+          if (!possibleAnswers.has(answer)) errors.push(`${variantLabel} answer ${answer} is not in the hub answer list`);
+          if (variantAnswers.has(answer)) errors.push(`${variantLabel} repeats answer ${answer}`);
+          variantAnswers.add(answer);
+        }
+      }
+      if (hub.queryVariants && hub.queryVariants.length < 3) errors.push(`${label} needs at least three query variants when variants are provided`);
       if (!Array.isArray(hub.relatedQueries) || hub.relatedQueries.length < 2) errors.push(`${label} needs at least two related queries`);
     }
   }

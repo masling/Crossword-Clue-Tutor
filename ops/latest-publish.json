@@ -1,10 +1,14 @@
 {
-  "publishedAt": "2026-08-20T11:06:44.000Z",
-  "input": "src/favicon.svg#crossword-grid-theme",
+  "publishedAt": "2026-08-20T11:12:32.000Z",
+  "input": "data/clue-hubs.json#light-sharp-query-variants",
   "urls": [],
   "answerUrls": [],
   "clinicUrls": [],
   "hubUrls": [
-    "/"
+    "/crossword-clues/sharp/",
+    "/crossword-clues/light/",
+    "/research/ambiguous-crossword-clues/",
+    "/assets/clue-hubs.json",
+    "/assets/clue-hubs.csv"
   ]
 }

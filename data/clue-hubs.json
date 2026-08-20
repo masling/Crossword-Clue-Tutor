@@ -203,13 +203,36 @@
       { "answer": "PIERCING", "sense": "Extremely sharp in sound, sight, pain, or perception." },
       { "answer": "INCISIVE", "sense": "Intellectually sharp, direct, and clear in analysis." }
     ],
+    "queryVariants": [
+      {
+        "query": "mentally sharp crossword clue",
+        "guidance": "Use the entry length to distinguish general quickness from judgment, attention, or incisive analysis.",
+        "answers": ["KEEN", "ACUTE", "SMART", "ALERT", "ASTUTE", "INCISIVE"]
+      },
+      {
+        "query": "sharp taste crossword clue",
+        "guidance": "A food or flavor clue usually wants sourness, acidity, spice, or a biting sensory quality.",
+        "answers": ["ACID", "TART", "BITING", "PUNGENT", "PIQUANT"]
+      },
+      {
+        "query": "sharp sound crossword clue",
+        "guidance": "Sound wording narrows Sharp to a high, harsh, or penetrating auditory quality.",
+        "answers": ["SHRILL", "PIERCING"]
+      },
+      {
+        "query": "looking sharp crossword clue",
+        "guidance": "Appearance or fashion context points away from edges and toward a polished stylish sense.",
+        "answers": ["CHIC", "SMART", "STYLISH"]
+      }
+    ],
     "relatedQueries": [
       "sharp crossword clue",
       "sharp crossword answer",
       "sharp 4 letters crossword clue",
       "mentally sharp crossword clue",
       "sharp taste crossword clue",
-      "sharp sound crossword clue"
+      "sharp sound crossword clue",
+      "looking sharp crossword clue"
     ]
   },
   {
@@ -250,9 +273,40 @@
       { "answer": "KINDLE", "sense": "To light a fire or cause something to begin burning." },
       { "answer": "ALIGHT", "sense": "Illuminated, on fire, or descending to a surface." },
       { "answer": "LUCENT", "sense": "Shining, glowing, or giving off light." },
+      { "answer": "STROBE", "sense": "A light that produces rapid regular flashes." },
+      { "answer": "BEACON", "sense": "A warning or guiding light that may flash." },
+      { "answer": "DARK", "sense": "The state before it gets light or where light is absent." },
+      { "answer": "GLARE", "sense": "A strong, dazzling, or reflected light." },
+      { "answer": "SHEEN", "sense": "A soft shine produced by reflected light." },
+      { "answer": "NIGHT", "sense": "The dark period before daylight returns." },
+      { "answer": "BLINKER", "sense": "A vehicle signal light that flashes on and off." },
+      { "answer": "FLASHER", "sense": "A warning lamp or device that produces flashing light." },
+      { "answer": "PREDAWN", "sense": "The period before daybreak and before it gets light." },
       { "answer": "LUMINOUS", "sense": "Emitting light or appearing brightly illuminated." },
       { "answer": "DELICATE", "sense": "Light, fine, or gentle in texture, touch, or effect." },
       { "answer": "WEIGHTLESS", "sense": "Having no apparent weight; extremely light." }
+    ],
+    "queryVariants": [
+      {
+        "query": "flashing light crossword clue",
+        "guidance": "A warning, vehicle, or rapid-pulse context distinguishes the type of flashing light.",
+        "answers": ["STROBE", "BEACON", "BLINKER", "FLASHER"]
+      },
+      {
+        "query": "reflected light crossword clue",
+        "guidance": "Reflected light can be a small gleam, a soft sheen, an ordinary shine, or an intense glare.",
+        "answers": ["GLEAM", "SHEEN", "SHINE", "GLARE"]
+      },
+      {
+        "query": "before it gets light crossword clue",
+        "guidance": "Time-of-day wording may ask for darkness itself, the night, or the predawn period.",
+        "answers": ["DARK", "NIGHT", "PREDAWN"]
+      },
+      {
+        "query": "light in color crossword clue",
+        "guidance": "Color context points to low saturation or a fair shade rather than illumination or weight.",
+        "answers": ["PALE", "FAINT", "BLOND"]
+      }
     ],
     "relatedQueries": [
       "light crossword clue",
@@ -260,7 +314,8 @@
       "light 4 letters crossword clue",
       "flashing light crossword clue",
       "reflected light crossword clue",
-      "before it gets light crossword clue"
+      "before it gets light crossword clue",
+      "light in color crossword clue"
     ]
   }
 ]
