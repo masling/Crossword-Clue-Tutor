@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T16:48:00+08:00",
+  "updatedAt": "2026-08-20T16:50:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -62,6 +62,12 @@
     "googleFeedStatus": "Success",
     "googleFeedDiscoveredPages": 30,
     "googleIndexedPages": 0,
+    "publicSearchCheckedAt": "2026-08-20T16:49:00+08:00",
+    "publicSearchSiteQueryStatus": "No Crossword Clue Tutor result detected yet",
+    "productionSitemapStatus": "Verified",
+    "productionSitemapUrls": 130,
+    "productionRobotsStatus": "search=yes; Allow: /; sitemap and feed declared",
+    "productionCrawlStatus": 200,
     "bingSiteVerified": true,
     "bingSitemapStatus": "Success",
     "bingSitemapDiscoveredPages": 92,
