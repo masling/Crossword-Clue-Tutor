@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T15:13:00+08:00",
+  "updatedAt": "2026-08-20T16:16:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -29,10 +29,11 @@
     }
   },
   "content": {
-    "indexablePages": 108,
-    "reviewedClues": 60,
+    "indexablePages": 115,
+    "reviewedClues": 66,
     "answerMeaningPages": 24,
     "evergreenClueHubs": 1,
+    "linkableGuides": 1,
     "selectionPolicy": "Routine same-day coverage is independent of trends and historical keyword volume. Use Bing, Google Trends, and Search Console afterward to backfill missed dates and expand materially undercovered queries or topics.",
     "monitoredPublications": [
       "NYT Mini",
@@ -42,7 +43,7 @@
     ],
     "lastPublishedSourceDates": {
       "NYT Mini": "2026-08-19",
-      "The New York Times Crossword": "2026-08-19",
+      "The New York Times Crossword": "2026-08-20",
       "LA Times Crossword": "2026-08-20",
       "USA TODAY Crossword": "2026-08-19"
     }

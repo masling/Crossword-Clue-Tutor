@@ -1,12 +1,23 @@
 {
-  "publishedAt": "2026-08-20T07:10:00.000Z",
-  "input": "data/clue-hubs.json#diffuse",
-  "urls": [],
+  "publishedAt": "2026-08-20T08:13:47.004Z",
+  "input": "ops/intake/2026-08-20-nyt-daily-routine.json",
+  "urls": [
+    "/explainers/practice-japanese-nyt-daily/",
+    "/explainers/visionary-hint-to-down-clues-nyt-daily/",
+    "/explainers/distinctive-expression-hint-to-across-clues-nyt-daily/",
+    "/explainers/shift-gears-hint-to-across-clues-nyt-daily/",
+    "/explainers/forum-discussion-popular-once-nyt-daily/",
+    "/explainers/arthur-ashe-courage-award-eg-nyt-daily/"
+  ],
   "answerUrls": [],
-  "clinicUrls": [],
+  "clinicUrls": [
+    "/daily-clue-clinic/2026-08-20/"
+  ],
   "hubUrls": [
     "/",
-    "/crossword-clues/",
-    "/crossword-clues/diffuse/"
+    "/crosswordese/",
+    "/daily-clue-clinic/",
+    "/nyt-crossword-clues/",
+    "/guides/answer-length-and-crossings/"
   ]
 }

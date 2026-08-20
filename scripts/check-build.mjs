@@ -71,6 +71,7 @@ if (!sitemap.includes("/explainers/forfends-nyt-daily/")) errors.push("sitemap i
 if (!sitemap.includes("/explainers/private-sleeping-accommodations-nyt-daily/")) errors.push("sitemap is missing the latest NYT Daily batch");
 if (!sitemap.includes("/crossword-clues/")) errors.push("sitemap is missing the clue dictionary");
 if (!sitemap.includes("/crossword-clues/diffuse/")) errors.push("sitemap is missing the Diffuse clue hub");
+if (!sitemap.includes("/guides/answer-length-and-crossings/")) errors.push("sitemap is missing the ambiguity solving guide");
 for (const publication of publications) {
   const hasPublishedClues = clues.some((clue) => clue.publication === publication.name);
   const routeInSitemap = sitemap.includes(publication.route);
@@ -98,6 +99,9 @@ if (!usaTodayHub.includes("Arthur for whom the ESPYs&#039; Courage Award is name
 const diffuseHub = await readFile(path.join(dist, "crossword-clues/diffuse/index.html"), "utf8");
 if (!diffuseHub.includes("Diffuse crossword clue")) errors.push("Diffuse clue hub is missing its search target");
 if (!diffuseHub.includes("SPREAD") || !diffuseHub.includes("OSMOSE") || !diffuseHub.includes("PROLIX")) errors.push("Diffuse clue hub is missing reviewed multi-sense answers");
+const ambiguityGuide = await readFile(path.join(dist, "guides/answer-length-and-crossings/index.html"), "utf8");
+if (!ambiguityGuide.includes("How answer length and crossings solve ambiguous crossword clues")) errors.push("ambiguity guide is missing its search target");
+if (!ambiguityGuide.includes("/crossword-clues/diffuse/") || !ambiguityGuide.includes("/solver/")) errors.push("ambiguity guide is missing its useful internal links");
 const privacyPage = await readFile(path.join(dist, "privacy/index.html"), "utf8");
 if (!privacyPage.includes("Cloudflare Web Analytics")) errors.push("privacy page is missing the production analytics disclosure");
 if (!privacyPage.includes("app.pageview.app")) errors.push("privacy page is missing the Pageview analytics disclosure");
