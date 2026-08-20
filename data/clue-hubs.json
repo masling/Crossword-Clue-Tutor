@@ -27,5 +27,39 @@
       "diffuse 6 letters crossword clue",
       "diffuse slowly crossword clue"
     ]
+  },
+  {
+    "slug": "pitch",
+    "clue": "Pitch",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Pitch depend on whether the clue means throw, slope, sound level, sales talk, playing field, sticky material, or a baseball delivery.",
+    "answerGuidance": "Start with TAR for three letters when pitch means a dark sticky material, TONE for four letters when it means sound level, and SLOPE or SPIEL for five letters depending on whether the clue means an incline or a sales presentation.",
+    "answers": [
+      { "answer": "TAR", "sense": "Dark sticky material historically overlapping with pitch." },
+      { "answer": "LOB", "sense": "Throw something in a high arc." },
+      { "answer": "KEY", "sense": "Musical tonal center related to pitch." },
+      { "answer": "TONE", "sense": "The quality or level of a musical sound." },
+      { "answer": "TOSS", "sense": "Throw something lightly or casually." },
+      { "answer": "TILT", "sense": "A sloping or inclined position." },
+      { "answer": "SLOPE", "sense": "An inclined surface or degree of inclination." },
+      { "answer": "SLANT", "sense": "An angle, slope, or particular persuasive angle." },
+      { "answer": "SPIEL", "sense": "A prepared persuasive speech or sales pitch." },
+      { "answer": "THROW", "sense": "Send an object through the air, including a ball." },
+      { "answer": "FLING", "sense": "Throw with force or little restraint." },
+      { "answer": "FIELD", "sense": "A playing area, called a pitch in several sports." },
+      { "answer": "SLIDER", "sense": "A baseball pitch with late lateral movement." },
+      { "answer": "INCLINE", "sense": "A slope or upward/downward angle." },
+      { "answer": "PROMOTE", "sense": "Make a persuasive pitch for something." },
+      { "answer": "PROPOSAL", "sense": "A formal idea or plan presented as a pitch." },
+      { "answer": "SALESTALK", "sense": "Persuasive language used in a commercial pitch." },
+      { "answer": "SALESSPIEL", "sense": "A rehearsed promotional or sales pitch." }
+    ],
+    "relatedQueries": [
+      "pitch crossword clue",
+      "pitch crossword answer",
+      "pitch 3 letters crossword clue",
+      "sales pitch crossword clue",
+      "baseball pitch crossword clue"
+    ]
   }
 ]

@@ -16,6 +16,16 @@ of August 20 while the site still stopped at August 19. Six independently explai
 clues were selected to cover the reverse-word-order theme, its revealers, and durable
 entities without mirroring the complete puzzle.
 
+Public clue databases also showed that “Pitch” appears across many publishers and has
+more than 20 recorded occurrences, with answer sets spanning material, throwing, sound,
+slope, sales, sports fields, and baseball. A reviewed answers-by-length hub was added as
+the second evergreen clue-dictionary entry.
+
+Evidence checked:
+
+- https://crosswordtracker.com/clue/pitch/
+- https://www.crosswordsolver.com/clue/PITCH
+
 ## Outreach opportunity
 
 Several established resource and community sites maintain curated link directories,
