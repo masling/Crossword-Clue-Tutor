@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T19:00:08+08:00",
+  "updatedAt": "2026-08-20T19:09:17+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -52,6 +52,13 @@
     "breadcrumbStructuredDataPages": 141,
     "articleStructuredDataPages": 84,
     "socialPreviewPages": 144,
+    "faviconTheme": "Crossword grid with teal crossing entries and a gold intersection on a dark ink field",
+    "faviconAssets": [
+      "SVG",
+      "32x32 PNG",
+      "16x16 PNG",
+      "180x180 Apple Touch Icon"
+    ],
     "expandedSeoGuides": 5,
     "crossPublicationTodayHubs": 1,
     "answerLengthIndexes": 1,
@@ -137,7 +144,7 @@
     "bingSiteScanRemediation": "Generated document titles are now capped at 70 characters; verify with a later rescan.",
     "searchImpressions": 0,
     "searchClicks": 0,
-    "indexNowSubmittedUrls": 386
+    "indexNowSubmittedUrls": 387
   },
   "deployment": {
     "provider": "Cloudflare Pages",
@@ -146,7 +153,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "a357af5",
+    "lastVerifiedCommit": "216acb1",
     "lastDeployStatus": "Success"
   },
   "outreach": {
