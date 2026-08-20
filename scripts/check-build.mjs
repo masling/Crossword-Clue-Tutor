@@ -138,6 +138,12 @@ for (const answer of ["OBIT", "COTS", "DOTS", "LIGHT"]) {
   if (!questionMarkGuide.includes(answer)) errors.push(`question-mark guide is missing reviewed example ${answer}`);
 }
 if (!questionMarkGuide.includes('"@type":"Article"')) errors.push("question-mark guide is missing Article structured data");
+const fillBlankGuide = await readFile(path.join(dist, "clue-types/fill-in-the-blank/index.html"), "utf8");
+if (!fillBlankGuide.includes("How to solve fill-in-the-blank crossword clues")) errors.push("fill-in-the-blank guide is missing its primary search target");
+for (const answer of ["SPOON", "OUTTA", "UNTO", "ERAS", "ANGER"]) {
+  if (!fillBlankGuide.includes(answer)) errors.push(`fill-in-the-blank guide is missing reviewed example ${answer}`);
+}
+if (!fillBlankGuide.includes('"@type":"Article"')) errors.push("fill-in-the-blank guide is missing Article structured data");
 const answerLengthIndex = await readFile(path.join(dist, "crossword-answers-by-length/index.html"), "utf8");
 if (!answerLengthIndex.includes("Crossword answers by length")) errors.push("answers-by-length index is missing its search target");
 for (const length of [3, 4, 5, 6]) {
