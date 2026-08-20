@@ -225,6 +225,13 @@ p { text-wrap: pretty; }
 .mechanism-grid > div { border-top: 1px solid var(--line-strong); padding-top: 18px; }
 .mechanism-grid h2 { font-size: 1.15rem !important; }
 .hint-aside > span { display: block; color: var(--muted); }
+.answer-length-groups { display: grid; gap: 28px; margin-top: 24px; }
+.answer-length-group { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 22px; align-items: start; padding-top: 16px; border-top: 1px solid var(--line-strong); }
+.answer-length-group h3 { margin: 7px 0 0; color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.055em; }
+.answer-length-group > div { display: grid; gap: 8px; }
+.answer-length-group article { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 18px; padding: 10px 12px; border-radius: 8px; background: var(--surface); }
+.answer-length-group strong { color: var(--primary-dark); letter-spacing: 0.08em; }
+.answer-length-group span { color: var(--muted); font-size: 0.9rem; }
 
 .type-directory { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0 34px; margin-bottom: 110px; border-top: 1px solid var(--line-strong); }
 .type-directory a { min-height: 210px; padding: 28px 0; border-bottom: 1px solid var(--line); text-decoration: none; }
@@ -294,6 +301,7 @@ p { text-wrap: pretty; }
   .today-note { max-width: 420px; }
   .section-split, .article-layout, .directory-layout { grid-template-columns: 1fr; gap: 45px; }
   .article-aside, .directory-layout aside { position: static; }
+  .answer-length-group { grid-template-columns: 1fr; gap: 9px; }
   .answer-strip-inner { grid-template-columns: 1fr; }
   .answer-strip-inner > .button { width: max-content; }
   .explanation-grid { grid-template-columns: 1fr; }
@@ -335,6 +343,7 @@ p { text-wrap: pretty; }
   .answer-header { align-items: flex-start; flex-direction: column; }
   .answer-header h1 { font-size: 3.2rem; }
   .article-main .breadcrumbs { margin-bottom: 30px; }
+  .answer-length-group article { grid-template-columns: 1fr; gap: 3px; }
   .clinic-list article { grid-template-columns: 38px minmax(0, 1fr); gap: 12px; }
   .clinic-archive a { grid-template-columns: 1fr 24px; padding-block: 18px; }
   .clinic-archive a span { grid-column: 1; grid-row: 2; }

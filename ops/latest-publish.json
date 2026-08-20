@@ -1,19 +1,12 @@
 {
-  "publishedAt": "2026-08-20T04:20:33.140Z",
-  "input": "ops/intake/2026-08-20-la-times-demand-selected.json",
-  "urls": [
-    "/explainers/ethan-of-the-before-trilogy-la-times/",
-    "/explainers/mars-rover-org-la-times/",
-    "/explainers/marketplace-with-personalized-gifts-la-times/"
-  ],
+  "publishedAt": "2026-08-20T07:10:00.000Z",
+  "input": "data/clue-hubs.json#diffuse",
+  "urls": [],
   "answerUrls": [],
-  "clinicUrls": [
-    "/daily-clue-clinic/2026-08-20/"
-  ],
+  "clinicUrls": [],
   "hubUrls": [
     "/",
-    "/crosswordese/",
-    "/daily-clue-clinic/",
-    "/la-times-crossword-answers/"
+    "/crossword-clues/",
+    "/crossword-clues/diffuse/"
   ]
 }

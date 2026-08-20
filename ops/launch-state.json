@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T12:31:00+08:00",
+  "updatedAt": "2026-08-20T15:10:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -29,9 +29,10 @@
     }
   },
   "content": {
-    "indexablePages": 106,
+    "indexablePages": 108,
     "reviewedClues": 60,
     "answerMeaningPages": 24,
+    "evergreenClueHubs": 1,
     "selectionPolicy": "Routine same-day coverage is independent of trends and historical keyword volume. Use Bing, Google Trends, and Search Console afterward to backfill missed dates and expand materially undercovered queries or topics.",
     "monitoredPublications": [
       "NYT Mini",

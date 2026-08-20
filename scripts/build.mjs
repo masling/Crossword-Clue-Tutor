@@ -9,15 +9,16 @@ async function readJson(relativePath) {
   return JSON.parse(await readFile(path.join(root, relativePath), "utf8"));
 }
 
-const [config, clues, answers, clueTypes, publications] = await Promise.all([
+const [config, clues, answers, clueTypes, publications, clueHubs] = await Promise.all([
   readJson("site.config.json"),
   readJson("data/clues.json"),
   readJson("data/answers.json"),
   readJson("data/clue-types.json"),
-  readJson("data/publications.json")
+  readJson("data/publications.json"),
+  readJson("data/clue-hubs.json")
 ]);
 
-const validation = validateContent({ clues, answers, clueTypes, publications, config });
+const validation = validateContent({ clues, answers, clueTypes, publications, clueHubs, config });
 for (const warning of validation.warnings) console.warn(`warning: ${warning}`);
 if (validation.errors.length) throw new Error(validation.errors.join("\n"));
 
@@ -88,6 +89,7 @@ function footer() {
         <a href="/editorial-policy/">Editorial policy</a>
         <a href="/privacy/">Privacy</a>
         <a href="/daily-clue-clinic/">Daily clue clinic</a>
+        <a href="/crossword-clues/">Clue dictionary</a>
         ${publicationLinks}
       </nav>
     </div>
@@ -289,6 +291,25 @@ function toolPage(mode) {
 for (const mode of ["solve", "explain"]) {
   const item = toolPage(mode);
   await writePage(item.route, item.html);
+}
+
+const clueHubLatestReview = clueHubs.map((hub) => hub.reviewedAt).sort().reverse()[0] ?? config.contentUpdatedAt;
+const clueHubIndexBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Crossword clue dictionary" }])}<h1>Crossword clues with more than one answer.</h1><p>Use answer length, crossings, and clue sense to choose among reviewed possibilities for recurring clues.</p></section><section class="shell directory-layout"><aside><p>Why multiple answers?</p><span>A short clue can point to different synonyms in different grids. These pages organize the useful candidates instead of pretending one answer always fits.</span></aside><div class="word-directory">${clueHubs.map((hub) => `<a href="/crossword-clues/${hub.slug}/"><span class="word-name">${escapeHtml(hub.clue)}</span><span>${escapeHtml(hub.summary)}</span><span class="row-arrow" aria-hidden="true">→</span></a>`).join("")}</div></section>`;
+const clueHubIndexLd = { "@context": "https://schema.org", "@type": "CollectionPage", name: "Crossword clue dictionary", description: "Recurring crossword clues organized by answer length and meaning.", url: canonicalUrl("/crossword-clues/") };
+await writePage("/crossword-clues/", pageTemplate({ title: "Crossword clue dictionary", description: "Find possible crossword answers by clue, length, crossings, and meaning.", route: "/crossword-clues/", body: clueHubIndexBody, bodyClass: "clue-dictionary-page", jsonLd: [clueHubIndexLd] }), false, clueHubLatestReview);
+
+for (const hub of clueHubs) {
+  const route = `/crossword-clues/${hub.slug}/`;
+  const groupedAnswers = new Map();
+  for (const answer of hub.answers) {
+    const length = answer.answer.length;
+    if (!groupedAnswers.has(length)) groupedAnswers.set(length, []);
+    groupedAnswers.get(length).push(answer);
+  }
+  const answerGroups = [...groupedAnswers.entries()].sort(([a], [b]) => a - b).map(([length, items]) => `<section class="answer-length-group"><h3>${length} letters</h3><div>${items.map((answer) => `<article><strong>${escapeHtml(answer.answer)}</strong><span>${escapeHtml(answer.sense)}</span></article>`).join("")}</div></section>`).join("");
+  const body = `<article class="shell article-layout clue-dictionary-entry"><div class="article-main">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Clue dictionary", href: "/crossword-clues/" }, { label: hub.clue }])}<header><p class="content-kind">Recurring crossword clue · multiple possible answers</p><h1>${escapeHtml(hub.clue)} crossword clue</h1><p class="review-date">Editorially reviewed ${escapeHtml(formatDate(hub.reviewedAt))}</p></header><section><h2>Best starting answer</h2><p>${escapeHtml(hub.answerGuidance)}</p></section><section><h2>${escapeHtml(hub.clue)} answers by length</h2><p>The correct fill depends on the number of squares, crossing letters, and the sense intended by the setter.</p><div class="answer-length-groups">${answerGroups}</div></section><section><h2>Meanings to check</h2><ul class="pattern-list"><li>Spread, scatter, or distribute.</li><li>Pass gradually through a material or membrane.</li><li>Emit light, heat, liquid, or another output.</li><li>Wordy or not concise, when used as an adjective.</li></ul></section><section><h2>Related searches</h2><ul class="pattern-list">${hub.relatedQueries.map((query) => `<li>${escapeHtml(query)}</li>`).join("")}</ul></section><p class="source-note">This page groups independently reviewed possibilities for a recurring clue. It is not tied to one publisher or reproduced puzzle.</p></div><aside class="article-aside"><p>Use your crossings</p><span>Match the number of squares first, then compare the letters you already trust.</span><a class="aside-all" href="/solver/">Open the pattern solver →</a></aside></article>`;
+  const itemListLd = { "@context": "https://schema.org", "@type": "ItemList", name: `${hub.clue} crossword clue answers`, itemListElement: hub.answers.map((answer, index) => ({ "@type": "ListItem", position: index + 1, name: answer.answer, description: answer.sense })) };
+  await writePage(route, pageTemplate({ title: `${hub.clue} crossword clue: answers by length`, description: hub.summary, route, body, bodyClass: "article-page clue-dictionary-page", jsonLd: [itemListLd] }), false, hub.reviewedAt);
 }
 
 const answerIndexBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Crosswordese" }])}<h1>Crosswordese, explained.</h1><p>Words that show up in grids more often than conversation—plus their meaning, pronunciation, and recurring clue patterns.</p></section>

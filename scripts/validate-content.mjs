@@ -6,7 +6,7 @@ const REQUIRED_CLUE_FIELDS = [
   "tags", "clueType", "signal", "hint", "reviewedAt"
 ];
 
-export function validateContent({ clues, answers, clueTypes, publications, config }) {
+export function validateContent({ clues, answers, clueTypes, publications, clueHubs, config }) {
   const errors = [];
   const warnings = [];
   const clueSlugs = new Set();
@@ -14,6 +14,7 @@ export function validateContent({ clues, answers, clueTypes, publications, confi
   const typeSlugs = new Set();
   const publicationNames = new Set();
   const publicationRoutes = new Set();
+  const clueHubSlugs = new Set();
 
   if (!config?.name || !config?.description || !config?.siteUrl) {
     errors.push("site.config.json must include name, description, and siteUrl");
@@ -25,6 +26,30 @@ export function validateContent({ clues, answers, clueTypes, publications, confi
       }
     } catch {
       errors.push("siteUrl must be a valid absolute URL");
+    }
+  }
+
+  if (!Array.isArray(clueHubs)) {
+    errors.push("data/clue-hubs.json must contain an array");
+  } else {
+    for (const [index, hub] of clueHubs.entries()) {
+      const label = `clueHubs[${index}]`;
+      if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(hub.slug ?? "")) errors.push(`${label} has an invalid slug`);
+      if (clueHubSlugs.has(hub.slug)) errors.push(`duplicate clue hub slug: ${hub.slug}`);
+      clueHubSlugs.add(hub.slug);
+      for (const field of ["clue", "summary", "answerGuidance", "reviewedAt"]) {
+        if (!hub[field]) errors.push(`${label} is missing ${field}`);
+      }
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(hub.reviewedAt ?? "")) errors.push(`${label} reviewedAt must be YYYY-MM-DD`);
+      if (!Array.isArray(hub.answers) || hub.answers.length < 3) errors.push(`${label} needs at least three possible answers`);
+      const possibleAnswers = new Set();
+      for (const option of hub.answers ?? []) {
+        if (!/^[A-Z]+$/.test(option.answer ?? "")) errors.push(`${label} possible answers must contain uppercase A-Z only`);
+        if ((option.sense ?? "").length < 20) errors.push(`${label} answer ${option.answer ?? "unknown"} needs a useful sense`);
+        if (possibleAnswers.has(option.answer)) errors.push(`${label} has duplicate answer ${option.answer}`);
+        possibleAnswers.add(option.answer);
+      }
+      if (!Array.isArray(hub.relatedQueries) || hub.relatedQueries.length < 2) errors.push(`${label} needs at least two related queries`);
     }
   }
 
@@ -122,14 +147,15 @@ async function readJson(path) {
 }
 
 async function main() {
-  const [clues, answers, clueTypes, publications, config] = await Promise.all([
+  const [clues, answers, clueTypes, publications, clueHubs, config] = await Promise.all([
     readJson("data/clues.json"),
     readJson("data/answers.json"),
     readJson("data/clue-types.json"),
     readJson("data/publications.json"),
+    readJson("data/clue-hubs.json"),
     readJson("site.config.json")
   ]);
-  const result = validateContent({ clues, answers, clueTypes, publications, config });
+  const result = validateContent({ clues, answers, clueTypes, publications, clueHubs, config });
   for (const warning of result.warnings) console.warn(`warning: ${warning}`);
   if (result.errors.length) {
     for (const error of result.errors) console.error(`error: ${error}`);

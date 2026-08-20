@@ -12,11 +12,12 @@ if (!inputPath) {
 
 const root = process.cwd();
 const readJson = async (relativePath) => JSON.parse(await readFile(path.resolve(root, relativePath), "utf8"));
-const [currentClues, answers, clueTypes, publications, config, input] = await Promise.all([
+const [currentClues, answers, clueTypes, publications, clueHubs, config, input] = await Promise.all([
   readJson("data/clues.json"),
   readJson("data/answers.json"),
   readJson("data/clue-types.json"),
   readJson("data/publications.json"),
+  readJson("data/clue-hubs.json"),
   readJson("site.config.json"),
   readJson(inputPath)
 ]);
@@ -39,7 +40,7 @@ for (const clue of incoming) {
 const mergedClues = [...currentClues, ...incoming];
 const latestReview = mergedClues.map((clue) => clue.reviewedAt).sort().reverse()[0];
 const nextConfig = { ...config, contentUpdatedAt: latestReview };
-const result = validateContent({ clues: mergedClues, answers, clueTypes, publications, config: nextConfig });
+const result = validateContent({ clues: mergedClues, answers, clueTypes, publications, clueHubs, config: nextConfig });
 if (result.errors.length) throw new Error(result.errors.join("\n"));
 for (const warning of result.warnings) console.warn(`warning: ${warning}`);
 

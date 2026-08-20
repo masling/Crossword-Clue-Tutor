@@ -27,8 +27,10 @@ the bundled Cloudflare deployment tooling.
 
 1. Add or update reviewed examples in `data/clues.json`.
 2. Add answer entities in `data/answers.json`; one entity handles the `meaning`, `define`, `definition`, and `[answer] crossword` query family.
-3. Run `npm run validate`.
-4. Run `npm run build` to regenerate `dist/`, `sitemap.xml`, and `robots.txt`.
+3. Add recurring, multi-answer clue pages in `data/clue-hubs.json`; these group
+   candidates by length and sense instead of forcing one answer.
+4. Run `npm run validate`.
+5. Run `npm run build` to regenerate `dist/`, `sitemap.xml`, and `robots.txt`.
 
 Fresh reviewed batches can be validated and published with:
 

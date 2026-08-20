@@ -1,0 +1,31 @@
+[
+  {
+    "slug": "diffuse",
+    "clue": "Diffuse",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Diffuse depend on the entry length and whether the clue means spread, seep, emit, permeate, or wordy.",
+    "answerGuidance": "Start with SPREAD for a six-letter general verb. Use the crossings to distinguish physical spreading from gradual absorption, emission, or the adjective sense meaning wordy.",
+    "answers": [
+      { "answer": "SEEP", "sense": "Pass or spread gradually through small openings." },
+      { "answer": "SHED", "sense": "Emit or diffuse light, heat, or another output." },
+      { "answer": "IMBUE", "sense": "Fill or permeate something with a quality or feeling." },
+      { "answer": "EXUDE", "sense": "Give off or emit gradually." },
+      { "answer": "STREW", "sense": "Scatter or spread things over an area." },
+      { "answer": "SPREAD", "sense": "Extend, distribute, or become dispersed over an area." },
+      { "answer": "OSMOSE", "sense": "Diffuse gradually, especially through a membrane." },
+      { "answer": "PROLIX", "sense": "Diffuse in expression; excessively wordy." },
+      { "answer": "PERVADE", "sense": "Spread through and be present throughout something." },
+      { "answer": "RADIATE", "sense": "Emit or spread outward from a central point." },
+      { "answer": "SCATTER", "sense": "Disperse in different directions." },
+      { "answer": "PERMEATE", "sense": "Diffuse through or spread throughout a substance or place." },
+      { "answer": "DISPERSE", "sense": "Diffuse by scattering over a wide area." },
+      { "answer": "DISSEMINATE", "sense": "Spread information, ideas, or material widely." }
+    ],
+    "relatedQueries": [
+      "diffuse crossword clue",
+      "diffuse crossword answer",
+      "diffuse 6 letters crossword clue",
+      "diffuse slowly crossword clue"
+    ]
+  }
+]

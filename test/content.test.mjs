@@ -8,13 +8,14 @@ async function readJson(path) {
 }
 
 test("all indexable content passes editorial validation", async () => {
-  const [clues, answers, clueTypes, publications, config] = await Promise.all([
+  const [clues, answers, clueTypes, publications, clueHubs, config] = await Promise.all([
     readJson("../data/clues.json"),
     readJson("../data/answers.json"),
     readJson("../data/clue-types.json"),
     readJson("../data/publications.json"),
+    readJson("../data/clue-hubs.json"),
     readJson("../site.config.json")
   ]);
-  const result = validateContent({ clues, answers, clueTypes, publications, config });
+  const result = validateContent({ clues, answers, clueTypes, publications, clueHubs, config });
   assert.deepEqual(result.errors, []);
 });
