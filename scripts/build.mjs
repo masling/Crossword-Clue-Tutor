@@ -555,6 +555,7 @@ await writePage("/privacy/", pageTemplate({ title: "Privacy", description: "How 
 const notFoundBody = `<section class="shell not-found"><div class="empty-grid" aria-hidden="true"><i>C</i><i>L</i><i>U</i><i>E</i></div><h1>That square is empty.</h1><p>The page does not exist, but the clue solver may still get you moving.</p><a class="button button-primary" href="/solver/">Open the solver</a></section>`;
 await writePage("/404.html", pageTemplate({ title: "Page not found", description: "The requested page could not be found.", route: "/404.html", body: notFoundBody, noindex: true }), true);
 
+const oneLookDictionaryIndex = `${answers.map((answer) => `<a href="${canonicalUrl(`/crosswordese/${answer.slug}/`)}">${escapeHtml(answer.answer)}</a>`).join("\n")}\n`;
 await mkdir(path.join(dist, "assets"), { recursive: true });
 await Promise.all([
   cp(path.join(root, "src/style.css"), path.join(dist, "assets/style.css")),
@@ -568,6 +569,7 @@ await Promise.all([
   cp(path.join(root, "src/apple-touch-icon.png"), path.join(dist, "apple-touch-icon.png")),
   writeFile(path.join(dist, "assets/clues.json"), JSON.stringify(clues)),
   writeFile(path.join(dist, "assets/answers.json"), JSON.stringify(answers)),
+  writeFile(path.join(dist, "assets/onelook-dictionary.txt"), oneLookDictionaryIndex),
   writeFile(path.join(dist, "assets/clue-hubs.json"), JSON.stringify(clueHubs, null, 2)),
   writeFile(path.join(dist, "assets/clue-hubs.csv"), ambiguityCsv)
 ]);

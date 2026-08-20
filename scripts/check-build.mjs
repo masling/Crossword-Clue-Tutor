@@ -58,7 +58,7 @@ for (const file of htmlFiles) {
   }
 }
 
-for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/social-card.png", "assets/logo-512.png", "assets/clues.json", "assets/answers.json", "assets/clue-hubs.json", "assets/clue-hubs.csv", "favicon.svg", "favicon-32x32.png", "favicon-16x16.png", "apple-touch-icon.png", "robots.txt", "sitemap.xml", "feed.xml"]) {
+for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/social-card.png", "assets/logo-512.png", "assets/clues.json", "assets/answers.json", "assets/clue-hubs.json", "assets/clue-hubs.csv", "assets/onelook-dictionary.txt", "favicon.svg", "favicon-32x32.png", "favicon-16x16.png", "apple-touch-icon.png", "robots.txt", "sitemap.xml", "feed.xml"]) {
   try {
     await access(path.join(dist, asset));
   } catch {
@@ -95,10 +95,18 @@ if (config.indexNowKey) {
 
 const sitemap = await readFile(path.join(dist, "sitemap.xml"), "utf8");
 const clues = JSON.parse(await readFile(path.resolve("data/clues.json"), "utf8"));
+const answers = JSON.parse(await readFile(path.resolve("data/answers.json"), "utf8"));
 const publications = JSON.parse(await readFile(path.resolve("data/publications.json"), "utf8"));
 const clueHubs = JSON.parse(await readFile(path.resolve("data/clue-hubs.json"), "utf8"));
 const clueHubCandidateCount = clueHubs.reduce((total, hub) => total + hub.answers.length, 0);
 const clueHubUniqueAnswerCount = new Set(clueHubs.flatMap((hub) => hub.answers.map((answer) => answer.answer))).size;
+const oneLookIndex = await readFile(path.join(dist, "assets/onelook-dictionary.txt"), "utf8");
+const oneLookLines = oneLookIndex.trimEnd().split("\n");
+if (oneLookLines.length !== answers.length) errors.push(`OneLook dictionary index must contain one line for each of ${answers.length} answer entities`);
+for (const answer of answers) {
+  const expected = `<a href="https://crosswordcluetutor.com/crosswordese/${answer.slug}/">${answer.answer}</a>`;
+  if (!oneLookLines.includes(expected)) errors.push(`OneLook dictionary index is missing ${answer.answer}`);
+}
 const sitemapEntries = [...sitemap.matchAll(/<url><loc>[^<]+<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?<\/url>/g)];
 for (const [index, entry] of sitemapEntries.entries()) {
   if (!entry[1]) errors.push(`sitemap URL ${index + 1} is missing lastmod`);

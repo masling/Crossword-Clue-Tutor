@@ -1,7 +1,19 @@
 # Outreach send queue — 2026-08-20
 
 No message or form has been submitted. Each item requires action-time approval and a
-real sender name. The ACPT form also requires the sender email.
+real sender identity. The OneLook and ACPT forms require an approved contact email.
+
+## Ready 0 — OneLook Dictionary Search
+
+- Channel: official feedback form linked from OneLook's dictionary-inclusion guidelines.
+- Evidence: the FAQ explicitly asks owners of missing dictionary sites to tell OneLook;
+  its requirements are free access, unique and accurate content, commercial neutrality,
+  legal publication rights, and a high content-to-ads ratio.
+- Asset: `/crosswordese/` plus `/assets/onelook-dictionary.txt`, with one absolute link
+  per headword as recommended in the official webmaster format.
+- Draft: “OneLook dictionary submission” in `2026-08-20-drafts.md`.
+- Expected value: durable discovery links from a word-search service with a dedicated
+  crossword mode and more than 1,000 indexed dictionaries.
 
 ## Ready 1 — Daily Crossword Links
 
@@ -35,3 +47,5 @@ real sender name. The ACPT form also requires the sender email.
 - Crossword Resources: directory fit is strong, but no public contact route was found.
 - Big Dave's Crossword Blog: reciprocal-link requirement conflicts with the current
   editorial links policy.
+- Data Is Plural: the dataset fit is credible, but its public archive currently ends in
+  August 2025 and no current submission route was verified; revisit after activity resumes.
