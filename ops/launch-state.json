@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T20:55:59+08:00",
+  "updatedAt": "2026-08-20T21:08:32+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -105,18 +105,26 @@
       "Browser-local saved clues",
       "Hub-powered multi-answer Solver and Explain flows",
       "Contextual feedback and correction flow",
-      "Clue-to-answer meaning links for continued reading"
+      "Clue-to-answer meaning links for continued reading",
+      "Homepage navigation to demand-backed clue and meaning pages"
     ],
+    "homepageDemandNavigation": {
+      "featuredClueHubs": 7,
+      "featuredMeaningPages": 7,
+      "desktopLayout": "Compact scan rows",
+      "mobileLayout": "Responsive stacked rows",
+      "visualQa": "Verified at 1280x900 and 390x844"
+    },
     "internalLinkAudit": {
-      "verifiedAt": "2026-08-20T20:55:59+08:00",
+      "verifiedAt": "2026-08-20T21:08:32+08:00",
       "orphanPages": 0,
       "unreachableFromHome": 0,
       "maximumClickDepth": 3,
       "depthDistribution": {
         "0": 1,
-        "1": 29,
-        "2": 107,
-        "3": 19
+        "1": 38,
+        "2": 96,
+        "3": 21
       },
       "buildGate": "Fail when any indexable page has no inbound HTML link, is unreachable from home, or exceeds depth 3."
     },
@@ -197,7 +205,7 @@
     "bingSiteScanRemediation": "Generated document titles are now capped at 70 characters; verify with a later rescan.",
     "searchImpressions": 0,
     "searchClicks": 0,
-    "indexNowSubmittedUrls": 446
+    "indexNowSubmittedUrls": 447
   },
   "deployment": {
     "provider": "Cloudflare Pages",
@@ -206,7 +214,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "8293c3d",
+    "lastVerifiedCommit": "5448d7a",
     "lastDeployStatus": "Success"
   },
   "outreach": {
