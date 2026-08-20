@@ -446,5 +446,74 @@
       "congenital condition crossword clue",
       "congenital meaning"
     ]
+  },
+  {
+    "slug": "inflated",
+    "clue": "Inflated",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Inflated depend on whether something is filled with air, physically swollen, increased beyond a fair level, exaggerated, or pompous in style or attitude.",
+    "answerGuidance": "Start with SWOLLEN or BLOATED for seven letters when the clue describes physical expansion, PUFFED for six letters when air or pride is involved, and OVERBLOWN for nine letters when a claim, reputation, or style is exaggerated.",
+    "meaningBuckets": [
+      "Filled, expanded, or distended by air, gas, liquid, or internal pressure.",
+      "Swollen, bloated, puffy, or enlarged beyond a normal physical size.",
+      "Raised beyond a fair or realistic level, especially prices, costs, numbers, or estimates.",
+      "Exaggerated, overstated, padded, hyped, or made to seem more important than it is.",
+      "Pompous, grandiose, turgid, or overblown in language, style, reputation, or ego."
+    ],
+    "preferredAnswers": ["SWOLLEN", "BLOATED", "PUFFED", "OVERBLOWN", "HIGH", "TURGID"],
+    "answers": [
+      { "answer": "HIGH", "sense": "Raised or excessive, especially when describing a price, cost, or estimate." },
+      { "answer": "PUFFY", "sense": "Swollen, soft, or visibly enlarged as if filled with air or fluid." },
+      { "answer": "TUMID", "sense": "Swollen or distended, and figuratively bombastic in style." },
+      { "answer": "HYPED", "sense": "Promoted or praised beyond a realistic level of importance." },
+      { "answer": "PUFFED", "sense": "Filled or expanded with air, or made proud and self-important." },
+      { "answer": "TURGID", "sense": "Swollen or distended, or pompously elaborate in language." },
+      { "answer": "RAISED", "sense": "Increased to a higher amount, level, price, or position." },
+      { "answer": "PADDED", "sense": "Artificially increased by adding unnecessary or misleading amounts." },
+      { "answer": "SWOLLEN", "sense": "Enlarged beyond normal size through pressure, fluid, or expansion." },
+      { "answer": "BLOATED", "sense": "Unnaturally swollen or made excessively large and cumbersome." },
+      { "answer": "POMPOUS", "sense": "Self-important or affectedly grand in manner, language, or style." },
+      { "answer": "EXPANDED", "sense": "Made larger in size, volume, scope, or amount." },
+      { "answer": "ELEVATED", "sense": "Raised above a normal, expected, or appropriate level." },
+      { "answer": "ENLARGED", "sense": "Made or grown larger than the original or usual size." },
+      { "answer": "DISTENDED", "sense": "Stretched outward by internal pressure, swelling, or contents." },
+      { "answer": "BALLOONED", "sense": "Expanded rapidly or swelled outward like a balloon." },
+      { "answer": "OVERBLOWN", "sense": "Exaggerated, excessively grand, or made more important than justified." },
+      { "answer": "GRANDIOSE", "sense": "Pompously impressive or unrealistically ambitious and inflated." },
+      { "answer": "OVERSTATED", "sense": "Expressed too strongly or represented as greater than the facts support." },
+      { "answer": "OVERPRICED", "sense": "Given a price higher than its fair or reasonable value." },
+      { "answer": "EXAGGERATED", "sense": "Enlarged or represented beyond truth, normal proportion, or reasonable limits." }
+    ],
+    "queryVariants": [
+      {
+        "query": "inflated with air crossword clue",
+        "guidance": "Air or pressure wording points to literal expansion; answer length separates something puffed from something expanded, distended, or ballooned.",
+        "answers": ["PUFFED", "EXPANDED", "DISTENDED", "BALLOONED"]
+      },
+      {
+        "query": "inflated prices crossword clue",
+        "guidance": "Price and cost context means raised beyond a normal or fair level rather than physically swollen or filled with air.",
+        "answers": ["HIGH", "RAISED", "ELEVATED", "OVERPRICED"]
+      },
+      {
+        "query": "inflated figures crossword clue",
+        "guidance": "Figures, totals, and estimates usually indicate artificial enlargement or exaggeration, often by padding or overstating the number.",
+        "answers": ["HYPED", "PADDED", "OVERSTATED", "EXAGGERATED"]
+      },
+      {
+        "query": "inflated language crossword clue",
+        "guidance": "Language or style context calls for an adjective meaning pompously elaborate, excessively grand, or exaggerated in expression.",
+        "answers": ["TUMID", "TURGID", "POMPOUS", "OVERBLOWN", "GRANDIOSE"]
+      }
+    ],
+    "relatedQueries": [
+      "inflated crossword clue",
+      "inflated crossword answer",
+      "inflated 7 letters crossword clue",
+      "inflated with air crossword clue",
+      "inflated prices crossword clue",
+      "inflated figures crossword clue",
+      "inflated language crossword clue"
+    ]
   }
 ]

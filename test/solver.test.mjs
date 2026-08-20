@@ -87,4 +87,7 @@ test("serves demand-backed clue hubs through the live solver data", async () => 
   assert.equal(solveClues(candidates, { clue: "nipping off", pattern: "S???????" })[0].answer, "SNIPPING");
   assert.equal(solveClues(candidates, { clue: "congenital", length: 6 })[0].answer, "INBORN");
   assert.equal(solveClues(candidates, { clue: "congenital trait", pattern: "I???????" })[0].answer, "INHERENT");
+  assert.equal(solveClues(candidates, { clue: "inflated", length: 7 })[0].answer, "SWOLLEN");
+  assert.equal(solveClues(candidates, { clue: "inflated prices", pattern: "H???" })[0].answer, "HIGH");
+  assert.equal(solveClues(candidates, { clue: "inflated language", length: 6 })[0].answer, "TURGID");
 });

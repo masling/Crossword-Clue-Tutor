@@ -105,3 +105,10 @@ not automatically hereditary; the latter specifically points to transmission fro
 ancestors. The page therefore distinguishes the common six-letter candidates INBORN,
 INNATE, INBRED, and NATIVE from longer answers such as INHERENT and HEREDITARY, rather
 than collapsing them into one medically inaccurate synonym list.
+
+`inflated crossword clue` followed at 793 impressions and also passed the multi-answer
+utility test. Dictionary review separated five stable senses: filled or distended by
+air or pressure, physically swollen, increased beyond a fair level, exaggerated beyond
+the facts, and pompous or overblown in style. The published page groups 21 candidates
+by length and adds focused guidance for air, prices, figures, and language rather than
+presenting one answer as universally correct.
