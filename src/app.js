@@ -16,6 +16,95 @@ for (const root of document.querySelectorAll("[data-tool-root]")) {
   setupExplainForm(root);
 }
 
+const savedCluesKey = "crossword-clue-tutor:saved-clues";
+
+setupSavedClueButtons();
+setupSavedCluesPage();
+
+function readSavedClues() {
+  try {
+    const value = JSON.parse(localStorage.getItem(savedCluesKey) ?? "[]");
+    return Array.isArray(value) ? value.filter((slug) => typeof slug === "string") : [];
+  } catch {
+    return [];
+  }
+}
+
+function writeSavedClues(slugs) {
+  try {
+    localStorage.setItem(savedCluesKey, JSON.stringify([...new Set(slugs)]));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function setupSavedClueButtons() {
+  for (const control of document.querySelectorAll("[data-save-clue]")) {
+    const status = control.parentElement?.querySelector("[data-save-clue-status]");
+    const sync = () => {
+      const saved = readSavedClues().includes(control.dataset.clueSlug);
+      control.setAttribute("aria-pressed", String(saved));
+      control.textContent = saved ? "Saved" : "Save clue";
+    };
+    sync();
+    control.addEventListener("click", () => {
+      const slug = control.dataset.clueSlug;
+      const saved = readSavedClues();
+      const isSaved = saved.includes(slug);
+      const next = isSaved ? saved.filter((item) => item !== slug) : [slug, ...saved];
+      if (!writeSavedClues(next)) {
+        control.disabled = true;
+        if (status) status.textContent = "Saving is unavailable in this browser.";
+        return;
+      }
+      sync();
+      if (status) status.textContent = isSaved ? "Removed from saved clues." : "Saved in this browser.";
+    });
+  }
+}
+
+function setupSavedCluesPage() {
+  const root = document.querySelector("[data-saved-clues-root]");
+  if (!root) return;
+  const empty = root.querySelector("[data-saved-empty]");
+  const list = root.querySelector("[data-saved-list]");
+  const items = root.querySelector("[data-saved-items]");
+  const count = root.querySelector("[data-saved-count]");
+
+  const render = async () => {
+    const saved = readSavedClues();
+    const { clues } = await dataPromise;
+    const bySlug = new Map(clues.map((clue) => [clue.slug, clue]));
+    const matches = saved.map((slug) => bySlug.get(slug)).filter(Boolean);
+    if (matches.length !== saved.length) writeSavedClues(matches.map((clue) => clue.slug));
+    items.replaceChildren(...matches.map((clue) => savedClueRow(clue, render)));
+    empty.hidden = matches.length > 0;
+    list.hidden = matches.length === 0;
+    count.textContent = `${matches.length} saved ${matches.length === 1 ? "clue" : "clues"} on this device`;
+  };
+
+  render();
+}
+
+function savedClueRow(clue, onRemove) {
+  const row = element("article", "saved-clue-row");
+  const link = element("a", "saved-clue-link");
+  link.href = `/explainers/${clue.slug}/`;
+  link.append(
+    element("strong", "", clue.clue),
+    element("span", "", `${clue.publication ?? "Reviewed clue"} · ${clue.answer.length} letters`)
+  );
+  const remove = button("Remove", "button button-quiet saved-clue-remove");
+  remove.setAttribute("aria-label", `Remove ${clue.clue} from saved clues`);
+  remove.addEventListener("click", () => {
+    writeSavedClues(readSavedClues().filter((slug) => slug !== clue.slug));
+    onRemove();
+  });
+  row.append(link, remove);
+  return row;
+}
+
 function setupTabs(root) {
   const tabs = [...root.querySelectorAll("[role='tab']")];
   const select = (selected) => {

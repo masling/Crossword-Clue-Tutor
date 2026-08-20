@@ -136,6 +136,13 @@ for (const length of [3, 4, 5, 6]) {
 const privacyPage = await readFile(path.join(dist, "privacy/index.html"), "utf8");
 if (!privacyPage.includes("Cloudflare Web Analytics")) errors.push("privacy page is missing the production analytics disclosure");
 if (!privacyPage.includes("app.pageview.app")) errors.push("privacy page is missing the Pageview analytics disclosure");
+if (!privacyPage.includes("Saved clues") || !privacyPage.includes("local storage")) errors.push("privacy page is missing the local saved-clue disclosure");
+const savedCluesPage = await readFile(path.join(dist, "saved-clues/index.html"), "utf8");
+if (!savedCluesPage.includes("data-saved-clues-root")) errors.push("saved clues page is missing its local rendering root");
+if (!savedCluesPage.includes("noindex,nofollow")) errors.push("saved clues page must remain out of the search index");
+if (sitemap.includes("/saved-clues/")) errors.push("sitemap must not include the personalized saved clues page");
+const cluePage = await readFile(path.join(dist, "explainers/scientists-workplace-nyt-mini/index.html"), "utf8");
+if (!cluePage.includes("data-save-clue")) errors.push("reviewed clue pages are missing the save-clue control");
 
 if (errors.length) {
   for (const error of errors) console.error(`error: ${error}`);

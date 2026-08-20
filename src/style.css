@@ -225,6 +225,17 @@ p { text-wrap: pretty; }
 .mechanism-grid > div { border-top: 1px solid var(--line-strong); padding-top: 18px; }
 .mechanism-grid h2 { font-size: 1.15rem !important; }
 .hint-aside > span { display: block; color: var(--muted); }
+.save-clue-control { display: grid; gap: 7px; margin-top: 22px; }
+.save-clue-button { width: 100%; }
+.save-clue-button[aria-pressed="true"] { border-color: var(--primary-dark); background: var(--primary-pale); }
+.save-clue-status { min-height: 1.4em; color: var(--muted); font-size: 0.76rem; }
+.saved-clues-shell { min-height: 320px; margin-bottom: 110px; }
+.saved-clues-list { border-top: 1px solid var(--line-strong); padding-top: 28px; }
+.saved-clue-row { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 20px; min-height: 82px; padding-inline: 12px; border-bottom: 1px solid var(--line); }
+.saved-clue-row:hover { background: var(--primary-pale); }
+.saved-clue-link { display: flex; flex-direction: column; gap: 3px; padding-block: 16px; text-decoration: none; }
+.saved-clue-link span { color: var(--muted); font-size: 0.82rem; }
+.saved-clue-remove { min-width: 68px; }
 .answer-length-groups { display: grid; gap: 28px; margin-top: 24px; }
 .answer-length-group { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 22px; align-items: start; padding-top: 16px; border-top: 1px solid var(--line-strong); }
 .answer-length-group h3 { margin: 7px 0 0; color: var(--muted); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.055em; }
@@ -343,6 +354,8 @@ p { text-wrap: pretty; }
   .answer-header { align-items: flex-start; flex-direction: column; }
   .answer-header h1 { font-size: 3.2rem; }
   .article-main .breadcrumbs { margin-bottom: 30px; }
+  .saved-clue-row { align-items: flex-start; grid-template-columns: 1fr; gap: 0; padding-block: 8px; }
+  .saved-clue-remove { width: max-content; margin-bottom: 8px; }
   .answer-length-group article { grid-template-columns: 1fr; gap: 3px; }
   .clinic-list article { grid-template-columns: 38px minmax(0, 1fr); gap: 12px; }
   .clinic-archive a { grid-template-columns: 1fr 24px; padding-block: 18px; }
