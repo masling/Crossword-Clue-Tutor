@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T12:28:00+08:00",
+  "updatedAt": "2026-08-20T12:31:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -32,7 +32,7 @@
     "indexablePages": 106,
     "reviewedClues": 60,
     "answerMeaningPages": 24,
-    "selectionPolicy": "Cover every newly verifiable monitored publication/date. Use source demand and near-term trend signals to rank same-day clues, never to block a new date whose exact queries have no history yet.",
+    "selectionPolicy": "Routine same-day coverage is independent of trends and historical keyword volume. Use Bing, Google Trends, and Search Console afterward to backfill missed dates and expand materially undercovered queries or topics.",
     "monitoredPublications": [
       "NYT Mini",
       "The New York Times Crossword",
@@ -81,6 +81,6 @@
   },
   "nextAction": {
     "notBefore": "2026-08-20T18:15:00+08:00",
-    "action": "Recheck every monitored source still missing August 20 coverage, especially USA TODAY's later public clue release; rank same-day clues by demand proxies but do not require historical exact-query volume."
+    "action": "Recheck every monitored source still missing August 20 coverage, especially USA TODAY's later public clue release. After current-date coverage, use search evidence only to backfill missed or undercovered content."
   }
 }

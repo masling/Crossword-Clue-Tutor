@@ -49,3 +49,11 @@ volume cannot be a hard gate for a new date. From this point forward, every newl
 verifiable monitored publication/date receives selected clue coverage. Source-level
 demand and near-term root trends determine publishing order and batch size; they do not
 block same-day coverage. Complete grids and full answer lists remain out of scope.
+
+## Final operating role of trend data
+
+Routine same-day publishing runs for every monitored source without consulting historical
+exact-query volume. Bing demand, Google Trends, and Search Console are a secondary loop:
+they identify missed dates, absent landing pages, and existing topics whose coverage is
+too thin relative to observed demand. They supplement daily freshness; they do not choose
+whether today's source date is covered.

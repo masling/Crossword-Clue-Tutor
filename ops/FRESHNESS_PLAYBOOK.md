@@ -9,10 +9,8 @@ Discover, review, publish, deploy, and submit high-intent clue pages on the same
 1. Check official puzzle releases and visible daily discussion/search activity for
    NYT Mini, The New York Times Crossword, LA Times Crossword, and USA TODAY Crossword.
 2. Capture candidate clue-answer pairs with publication, date, and clue number.
-3. Treat every newly verifiable publication/date as requiring an update. Same-day exact
-   clue queries have no history yet, so the absence of keyword data must never block the
-   date. Use publication demand, Google Trends roots, Bing newly discovered queries, and
-   Search Console impressions only to rank which clues are published first.
+3. Treat every newly verifiable publication/date as routine daily coverage. Same-day
+   publishing does not wait for or depend on keyword and trend data.
 4. Write an original hint, clue signal, definition, and explanation.
 5. Run a dry review: `npm run content:publish -- ops/intake/<file>.json --dry-run`.
 6. Publish the reviewed batch: `npm run content:publish -- ops/intake/<file>.json`.
@@ -31,7 +29,7 @@ checks pass. The commands above remain the local recovery path.
 ## Singapore launch window
 
 - 12:15 SGT: check NYT and LA Times dates after the U.S. midnight release window.
-- 12:15–13:30 SGT: rank current clues by forward-looking demand signals, write original copy,
+- 12:15–13:30 SGT: publish the routine current-date batch, write original copy,
   validate, deploy, and submit updated URLs.
 - 18:15 SGT: recheck sources such as USA TODAY whose public clue pages appear later in
   the U.S. morning, and cover any monitored date still missing from the site.
@@ -42,11 +40,27 @@ availability rather than from a hard-coded date assumption. Free play does not g
 republication rights: never mirror a full grid or answer list, and never bypass a
 publisher login or subscription boundary.
 
-## Daily coverage rule and candidate score
+## Daily coverage rule
 
 Every monitored source/date must receive selected clue coverage once exact clue-answer
-pairs are publicly verifiable. Historical keyword volume is not required for a same-day
-clue. Explanation quality is a pass/fail publishing requirement, not a selection reason.
+pairs are publicly verifiable. Historical keyword volume is irrelevant to the same-day
+decision because the exact queries do not exist before publication. Explanation quality
+and the no-complete-puzzle boundary remain publishing requirements.
+
+## Coverage-gap research
+
+Use Bing Keyword Research, Google Trends, and Search Console only after routine daily
+coverage to find:
+
+- monitored publication dates that were missed;
+- exact clue queries receiving impressions without a matching page;
+- source hubs or clue families with meaningful demand but thin internal coverage;
+- existing pages whose related entity, meaning, or clue variant deserves expansion.
+
+Trend and search-volume work is a backfill and expansion loop, not the daily publishing
+gate. Evidence-backed gap pages may be added after the current-date batch is complete.
+
+## Gap candidate score
 
 Score each candidate from 0–3 on:
 
@@ -54,12 +68,11 @@ Score each candidate from 0–3 on:
 - Near-term momentum: when available, the related entity/root is above its recent Google
   Trends average or appears in rising/newly discovered queries during the latest 2–3 days.
 - Search language: the clue can be pasted verbatim into a search engine.
-- Freshness: the clue appeared on the latest publicly verifiable puzzle date.
+- Coverage gap: the date, query, or useful variant is absent or materially undercovered.
 - Competition gap: current results are thin, incorrect, slow, or answer-only.
 
-Publish the highest total first, but do not leave a newly available monitored date
-uncovered merely because its exact queries are new. Avoid creating separate pages for
-punctuation-only clue variants.
+Publish the highest-scoring gaps after routine current-date coverage. Avoid creating
+separate pages for punctuation-only clue variants.
 
 ## Required intake fields
 
