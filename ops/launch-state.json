@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T18:34:22+08:00",
+  "updatedAt": "2026-08-20T18:46:09+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -34,20 +34,21 @@
     }
   },
   "content": {
-    "indexablePages": 140,
+    "indexablePages": 142,
     "reviewedClues": 78,
     "answerMeaningPages": 27,
-    "evergreenClueHubs": 4,
+    "evergreenClueHubs": 6,
+    "evergreenClueHubCandidates": 119,
     "linkableGuides": 1,
     "linkableResearchPages": 1,
     "datasetDownloadFormats": [
       "JSON",
       "CSV"
     ],
-    "structuredDataPages": 140,
-    "breadcrumbStructuredDataPages": 139,
+    "structuredDataPages": 142,
+    "breadcrumbStructuredDataPages": 141,
     "articleStructuredDataPages": 84,
-    "socialPreviewPages": 142,
+    "socialPreviewPages": 144,
     "expandedSeoGuides": 5,
     "crossPublicationTodayHubs": 1,
     "answerLengthIndexes": 1,
@@ -58,14 +59,14 @@
       "Browser-local saved clues"
     ],
     "internalLinkAudit": {
-      "verifiedAt": "2026-08-20T18:34:22+08:00",
+      "verifiedAt": "2026-08-20T18:46:09+08:00",
       "orphanPages": 0,
       "unreachableFromHome": 0,
       "maximumClickDepth": 3,
       "depthDistribution": {
         "0": 1,
         "1": 29,
-        "2": 91,
+        "2": 93,
         "3": 19
       },
       "buildGate": "Fail when any indexable page has no inbound HTML link, is unreachable from home, or exceeds depth 3."
@@ -109,8 +110,8 @@
     "publicSearchCheckedAt": "2026-08-20T16:49:00+08:00",
     "publicSearchSiteQueryStatus": "No stable site-query result detected yet; GSC URL Inspection confirms the homepage is indexed",
     "productionSitemapStatus": "Verified",
-    "productionSitemapUrls": 140,
-    "productionSitemapLastmodCoverage": "140/140",
+    "productionSitemapUrls": 142,
+    "productionSitemapLastmodCoverage": "142/142",
     "productionSitemapLastmodPolicy": "Dynamic hubs use their latest material content date; static policy pages keep fixed editorial dates.",
     "productionRobotsStatus": "search=yes; Allow: /; sitemap and feed declared",
     "productionCrawlStatus": 200,
@@ -132,7 +133,7 @@
     "bingSiteScanRemediation": "Generated document titles are now capped at 70 characters; verify with a later rescan.",
     "searchImpressions": 0,
     "searchClicks": 0,
-    "indexNowSubmittedUrls": 376
+    "indexNowSubmittedUrls": 383
   },
   "deployment": {
     "provider": "Cloudflare Pages",
@@ -141,7 +142,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "511ba75",
+    "lastVerifiedCommit": "52f9a2b",
     "lastDeployStatus": "Success"
   },
   "outreach": {
