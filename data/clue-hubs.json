@@ -384,5 +384,67 @@
       "nipping at the heels crossword clue",
       "nipping off crossword clue"
     ]
+  },
+  {
+    "slug": "congenital",
+    "clue": "Congenital",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Congenital depend on whether the clue means present at birth, innate, inherited, built into something's nature, or habitually deep-rooted in a figurative sense.",
+    "answerGuidance": "For the common six-letter entry, compare INBORN, INNATE, INBRED, and NATIVE against the crossings. Do not assume HEREDITARY unless the clue specifically points to transmission from ancestors rather than merely being present at birth.",
+    "meaningBuckets": [
+      "Present at birth or arising before birth, without necessarily being inherited from a parent.",
+      "Innate, inborn, or naturally part of a person's character or ability.",
+      "Inherited or hereditary, when the clue explicitly points to genetic transmission.",
+      "Inherent, inbuilt, or essential to the nature or constitution of something.",
+      "Deep-rooted or habitual in a figurative phrase such as a congenital tendency."
+    ],
+    "preferredAnswers": ["INBORN", "INNATE", "INBRED", "INHERENT", "HEREDITARY"],
+    "answers": [
+      { "answer": "BORN", "sense": "Existing from birth rather than acquired later." },
+      { "answer": "INBORN", "sense": "Present from birth; congenital rather than acquired." },
+      { "answer": "INNATE", "sense": "Existing naturally from birth or as an essential characteristic." },
+      { "answer": "INBRED", "sense": "Inherited through breeding or deeply fixed by long association." },
+      { "answer": "NATIVE", "sense": "Belonging naturally or by birth; innate rather than learned." },
+      { "answer": "CONNATE", "sense": "Congenitally united, joined, or present together from birth." },
+      { "answer": "NATURAL", "sense": "Innate, inherent, or arising without being acquired or taught." },
+      { "answer": "INBUILT", "sense": "Built into something as an inherent or essential feature." },
+      { "answer": "INHERENT", "sense": "Existing as a permanent, essential, or characteristic part." },
+      { "answer": "HABITUAL", "sense": "Customary and deep-rooted, fitting a figurative congenital tendency." },
+      { "answer": "INHERITED", "sense": "Received genetically from parents or predecessors." },
+      { "answer": "INGRAINED", "sense": "Deeply fixed in character or habit and difficult to change." },
+      { "answer": "HEREDITARY", "sense": "Transmitted genetically from one generation to the next." },
+      { "answer": "INVETERATE", "sense": "Long-established and habitual, especially in a figurative description of character." },
+      { "answer": "CONSTITUTIONAL", "sense": "Inherent in a person's nature, physical makeup, or basic constitution." }
+    ],
+    "queryVariants": [
+      {
+        "query": "congenital 6 letters crossword clue",
+        "guidance": "Four strong six-letter possibilities share the broad idea of being present from birth; crossing letters are essential because their exact senses differ.",
+        "answers": ["INBORN", "INNATE", "INBRED", "NATIVE"]
+      },
+      {
+        "query": "congenital trait crossword clue",
+        "guidance": "Trait wording may ask for something innate or inherent, while explicit family or genetic language points more narrowly to inherited or hereditary.",
+        "answers": ["INBORN", "INNATE", "INHERENT", "INHERITED", "HEREDITARY"]
+      },
+      {
+        "query": "congenital tendency crossword clue",
+        "guidance": "A figurative tendency clue can describe a quality as natural, inbred, ingrained, habitual, or inveterate rather than making a medical claim.",
+        "answers": ["INBRED", "NATURAL", "HABITUAL", "INGRAINED", "INVETERATE"]
+      },
+      {
+        "query": "congenital condition crossword clue",
+        "guidance": "A condition present at birth is congenital, but it is hereditary only when inherited genetic transmission is part of the clue's meaning.",
+        "answers": ["INBORN", "INNATE", "INHERITED", "HEREDITARY", "CONSTITUTIONAL"]
+      }
+    ],
+    "relatedQueries": [
+      "congenital crossword clue",
+      "congenital crossword answer",
+      "congenital 6 letters crossword clue",
+      "congenital trait crossword clue",
+      "congenital condition crossword clue",
+      "congenital meaning"
+    ]
   }
 ]

@@ -1,11 +1,11 @@
 {
-  "publishedAt": "2026-08-20T11:48:12.000Z",
-  "input": "data/clue-hubs.json#nipping-demand-gap",
+  "publishedAt": "2026-08-20T11:53:50.000Z",
+  "input": "data/clue-hubs.json#congenital-demand-gap",
   "urls": [],
   "answerUrls": [],
   "clinicUrls": [],
   "hubUrls": [
-    "/crossword-clues/nipping/",
+    "/crossword-clues/congenital/",
     "/crossword-clues/",
     "/solver/",
     "/explain/",

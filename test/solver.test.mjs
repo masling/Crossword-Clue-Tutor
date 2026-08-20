@@ -79,10 +79,12 @@ test("uses length, crossings, and preferred order for hub candidates", () => {
   assert.deepEqual(solveClues(candidates, { clue: "sharp", pattern: "K?E?" }).map((item) => item.answer), ["KEEN"]);
 });
 
-test("serves the demand-backed Nipping hub through the live solver data", async () => {
+test("serves demand-backed clue hubs through the live solver data", async () => {
   const hubs = JSON.parse(await readFile(new URL("../data/clue-hubs.json", import.meta.url), "utf8"));
   const candidates = clueHubCandidates(hubs);
 
   assert.equal(solveClues(candidates, { clue: "nipping", length: 6 })[0].answer, "BITING");
   assert.equal(solveClues(candidates, { clue: "nipping off", pattern: "S???????" })[0].answer, "SNIPPING");
+  assert.equal(solveClues(candidates, { clue: "congenital", length: 6 })[0].answer, "INBORN");
+  assert.equal(solveClues(candidates, { clue: "congenital trait", pattern: "I???????" })[0].answer, "INHERENT");
 });

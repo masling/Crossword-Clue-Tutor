@@ -93,3 +93,15 @@ a small part, snapping at a target, or narrowly defeating a competitor. A review
 was therefore added with answer-length groupings, sense guidance, query variants, and
 Solver/Explain candidates. Lower-volume suggestions from the same table were recorded
 for future comparison but were not published merely to increase page count.
+
+The same Bing table showed `x video game franchise crossword clue` at 26.8K, but the
+query failed the verification gate: public results mixed unrelated franchise names,
+spam-generated pages, and different clue phrasings, with no stable answer relationship.
+It was excluded despite the larger number.
+
+`congenital crossword clue` was the next verified uncovered item at 963 impressions.
+Independent dictionary review confirmed that congenital means present at birth but is
+not automatically hereditary; the latter specifically points to transmission from
+ancestors. The page therefore distinguishes the common six-letter candidates INBORN,
+INNATE, INBRED, and NATIVE from longer answers such as INHERENT and HEREDITARY, rather
+than collapsing them into one medically inaccurate synonym list.
