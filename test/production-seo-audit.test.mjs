@@ -1,11 +1,11 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { auditHtml, auditRobots } from "../scripts/audit-production-seo.mjs";
+import { auditHtml, auditRobots, auditSiteStructure } from "../scripts/audit-production-seo.mjs";
 
 const pageview = '<script defer data-domain="crosswordcluetutor.com" src="https://app.pageview.app/js/script.js"></script>';
 
-function html({ title = "Useful crossword page", canonical = "https://crosswordcluetutor.com/test/", h1 = "<h1>Useful crossword page</h1>" } = {}) {
-  return `<!doctype html><html><head><title>${title}</title><meta name="description" content="A useful description."><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="${canonical}">${pageview}<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage"}</script></head><body>${h1}</body></html>`;
+function html({ title = "Useful crossword page", description = "A useful description.", canonical = "https://crosswordcluetutor.com/test/", h1 = "<h1>Useful crossword page</h1>", links = "" } = {}) {
+  return `<!doctype html><html><head><title>${title}</title><meta name="description" content="${description}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="${canonical}">${pageview}<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage"}</script></head><body>${h1}${links}</body></html>`;
 }
 
 test("accepts a production page with the required SEO contract", () => {
@@ -31,4 +31,17 @@ test("allows AI-specific blocks while keeping wildcard search crawling open", ()
 test("rejects a wildcard root block", () => {
   const robots = `User-agent: *\nDisallow: /\nSitemap: https://crosswordcluetutor.com/sitemap.xml\n`;
   assert.match(auditRobots(robots, "https://crosswordcluetutor.com/sitemap.xml").join(" "), /blocks the site root/);
+});
+
+test("finds duplicate metadata and unreachable pages across a site", () => {
+  const pages = [
+    auditHtml({ html: html({ title: "Home", description: "Home page.", canonical: "https://crosswordcluetutor.com/", links: '<a href="/a/">A</a>' }), url: "https://crosswordcluetutor.com/" }),
+    auditHtml({ html: html({ title: "Duplicate", description: "Same.", canonical: "https://crosswordcluetutor.com/a/" }), url: "https://crosswordcluetutor.com/a/" }),
+    auditHtml({ html: html({ title: "Duplicate", description: "Same.", canonical: "https://crosswordcluetutor.com/b/" }), url: "https://crosswordcluetutor.com/b/" })
+  ];
+  const result = auditSiteStructure({ pages, homeUrl: "https://crosswordcluetutor.com/" });
+  assert.equal(result.duplicateTitles.length, 1);
+  assert.equal(result.duplicateDescriptions.length, 1);
+  assert.deepEqual(result.orphanUrls, ["https://crosswordcluetutor.com/b/"]);
+  assert.deepEqual(result.unreachableUrls, ["https://crosswordcluetutor.com/b/"]);
 });

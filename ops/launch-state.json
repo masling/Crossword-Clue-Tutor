@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T22:59:37+08:00",
+  "updatedAt": "2026-08-20T23:03:24+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -130,7 +130,7 @@
       "visualQa": "Verified at 1280x900 and 390x844"
     },
     "internalLinkAudit": {
-      "verifiedAt": "2026-08-20T21:46:32+08:00",
+      "verifiedAt": "2026-08-20T23:03:13+08:00",
       "orphanPages": 0,
       "unreachableFromHome": 0,
       "maximumClickDepth": 3,
@@ -140,7 +140,8 @@
         "2": 96,
         "3": 21
       },
-      "buildGate": "Fail when any indexable page has no inbound HTML link, is unreachable from home, or exceeds depth 3."
+      "buildGate": "Fail when any indexable page has no inbound HTML link, is unreachable from home, or exceeds depth 3.",
+      "productionEvidence": "160/160 sitemap URLs crawled; 0 orphans; 0 unreachable; maximum depth 3"
     },
     "selectionPolicy": "Routine same-day coverage is independent of trends and historical keyword volume. Use Bing, Google Trends, and Search Console afterward to backfill missed dates and expand materially undercovered queries or topics.",
     "latestDemandBackfill": {
@@ -250,11 +251,19 @@
     "bingSiteScanRemediation": "Generated titles are capped at 70 characters. A full production crawl verified 0 long-title pages; Bing rescan remains unavailable until its page quota resets.",
     "bingSiteScanRescanStatus": "Start-new-scan form reports 0 pages of quota remaining",
     "productionSeoAudit": {
-      "auditedAt": "2026-08-20T22:59:28+08:00",
+      "auditedAt": "2026-08-20T23:03:13+08:00",
       "command": "npm run seo:audit-production",
       "sitemapUrls": 160,
       "pagesAudited": 160,
       "pagesWithErrors": 0,
+      "duplicateSitemapUrls": 0,
+      "invalidLastmod": 0,
+      "duplicateTitleGroups": 0,
+      "duplicateDescriptionGroups": 0,
+      "duplicateCanonicalGroups": 0,
+      "orphanPages": 0,
+      "unreachableFromHome": 0,
+      "maximumClickDepth": 3,
       "titleTooLong": 0,
       "longestTitleCharacters": 70,
       "longestTitleRoute": "/clue-types/question-marks/",
@@ -266,7 +275,10 @@
         "Indexable robots directive",
         "Valid JSON-LD",
         "Exactly one Pageview script",
-        "Wildcard search crawling allowed in robots.txt"
+        "Wildcard search crawling allowed in robots.txt",
+        "Unique title, description, and canonical across the sitemap",
+        "Valid lastmod and no duplicate sitemap URLs",
+        "No production orphan or unreachable pages; click depth no greater than 3"
       ]
     },
     "searchImpressions": 0,

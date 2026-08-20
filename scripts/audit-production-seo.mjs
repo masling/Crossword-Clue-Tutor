@@ -19,9 +19,11 @@ export function auditHtml({ html, url }) {
   const canonical = html.match(/<link rel="canonical" href="([^"]+)">/)?.[1] ?? "";
   const h1Count = (html.match(/<h1(?:\s|>)/g) ?? []).length;
   const descriptions = html.match(/<meta name="description" content="[^"]+">/g) ?? [];
+  const description = decodeEntities(html.match(/<meta name="description" content="([^"]+)">/)?.[1] ?? "");
   const pageviewCount = html.split(pageviewScript).length - 1;
   const robots = html.match(/<meta name="robots" content="([^"]+)">/)?.[1] ?? "";
   const jsonLdBlocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
+  const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
 
   if (!title) errors.push("missing title");
   else if (title.length > 70) errors.push(`title exceeds 70 characters (${title.length})`);
@@ -35,7 +37,70 @@ export function auditHtml({ html, url }) {
     try { JSON.parse(block[1]); } catch { errors.push("invalid JSON-LD"); }
   }
 
-  return { url, title, titleLength: title.length, h1Count, canonical, jsonLdBlocks: jsonLdBlocks.length, errors };
+  return { url, title, titleLength: title.length, description, h1Count, canonical, hrefs, jsonLdBlocks: jsonLdBlocks.length, errors };
+}
+
+function duplicateGroups(items, field) {
+  const grouped = new Map();
+  for (const item of items) {
+    const value = item[field];
+    if (!value) continue;
+    if (!grouped.has(value)) grouped.set(value, []);
+    grouped.get(value).push(item.url);
+  }
+  return [...grouped.entries()].filter(([, urls]) => urls.length > 1).map(([value, urls]) => ({ value, urls }));
+}
+
+export function auditSiteStructure({ pages, homeUrl }) {
+  const errors = [];
+  const urls = pages.map((page) => page.url);
+  const urlSet = new Set(urls);
+  const edges = new Map(urls.map((url) => [url, new Set()]));
+  const inbound = new Map(urls.map((url) => [url, new Set()]));
+  const duplicateTitles = duplicateGroups(pages, "title");
+  const duplicateDescriptions = duplicateGroups(pages, "description");
+  const duplicateCanonicals = duplicateGroups(pages, "canonical");
+
+  for (const page of pages) {
+    for (const href of page.hrefs ?? []) {
+      let target;
+      try {
+        const resolved = new URL(href, page.url);
+        if (resolved.origin !== new URL(homeUrl).origin) continue;
+        resolved.hash = "";
+        resolved.search = "";
+        target = resolved.href;
+      } catch {
+        continue;
+      }
+      if (!urlSet.has(target) || target === page.url) continue;
+      edges.get(page.url).add(target);
+      inbound.get(target).add(page.url);
+    }
+  }
+
+  const orphanUrls = urls.filter((url) => url !== homeUrl && inbound.get(url).size === 0);
+  const depth = new Map([[homeUrl, 0]]);
+  const queue = [homeUrl];
+  while (queue.length) {
+    const current = queue.shift();
+    for (const target of edges.get(current) ?? []) {
+      if (depth.has(target)) continue;
+      depth.set(target, depth.get(current) + 1);
+      queue.push(target);
+    }
+  }
+  const unreachableUrls = urls.filter((url) => !depth.has(url));
+  const maximumClickDepth = Math.max(...depth.values());
+
+  if (duplicateTitles.length) errors.push(`${duplicateTitles.length} duplicate title groups`);
+  if (duplicateDescriptions.length) errors.push(`${duplicateDescriptions.length} duplicate description groups`);
+  if (duplicateCanonicals.length) errors.push(`${duplicateCanonicals.length} duplicate canonical groups`);
+  if (orphanUrls.length) errors.push(`${orphanUrls.length} orphan pages`);
+  if (unreachableUrls.length) errors.push(`${unreachableUrls.length} pages unreachable from home`);
+  if (maximumClickDepth > 3) errors.push(`maximum click depth is ${maximumClickDepth}`);
+
+  return { errors, duplicateTitles, duplicateDescriptions, duplicateCanonicals, orphanUrls, unreachableUrls, maximumClickDepth };
 }
 
 export function auditRobots(robots, sitemapUrl) {
@@ -97,9 +162,14 @@ export async function auditProduction({ siteUrl, fetchImpl = fetch, concurrency 
   if (!sitemapResponse.ok) throw new Error(`Sitemap returned HTTP ${sitemapResponse.status}`);
   if (!robotsResponse.ok) throw new Error(`robots.txt returned HTTP ${robotsResponse.status}`);
   const [sitemap, robots] = await Promise.all([sitemapResponse.text(), robotsResponse.text()]);
-  const urls = [...sitemap.matchAll(/<loc>(https:\/\/[^<]+)<\/loc>/g)].map((match) => match[1]);
+  const sitemapEntries = [...sitemap.matchAll(/<url><loc>(https:\/\/[^<]+)<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?<\/url>/g)].map((match) => ({ url: match[1], lastmod: match[2] ?? "" }));
+  const urls = sitemapEntries.map((entry) => entry.url);
   const errors = [];
   if (urls.length === 0) errors.push("sitemap contains no URLs");
+  const duplicateSitemapUrls = urls.length - new Set(urls).size;
+  const missingLastmod = sitemapEntries.filter((entry) => !/^\d{4}-\d{2}-\d{2}$/.test(entry.lastmod)).length;
+  if (duplicateSitemapUrls) errors.push(`sitemap contains ${duplicateSitemapUrls} duplicate URLs`);
+  if (missingLastmod) errors.push(`${missingLastmod} sitemap URLs have missing or invalid lastmod`);
   errors.push(...auditRobots(robots, sitemapUrl));
 
   const pages = await mapConcurrent(urls, concurrency, async (url) => {
@@ -115,6 +185,8 @@ export async function auditProduction({ siteUrl, fetchImpl = fetch, concurrency 
   });
   const pageErrors = pages.flatMap((page) => page.errors.map((error) => `${page.url}: ${error}`));
   errors.push(...pageErrors);
+  const structure = auditSiteStructure({ pages, homeUrl: base.href });
+  errors.push(...structure.errors);
   const longest = [...pages].sort((a, b) => b.titleLength - a.titleLength)[0] ?? { url: null, title: null, titleLength: 0 };
 
   return {
@@ -123,6 +195,14 @@ export async function auditProduction({ siteUrl, fetchImpl = fetch, concurrency 
     sitemapUrls: urls.length,
     pagesAudited: pages.length,
     pagesWithErrors: pages.filter((page) => page.errors.length).length,
+    duplicateSitemapUrls,
+    invalidLastmod: missingLastmod,
+    duplicateTitleGroups: structure.duplicateTitles.length,
+    duplicateDescriptionGroups: structure.duplicateDescriptions.length,
+    duplicateCanonicalGroups: structure.duplicateCanonicals.length,
+    orphanPages: structure.orphanUrls.length,
+    unreachableFromHome: structure.unreachableUrls.length,
+    maximumClickDepth: structure.maximumClickDepth,
     titleTooLong: pages.filter((page) => page.errors.some((error) => error.startsWith("title exceeds"))).length,
     longestTitle: { url: longest.url, title: longest.title, characters: longest.titleLength },
     errors
