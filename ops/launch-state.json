@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T20:48:49+08:00",
+  "updatedAt": "2026-08-20T20:55:59+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -34,19 +34,19 @@
     }
   },
   "content": {
-    "indexablePages": 154,
+    "indexablePages": 156,
     "reviewedClues": 78,
-    "answerMeaningPages": 33,
+    "answerMeaningPages": 34,
     "latestMeaningExpansion": {
-      "answers": ["BITING", "INBORN", "SWOLLEN", "GRAND", "COAX", "ROUTE"],
-      "sourceHubs": ["Nipping", "Congenital", "Inflated", "Noble", "Cajole", "Path"],
+      "answers": ["BITING", "INBORN", "SWOLLEN", "GRAND", "COAX", "ROUTE", "RICHES"],
+      "sourceHubs": ["Nipping", "Congenital", "Inflated", "Noble", "Cajole", "Path", "Wealth"],
       "internalLinking": "Matching hub candidates and query variants link automatically to their meaning pages"
     },
-    "evergreenClueHubs": 12,
-    "evergreenClueHubCandidates": 266,
+    "evergreenClueHubs": 13,
+    "evergreenClueHubCandidates": 294,
     "solverReviewedClueCandidates": 78,
-    "solverHubCandidates": 266,
-    "solverCandidatePool": 344,
+    "solverHubCandidates": 294,
+    "solverCandidatePool": 372,
     "linkableGuides": 1,
     "linkableResearchPages": 1,
     "datasetDownloadFormats": [
@@ -57,20 +57,20 @@
       {
         "name": "OneLook dictionary headword index",
         "route": "/assets/onelook-dictionary.txt",
-        "entries": 33,
+        "entries": 34,
         "format": "One absolute definition link per line"
       }
     ],
     "dictionaryStructuredData": {
       "type": "DefinedTermSet",
       "route": "/crosswordese/",
-      "members": 33,
+      "members": 34,
       "productionStatus": "Verified"
     },
-    "structuredDataPages": 154,
-    "breadcrumbStructuredDataPages": 153,
+    "structuredDataPages": 156,
+    "breadcrumbStructuredDataPages": 155,
     "articleStructuredDataPages": 84,
-    "socialPreviewPages": 156,
+    "socialPreviewPages": 158,
     "faviconTheme": "Crossword grid with teal crossing entries and a gold intersection on a dark ink field",
     "faviconAssets": [
       "SVG",
@@ -108,25 +108,25 @@
       "Clue-to-answer meaning links for continued reading"
     ],
     "internalLinkAudit": {
-      "verifiedAt": "2026-08-20T20:48:49+08:00",
+      "verifiedAt": "2026-08-20T20:55:59+08:00",
       "orphanPages": 0,
       "unreachableFromHome": 0,
       "maximumClickDepth": 3,
       "depthDistribution": {
         "0": 1,
         "1": 29,
-        "2": 105,
+        "2": 107,
         "3": 19
       },
       "buildGate": "Fail when any indexable page has no inbound HTML link, is unreachable from home, or exceeds depth 3."
     },
     "selectionPolicy": "Routine same-day coverage is independent of trends and historical keyword volume. Use Bing, Google Trends, and Search Console afterward to backfill missed dates and expand materially undercovered queries or topics.",
     "latestDemandBackfill": {
-      "keyword": "path crossword clue",
-      "bingImpressions": 484,
+      "keyword": "wealth crossword clue",
+      "bingImpressions": 525,
       "bingPeriod": "2026-05-20 to 2026-08-17 worldwide",
-      "publishedRoute": "/crossword-clues/path/",
-      "reviewedCandidates": 29,
+      "publishedRoute": "/crossword-clues/wealth/",
+      "reviewedCandidates": 28,
       "queryVariants": 5
     },
     "rejectedDemandSignals": [
@@ -197,7 +197,7 @@
     "bingSiteScanRemediation": "Generated document titles are now capped at 70 characters; verify with a later rescan.",
     "searchImpressions": 0,
     "searchClicks": 0,
-    "indexNowSubmittedUrls": 439
+    "indexNowSubmittedUrls": 446
   },
   "deployment": {
     "provider": "Cloudflare Pages",
@@ -206,7 +206,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "5653ce3",
+    "lastVerifiedCommit": "8293c3d",
     "lastDeployStatus": "Success"
   },
   "outreach": {
