@@ -107,6 +107,11 @@ for (const answer of answers) {
   const expected = `<a href="https://crosswordcluetutor.com/crosswordese/${answer.slug}/">${answer.answer}</a>`;
   if (!oneLookLines.includes(expected)) errors.push(`OneLook dictionary index is missing ${answer.answer}`);
 }
+const answerIndexPage = await readFile(path.join(dist, "crosswordese/index.html"), "utf8");
+const answerIndexStructuredData = [...answerIndexPage.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((match) => JSON.parse(match[1]));
+const definedTermSet = answerIndexStructuredData.find((item) => item["@type"] === "DefinedTermSet");
+if (!definedTermSet) errors.push("crosswordese index is missing DefinedTermSet structured data");
+else if (definedTermSet.hasDefinedTerm?.length !== answers.length) errors.push(`DefinedTermSet must contain all ${answers.length} answer entities`);
 const sitemapEntries = [...sitemap.matchAll(/<url><loc>[^<]+<\/loc>(?:<lastmod>([^<]+)<\/lastmod>)?<\/url>/g)];
 for (const [index, entry] of sitemapEntries.entries()) {
   if (!entry[1]) errors.push(`sitemap URL ${index + 1} is missing lastmod`);

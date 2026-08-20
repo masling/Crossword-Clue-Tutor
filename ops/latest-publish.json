@@ -1,16 +1,10 @@
 {
-  "publishedAt": "2026-08-20T12:24:44.000Z",
-  "input": "data/clue-hubs.json#cajole-with-coax-meaning",
+  "publishedAt": "2026-08-20T12:40:11.000Z",
+  "input": "scripts/build.mjs#defined-term-set",
   "urls": [],
-  "answerUrls": [
-    "/crosswordese/coax/"
-  ],
+  "answerUrls": [],
   "clinicUrls": [],
   "hubUrls": [
-    "/crossword-clues/cajole/",
-    "/crossword-clues/",
-    "/crosswordese/",
-    "/solver/",
-    "/explain/"
+    "/crosswordese/"
   ]
 }
