@@ -663,5 +663,87 @@
       "cajole into doing crossword clue",
       "cajole meaning"
     ]
+  },
+  {
+    "slug": "path",
+    "clue": "Path",
+    "reviewedAt": "2026-08-20",
+    "summary": "Possible answers for Path depend on whether the clue means a foot-worn trail, constructed walkway, travel route, moving object's course, network connection, or figurative direction in life.",
+    "answerGuidance": "Start with WAY for three letters, LANE or ROAD for four, ROUTE or TRAIL for five, and COURSE for six. Motion or astronomy context may instead require ORBIT or TRAJECTORY.",
+    "meaningBuckets": [
+      "A trodden trail, track, footpath, or way made by repeated walking.",
+      "A constructed walkway, aisle, passage, lane, road, or other travel surface.",
+      "A route, course, direction, or itinerary from one place to another.",
+      "The line, arc, orbit, circuit, or trajectory followed by a moving object.",
+      "A figurative course of action, career direction, way of life, or sequence through a network."
+    ],
+    "preferredAnswers": ["ROUTE", "WAY", "TRAIL", "COURSE", "ORBIT", "TRAJECTORY"],
+    "answers": [
+      { "answer": "WAY", "sense": "A route, direction, method, or course from one point or state to another." },
+      { "answer": "ARC", "sense": "A curved path followed by a moving or projected object." },
+      { "answer": "LANE", "sense": "A narrow road, track, or marked path for travel." },
+      { "answer": "ROAD", "sense": "An established path or route for vehicles, people, or trade." },
+      { "answer": "LINE", "sense": "A continuous direction or path along which something moves or extends." },
+      { "answer": "WALK", "sense": "A path or route intended especially for pedestrians." },
+      { "answer": "ROUTE", "sense": "A planned or established path from one place to another." },
+      { "answer": "TRAIL", "sense": "A rough or marked path through natural terrain." },
+      { "answer": "TRACK", "sense": "A beaten path, set course, or line followed by something moving." },
+      { "answer": "AISLE", "sense": "A passage or walking path between rows of seats, shelves, or displays." },
+      { "answer": "ORBIT", "sense": "The curved path of an object around a planet, star, or other body." },
+      { "answer": "BYWAY", "sense": "A minor road or less-traveled path away from a main route." },
+      { "answer": "TRACE", "sense": "A faint path, line, or course that can be followed." },
+      { "answer": "COURSE", "sense": "The route, direction, or progression followed by movement or action." },
+      { "answer": "AVENUE", "sense": "A broad road, approach, or figurative path toward a goal." },
+      { "answer": "CAREER", "sense": "A long-term professional course or path through working life." },
+      { "answer": "STREET", "sense": "A public road or urban path lined by buildings." },
+      { "answer": "PATHWAY", "sense": "A path for walking or a sequence connecting stages in a process." },
+      { "answer": "WALKWAY", "sense": "A constructed passage or path reserved for pedestrians." },
+      { "answer": "PASSAGE", "sense": "A route, corridor, or way through or between places." },
+      { "answer": "CHANNEL", "sense": "A defined path through which water, signals, or activity moves." },
+      { "answer": "ROADWAY", "sense": "The part of a road used as a path for vehicles." },
+      { "answer": "CIRCUIT", "sense": "A closed path, route, or complete course around an area or system." },
+      { "answer": "FOOTPATH", "sense": "A path intended for people traveling on foot." },
+      { "answer": "APPROACH", "sense": "A route toward a place or a method for reaching an objective." },
+      { "answer": "DIRECTION", "sense": "The course or path along which someone or something proceeds." },
+      { "answer": "ITINERARY", "sense": "A planned route or sequence of places in a journey." },
+      { "answer": "TRAJECTORY", "sense": "The path followed by a moving object through space or over time." },
+      { "answer": "THOROUGHFARE", "sense": "A public road or passage forming a major path through a place." }
+    ],
+    "queryVariants": [
+      {
+        "query": "path 5 letters crossword clue",
+        "guidance": "Several common five-letter answers fit different contexts; crossings separate a general route from a natural trail, marked track, aisle, orbit, or byway.",
+        "answers": ["ROUTE", "TRAIL", "TRACK", "AISLE", "ORBIT", "BYWAY", "TRACE"]
+      },
+      {
+        "query": "path through woods crossword clue",
+        "guidance": "Woodland wording points toward a natural walking route rather than a road or abstract course, with length distinguishing trail, track, pathway, and footpath.",
+        "answers": ["TRAIL", "TRACK", "PATHWAY", "FOOTPATH"]
+      },
+      {
+        "query": "flight path crossword clue",
+        "guidance": "An aircraft, projectile, or celestial-object clue uses path as a course of motion; the geometry and answer length determine the exact term.",
+        "answers": ["ARC", "ROUTE", "ORBIT", "COURSE", "TRAJECTORY"]
+      },
+      {
+        "query": "career path crossword clue",
+        "guidance": "Career or life wording is figurative and asks for a professional course, general way, or longer-term direction rather than a physical trail.",
+        "answers": ["WAY", "COURSE", "CAREER", "DIRECTION"]
+      },
+      {
+        "query": "garden path crossword clue",
+        "guidance": "Garden context favors a pedestrian feature, from a short walk or trail to a constructed walkway, pathway, or footpath.",
+        "answers": ["WALK", "TRAIL", "PATHWAY", "WALKWAY", "FOOTPATH"]
+      }
+    ],
+    "relatedQueries": [
+      "path crossword clue",
+      "path crossword answer",
+      "path 5 letters crossword clue",
+      "path through woods crossword clue",
+      "flight path crossword clue",
+      "career path crossword clue",
+      "garden path crossword clue"
+    ]
   }
 ]

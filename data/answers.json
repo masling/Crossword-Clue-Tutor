@@ -515,5 +515,22 @@
     ],
     "otherMeanings": "COAX can also mean to manipulate something gradually into a desired state, as when coaxing a flame to life or coaxing a cable through an opening.",
     "related": []
+  },
+  {
+    "slug": "route",
+    "answer": "ROUTE",
+    "pronunciation": "root; rowt",
+    "partOfSpeech": "noun; verb",
+    "meaning": "A planned or established path from one place to another; as a verb, to direct something along such a path.",
+    "crosswordUse": "ROUTE is a strong five-letter answer for “Path,” “Way,” “Course,” or “Travel plan.” Numbered-road wording may point to Route 66, while networking language can use the verb sense.",
+    "whyCommon": "The five-letter word is familiar, supports physical, travel, delivery, and computing clues, and competes with several same-length path answers that crossings can resolve.",
+    "cluePatterns": [
+      "Path, in five letters",
+      "Planned travel course",
+      "Way from here to there",
+      "Direct along a network"
+    ],
+    "otherMeanings": "ROUTE can describe a road itinerary, delivery circuit, transit line, data-network path, or the act of directing traffic, messages, or objects.",
+    "related": []
   }
 ]

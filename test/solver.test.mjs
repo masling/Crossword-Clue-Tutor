@@ -96,4 +96,7 @@ test("serves demand-backed clue hubs through the live solver data", async () => 
   assert.equal(solveClues(candidates, { clue: "cajole", length: 4 })[0].answer, "COAX");
   assert.equal(solveClues(candidates, { clue: "cajole with flattery", length: 7 })[0].answer, "WHEEDLE");
   assert.equal(solveClues(candidates, { clue: "cajole deceptively", pattern: "I???????" })[0].answer, "INVEIGLE");
+  assert.equal(solveClues(candidates, { clue: "path", length: 5 })[0].answer, "ROUTE");
+  assert.equal(solveClues(candidates, { clue: "path through woods", pattern: "T????" })[0].answer, "TRAIL");
+  assert.equal(solveClues(candidates, { clue: "flight path", pattern: "O????" })[0].answer, "ORBIT");
 });

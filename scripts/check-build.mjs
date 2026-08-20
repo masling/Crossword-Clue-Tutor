@@ -215,7 +215,8 @@ for (const [slug, answer, target] of [
   ["inborn", "INBORN", "Present from birth"],
   ["swollen", "SWOLLEN", "Enlarged beyond normal size"],
   ["grand", "GRAND", "one thousand dollars"],
-  ["coax", "COAX", "persuade gently"]
+  ["coax", "COAX", "persuade gently"],
+  ["route", "ROUTE", "planned or established path"]
 ]) {
   const answerPage = await readFile(path.join(dist, `crosswordese/${slug}/index.html`), "utf8");
   if (!answerPage.includes(`${answer} in crosswords`) || !answerPage.includes(target) || !answerPage.includes('"@type":"DefinedTerm"')) errors.push(`${answer} answer page is missing its meaning target or DefinedTerm data`);
@@ -236,7 +237,7 @@ const sharpHub = await readFile(path.join(dist, "crossword-clues/sharp/index.htm
 if (!sharpHub.includes("Sharp crossword clue") || !sharpHub.includes("KEEN") || !sharpHub.includes("ACUTE") || !sharpHub.includes("ASTUTE") || !sharpHub.includes("Sharp or biting in taste") || !sharpHub.includes("mentally sharp crossword clue") || !sharpHub.includes("looking sharp crossword clue")) errors.push("Sharp clue hub is missing its search target, reviewed answers, meanings, or query variants");
 const lightHub = await readFile(path.join(dist, "crossword-clues/light/index.html"), "utf8");
 if (!lightHub.includes("Light crossword clue") || !lightHub.includes("GLOW") || !lightHub.includes("PALE") || !lightHub.includes("IGNITE") || !lightHub.includes("Illumination, a beam") || !lightHub.includes("flashing light crossword clue") || !lightHub.includes("before it gets light crossword clue") || !lightHub.includes("STROBE") || !lightHub.includes("PREDAWN")) errors.push("Light clue hub is missing its search target, reviewed answers, meanings, or query variants");
-for (const [hubSlug, answerSlug] of [["nipping", "biting"], ["congenital", "inborn"], ["inflated", "swollen"], ["noble", "grand"], ["cajole", "coax"]]) {
+for (const [hubSlug, answerSlug] of [["nipping", "biting"], ["congenital", "inborn"], ["inflated", "swollen"], ["noble", "grand"], ["cajole", "coax"], ["path", "route"]]) {
   const hubPage = await readFile(path.join(dist, `crossword-clues/${hubSlug}/index.html`), "utf8");
   if (!hubPage.includes(`/crosswordese/${answerSlug}/`) || !hubPage.includes("answer-entity-link")) errors.push(`${hubSlug} clue hub is missing its answer-meaning internal link`);
 }

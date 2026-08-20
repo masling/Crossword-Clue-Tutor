@@ -1,10 +1,17 @@
 {
-  "publishedAt": "2026-08-20T12:40:11.000Z",
-  "input": "scripts/build.mjs#defined-term-set",
+  "publishedAt": "2026-08-20T12:46:34.000Z",
+  "input": "data/clue-hubs.json#path-with-route-meaning",
   "urls": [],
-  "answerUrls": [],
+  "answerUrls": [
+    "/crosswordese/route/"
+  ],
   "clinicUrls": [],
   "hubUrls": [
-    "/crosswordese/"
+    "/crossword-clues/path/",
+    "/crossword-clues/",
+    "/crosswordese/",
+    "/solver/",
+    "/explain/",
+    "/research/ambiguous-crossword-clues/"
   ]
 }
