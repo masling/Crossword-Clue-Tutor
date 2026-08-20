@@ -96,6 +96,7 @@ if (!sitemap.includes("<lastmod>")) errors.push("sitemap is missing lastmod meta
 if (!sitemap.includes("/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/")) errors.push("sitemap is missing the current NYT Mini batch");
 if (!sitemap.includes("/explainers/forfends-nyt-daily/")) errors.push("sitemap is missing the selected current NYT Daily batch");
 if (!sitemap.includes("/explainers/private-sleeping-accommodations-nyt-daily/")) errors.push("sitemap is missing the latest NYT Daily batch");
+if (!sitemap.includes("/explainers/hidden-figures-star-janelle-usa-today/")) errors.push("sitemap is missing the latest USA TODAY batch");
 if (!sitemap.includes("/crossword-clues/")) errors.push("sitemap is missing the clue dictionary");
 if (!sitemap.includes("/crossword-clues/diffuse/")) errors.push("sitemap is missing the Diffuse clue hub");
 if (!sitemap.includes("/crossword-clues/pitch/")) errors.push("sitemap is missing the Pitch clue hub");
@@ -132,6 +133,9 @@ const latHub = await readFile(path.join(dist, "la-times-crossword-answers/index.
 if (!latHub.includes("&quot;All Eyez on Me&quot; rapper")) errors.push("LA Times demand hub is missing its selected current clue");
 const usaTodayHub = await readFile(path.join(dist, "usa-today-crossword-answers/index.html"), "utf8");
 if (!usaTodayHub.includes("Arthur for whom the ESPYs&#039; Courage Award is named")) errors.push("USA TODAY demand hub is missing its selected current clue");
+if (!usaTodayHub.includes("&quot;Hidden Figures&quot; star Janelle") || !usaTodayHub.includes("August 20, 2026")) errors.push("USA TODAY hub is missing its August 20 selected batch");
+const latestUsaTodayPage = await readFile(path.join(dist, "explainers/hidden-figures-star-janelle-usa-today/index.html"), "utf8");
+if (!latestUsaTodayPage.includes("Why MONAE fits") || !latestUsaTodayPage.includes("USA TODAY Crossword · 44-Across")) errors.push("latest USA TODAY explainer is missing its reviewed answer or source context");
 const diffuseHub = await readFile(path.join(dist, "crossword-clues/diffuse/index.html"), "utf8");
 if (!diffuseHub.includes("Diffuse crossword clue")) errors.push("Diffuse clue hub is missing its search target");
 if (!diffuseHub.includes("SPREAD") || !diffuseHub.includes("OSMOSE") || !diffuseHub.includes("PROLIX")) errors.push("Diffuse clue hub is missing reviewed multi-sense answers");
@@ -178,8 +182,9 @@ for (const answer of ["SPOON", "OUTTA", "UNTO", "ERAS", "ANGER"]) {
 if (!fillBlankGuide.includes('"@type":"Article"')) errors.push("fill-in-the-blank guide is missing Article structured data");
 const properNounGuide = await readFile(path.join(dist, "clue-types/proper-nouns/index.html"), "utf8");
 if (!properNounGuide.includes("How to solve proper noun crossword clues")) errors.push("proper-noun guide is missing its primary search target");
-for (const answer of ["PLUTO", "TUPACSHAKUR", "ASHE", "HAWKE", "DUA", "LINUS", "HADES", "BOPIT"]) {
-  if (!properNounGuide.includes(answer)) errors.push(`proper-noun guide is missing reviewed example ${answer}`);
+const currentProperNounExamples = clues.filter((clue) => clue.clueType === "proper-noun").sort((a, b) => b.popularity - a.popularity).slice(0, 8);
+for (const clue of currentProperNounExamples) {
+  if (!properNounGuide.includes(clue.answer)) errors.push(`proper-noun guide is missing current reviewed example ${clue.answer}`);
 }
 if (!properNounGuide.includes('"@type":"Article"')) errors.push("proper-noun guide is missing Article structured data");
 const directDefinitionGuide = await readFile(path.join(dist, "clue-types/direct-definitions/index.html"), "utf8");

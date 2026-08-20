@@ -1519,5 +1519,143 @@
     "publication": "NYT Mini",
     "sourceDate": "2026-08-20",
     "clueNumber": "2-Down"
+  },
+  {
+    "slug": "una-corte-de-rosas-y-espinas-sarah-j-maas-usa-today",
+    "clue": "\"___ corte de rosas y espinas\" (Sarah J. Maas novel translated by Margara Averbach)",
+    "answer": "UNA",
+    "date": "2026-08-20",
+    "popularity": 100,
+    "definition": "Una is the Spanish feminine singular indefinite article meaning “a” or “an.”",
+    "explanation": "The published Spanish title is “Una corte de rosas y espinas,” translated by Margara Averbach, so the three-letter article UNA completes the title exactly.",
+    "partOfSpeech": "Spanish article",
+    "tags": [
+      "sarah-j-maas",
+      "book-title",
+      "spanish",
+      "translation"
+    ],
+    "clueType": "fill-in-the-blank",
+    "signal": "The blank is the opening word of a quoted Spanish book title, while the author and translator remove any title ambiguity.",
+    "hint": "The missing word is the feminine singular Spanish indefinite article.",
+    "reviewedAt": "2026-08-20",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "27-Across"
+  },
+  {
+    "slug": "hidden-figures-star-janelle-usa-today",
+    "clue": "\"Hidden Figures\" star Janelle",
+    "answer": "MONAE",
+    "date": "2026-08-20",
+    "popularity": 99,
+    "definition": "Janelle Monáe is an actor and musician who played NASA engineer Mary Jackson in “Hidden Figures.”",
+    "explanation": "The clue gives the performer's first name and a film credit. Janelle Monáe appears in “Hidden Figures” as Mary Jackson, so her five-letter surname supplies MONAE in the grid.",
+    "partOfSpeech": "surname",
+    "tags": [
+      "janelle-monae",
+      "hidden-figures",
+      "film",
+      "actor"
+    ],
+    "clueType": "proper-noun",
+    "signal": "A quoted film title plus the performer's given name asks for the missing surname.",
+    "hint": "She portrayed NASA engineer Mary Jackson and also released the album “Dirty Computer.”",
+    "reviewedAt": "2026-08-20",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "44-Across"
+  },
+  {
+    "slug": "vegas-venue-worlds-largest-led-screen-usa-today",
+    "clue": "Vegas venue whose interior includes the world's largest LED screen",
+    "answer": "SPHERE",
+    "date": "2026-08-20",
+    "popularity": 98,
+    "definition": "Sphere is a spherical entertainment venue in Las Vegas built around an enormous wraparound LED display.",
+    "explanation": "The combination of Las Vegas, a venue, and its record-scale interior LED display identifies Sphere. The six-letter venue name is entered as SPHERE.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "las-vegas",
+      "sphere",
+      "venue",
+      "technology"
+    ],
+    "clueType": "proper-noun",
+    "signal": "A location and a distinctive technological feature identify a specific venue.",
+    "hint": "Think of the globe-shaped entertainment venue near the Las Vegas Strip.",
+    "reviewedAt": "2026-08-20",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "47-Across"
+  },
+  {
+    "slug": "carol-star-mara-usa-today",
+    "clue": "\"Carol\" star Mara",
+    "answer": "ROONEY",
+    "date": "2026-08-20",
+    "popularity": 97,
+    "definition": "Rooney Mara starred as Therese Belivet in the 2015 film “Carol.”",
+    "explanation": "The clue supplies the actor's surname and the film that identifies her. Rooney Mara played Therese opposite Cate Blanchett, so the six-letter given name is ROONEY.",
+    "partOfSpeech": "given name",
+    "tags": [
+      "rooney-mara",
+      "carol",
+      "film",
+      "actor"
+    ],
+    "clueType": "proper-noun",
+    "signal": "A quoted film title and surname ask for the performer's given name.",
+    "hint": "She played Therese Belivet opposite Cate Blanchett.",
+    "reviewedAt": "2026-08-20",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "2-Down"
+  },
+  {
+    "slug": "el-perro-painter-francisco-usa-today",
+    "clue": "\"El perro\" painter Francisco",
+    "answer": "GOYA",
+    "date": "2026-08-20",
+    "popularity": 96,
+    "definition": "Francisco Goya was the Spanish painter responsible for the work commonly known as “The Dog” or “El perro.”",
+    "explanation": "The artwork title and the given name Francisco point to Francisco Goya. Because the clue supplies his first name, the grid needs his four-letter surname, GOYA.",
+    "partOfSpeech": "surname",
+    "tags": [
+      "francisco-goya",
+      "painting",
+      "spanish-art",
+      "el-perro"
+    ],
+    "clueType": "proper-noun",
+    "signal": "A quoted artwork title plus the artist's given name asks for the surname.",
+    "hint": "This Spanish artist also created the Black Paintings.",
+    "reviewedAt": "2026-08-20",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "39-Down"
+  },
+  {
+    "slug": "princess-diaries-2-protagonist-usa-today",
+    "clue": "\"The Princess Diaries 2: Royal Engagement\" protagonist",
+    "answer": "MIA",
+    "date": "2026-08-20",
+    "popularity": 95,
+    "definition": "Mia Thermopolis is the future queen of Genovia and protagonist of “The Princess Diaries 2: Royal Engagement.”",
+    "explanation": "The film follows Princess Mia Thermopolis, played by Anne Hathaway. The clue asks for the protagonist rather than the actor, so the three-letter character name MIA fits.",
+    "partOfSpeech": "given name",
+    "tags": [
+      "princess-diaries",
+      "mia-thermopolis",
+      "disney",
+      "film-character"
+    ],
+    "clueType": "proper-noun",
+    "signal": "A full movie title asks for its named central character.",
+    "hint": "Anne Hathaway plays this future queen of Genovia.",
+    "reviewedAt": "2026-08-20",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-20",
+    "clueNumber": "65-Down"
   }
 ]

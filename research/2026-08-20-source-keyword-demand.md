@@ -57,3 +57,25 @@ exact-query volume. Bing demand, Google Trends, and Search Console are a seconda
 they identify missed dates, absent landing pages, and existing topics whose coverage is
 too thin relative to observed demand. They supplement daily freshness; they do not choose
 whether today's source date is covered.
+
+## 17:50 SGT USA TODAY freshness run
+
+The official public USA TODAY puzzle page now showed the August 20, 2026 puzzle
+“Getting Attached,” by Steve Jopek and edited by Amie Walker. This advanced the source
+from the previously recorded August 19 date.
+
+Six entries were selected from the public clue list for strong entity or quoted-title
+search intent rather than explanation difficulty:
+
+- Sarah J. Maas's Spanish title opening (`UNA`)
+- Janelle Monáe in “Hidden Figures” (`MONAE`)
+- the Las Vegas Sphere venue (`SPHERE`)
+- Rooney Mara in “Carol” (`ROONEY`)
+- Francisco Goya and “El perro” (`GOYA`)
+- Mia Thermopolis in “The Princess Diaries 2” (`MIA`)
+
+The answer facts were independently checked against the Spanish publisher's title and
+translator record, 20th Century Studios' cast page, Sphere's official display overview,
+the Museo del Prado's Goya collection, Disney's film description, and a film reference
+identifying Rooney Mara as a “Carol” star. Only these six selected clue relationships
+were published; the grid and complete clue/answer list were not copied.
