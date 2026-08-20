@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T17:40:06+08:00",
+  "updatedAt": "2026-08-20T17:47:01+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -116,6 +116,18 @@
     "tokenExpiresOn": "2027-08-20",
     "lastVerifiedCommit": "3c3349c",
     "lastDeployStatus": "Success"
+  },
+  "outreach": {
+    "verifiedAt": "2026-08-20T17:47:01+08:00",
+    "readyForApproval": 3,
+    "sent": 0,
+    "responses": 0,
+    "readyTargets": [
+      "Daily Crossword Links",
+      "XWord Blog",
+      "American Crossword Puzzle Tournament Links"
+    ],
+    "approvalNeeded": "Sender name plus authorization to send two emails; sender email is also required for the ACPT form."
   },
   "nextAction": {
     "notBefore": "2026-08-20T18:15:00+08:00",
