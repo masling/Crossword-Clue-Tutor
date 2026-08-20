@@ -300,6 +300,13 @@ p { text-wrap: pretty; }
 .empty-grid i:nth-child(2), .empty-grid i:nth-child(3) { background: var(--ink); color: var(--white); }
 
 .site-footer { border-top: 1px solid var(--line); background: var(--surface); }
+.research-table-wrap { overflow-x: auto; margin: 24px 0 42px; border: 1px solid var(--line); }
+.research-table-wrap table { width: 100%; min-width: 680px; border-collapse: collapse; text-align: left; }
+.research-table-wrap th, .research-table-wrap td { padding: 14px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.research-table-wrap thead th { background: var(--surface); color: var(--muted); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.research-table-wrap tbody tr:last-child th, .research-table-wrap tbody tr:last-child td { border-bottom: 0; }
+.research-table-wrap tbody th a { color: var(--primary-dark); }
+.research-table-wrap td:nth-child(2), .research-table-wrap td:nth-child(3) { white-space: nowrap; font-variant-numeric: tabular-nums; }
 .footer-grid { min-height: 190px; display: flex; align-items: center; justify-content: space-between; gap: 50px; }
 .footer-brand { margin-bottom: 8px; }
 .footer-grid p { margin: 0; color: var(--muted); font-size: 0.88rem; }

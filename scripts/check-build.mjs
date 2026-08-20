@@ -41,7 +41,7 @@ for (const file of htmlFiles) {
   }
 }
 
-for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/clues.json", "assets/answers.json", "favicon.svg", "robots.txt", "sitemap.xml", "feed.xml"]) {
+for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/clues.json", "assets/answers.json", "assets/clue-hubs.json", "favicon.svg", "robots.txt", "sitemap.xml", "feed.xml"]) {
   try {
     await access(path.join(dist, asset));
   } catch {
@@ -76,6 +76,7 @@ if (!sitemap.includes("/crossword-clues/pitch/")) errors.push("sitemap is missin
 if (!sitemap.includes("/crossword-clues/charge/")) errors.push("sitemap is missing the Charge clue hub");
 if (!sitemap.includes("/crossword-clues/issue/")) errors.push("sitemap is missing the Issue clue hub");
 if (!sitemap.includes("/guides/answer-length-and-crossings/")) errors.push("sitemap is missing the ambiguity solving guide");
+if (!sitemap.includes("/research/ambiguous-crossword-clues/")) errors.push("sitemap is missing the ambiguity research page");
 if (!sitemap.includes("/crossword-answers-today/")) errors.push("sitemap is missing the cross-publication answers-today hub");
 if (!sitemap.includes("/crossword-answers-by-length/")) errors.push("sitemap is missing the answers-by-length index");
 for (const length of [3, 4, 5, 6]) {
@@ -120,6 +121,11 @@ if (!issueHub.includes("EMIT") || !issueHub.includes("TOPIC") || !issueHub.inclu
 const ambiguityGuide = await readFile(path.join(dist, "guides/answer-length-and-crossings/index.html"), "utf8");
 if (!ambiguityGuide.includes("How answer length and crossings solve ambiguous crossword clues")) errors.push("ambiguity guide is missing its search target");
 if (!ambiguityGuide.includes("/crossword-clues/diffuse/") || !ambiguityGuide.includes("/crossword-clues/pitch/") || !ambiguityGuide.includes("/crossword-clues/charge/") || !ambiguityGuide.includes("/crossword-clues/issue/") || !ambiguityGuide.includes("/solver/")) errors.push("ambiguity guide is missing its useful internal links");
+const ambiguityResearchPage = await readFile(path.join(dist, "research/ambiguous-crossword-clues/index.html"), "utf8");
+if (!ambiguityResearchPage.includes("Ambiguous crossword clues by answer length and meaning")) errors.push("ambiguity research page is missing its primary target");
+if (!ambiguityResearchPage.includes("71 reviewed clue-answer possibilities") || !ambiguityResearchPage.includes("71 unique answers")) errors.push("ambiguity research page is missing its current dataset totals");
+if (!ambiguityResearchPage.includes('"@type":"Dataset"')) errors.push("ambiguity research page is missing Dataset structured data");
+if (!ambiguityResearchPage.includes("/assets/clue-hubs.json")) errors.push("ambiguity research page is missing the JSON download");
 const answersTodayPage = await readFile(path.join(dist, "crossword-answers-today/index.html"), "utf8");
 if (!answersTodayPage.includes("Crossword answers today — selected clues")) errors.push("answers-today hub is missing its search target");
 for (const publication of ["NYT Mini", "The New York Times Crossword", "LA Times Crossword", "USA TODAY Crossword"]) {
