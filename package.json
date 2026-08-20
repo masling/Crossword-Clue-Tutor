@@ -15,7 +15,9 @@
     "outreach:send": "node scripts/send-outreach.mjs",
     "seo:audit-production": "node scripts/audit-production-seo.mjs",
     "production:configure": "node scripts/configure-production.mjs",
+    "qa:url": "node scripts/create-qa-url.mjs",
     "test": "node --test",
+    "traffic:cloudflare": "node scripts/query-cloudflare-traffic.mjs",
     "validate": "node scripts/validate-content.mjs"
   },
   "engines": {

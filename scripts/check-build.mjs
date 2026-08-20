@@ -339,6 +339,10 @@ for (const source of ["functions/api/feedback.js", "migrations/0001_create_feedb
 }
 const wranglerConfig = await readFile(path.resolve("wrangler.jsonc"), "utf8");
 if (!wranglerConfig.includes('"binding": "FEEDBACK_DB"') || !wranglerConfig.includes('"database_name": "crossword-clue-tutor-feedback"')) errors.push("wrangler config is missing the feedback D1 binding");
+const qaPage = await readFile(path.join(dist, "qa/index.html"), "utf8");
+if (!qaPage.includes("Operator QA entry") || !qaPage.includes("utm_source=operator_qa") || !qaPage.includes("utm_campaign=site_qa")) errors.push("QA utility page is missing its operator campaign tags");
+if (!qaPage.includes("noindex,nofollow")) errors.push("QA utility page must remain noindex");
+if (sitemap.includes("/qa/")) errors.push("sitemap must not include the QA utility page");
 const savedCluesPage = await readFile(path.join(dist, "saved-clues/index.html"), "utf8");
 if (!savedCluesPage.includes("data-saved-clues-root")) errors.push("saved clues page is missing its local rendering root");
 if (!savedCluesPage.includes("noindex,nofollow")) errors.push("saved clues page must remain out of the search index");

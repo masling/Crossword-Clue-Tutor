@@ -125,6 +125,29 @@ and 25 visits, all direct or self-referred. This replay is the regression check 
 automation. Do not count a visit toward the acquisition goal unless its external search
 referrer is present and the visit is outside the operator QA baseline.
 
+For repeatable local execution, provide an Account Analytics Read token only through the
+environment and run:
+
+```sh
+CLOUDFLARE_ACCOUNT_ID=... CLOUDFLARE_API_TOKEN=... npm run traffic:cloudflare
+```
+
+The command filters `bot: 0`, groups by referrer, subtracts both the legacy operator QA
+baseline and visits whose entry path is `/qa/`, and reports verified search visits separately. It never
+stores or prints the token. Use `TRAFFIC_DRY_RUN=1` to inspect the query without network
+access or credentials.
+
+Before any manual production test, generate and open a tagged entry URL:
+
+```sh
+npm run qa:url -- release-check-name
+```
+
+Pageview/Plausible records `utm_source=operator_qa`, `utm_medium=internal`, and
+`utm_campaign=site_qa` in its Campaigns report. Cloudflare RUM separately counts the
+noindex `/qa/` entry path. Always start operator browsing from that URL; do not visit a
+production page directly when the visit is part of QA.
+
 ## Daily target during launch
 
 - 5–10 reviewed fresh clue pages.

@@ -1,10 +1,10 @@
 {
-  "updatedAt": "2026-08-20T23:03:24+08:00",
+  "updatedAt": "2026-08-21T07:55:28+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
     "deadline": "2026-09-02T09:23:00+08:00",
-    "currentNetHumanSessions": 0,
+    "currentNetHumanSessions": 1,
     "measurementRule": "Count only non-operator sessions with a verified external search referrer; direct and unknown traffic remains unverified.",
     "operatorQaBaseline": 4,
     "analyticsFilter": "excludeBots=Yes",
@@ -16,13 +16,19 @@
     "pageviewStatus": "Verified",
     "pageviewOperatorQaBaseline": 1,
     "latestAnalyticsSnapshot": {
-      "recordedAt": "2026-08-20T21:58:03+08:00",
+      "recordedAt": "2026-08-21T07:55:28+08:00",
       "cloudflarePeriod": "Cumulative from 2026-08-19T09:20:00+08:00",
-      "cloudflareVisits": 40,
-      "cloudflarePageviews": 46,
+      "cloudflareVisits": 59,
+      "cloudflarePageviews": 66,
       "cloudflareBotVisits": 1,
-      "cloudflareNonBotVisitsAfterQa": 36,
-      "cloudflareExternalReferrerVisits": 0,
+      "cloudflareNonBotVisitsAfterQa": 55,
+      "cloudflareExternalReferrerVisits": 1,
+      "cloudflareRefererBreakdown": {
+        "directVisits": 58,
+        "bingVisits": 1,
+        "selfReferredPageviews": 7,
+        "taggedOperatorQaVisits": 0
+      },
       "pageviewPeriod": "2026-08-20 Today",
       "pageviewUniqueVisitors": 13,
       "pageviewVisits": 14,
@@ -30,7 +36,7 @@
       "pageviewVisitsAfterQa": 13,
       "pageviewDirectVisits": 14,
       "unverifiedBingReferrals": 0,
-      "verifiedSearchSessions": 0
+      "verifiedSearchSessions": 1
     }
   },
   "content": {
@@ -70,7 +76,7 @@
     "structuredDataPages": 160,
     "breadcrumbStructuredDataPages": 159,
     "articleStructuredDataPages": 85,
-    "socialPreviewPages": 162,
+    "socialPreviewPages": 163,
     "faviconTheme": "Crossword grid with teal crossing entries and a gold intersection on a dark ink field",
     "faviconAssets": [
       "SVG",
@@ -115,6 +121,18 @@
       "Homepage navigation to demand-backed clue and meaning pages",
       "Verified domain-email contact path with privacy disclosure"
     ],
+    "operatorQaTrafficTag": {
+      "entryRoute": "/qa/",
+      "indexing": "Noindex and excluded from sitemap",
+      "pageviewCampaign": {
+        "utm_source": "operator_qa",
+        "utm_medium": "internal",
+        "utm_campaign": "site_qa"
+      },
+      "cloudflareDimension": "requestPath=/qa/",
+      "urlCommand": "npm run qa:url -- <run-name>",
+      "status": "Implemented; first tagged visit pending production deployment"
+    },
     "contactStructuredData": {
       "organizationContactPoint": "Verified on homepage",
       "aboutPage": "/about/",
@@ -280,6 +298,18 @@
         "Valid lastmod and no duplicate sitemap URLs",
         "No production orphan or unreachable pages; click depth no greater than 3"
       ]
+    },
+    "trafficEvidenceAutomation": {
+      "command": "npm run traffic:cloudflare",
+      "dataset": "rumPageloadEventsAdaptiveGroups",
+      "filters": "siteTag plus bot=0",
+      "dimensions": [
+        "refererHost",
+        "requestPath=/qa/"
+      ],
+      "credentialPolicy": "Account Analytics Read token supplied only through environment variables",
+      "dryRun": "TRAFFIC_DRY_RUN=1",
+      "verifiedAt": "2026-08-21T07:55:28+08:00"
     },
     "searchImpressions": 0,
     "searchClicks": 0,
