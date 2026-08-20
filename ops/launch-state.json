@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T21:12:53+08:00",
+  "updatedAt": "2026-08-20T21:18:48+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -228,17 +228,19 @@
       "XWord Blog",
       "American Crossword Puzzle Tournament Links"
     ],
-    "approvalNeeded": "Approve the USD 5/month Workers Paid email plan and domain-email activation, or approve the existing Gmail identity as the sender; external forms and emails still require action-time confirmation.",
+    "approvalNeeded": "Approve Zoho Mail Free account creation and domain DNS changes if the free plan is available in the selected data center; external forms and emails still require action-time confirmation.",
     "senderSetup": {
       "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
       "inboundDestination": "masling@gmail.com",
       "destinationAlreadyVerified": true,
       "existingDomainMailRecords": 0,
       "existingDomainRoutingRules": 0,
-      "inboundPlan": "Cloudflare Email Routing",
-      "outboundPlan": "Cloudflare Email Sending SMTP through Gmail send-as",
-      "workersPaidRequired": true,
-      "status": "Awaiting explicit recurring-charge and credential approval",
+      "preferredPlan": "Zoho Mail Free custom-domain mailbox",
+      "preferredPlanLimitations": "Selected data centers only; webmail access; no IMAP, POP, automatic forwarding, or ActiveSync",
+      "paidFallback": "Cloudflare Email Routing plus Email Sending SMTP on Workers Paid",
+      "workersPaidRequiredForPreferredPlan": false,
+      "rejectedRelay": "Resend Free because its AUP prohibits cold outreach",
+      "status": "Awaiting explicit Zoho account-creation and DNS-change approval",
       "runbook": "ops/EMAIL_SETUP.md"
     }
   },

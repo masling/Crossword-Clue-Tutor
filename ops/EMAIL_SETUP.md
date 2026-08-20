@@ -1,7 +1,8 @@
 # Crossword Clue Tutor domain email setup
 
-Status: prepared, not activated. Enabling outbound delivery requires explicit approval
-for the Workers Paid plan and for creating an email-sending API credential.
+Status: prepared, not activated. The preferred route is Zoho Mail Free when available in
+the selected data center. Account creation, DNS changes, and any credentials still require
+explicit action-time approval.
 
 ## Proposed public identity
 
@@ -23,7 +24,30 @@ for the Workers Paid plan and for creating an email-sending API credential.
 The domain is therefore clear for onboarding, with no existing mailbox configuration to
 migrate or replace.
 
-## Phase 1 — inbound mail
+## Preferred free option — Zoho Mail Free
+
+Zoho's current free organization plan supports one custom domain, up to five users, and
+5 GB per user, with web-only mailbox access. Availability is limited to selected data
+centers. IMAP, POP, automatic forwarding, and ActiveSync are paid-plan features.
+
+Use this option only if the free plan is shown during signup:
+
+1. Create a Zoho Mail organization in the appropriate data center.
+2. Add and verify `crosswordcluetutor.com` with a temporary TXT or CNAME record.
+3. Create the user `hello@crosswordcluetutor.com` with display name
+   `Crossword Clue Tutor`.
+4. Replace the domain's mail records with the MX, SPF, and DKIM values shown by Zoho.
+5. Add a DMARC record in monitoring mode before sending external mail.
+6. Use Zoho Webmail for inbound replies. Do not expect Gmail forwarding or POP retrieval
+   on the free plan.
+7. If Zoho exposes SMTP for the free organization in the selected data center, use the
+   exact server settings shown inside that account; do not copy settings from another
+   region.
+
+Cloudflare Email Routing and Zoho cannot both own the root MX records. If Zoho is chosen,
+do not onboard Cloudflare Email Routing for this domain.
+
+## Paid all-Cloudflare fallback — inbound mail
 
 Requires approval to modify DNS and Cloudflare Email Routing.
 
@@ -37,7 +61,7 @@ Requires approval to modify DNS and Cloudflare Email Routing.
 5. Keep the catch-all rule disabled so unrequested addresses are not accepted.
 6. Send an inbound test from an unrelated external mailbox and verify delivery to Gmail.
 
-## Phase 2 — outbound mail
+## Paid all-Cloudflare fallback — outbound mail
 
 Cloudflare Email Sending to arbitrary recipients requires Workers Paid. The current public
 price is a USD 5 monthly account minimum; Email Sending includes 3,000 outbound messages
@@ -75,6 +99,12 @@ confirm:
 
 Do not send the prepared outreach batch until these checks pass.
 
+## Rejected free relay option
+
+Resend's free tier includes custom domains and sufficient volume, but its Acceptable Use
+Policy explicitly prohibits unsolicited messages and cold outreach. It must not be used
+for the prepared directory and editorial pitches.
+
 ## Rollback
 
 1. Disable the `hello@` routing rule.
@@ -83,4 +113,3 @@ Do not send the prepared outreach batch until these checks pass.
 4. Remove only DNS records created by Email Service onboarding; preserve website and
    Search Console records.
 5. Cancel Workers Paid only after confirming no other project in the account depends on it.
-
