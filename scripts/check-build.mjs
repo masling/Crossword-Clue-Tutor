@@ -126,6 +126,12 @@ for (const publication of ["NYT Mini", "The New York Times Crossword", "LA Times
   if (!answersTodayPage.includes(publication)) errors.push(`answers-today hub is missing ${publication}`);
 }
 if (!answersTodayPage.includes('"@type":"ItemList"')) errors.push("answers-today hub is missing ItemList structured data");
+const abbreviationGuide = await readFile(path.join(dist, "clue-types/abbreviations/index.html"), "utf8");
+if (!abbreviationGuide.includes("Crossword abbreviations and clue signals")) errors.push("abbreviation guide is missing its primary search target");
+for (const answer of ["SPEC", "NATL", "ENE", "CPU", "MLS", "NASA"]) {
+  if (!abbreviationGuide.includes(answer)) errors.push(`abbreviation guide is missing reviewed example ${answer}`);
+}
+if (!abbreviationGuide.includes('"@type":"Article"')) errors.push("abbreviation guide is missing Article structured data");
 const answerLengthIndex = await readFile(path.join(dist, "crossword-answers-by-length/index.html"), "utf8");
 if (!answerLengthIndex.includes("Crossword answers by length")) errors.push("answers-by-length index is missing its search target");
 for (const length of [3, 4, 5, 6]) {
