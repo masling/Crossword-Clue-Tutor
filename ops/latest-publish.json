@@ -28,6 +28,7 @@
     "/clue-types/",
     "/clue-types/abbreviations/",
     "/clue-types/question-marks/",
-    "/clue-types/fill-in-the-blank/"
+    "/clue-types/fill-in-the-blank/",
+    "/clue-types/proper-nouns/"
   ]
 }

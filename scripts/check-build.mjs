@@ -144,6 +144,12 @@ for (const answer of ["SPOON", "OUTTA", "UNTO", "ERAS", "ANGER"]) {
   if (!fillBlankGuide.includes(answer)) errors.push(`fill-in-the-blank guide is missing reviewed example ${answer}`);
 }
 if (!fillBlankGuide.includes('"@type":"Article"')) errors.push("fill-in-the-blank guide is missing Article structured data");
+const properNounGuide = await readFile(path.join(dist, "clue-types/proper-nouns/index.html"), "utf8");
+if (!properNounGuide.includes("How to solve proper noun crossword clues")) errors.push("proper-noun guide is missing its primary search target");
+for (const answer of ["PLUTO", "TUPACSHAKUR", "ASHE", "HAWKE", "DUA", "LINUS", "HADES", "BOPIT"]) {
+  if (!properNounGuide.includes(answer)) errors.push(`proper-noun guide is missing reviewed example ${answer}`);
+}
+if (!properNounGuide.includes('"@type":"Article"')) errors.push("proper-noun guide is missing Article structured data");
 const answerLengthIndex = await readFile(path.join(dist, "crossword-answers-by-length/index.html"), "utf8");
 if (!answerLengthIndex.includes("Crossword answers by length")) errors.push("answers-by-length index is missing its search target");
 for (const length of [3, 4, 5, 6]) {
