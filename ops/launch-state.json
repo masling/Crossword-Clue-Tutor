@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T19:09:17+08:00",
+  "updatedAt": "2026-08-20T19:14:54+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -38,10 +38,10 @@
     "reviewedClues": 78,
     "answerMeaningPages": 27,
     "evergreenClueHubs": 6,
-    "evergreenClueHubCandidates": 119,
+    "evergreenClueHubCandidates": 128,
     "solverReviewedClueCandidates": 78,
-    "solverHubCandidates": 119,
-    "solverCandidatePool": 197,
+    "solverHubCandidates": 128,
+    "solverCandidatePool": 206,
     "linkableGuides": 1,
     "linkableResearchPages": 1,
     "datasetDownloadFormats": [
@@ -144,7 +144,7 @@
     "bingSiteScanRemediation": "Generated document titles are now capped at 70 characters; verify with a later rescan.",
     "searchImpressions": 0,
     "searchClicks": 0,
-    "indexNowSubmittedUrls": 387
+    "indexNowSubmittedUrls": 392
   },
   "deployment": {
     "provider": "Cloudflare Pages",
@@ -153,7 +153,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "216acb1",
+    "lastVerifiedCommit": "53ff811",
     "lastDeployStatus": "Success"
   },
   "outreach": {
