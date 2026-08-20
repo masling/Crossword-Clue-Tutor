@@ -1,0 +1,53 @@
+{
+  "reviewedAt": "2026-08-20",
+  "sender": {
+    "name": "Crossword Clue Tutor",
+    "email": "hello@crosswordcluetutor.com"
+  },
+  "status": "prepared_not_sent",
+  "datasetEvidence": {
+    "clueFamilies": 15,
+    "reviewedCandidates": 328,
+    "meaningEntries": 36
+  },
+  "items": [
+    {
+      "id": "daily-crossword-links",
+      "target": "Daily Crossword Links",
+      "channel": "email",
+      "recipient": "crosswordlinks@gmail.com",
+      "subject": "News & Notes tip: 328 reviewed answers for 15 ambiguous clues",
+      "textFile": "messages/daily-crossword-links.txt",
+      "approvalRequired": true,
+      "sentAt": null
+    },
+    {
+      "id": "xword-blog",
+      "target": "XWord Blog",
+      "channel": "email",
+      "recipient": "info@xwordinfo.com",
+      "subject": "Guest essay idea: how crossings disambiguate one-word clues",
+      "textFile": "messages/xword-blog.txt",
+      "approvalRequired": true,
+      "sentAt": null
+    },
+    {
+      "id": "onelook-dictionary",
+      "target": "OneLook Dictionary Search",
+      "channel": "form",
+      "formUrl": "https://www.onelook.com/?c=about",
+      "payloadFile": "forms/onelook-dictionary.json",
+      "approvalRequired": true,
+      "submittedAt": null
+    },
+    {
+      "id": "acpt-links",
+      "target": "American Crossword Puzzle Tournament Links",
+      "channel": "form",
+      "formUrl": "https://crosswordtournament.com/links/addalink.htm",
+      "payloadFile": "forms/acpt-links.json",
+      "approvalRequired": true,
+      "submittedAt": null
+    }
+  ]
+}

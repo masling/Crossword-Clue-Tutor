@@ -20,7 +20,7 @@ export function parseArgs(argv) {
       options[flag.slice(2)] = true;
       continue;
     }
-    if (["--to", "--subject", "--text-file", "--confirm-recipient"].includes(flag)) {
+    if (["--to", "--subject", "--text-file", "--confirm-recipient", "--outreach-id"].includes(flag)) {
       options[flag.slice(2).replaceAll("-", "_")] = takeValue(argv, index, flag);
       index += 1;
       continue;
@@ -66,6 +66,8 @@ export function smtpConfig(env = process.env) {
 
 function usage() {
   return `Usage:
+  npm run outreach:send -- --outreach-id daily-crossword-links
+  npm run outreach:send -- --outreach-id daily-crossword-links --send --confirm-recipient crosswordlinks@gmail.com
   npm run outreach:send -- --to person@example.com --subject "Subject" --text-file message.txt
   npm run outreach:send -- --to person@example.com --subject "Subject" --text-file message.txt --send --confirm-recipient person@example.com
   npm run outreach:send -- --verify
@@ -79,6 +81,20 @@ export async function run(argv = process.argv.slice(2), env = process.env) {
   if (options.help) {
     console.log(usage());
     return;
+  }
+
+  if (options.outreach_id) {
+    if (options.to || options.subject || options.text_file) {
+      throw new Error("Do not combine --outreach-id with --to, --subject, or --text-file");
+    }
+    const manifest = JSON.parse(await readFile(path.resolve("ops/outreach/manifest.json"), "utf8"));
+    const item = manifest.items?.find((candidate) => candidate.id === options.outreach_id);
+    if (!item) throw new Error(`Unknown outreach id: ${options.outreach_id}`);
+    if (item.channel !== "email") throw new Error(`${options.outreach_id} is a form, not an email`);
+    if (item.sentAt !== null || item.approvalRequired !== true) throw new Error(`${options.outreach_id} is not in a safe prepared state`);
+    options.to = item.recipient;
+    options.subject = item.subject;
+    options.text_file = path.join("ops/outreach", item.textFile);
   }
 
   const smtp = smtpConfig(env);
@@ -104,6 +120,7 @@ export async function run(argv = process.argv.slice(2), env = process.env) {
 
   const preview = {
     mode: options.send ? "send" : "dry-run",
+    outreachId: options.outreach_id ?? null,
     smtpHost: smtp.host,
     from: `${smtp.fromName} <${smtp.fromEmail}>`,
     replyTo: smtp.fromEmail,

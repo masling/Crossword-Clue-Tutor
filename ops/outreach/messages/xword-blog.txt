@@ -1,0 +1,18 @@
+Hi XWord Blog team,
+
+I would like to propose a practical, data-backed guest essay on why terse crossword clues cannot be solved reliably as ordinary synonym questions. I reviewed 328 possible answers across 15 recurring clue families and organized them by entry length and exact sense. The piece would show how crossings, grammar, and register turn that broad semantic space into one defensible fill.
+
+The essay would be educational rather than promotional. It would explain the dataset's limitations, use reproducible examples without copying a current grid, and disclose that I maintain Crossword Clue Tutor.
+
+Method and examples:
+https://crosswordcluetutor.com/guides/answer-length-and-crossings/
+
+Downloadable source data:
+https://crosswordcluetutor.com/research/ambiguous-crossword-clues/
+
+Would this topic fit the blog? I can send a concise outline before drafting.
+
+Best,
+Masling
+Crossword Clue Tutor
+https://crosswordcluetutor.com/

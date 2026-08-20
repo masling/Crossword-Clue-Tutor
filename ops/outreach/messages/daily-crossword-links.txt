@@ -1,0 +1,14 @@
+Hi Daily Crossword Links team,
+
+I maintain Crossword Clue Tutor, a free, spoiler-aware solver and reviewed clue dictionary. I have published a downloadable dataset showing why a short crossword clue rarely has one universal answer: 328 reviewed candidates across 15 recurring clue families, organized by answer length and exact sense.
+
+The page documents the editorial method and limitations, links to JSON and CSV downloads, and does not reproduce publisher grids or complete answer keys:
+
+https://crosswordcluetutor.com/research/ambiguous-crossword-clues/
+
+If it fits Crossworld News & Notes or could support a guest essay, I can provide a short neutral listing or an outline. Full disclosure: I maintain the submitted site.
+
+Thanks,
+Masling
+Crossword Clue Tutor
+https://crosswordcluetutor.com/

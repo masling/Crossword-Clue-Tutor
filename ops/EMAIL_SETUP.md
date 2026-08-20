@@ -61,6 +61,13 @@ npm run outreach:send -- --verify
 Preview an individual message without transmitting it:
 
 ```sh
+npm run outreach:send -- --outreach-id daily-crossword-links
+```
+
+The manifest-based form is preferred because it binds the reviewed recipient, subject,
+and message file together. An ad hoc draft can still be previewed explicitly:
+
+```sh
 npm run outreach:send -- \
   --to editor@example.com \
   --subject 'A useful crossword clue resource' \

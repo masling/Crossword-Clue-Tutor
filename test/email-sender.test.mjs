@@ -1,12 +1,22 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { parseArgs, smtpConfig, validateSingleAddress } from "../scripts/send-outreach.mjs";
+import { parseArgs, run, smtpConfig, validateSingleAddress } from "../scripts/send-outreach.mjs";
 
 test("defaults to a non-sending dry run", () => {
   const options = parseArgs(["--to", "editor@example.com", "--subject", "Hello", "--text-file", "draft.txt"]);
   assert.equal(options.send, false);
   assert.equal(options.to, "editor@example.com");
   assert.equal(options.text_file, "draft.txt");
+});
+
+test("accepts a manifest outreach id without enabling sending", () => {
+  const options = parseArgs(["--outreach-id", "daily-crossword-links"]);
+  assert.equal(options.outreach_id, "daily-crossword-links");
+  assert.equal(options.send, false);
+});
+
+test("refuses to pass a form payload to the email transport", async () => {
+  await assert.rejects(() => run(["--outreach-id", "onelook-dictionary"], {}), /is a form, not an email/);
 });
 
 test("rejects recipient lists and header injection", () => {

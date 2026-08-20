@@ -6,6 +6,8 @@ end-to-end delivery test remain before live outreach.
 
 The active Cloudflare-inbound/Zoho-outbound setup is documented in `../EMAIL_SETUP.md`.
 Gmail Send mail as is a temporary manual interface through 2026, not a separate relay.
+`manifest.json` is the machine-checked source of truth for recipient, subject, message
+file, form payload, and unsent status.
 
 ## Ready 1 — OneLook Dictionary Search
 
@@ -15,7 +17,7 @@ Gmail Send mail as is a temporary manual interface through 2026, not a separate 
   legal publication rights, and a high content-to-ads ratio.
 - Asset: `/crosswordese/` plus `/assets/onelook-dictionary.txt`, with one absolute link
   per headword as recommended in the official webmaster format.
-- Draft: “OneLook dictionary submission” in `2026-08-20-drafts.md`.
+- Payload: `forms/onelook-dictionary.json`.
 - Expected value: durable discovery links from a word-search service with a dedicated
   crossword mode and more than 1,000 indexed dictionaries.
 
@@ -24,7 +26,8 @@ Gmail Send mail as is a temporary manual interface through 2026, not a separate 
 - Channel: email to `crosswordlinks@gmail.com`
 - Evidence: its current About/Support pages invite tips, guest essays, and new sites.
 - Asset: `/research/ambiguous-crossword-clues/` with JSON and CSV downloads
-- Draft: “Newsletter/news-note pitch” in `2026-08-20-drafts.md`
+- Message: `messages/daily-crossword-links.txt`
+- Dry-run: `npm run outreach:send -- --outreach-id daily-crossword-links`
 - Expected value: the most relevant direct community audience in this queue.
 
 ## Ready 3 — XWord Blog
@@ -33,15 +36,15 @@ Gmail Send mail as is a temporary manual interface through 2026, not a separate 
 - Evidence: its current Home page explicitly says it is interested in guest submissions;
   its Contact page publishes this address.
 - Asset: JSON/CSV dataset plus `/guides/answer-length-and-crossings/`
-- Draft: “XWord Blog guest-essay pitch” in `2026-08-20-drafts.md`
+- Message: `messages/xword-blog.txt`
+- Dry-run: `npm run outreach:send -- --outreach-id xword-blog`
 - Expected value: editorial link and credibility if the proposed essay is accepted.
 
 ## Ready 4 — American Crossword Puzzle Tournament Links
 
 - Channel: public “Add a Link” Zoho form linked from the current ACPT Links page.
 - Category: `Dictionaries and Solving aids`.
-- Required fields and prepared copy: “ACPT Links form submission” in
-  `2026-08-20-drafts.md`.
+- Required fields and prepared copy: `forms/acpt-links.json`.
 - Expected value: durable resource-page referral and backlink if approved.
 
 ## Hold

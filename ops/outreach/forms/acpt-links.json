@@ -1,0 +1,9 @@
+{
+  "name": "Crossword Clue Tutor",
+  "email": "hello@crosswordcluetutor.com",
+  "category": "Dictionaries and Solving aids",
+  "website": "https://crosswordcluetutor.com/",
+  "siteName": "Crossword Clue Tutor",
+  "briefDescription": "Free pattern-aware crossword helper with spoiler-light hints, reviewed definitions, and explanations of why each answer fits.",
+  "comments": "Crossword Clue Tutor is independently maintained and does not reproduce complete publisher grids or answer keys. Its clue dictionary includes a documented, downloadable dataset of ambiguous clues organized by length and meaning: https://crosswordcluetutor.com/research/ambiguous-crossword-clues/"
+}

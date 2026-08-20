@@ -10,6 +10,7 @@
     "deploy": "npm run build && wrangler pages deploy dist --project-name crossword-clue-tutor --branch main",
     "dev": "node scripts/serve.mjs",
     "indexnow:submit": "node scripts/submit-indexnow.mjs",
+    "outreach:check": "node scripts/validate-outreach.mjs",
     "outreach:send": "node scripts/send-outreach.mjs",
     "production:configure": "node scripts/configure-production.mjs",
     "test": "node --test",

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-20T21:58:03+08:00",
+  "updatedAt": "2026-08-20T22:03:11+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -218,7 +218,7 @@
     "lastDeployStatus": "Success"
   },
   "outreach": {
-    "verifiedAt": "2026-08-20T21:46:32+08:00",
+    "verifiedAt": "2026-08-20T22:03:11+08:00",
     "readyForApproval": 4,
     "sent": 0,
     "responses": 0,
@@ -228,6 +228,14 @@
       "XWord Blog",
       "American Crossword Puzzle Tournament Links"
     ],
+    "executionAssets": {
+      "manifest": "ops/outreach/manifest.json",
+      "individualEmailDrafts": 2,
+      "structuredFormPayloads": 2,
+      "validationCommand": "npm run outreach:check",
+      "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 36 meaning entries",
+      "transmissionStatus": "No email or form submitted"
+    },
     "approvalNeeded": "Enter the Zoho SMTP password or app password locally, then explicitly approve the first end-to-end test message; every external outreach form or email still requires action-time confirmation.",
     "senderSetup": {
       "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
