@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T12:31:04+08:00",
+  "updatedAt": "2026-08-21T12:53:18+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -139,6 +139,20 @@
       "contactPage": "/feedback/",
       "feedbackIndexing": "Noindex utility page",
       "productionStatus": "Verified; Cloudflare email-address obfuscation active"
+    },
+    "aboutPage": {
+      "route": "/about/",
+      "status": "Expanded and pending production verification",
+      "sections": [
+        "Mission and user outcome",
+        "Four-step hint-first solving model",
+        "Current editorial coverage",
+        "Review standards and publisher independence",
+        "Public software and protected editorial rights",
+        "Private data boundary",
+        "Roadmap and contact"
+      ],
+      "structuredData": "AboutPage linked to the Organization entity"
     },
     "homepageDemandNavigation": {
       "featuredClueHubs": 9,

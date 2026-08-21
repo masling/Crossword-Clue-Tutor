@@ -326,6 +326,8 @@ if (!feedbackPage.includes("noindex,nofollow")) errors.push("feedback utility pa
 if (sitemap.includes("/feedback/")) errors.push("sitemap must not include the feedback utility page");
 const aboutPage = await readFile(path.join(dist, "about/index.html"), "utf8");
 if (!aboutPage.includes('id="contact"') || !aboutPage.includes("mailto:hello@crosswordcluetutor.com") || !aboutPage.includes('"@type":"AboutPage"')) errors.push("about page is missing its contact section, verified email, or AboutPage data");
+if (!aboutPage.includes("Crossword help that teaches the clue, not just the answer") || !aboutPage.includes("How it helps you solve") || !aboutPage.includes("Independent by design") || !aboutPage.includes("Where the project is going")) errors.push("about page is missing its mission, solving model, independence boundary, or roadmap");
+if (!aboutPage.includes("github.com/masling/Crossword-Clue-Tutor") || !aboutPage.includes("standard follow link") || !aboutPage.includes("no live feedback records")) errors.push("about page is missing its public-project, reuse, or private-data boundary");
 const feedbackCluePage = await readFile(path.join(dist, "explainers/scientists-workplace-nyt-mini/index.html"), "utf8");
 if (!feedbackCluePage.includes("/feedback/?mode=clue") || !diffuseHub.includes("/feedback/?mode=hub")) errors.push("reviewed clue and hub pages are missing contextual feedback links");
 const specAnswerPage = await readFile(path.join(dist, "crosswordese/spec/index.html"), "utf8");
