@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T07:55:28+08:00",
+  "updatedAt": "2026-08-21T12:31:04+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -40,8 +40,8 @@
     }
   },
   "content": {
-    "indexablePages": 160,
-    "reviewedClues": 78,
+    "indexablePages": 165,
+    "reviewedClues": 82,
     "answerMeaningPages": 36,
     "latestMeaningExpansion": {
       "answers": ["BITING", "INBORN", "SWOLLEN", "GRAND", "COAX", "ROUTE", "RICHES", "LEAD", "ALLSPICE"],
@@ -73,10 +73,10 @@
       "members": 36,
       "productionStatus": "Verified"
     },
-    "structuredDataPages": 160,
-    "breadcrumbStructuredDataPages": 159,
-    "articleStructuredDataPages": 85,
-    "socialPreviewPages": 163,
+    "structuredDataPages": 165,
+    "breadcrumbStructuredDataPages": 164,
+    "articleStructuredDataPages": 89,
+    "socialPreviewPages": 168,
     "faviconTheme": "Crossword grid with teal crossing entries and a gold intersection on a dark ink field",
     "faviconAssets": [
       "SVG",
@@ -217,8 +217,15 @@
     "lastPublishedSourceDates": {
       "NYT Mini": "2026-08-20",
       "The New York Times Crossword": "2026-08-20",
-      "LA Times Crossword": "2026-08-20",
+      "LA Times Crossword": "2026-08-21",
       "USA TODAY Crossword": "2026-08-20"
+    },
+    "latestFreshnessBatch": {
+      "publication": "LA Times Crossword",
+      "sourceDate": "2026-08-21",
+      "selectedClues": 4,
+      "selectionReason": "Routine same-day coverage from a publicly verifiable current clue set",
+      "rightsBoundary": "Selected clues only; no grid or complete answer list"
     }
   },
   "search": {
@@ -371,7 +378,7 @@
     }
   },
   "nextAction": {
-    "notBefore": "2026-08-21T12:15:00+08:00",
-    "action": "Check each monitored publication for a newly public August 21 puzzle date, publish a small entity-led subset with original explanations, and use trends/search evidence only for later coverage gaps."
+    "notBefore": "2026-08-21T18:15:00+08:00",
+    "action": "Recheck NYT Mini, The New York Times Crossword, and USA TODAY for publicly verifiable August 21 clue-answer pairs; do not republish LA Times."
   }
 }

@@ -1,18 +1,23 @@
 {
-  "publishedAt": "2026-08-20T13:27:30.000Z",
-  "input": "data/clue-hubs.json#pimento-with-allspice-meaning",
-  "urls": [],
-  "answerUrls": [
-    "/crosswordese/allspice/"
+  "publishedAt": "2026-08-21T04:31:19.794Z",
+  "input": "ops/intake/2026-08-21-la-times-routine.json",
+  "urls": [
+    "/explainers/christina-ricci-wednesday-addams-la-times/",
+    "/explainers/big-name-in-brick-phones-la-times/",
+    "/explainers/wisconsins-capital-la-times/",
+    "/explainers/bamboo-loving-bear-p-and-a-la-times/"
   ],
-  "clinicUrls": [],
+  "answerUrls": [],
+  "clinicUrls": [
+    "/daily-clue-clinic/2026-08-21/"
+  ],
   "hubUrls": [
-    "/crossword-clues/pimento/",
-    "/crossword-clues/",
+    "/",
     "/crosswordese/",
-    "/solver/",
-    "/explain/",
-    "/research/ambiguous-crossword-clues/",
-    "/"
+    "/daily-clue-clinic/",
+    "/crossword-answers-today/",
+    "/crossword-answers-by-length/",
+    "/crossword-answers/5-letters/",
+    "/la-times-crossword-answers/"
   ]
 }

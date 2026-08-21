@@ -182,3 +182,17 @@ impressions. A direct lookup of `crossword clues` showed 5K worldwide impression
 possibilities across 15 ambiguous clue families, so that index was differentiated from
 the answer dictionary and aligned with the measured query: clues and answers by length
 and meaning. Again, the existing useful page was improved instead of cloning it.
+
+## 2026-08-21 12:15 SGT freshness run
+
+The public LATCrossword “Today’s Puzzle” page exposed a new clue set distinct from the
+recorded August 20 puzzle. Four entity-led or mechanism-rich pairs were selected:
+Christina Ricci (`RICCI`), Nokia brick phones (`NOKIA`), Wisconsin’s capital
+(`MADISON`), and the P-AND-A theme revealer (`PANDA`). Answers were cross-checked
+against the stated entry lengths and independent biographical, company, geography, and
+wordplay facts. Only these four clues were used; the full grid and answer list were not
+reproduced.
+
+At this checkpoint, accessible NYT and NYT Mini archives had not advanced to August 21,
+and USA TODAY did not expose a verifiable new date without publisher access. Those
+sources remain pending rather than being guessed.
