@@ -1,11 +1,11 @@
 {
-  "publishedAt": "2026-08-21T04:31:19.794Z",
-  "input": "ops/intake/2026-08-21-la-times-routine.json",
+  "publishedAt": "2026-08-21T10:18:04.956Z",
+  "input": "ops/intake/2026-08-21-nyt-mini-routine.json",
   "urls": [
-    "/explainers/christina-ricci-wednesday-addams-la-times/",
-    "/explainers/big-name-in-brick-phones-la-times/",
-    "/explainers/wisconsins-capital-la-times/",
-    "/explainers/bamboo-loving-bear-p-and-a-la-times/"
+    "/explainers/home-of-brunei-and-bhutan-nyt-mini/",
+    "/explainers/like-skin-of-snakes-and-fish-nyt-mini/",
+    "/explainers/gentle-musical-melodies-nyt-mini/",
+    "/explainers/every-kiss-begins-with-jewelry-ads-nyt-mini/"
   ],
   "answerUrls": [],
   "clinicUrls": [
@@ -17,7 +17,9 @@
     "/daily-clue-clinic/",
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
+    "/crossword-answers/4-letters/",
     "/crossword-answers/5-letters/",
-    "/la-times-crossword-answers/"
+    "/crossword-answers/3-letters/",
+    "/nyt-mini-crossword-clues/"
   ]
 }

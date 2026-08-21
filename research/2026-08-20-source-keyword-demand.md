@@ -196,3 +196,15 @@ reproduced.
 At this checkpoint, accessible NYT and NYT Mini archives had not advanced to August 21,
 and USA TODAY did not expose a verifiable new date without publisher access. Those
 sources remain pending rather than being guessed.
+
+## 2026-08-21 18:15 SGT freshness run
+
+The August 21 NYT Mini clue-answer set became publicly verifiable. Four selected pairs
+were published: Brunei and Bhutan's shared continent (`ASIA`), snake and fish skin
+(`SCALY`), gentle musical melodies (`LILTS`), and the Kay Jewelers slogan (`KAY`). Each
+page adds an independently written hint, definition, clue signal, and explanation; the
+complete Mini grid and answer list were not reproduced.
+
+Search results for the full New York Times Crossword did not provide a sufficiently
+reliable exact clue-answer set, and USA TODAY still lacked a verifiable August 21 set.
+Both remain pending rather than being inferred from thin or inconsistent sources.
