@@ -108,7 +108,10 @@
       "payloadFile": "forms/teach-arcade.json",
       "approvalRequired": true,
       "submittedAt": null,
-      "submissionStatus": "pending"
+      "submissionStatus": "blocked_network_error",
+      "attemptCount": 2,
+      "lastAttemptAt": "2026-08-22T19:42:53+08:00",
+      "submissionError": "The public form returned Network error after capturing a CAPTCHA token on both attempts."
     },
     {
       "id": "teachersfirst-edge",
@@ -118,7 +121,10 @@
       "payloadFile": "forms/teachersfirst-edge.json",
       "approvalRequired": true,
       "submittedAt": null,
-      "submissionStatus": "pending_phone_omitted"
+      "submissionStatus": "pending_manual_captcha",
+      "phoneOmitted": true,
+      "preparedAt": "2026-08-22T19:42:53+08:00",
+      "submissionEvidence": "All permitted fields were filled and the phone field was left blank; the image reCAPTCHA requires manual completion."
     }
   ]
 }
