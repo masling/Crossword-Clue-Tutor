@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-21T18:23:00+08:00",
+  "updatedAt": "2026-08-22T08:56:21+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -254,8 +254,20 @@
     "googleHomepageIndexStatus": "URL is on Google; page is indexed; HTTPS valid",
     "googleDiffuseIndexStatus": "URL unknown to Google; no crawl yet; no referring sitemap detected in URL Inspection",
     "googlePerformanceLastUpdate": "2026-08-20T11:53:00+08:00",
-    "googlePerformanceCheckedAt": "2026-08-20T21:58:03+08:00",
-    "googlePerformanceDashboardFreshness": "Last update 5.5 hours ago",
+    "googlePerformanceCheckedAt": "2026-08-22T08:56:21+08:00",
+    "googlePerformanceDashboardFreshness": "User-supplied latest 24-hour query snapshot",
+    "googleQueryEvidence": [
+      {
+        "period": "Latest 24 hours",
+        "query": "tutor crossword clue",
+        "country": "United Kingdom",
+        "impressions": 2,
+        "averagePosition": 17,
+        "clicks": null,
+        "recordedAt": "2026-08-22T08:56:21+08:00",
+        "source": "User-supplied GSC report"
+      }
+    ],
     "googleIndexingReportStatus": "Processing data; check again in a day or so",
     "googleLinksReportStatus": "Processing data; check again in a day or so",
     "manualIndexingCandidates": [
@@ -332,7 +344,7 @@
       "dryRun": "TRAFFIC_DRY_RUN=1",
       "verifiedAt": "2026-08-21T07:55:28+08:00"
     },
-    "searchImpressions": 0,
+    "searchImpressions": 2,
     "searchClicks": 0,
     "indexNowSubmittedUrls": 463
   },
