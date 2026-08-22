@@ -25,6 +25,13 @@ const savedCluesKey = "crossword-clue-tutor:saved-clues";
 setupSavedClueButtons();
 setupSavedCluesPage();
 setupFeedbackForm();
+setupPrintButtons();
+
+function setupPrintButtons() {
+  for (const control of document.querySelectorAll("[data-print-page]")) {
+    control.addEventListener("click", () => window.print());
+  }
+}
 
 function feedbackHref({ mode = "general", pagePath = location.pathname, clue = "", answer = "" } = {}) {
   const query = new URLSearchParams({ mode, page: pagePath });

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T20:04:27+08:00",
+  "updatedAt": "2026-08-22T20:41:07+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -58,9 +58,15 @@
     }
   },
   "content": {
-    "indexablePages": 191,
+    "indexablePages": 257,
     "reviewedClues": 106,
-    "answerMeaningPages": 36,
+    "answerMeaningPages": 100,
+    "dictionaryExpansion": {
+      "profilesAdded": 64,
+      "reviewedAt": "2026-08-22",
+      "sourceBoundary": "Profiles reuse existing reviewed clue definitions, signals, hints, and explanations; no new puzzle archive was imported.",
+      "frequencyBoundary": "The dictionary includes reviewed answer profiles and does not claim every entry is frequent crosswordese."
+    },
     "latestMeaningExpansion": {
       "answers": ["BITING", "INBORN", "SWOLLEN", "GRAND", "COAX", "ROUTE", "RICHES", "LEAD", "ALLSPICE"],
       "sourceHubs": ["Nipping", "Congenital", "Inflated", "Noble", "Cajole", "Path", "Wealth", "Forefront", "Pimento"],
@@ -71,7 +77,10 @@
     "solverReviewedClueCandidates": 102,
     "solverHubCandidates": 328,
     "solverCandidatePool": 406,
-    "linkableGuides": 2,
+    "linkableGuides": 3,
+    "classroomResources": 3,
+    "classroomAnalyticsMode": "Cookie-free Pageview retained; GA4 omitted on Teacher guide, Classroom Solver, and printable worksheet",
+    "visibleFeedSubscription": true,
     "linkableResearchPages": 1,
     "datasetDownloadFormats": [
       "JSON",
@@ -81,14 +90,14 @@
       {
         "name": "OneLook dictionary headword index",
         "route": "/assets/onelook-dictionary.txt",
-        "entries": 36,
+        "entries": 100,
         "format": "One absolute definition link per line"
       }
     ],
     "dictionaryStructuredData": {
       "type": "DefinedTermSet",
       "route": "/crosswordese/",
-      "members": 36,
+      "members": 100,
       "productionStatus": "Verified"
     },
     "structuredDataPages": 165,
@@ -421,7 +430,7 @@
       "localEmailDraftsReadyForReview": 2,
       "structuredFormPayloads": 5,
       "validationCommand": "npm run outreach:check",
-      "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 36 meaning entries",
+      "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 100 meaning entries",
       "transmissionStatus": "Five unique email targets were sent, including the ESLActive classroom-activity pitch. OneLook, ACPT, TeachersFirst, and ATEAL forms were submitted; Teach Arcade was skipped after repeated site network errors. Daily Crossword Links and XWord Blog each received one accidental duplicate."
     },
     "approvalNeeded": null,

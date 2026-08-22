@@ -24,10 +24,13 @@ for (const file of htmlFiles) {
   if (!/<link rel="alternate" type="application\/atom\+xml" title="[^"]+" href="https:\/\/crosswordcluetutor\.com\/feed\.xml">/.test(html)) errors.push(`${relative}: missing Atom feed discovery link`);
   const pageviewScripts = html.match(/<script defer data-domain="crosswordcluetutor\.com" src="https:\/\/app\.pageview\.app\/js\/script\.js"><\/script>/g) ?? [];
   if (pageviewScripts.length !== 1) errors.push(`${relative}: expected exactly one Pageview analytics script`);
+  const analyticsMode = html.match(/<meta name="analytics-mode" content="([^"]+)">/)?.[1];
+  if (!analyticsMode) errors.push(`${relative}: missing analytics mode`);
   const googleAnalyticsLoaders = html.match(/https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-HVMXR2YN3N/g) ?? [];
   const googleAnalyticsConfigs = html.match(/gtag\('config', 'G-HVMXR2YN3N'\)/g) ?? [];
-  if (googleAnalyticsLoaders.length !== 1) errors.push(`${relative}: expected exactly one GA4 loader`);
-  if (googleAnalyticsConfigs.length !== 1) errors.push(`${relative}: expected exactly one GA4 config`);
+  const expectedGa4Scripts = analyticsMode === "minimal" ? 0 : 1;
+  if (googleAnalyticsLoaders.length !== expectedGa4Scripts) errors.push(`${relative}: expected ${expectedGa4Scripts} GA4 loaders`);
+  if (googleAnalyticsConfigs.length !== expectedGa4Scripts) errors.push(`${relative}: expected ${expectedGa4Scripts} GA4 configs`);
   if (/crossword crossword clue/i.test(html)) errors.push(`${relative}: duplicated “crossword” in clue target`);
   if (/\bin the The\b/.test(html)) errors.push(`${relative}: duplicated article in publication context`);
   if (/<h1>“[“”]/.test(html)) errors.push(`${relative}: duplicated quotation marks in heading`);
@@ -193,6 +196,7 @@ if (!sitemap.includes("/crossword-clues/sharp/")) errors.push("sitemap is missin
 if (!sitemap.includes("/crossword-clues/light/")) errors.push("sitemap is missing the Light clue hub");
 if (!sitemap.includes("/guides/answer-length-and-crossings/")) errors.push("sitemap is missing the ambiguity solving guide");
 if (!sitemap.includes("/guides/crossword-clues-for-vocabulary-learning/")) errors.push("sitemap is missing the vocabulary teaching guide");
+if (!sitemap.includes("/classroom-solver/") || !sitemap.includes("/educators/crossword-vocabulary-worksheet/")) errors.push("sitemap is missing classroom resources");
 if (!sitemap.includes("/research/ambiguous-crossword-clues/")) errors.push("sitemap is missing the ambiguity research page");
 if (!sitemap.includes("/crossword-answers-today/")) errors.push("sitemap is missing the cross-publication answers-today hub");
 if (!sitemap.includes("/crossword-answers-by-length/")) errors.push("sitemap is missing the answers-by-length index");
@@ -270,6 +274,15 @@ const vocabularyGuide = await readFile(path.join(dist, "guides/crossword-clues-f
 if (!vocabularyGuide.includes("How to use crossword clues for vocabulary learning")) errors.push("vocabulary guide is missing its primary teaching target");
 if (!vocabularyGuide.includes("/solver/") || !vocabularyGuide.includes("/research/ambiguous-crossword-clues/")) errors.push("vocabulary guide is missing its teaching assets");
 if (!vocabularyGuide.includes('"learningResourceType":"Lesson plan"')) errors.push("vocabulary guide is missing learning-resource structured data");
+if (!vocabularyGuide.includes("/classroom-solver/") || !vocabularyGuide.includes("/educators/crossword-vocabulary-worksheet/")) errors.push("vocabulary guide is missing classroom tool links");
+const classroomSolverPage = await readFile(path.join(dist, "classroom-solver/index.html"), "utf8");
+if (!classroomSolverPage.includes('content="minimal"') || classroomSolverPage.includes("googletagmanager.com") || !classroomSolverPage.includes("app.pageview.app")) errors.push("classroom solver is not in cookie-free minimal analytics mode");
+if (!classroomSolverPage.includes("data-tool-root") || !classroomSolverPage.includes('"learningResourceType":"Interactive tool"')) errors.push("classroom solver is missing its tool or learning-resource data");
+const worksheetPage = await readFile(path.join(dist, "educators/crossword-vocabulary-worksheet/index.html"), "utf8");
+if (!worksheetPage.includes('content="minimal"') || worksheetPage.includes("googletagmanager.com") || !worksheetPage.includes("app.pageview.app")) errors.push("worksheet is not in cookie-free minimal analytics mode");
+for (const answer of ["CONNOTATION", "EASE", "RELIABLE", "CONTEXT", "ANTONYM"]) if (!worksheetPage.includes(answer)) errors.push(`worksheet is missing original answer ${answer}`);
+if (!worksheetPage.includes("data-print-page") || !worksheetPage.includes('"learningResourceType":"Worksheet"')) errors.push("worksheet is missing print control or learning-resource data");
+if (!homePage.includes("Subscribe to fresh clue feed") || !homePage.includes("/feed.xml")) errors.push("homepage is missing the visible feed subscription");
 const ambiguityResearchPage = await readFile(path.join(dist, "research/ambiguous-crossword-clues/index.html"), "utf8");
 if (!ambiguityResearchPage.includes("Ambiguous crossword clues by answer length and meaning")) errors.push("ambiguity research page is missing its primary target");
 if (!ambiguityResearchPage.includes(`${clueHubCandidateCount} reviewed clue-answer possibilities`) || !ambiguityResearchPage.includes(`${clueHubUniqueAnswerCount} unique answers`)) errors.push("ambiguity research page is missing its current dataset totals");
@@ -328,6 +341,7 @@ if (!privacyPage.includes("app.pageview.app")) errors.push("privacy page is miss
 if (!privacyPage.includes("Google Analytics 4") || !privacyPage.includes("G-HVMXR2YN3N")) errors.push("privacy page is missing the GA4 analytics disclosure");
 if (!privacyPage.includes("Saved clues") || !privacyPage.includes("local storage")) errors.push("privacy page is missing the local saved-clue disclosure");
 if (!privacyPage.includes("When you submit feedback") || !privacyPage.includes("Email is optional") || !privacyPage.includes("raw IP address")) errors.push("privacy page is missing the feedback data disclosure");
+if (!privacyPage.includes("Reduced-analytics classroom pages") || !privacyPage.includes("cookie-free Pageview") || !privacyPage.includes("omit Google Analytics 4")) errors.push("privacy page is missing the classroom analytics disclosure");
 if (!privacyPage.includes("mailto:hello@crosswordcluetutor.com") || !privacyPage.includes("processed by our email providers")) errors.push("privacy page is missing the direct-email disclosure");
 const feedbackPage = await readFile(path.join(dist, "feedback/index.html"), "utf8");
 if (!feedbackPage.includes("data-feedback-form") || !feedbackPage.includes("Email for follow-up") || !feedbackPage.includes("not added to a mailing list")) errors.push("feedback page is missing its form or optional-email disclosure");

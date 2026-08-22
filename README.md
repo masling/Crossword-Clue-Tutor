@@ -17,13 +17,15 @@ not reproduce complete commercial grids or full answer lists.
 - **Hints before spoilers** — reveal help progressively instead of jumping to the fill.
 - **Explain my answer** — understand the definition, grammar, abbreviation, fact, or
   wordplay that makes an answer fit.
-- **Crossword dictionary** — reviewed meanings, pronunciations, and recurring clue
-  patterns for crossword answers.
+- **Crossword dictionary** — 100 reviewed meanings, pronunciations, and clue patterns
+  drawn from the same editorial source as the live explanations.
 - **Ambiguous clue guides** — compare possible answers by length and exact sense.
 - **Selected daily coverage** — current explanations for a small set of useful clues
   from monitored publications, never a mirrored puzzle.
 - **Return tools** — saved clues, a fresh-clue Atom feed, feedback, and a public contact
   route.
+- **Classroom resources** — a reduced-analytics solver, printable original worksheet,
+  and Grades 6–12 vocabulary routine with no student account.
 
 ## Editorial model
 
@@ -49,7 +51,7 @@ grids, and full publisher answer keys stay outside the sitemap.
 | Hosting | Cloudflare Pages Direct Upload |
 | CI/CD | GitHub Actions verifies one artifact, then deploys that artifact |
 | Search discovery | Sitemap, Atom feed, internal links, and IndexNow |
-| Analytics | Cloudflare Web Analytics plus self-managed Pageview/Plausible Community Edition |
+| Analytics | Cloudflare Web Analytics, cookie-free Pageview/Plausible Community Edition, and GA4 on standard pages; classroom pages omit GA4 |
 
 ## Run locally
 
@@ -80,6 +82,7 @@ Cloudflare deployment tooling is a development dependency.
 | `npm run qa:url -- <run-name>` | Generate an analytics-tagged operator QA entry URL |
 | `npm run email:check-dns` | Verify Cloudflare/Zoho mail authentication records |
 | `npm run outreach:check` | Validate prepared outreach assets without sending |
+| `node scripts/expand-reviewed-answer-profiles.mjs` | Idempotently add the approved reviewed-answer profile batch |
 
 ## Content model
 

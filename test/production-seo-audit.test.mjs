@@ -5,12 +5,18 @@ import { auditHtml, auditRobots, auditSiteStructure } from "../scripts/audit-pro
 const pageview = '<script defer data-domain="crosswordcluetutor.com" src="https://app.pageview.app/js/script.js"></script>';
 const googleAnalytics = `<script async src="https://www.googletagmanager.com/gtag/js?id=G-HVMXR2YN3N"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config', 'G-HVMXR2YN3N');</script>`;
 
-function html({ title = "Useful crossword page", description = "A useful description.", canonical = "https://crosswordcluetutor.com/test/", h1 = "<h1>Useful crossword page</h1>", links = "" } = {}) {
-  return `<!doctype html><html><head><title>${title}</title><meta name="description" content="${description}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="${canonical}">${pageview}${googleAnalytics}<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage"}</script></head><body>${h1}${links}</body></html>`;
+function html({ title = "Useful crossword page", description = "A useful description.", canonical = "https://crosswordcluetutor.com/test/", h1 = "<h1>Useful crossword page</h1>", links = "", analyticsMode = "standard" } = {}) {
+  const analytics = analyticsMode === "minimal" ? pageview : `${pageview}${googleAnalytics}`;
+  return `<!doctype html><html><head><title>${title}</title><meta name="description" content="${description}"><meta name="robots" content="index,follow,max-image-preview:large"><meta name="analytics-mode" content="${analyticsMode}"><link rel="canonical" href="${canonical}">${analytics}<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage"}</script></head><body>${h1}${links}</body></html>`;
 }
 
 test("accepts a production page with the required SEO contract", () => {
   const result = auditHtml({ html: html(), url: "https://crosswordcluetutor.com/test/" });
+  assert.deepEqual(result.errors, []);
+});
+
+test("accepts a cookie-free reduced-analytics classroom page", () => {
+  const result = auditHtml({ html: html({ analyticsMode: "minimal" }), url: "https://crosswordcluetutor.com/test/" });
   assert.deepEqual(result.errors, []);
 });
 

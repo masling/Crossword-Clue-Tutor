@@ -25,6 +25,8 @@ export function auditHtml({ html, url }) {
   const pageviewCount = html.split(pageviewScript).length - 1;
   const googleAnalyticsLoaderCount = html.split(googleAnalyticsLoader).length - 1;
   const googleAnalyticsConfigCount = html.split(googleAnalyticsConfig).length - 1;
+  const analyticsMode = html.match(/<meta name="analytics-mode" content="([^"]+)">/)?.[1] ?? "";
+  const expectedGa4Count = analyticsMode === "minimal" ? 0 : 1;
   const robots = html.match(/<meta name="robots" content="([^"]+)">/)?.[1] ?? "";
   const jsonLdBlocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
   const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
@@ -35,9 +37,10 @@ export function auditHtml({ html, url }) {
   if (canonical !== url) errors.push(`canonical mismatch: ${canonical || "missing"}`);
   if (descriptions.length !== 1) errors.push(`expected one meta description, found ${descriptions.length}`);
   if (!robots.includes("index,follow")) errors.push(`unexpected robots directive: ${robots || "missing"}`);
+  if (!analyticsMode) errors.push("missing analytics mode");
   if (pageviewCount !== 1) errors.push(`expected one Pageview script, found ${pageviewCount}`);
-  if (googleAnalyticsLoaderCount !== 1) errors.push(`expected one GA4 loader, found ${googleAnalyticsLoaderCount}`);
-  if (googleAnalyticsConfigCount !== 1) errors.push(`expected one GA4 config, found ${googleAnalyticsConfigCount}`);
+  if (googleAnalyticsLoaderCount !== expectedGa4Count) errors.push(`expected ${expectedGa4Count} GA4 loaders, found ${googleAnalyticsLoaderCount}`);
+  if (googleAnalyticsConfigCount !== expectedGa4Count) errors.push(`expected ${expectedGa4Count} GA4 configs, found ${googleAnalyticsConfigCount}`);
   if (jsonLdBlocks.length === 0) errors.push("missing JSON-LD");
   for (const block of jsonLdBlocks) {
     try { JSON.parse(block[1]); } catch { errors.push("invalid JSON-LD"); }
