@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T20:41:07+08:00",
+  "updatedAt": "2026-08-22T20:46:08+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -347,10 +347,10 @@
     "bingSiteScanRemediation": "Generated titles are capped at 70 characters. A full production crawl verified 0 long-title pages; Bing rescan remains unavailable until its page quota resets.",
     "bingSiteScanRescanStatus": "Start-new-scan form reports 0 pages of quota remaining",
     "productionSeoAudit": {
-      "auditedAt": "2026-08-20T23:03:13+08:00",
+      "auditedAt": "2026-08-22T20:45:53+08:00",
       "command": "npm run seo:audit-production",
-      "sitemapUrls": 160,
-      "pagesAudited": 160,
+      "sitemapUrls": 257,
+      "pagesAudited": 257,
       "pagesWithErrors": 0,
       "duplicateSitemapUrls": 0,
       "invalidLastmod": 0,
@@ -400,7 +400,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "6191ef9",
+    "lastVerifiedCommit": "d2045e8",
     "lastDeployStatus": "Success"
   },
   "outreach": {
