@@ -95,7 +95,10 @@
       "responseStatus": "listing_promised",
       "listingStatus": "pending_publication",
       "expectedLinkAttributes": ["sponsored", "nofollow"],
-      "responseSummary": "The curator tested the solver and Explain flow, confirmed the teaching angle is distinct, and plans to add Crossword Clue Tutor to the Crossword Solvers section."
+      "responseSummary": "The curator tested the solver and Explain flow, confirmed the teaching angle is distinct, and plans to add Crossword Clue Tutor to the Crossword Solvers section.",
+      "replySentAt": "2026-08-22T15:50:43+08:00",
+      "replyMessageId": "1a028732aa8b8258",
+      "replyStatus": "thanked_and_acknowledged_listing_terms"
     }
   ]
 }
