@@ -108,10 +108,12 @@
       "payloadFile": "forms/teach-arcade.json",
       "approvalRequired": true,
       "submittedAt": null,
-      "submissionStatus": "blocked_network_error",
+      "submissionStatus": "skipped_site_network_error",
       "attemptCount": 2,
       "lastAttemptAt": "2026-08-22T19:42:53+08:00",
-      "submissionError": "The public form returned Network error after capturing a CAPTCHA token on both attempts."
+      "submissionError": "The public form returned Network error after capturing a CAPTCHA token on both attempts.",
+      "skippedAt": "2026-08-22T19:49:59+08:00",
+      "skipReason": "User chose to stop pursuing this target after confirming the site's submission service was unavailable."
     },
     {
       "id": "teachersfirst-edge",

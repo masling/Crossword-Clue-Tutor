@@ -52,10 +52,10 @@ export async function validateOutreach() {
       if (!/Full disclosure:|disclose that I maintain/.test(body)) errors.push(`${item.id} is missing ownership disclosure`);
     } else if (item.channel === "form") {
       if (!item.formUrl?.startsWith("https://")) errors.push(`${item.id} form URL is invalid`);
-      if (!new Set(["pending", "pending_phone_omitted", "pending_manual_captcha", "submitted_no_receipt", "submitted_user_confirmed", "blocked_recaptcha", "blocked_network_error"]).has(item.submissionStatus ?? "pending")) errors.push(`${item.id} has an unsupported form status`);
+      if (!new Set(["pending", "pending_phone_omitted", "pending_manual_captcha", "submitted_no_receipt", "submitted_user_confirmed", "blocked_recaptcha", "blocked_network_error", "skipped_site_network_error"]).has(item.submissionStatus ?? "pending")) errors.push(`${item.id} has an unsupported form status`);
       if (new Set(["submitted_no_receipt", "submitted_user_confirmed"]).has(item.submissionStatus) && !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+08:00$/.test(item.submittedAt ?? "")) errors.push(`${item.id} submitted evidence is invalid`);
       if (item.submissionStatus === "blocked_recaptcha" && (item.submittedAt !== null || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+08:00$/.test(item.lastAttemptAt ?? ""))) errors.push(`${item.id} blocked-form evidence is invalid`);
-      if (new Set(["pending", "pending_phone_omitted", "pending_manual_captcha", "blocked_network_error"]).has(item.submissionStatus ?? "pending") && item.submittedAt !== null) errors.push(`${item.id} is unexpectedly marked submitted`);
+      if (new Set(["pending", "pending_phone_omitted", "pending_manual_captcha", "blocked_network_error", "skipped_site_network_error"]).has(item.submissionStatus ?? "pending") && item.submittedAt !== null) errors.push(`${item.id} is unexpectedly marked submitted`);
       const payload = await readJson(path.join(outreachRoot, item.payloadFile));
       if (!validEmail(payload.email)) errors.push(`${item.id} form email is invalid`);
       if (placeholderPattern.test(JSON.stringify(payload))) errors.push(`${item.id} form contains an unresolved placeholder`);
