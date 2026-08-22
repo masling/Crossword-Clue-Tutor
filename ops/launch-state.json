@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T20:56:53+08:00",
+  "updatedAt": "2026-08-22T20:59:31+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -15,7 +15,7 @@
     ],
     "ga4MeasurementId": "G-HVMXR2YN3N",
     "ga4ConfiguredAt": "2026-08-22T10:30:00+08:00",
-    "ga4Status": "Consent-aware implementation verified locally; production deployment pending",
+    "ga4Status": "Production verified: Pageview remains cookie-free; GA4 is dynamically loaded after regional consent or a non-consent-region decision",
     "ga4Consent": {
       "mode": "Basic consent mode",
       "regionSource": "Cloudflare request.cf.country",
@@ -357,7 +357,7 @@
     "bingSiteScanRemediation": "Generated titles are capped at 70 characters. A full production crawl verified 0 long-title pages; Bing rescan remains unavailable until its page quota resets.",
     "bingSiteScanRescanStatus": "Start-new-scan form reports 0 pages of quota remaining",
     "productionSeoAudit": {
-      "auditedAt": "2026-08-22T20:45:53+08:00",
+      "auditedAt": "2026-08-22T20:59:16+08:00",
       "command": "npm run seo:audit-production",
       "sitemapUrls": 257,
       "pagesAudited": 257,
@@ -410,7 +410,7 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "d2045e8",
+    "lastVerifiedCommit": "758c40a",
     "lastDeployStatus": "Success"
   },
   "outreach": {
