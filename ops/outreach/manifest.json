@@ -127,6 +127,29 @@
       "phoneOmitted": true,
       "preparedAt": "2026-08-22T19:42:53+08:00",
       "submissionEvidence": "The user manually completed the image reCAPTCHA and confirmed the form submission; the phone field remained blank."
+    },
+    {
+      "id": "ateal-resource-library",
+      "target": "ATEAL Resource Library",
+      "channel": "form",
+      "formUrl": "https://www.ateal.ca/contact/resource",
+      "payloadFile": "forms/ateal-resource-library.json",
+      "approvalRequired": true,
+      "submittedAt": null,
+      "submissionStatus": "pending_manual_captcha"
+    },
+    {
+      "id": "eslactive-activity",
+      "target": "ESLActive activity ideas",
+      "channel": "email",
+      "recipient": "contact@eslactive.com",
+      "subject": "ESL activity idea: solving crossword clues with evidence",
+      "textFile": "messages/eslactive-activity.txt",
+      "gmailDraftStatus": "sent",
+      "gmailDraftCreatedAt": null,
+      "approvalRequired": true,
+      "sentAt": "2026-08-22T19:58:21+08:00",
+      "messageId": "1a02955bf090da8f"
     }
   ]
 }

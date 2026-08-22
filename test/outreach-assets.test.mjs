@@ -5,7 +5,7 @@ import { validateOutreach } from "../scripts/validate-outreach.mjs";
 test("prepared outreach assets match current reviewed data and cannot be sent silently", async () => {
   const result = await validateOutreach();
   assert.deepEqual(result.errors, []);
-  assert.equal(result.items, 8);
-  assert.equal(result.emailItems, 4);
-  assert.equal(result.formItems, 4);
+  assert.equal(result.items, 10);
+  assert.equal(result.emailItems, 5);
+  assert.equal(result.formItems, 5);
 });
