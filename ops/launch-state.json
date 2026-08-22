@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T12:25:00+08:00",
+  "updatedAt": "2026-08-22T14:25:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -58,8 +58,8 @@
     }
   },
   "content": {
-    "indexablePages": 182,
-    "reviewedClues": 98,
+    "indexablePages": 190,
+    "reviewedClues": 106,
     "answerMeaningPages": 36,
     "latestMeaningExpansion": {
       "answers": ["BITING", "INBORN", "SWOLLEN", "GRAND", "COAX", "ROUTE", "RICHES", "LEAD", "ALLSPICE"],
@@ -68,7 +68,7 @@
     },
     "evergreenClueHubs": 15,
     "evergreenClueHubCandidates": 328,
-    "solverReviewedClueCandidates": 94,
+    "solverReviewedClueCandidates": 102,
     "solverHubCandidates": 328,
     "solverCandidatePool": 406,
     "linkableGuides": 1,
@@ -248,13 +248,13 @@
     ],
     "lastPublishedSourceDates": {
       "NYT Mini": "2026-08-22",
-      "The New York Times Crossword": "2026-08-21",
-      "LA Times Crossword": "2026-08-21",
+      "The New York Times Crossword": "2026-08-22",
+      "LA Times Crossword": "2026-08-22",
       "USA TODAY Crossword": "2026-08-21"
     },
     "latestFreshnessBatch": {
-      "publication": "USA TODAY Crossword",
-      "sourceDate": "2026-08-21",
+      "publication": "LA Times Crossword",
+      "sourceDate": "2026-08-22",
       "selectedClues": 4,
       "selectionReason": "Routine same-day coverage from a publicly verifiable current clue set",
       "rightsBoundary": "Selected clues only; no grid or complete answer list"
@@ -425,7 +425,7 @@
     }
   },
   "nextAction": {
-    "notBefore": "2026-08-22T14:15:00+08:00",
-    "action": "Retry only pending August 22 dates for The New York Times Crossword, LA Times Crossword, and USA TODAY Crossword. NYT Mini August 22 is complete; do not recheck or republish it."
+    "notBefore": "2026-08-23T10:15:00+08:00",
+    "action": "Run the next source-timed cycle. NYT Mini, full NYT, and LA Times are complete through August 22; USA TODAY August 22 remained a public placeholder without exact pairs and should be retried only in the 12:15 branch."
   }
 }

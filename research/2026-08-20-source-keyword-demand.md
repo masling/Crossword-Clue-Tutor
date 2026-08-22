@@ -236,3 +236,19 @@ published: something fragile or inflated (`EGO`), someone fully unplugged
 cornmeal cake (`AREPA`). LA Times remained at the already recorded August 21 date in
 the checked public evidence. The full NYT, LA Times, and USA TODAY August 22 dates
 remain pending for the single 14:15 retry.
+
+## 2026-08-22 14:15 SGT freshness run
+
+The full New York Times Crossword and LA Times Crossword both became publicly
+verifiable for August 22. Four NYT pairs were selected: hasenpfeffer's broader dish
+(`RABBITSTEW`), impossible circumstances (`INEXTREMIS`), postponing plot discussion
+(`NOSPOILERS`), and the question-marked volume controller (`EREADER`). Four LA Times
+pairs were selected: Super Bowl poet Amanda Gorman (`GORMAN`), gaming-chat jargon
+(`LEETSPEAK`), Victor Hugo's bell-ringer (`QUASIMODO`), and narrative transformations
+(`CHARACTERARCS`). Each page adds original definition, signal, hint, and explanation;
+neither full puzzle was reproduced.
+
+The public USA TODAY August 22 page remained an empty placeholder and its current main
+crossword archive still pointed to August 21. No USA TODAY page was guessed or created.
+It remains pending for the next 12:15 source branch rather than triggering more same-day
+refreshes.

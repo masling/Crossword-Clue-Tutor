@@ -1,11 +1,11 @@
 {
-  "publishedAt": "2026-08-22T04:21:05.182Z",
-  "input": "ops/intake/2026-08-21-usa-today-routine.json",
+  "publishedAt": "2026-08-22T06:18:51.262Z",
+  "input": "ops/intake/2026-08-22-la-times-routine.json",
   "urls": [
-    "/explainers/it-can-be-fragile-or-inflated-usa-today/",
-    "/explainers/like-someone-who-unplugs-completely-usa-today/",
-    "/explainers/hints-for-unfamiliar-word-meaning-usa-today/",
-    "/explainers/stuffed-cornmeal-cake-usa-today/"
+    "/explainers/first-poet-to-perform-at-super-bowl-la-times/",
+    "/explainers/jargon-in-video-game-chat-la-times/",
+    "/explainers/literary-figure-who-rings-a-bell-la-times/",
+    "/explainers/some-transformations-la-times/"
   ],
   "answerUrls": [],
   "clinicUrls": [
@@ -17,8 +17,7 @@
     "/daily-clue-clinic/",
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
-    "/crossword-answers/3-letters/",
-    "/crossword-answers/5-letters/",
-    "/usa-today-crossword-answers/"
+    "/crossword-answers/6-letters/",
+    "/la-times-crossword-answers/"
   ]
 }
