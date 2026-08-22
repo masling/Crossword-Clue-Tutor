@@ -374,8 +374,8 @@
   },
   "outreach": {
     "verifiedAt": "2026-08-20T22:45:15+08:00",
-    "readyForApproval": 6,
-    "sent": 0,
+    "readyForApproval": 2,
+    "sent": 4,
     "responses": 0,
     "readyTargets": [
       "OneLook Dictionary Search",
@@ -391,9 +391,9 @@
       "structuredFormPayloads": 2,
       "validationCommand": "npm run outreach:check",
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 36 meaning entries",
-      "transmissionStatus": "Two Gmail drafts and two additional local email drafts are ready for review; no outreach email or form submitted"
+      "transmissionStatus": "Four unique email targets have been sent. Daily Crossword Links and XWord Blog each received one accidental duplicate after their earlier sends were not visible in the draft list; two approved forms remain pending."
     },
-    "approvalNeeded": "Review and explicitly approve each of the two Gmail drafts before sending, and separately approve each prepared form submission; code sending also requires a locally supplied Zoho password or app password.",
+    "approvalNeeded": "All six targets were approved on 2026-08-22. Four email targets are sent; the OneLook and ACPT forms remain pending execution.",
     "senderSetup": {
       "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
       "inboundDestination": "masling@gmail.com",

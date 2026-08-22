@@ -4,7 +4,7 @@
     "name": "Crossword Clue Tutor",
     "email": "hello@crosswordcluetutor.com"
   },
-  "status": "outreach_drafts_not_sent",
+  "status": "emails_sent_forms_pending",
   "datasetEvidence": {
     "clueFamilies": 15,
     "reviewedCandidates": 328,
@@ -18,10 +18,13 @@
       "recipient": "crosswordlinks@gmail.com",
       "subject": "News & Notes tip: 328 reviewed answers for 15 ambiguous clues",
       "textFile": "messages/daily-crossword-links.txt",
-      "gmailDraftStatus": "ready_for_review",
+      "gmailDraftStatus": "sent",
       "gmailDraftCreatedAt": "2026-08-20T22:44:42+08:00",
       "approvalRequired": true,
-      "sentAt": null
+      "sentAt": "2026-08-20T23:11:14+08:00",
+      "messageId": "1a01fb9f04ac6441",
+      "duplicateSentAt": "2026-08-22T09:43:52+08:00",
+      "duplicateMessageId": "1a027237ca058a49"
     },
     {
       "id": "xword-blog",
@@ -30,10 +33,13 @@
       "recipient": "info@xwordinfo.com",
       "subject": "Guest essay idea: how crossings disambiguate one-word clues",
       "textFile": "messages/xword-blog.txt",
-      "gmailDraftStatus": "ready_for_review",
+      "gmailDraftStatus": "sent",
       "gmailDraftCreatedAt": "2026-08-20T22:44:53+08:00",
       "approvalRequired": true,
-      "sentAt": null
+      "sentAt": "2026-08-20T23:11:07+08:00",
+      "messageId": "1a01fb9d74c939b8",
+      "duplicateSentAt": "2026-08-22T09:43:57+08:00",
+      "duplicateMessageId": "1a027239164e5f17"
     },
     {
       "id": "onelook-dictionary",
@@ -60,10 +66,11 @@
       "recipient": "hello@mysteryleague.com",
       "subject": "Link suggestion: a hint-first crossword solver with pattern matching",
       "textFile": "messages/signals-mystery-league.txt",
-      "gmailDraftStatus": "local_draft_ready",
+      "gmailDraftStatus": "sent",
       "gmailDraftCreatedAt": null,
       "approvalRequired": true,
-      "sentAt": null
+      "sentAt": "2026-08-22T09:44:00+08:00",
+      "messageId": "1a027239c4d9f1e6"
     },
     {
       "id": "the-puzzle-solver",
@@ -72,10 +79,11 @@
       "recipient": "mrpuzzle@thepuzzlesolver.net",
       "subject": "Puzzle-site suggestion: Crossword Clue Tutor",
       "textFile": "messages/the-puzzle-solver.txt",
-      "gmailDraftStatus": "local_draft_ready",
+      "gmailDraftStatus": "sent",
       "gmailDraftCreatedAt": null,
       "approvalRequired": true,
-      "sentAt": null
+      "sentAt": "2026-08-22T09:44:04+08:00",
+      "messageId": "1a02723ac7444708"
     }
   ]
 }
