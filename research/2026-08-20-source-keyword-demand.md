@@ -221,3 +221,18 @@ do not reproduce the grid or complete answer list.
 
 The August 22 NYT Mini exact clue-answer set was not yet reliably exposed by the checked
 public source, so it remains pending for the 12:15 retry rather than being guessed.
+
+## 2026-08-22 12:15 SGT freshness run
+
+The August 22 NYT Mini became publicly verifiable. Four selected pairs were published:
+starting immediately (`DIVESIN`), Japanese “folding paper” (`ORIGAMI`), the missing-P
+paper-and-pencil game (`HANGMAN`), and the “Sunny” breakfast part (`EGGYOLK`). The
+selection covers direct language, idiom, missing-letter, and quotation-mark wordplay
+without reproducing the full Mini.
+
+USA TODAY's main crossword advanced publicly to August 21. Four selected pairs were
+published: something fragile or inflated (`EGO`), someone fully unplugged
+(`OFFTHEGRID`), reading hints for an unfamiliar word (`CONTEXTCLUES`), and a stuffed
+cornmeal cake (`AREPA`). LA Times remained at the already recorded August 21 date in
+the checked public evidence. The full NYT, LA Times, and USA TODAY August 22 dates
+remain pending for the single 14:15 retry.

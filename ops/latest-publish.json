@@ -1,11 +1,11 @@
 {
-  "publishedAt": "2026-08-22T02:20:09.134Z",
-  "input": "ops/intake/2026-08-21-nyt-daily-routine.json",
+  "publishedAt": "2026-08-22T04:21:05.182Z",
+  "input": "ops/intake/2026-08-21-usa-today-routine.json",
   "urls": [
-    "/explainers/leader-in-a-kasaya-robe-nyt/",
-    "/explainers/some-malty-offerings-nyt/",
-    "/explainers/italian-hero-question-mark-nyt/",
-    "/explainers/is-canned-nyt/"
+    "/explainers/it-can-be-fragile-or-inflated-usa-today/",
+    "/explainers/like-someone-who-unplugs-completely-usa-today/",
+    "/explainers/hints-for-unfamiliar-word-meaning-usa-today/",
+    "/explainers/stuffed-cornmeal-cake-usa-today/"
   ],
   "answerUrls": [],
   "clinicUrls": [
@@ -17,7 +17,8 @@
     "/daily-clue-clinic/",
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
-    "/crossword-answers/4-letters/",
-    "/nyt-crossword-clues/"
+    "/crossword-answers/3-letters/",
+    "/crossword-answers/5-letters/",
+    "/usa-today-crossword-answers/"
   ]
 }
