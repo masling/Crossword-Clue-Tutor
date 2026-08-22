@@ -135,8 +135,9 @@
       "formUrl": "https://www.ateal.ca/contact/resource",
       "payloadFile": "forms/ateal-resource-library.json",
       "approvalRequired": true,
-      "submittedAt": null,
-      "submissionStatus": "pending_manual_captcha"
+      "submittedAt": "2026-08-22T20:04:27+08:00",
+      "submissionStatus": "submitted_no_receipt",
+      "submissionEvidence": "After Submit, the resource form redirected to the ATEAL homepage without an error or separate receipt."
     },
     {
       "id": "eslactive-activity",
