@@ -23,7 +23,7 @@ export async function validateOutreach() {
   ]);
   const candidateCount = hubs.reduce((total, hub) => total + hub.answers.length, 0);
 
-  if (!new Set(["outreach_drafts_not_sent", "emails_sent_forms_pending"]).has(manifest.status)) errors.push("manifest has an unsupported outreach status");
+  if (!new Set(["outreach_drafts_not_sent", "emails_sent_forms_pending", "outreach_sent"]).has(manifest.status)) errors.push("manifest has an unsupported outreach status");
   if (!validEmail(manifest.sender?.email)) errors.push("manifest sender email is invalid");
   if (manifest.sender?.email !== "hello@crosswordcluetutor.com") errors.push("manifest sender must use the verified domain address");
   if (manifest.datasetEvidence?.clueFamilies !== hubs.length) errors.push("manifest clue-family count is stale");
@@ -52,7 +52,10 @@ export async function validateOutreach() {
       if (!/Full disclosure:|disclose that I maintain/.test(body)) errors.push(`${item.id} is missing ownership disclosure`);
     } else if (item.channel === "form") {
       if (!item.formUrl?.startsWith("https://")) errors.push(`${item.id} form URL is invalid`);
-      if (item.submittedAt !== null) errors.push(`${item.id} is unexpectedly marked submitted`);
+      if (!new Set(["pending", "submitted_no_receipt", "submitted_user_confirmed", "blocked_recaptcha"]).has(item.submissionStatus ?? "pending")) errors.push(`${item.id} has an unsupported form status`);
+      if (new Set(["submitted_no_receipt", "submitted_user_confirmed"]).has(item.submissionStatus) && !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+08:00$/.test(item.submittedAt ?? "")) errors.push(`${item.id} submitted evidence is invalid`);
+      if (item.submissionStatus === "blocked_recaptcha" && (item.submittedAt !== null || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+08:00$/.test(item.lastAttemptAt ?? ""))) errors.push(`${item.id} blocked-form evidence is invalid`);
+      if ((item.submissionStatus ?? "pending") === "pending" && item.submittedAt !== null) errors.push(`${item.id} is unexpectedly marked submitted`);
       const payload = await readJson(path.join(outreachRoot, item.payloadFile));
       if (!validEmail(payload.email)) errors.push(`${item.id} form email is invalid`);
       if (placeholderPattern.test(JSON.stringify(payload))) errors.push(`${item.id} form contains an unresolved placeholder`);

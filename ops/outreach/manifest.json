@@ -4,7 +4,7 @@
     "name": "Crossword Clue Tutor",
     "email": "hello@crosswordcluetutor.com"
   },
-  "status": "emails_sent_forms_pending",
+  "status": "outreach_sent",
   "datasetEvidence": {
     "clueFamilies": 15,
     "reviewedCandidates": 328,
@@ -48,7 +48,9 @@
       "formUrl": "https://www.onelook.com/?c=about",
       "payloadFile": "forms/onelook-dictionary.json",
       "approvalRequired": true,
-      "submittedAt": null
+      "submittedAt": "2026-08-22T10:04:42+08:00",
+      "submissionStatus": "submitted_no_receipt",
+      "submissionEvidence": "The public feedback form cleared to its default values after Submit; OneLook displayed no separate confirmation receipt."
     },
     {
       "id": "acpt-links",
@@ -57,7 +59,11 @@
       "formUrl": "https://crosswordtournament.com/links/addalink.htm",
       "payloadFile": "forms/acpt-links.json",
       "approvalRequired": true,
-      "submittedAt": null
+      "submittedAt": "2026-08-22T10:09:25+08:00",
+      "submissionStatus": "submitted_user_confirmed",
+      "submissionEvidence": "The user manually completed the browser submission after the automated reCAPTCHA attempt failed.",
+      "firstAutomatedAttemptAt": "2026-08-22T10:04:42+08:00",
+      "firstAutomatedAttemptError": "The embedded Zoho form reported: reCAPTCHA validation failed."
     },
     {
       "id": "signals-mystery-league",

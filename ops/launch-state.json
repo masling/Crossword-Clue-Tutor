@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T09:14:26+08:00",
+  "updatedAt": "2026-08-22T10:09:25+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -373,9 +373,11 @@
     "lastDeployStatus": "Success"
   },
   "outreach": {
-    "verifiedAt": "2026-08-20T22:45:15+08:00",
-    "readyForApproval": 2,
+    "verifiedAt": "2026-08-22T10:09:25+08:00",
+    "readyForApproval": 0,
     "sent": 4,
+    "formsSubmitted": 2,
+    "formsBlocked": 0,
     "responses": 0,
     "readyTargets": [
       "OneLook Dictionary Search",
@@ -391,9 +393,9 @@
       "structuredFormPayloads": 2,
       "validationCommand": "npm run outreach:check",
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 36 meaning entries",
-      "transmissionStatus": "Four unique email targets have been sent. Daily Crossword Links and XWord Blog each received one accidental duplicate after their earlier sends were not visible in the draft list; two approved forms remain pending."
+      "transmissionStatus": "Four unique email targets were sent. OneLook was submitted without a separate receipt, and the user manually completed the ACPT submission after reCAPTCHA blocked automation. Daily Crossword Links and XWord Blog each received one accidental duplicate."
     },
-    "approvalNeeded": "All six targets were approved on 2026-08-22. Four email targets are sent; the OneLook and ACPT forms remain pending execution.",
+    "approvalNeeded": null,
     "senderSetup": {
       "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
       "inboundDestination": "masling@gmail.com",
