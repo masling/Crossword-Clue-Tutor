@@ -24,6 +24,10 @@ for (const file of htmlFiles) {
   if (!/<link rel="alternate" type="application\/atom\+xml" title="[^"]+" href="https:\/\/crosswordcluetutor\.com\/feed\.xml">/.test(html)) errors.push(`${relative}: missing Atom feed discovery link`);
   const pageviewScripts = html.match(/<script defer data-domain="crosswordcluetutor\.com" src="https:\/\/app\.pageview\.app\/js\/script\.js"><\/script>/g) ?? [];
   if (pageviewScripts.length !== 1) errors.push(`${relative}: expected exactly one Pageview analytics script`);
+  const googleAnalyticsLoaders = html.match(/https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-HVMXR2YN3N/g) ?? [];
+  const googleAnalyticsConfigs = html.match(/gtag\('config', 'G-HVMXR2YN3N'\)/g) ?? [];
+  if (googleAnalyticsLoaders.length !== 1) errors.push(`${relative}: expected exactly one GA4 loader`);
+  if (googleAnalyticsConfigs.length !== 1) errors.push(`${relative}: expected exactly one GA4 config`);
   if (/crossword crossword clue/i.test(html)) errors.push(`${relative}: duplicated “crossword” in clue target`);
   if (/\bin the The\b/.test(html)) errors.push(`${relative}: duplicated article in publication context`);
   if (/<h1>“[“”]/.test(html)) errors.push(`${relative}: duplicated quotation marks in heading`);
@@ -316,6 +320,7 @@ for (const length of [3, 4, 5, 6]) {
 const privacyPage = await readFile(path.join(dist, "privacy/index.html"), "utf8");
 if (!privacyPage.includes("Cloudflare Web Analytics")) errors.push("privacy page is missing the production analytics disclosure");
 if (!privacyPage.includes("app.pageview.app")) errors.push("privacy page is missing the Pageview analytics disclosure");
+if (!privacyPage.includes("Google Analytics 4") || !privacyPage.includes("G-HVMXR2YN3N")) errors.push("privacy page is missing the GA4 analytics disclosure");
 if (!privacyPage.includes("Saved clues") || !privacyPage.includes("local storage")) errors.push("privacy page is missing the local saved-clue disclosure");
 if (!privacyPage.includes("When you submit feedback") || !privacyPage.includes("Email is optional") || !privacyPage.includes("raw IP address")) errors.push("privacy page is missing the feedback data disclosure");
 if (!privacyPage.includes("mailto:hello@crosswordcluetutor.com") || !privacyPage.includes("processed by our email providers")) errors.push("privacy page is missing the direct-email disclosure");

@@ -3,6 +3,8 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 
 const pageviewScript = '<script defer data-domain="crosswordcluetutor.com" src="https://app.pageview.app/js/script.js"></script>';
+const googleAnalyticsLoader = 'https://www.googletagmanager.com/gtag/js?id=G-HVMXR2YN3N';
+const googleAnalyticsConfig = "gtag('config', 'G-HVMXR2YN3N')";
 
 function decodeEntities(value = "") {
   return value
@@ -21,6 +23,8 @@ export function auditHtml({ html, url }) {
   const descriptions = html.match(/<meta name="description" content="[^"]+">/g) ?? [];
   const description = decodeEntities(html.match(/<meta name="description" content="([^"]+)">/)?.[1] ?? "");
   const pageviewCount = html.split(pageviewScript).length - 1;
+  const googleAnalyticsLoaderCount = html.split(googleAnalyticsLoader).length - 1;
+  const googleAnalyticsConfigCount = html.split(googleAnalyticsConfig).length - 1;
   const robots = html.match(/<meta name="robots" content="([^"]+)">/)?.[1] ?? "";
   const jsonLdBlocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
   const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
@@ -32,6 +36,8 @@ export function auditHtml({ html, url }) {
   if (descriptions.length !== 1) errors.push(`expected one meta description, found ${descriptions.length}`);
   if (!robots.includes("index,follow")) errors.push(`unexpected robots directive: ${robots || "missing"}`);
   if (pageviewCount !== 1) errors.push(`expected one Pageview script, found ${pageviewCount}`);
+  if (googleAnalyticsLoaderCount !== 1) errors.push(`expected one GA4 loader, found ${googleAnalyticsLoaderCount}`);
+  if (googleAnalyticsConfigCount !== 1) errors.push(`expected one GA4 config, found ${googleAnalyticsConfigCount}`);
   if (jsonLdBlocks.length === 0) errors.push("missing JSON-LD");
   for (const block of jsonLdBlocks) {
     try { JSON.parse(block[1]); } catch { errors.push("invalid JSON-LD"); }

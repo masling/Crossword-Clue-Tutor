@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T10:21:00+08:00",
+  "updatedAt": "2026-08-22T10:30:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -10,8 +10,12 @@
     "analyticsFilter": "excludeBots=Yes",
     "analyticsProviders": [
       "Cloudflare Web Analytics",
-      "Pageview (Plausible Community Edition)"
+      "Pageview (Plausible Community Edition)",
+      "Google Analytics 4"
     ],
+    "ga4MeasurementId": "G-HVMXR2YN3N",
+    "ga4ConfiguredAt": "2026-08-22T10:30:00+08:00",
+    "ga4Status": "Configured in the verified build; production deployment pending",
     "pageviewConfiguredAt": "2026-08-19T11:24:00+08:00",
     "pageviewStatus": "Verified",
     "pageviewOperatorQaBaseline": 1,

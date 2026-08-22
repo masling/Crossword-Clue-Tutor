@@ -3,9 +3,10 @@ import assert from "node:assert/strict";
 import { auditHtml, auditRobots, auditSiteStructure } from "../scripts/audit-production-seo.mjs";
 
 const pageview = '<script defer data-domain="crosswordcluetutor.com" src="https://app.pageview.app/js/script.js"></script>';
+const googleAnalytics = `<script async src="https://www.googletagmanager.com/gtag/js?id=G-HVMXR2YN3N"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config', 'G-HVMXR2YN3N');</script>`;
 
 function html({ title = "Useful crossword page", description = "A useful description.", canonical = "https://crosswordcluetutor.com/test/", h1 = "<h1>Useful crossword page</h1>", links = "" } = {}) {
-  return `<!doctype html><html><head><title>${title}</title><meta name="description" content="${description}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="${canonical}">${pageview}<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage"}</script></head><body>${h1}${links}</body></html>`;
+  return `<!doctype html><html><head><title>${title}</title><meta name="description" content="${description}"><meta name="robots" content="index,follow,max-image-preview:large"><link rel="canonical" href="${canonical}">${pageview}${googleAnalytics}<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage"}</script></head><body>${h1}${links}</body></html>`;
 }
 
 test("accepts a production page with the required SEO contract", () => {
