@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T08:56:21+08:00",
+  "updatedAt": "2026-08-22T09:14:26+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -37,6 +37,20 @@
       "pageviewDirectVisits": 14,
       "unverifiedBingReferrals": 0,
       "verifiedSearchSessions": 1
+    },
+    "latestUserSuppliedPageviewSnapshot": {
+      "recordedAt": "2026-08-22T09:14:26+08:00",
+      "period": "2026-08-22 Today",
+      "uniqueVisitors": 1,
+      "visits": 1,
+      "pageviews": 1,
+      "source": "Direct / None",
+      "country": "United States",
+      "entryPage": "/",
+      "bounceRatePercent": 100,
+      "visitDurationSeconds": 0,
+      "classification": "Unverified direct visit; excluded from the verified search-human-session goal",
+      "botAssessment": "Possibly automated, but not proven from Pageview evidence alone"
     }
   },
   "content": {
