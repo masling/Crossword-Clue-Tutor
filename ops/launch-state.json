@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T15:42:20+08:00",
+  "updatedAt": "2026-08-22T15:48:30+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -272,20 +272,38 @@
     "googleHomepageIndexStatus": "URL is on Google; page is indexed; HTTPS valid",
     "googleDiffuseIndexStatus": "URL unknown to Google; no crawl yet; no referring sitemap detected in URL Inspection",
     "googlePerformanceLastUpdate": "2026-08-20T11:53:00+08:00",
-    "googlePerformanceCheckedAt": "2026-08-22T08:56:21+08:00",
-    "googlePerformanceDashboardFreshness": "User-supplied latest 24-hour query snapshot",
+    "googlePerformanceCheckedAt": "2026-08-22T15:48:30+08:00",
+    "googlePerformanceDashboardFreshness": "User-supplied GSC latest-24-hours workbook export",
     "googleQueryEvidence": [
       {
         "period": "Latest 24 hours",
         "query": "tutor crossword clue",
-        "country": "United Kingdom",
-        "impressions": 2,
-        "averagePosition": 17,
+        "impressions": 1,
+        "averagePosition": 26,
         "clicks": 0,
-        "recordedAt": "2026-08-22T08:56:21+08:00",
-        "source": "User-supplied GSC report"
+        "country": "Not attributable from dimension-separated export",
+        "recordedAt": "2026-08-22T15:48:30+08:00",
+        "source": "crosswordcluetutor.com-Performance-on-Search-2026-08-22.xlsx"
       }
     ],
+    "googlePerformanceSnapshot": {
+      "period": "Latest 24 hours",
+      "searchType": "Web",
+      "landingPage": "https://crosswordcluetutor.com/",
+      "impressions": 4,
+      "clicks": 0,
+      "averagePosition": 18,
+      "countries": {
+        "United Kingdom": { "impressions": 2, "averagePosition": 17 },
+        "United States": { "impressions": 1, "averagePosition": 9 },
+        "Hong Kong": { "impressions": 1, "averagePosition": 29 }
+      },
+      "devices": {
+        "Mobile": { "impressions": 3, "averagePosition": 15.33 },
+        "Desktop": { "impressions": 1, "averagePosition": 26 }
+      },
+      "decision": "Evidence is too sparse for a title rewrite or new exact-query page; continue current coverage and wait for a larger query sample."
+    },
     "googleIndexingReportStatus": "Processing data; check again in a day or so",
     "googleLinksReportStatus": "Processing data; check again in a day or so",
     "manualIndexingCandidates": [
@@ -307,8 +325,8 @@
     "bingSitemapDiscoveredPages": 92,
     "bingSitemapLastCrawl": "2026-08-19",
     "bingIndexedPages": 0,
-    "bingSearchPerformanceStatus": "Preparing data; Bing requests another check after 48 hours",
-    "bingCheckedAt": "2026-08-20T21:58:03+08:00",
+    "bingSearchPerformanceStatus": "No performance data reported by the user",
+    "bingCheckedAt": "2026-08-22T15:48:30+08:00",
     "bingSiteScanStatus": "Completed",
     "bingSiteScanPageLimit": 100,
     "bingSiteScanPages": 94,
@@ -362,7 +380,7 @@
       "dryRun": "TRAFFIC_DRY_RUN=1",
       "verifiedAt": "2026-08-21T07:55:28+08:00"
     },
-    "searchImpressions": 2,
+    "searchImpressions": 4,
     "searchClicks": 0,
     "indexNowSubmittedUrls": 463
   },
