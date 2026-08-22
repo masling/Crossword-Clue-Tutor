@@ -192,6 +192,7 @@ if (!sitemap.includes("/crossword-clues/issue/")) errors.push("sitemap is missin
 if (!sitemap.includes("/crossword-clues/sharp/")) errors.push("sitemap is missing the Sharp clue hub");
 if (!sitemap.includes("/crossword-clues/light/")) errors.push("sitemap is missing the Light clue hub");
 if (!sitemap.includes("/guides/answer-length-and-crossings/")) errors.push("sitemap is missing the ambiguity solving guide");
+if (!sitemap.includes("/guides/crossword-clues-for-vocabulary-learning/")) errors.push("sitemap is missing the vocabulary teaching guide");
 if (!sitemap.includes("/research/ambiguous-crossword-clues/")) errors.push("sitemap is missing the ambiguity research page");
 if (!sitemap.includes("/crossword-answers-today/")) errors.push("sitemap is missing the cross-publication answers-today hub");
 if (!sitemap.includes("/crossword-answers-by-length/")) errors.push("sitemap is missing the answers-by-length index");
@@ -265,6 +266,10 @@ for (const [hubSlug, answerSlug] of [["nipping", "biting"], ["congenital", "inbo
 const ambiguityGuide = await readFile(path.join(dist, "guides/answer-length-and-crossings/index.html"), "utf8");
 if (!ambiguityGuide.includes("How answer length and crossings solve ambiguous crossword clues")) errors.push("ambiguity guide is missing its search target");
 if (!ambiguityGuide.includes("/crossword-clues/diffuse/") || !ambiguityGuide.includes("/crossword-clues/pitch/") || !ambiguityGuide.includes("/crossword-clues/charge/") || !ambiguityGuide.includes("/crossword-clues/issue/") || !ambiguityGuide.includes("/crossword-clues/sharp/") || !ambiguityGuide.includes("/crossword-clues/light/") || !ambiguityGuide.includes("/solver/")) errors.push("ambiguity guide is missing its useful internal links");
+const vocabularyGuide = await readFile(path.join(dist, "guides/crossword-clues-for-vocabulary-learning/index.html"), "utf8");
+if (!vocabularyGuide.includes("How to use crossword clues for vocabulary learning")) errors.push("vocabulary guide is missing its primary teaching target");
+if (!vocabularyGuide.includes("/solver/") || !vocabularyGuide.includes("/research/ambiguous-crossword-clues/")) errors.push("vocabulary guide is missing its teaching assets");
+if (!vocabularyGuide.includes('"learningResourceType":"Lesson plan"')) errors.push("vocabulary guide is missing learning-resource structured data");
 const ambiguityResearchPage = await readFile(path.join(dist, "research/ambiguous-crossword-clues/index.html"), "utf8");
 if (!ambiguityResearchPage.includes("Ambiguous crossword clues by answer length and meaning")) errors.push("ambiguity research page is missing its primary target");
 if (!ambiguityResearchPage.includes(`${clueHubCandidateCount} reviewed clue-answer possibilities`) || !ambiguityResearchPage.includes(`${clueHubUniqueAnswerCount} unique answers`)) errors.push("ambiguity research page is missing its current dataset totals");

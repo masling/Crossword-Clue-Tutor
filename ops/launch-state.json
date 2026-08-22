@@ -58,7 +58,7 @@
     }
   },
   "content": {
-    "indexablePages": 190,
+    "indexablePages": 191,
     "reviewedClues": 106,
     "answerMeaningPages": 36,
     "latestMeaningExpansion": {
@@ -71,7 +71,7 @@
     "solverReviewedClueCandidates": 102,
     "solverHubCandidates": 328,
     "solverCandidatePool": 406,
-    "linkableGuides": 1,
+    "linkableGuides": 2,
     "linkableResearchPages": 1,
     "datasetDownloadFormats": [
       "JSON",
@@ -396,7 +396,7 @@
   },
   "outreach": {
     "verifiedAt": "2026-08-22T10:09:25+08:00",
-    "readyForApproval": 0,
+    "readyForApproval": 2,
     "sent": 4,
     "formsSubmitted": 2,
     "formsBlocked": 0,
@@ -416,7 +416,7 @@
       "individualEmailDrafts": 4,
       "gmailDraftsReadyForReview": 2,
       "localEmailDraftsReadyForReview": 2,
-      "structuredFormPayloads": 2,
+      "structuredFormPayloads": 4,
       "validationCommand": "npm run outreach:check",
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 36 meaning entries",
       "transmissionStatus": "Four unique email targets were sent. OneLook was submitted without a separate receipt, and the user manually completed the ACPT submission after reCAPTCHA blocked automation. Daily Crossword Links and XWord Blog each received one accidental duplicate."

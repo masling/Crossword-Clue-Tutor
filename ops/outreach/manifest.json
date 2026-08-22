@@ -4,7 +4,7 @@
     "name": "Crossword Clue Tutor",
     "email": "hello@crosswordcluetutor.com"
   },
-  "status": "outreach_sent",
+  "status": "outreach_expansion_ready",
   "datasetEvidence": {
     "clueFamilies": 15,
     "reviewedCandidates": 328,
@@ -99,6 +99,26 @@
       "replySentAt": "2026-08-22T15:50:43+08:00",
       "replyMessageId": "1a028732aa8b8258",
       "replyStatus": "thanked_and_acknowledged_listing_terms"
+    },
+    {
+      "id": "teach-arcade",
+      "target": "Teach Arcade classroom resources",
+      "channel": "form",
+      "formUrl": "https://www.teacharcade.com/submit/",
+      "payloadFile": "forms/teach-arcade.json",
+      "approvalRequired": true,
+      "submittedAt": null,
+      "submissionStatus": "pending"
+    },
+    {
+      "id": "teachersfirst-edge",
+      "target": "TeachersFirst Edge",
+      "channel": "form",
+      "formUrl": "https://teachersfirst.org/contact.cfm",
+      "payloadFile": "forms/teachersfirst-edge.json",
+      "approvalRequired": true,
+      "submittedAt": null,
+      "submissionStatus": "pending_phone_omitted"
     }
   ]
 }
