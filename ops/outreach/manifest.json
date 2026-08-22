@@ -89,7 +89,13 @@
       "gmailDraftCreatedAt": null,
       "approvalRequired": true,
       "sentAt": "2026-08-22T09:44:04+08:00",
-      "messageId": "1a02723ac7444708"
+      "messageId": "1a02723ac7444708",
+      "responseAt": "2026-08-22T13:24:04+08:00",
+      "responseMessageId": "1a027ed41e6789da",
+      "responseStatus": "listing_promised",
+      "listingStatus": "pending_publication",
+      "expectedLinkAttributes": ["sponsored", "nofollow"],
+      "responseSummary": "The curator tested the solver and Explain flow, confirmed the teaching angle is distinct, and plans to add Crossword Clue Tutor to the Crossword Solvers section."
     }
   ]
 }
