@@ -1,10 +1,10 @@
 {
-  "reviewedAt": "2026-08-20",
+  "reviewedAt": "2026-08-22",
   "sender": {
     "name": "Crossword Clue Tutor",
     "email": "hello@crosswordcluetutor.com"
   },
-  "status": "gmail_drafts_created_not_sent",
+  "status": "outreach_drafts_not_sent",
   "datasetEvidence": {
     "clueFamilies": 15,
     "reviewedCandidates": 328,
@@ -52,6 +52,30 @@
       "payloadFile": "forms/acpt-links.json",
       "approvalRequired": true,
       "submittedAt": null
+    },
+    {
+      "id": "signals-mystery-league",
+      "target": "Signals / Mystery League tools directory",
+      "channel": "email",
+      "recipient": "hello@mysteryleague.com",
+      "subject": "Link suggestion: a hint-first crossword solver with pattern matching",
+      "textFile": "messages/signals-mystery-league.txt",
+      "gmailDraftStatus": "local_draft_ready",
+      "gmailDraftCreatedAt": null,
+      "approvalRequired": true,
+      "sentAt": null
+    },
+    {
+      "id": "the-puzzle-solver",
+      "target": "The Puzzle Solver recommended sites",
+      "channel": "email",
+      "recipient": "mrpuzzle@thepuzzlesolver.net",
+      "subject": "Puzzle-site suggestion: Crossword Clue Tutor",
+      "textFile": "messages/the-puzzle-solver.txt",
+      "gmailDraftStatus": "local_draft_ready",
+      "gmailDraftCreatedAt": null,
+      "approvalRequired": true,
+      "sentAt": null
     }
   ]
 }

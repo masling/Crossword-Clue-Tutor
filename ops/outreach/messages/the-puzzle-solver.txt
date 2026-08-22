@@ -1,0 +1,18 @@
+Hi Mr. Puzzle,
+
+Your Recommended Puzzle Sites page invites readers to suggest puzzle tools for hands-on review. I maintain Crossword Clue Tutor, a free crossword helper that combines clue text, answer length, and crossing-letter patterns with progressive hints, definitions, and original fit explanations.
+
+You can test the solver here:
+https://crosswordcluetutor.com/solver/
+
+Editorial policy:
+https://crosswordcluetutor.com/editorial-policy/
+
+The site is independently maintained and does not copy complete publisher grids or answer lists. If it passes your testing, it may fit the Crossword Solvers section as a hint-first alternative to answer-only databases.
+
+Full disclosure: I maintain the submitted site.
+
+Thanks,
+Masling
+Crossword Clue Tutor
+https://crosswordcluetutor.com/

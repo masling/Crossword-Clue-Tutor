@@ -23,7 +23,7 @@ export async function validateOutreach() {
   ]);
   const candidateCount = hubs.reduce((total, hub) => total + hub.answers.length, 0);
 
-  if (manifest.status !== "gmail_drafts_created_not_sent") errors.push("manifest must record Gmail drafts as created but not sent");
+  if (manifest.status !== "outreach_drafts_not_sent") errors.push("manifest must record outreach drafts as prepared but not sent");
   if (!validEmail(manifest.sender?.email)) errors.push("manifest sender email is invalid");
   if (manifest.sender?.email !== "hello@crosswordcluetutor.com") errors.push("manifest sender must use the verified domain address");
   if (manifest.datasetEvidence?.clueFamilies !== hubs.length) errors.push("manifest clue-family count is stale");
@@ -40,8 +40,9 @@ export async function validateOutreach() {
       if (!validEmail(item.recipient)) errors.push(`${item.id} recipient is invalid`);
       if (!item.subject || /[\r\n]/.test(item.subject)) errors.push(`${item.id} subject is invalid`);
       if (item.sentAt !== null) errors.push(`${item.id} is unexpectedly marked sent`);
-      if (item.gmailDraftStatus !== "ready_for_review") errors.push(`${item.id} Gmail draft is not ready for review`);
-      if (!/^2026-08-20T\d{2}:\d{2}:\d{2}\+08:00$/.test(item.gmailDraftCreatedAt ?? "")) errors.push(`${item.id} Gmail draft timestamp is invalid`);
+      if (!new Set(["ready_for_review", "local_draft_ready"]).has(item.gmailDraftStatus)) errors.push(`${item.id} email draft is not ready for review`);
+      if (item.gmailDraftStatus === "ready_for_review" && !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\+08:00$/.test(item.gmailDraftCreatedAt ?? "")) errors.push(`${item.id} Gmail draft timestamp is invalid`);
+      if (item.gmailDraftStatus === "local_draft_ready" && item.gmailDraftCreatedAt !== null) errors.push(`${item.id} local draft must not claim a Gmail creation time`);
       const body = await readFile(path.join(outreachRoot, item.textFile), "utf8");
       if (body.length < 100 || body.length > 2_500) errors.push(`${item.id} body length is outside the reviewed range`);
       if (placeholderPattern.test(body)) errors.push(`${item.id} contains an unresolved placeholder`);

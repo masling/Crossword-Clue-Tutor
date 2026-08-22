@@ -1,0 +1,18 @@
+Hi Sandy,
+
+Your Tools for Solving and Construction page invites link suggestions and separates pattern searching from crossword clue solving. I maintain Crossword Clue Tutor, a free tool that combines both: solvers can enter a clue, answer length, and crossing pattern, then reveal progressive hints and an independently written explanation of why a candidate fits.
+
+Solver:
+https://crosswordcluetutor.com/solver/
+
+The site also publishes a documented JSON/CSV dataset of 328 reviewed candidates across 15 ambiguous clue families:
+https://crosswordcluetutor.com/research/ambiguous-crossword-clues/
+
+If you find it useful after testing, would it fit the Crossword clue solving or Pattern searching section? The site does not reproduce complete publisher grids or answer lists.
+
+Full disclosure: I maintain the submitted site.
+
+Thanks,
+Masling
+Crossword Clue Tutor
+https://crosswordcluetutor.com/
