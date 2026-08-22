@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { auditHtml, auditRobots, auditSiteStructure } from "../scripts/audit-production-seo.mjs";
 
 const pageview = '<script defer data-domain="crosswordcluetutor.com" src="https://app.pageview.app/js/script.js"></script>';
-const googleAnalytics = `<script async src="https://www.googletagmanager.com/gtag/js?id=G-HVMXR2YN3N"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config', 'G-HVMXR2YN3N');</script>`;
+const googleAnalytics = '<meta name="google-analytics-measurement-id" content="G-HVMXR2YN3N">';
 
 function html({ title = "Useful crossword page", description = "A useful description.", canonical = "https://crosswordcluetutor.com/test/", h1 = "<h1>Useful crossword page</h1>", links = "", analyticsMode = "standard" } = {}) {
   const analytics = analyticsMode === "minimal" ? pageview : `${pageview}${googleAnalytics}`;

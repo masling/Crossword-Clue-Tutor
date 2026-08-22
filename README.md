@@ -51,7 +51,7 @@ grids, and full publisher answer keys stay outside the sitemap.
 | Hosting | Cloudflare Pages Direct Upload |
 | CI/CD | GitHub Actions verifies one artifact, then deploys that artifact |
 | Search discovery | Sitemap, Atom feed, internal links, and IndexNow |
-| Analytics | Cloudflare Web Analytics, cookie-free Pageview/Plausible Community Edition, and GA4 on standard pages; classroom pages omit GA4 |
+| Analytics | Cloudflare Web Analytics, cookie-free Pageview/Plausible Community Edition, and consent-delayed GA4 on standard pages; classroom pages omit GA4 |
 
 ## Run locally
 

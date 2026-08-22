@@ -28,9 +28,10 @@ for (const file of htmlFiles) {
   if (!analyticsMode) errors.push(`${relative}: missing analytics mode`);
   const googleAnalyticsLoaders = html.match(/https:\/\/www\.googletagmanager\.com\/gtag\/js\?id=G-HVMXR2YN3N/g) ?? [];
   const googleAnalyticsConfigs = html.match(/gtag\('config', 'G-HVMXR2YN3N'\)/g) ?? [];
-  const expectedGa4Scripts = analyticsMode === "minimal" ? 0 : 1;
-  if (googleAnalyticsLoaders.length !== expectedGa4Scripts) errors.push(`${relative}: expected ${expectedGa4Scripts} GA4 loaders`);
-  if (googleAnalyticsConfigs.length !== expectedGa4Scripts) errors.push(`${relative}: expected ${expectedGa4Scripts} GA4 configs`);
+  const googleAnalyticsIds = html.match(/<meta name="google-analytics-measurement-id" content="G-HVMXR2YN3N">/g) ?? [];
+  const expectedGa4Ids = analyticsMode === "minimal" ? 0 : 1;
+  if (googleAnalyticsIds.length !== expectedGa4Ids) errors.push(`${relative}: expected ${expectedGa4Ids} GA4 measurement IDs`);
+  if (googleAnalyticsLoaders.length !== 0 || googleAnalyticsConfigs.length !== 0) errors.push(`${relative}: GA4 must be loaded only after the consent decision`);
   if (/crossword crossword clue/i.test(html)) errors.push(`${relative}: duplicated “crossword” in clue target`);
   if (/\bin the The\b/.test(html)) errors.push(`${relative}: duplicated article in publication context`);
   if (/<h1>“[“”]/.test(html)) errors.push(`${relative}: duplicated quotation marks in heading`);
@@ -342,6 +343,8 @@ if (!privacyPage.includes("Google Analytics 4") || !privacyPage.includes("G-HVMX
 if (!privacyPage.includes("Saved clues") || !privacyPage.includes("local storage")) errors.push("privacy page is missing the local saved-clue disclosure");
 if (!privacyPage.includes("When you submit feedback") || !privacyPage.includes("Email is optional") || !privacyPage.includes("raw IP address")) errors.push("privacy page is missing the feedback data disclosure");
 if (!privacyPage.includes("Reduced-analytics classroom pages") || !privacyPage.includes("cookie-free Pageview") || !privacyPage.includes("omit Google Analytics 4")) errors.push("privacy page is missing the classroom analytics disclosure");
+if (!privacyPage.includes("Google Analytics consent") || !privacyPage.includes("Google-certified TCF consent management platform")) errors.push("privacy page is missing regional consent or future AdSense CMP disclosure");
+if (!appScript.includes("/api/analytics-region") || !appScript.includes("data-ga4-loader") || !appScript.includes("analytics_storage")) errors.push("app script is missing consent-aware GA4 loading");
 if (!privacyPage.includes("mailto:hello@crosswordcluetutor.com") || !privacyPage.includes("processed by our email providers")) errors.push("privacy page is missing the direct-email disclosure");
 const feedbackPage = await readFile(path.join(dist, "feedback/index.html"), "utf8");
 if (!feedbackPage.includes("data-feedback-form") || !feedbackPage.includes("Email for follow-up") || !feedbackPage.includes("not added to a mailing list")) errors.push("feedback page is missing its form or optional-email disclosure");

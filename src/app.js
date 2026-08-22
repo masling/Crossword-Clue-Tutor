@@ -21,11 +21,96 @@ for (const root of document.querySelectorAll("[data-tool-root]")) {
 }
 
 const savedCluesKey = "crossword-clue-tutor:saved-clues";
+const analyticsConsentKey = "crossword-clue-tutor:ga4-consent:v1";
 
 setupSavedClueButtons();
 setupSavedCluesPage();
 setupFeedbackForm();
 setupPrintButtons();
+setupGoogleAnalytics();
+
+async function setupGoogleAnalytics() {
+  const measurementId = document.querySelector('meta[name="google-analytics-measurement-id"]')?.content;
+  const banner = document.querySelector("[data-analytics-consent]");
+  const settings = [...document.querySelectorAll("[data-analytics-settings]")];
+  if (!measurementId || !banner) {
+    for (const control of settings) control.hidden = true;
+    return;
+  }
+
+  const showBanner = () => { banner.hidden = false; };
+  const hideBanner = () => { banner.hidden = true; };
+  for (const control of settings) control.addEventListener("click", showBanner);
+
+  banner.querySelector("[data-analytics-accept]")?.addEventListener("click", () => {
+    saveAnalyticsChoice("accepted");
+    hideBanner();
+    loadGoogleAnalytics(measurementId);
+  });
+  banner.querySelector("[data-analytics-decline]")?.addEventListener("click", () => {
+    const wasLoaded = Boolean(document.querySelector("script[data-ga4-loader]"));
+    saveAnalyticsChoice("declined");
+    deleteGoogleAnalyticsCookies();
+    hideBanner();
+    if (wasLoaded) location.reload();
+  });
+
+  const savedChoice = readAnalyticsChoice();
+  if (savedChoice === "accepted") {
+    loadGoogleAnalytics(measurementId);
+    return;
+  }
+  if (savedChoice === "declined") return;
+
+  try {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 3_000);
+    const response = await fetch("/api/analytics-region", { credentials: "same-origin", signal: controller.signal });
+    clearTimeout(timeout);
+    if (!response.ok) throw new Error("Region lookup failed.");
+    const region = await response.json();
+    if (region.consentRequired) showBanner();
+    else loadGoogleAnalytics(measurementId);
+  } catch {
+    showBanner();
+  }
+}
+
+function loadGoogleAnalytics(measurementId) {
+  if (document.querySelector("script[data-ga4-loader]")) return;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = window.gtag || function gtag() { window.dataLayer.push(arguments); };
+  window.gtag("consent", "default", {
+    analytics_storage: "granted",
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied"
+  });
+  window.gtag("js", new Date());
+  window.gtag("config", measurementId);
+  const script = document.createElement("script");
+  script.async = true;
+  script.dataset.ga4Loader = "";
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+  document.head.append(script);
+}
+
+function readAnalyticsChoice() {
+  try { return localStorage.getItem(analyticsConsentKey); } catch { return null; }
+}
+
+function saveAnalyticsChoice(value) {
+  try { localStorage.setItem(analyticsConsentKey, value); } catch { /* private browsing may disable storage */ }
+}
+
+function deleteGoogleAnalyticsCookies() {
+  for (const cookie of document.cookie.split(";")) {
+    const name = cookie.split("=")[0]?.trim();
+    if (!name || (name !== "_ga" && !name.startsWith("_ga_"))) continue;
+    document.cookie = `${name}=; Max-Age=0; Path=/; SameSite=Lax`;
+    document.cookie = `${name}=; Max-Age=0; Path=/; Domain=.crosswordcluetutor.com; SameSite=Lax`;
+  }
+}
 
 function setupPrintButtons() {
   for (const control of document.querySelectorAll("[data-print-page]")) {

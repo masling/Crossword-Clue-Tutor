@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T20:46:08+08:00",
+  "updatedAt": "2026-08-22T20:56:53+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -15,7 +15,17 @@
     ],
     "ga4MeasurementId": "G-HVMXR2YN3N",
     "ga4ConfiguredAt": "2026-08-22T10:30:00+08:00",
-    "ga4Status": "Production verified: loader and config each present exactly once",
+    "ga4Status": "Consent-aware implementation verified locally; production deployment pending",
+    "ga4Consent": {
+      "mode": "Basic consent mode",
+      "regionSource": "Cloudflare request.cf.country",
+      "consentRegions": "EEA, United Kingdom, and Switzerland",
+      "unknownRegionPolicy": "Ask before loading GA4",
+      "choiceStorage": "Browser localStorage only",
+      "pageviewPolicy": "Cookie-free Pageview remains enabled",
+      "classroomPolicy": "Teacher guide, Classroom Solver, and worksheet omit GA4 entirely",
+      "futureAdSenseRequirement": "Enable a Google-certified TCF CMP before serving AdSense ads in the EEA, UK, or Switzerland"
+    },
     "pageviewConfiguredAt": "2026-08-19T11:24:00+08:00",
     "pageviewStatus": "Verified",
     "pageviewOperatorQaBaseline": 1,

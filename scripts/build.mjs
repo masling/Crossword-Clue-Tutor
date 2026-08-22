@@ -106,6 +106,7 @@ function footer() {
         <a href="/about/">About</a>
         <a href="/editorial-policy/">Editorial policy</a>
         <a href="/privacy/">Privacy</a>
+        <button type="button" data-analytics-settings>Analytics choices</button>
         <a href="/feedback/">Feedback</a>
         <a href="/crossword-answers-today/">Puzzle answers today</a>
         <a href="/saved-clues/">Saved clues</a>
@@ -153,7 +154,10 @@ function pageTemplate({ title, description, route, body, bodyClass = "", noindex
     : "";
   const googleAnalytics = config.analytics?.google;
   const googleAnalyticsMarkup = analyticsMode === "standard" && googleAnalytics?.measurementId
-    ? `<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>\n  <script async src="https://www.googletagmanager.com/gtag/js?id=${escapeHtml(googleAnalytics.measurementId)}"></script>\n  <script>\n    window.dataLayer = window.dataLayer || [];\n    function gtag(){dataLayer.push(arguments);}\n    gtag('js', new Date());\n    gtag('config', '${escapeHtml(googleAnalytics.measurementId)}');\n  </script>`
+    ? `<meta name="google-analytics-measurement-id" content="${escapeHtml(googleAnalytics.measurementId)}">`
+    : "";
+  const analyticsConsentMarkup = analyticsMode === "standard" && googleAnalytics?.measurementId
+    ? `<section class="analytics-consent" data-analytics-consent role="region" aria-labelledby="analytics-consent-title" hidden><div><h2 id="analytics-consent-title">Optional Google Analytics</h2><p>Cookie-free Pageview is always active. In regions that require consent, Google Analytics loads only if you accept. You can change this choice from the footer.</p></div><div class="analytics-consent-actions"><button class="button button-primary" type="button" data-analytics-accept>Accept GA4</button><button class="button button-outline" type="button" data-analytics-decline>Continue without GA4</button><a href="/privacy/">Privacy details</a></div></section>`
     : "";
   const openGraphType = jsonLd.some((item) => item["@type"] === "Article") ? "article" : "website";
   const socialImageUrl = canonicalUrl(config.socialImage);
@@ -198,6 +202,7 @@ function pageTemplate({ title, description, route, body, bodyClass = "", noindex
   ${header()}
   <main id="main">${body}</main>
   ${footer()}
+  ${analyticsConsentMarkup}
   <script type="module" src="/assets/app.js"></script>
 </body>
 </html>`;
@@ -603,7 +608,7 @@ const editorialBody = `<article class="shell prose-page">${breadcrumbs([{ label:
 await writePage("/editorial-policy/", pageTemplate({ title: "Editorial policy", description: "How Clue Tutor reviews crossword explanations, separates private tool output from indexed content, and handles sources.", route: "/editorial-policy/", body: editorialBody, bodyClass: "prose-page-body" }), false, "2026-08-20");
 
 const privacyBody = `<article class="shell prose-page">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Privacy" }])}<h1>Privacy</h1><p>Clue matching runs in your browser. The clue, pattern, and answer you type are not sent to our application server or saved in an account.</p><h2>Analytics</h2><p>We use Cloudflare Web Analytics for aggregate visits and real-user performance metrics. We also use Pageview, a self-managed Plausible Community Edition instance, to record pageview events. Its browser script sends the visited page URL, referrer, site domain, and event name to <code>app.pageview.app</code> and does not set cookies.</p><p>Google Analytics 4 measures visits and site usage through measurement ID <code>G-HVMXR2YN3N</code>. Google may receive the visited page, referrer, device and browser information, approximate location derived from the network connection, and event timing; Google Analytics may set first-party measurement cookies. We use these analytics services for aggregate product and acquisition analysis, not advertising or session replay.</p><h2>Feedback and email</h2><p>When you submit feedback, we store the selected issue type, current page path, any clue or answer you include, and your message. Email is optional. If supplied, it is used only to discuss that report and is not added to a mailing list. We do not store a raw IP address or browser user agent with the report, and feedback is not published automatically.</p><p>If you email <a href="mailto:${contactEmail}">${contactEmail}</a> directly, your message and address are processed by our email providers and retained only as needed to answer or document the conversation you started. Direct email is not added to a marketing list.</p><h2>Saved clues</h2><p>If you choose “Save clue,” the clue's public page identifier is stored only in this browser using local storage. It is not uploaded to Clue Tutor or attached to an account. Remove clues from the Saved Clues page or clear this site's browser data to delete them.</p><h2>Local behavior</h2><p>The browser downloads the reviewed example data needed for matching. Closing a page removes unsaved form input; the site does not create an account or retain a server-side search history.</p></article>`;
-const privacyBodyWithClassroom = privacyBody.replace("<h2>Feedback and email</h2>", "<h2>Reduced-analytics classroom pages</h2><p>The Teacher guide, Classroom Solver, and printable worksheet keep the cookie-free Pageview script for basic page counts but omit Google Analytics 4. Cloudflare may still process aggregate request, performance, and security data at the network edge. No student account is created, and classroom clue searches are not stored as a server-side search history.</p><h2>Feedback and email</h2>");
+const privacyBodyWithClassroom = privacyBody.replace("<h2>Feedback and email</h2>", "<h2>Google Analytics consent</h2><p>On standard pages, visitors in the EEA, United Kingdom, and Switzerland are asked before Google Analytics loads. If the country cannot be determined, the privacy-safe default is to ask. Visitors elsewhere can open Analytics choices in the footer to opt out. The choice is stored only in this browser. Cookie-free Pageview remains active.</p><h2>Reduced-analytics classroom pages</h2><p>The Teacher guide, Classroom Solver, and printable worksheet keep the cookie-free Pageview script for basic page counts but omit Google Analytics 4. Cloudflare may still process aggregate request, performance, and security data at the network edge. No student account is created, and classroom clue searches are not stored as a server-side search history.</p><h2>Future AdSense requirement</h2><p>This GA4 choice is not an AdSense consent platform. Before serving AdSense ads in the EEA, United Kingdom, or Switzerland, the site must enable a Google-certified TCF consent management platform.</p><h2>Feedback and email</h2>");
 await writePage("/privacy/", pageTemplate({ title: "Privacy", description: "How the Clue Tutor validation build handles crossword clues, patterns, answers, storage, and analytics.", route: "/privacy/", body: privacyBodyWithClassroom, bodyClass: "prose-page-body" }), false, "2026-08-22");
 
 const notFoundBody = `<section class="shell not-found"><div class="empty-grid" aria-hidden="true"><i>C</i><i>L</i><i>U</i><i>E</i></div><h1>That square is empty.</h1><p>The page does not exist, but the clue solver may still get you moving.</p><a class="button button-primary" href="/solver/">Open the solver</a></section>`;

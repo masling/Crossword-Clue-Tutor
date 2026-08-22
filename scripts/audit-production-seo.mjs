@@ -26,7 +26,8 @@ export function auditHtml({ html, url }) {
   const googleAnalyticsLoaderCount = html.split(googleAnalyticsLoader).length - 1;
   const googleAnalyticsConfigCount = html.split(googleAnalyticsConfig).length - 1;
   const analyticsMode = html.match(/<meta name="analytics-mode" content="([^"]+)">/)?.[1] ?? "";
-  const expectedGa4Count = analyticsMode === "minimal" ? 0 : 1;
+  const googleAnalyticsIdCount = (html.match(/<meta name="google-analytics-measurement-id" content="G-HVMXR2YN3N">/g) ?? []).length;
+  const expectedGa4IdCount = analyticsMode === "minimal" ? 0 : 1;
   const robots = html.match(/<meta name="robots" content="([^"]+)">/)?.[1] ?? "";
   const jsonLdBlocks = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
   const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((match) => match[1]);
@@ -39,8 +40,9 @@ export function auditHtml({ html, url }) {
   if (!robots.includes("index,follow")) errors.push(`unexpected robots directive: ${robots || "missing"}`);
   if (!analyticsMode) errors.push("missing analytics mode");
   if (pageviewCount !== 1) errors.push(`expected one Pageview script, found ${pageviewCount}`);
-  if (googleAnalyticsLoaderCount !== expectedGa4Count) errors.push(`expected ${expectedGa4Count} GA4 loaders, found ${googleAnalyticsLoaderCount}`);
-  if (googleAnalyticsConfigCount !== expectedGa4Count) errors.push(`expected ${expectedGa4Count} GA4 configs, found ${googleAnalyticsConfigCount}`);
+  if (googleAnalyticsIdCount !== expectedGa4IdCount) errors.push(`expected ${expectedGa4IdCount} GA4 measurement IDs, found ${googleAnalyticsIdCount}`);
+  if (googleAnalyticsLoaderCount !== 0) errors.push(`expected consent-delayed GA4 loader, found ${googleAnalyticsLoaderCount} static loaders`);
+  if (googleAnalyticsConfigCount !== 0) errors.push(`expected consent-delayed GA4 config, found ${googleAnalyticsConfigCount} static configs`);
   if (jsonLdBlocks.length === 0) errors.push("missing JSON-LD");
   for (const block of jsonLdBlocks) {
     try { JSON.parse(block[1]); } catch { errors.push("invalid JSON-LD"); }
