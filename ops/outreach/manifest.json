@@ -151,6 +151,32 @@
       "approvalRequired": true,
       "sentAt": "2026-08-22T19:58:21+08:00",
       "messageId": "1a02955bf090da8f"
+    },
+    {
+      "id": "ateq-ela-resource",
+      "target": "ATEQ teacher resources",
+      "channel": "email",
+      "recipient": "info@ateq.org",
+      "subject": "Free ELA resource suggestion: crossword clue evidence routine",
+      "textFile": "messages/ateq-ela-resource.txt",
+      "gmailDraftStatus": "sent",
+      "gmailDraftCreatedAt": null,
+      "approvalRequired": true,
+      "sentAt": "2026-08-22T22:03:12+08:00",
+      "messageId": "1a029c810ef29ba3"
+    },
+    {
+      "id": "read-charlotte-lcrc",
+      "target": "Read Charlotte Listening Comprehension Resource Center",
+      "channel": "email",
+      "recipient": "LCRC@readcharlotte.org",
+      "subject": "Grades 6–12 vocabulary and oral clue-inference routine",
+      "textFile": "messages/read-charlotte-lcrc.txt",
+      "gmailDraftStatus": "sent",
+      "gmailDraftCreatedAt": null,
+      "approvalRequired": true,
+      "sentAt": "2026-08-22T22:03:12+08:00",
+      "messageId": "1a029c821a4d2bda"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T21:05:52+08:00",
+  "updatedAt": "2026-08-22T22:03:12+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -426,7 +426,7 @@
   "outreach": {
     "verifiedAt": "2026-08-22T10:09:25+08:00",
     "readyForApproval": 0,
-    "sent": 5,
+    "sent": 7,
     "formsSubmitted": 4,
     "formsBlocked": 0,
     "educationFormsBlocked": 0,
@@ -445,13 +445,13 @@
     ],
     "executionAssets": {
       "manifest": "ops/outreach/manifest.json",
-      "individualEmailDrafts": 5,
+      "individualEmailDrafts": 7,
       "gmailDraftsReadyForReview": 2,
       "localEmailDraftsReadyForReview": 2,
       "structuredFormPayloads": 5,
       "validationCommand": "npm run outreach:check",
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 100 meaning entries",
-      "transmissionStatus": "Five unique email targets were sent, including the ESLActive classroom-activity pitch. OneLook, ACPT, TeachersFirst, and ATEAL forms were submitted; Teach Arcade was skipped after repeated site network errors. Daily Crossword Links and XWord Blog each received one accidental duplicate."
+      "transmissionStatus": "Seven unique email targets were sent, including ESLActive, ATEQ, and Read Charlotte education-resource pitches. OneLook, ACPT, TeachersFirst, and ATEAL forms were submitted; Teach Arcade was skipped after repeated site network errors. Daily Crossword Links and XWord Blog each received one accidental duplicate."
     },
     "approvalNeeded": null,
     "senderSetup": {
