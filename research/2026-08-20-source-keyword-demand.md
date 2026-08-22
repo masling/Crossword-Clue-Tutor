@@ -208,3 +208,16 @@ complete Mini grid and answer list were not reproduced.
 Search results for the full New York Times Crossword did not provide a sufficiently
 reliable exact clue-answer set, and USA TODAY still lacked a verifiable August 21 set.
 Both remain pending rather than being inferred from thin or inconsistent sources.
+
+## 2026-08-22 10:15 SGT freshness run
+
+The full New York Times Crossword for August 21 became publicly verifiable through a
+public crossword reference page. Four selected pairs were published: the kasaya-robed
+leader (`LAMA`), malty offerings (`AMBERALES`), the question-marked Italian hero
+(`MEATBALLSUB`), and “Is canned” (`GETSTHEAX`). Independent references confirmed the
+Buddhist robe context, amber ale's malt profile, the regional hero-sandwich sense, and
+the dismissal idiom. The original pages provide progressive hints and explanations and
+do not reproduce the grid or complete answer list.
+
+The August 22 NYT Mini exact clue-answer set was not yet reliably exposed by the checked
+public source, so it remains pending for the 12:15 retry rather than being guessed.

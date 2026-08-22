@@ -1841,5 +1841,97 @@
     "publication": "NYT Mini",
     "sourceDate": "2026-08-21",
     "clueNumber": "4-Down"
+  },
+  {
+    "slug": "leader-in-a-kasaya-robe-nyt",
+    "clue": "Leader in a robe called a kasaya",
+    "answer": "LAMA",
+    "date": "2026-08-22",
+    "popularity": 100,
+    "definition": "A lama is a spiritual teacher or senior monastic figure in Tibetan Buddhism.",
+    "explanation": "A kasaya is a robe worn by Buddhist clerics. The clue's word “Leader” narrows that broad religious reference to the four-letter Tibetan Buddhist title LAMA.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "lama",
+      "kasaya",
+      "buddhism",
+      "religious-titles"
+    ],
+    "clueType": "straight-definition",
+    "signal": "The distinctive robe supplies the Buddhist setting, while “Leader” asks for a title rather than the garment itself.",
+    "hint": "Think of a four-letter title for a Tibetan Buddhist spiritual teacher.",
+    "reviewedAt": "2026-08-22",
+    "publication": "The New York Times Crossword",
+    "sourceDate": "2026-08-21",
+    "clueNumber": "1-Across"
+  },
+  {
+    "slug": "some-malty-offerings-nyt",
+    "clue": "Some malty offerings",
+    "answer": "AMBERALES",
+    "date": "2026-08-22",
+    "popularity": 99,
+    "definition": "Amber ales are copper-to-amber beers whose flavor commonly emphasizes toasted or caramel-like malt character.",
+    "explanation": "“Offerings” asks for plural drinks, and “malty” points to a beer style known for its malt profile. Written without a space in the grid, AMBER ALES becomes AMBERALES.",
+    "partOfSpeech": "plural noun",
+    "tags": [
+      "amber-ale",
+      "beer",
+      "malt",
+      "drinks"
+    ],
+    "clueType": "straight-definition",
+    "signal": "The plural “offerings” indicates multiple menu items, while the flavor adjective identifies the beer family.",
+    "hint": "Look for a two-word plural beer style that occupies nine squares without its space.",
+    "reviewedAt": "2026-08-22",
+    "publication": "The New York Times Crossword",
+    "sourceDate": "2026-08-21",
+    "clueNumber": "5-Across"
+  },
+  {
+    "slug": "italian-hero-question-mark-nyt",
+    "clue": "Italian hero?",
+    "answer": "MEATBALLSUB",
+    "date": "2026-08-22",
+    "popularity": 98,
+    "definition": "A meatball sub is a long-roll sandwich filled with meatballs, usually with tomato sauce and often cheese.",
+    "explanation": "The question mark signals wordplay: “hero” is a regional name for a long sandwich, not a celebrated person. An Italian-style example is a MEATBALL SUB, entered as MEATBALLSUB.",
+    "partOfSpeech": "noun phrase",
+    "tags": [
+      "meatball-sub",
+      "hero-sandwich",
+      "italian-food",
+      "wordplay"
+    ],
+    "clueType": "wordplay",
+    "signal": "The question mark tells the solver to reinterpret “hero” as food rather than a person.",
+    "hint": "Picture an eleven-letter long-roll sandwich with a classic red-sauced Italian-American filling.",
+    "reviewedAt": "2026-08-22",
+    "publication": "The New York Times Crossword",
+    "sourceDate": "2026-08-21",
+    "clueNumber": "38-Across"
+  },
+  {
+    "slug": "is-canned-nyt",
+    "clue": "Is canned",
+    "answer": "GETSTHEAX",
+    "date": "2026-08-22",
+    "popularity": 97,
+    "definition": "Gets the ax means is dismissed, removed, canceled, or fired from a job.",
+    "explanation": "Here “canned” is the informal sense “fired,” not preserved in a container. The matching nine-letter phrase is GETS THE AX, entered without spaces as GETSTHEAX.",
+    "partOfSpeech": "verb phrase",
+    "tags": [
+      "gets-the-ax",
+      "canned",
+      "fired",
+      "idioms"
+    ],
+    "clueType": "straight-definition",
+    "signal": "The verb “Is” requires a present-tense phrase, and the informal “canned” points to dismissal.",
+    "hint": "Use a nine-letter expression for being fired that ends with a chopping tool.",
+    "reviewedAt": "2026-08-22",
+    "publication": "The New York Times Crossword",
+    "sourceDate": "2026-08-21",
+    "clueNumber": "61-Across"
   }
 ]

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T10:09:25+08:00",
+  "updatedAt": "2026-08-22T10:21:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -54,8 +54,8 @@
     }
   },
   "content": {
-    "indexablePages": 165,
-    "reviewedClues": 82,
+    "indexablePages": 174,
+    "reviewedClues": 90,
     "answerMeaningPages": 36,
     "latestMeaningExpansion": {
       "answers": ["BITING", "INBORN", "SWOLLEN", "GRAND", "COAX", "ROUTE", "RICHES", "LEAD", "ALLSPICE"],
@@ -64,7 +64,7 @@
     },
     "evergreenClueHubs": 15,
     "evergreenClueHubCandidates": 328,
-    "solverReviewedClueCandidates": 78,
+    "solverReviewedClueCandidates": 86,
     "solverHubCandidates": 328,
     "solverCandidatePool": 406,
     "linkableGuides": 1,
@@ -244,12 +244,12 @@
     ],
     "lastPublishedSourceDates": {
       "NYT Mini": "2026-08-21",
-      "The New York Times Crossword": "2026-08-20",
+      "The New York Times Crossword": "2026-08-21",
       "LA Times Crossword": "2026-08-21",
       "USA TODAY Crossword": "2026-08-20"
     },
     "latestFreshnessBatch": {
-      "publication": "NYT Mini",
+      "publication": "The New York Times Crossword",
       "sourceDate": "2026-08-21",
       "selectedClues": 4,
       "selectionReason": "Routine same-day coverage from a publicly verifiable current clue set",
@@ -421,7 +421,7 @@
     }
   },
   "nextAction": {
-    "notBefore": "2026-08-22T10:15:00+08:00",
-    "action": "Check the next NYT Mini date, and recheck only The New York Times Crossword and USA TODAY if August 21 exact clue-answer pairs become publicly verifiable; do not republish completed August 21 sources."
+    "notBefore": "2026-08-22T12:15:00+08:00",
+    "action": "Check LA Times and USA TODAY for their latest public dates, and retry NYT Mini because August 22 exact pairs were still not publicly verifiable at 10:15; do not recheck the completed August 21 full NYT source."
   }
 }
