@@ -52,6 +52,11 @@ jobs:
         with:
           name: crossword-clue-tutor-dist
           path: dist
+      - name: Capture the currently deployed sitemap
+        run: >-
+          curl --fail --silent --show-error https://crosswordcluetutor.com/sitemap.xml
+          --output "$RUNNER_TEMP/previous-sitemap.xml"
+          || : > "$RUNNER_TEMP/previous-sitemap.xml"
       - name: Deploy verified build to Cloudflare Pages
         run: >-
           npx wrangler pages deploy dist
@@ -61,13 +66,15 @@ jobs:
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      - name: Detect a newly recorded publish batch
-        id: publish_batch
+      - name: Detect explicitly recorded IndexNow updates
+        id: indexnow_records
         run: >-
-          if git diff --quiet HEAD^ HEAD -- ops/latest-publish.json;
+          if git diff --quiet HEAD^ HEAD -- ops/latest-publish.json ops/indexnow-manual.json;
           then echo "changed=false" >> "$GITHUB_OUTPUT";
           else echo "changed=true" >> "$GITHUB_OUTPUT";
           fi
-      - name: Notify IndexNow of the published batch
-        if: steps.publish_batch.outputs.changed == 'true'
-        run: npm run indexnow:submit
+      - name: Notify IndexNow of new and explicitly updated URLs
+        run: >-
+          npm run indexnow:submit --
+          --previous-sitemap "$RUNNER_TEMP/previous-sitemap.xml"
+          ${{ steps.indexnow_records.outputs.changed == 'true' && '--include-records' || '' }}

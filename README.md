@@ -50,7 +50,7 @@ grids, and full publisher answer keys stay outside the sitemap.
 | Feedback API | Cloudflare Pages Function with a bound D1 database |
 | Hosting | Cloudflare Pages Direct Upload |
 | CI/CD | GitHub Actions verifies one artifact, then deploys that artifact |
-| Search discovery | Sitemap, Atom feed, internal links, and IndexNow |
+| Search discovery | Sitemap, Atom feed, internal links, and IndexNow with automatic sitemap-diff detection |
 | Analytics | Cloudflare Web Analytics, cookie-free Pageview/Plausible Community Edition, and consent-delayed GA4 on standard pages; classroom pages omit GA4 |
 
 ## Run locally

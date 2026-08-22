@@ -401,7 +401,13 @@
     },
     "searchImpressions": 4,
     "searchClicks": 0,
-    "indexNowSubmittedUrls": 463
+    "indexNowSubmittedUrls": 463,
+    "indexNowBackfill": {
+      "status": "Pending deployment",
+      "preparedUrls": 80,
+      "reason": "Backfill for dictionary expansion, classroom resources, homepage/feed visibility, privacy/consent changes, and the latest reviewed clue batch",
+      "automation": "Every production deploy compares the pre-deploy sitemap with the verified artifact and adds explicitly recorded updated URLs"
+    }
   },
   "deployment": {
     "provider": "Cloudflare Pages",
