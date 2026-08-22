@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T19:42:53+08:00",
+  "updatedAt": "2026-08-22T19:43:47+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -398,10 +398,10 @@
     "verifiedAt": "2026-08-22T10:09:25+08:00",
     "readyForApproval": 0,
     "sent": 4,
-    "formsSubmitted": 2,
+    "formsSubmitted": 3,
     "formsBlocked": 0,
     "educationFormsBlocked": 1,
-    "educationFormsPendingManual": 1,
+    "educationFormsPendingManual": 0,
     "responses": 1,
     "listingCommitments": 1,
     "liveExternalListings": 0,

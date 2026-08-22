@@ -23,7 +23,7 @@ export async function validateOutreach() {
   ]);
   const candidateCount = hubs.reduce((total, hub) => total + hub.answers.length, 0);
 
-  if (!new Set(["outreach_drafts_not_sent", "emails_sent_forms_pending", "outreach_sent", "outreach_expansion_ready"]).has(manifest.status)) errors.push("manifest has an unsupported outreach status");
+  if (!new Set(["outreach_drafts_not_sent", "emails_sent_forms_pending", "outreach_sent", "outreach_expansion_ready", "outreach_expansion_partial"]).has(manifest.status)) errors.push("manifest has an unsupported outreach status");
   if (!validEmail(manifest.sender?.email)) errors.push("manifest sender email is invalid");
   if (manifest.sender?.email !== "hello@crosswordcluetutor.com") errors.push("manifest sender must use the verified domain address");
   if (manifest.datasetEvidence?.clueFamilies !== hubs.length) errors.push("manifest clue-family count is stale");
