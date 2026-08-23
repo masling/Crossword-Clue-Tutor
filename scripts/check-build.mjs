@@ -219,7 +219,7 @@ const freshPage = await readFile(path.join(dist, "explainers/blue-streams-down-a
 if (!freshPage.includes("NYT Mini crossword clue")) errors.push("fresh explainer does not target the publication long-tail query");
 const latestDailyPage = await readFile(path.join(dist, "explainers/private-sleeping-accommodations-nyt-daily/index.html"), "utf8");
 if (!latestDailyPage.includes("Private sleeping accommodations? The New York Times Crossword clue")) errors.push("latest daily explainer does not target the publication long-tail query");
-if (!latestDailyPage.includes("Why COTS fits")) errors.push("latest daily explainer is missing its reviewed explanation");
+if (!latestDailyPage.includes("Why it fits") || !latestDailyPage.includes('aria-label="C O T S"')) errors.push("latest daily explainer is missing its reviewed answer or explanation");
 const miniHub = await readFile(path.join(dist, "nyt-mini-crossword-clues/index.html"), "utf8");
 if (!miniHub.includes("It’s in a pickle")) errors.push("NYT Mini hub is missing the latest selected clue");
 const dailyHub = await readFile(path.join(dist, "nyt-crossword-clues/index.html"), "utf8");
@@ -230,7 +230,7 @@ const usaTodayHub = await readFile(path.join(dist, "usa-today-crossword-answers/
 if (!usaTodayHub.includes("Arthur for whom the ESPYs&#039; Courage Award is named")) errors.push("USA TODAY demand hub is missing its selected current clue");
 if (!usaTodayHub.includes("&quot;Hidden Figures&quot; star Janelle") || !usaTodayHub.includes("August 20, 2026")) errors.push("USA TODAY hub is missing its August 20 selected batch");
 const latestUsaTodayPage = await readFile(path.join(dist, "explainers/hidden-figures-star-janelle-usa-today/index.html"), "utf8");
-if (!latestUsaTodayPage.includes("Why MONAE fits") || !latestUsaTodayPage.includes("USA TODAY Crossword · 44-Across")) errors.push("latest USA TODAY explainer is missing its reviewed answer or source context");
+if (!latestUsaTodayPage.includes("Why it fits") || !latestUsaTodayPage.includes('aria-label="M O N A E"') || !latestUsaTodayPage.includes("USA TODAY Crossword · 44-Across")) errors.push("latest USA TODAY explainer is missing its reviewed answer, explanation, or source context");
 for (const [slug, answer, target] of [
   ["mia", "MIA", "missing in action"],
   ["una", "UNA", "Spanish feminine singular"],
@@ -378,6 +378,13 @@ if (!savedCluesPage.includes("noindex,nofollow")) errors.push("saved clues page 
 if (sitemap.includes("/saved-clues/")) errors.push("sitemap must not include the personalized saved clues page");
 const cluePage = await readFile(path.join(dist, "explainers/scientists-workplace-nyt-mini/index.html"), "utf8");
 if (!cluePage.includes("data-save-clue")) errors.push("reviewed clue pages are missing the save-clue control");
+if (!cluePage.includes("data-answer-reveal") || !cluePage.includes("data-nosnippet")) errors.push("reviewed clue pages are missing the spoiler-light answer reveal or snippet protection");
+if (!cluePage.includes('data-tool-context="explainer"') || !cluePage.includes("Solve the next clue here")) errors.push("reviewed clue pages are missing the next-clue solver continuation");
+if (!cluePage.includes("data-recent-clues") || !cluePage.includes("data-return-link")) errors.push("reviewed clue pages are missing local return paths");
+if (cluePage.includes("The answer is LAB")) errors.push("reviewed clue metadata must not reveal the answer in search snippets");
+for (const eventName of ["answer_reveal", "solver_submit", "save_clue", "clue_revisit", "return_path_click"]) {
+  if (!appScript.includes(eventName)) errors.push(`app script is missing the ${eventName} product event`);
+}
 
 if (errors.length) {
   for (const error of errors) console.error(`error: ${error}`);

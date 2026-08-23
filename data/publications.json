@@ -6,7 +6,7 @@
     "heading": "Selected NYT Mini clues, explained",
     "description": "Get spoiler-light hints and original explanations for selected tricky NYT Mini crossword clues, organized by puzzle date.",
     "maxPerDate": 6,
-    "titleSuffix": "NYT Mini Crossword Clue",
+    "titleSuffix": "NYT Mini Crossword Answer",
     "linkLabel": "NYT Mini clue hints"
   },
   {
@@ -16,7 +16,7 @@
     "heading": "Selected NYT crossword clues, explained",
     "description": "Browse spoiler-light hints and original explanations for selected high-confusion New York Times crossword clues by puzzle date.",
     "maxPerDate": 8,
-    "titleSuffix": "NYT Crossword Clue",
+    "titleSuffix": "NYT Crossword Answer",
     "linkLabel": "NYT daily clue hints"
   },
   {
@@ -26,7 +26,7 @@
     "heading": "LA Times crossword answers today — selected clues",
     "description": "Find spoiler-light hints and independently written explanations for selected LA Times crossword answers with current search demand, organized by puzzle date.",
     "maxPerDate": 6,
-    "titleSuffix": "LA Times Crossword Clue",
+    "titleSuffix": "LA Times Crossword Answer",
     "linkLabel": "LA Times answers today"
   },
   {
@@ -36,7 +36,7 @@
     "heading": "USA TODAY crossword answers — selected clues",
     "description": "Find spoiler-light hints and independently written explanations for selected USA TODAY crossword answers with current search demand, organized by puzzle date.",
     "maxPerDate": 6,
-    "titleSuffix": "USA TODAY Crossword Clue",
+    "titleSuffix": "USA TODAY Crossword Answer",
     "linkLabel": "USA TODAY answers"
   }
 ]

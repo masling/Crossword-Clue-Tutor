@@ -21,10 +21,15 @@ for (const root of document.querySelectorAll("[data-tool-root]")) {
 }
 
 const savedCluesKey = "crossword-clue-tutor:saved-clues";
+const recentCluesKey = "crossword-clue-tutor:recent-clues";
 const analyticsConsentKey = "crossword-clue-tutor:ga4-consent:v1";
+const pendingProductEvents = [];
 
 setupSavedClueButtons();
 setupSavedCluesPage();
+setupAnswerReveals();
+setupRecentClues();
+setupTrackedLinks();
 setupFeedbackForm();
 setupPrintButtons();
 setupGoogleAnalytics();
@@ -93,6 +98,16 @@ function loadGoogleAnalytics(measurementId) {
   script.dataset.ga4Loader = "";
   script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
   document.head.append(script);
+  for (const [name, parameters] of pendingProductEvents.splice(0)) window.gtag("event", name, parameters);
+}
+
+function trackProductEvent(name, parameters = {}) {
+  if (!document.querySelector('meta[name="google-analytics-measurement-id"]')) return;
+  if (typeof window.gtag !== "function" || !document.querySelector("script[data-ga4-loader]")) {
+    pendingProductEvents.push([name, parameters]);
+    return;
+  }
+  window.gtag("event", name, parameters);
 }
 
 function readAnalyticsChoice() {
@@ -198,6 +213,84 @@ function writeSavedClues(slugs) {
   }
 }
 
+function readRecentClues() {
+  try {
+    const value = JSON.parse(localStorage.getItem(recentCluesKey) ?? "[]");
+    return Array.isArray(value) ? value.filter((slug) => typeof slug === "string") : [];
+  } catch {
+    return [];
+  }
+}
+
+function writeRecentClues(slugs) {
+  try {
+    localStorage.setItem(recentCluesKey, JSON.stringify([...new Set(slugs)].slice(0, 8)));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function setupAnswerReveals() {
+  for (const reveal of document.querySelectorAll("[data-answer-reveal]")) {
+    let tracked = false;
+    reveal.addEventListener("toggle", () => {
+      if (!reveal.open || tracked) return;
+      tracked = true;
+      trackProductEvent("answer_reveal", { page_path: location.pathname, content_type: "clue_explainer" });
+    });
+  }
+}
+
+async function setupRecentClues() {
+  const article = document.querySelector("[data-current-clue]");
+  if (!article) return;
+  const slug = article.dataset.currentClue;
+  const previous = readRecentClues();
+  if (previous.includes(slug)) trackProductEvent("clue_revisit", { clue_slug: slug });
+  writeRecentClues([slug, ...previous.filter((item) => item !== slug)]);
+
+  const root = article.querySelector("[data-recent-clues]");
+  const container = root?.querySelector("[data-recent-clue-items]");
+  const recent = previous.filter((item) => item !== slug).slice(0, 3);
+  if (!root || !container || !recent.length) return;
+
+  try {
+    const { clues } = await dataPromise;
+    const bySlug = new Map(clues.map((clue) => [clue.slug, clue]));
+    for (const recentSlug of recent) {
+      const clue = bySlug.get(recentSlug);
+      if (!clue) continue;
+      const link = element("a", "recent-clue-link");
+      link.href = `/explainers/${clue.slug}/`;
+      link.append(
+        element("strong", "", clue.clue),
+        element("span", "", `${clue.publication ?? "Reviewed clue"} · ${clue.answer.length} letters`)
+      );
+      link.addEventListener("click", () => trackProductEvent("recent_clue_open", { clue_slug: clue.slug }));
+      container.append(link);
+    }
+    root.hidden = !container.childElementCount;
+  } catch {
+    root.hidden = true;
+  }
+}
+
+function setupTrackedLinks() {
+  for (const link of document.querySelectorAll("[data-return-link]")) {
+    link.addEventListener("click", () => trackProductEvent("return_path_click", {
+      destination: link.dataset.returnLink,
+      page_path: location.pathname
+    }));
+  }
+  for (const section of document.querySelectorAll("[data-related-clues]")) {
+    section.addEventListener("click", (event) => {
+      const link = event.target.closest("a[href]");
+      if (link) trackProductEvent("related_clue_click", { page_path: location.pathname });
+    });
+  }
+}
+
 function setupSavedClueButtons() {
   for (const control of document.querySelectorAll("[data-save-clue]")) {
     const status = control.parentElement?.querySelector("[data-save-clue-status]");
@@ -219,6 +312,7 @@ function setupSavedClueButtons() {
       }
       sync();
       if (status) status.textContent = isSaved ? "Removed from saved clues." : "Saved in this browser.";
+      trackProductEvent(isSaved ? "unsave_clue" : "save_clue", { clue_slug: slug });
     });
   }
 }
@@ -329,9 +423,16 @@ function setupSolveForm(root) {
       showError(error, "Answer length must be between 2 and 30 letters.");
       return;
     }
+    const context = root.dataset.toolContext || "standalone";
+    trackProductEvent("solver_submit", {
+      tool_context: context,
+      has_clue: Boolean(clue),
+      has_pattern: Boolean(pattern),
+      has_length: Boolean(length)
+    });
     const { solverClues } = await dataPromise;
     const matches = solveClues(solverClues, { clue, pattern, length }).slice(0, 5);
-    renderSolveResults(results, matches, { clue, pattern, length });
+    renderSolveResults(results, matches, { clue, pattern, length, context });
   });
 }
 
@@ -351,6 +452,7 @@ function setupExplainForm(root) {
       showError(error, "Enter both the clue and the answer you already have.");
       return;
     }
+    trackProductEvent("explanation_submit", { tool_context: root.dataset.toolContext || "standalone" });
     const data = await dataPromise;
     const candidates = solveClues(data.solverClues, { clue, length: answer.length }).filter((item) => item.answer === answer);
     const exact = candidates.find((item) => normalizeClue(item.clue) === normalizeClue(clue));
@@ -362,6 +464,7 @@ function setupExplainForm(root) {
 
 function renderSolveResults(container, matches, query) {
   container.replaceChildren();
+  trackProductEvent("solver_results", { tool_context: query.context, result_count: matches.length });
   if (!matches.length) {
     const state = emptyState(
       "No reviewed match yet",
@@ -380,10 +483,10 @@ function renderSolveResults(container, matches, query) {
     element("span", "", query.pattern ? `Pattern ${query.pattern}` : query.length ? `${query.length} letters` : "Ranked by clue fit")
   );
   container.append(heading);
-  for (const [index, item] of matches.entries()) container.append(solveResult(item, index));
+  for (const [index, item] of matches.entries()) container.append(solveResult(item, index, query.context));
 }
 
-function solveResult(item, index) {
+function solveResult(item, index, context = "standalone") {
   const article = element("article", "solve-result");
   const head = element("div", "solve-result-head");
   const meta = element("span", "result-rank", `Match ${index + 1}`);
@@ -427,6 +530,7 @@ function solveResult(item, index) {
     reveal.hidden = true;
     explain.hidden = false;
     report.hidden = false;
+    trackProductEvent("solver_answer_reveal", { tool_context: context, result_rank: index + 1 });
   });
   explain.addEventListener("click", () => {
     why.hidden = false;
