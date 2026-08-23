@@ -21,9 +21,9 @@ test("allows automatic analytics loading in non-consent regions", async () => {
   assert.deepEqual(await response.json(), { country: "US", consentRequired: false });
 });
 
-test("fails privacy-safe when Cloudflare country metadata is unavailable", async () => {
+test("allows automatic analytics loading when Cloudflare country metadata is unavailable", async () => {
   const response = onRequestGet({ request: requestFor() });
-  assert.deepEqual(await response.json(), { country: null, consentRequired: true });
+  assert.deepEqual(await response.json(), { country: null, consentRequired: false });
   assert.equal(response.headers.get("Cache-Control"), "private, no-store, max-age=0");
 });
 

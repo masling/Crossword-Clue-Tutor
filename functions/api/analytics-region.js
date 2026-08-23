@@ -20,7 +20,7 @@ export function onRequestGet({ request }) {
   const country = typeof request.cf?.country === "string" ? request.cf.country.toUpperCase() : null;
   return json({
     country,
-    consentRequired: !country || CONSENT_COUNTRIES.has(country)
+    consentRequired: CONSENT_COUNTRIES.has(country)
   });
 }
 

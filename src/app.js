@@ -72,7 +72,7 @@ async function setupGoogleAnalytics() {
     if (region.consentRequired) showBanner();
     else loadGoogleAnalytics(measurementId);
   } catch {
-    showBanner();
+    loadGoogleAnalytics(measurementId);
   }
 }
 
