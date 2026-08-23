@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T10:18:37+08:00",
+  "updatedAt": "2026-08-23T14:58:39+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -271,6 +271,20 @@
       "LA Times Crossword": "2026-08-22",
       "USA TODAY Crossword": "2026-08-21"
     },
+    "officialSourceDiscovery": {
+      "USA TODAY Crossword": {
+        "adapter": "usatoday-official-metadata-v1",
+        "command": "npm run source:usatoday -- --output .local/usatoday-latest.json",
+        "checkedAt": "2026-08-23T06:58:10.142Z",
+        "latestOfficialDate": "2026-08-23",
+        "latestTitle": "Down the Drain",
+        "creator": "Zhouqin Burnikel",
+        "editor": "Amanda Rafkin",
+        "accessMode": "Fresh browser context without login",
+        "contentBoundary": "Reads only the first official archive card; no complete clue list, GraphQL clue arrays, hidden solution field, login, or Reveal controls",
+        "selectedPairStatus": "Official date verified; selected exact clue-answer pairs remain pending separate verification"
+      }
+    },
     "latestFreshnessBatch": {
       "publication": "NYT Mini and The New York Times Crossword",
       "sourceDate": "2026-08-23",
@@ -479,7 +493,7 @@
     }
   },
   "nextAction": {
-    "notBefore": "2026-08-23T10:15:00+08:00",
-    "action": "Run the next source-timed cycle. NYT Mini, full NYT, and LA Times are complete through August 22; USA TODAY August 22 remained a public placeholder without exact pairs and should be retried only in the 12:15 branch."
+    "notBefore": "2026-08-24T10:15:00+08:00",
+    "action": "Run the next source-timed cycle. NYT Mini and full NYT are complete through August 23; LA Times is complete through August 22. Use the official USA TODAY metadata adapter before web research; its August 23 date is verified, but selected exact clue-answer pairs remain pending."
   }
 }

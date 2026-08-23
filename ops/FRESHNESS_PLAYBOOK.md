@@ -8,6 +8,10 @@ Discover, review, publish, deploy, and submit high-intent clue pages on the same
 
 1. Check official puzzle releases and visible daily discussion/search activity for
    NYT Mini, The New York Times Crossword, LA Times Crossword, and USA TODAY Crossword.
+   For USA TODAY, run `npm run source:usatoday -- --output .local/usatoday-latest.json`
+   first. This deterministic adapter discovers the current unlocked puzzle from the
+   official archive and emits its date, title, creator, editor, and URL from a fresh,
+   unsigned browser context. Use public web research only if the adapter fails.
 2. Capture candidate clue-answer pairs with publication, date, and clue number.
 3. Treat every newly verifiable publication/date as routine daily coverage. Same-day
    publishing does not wait for or depend on keyword and trend data.
@@ -39,6 +43,12 @@ Publisher release times can change, so freshness is measured from confirmed publ
 availability rather than from a hard-coded date assumption. Free play does not grant
 republication rights: never mirror a full grid or answer list, and never bypass a
 publisher login or subscription boundary.
+
+The USA TODAY adapter deliberately does not collect the complete clue list or answers.
+The puzzle API returns whole clue arrays and a hidden solution field, while Reveal Word
+requests an account. Never request those arrays, read a hidden solution payload, or
+automate Reveal Puzzle. Select and verify only a small candidate set separately before
+preparing an intake batch.
 
 ## Daily coverage rule
 

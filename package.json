@@ -14,6 +14,7 @@
     "outreach:check": "node scripts/validate-outreach.mjs",
     "outreach:send": "node scripts/send-outreach.mjs",
     "seo:audit-production": "node scripts/audit-production-seo.mjs",
+    "source:usatoday": "node scripts/usatoday-source-adapter.mjs",
     "production:configure": "node scripts/configure-production.mjs",
     "qa:url": "node scripts/create-qa-url.mjs",
     "test": "node --test",
@@ -27,6 +28,7 @@
     "nodemailer": "^7.0.13"
   },
   "devDependencies": {
+    "playwright-core": "^1.62.1",
     "wrangler": "^4.124.0"
   }
 }
