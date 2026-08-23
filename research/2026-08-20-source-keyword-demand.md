@@ -270,3 +270,23 @@ Evidence:
 
 - https://www.technobezz.com/news/nyt-mini-crossword-6bd1d1d4973b5db9-hints-clues-and-answers
 - https://www.xwordinfo.com/Crossword?date=8%2F23%2F2026
+
+## 2026-08-23 official USA TODAY adapter run
+
+The new deterministic source adapter found the official August 23 USA TODAY Crossword,
+“Down the Drain,” by Zhouqin Burnikel and edited by Amanda Rafkin. It processed the
+official public clue strings only in memory, returned six ranked candidates, and did
+not request the GraphQL `solution` field, sign in, or use Reveal controls.
+
+Four entity or language pairs were selected after independent confirmation: Resident
+Evil spy Ada Wong (`ADA`), Shark Tank investor Lori Greiner (`LORI`), Overcompensating
+actor Adam DiMarco (`ADAM`), and the Vietnamese festival term Tết (`TET`). The complete
+clue list and grid were not stored or published.
+
+Evidence:
+
+- https://puzzles.usatoday.com/game/aaf9eb05-c41a-4f4e-a0bb-e94846989708
+- https://game.capcom.com/residentevil/en/umbrella-20230920180000.html
+- https://abc.com/cast/6ce5e926-fe88-467a-a276-bd10cfdd3544
+- https://www.primevideo.com/-/fil/detail/0GZX4440MSC23NHW3P0BSQB1TE
+- https://vietnamtourism.gov.vn/en/post/13636

@@ -52,3 +52,39 @@ export function selectUsaTodayCandidates(clues, limit = 6) {
     .slice(0, safeLimit)
     .map(({ sourceOrder: _sourceOrder, ...clue }) => clue);
 }
+
+export function normalizeUsaTodayClueList(value, direction) {
+  let input = value;
+  if (typeof input === "string") {
+    try {
+      input = JSON.parse(input);
+    } catch {
+      input = input.split(/\r?\n/).map((line) => {
+        const separator = line.indexOf("|");
+        return separator > 0 ? [line.slice(0, separator), line.slice(separator + 1)] : null;
+      }).filter(Boolean);
+    }
+  }
+
+  const entries = Array.isArray(input)
+    ? input.map((item, index) => [String(index + 1), item])
+    : input && typeof input === "object" ? Object.entries(input) : [];
+
+  return entries.map(([fallbackNumber, item]) => {
+    if (typeof item === "string") {
+      const numbered = item.match(/^\s*(\d+)\s*[.)-]?\s+(.+)$/);
+      return {
+        number: numbered?.[1] ?? fallbackNumber,
+        direction,
+        clue: (numbered?.[2] ?? item).trim()
+      };
+    }
+    if (Array.isArray(item)) {
+      return { number: String(item[0] ?? fallbackNumber), direction, clue: String(item[1] ?? "").trim() };
+    }
+    if (!item || typeof item !== "object") return null;
+    const number = item.number ?? item.num ?? item.clueNumber ?? item.label ?? fallbackNumber;
+    const clue = item.clue ?? item.text ?? item.value ?? item.hint ?? item.question ?? "";
+    return { number: String(number), direction, clue: String(clue).trim() };
+  }).filter((item) => item?.clue);
+}

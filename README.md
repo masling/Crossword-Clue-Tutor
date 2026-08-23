@@ -79,7 +79,7 @@ Cloudflare deployment tooling is a development dependency.
 | `npm run content:publish -- <intake.json> --dry-run` | Preview a reviewed clue batch |
 | `npm run content:publish -- <intake.json>` | Publish a reviewed clue batch locally |
 | `npm run seo:audit-production` | Audit every production Sitemap URL |
-| `npm run source:usatoday -- --output .local/usatoday-latest.json` | Read official current USA TODAY date, title, creator, editor, and URL without logging in |
+| `npm run source:usatoday -- --output .local/usatoday-latest.json` | Read official current USA TODAY metadata and at most six ranked clue candidates without logging in or requesting solutions |
 | `npm run qa:url -- <run-name>` | Generate an analytics-tagged operator QA entry URL |
 | `npm run email:check-dns` | Verify Cloudflare/Zoho mail authentication records |
 | `npm run outreach:check` | Validate prepared outreach assets without sending |

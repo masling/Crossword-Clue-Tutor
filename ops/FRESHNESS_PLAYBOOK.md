@@ -10,8 +10,9 @@ Discover, review, publish, deploy, and submit high-intent clue pages on the same
    NYT Mini, The New York Times Crossword, LA Times Crossword, and USA TODAY Crossword.
    For USA TODAY, run `npm run source:usatoday -- --output .local/usatoday-latest.json`
    first. This deterministic adapter discovers the current unlocked puzzle from the
-   official archive and emits its date, title, creator, editor, and URL from a fresh,
-   unsigned browser context. Use public web research only if the adapter fails.
+   official archive, processes its publicly visible clue arrays transiently, and emits
+   only a small ranked candidate set with date, title, creator, editor, and URL from a
+   fresh unsigned browser context. Use public web research only if the adapter fails.
 2. Capture candidate clue-answer pairs with publication, date, and clue number.
 3. Treat every newly verifiable publication/date as routine daily coverage. Same-day
    publishing does not wait for or depend on keyword and trend data.
@@ -44,11 +45,11 @@ availability rather than from a hard-coded date assumption. Free play does not g
 republication rights: never mirror a full grid or answer list, and never bypass a
 publisher login or subscription boundary.
 
-The USA TODAY adapter deliberately does not collect the complete clue list or answers.
-The puzzle API returns whole clue arrays and a hidden solution field, while Reveal Word
-requests an account. Never request those arrays, read a hidden solution payload, or
-automate Reveal Puzzle. Select and verify only a small candidate set separately before
-preparing an intake batch.
+The USA TODAY adapter processes the public clue arrays only in memory and never stores
+the complete list. Its GraphQL query explicitly excludes the hidden `solution` field,
+and output is capped at 10 selected candidates. Reveal Word requests an account, so
+never request the solution field, sign in, or automate Reveal Puzzle. Verify answers
+only for the small selected set before preparing an intake batch.
 
 ## Daily coverage rule
 

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { parseUsaTodayArchiveCard, parseUsaTodayDate, scoreUsaTodayClue, selectUsaTodayCandidates } from "../scripts/usatoday-source-adapter-lib.mjs";
+import { normalizeUsaTodayClueList, parseUsaTodayArchiveCard, parseUsaTodayDate, scoreUsaTodayClue, selectUsaTodayCandidates } from "../scripts/usatoday-source-adapter-lib.mjs";
 
 test("normalizes the official USA TODAY date label", () => {
   assert.equal(parseUsaTodayDate("Aug. 23, 2026"), "2026-08-23");
@@ -32,4 +32,21 @@ test("returns only a compact bounded candidate set", () => {
   const selected = selectUsaTodayCandidates(clues, 2);
   assert.equal(selected.length, 2);
   assert.deepEqual(new Set(selected.map((clue) => clue.number)), new Set(["40", "33"]));
+});
+
+test("normalizes official clue arrays without needing a solution field", () => {
+  assert.deepEqual(normalizeUsaTodayClueList([
+    { number: 40, clue: '"Overcompensating" actor DiMarco' },
+    { number: 58, clue: 'Vietnamese for "festival"' }
+  ], "Across"), [
+    { number: "40", direction: "Across", clue: '"Overcompensating" actor DiMarco' },
+    { number: "58", direction: "Across", clue: 'Vietnamese for "festival"' }
+  ]);
+  assert.deepEqual(normalizeUsaTodayClueList({ 33: '"Shark Tank" investor Greiner' }, "Down"), [
+    { number: "33", direction: "Down", clue: '"Shark Tank" investor Greiner' }
+  ]);
+  assert.deepEqual(normalizeUsaTodayClueList("01|Total hotties\n40|\"Overcompensating\" actor DiMarco", "Across"), [
+    { number: "01", direction: "Across", clue: "Total hotties" },
+    { number: "40", direction: "Across", clue: '"Overcompensating" actor DiMarco' }
+  ]);
 });
