@@ -252,3 +252,21 @@ The public USA TODAY August 22 page remained an empty placeholder and its curren
 crossword archive still pointed to August 21. No USA TODAY page was guessed or created.
 It remains pending for the next 12:15 source branch rather than triggering more same-day
 refreshes.
+
+## 2026-08-23 10:15 SGT freshness run
+
+The August 23 NYT Mini and full New York Times Crossword both advanced beyond the
+recorded August 22 dates in public sources. Three selected Mini pairs were published:
+the first half of the Mason-Dixon name (`MASON`), more than enough (`AMPLE`), and the
+ping-pong table divider (`NET`). The public evidence was a third-party clue article, so
+the exact pairs were used conservatively and no complete Mini answer set was copied.
+
+Three selected Sunday NYT pairs were published from the public XWord Info reference:
+an enthusiastic “Awesome!” (`RAD`), a peace symbol (`DOVE`), and a mini-gulp (`SIP`).
+Each page adds an independently written hint, definition, clue signal, and explanation.
+Neither source's grid nor complete answer list was reproduced.
+
+Evidence:
+
+- https://www.technobezz.com/news/nyt-mini-crossword-6bd1d1d4973b5db9-hints-clues-and-answers
+- https://www.xwordinfo.com/Crossword?date=8%2F23%2F2026

@@ -2301,5 +2301,143 @@
     "publication": "LA Times Crossword",
     "sourceDate": "2026-08-22",
     "clueNumber": "Down"
+  },
+  {
+    "slug": "blank-dixon-line-nyt-mini",
+    "clue": "___-Dixon line",
+    "answer": "MASON",
+    "date": "2026-08-23",
+    "popularity": 100,
+    "definition": "Mason is the first half of Mason-Dixon, the name of the historic boundary surveyed by Charles Mason and Jeremiah Dixon.",
+    "explanation": "The blank comes before “-Dixon,” so it needs the other surveyor's surname. Charles MASON and Jeremiah Dixon give the familiar compound name Mason-Dixon.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "mason-dixon",
+      "charles-mason",
+      "boundary",
+      "surveyors"
+    ],
+    "clueType": "fill-in-the-blank",
+    "signal": "The hyphen after the blank shows that the answer completes a familiar two-name compound.",
+    "hint": "Think of the five-letter surname paired with Dixon in the name of a historic U.S. boundary.",
+    "reviewedAt": "2026-08-23",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-23",
+    "clueNumber": "1-Across"
+  },
+  {
+    "slug": "more-than-enough-nyt-mini",
+    "clue": "More than enough",
+    "answer": "AMPLE",
+    "date": "2026-08-23",
+    "popularity": 99,
+    "definition": "Ample means enough or more than enough for a particular purpose.",
+    "explanation": "AMPLE describes a quantity that is comfortably sufficient, not merely adequate. Its five letters match the clue's comparative idea of having more than enough.",
+    "partOfSpeech": "adjective",
+    "tags": [
+      "ample",
+      "enough",
+      "sufficient",
+      "abundant"
+    ],
+    "clueType": "straight-definition",
+    "signal": "The phrase asks for an adjective describing a comfortably sufficient amount.",
+    "hint": "Look for a five-letter adjective meaning comfortably sufficient or plentiful.",
+    "reviewedAt": "2026-08-23",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-23",
+    "clueNumber": "6-Across"
+  },
+  {
+    "slug": "part-of-a-ping-pong-table-nyt-mini",
+    "clue": "Part of a ping-pong table",
+    "answer": "NET",
+    "date": "2026-08-23",
+    "popularity": 98,
+    "definition": "A net is the mesh barrier stretched across the middle of a table-tennis table.",
+    "explanation": "A ping-pong table is divided into two courts by a low mesh barrier. That central three-letter part is the NET.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "net",
+      "ping-pong",
+      "table-tennis",
+      "equipment"
+    ],
+    "clueType": "straight-definition",
+    "signal": "The clue names a physical component of familiar sports equipment.",
+    "hint": "Name the three-letter mesh barrier that divides the two sides of the table.",
+    "reviewedAt": "2026-08-23",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-23",
+    "clueNumber": "5-Down"
+  },
+  {
+    "slug": "awesome-quoted-nyt-daily",
+    "clue": "\"Awesome!\"",
+    "answer": "RAD",
+    "date": "2026-08-23",
+    "popularity": 100,
+    "definition": "Rad is informal slang meaning excellent, impressive, or exciting.",
+    "explanation": "As an enthusiastic reaction, “Awesome!” can be replaced by the short slang adjective RAD. The quotation marks present the clue as something a speaker might exclaim.",
+    "partOfSpeech": "adjective",
+    "tags": [
+      "rad",
+      "awesome",
+      "slang",
+      "approval"
+    ],
+    "clueType": "informal",
+    "signal": "Quotation marks and the exclamation point call for a brief spoken reaction, while the answer uses informal slang.",
+    "hint": "Think of a three-letter retro slang word for excellent or exciting.",
+    "reviewedAt": "2026-08-23",
+    "publication": "The New York Times Crossword",
+    "sourceDate": "2026-08-23",
+    "clueNumber": "1-Across"
+  },
+  {
+    "slug": "peace-symbol-nyt-daily",
+    "clue": "Peace symbol",
+    "answer": "DOVE",
+    "date": "2026-08-23",
+    "popularity": 99,
+    "definition": "A dove is a bird traditionally used as a symbol of peace and reconciliation.",
+    "explanation": "In art and public symbolism, a white DOVE—often carrying an olive branch—represents peace. The four-letter bird therefore fits the clue directly.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "dove",
+      "peace",
+      "symbol",
+      "olive-branch"
+    ],
+    "clueType": "factoid",
+    "signal": "The singular noun asks for one familiar object or creature that conventionally represents peace.",
+    "hint": "Picture the four-letter white bird often shown carrying an olive branch.",
+    "reviewedAt": "2026-08-23",
+    "publication": "The New York Times Crossword",
+    "sourceDate": "2026-08-23",
+    "clueNumber": "23-Across"
+  },
+  {
+    "slug": "mini-gulp-nyt-daily",
+    "clue": "Mini-gulp",
+    "answer": "SIP",
+    "date": "2026-08-23",
+    "popularity": 98,
+    "definition": "A sip is a small amount of liquid taken into the mouth and swallowed.",
+    "explanation": "A gulp is a relatively large swallow, while a mini version is a much smaller drink. The three-letter noun SIP captures that contrast.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "sip",
+      "gulp",
+      "drink",
+      "small-amount"
+    ],
+    "clueType": "wordplay",
+    "signal": "The prefix-like “Mini-” asks for a smaller counterpart to the action named after the hyphen.",
+    "hint": "Replace the large swallow with its three-letter, much smaller counterpart.",
+    "reviewedAt": "2026-08-23",
+    "publication": "The New York Times Crossword",
+    "sourceDate": "2026-08-23",
+    "clueNumber": "101-Across"
   }
 ]

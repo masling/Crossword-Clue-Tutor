@@ -1,15 +1,17 @@
 {
-  "publishedAt": "2026-08-22T06:18:51.262Z",
-  "input": "ops/intake/2026-08-22-la-times-routine.json",
+  "publishedAt": "2026-08-23T02:18:23.435Z",
+  "input": "ops/intake/2026-08-23-nyt-sources-routine.json",
   "urls": [
-    "/explainers/first-poet-to-perform-at-super-bowl-la-times/",
-    "/explainers/jargon-in-video-game-chat-la-times/",
-    "/explainers/literary-figure-who-rings-a-bell-la-times/",
-    "/explainers/some-transformations-la-times/"
+    "/explainers/blank-dixon-line-nyt-mini/",
+    "/explainers/more-than-enough-nyt-mini/",
+    "/explainers/part-of-a-ping-pong-table-nyt-mini/",
+    "/explainers/awesome-quoted-nyt-daily/",
+    "/explainers/peace-symbol-nyt-daily/",
+    "/explainers/mini-gulp-nyt-daily/"
   ],
   "answerUrls": [],
   "clinicUrls": [
-    "/daily-clue-clinic/2026-08-22/"
+    "/daily-clue-clinic/2026-08-23/"
   ],
   "hubUrls": [
     "/",
@@ -17,7 +19,10 @@
     "/daily-clue-clinic/",
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
-    "/crossword-answers/6-letters/",
-    "/la-times-crossword-answers/"
+    "/crossword-answers/5-letters/",
+    "/crossword-answers/3-letters/",
+    "/crossword-answers/4-letters/",
+    "/nyt-mini-crossword-clues/",
+    "/nyt-crossword-clues/"
   ]
 }

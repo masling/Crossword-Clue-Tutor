@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-22T22:03:12+08:00",
+  "updatedAt": "2026-08-23T10:18:37+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -20,7 +20,7 @@
       "mode": "Basic consent mode",
       "regionSource": "Cloudflare request.cf.country",
       "consentRegions": "EEA, United Kingdom, and Switzerland",
-      "unknownRegionPolicy": "Ask before loading GA4",
+      "unknownRegionPolicy": "Load GA4 automatically when Cloudflare country metadata is unavailable",
       "choiceStorage": "Browser localStorage only",
       "pageviewPolicy": "Cookie-free Pageview remains enabled",
       "classroomPolicy": "Teacher guide, Classroom Solver, and worksheet omit GA4 entirely",
@@ -68,8 +68,8 @@
     }
   },
   "content": {
-    "indexablePages": 257,
-    "reviewedClues": 106,
+    "indexablePages": 264,
+    "reviewedClues": 112,
     "answerMeaningPages": 100,
     "dictionaryExpansion": {
       "profilesAdded": 64,
@@ -266,15 +266,15 @@
       "USA TODAY Crossword"
     ],
     "lastPublishedSourceDates": {
-      "NYT Mini": "2026-08-22",
-      "The New York Times Crossword": "2026-08-22",
+      "NYT Mini": "2026-08-23",
+      "The New York Times Crossword": "2026-08-23",
       "LA Times Crossword": "2026-08-22",
       "USA TODAY Crossword": "2026-08-21"
     },
     "latestFreshnessBatch": {
-      "publication": "LA Times Crossword",
-      "sourceDate": "2026-08-22",
-      "selectedClues": 4,
+      "publication": "NYT Mini and The New York Times Crossword",
+      "sourceDate": "2026-08-23",
+      "selectedClues": 6,
       "selectionReason": "Routine same-day coverage from a publicly verifiable current clue set",
       "rightsBoundary": "Selected clues only; no grid or complete answer list"
     }
