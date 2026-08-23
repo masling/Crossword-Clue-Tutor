@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T15:16:12+08:00",
+  "updatedAt": "2026-08-23T21:58:38+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -275,13 +275,15 @@
       "USA TODAY Crossword": {
         "adapter": "usatoday-official-candidates-v1",
         "command": "npm run source:usatoday -- --limit 6 --output .local/usatoday-latest.json",
-        "checkedAt": "2026-08-23T07:14:13.925Z",
+        "checkedAt": "2026-08-23T13:58:19.959Z",
         "latestOfficialDate": "2026-08-23",
         "latestTitle": "Down the Drain",
         "creator": "Zhouqin Burnikel",
         "editor": "Amanda Rafkin",
-        "accessMode": "Fresh browser context without login",
-        "contentBoundary": "Processes the public clue arrays transiently, stores only six selected candidates, and explicitly excludes the hidden solution field, login, and Reveal controls",
+        "accessMode": "Official public HTML and clue API without login",
+        "localDatabase": ".local/source-intelligence.sqlite",
+        "statsCommand": "npm run source:stats",
+        "contentBoundary": "Stores the complete official public clue list only in the Git-ignored local SQLite database for future analysis; model-facing JSON remains capped at six candidates, and the query explicitly excludes the hidden solution field, login, and Reveal controls",
         "selectedPairStatus": "Four independently verified selected pairs published: ADA, LORI, ADAM, and TET"
       }
     },

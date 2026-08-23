@@ -29,9 +29,16 @@ Never commit:
 - raw analytics event exports or IP-level logs;
 - SQLite databases, WAL/SHM files, dumps, or temporary migration copies;
 - unreviewed private research containing personal data.
+- complete publisher clue snapshots retained for local source-frequency and tool research.
 
 Place local copies under `.local/`, `private-data/`, `exports/`, `ops/private/`, or
 `ops/exports/`. These paths and common database file extensions are ignored by Git.
+
+The USA TODAY source adapter stores complete public clue text only in
+`.local/source-intelligence.sqlite`. This database is for private frequency, repetition,
+entity, and tool-design analysis. It is never read by the static build, committed,
+uploaded as a GitHub artifact, or exposed by the site. The adapter does not request or
+store the publisher's hidden `solution` field.
 
 ## Runtime boundary
 

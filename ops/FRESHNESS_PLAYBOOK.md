@@ -45,11 +45,13 @@ availability rather than from a hard-coded date assumption. Free play does not g
 republication rights: never mirror a full grid or answer list, and never bypass a
 publisher login or subscription boundary.
 
-The USA TODAY adapter processes the public clue arrays only in memory and never stores
-the complete list. Its GraphQL query explicitly excludes the hidden `solution` field,
-and output is capped at 10 selected candidates. Reveal Word requests an account, so
-never request the solution field, sign in, or automate Reveal Puzzle. Verify answers
-only for the small selected set before preparing an intake batch.
+The USA TODAY adapter writes the complete public clue list only to the ignored local
+SQLite database at `.local/source-intelligence.sqlite` for frequency and tool-design
+analysis. Its public JSON output remains capped at 10 selected candidates. The GraphQL
+query explicitly excludes the hidden `solution` field. Reveal Word requests an account,
+so never request that field, sign in, or automate Reveal Puzzle. Verify answers only for
+the small selected set before preparing an intake batch. Run `npm run source:stats` for
+an aggregate report without printing the stored raw clue rows.
 
 ## Daily coverage rule
 
