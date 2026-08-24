@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T13:01:26+08:00",
+  "updatedAt": "2026-08-24T13:06:36+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -132,13 +132,13 @@
         "migration": "0002_add_teacher_pilot_feedback.sql applied successfully to crossword-clue-tutor-feedback at 2026-08-24T12:44:00+08:00 with Cloudflare automatic backup",
         "evidenceFields": ["educator role", "grade band", "sessions completed", "skill pack", "reviewed-answer match rating", "classroom usefulness rating", "reuse intent", "comments", "optional follow-up email"],
         "privacyBoundary": "No student names or student work requested; no raw IP address or user agent stored; optional email is only for clarifying the submitted report",
-        "pilotProofBoundary": "Engineering hold-outs remain separate; full controlled-pilot proof still requires five educators to complete two sessions and submit structured feedback"
+        "pilotProofBoundary": "Engineering hold-outs remain separate; full controlled-pilot proof requires five distinct educators to complete two sessions and submit structured feedback. Only reports with a normalized optional email can count as distinct verified participants; anonymous reports remain qualitative evidence."
       },
       "teacherPilotKit": {
         "route": "/educators/crossword-vocabulary-pilot/",
         "sessions": 2,
         "minutesPerSession": 20,
-        "status": "Ready for production deployment",
+        "status": "Production verified; participant-verification copy update included in the pending commit",
         "coverage": "Goals, materials, preparation, timed procedure, assessment, differentiation, extension, observation prompts, privacy boundary, and structured feedback handoff",
         "externalUse": "Prepared as a complete original Grades 6-12 lesson plan for educator recruitment and editorial resource submission"
       },
