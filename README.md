@@ -2,7 +2,7 @@
 
 **A hint-first crossword solver, answer explainer, and reviewed clue dictionary.**
 
-[Use Crossword Clue Tutor](https://crosswordcluetutor.com) · [Editorial policy](https://crosswordcluetutor.com/editorial-policy/) · [Report an issue](https://crosswordcluetutor.com/feedback/)
+[Use Crossword Clue Tutor](https://crosswordcluetutor.com) · [Classroom corpus](https://crosswordcluetutor.com/research/classroom-crossword-vocabulary-corpus/) · [Editorial policy](https://crosswordcluetutor.com/editorial-policy/) · [Report an issue](https://crosswordcluetutor.com/feedback/)
 
 Crossword Clue Tutor helps solvers get unstuck without immediately giving away the
 fill. It combines crossing-pattern search, progressive hints, clear explanations, and
@@ -17,15 +17,16 @@ not reproduce complete commercial grids or full answer lists.
 - **Hints before spoilers** — reveal help progressively instead of jumping to the fill.
 - **Explain my answer** — understand the definition, grammar, abbreviation, fact, or
   wordplay that makes an answer fit.
-- **Crossword dictionary** — 100 reviewed meanings, pronunciations, and clue patterns
+- **Crossword dictionary** — 110 reviewed meanings, pronunciations, and clue patterns
   drawn from the same editorial source as the live explanations.
 - **Ambiguous clue guides** — compare possible answers by length and exact sense.
 - **Selected daily coverage** — current explanations for a small set of useful clues
   from monitored publications, never a mirrored puzzle.
 - **Return tools** — saved clues, a fresh-clue Atom feed, feedback, and a public contact
   route.
-- **Classroom resources** — a reduced-analytics solver, printable original worksheet,
-  and Grades 6–12 vocabulary routine with no student account.
+- **Classroom resources** — 500 original reviewed clues across 29 printable Grades
+  6–12 skill packs, a reduced-analytics solver, a two-session teacher pilot, and a
+  documented JSON/CSV corpus with no student account.
 
 ## Editorial model
 
@@ -76,6 +77,8 @@ Cloudflare deployment tooling is a development dependency.
 | `npm run validate` | Validate reviewed editorial data |
 | `npm run build` | Generate the complete static site in `dist/` |
 | `npm run check` | Check SEO, internal links, structured data, and build invariants |
+| `npm run classroom:report` | Report classroom corpus quality, metadata, retrieval evidence, and readiness gates |
+| `npm run classroom:publish -- <batch.json> --dry-run` | Preview a reviewed classroom batch without changing production data |
 | `npm run content:publish -- <intake.json> --dry-run` | Preview a reviewed clue batch |
 | `npm run content:publish -- <intake.json>` | Publish a reviewed clue batch locally |
 | `npm run seo:audit-production` | Audit every production Sitemap URL |
@@ -96,7 +99,9 @@ The public build inputs are editorial content, not live database exports:
 - `data/answers.json` — answer meanings and clue patterns;
 - `data/clue-hubs.json` — recurring clues with multiple possible answers;
 - `data/clue-types.json` — clue-reading guides;
-- `data/publications.json` — monitored publication configuration.
+- `data/publications.json` — monitored publication configuration;
+- `data/classroom-clues.json` — original reviewed Grades 6–12 classroom clues and
+  scalable concept metadata.
 
 Fresh content enters through one intake file per publication and date:
 
