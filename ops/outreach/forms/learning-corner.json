@@ -1,0 +1,19 @@
+{
+  "resourceName": "Crossword Clue Tutor",
+  "websiteUrl": "https://crosswordcluetutor.com/classroom-solver/",
+  "shortDescription": "Free hint-first crossword vocabulary solver and printable practice packs for Grades 6–12.",
+  "fullDescription": "Crossword Clue Tutor is a free, account-free classroom resource that helps students infer vocabulary from clue wording, answer length, grammar, and trusted crossing letters before revealing an answer. It includes a reduced-analytics classroom solver, 160 original reviewed clues across 12 skill areas, printable student sheets with teacher keys, and a 20-minute vocabulary-learning guide. Subjects include language arts, reading, writing, math, science, social studies, digital and media literacy, financial literacy, and environmental literacy. Full disclosure: I maintain the resource.",
+  "logoUrl": "https://crosswordcluetutor.com/assets/logo-512.png",
+  "category": "Apps & Software",
+  "educationalApproach": "Any / All Approaches",
+  "pricingModel": "Free",
+  "priceRange": "Free",
+  "gradeLevels": ["6", "7", "8", "9", "10", "11", "12"],
+  "subjects": ["Math", "Science", "Reading", "Writing", "Social Studies", "Language Arts", "Computer Science", "Life Skills"],
+  "statesServed": [],
+  "name": "Masling",
+  "email": "hello@crosswordcluetutor.com",
+  "publicContactEmail": "",
+  "publicContactPhone": "",
+  "discoverySource": "AI assistant (ChatGPT, Claude, etc.)"
+}

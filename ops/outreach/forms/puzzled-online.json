@@ -1,0 +1,11 @@
+{
+  "title": "Daily Clue Clinic",
+  "gameUrl": "https://crosswordcluetutor.com/daily-clue-clinic/",
+  "shortDescription": "Practice a fresh set of selected crossword clues with spoiler-light hints, answer-length patterns, and explanations of why each answer fits. Free on the web; no account required.",
+  "category": "Word",
+  "cost": "Free",
+  "difficulty": 3,
+  "platforms": ["Web"],
+  "email": "hello@crosswordcluetutor.com",
+  "optionalBadgeAccepted": false
+}

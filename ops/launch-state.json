@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T11:31:32+08:00",
+  "updatedAt": "2026-08-24T11:42:47+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -540,10 +540,10 @@
     "lastDeployStatus": "Success"
   },
   "outreach": {
-    "verifiedAt": "2026-08-24T09:24:46+08:00",
+    "verifiedAt": "2026-08-24T11:42:47+08:00",
     "readyForApproval": 0,
     "sent": 12,
-    "formsSubmitted": 4,
+    "formsSubmitted": 6,
     "formsBlocked": 1,
     "educationFormsBlocked": 1,
     "educationFormsSkipped": 1,
@@ -569,11 +569,11 @@
       "individualEmailDrafts": 12,
       "gmailDraftsReadyForReview": 0,
       "localEmailDraftsReadyForReview": 0,
-      "structuredFormPayloads": 6,
+      "structuredFormPayloads": 8,
       "validationCommand": "npm run outreach:check",
       "followUpReportCommand": "npm run outreach:followups",
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 110 meaning entries",
-      "transmissionStatus": "Twelve unique email targets were sent and four forms were submitted. TeachersFirst forwarded the resource to its review team for consideration; XWord Info declined and is marked do-not-contact. TeachThought and Cruciverb were sent with user confirmation on August 24. The FreeTech4Teachers legacy Weebly form was attempted but is not counted because its email field cleared and no receipt appeared. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
+      "transmissionStatus": "Twelve unique email targets were sent and six forms were submitted. On August 24, puzzled.online accepted Daily Clue Clinic for verification and Learning Corner accepted the classroom resource for directory review; neither submission required a phone number, public contact email, paid listing, or reciprocal badge. TeachersFirst forwarded the resource to its review team for consideration; XWord Info declined and is marked do-not-contact. TeachThought and Cruciverb were sent with user confirmation on August 24. The FreeTech4Teachers legacy Weebly form was attempted but is not counted because its email field cleared and no receipt appeared. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
     },
     "approvalNeeded": null,
     "senderSetup": {

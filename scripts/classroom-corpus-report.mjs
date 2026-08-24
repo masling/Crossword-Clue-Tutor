@@ -1,6 +1,6 @@
-import { readFile } from "node:fs/promises";
+import { readFile, readdir } from "node:fs/promises";
 import path from "node:path";
-import { pathToFileURL } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { normalizeClue, solveClues } from "../src/solver.mjs";
 
 const scalableMetadataFields = [
@@ -39,6 +39,19 @@ export function evaluateBlindBenchmark(records, benchmarkCases = []) {
     failures: results.filter((item) => item.rank === null || item.rank > 3),
     bySkill
   };
+}
+
+export async function loadBlindBenchmarkFixtures(directory = path.resolve("test/fixtures")) {
+  const fixtureDirectory = directory instanceof URL ? fileURLToPath(directory) : directory;
+  const filenames = (await readdir(fixtureDirectory))
+    .filter((filename) => /^classroom-blind-benchmark(?:-[^.]+)?\.json$/.test(filename))
+    .sort();
+  const shards = await Promise.all(filenames.map(async (filename) => {
+    const value = JSON.parse(await readFile(path.join(fixtureDirectory, filename), "utf8"));
+    if (!Array.isArray(value)) throw new Error(`${filename} must contain a JSON array.`);
+    return value;
+  }));
+  return shards.flat();
 }
 
 export function summarizeClassroomCorpus(records, { benchmarkCases = [] } = {}) {
@@ -131,9 +144,6 @@ export function summarizeClassroomCorpus(records, { benchmarkCases = [] } = {}) 
 const isDirectRun = process.argv[1] && pathToFileURL(path.resolve(process.argv[1])).href === import.meta.url;
 if (isDirectRun) {
   const records = JSON.parse(await readFile(path.resolve("data/classroom-clues.json"), "utf8"));
-  let benchmarkCases = [];
-  for (const filename of ["classroom-blind-benchmark.json", "classroom-blind-benchmark-digital-media.json", "classroom-blind-benchmark-finance-environment.json"]) {
-    try { benchmarkCases.push(...JSON.parse(await readFile(path.resolve("test/fixtures", filename), "utf8"))); } catch { /* unavailable benchmark shards are omitted */ }
-  }
+  const benchmarkCases = await loadBlindBenchmarkFixtures();
   console.log(JSON.stringify(summarizeClassroomCorpus(records, { benchmarkCases }), null, 2));
 }

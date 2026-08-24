@@ -270,6 +270,31 @@
       "sentAt": "2026-08-24T09:20:56+08:00",
       "messageId": "1a0315b393de0502",
       "sourcePage": "https://cruciverb.com/index.php?action=ezportal%3Bsa%3Dpage%3Bp%3D7"
+    },
+    {
+      "id": "puzzled-online-daily-clinic",
+      "target": "puzzled.online",
+      "channel": "form",
+      "formUrl": "https://puzzled.online/submit.html",
+      "payloadFile": "forms/puzzled-online.json",
+      "approvalRequired": true,
+      "submittedAt": "2026-08-24T11:42:47+08:00",
+      "submissionStatus": "submitted_user_confirmed",
+      "submissionEvidence": "The form displayed: Thanks! Your puzzle is submitted and awaiting verification. We'll review it soon.",
+      "optionalReciprocalBadgeAccepted": false
+    },
+    {
+      "id": "learning-corner-resource-directory",
+      "target": "Learning Corner Resources Directory",
+      "channel": "form",
+      "formUrl": "https://learningcorner.co/knowledge-base/directory/submit",
+      "payloadFile": "forms/learning-corner.json",
+      "approvalRequired": true,
+      "submittedAt": "2026-08-24T11:42:47+08:00",
+      "submissionStatus": "submitted_user_confirmed",
+      "submissionEvidence": "The form redirected to /knowledge-base/directory/submit-success and displayed Submission Received. The team will review the resource and notify the project when approved.",
+      "phoneOmitted": true,
+      "publicContactEmailOmitted": true
     }
   ]
 }
