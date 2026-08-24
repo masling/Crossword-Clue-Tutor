@@ -1,11 +1,11 @@
 {
-  "publishedAt": "2026-08-23T07:16:00.934Z",
-  "input": "ops/intake/2026-08-23-usa-today-official-selected.json",
+  "publishedAt": "2026-08-24T00:41:58.530Z",
+  "input": "ops/intake/2026-08-23-la-times-official-backfill.json",
   "urls": [
-    "/explainers/blank-wong-resident-evil-spy-usa-today/",
-    "/explainers/shark-tank-investor-greiner-usa-today/",
-    "/explainers/overcompensating-actor-dimarco-usa-today/",
-    "/explainers/vietnamese-for-festival-usa-today/"
+    "/explainers/one-piece-medium-la-times/",
+    "/explainers/k9-of-doctor-who-for-one-la-times/",
+    "/explainers/spanish-but-la-times/",
+    "/explainers/charon-question-mark-la-times/"
   ],
   "answerUrls": [],
   "clinicUrls": [
@@ -17,8 +17,8 @@
     "/daily-clue-clinic/",
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
-    "/crossword-answers/3-letters/",
+    "/crossword-answers/5-letters/",
     "/crossword-answers/4-letters/",
-    "/usa-today-crossword-answers/"
+    "/la-times-crossword-answers/"
   ]
 }

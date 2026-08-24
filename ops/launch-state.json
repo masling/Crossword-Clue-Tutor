@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T08:36:37+08:00",
+  "updatedAt": "2026-08-24T08:42:06+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -68,8 +68,8 @@
     }
   },
   "content": {
-    "indexablePages": 268,
-    "reviewedClues": 116,
+    "indexablePages": 272,
+    "reviewedClues": 120,
     "answerMeaningPages": 100,
     "dictionaryExpansion": {
       "profilesAdded": 64,
@@ -268,7 +268,7 @@
     "lastPublishedSourceDates": {
       "NYT Mini": "2026-08-23",
       "The New York Times Crossword": "2026-08-23",
-      "LA Times Crossword": "2026-08-22",
+      "LA Times Crossword": "2026-08-23",
       "USA TODAY Crossword": "2026-08-23"
     },
     "officialSourceDiscovery": {
@@ -285,7 +285,7 @@
         "officialClueCount": 144,
         "accessMode": "Official AmuseLabs picker metadata without login",
         "contentBoundary": "Reads only official picker metadata; puzzle payload, solution, Reveal controls, and logged-in archive are excluded",
-        "selectedPairStatus": "Official August 23 date verified; selected exact clue-answer pairs remain pending separate verification"
+        "selectedPairStatus": "Four selected August 23 pairs published: ANIME, ROBOT, PERO, and STYXFIGURE"
       },
       "USA TODAY Crossword": {
         "adapter": "usatoday-official-candidates-v1",
@@ -303,10 +303,10 @@
       }
     },
     "latestFreshnessBatch": {
-      "publication": "USA TODAY Crossword",
+      "publication": "LA Times Crossword",
       "sourceDate": "2026-08-23",
       "selectedClues": 4,
-      "selectionReason": "Official current clue candidates ranked by the deterministic adapter and independently verified against authoritative entity and language sources",
+      "selectionReason": "Official picker date verified first; selected exact pairs independently checked for entity, language, and wordplay accuracy",
       "rightsBoundary": "Selected clues only; no grid or complete answer list"
     }
   },
@@ -511,6 +511,6 @@
   },
   "nextAction": {
     "notBefore": "2026-08-24T10:15:00+08:00",
-    "action": "Run the next source-timed cycle. NYT Mini, full NYT, and USA TODAY are complete through August 23; LA Times is complete through August 22. Use the official USA TODAY candidate adapter before web research."
+    "action": "Run the next source-timed cycle. All four monitored sources are complete through August 23. Use the official USA TODAY candidate adapter and LA Times metadata adapter before any fallback web research."
   }
 }

@@ -2531,5 +2531,98 @@
     "publication": "USA TODAY Crossword",
     "sourceDate": "2026-08-23",
     "clueNumber": "58-Across"
+  },
+  {
+    "slug": "one-piece-medium-la-times",
+    "clue": "\"One Piece\" medium",
+    "answer": "ANIME",
+    "date": "2026-08-23",
+    "popularity": 100,
+    "definition": "Anime is Japanese animation produced for television, film, streaming, or other visual media.",
+    "explanation": "One Piece exists as a long-running Japanese animated television series, so its five-letter medium is ANIME.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "anime",
+      "one-piece",
+      "animation",
+      "television"
+    ],
+    "clueType": "factoid",
+    "signal": "The quoted title identifies a work, and “medium” asks for the form in which that version is presented.",
+    "hint": "Name the five-letter Japanese animation medium used for the televised adventures of Luffy and his crew.",
+    "reviewedAt": "2026-08-24",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-23",
+    "clueNumber": "44-Down"
+  },
+  {
+    "slug": "k9-of-doctor-who-for-one-la-times",
+    "clue": "K9 of \"Doctor Who,\" for one",
+    "answer": "ROBOT",
+    "date": "2026-08-23",
+    "popularity": 99,
+    "definition": "K9 is a robotic dog and companion character in the Doctor Who universe.",
+    "explanation": "The clue asks what kind of being Doctor Who's K9 is. Despite his canine shape and name, K9 is a five-letter ROBOT.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "k9",
+      "doctor-who",
+      "robot",
+      "robotic-dog"
+    ],
+    "clueType": "factoid",
+    "signal": "“For one” asks for the broader category represented by the named fictional character.",
+    "hint": "Classify the five-letter mechanical companion rather than treating K9 as an ordinary dog.",
+    "reviewedAt": "2026-08-24",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-23",
+    "clueNumber": "71-Down"
+  },
+  {
+    "slug": "spanish-but-la-times",
+    "clue": "Spanish \"but\"",
+    "answer": "PERO",
+    "date": "2026-08-23",
+    "popularity": 98,
+    "definition": "Pero is the common Spanish conjunction meaning but or however.",
+    "explanation": "The language label asks for a direct Spanish translation of “but.” The four-letter conjunction is PERO.",
+    "partOfSpeech": "conjunction",
+    "tags": [
+      "pero",
+      "spanish",
+      "but",
+      "translation"
+    ],
+    "clueType": "straight-definition",
+    "signal": "A language name followed by a quoted English word signals a direct translation clue.",
+    "hint": "Use the common four-letter Spanish conjunction that introduces a contrast.",
+    "reviewedAt": "2026-08-24",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-23",
+    "clueNumber": "98-Down"
+  },
+  {
+    "slug": "charon-question-mark-la-times",
+    "clue": "Charon?",
+    "answer": "STYXFIGURE",
+    "date": "2026-08-23",
+    "popularity": 97,
+    "definition": "Charon is the mythological ferryman associated with the river Styx in the Greek underworld.",
+    "explanation": "Charon is literally a figure connected with the Styx, giving STYX FIGURE. Spoken aloud, it also puns on “stick figure,” which explains the question mark and the theme-style spelling.",
+    "partOfSpeech": "noun phrase",
+    "tags": [
+      "charon",
+      "styx",
+      "stick-figure",
+      "mythology",
+      "pun"
+    ],
+    "clueType": "wordplay",
+    "signal": "The question mark flags a pun: the river name Styx sounds like “sticks” in the familiar phrase “stick figure.”",
+    "hint": "Describe the ferryman as a ten-letter figure of a famous underworld river, then listen for the familiar phrase it resembles.",
+    "reviewedAt": "2026-08-24",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-23",
+    "clueNumber": "114-Across"
   }
 ]

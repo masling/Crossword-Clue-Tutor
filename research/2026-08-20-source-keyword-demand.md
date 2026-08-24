@@ -290,3 +290,23 @@ Evidence:
 - https://abc.com/cast/6ce5e926-fe88-467a-a276-bd10cfdd3544
 - https://www.primevideo.com/-/fil/detail/0GZX4440MSC23NHW3P0BSQB1TE
 - https://vietnamtourism.gov.vn/en/post/13636
+
+## 2026-08-24 LA Times official-metadata backfill
+
+The official LA Times AmuseLabs picker confirmed the latest available puzzle as the
+August 23 Sunday crossword, “GENERATION X,” by Yijing Chen and edited by Patti Varol
+(source ID `tca260823`, 144 clues). A local metadata adapter now checks this official
+picker before any clue research, preventing the prior one-day date lag.
+
+Four selected relationships were backfilled after public exact-pair and independent
+fact checks: One Piece's medium (`ANIME`), Doctor Who companion K9's category (`ROBOT`),
+Spanish “but” (`PERO`), and the question-marked Charon pun (`STYXFIGURE`). No complete
+Sunday clue list, grid, or solution was stored or published.
+
+Evidence:
+
+- https://www.latimes.com/games/daily-crossword
+- https://lat.amuselabs.com/lat/date-picker?style=1&embed=1&set=latimes
+- https://one-piece.com/
+- https://www.fundeu.es/consulta/pero-1689/
+- https://www.britannica.com/topic/Charon-Greek-mythology
