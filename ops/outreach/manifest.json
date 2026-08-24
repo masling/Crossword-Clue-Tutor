@@ -294,7 +294,18 @@
       "submissionStatus": "submitted_user_confirmed",
       "submissionEvidence": "The form redirected to /knowledge-base/directory/submit-success and displayed Submission Received. The team will review the resource and notify the project when approved.",
       "phoneOmitted": true,
-      "publicContactEmailOmitted": true
+      "publicContactEmailOmitted": true,
+      "responseReceivedAt": "2026-08-24T17:25:14+08:00",
+      "responseMessageId": "1a03316aae797f51",
+      "replyStatus": "approved_listing_live",
+      "listingStatus": "live",
+      "liveUrl": "https://learningcorner.co/knowledge-base/directory/crossword-clue-tutor",
+      "liveVerifiedAt": "2026-08-24T19:32:42+08:00",
+      "httpStatus": 200,
+      "linkTarget": "https://crosswordcluetutor.com/classroom-solver/",
+      "linkAttributes": ["nofollow", "noopener", "noreferrer"],
+      "listingContentStatus": "Live listing still says 160 original reviewed clues across 12 skill areas; current production evidence is 500 clues across 29 skill areas.",
+      "updateRequestStatus": "prepared_pending_user_approval"
     },
     {
       "id": "clerna-teacher-pilot",

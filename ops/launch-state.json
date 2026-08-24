@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T13:18:21+08:00",
+  "updatedAt": "2026-08-24T19:32:42+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -593,11 +593,23 @@
     "educationFormsBlocked": 1,
     "educationFormsSkipped": 1,
     "educationFormsPendingManual": 0,
-    "responses": 3,
+    "responses": 4,
     "listingCommitments": 1,
     "directoryReviewsUnderConsideration": 1,
     "declinedTargets": 1,
-    "liveExternalListings": 0,
+    "liveExternalListings": 1,
+    "liveListings": [
+      {
+        "target": "Learning Corner Resources Directory",
+        "url": "https://learningcorner.co/knowledge-base/directory/crossword-clue-tutor",
+        "verifiedAt": "2026-08-24T19:32:42+08:00",
+        "httpStatus": 200,
+        "linkTarget": "https://crosswordcluetutor.com/classroom-solver/",
+        "linkAttributes": ["nofollow", "noopener", "noreferrer"],
+        "audience": "Homeschool families and Grades 6-12 educators",
+        "contentUpdate": "Current listing is live but still states 160 clues across 12 skills; request to update to 500/29 awaits user approval"
+      }
+    ],
     "outreachRepliesSent": 1,
     "nextListingCheckNotBefore": "2026-08-25T13:24:04+08:00",
     "followUpPolicy": {
@@ -618,9 +630,9 @@
       "validationCommand": "npm run outreach:check",
       "followUpReportCommand": "npm run outreach:followups",
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 110 meaning entries",
-      "transmissionStatus": "Thirteen unique email targets were sent and six forms were submitted. On August 24, Clerna received the complete two-session teacher pilot as an original Grades 6-12 lesson plan through the Gmail connector, without payment, attachment, reciprocal link, or sponsored-placement request. Puzzled.online accepted Daily Clue Clinic for verification and Learning Corner accepted the classroom resource for directory review. TeachersFirst forwarded the resource to its review team for consideration; XWord Info declined and is marked do-not-contact. The FreeTech4Teachers legacy Weebly form was attempted but is not counted because its email field cleared and no receipt appeared. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
+      "transmissionStatus": "Thirteen unique email targets were sent and six forms were submitted. Learning Corner approved and published the first verified live external listing; it links to the Classroom Solver with nofollow, noopener, and noreferrer. A factual count update from 160/12 to 500/29 is prepared but not sent. Clerna received the complete two-session teacher pilot as an original Grades 6-12 lesson plan through the Gmail connector, without payment, attachment, reciprocal link, or sponsored-placement request. Puzzled.online is awaiting verification; TeachersFirst forwarded the resource to its review team; XWord Info declined and is marked do-not-contact. The FreeTech4Teachers legacy form was not counted after no receipt; Teach Arcade remains skipped."
     },
-    "approvalNeeded": null,
+    "approvalNeeded": "Approve or reject a brief reply to Learning Corner thanking Kevin and requesting the factual listing count update from 160 clues/12 skills to 500 clues/29 skills",
     "senderSetup": {
       "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
       "inboundDestination": "masling@gmail.com",
