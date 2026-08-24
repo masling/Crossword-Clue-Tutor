@@ -196,6 +196,8 @@ for (const answer of ["mia", "una", "goya"]) {
 }
 if (!sitemap.includes("/explainers/contractors-detail-for-short/")) errors.push("sitemap is missing the reviewed SPEC explainer");
 if (!sitemap.includes("<lastmod>")) errors.push("sitemap is missing lastmod metadata for fresh content");
+const establishedExplainerEntry = sitemap.match(/<url><loc>https:\/\/crosswordcluetutor\.com\/explainers\/contractors-detail-for-short\/<\/loc><lastmod>([^<]+)<\/lastmod><\/url>/);
+if (establishedExplainerEntry?.[1] !== "2026-08-24") errors.push("established explainers must use the reviewed template date instead of inheriting every future global content date");
 if (!sitemap.includes("/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/")) errors.push("sitemap is missing the current NYT Mini batch");
 if (!sitemap.includes("/explainers/forfends-nyt-daily/")) errors.push("sitemap is missing the selected current NYT Daily batch");
 if (!sitemap.includes("/explainers/private-sleeping-accommodations-nyt-daily/")) errors.push("sitemap is missing the latest NYT Daily batch");
@@ -397,6 +399,8 @@ if (!cluePage.includes("data-answer-reveal") || !cluePage.includes("data-nosnipp
 if (!cluePage.includes('data-tool-context="explainer"') || !cluePage.includes("Solve the next clue here")) errors.push("reviewed clue pages are missing the next-clue solver continuation");
 if (!cluePage.includes("data-recent-clues") || !cluePage.includes("data-return-link")) errors.push("reviewed clue pages are missing local return paths");
 if (cluePage.includes("The answer is LAB")) errors.push("reviewed clue metadata must not reveal the answer in search snippets");
+const establishedExplainerPage = await readFile(path.join(dist, "explainers/contractors-detail-for-short/index.html"), "utf8");
+if (!establishedExplainerPage.includes('"datePublished":"2026-08-18"') || !establishedExplainerPage.includes('"dateModified":"2026-08-24"')) errors.push("established explainer Article dates do not preserve publication and template modification history");
 const samePuzzleClusterPage = await readFile(path.join(dist, "explainers/japanese-for-folding-paper-nyt-mini/index.html"), "utf8");
 if (!samePuzzleClusterPage.includes("data-same-puzzle-clues") || !samePuzzleClusterPage.includes("More selected clues from NYT Mini") || !samePuzzleClusterPage.includes("/explainers/paper-and-pencil-game-missing-ps-nyt-mini/") || !samePuzzleClusterPage.includes("/explainers/sunny-part-of-breakfast-order-nyt-mini/") || !samePuzzleClusterPage.includes('"isPartOf":{"@type":"CollectionPage"')) errors.push("published clue pages are missing same-puzzle selected links or CollectionPage relationship");
 for (const eventName of ["answer_reveal", "solver_submit", "save_clue", "clue_revisit", "return_path_click", "daily_clinic_complete", "same_puzzle_clue_click"]) {

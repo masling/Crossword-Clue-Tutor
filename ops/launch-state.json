@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T09:34:03+08:00",
+  "updatedAt": "2026-08-24T09:44:44+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -98,6 +98,13 @@
       "rightsBoundary": "Selected reviewed pages only; no complete puzzle or answer list",
       "structuredRelationship": "Each published Article identifies its publication hub with Schema.org isPartOf",
       "measurementEvent": "same_puzzle_clue_click"
+    },
+    "explainerFreshnessPolicy": {
+      "enabledAt": "2026-08-24T09:44:44+08:00",
+      "templateUpdatedAt": "2026-08-24",
+      "datePublishedSource": "Individual clue reviewedAt",
+      "dateModifiedSource": "Later of individual reviewedAt and the explicitly maintained explainer template date",
+      "sitemapEffect": "Old explainers no longer inherit every future global contentUpdatedAt change; lastmod advances only for a real clue review or an intentional explainer-template update"
     },
     "evergreenClueHubs": 15,
     "evergreenClueHubCandidates": 328,
