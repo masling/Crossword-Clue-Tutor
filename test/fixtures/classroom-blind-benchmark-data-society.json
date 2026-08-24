@@ -1,0 +1,702 @@
+[
+  {
+    "id": "classroom-blind-data-001",
+    "clue": "Table-ready collection of observations for a math investigation",
+    "expectedAnswer": "DATASET",
+    "length": 7,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-002",
+    "clue": "Selected subset used when measuring every person is impractical",
+    "expectedAnswer": "SAMPLE",
+    "length": 6,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-003",
+    "clue": "Full population survey instead of a selected subset",
+    "expectedAnswer": "CENSUS",
+    "length": 6,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-004",
+    "clue": "Questionnaire process for gathering people's responses",
+    "expectedAnswer": "SURVEY",
+    "length": 6,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-005",
+    "clue": "Single unusual data point far from a cluster",
+    "expectedAnswer": "OUTLIER",
+    "length": 7,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-006",
+    "clue": "Spread measure computed as maximum minus minimum",
+    "expectedAnswer": "RANGE",
+    "length": 5,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-007",
+    "clue": "How often a response appears in a tally table",
+    "expectedAnswer": "FREQUENCY",
+    "length": 9,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-008",
+    "clue": "Interval bar display for counts of numerical values",
+    "expectedAnswer": "HISTOGRAM",
+    "length": 9,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-009",
+    "clue": "Coordinate dot display for paired measurements",
+    "expectedAnswer": "SCATTERPLOT",
+    "length": 11,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-010",
+    "clue": "Association measure showing whether paired variables move together",
+    "expectedAnswer": "CORRELATION",
+    "length": 11,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-011",
+    "clue": "When one factor actually makes another variable change",
+    "expectedAnswer": "CAUSATION",
+    "length": 9,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-012",
+    "clue": "Overall upward, downward, or steady direction in graphed values",
+    "expectedAnswer": "TREND",
+    "length": 5,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-013",
+    "clue": "Complete pattern showing center, spread, gaps, and clusters",
+    "expectedAnswer": "DISTRIBUTION",
+    "length": 12,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-014",
+    "clue": "Spread statistic based on squared deviations from the mean",
+    "expectedAnswer": "VARIANCE",
+    "length": 8,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-015",
+    "clue": "Ordered-data divider used for four roughly equal groups",
+    "expectedAnswer": "QUARTILE",
+    "length": 8,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-016",
+    "clue": "Rank saying what percent of scores are at or below yours",
+    "expectedAnswer": "PERCENTILE",
+    "length": 10,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-017",
+    "clue": "Bounded span of numbers used as a graph bin",
+    "expectedAnswer": "INTERVAL",
+    "length": 8,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-018",
+    "clue": "Chance-driven variation that makes the next result uncertain",
+    "expectedAnswer": "RANDOMNESS",
+    "length": 10,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-019",
+    "clue": "Approximate value chosen from data and reasonable judgment",
+    "expectedAnswer": "ESTIMATE",
+    "length": 8,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-020",
+    "clue": "Numerical measure describing the entire group being studied",
+    "expectedAnswer": "PARAMETER",
+    "length": 9,
+    "skill": "statistics-and-data"
+  },
+  {
+    "id": "classroom-blind-data-021",
+    "clue": "Motion rate that includes both speed and compass heading",
+    "expectedAnswer": "VELOCITY",
+    "length": 8,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-022",
+    "clue": "Change in velocity over time, including slowing or turning",
+    "expectedAnswer": "ACCELERATION",
+    "length": 12,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-023",
+    "clue": "Newton-measured push or pull on an object",
+    "expectedAnswer": "FORCE",
+    "length": 5,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-024",
+    "clue": "Kilogram measure of how much matter an object contains",
+    "expectedAnswer": "MASS",
+    "length": 4,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-025",
+    "clue": "Property that makes an object resist starting, stopping, or turning",
+    "expectedAnswer": "INERTIA",
+    "length": 7,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-026",
+    "clue": "Quantity of motion found by multiplying mass by velocity",
+    "expectedAnswer": "MOMENTUM",
+    "length": 8,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-027",
+    "clue": "Surface contact effect that resists rubbing or sliding",
+    "expectedAnswer": "FRICTION",
+    "length": 8,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-028",
+    "clue": "Quantity transferred or transformed when work can be done",
+    "expectedAnswer": "ENERGY",
+    "length": 6,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-029",
+    "clue": "Physics quantity transferred when a force causes displacement",
+    "expectedAnswer": "WORK",
+    "length": 4,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-030",
+    "clue": "How fast work is performed or energy is delivered",
+    "expectedAnswer": "POWER",
+    "length": 5,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-031",
+    "clue": "Disturbance such as sound or light that transfers energy",
+    "expectedAnswer": "WAVE",
+    "length": 4,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-032",
+    "clue": "Largest distance a wave moves away from its rest line",
+    "expectedAnswer": "AMPLITUDE",
+    "length": 9,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-033",
+    "clue": "Crest-to-crest distance in a repeating wave pattern",
+    "expectedAnswer": "WAVELENGTH",
+    "length": 10,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-034",
+    "clue": "Wave bending when speed changes in a new material",
+    "expectedAnswer": "REFRACTION",
+    "length": 10,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-035",
+    "clue": "Wave spreading after passing an edge or narrow opening",
+    "expectedAnswer": "DIFFRACTION",
+    "length": 11,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-036",
+    "clue": "Amount of electric charge flowing each second",
+    "expectedAnswer": "CURRENT",
+    "length": 7,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-037",
+    "clue": "Battery potential difference that pushes charge through a circuit",
+    "expectedAnswer": "VOLTAGE",
+    "length": 7,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-038",
+    "clue": "Circuit property measured in ohms that limits charge flow",
+    "expectedAnswer": "RESISTANCE",
+    "length": 10,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-039",
+    "clue": "Closed path of connected parts where electric charge can travel",
+    "expectedAnswer": "CIRCUIT",
+    "length": 7,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-040",
+    "clue": "Field-and-pole interaction that can turn a compass needle",
+    "expectedAnswer": "MAGNETISM",
+    "length": 9,
+    "skill": "physics-vocabulary"
+  },
+  {
+    "id": "classroom-blind-data-041",
+    "clue": "Degree measure telling how far north or south a place is",
+    "expectedAnswer": "LATITUDE",
+    "length": 8,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-042",
+    "clue": "Degree measure telling how far east or west a place is",
+    "expectedAnswer": "LONGITUDE",
+    "length": 9,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-043",
+    "clue": "Zero-degree line dividing the globe into north and south halves",
+    "expectedAnswer": "EQUATOR",
+    "length": 7,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-044",
+    "clue": "Pole-to-pole map line used for east-west position",
+    "expectedAnswer": "MERIDIAN",
+    "length": 8,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-045",
+    "clue": "One half of the planet, such as northern or western",
+    "expectedAnswer": "HEMISPHERE",
+    "length": 10,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-046",
+    "clue": "Land surface pattern shown with contour lines",
+    "expectedAnswer": "TOPOGRAPHY",
+    "length": 10,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-047",
+    "clue": "Sea-level height measurement for mountains and towns",
+    "expectedAnswer": "ELEVATION",
+    "length": 9,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-048",
+    "clue": "Raised flat landform sometimes called a tableland",
+    "expectedAnswer": "PLATEAU",
+    "length": 7,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-049",
+    "clue": "Narrow land bridge with water on two sides",
+    "expectedAnswer": "ISTHMUS",
+    "length": 7,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-050",
+    "clue": "Attached land area jutting out with water around most sides",
+    "expectedAnswer": "PENINSULA",
+    "length": 9,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-051",
+    "clue": "Cluster of islands considered as one geographic unit",
+    "expectedAnswer": "ARCHIPELAGO",
+    "length": 11,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-052",
+    "clue": "Sediment-built land near the mouth of a river",
+    "expectedAnswer": "DELTA",
+    "length": 5,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-053",
+    "clue": "Feeder stream that joins a larger river channel",
+    "expectedAnswer": "TRIBUTARY",
+    "length": 9,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-054",
+    "clue": "River drainage area linked by connected streams",
+    "expectedAnswer": "BASIN",
+    "length": 5,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-055",
+    "clue": "Field for designing and making maps with projections and symbols",
+    "expectedAnswer": "CARTOGRAPHY",
+    "length": 11,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-056",
+    "clue": "Map distance relationship, such as one inch for ten miles",
+    "expectedAnswer": "SCALE",
+    "length": 5,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-057",
+    "clue": "Area grouped by common climate, economy, language, or landform",
+    "expectedAnswer": "REGION",
+    "length": 6,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-058",
+    "clue": "Number of residents living within a defined place",
+    "expectedAnswer": "POPULATION",
+    "length": 10,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-059",
+    "clue": "Community location where people build homes and services",
+    "expectedAnswer": "SETTLEMENT",
+    "length": 10,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-060",
+    "clue": "City-growth process that shifts people toward urban areas",
+    "expectedAnswer": "URBANIZATION",
+    "length": 12,
+    "skill": "geography-language"
+  },
+  {
+    "id": "classroom-blind-data-061",
+    "clue": "Voting form that records a citizen's choices",
+    "expectedAnswer": "BALLOT",
+    "length": 6,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-062",
+    "clue": "Formal voting event for leaders or public questions",
+    "expectedAnswer": "ELECTION",
+    "length": 8,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-063",
+    "clue": "Elected official who acts for constituents",
+    "expectedAnswer": "REPRESENTATIVE",
+    "length": 14,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-064",
+    "clue": "Congressional chamber where every state has two members",
+    "expectedAnswer": "SENATE",
+    "length": 6,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-065",
+    "clue": "Federal lawmaking body made of the House and upper chamber",
+    "expectedAnswer": "CONGRESS",
+    "length": 8,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-066",
+    "clue": "Executive department heads who advise a president or governor",
+    "expectedAnswer": "CABINET",
+    "length": 7,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-067",
+    "clue": "President's rejection power over a proposed bill",
+    "expectedAnswer": "VETO",
+    "length": 4,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-068",
+    "clue": "Assembly with authority to pass, amend, or repeal laws",
+    "expectedAnswer": "LEGISLATURE",
+    "length": 11,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-069",
+    "clue": "Court's authority over a case, issue, or territory",
+    "expectedAnswer": "JURISDICTION",
+    "length": 12,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-070",
+    "clue": "Independent governing authority held by a state or people",
+    "expectedAnswer": "SOVEREIGNTY",
+    "length": 11,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-071",
+    "clue": "Constitutional safeguard requiring fair legal procedure",
+    "expectedAnswer": "DUEPROCESS",
+    "length": 10,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-072",
+    "clue": "Request that a reviewing court examine a lower court ruling",
+    "expectedAnswer": "APPEAL",
+    "length": 6,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-073",
+    "clue": "Past ruling that guides judges in similar later cases",
+    "expectedAnswer": "PRECEDENT",
+    "length": 9,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-074",
+    "clue": "Signed request asking officials to take action",
+    "expectedAnswer": "PETITION",
+    "length": 8,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-075",
+    "clue": "Municipal rule such as a zoning or noise law",
+    "expectedAnswer": "ORDINANCE",
+    "length": 9,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-076",
+    "clue": "City or town government unit that provides local services",
+    "expectedAnswer": "MUNICIPALITY",
+    "length": 12,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-077",
+    "clue": "Citizen vote directly approving or rejecting a policy proposal",
+    "expectedAnswer": "REFERENDUM",
+    "length": 10,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-078",
+    "clue": "Political voting right expanded by many reform movements",
+    "expectedAnswer": "SUFFRAGE",
+    "length": 8,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-079",
+    "clue": "Advocacy aimed at persuading officials about public policy",
+    "expectedAnswer": "LOBBYING",
+    "length": 8,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-080",
+    "clue": "Officeholder already serving when an election challenge begins",
+    "expectedAnswer": "INCUMBENT",
+    "length": 9,
+    "skill": "civics-and-government"
+  },
+  {
+    "id": "classroom-blind-data-081",
+    "clue": "Repeated image, object, or idea that supports a larger theme",
+    "expectedAnswer": "MOTIF",
+    "length": 5,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-082",
+    "clue": "Literary use of a concrete detail to stand for a broader idea",
+    "expectedAnswer": "SYMBOLISM",
+    "length": 9,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-083",
+    "clue": "Sensory description that helps readers picture a scene",
+    "expectedAnswer": "IMAGERY",
+    "length": 7,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-084",
+    "clue": "Early hints that prepare readers for later plot events",
+    "expectedAnswer": "FORESHADOWING",
+    "length": 13,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-085",
+    "clue": "Narrative shift that shows something from an earlier time",
+    "expectedAnswer": "FLASHBACK",
+    "length": 9,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-086",
+    "clue": "Narrative perspective, such as first person or third person",
+    "expectedAnswer": "POINTOFVIEW",
+    "length": 11,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-087",
+    "clue": "Writer's word choice and style of expression",
+    "expectedAnswer": "DICTION",
+    "length": 7,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-088",
+    "clue": "Arrangement of sections, scenes, or ideas within a text",
+    "expectedAnswer": "STRUCTURE",
+    "length": 9,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-089",
+    "clue": "Opposing forces or problem that drives the story",
+    "expectedAnswer": "CONFLICT",
+    "length": 8,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-090",
+    "clue": "How an author reveals traits through speech, actions, and thoughts",
+    "expectedAnswer": "CHARACTERIZATION",
+    "length": 16,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-091",
+    "clue": "Organized chain of happenings that moves a narrative forward",
+    "expectedAnswer": "PLOT",
+    "length": 4,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-092",
+    "clue": "Background information that introduces a story's starting situation",
+    "expectedAnswer": "EXPOSITION",
+    "length": 10,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-093",
+    "clue": "Plot moment of greatest tension or decisive turning",
+    "expectedAnswer": "CLIMAX",
+    "length": 6,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-094",
+    "clue": "Closing plot part where outcomes and problems become settled",
+    "expectedAnswer": "RESOLUTION",
+    "length": 10,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-095",
+    "clue": "Same meaning restated accurately in different wording",
+    "expectedAnswer": "PARAPHRASE",
+    "length": 10,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-096",
+    "clue": "Margin note or mark that records close-reading thinking",
+    "expectedAnswer": "ANNOTATION",
+    "length": 10,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-097",
+    "clue": "Text category defined by conventions, such as myth or biography",
+    "expectedAnswer": "GENRE",
+    "length": 5,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-098",
+    "clue": "Poetry unit made from a separated group of lines",
+    "expectedAnswer": "STANZA",
+    "length": 6,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-099",
+    "clue": "Scripted literature meant for actors to perform",
+    "expectedAnswer": "DRAMA",
+    "length": 5,
+    "skill": "reading-analysis"
+  },
+  {
+    "id": "classroom-blind-data-100",
+    "clue": "Emotional atmosphere a passage creates for its audience",
+    "expectedAnswer": "MOOD",
+    "length": 4,
+    "skill": "reading-analysis"
+  }
+]

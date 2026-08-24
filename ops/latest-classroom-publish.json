@@ -1,11 +1,11 @@
 {
-  "batchId": "2026-08-24-stem-language-100",
-  "publishedAt": "2026-08-24T03:58:57.491Z",
-  "input": "ops/classroom-intake/2026-08-24-stem-language-100.json",
+  "batchId": "2026-08-24-data-society-100",
+  "publishedAt": "2026-08-24T04:23:11.370Z",
+  "input": "ops/classroom-intake/2026-08-24-data-society-100.json",
   "addedRecords": 100,
-  "totalRecords": 260,
-  "uniqueConcepts": 260,
-  "metadataCompleteRecords": 260,
+  "totalRecords": 360,
+  "uniqueConcepts": 360,
+  "metadataCompleteRecords": 360,
   "quality": {
     "duplicatePairs": [],
     "hintLeaks": [],
