@@ -1,11 +1,11 @@
 {
-  "batchId": "2026-08-24-digital-media-020",
-  "publishedAt": "2026-08-24T02:55:21.387Z",
-  "input": "ops/classroom-intake/2026-08-24-digital-media-020.json",
-  "addedRecords": 20,
-  "totalRecords": 120,
-  "uniqueConcepts": 120,
-  "metadataCompleteRecords": 120,
+  "batchId": "2026-08-24-finance-environment-040",
+  "publishedAt": "2026-08-24T03:09:34.863Z",
+  "input": "ops/classroom-intake/2026-08-24-finance-environment-040.json",
+  "addedRecords": 40,
+  "totalRecords": 160,
+  "uniqueConcepts": 160,
+  "metadataCompleteRecords": 160,
   "quality": {
     "duplicatePairs": [],
     "hintLeaks": [],

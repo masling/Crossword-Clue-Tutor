@@ -132,7 +132,7 @@ const isDirectRun = process.argv[1] && pathToFileURL(path.resolve(process.argv[1
 if (isDirectRun) {
   const records = JSON.parse(await readFile(path.resolve("data/classroom-clues.json"), "utf8"));
   let benchmarkCases = [];
-  for (const filename of ["classroom-blind-benchmark.json", "classroom-blind-benchmark-digital-media.json"]) {
+  for (const filename of ["classroom-blind-benchmark.json", "classroom-blind-benchmark-digital-media.json", "classroom-blind-benchmark-finance-environment.json"]) {
     try { benchmarkCases.push(...JSON.parse(await readFile(path.resolve("test/fixtures", filename), "utf8"))); } catch { /* unavailable benchmark shards are omitted */ }
   }
   console.log(JSON.stringify(summarizeClassroomCorpus(records, { benchmarkCases }), null, 2));

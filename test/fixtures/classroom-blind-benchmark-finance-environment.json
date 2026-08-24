@@ -1,0 +1,44 @@
+[
+  {
+    "id": "finance-environment-01",
+    "clue": "A student plans how to divide a limited allowance among needs, savings, and optional treats. What plan are they making?",
+    "expectedAnswer": "BUDGET",
+    "length": 6,
+    "skill": "financial-literacy"
+  },
+  {
+    "id": "finance-environment-02",
+    "clue": "A bank adds a small amount to money kept in a savings account over time. What is that added amount called?",
+    "expectedAnswer": "INTEREST",
+    "length": 8,
+    "skill": "financial-literacy"
+  },
+  {
+    "id": "finance-environment-03",
+    "clue": "In a balance sheet, what term describes a debt or other obligation a person or organization must pay?",
+    "expectedAnswer": "LIABILITY",
+    "length": 9,
+    "skill": "financial-literacy"
+  },
+  {
+    "id": "finance-environment-04",
+    "clue": "The long-term pattern of temperature, rainfall, and other weather conditions in a region is its what?",
+    "expectedAnswer": "CLIMATE",
+    "length": 7,
+    "skill": "environmental-literacy"
+  },
+  {
+    "id": "finance-environment-05",
+    "clue": "Rain falling on a set of hills drains through streams and rivers toward one shared outlet. What geographic area is this?",
+    "expectedAnswer": "WATERSHED",
+    "length": 9,
+    "skill": "environmental-literacy"
+  },
+  {
+    "id": "finance-environment-06",
+    "clue": "Using resources in ways that meet present needs while leaving enough for people in the future is called what?",
+    "expectedAnswer": "SUSTAINABILITY",
+    "length": 14,
+    "skill": "environmental-literacy"
+  }
+]
