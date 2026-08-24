@@ -1608,5 +1608,165 @@
     ],
     "otherMeanings": "Reversing the themed clue order produces “Once-popular discussion forum,” a direct description of USENET. A different clue may target another sense, so solvers should still confirm the grammar and crossing letters.",
     "related": []
+  },
+  {
+    "slug": "ample",
+    "answer": "AMPLE",
+    "pronunciation": "AM-puhl",
+    "partOfSpeech": "adjective",
+    "meaning": "Enough for a purpose, with room to spare; comfortably sufficient or plentiful.",
+    "crosswordUse": "AMPLE often answers clues such as “more than enough,” “plentiful,” or “spacious.” Its adjective grammar must agree with the noun being described.",
+    "whyCommon": "Five familiar letters, a clear comparative meaning, and several fair synonym clues make AMPLE useful without being obscure.",
+    "cluePatterns": [
+      "More than enough",
+      "Comfortably sufficient",
+      "Spacious or plentiful"
+    ],
+    "otherMeanings": "AMPLE can describe quantity, opportunity, evidence, time, or physical room. Crossings and the modified noun determine whether the clue emphasizes abundance or spaciousness.",
+    "related": ["grand", "riches"]
+  },
+  {
+    "slug": "anime",
+    "answer": "ANIME",
+    "pronunciation": "AN-ih-may",
+    "partOfSpeech": "noun",
+    "meaning": "Japanese animation, especially animated television series and films associated with Japan.",
+    "crosswordUse": "ANIME may be clued as a Japanese animation style, the medium of a named series such as One Piece, or a category paired with manga.",
+    "whyCommon": "The word is globally familiar, vowel-rich, and can be reached through language, culture, television, film, or title-based clues.",
+    "cluePatterns": [
+      "Japanese animation",
+      "One Piece medium",
+      "Manga's animated counterpart"
+    ],
+    "otherMeanings": "In English, ANIME normally refers to animation from Japan or made in a recognizably Japanese tradition. A clue naming a particular franchise often asks for the medium rather than the title.",
+    "related": ["origami", "monae"]
+  },
+  {
+    "slug": "dove",
+    "answer": "DOVE",
+    "pronunciation": "duhv",
+    "partOfSpeech": "noun; verb",
+    "meaning": "A pigeon-family bird commonly used as a symbol of peace, love, or reconciliation.",
+    "crosswordUse": "DOVE is often clued as a peace symbol, an olive-branch carrier, a gentle bird, or the past tense of dive in American English.",
+    "whyCommon": "Two distinct pronunciations and senses—bird and past-tense verb—give setters flexible four-letter clueing options.",
+    "cluePatterns": [
+      "Peace symbol",
+      "Olive-branch carrier",
+      "Went underwater, in American usage"
+    ],
+    "otherMeanings": "As a verb, DOVE can be the past tense of dive and is commonly pronounced to rhyme with drove. As a bird, it is pronounced to rhyme with love, so clue context determines both meaning and sound.",
+    "related": ["emu", "otter"]
+  },
+  {
+    "slug": "mason",
+    "answer": "MASON",
+    "pronunciation": "MAY-suhn",
+    "partOfSpeech": "noun; proper noun",
+    "meaning": "A skilled worker who builds with stone or brick; also a surname and given name.",
+    "crosswordUse": "MASON may be clued as a bricklayer, stoneworker, member of a fraternal order, or the first half of Mason-Dixon.",
+    "whyCommon": "The ordinary occupation and several proper-name associations give this five-letter entry multiple accessible clue paths.",
+    "cluePatterns": [
+      "Brick-laying professional",
+      "___-Dixon line",
+      "Stoneworker"
+    ],
+    "otherMeanings": "Capitalization can point to a surname, the Mason-Dixon Line, or a Freemason. Lowercase occupational clues usually mean a worker who constructs with brick, block, or stone.",
+    "related": ["madison", "gorman"]
+  },
+  {
+    "slug": "net",
+    "answer": "NET",
+    "pronunciation": "net",
+    "partOfSpeech": "noun; adjective; verb",
+    "meaning": "A mesh barrier or catching device; also an amount remaining after deductions.",
+    "crosswordUse": "NET can be a tennis or ping-pong divider, a fisher's tool, an internet abbreviation, a take-home amount, or a verb meaning catch or earn.",
+    "whyCommon": "Three common letters and several unrelated senses make NET exceptionally flexible short fill.",
+    "cluePatterns": [
+      "Part of a ping-pong table",
+      "Amount after deductions",
+      "Catch, as a fish or profit"
+    ],
+    "otherMeanings": "In finance, net contrasts with gross. In sports it divides a court or receives a ball. As a verb it can mean capture, obtain, or earn, while .net is an internet domain ending.",
+    "related": ["spec", "intel"]
+  },
+  {
+    "slug": "pero",
+    "answer": "PERO",
+    "pronunciation": "PEH-roh",
+    "partOfSpeech": "conjunction",
+    "meaning": "The common Spanish conjunction meaning “but” or “however.”",
+    "crosswordUse": "PERO typically appears in direct language clues such as “Spanish but.” Quotation marks or a language label indicate translation rather than an English synonym.",
+    "whyCommon": "Its four alternating consonant-vowel letters cross cleanly, and the basic translation is familiar to many solvers.",
+    "cluePatterns": [
+      "Spanish “but”",
+      "However, in Madrid",
+      "A contrasting conjunction en español"
+    ],
+    "otherMeanings": "PERO is primarily a conjunction introducing contrast. It should not be confused with perro, the Spanish word for dog, which has a doubled R and a different pronunciation.",
+    "related": ["una", "goya"]
+  },
+  {
+    "slug": "rad",
+    "answer": "RAD",
+    "pronunciation": "rad",
+    "partOfSpeech": "adjective; noun; abbreviation",
+    "meaning": "Informal slang for excellent, exciting, or impressive.",
+    "crosswordUse": "RAD may answer quoted reactions such as “Awesome!” It can also mean a unit of absorbed radiation or abbreviate radical, depending on technical signals.",
+    "whyCommon": "At three letters, RAD combines lively slang with scientific and abbreviated senses, offering several compact clue options.",
+    "cluePatterns": [
+      "“Awesome!”",
+      "Excellent, in dated slang",
+      "Radiation unit"
+    ],
+    "otherMeanings": "A rad is an older unit of absorbed radiation dose. RAD can also shorten radical in mathematics, politics, or informal speech, so register and subject matter settle the intended sense.",
+    "related": ["aggro", "bop-it"]
+  },
+  {
+    "slug": "robot",
+    "answer": "ROBOT",
+    "pronunciation": "ROH-bot",
+    "partOfSpeech": "noun",
+    "meaning": "A programmable machine capable of carrying out actions automatically or under remote control.",
+    "crosswordUse": "ROBOT may be clued through automation, mechanical workers, science fiction, or a named character such as Doctor Who's K9.",
+    "whyCommon": "The concept is familiar across technology and popular culture, giving a five-letter entry both direct and fact-based clue routes.",
+    "cluePatterns": [
+      "Automated machine",
+      "K9 of Doctor Who, for one",
+      "Mechanical worker"
+    ],
+    "otherMeanings": "Figuratively, robot can describe a person acting mechanically or without emotion. In fiction, the term may cover characters with very different levels of intelligence and autonomy.",
+    "related": ["nasa", "nokia"]
+  },
+  {
+    "slug": "sip",
+    "answer": "SIP",
+    "pronunciation": "sip",
+    "partOfSpeech": "noun; verb",
+    "meaning": "A small amount of liquid taken into the mouth, or the act of drinking that small amount.",
+    "crosswordUse": "SIP is often clued as a tiny drink, mini-gulp, taste of tea, or action performed slowly through a straw.",
+    "whyCommon": "Three simple letters and matching noun and verb forms make SIP easy to clue with exact grammar.",
+    "cluePatterns": [
+      "Mini-gulp",
+      "Take a small drink",
+      "Tiny taste of tea"
+    ],
+    "otherMeanings": "In technology, SIP can be an initialism such as Session Initiation Protocol. Abbreviation or communications wording would signal that specialized sense rather than the drinking word.",
+    "related": ["latte", "amber-ales"]
+  },
+  {
+    "slug": "tet",
+    "answer": "TET",
+    "pronunciation": "tet",
+    "partOfSpeech": "noun; proper noun",
+    "meaning": "Tết, the Vietnamese term for a festival and especially the Vietnamese Lunar New Year celebration.",
+    "crosswordUse": "TET is commonly clued as Vietnamese New Year, an Asian holiday, or the Vietnamese word for festival. Grid entries omit the diacritic.",
+    "whyCommon": "The short consonant-vowel-consonant form and strong cultural association make TET a recurring three-letter answer.",
+    "cluePatterns": [
+      "Vietnamese for “festival”",
+      "Vietnamese New Year",
+      "Lunar holiday in Hanoi"
+    ],
+    "otherMeanings": "Tết can be part of names for several Vietnamese festivals, but without another qualifier it most often refers to Tết Nguyên Đán, the Lunar New Year holiday.",
+    "related": ["asia", "origami"]
   }
 ]

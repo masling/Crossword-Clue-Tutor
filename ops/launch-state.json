@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T08:50:34+08:00",
+  "updatedAt": "2026-08-24T08:54:57+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -68,19 +68,19 @@
     }
   },
   "content": {
-    "indexablePages": 272,
+    "indexablePages": 282,
     "reviewedClues": 120,
-    "answerMeaningPages": 100,
+    "answerMeaningPages": 110,
     "dictionaryExpansion": {
-      "profilesAdded": 64,
-      "reviewedAt": "2026-08-22",
+      "profilesAdded": 74,
+      "reviewedAt": "2026-08-24",
       "sourceBoundary": "Profiles reuse existing reviewed clue definitions, signals, hints, and explanations; no new puzzle archive was imported.",
       "frequencyBoundary": "The dictionary includes reviewed answer profiles and does not claim every entry is frequent crosswordese."
     },
     "latestMeaningExpansion": {
-      "answers": ["BITING", "INBORN", "SWOLLEN", "GRAND", "COAX", "ROUTE", "RICHES", "LEAD", "ALLSPICE"],
-      "sourceHubs": ["Nipping", "Congenital", "Inflated", "Noble", "Cajole", "Path", "Wealth", "Forefront", "Pimento"],
-      "internalLinking": "Matching hub candidates and query variants link automatically to their meaning pages"
+      "answers": ["AMPLE", "ANIME", "DOVE", "MASON", "NET", "PERO", "RAD", "ROBOT", "SIP", "TET"],
+      "sourceClues": ["More than enough", "One Piece medium", "Peace symbol", "___-Dixon line", "Part of a ping-pong table", "Spanish but", "Awesome!", "K9 of Doctor Who, for one", "Mini-gulp", "Vietnamese for festival"],
+      "internalLinking": "Every matching explainer now links to a durable meaning page with pronunciation, alternate senses, and recurring clue patterns"
     },
     "evergreenClueHubs": 15,
     "evergreenClueHubCandidates": 328,
@@ -100,14 +100,14 @@
       {
         "name": "OneLook dictionary headword index",
         "route": "/assets/onelook-dictionary.txt",
-        "entries": 100,
+        "entries": 110,
         "format": "One absolute definition link per line"
       }
     ],
     "dictionaryStructuredData": {
       "type": "DefinedTermSet",
       "route": "/crosswordese/",
-      "members": 100,
+      "members": 110,
       "productionStatus": "Verified"
     },
     "structuredDataPages": 165,
@@ -481,7 +481,7 @@
       "localEmailDraftsReadyForReview": 3,
       "structuredFormPayloads": 6,
       "validationCommand": "npm run outreach:check",
-      "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 100 meaning entries",
+      "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 110 meaning entries",
       "transmissionStatus": "Seven unique email targets were sent and four forms were submitted. Three new reviewed email drafts for Larry Ferlazzo, OTAN, and Rex Parker plus one FreeTech4Teachers form payload are prepared but not transmitted. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
     },
     "approvalNeeded": "Fresh approval to send three reviewed emails and submit one public contact form",
