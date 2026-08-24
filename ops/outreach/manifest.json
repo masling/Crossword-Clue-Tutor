@@ -4,7 +4,7 @@
     "name": "Crossword Clue Tutor",
     "email": "hello@crosswordcluetutor.com"
   },
-  "status": "outreach_expansion_ready",
+  "status": "outreach_sent",
   "datasetEvidence": {
     "clueFamilies": 15,
     "reviewedCandidates": 328,
@@ -303,10 +303,11 @@
       "recipient": "info@clerna.org",
       "subject": "Lesson Plan Submission – Grades 6–12 – Crossword Vocabulary Evidence",
       "textFile": "messages/clerna-teacher-pilot.txt",
-      "gmailDraftStatus": "local_draft_ready",
+      "gmailDraftStatus": "sent",
       "gmailDraftCreatedAt": null,
       "approvalRequired": true,
-      "sentAt": null,
+      "sentAt": "2026-08-24T13:11:32+08:00",
+      "messageId": "1a0322e26aecc3ad",
       "sourcePage": "https://clerna.org/submit-a-lesson-plan/",
       "preparedAt": "2026-08-24T13:02:00+08:00"
     }
