@@ -10,9 +10,11 @@ Discover, review, publish, deploy, and submit high-intent clue pages on the same
    NYT Mini, The New York Times Crossword, LA Times Crossword, and USA TODAY Crossword.
    For USA TODAY, run `npm run source:usatoday -- --output .local/usatoday-latest.json`
    first. This deterministic adapter discovers the current unlocked puzzle from the
-   official archive, processes its publicly visible clue arrays transiently, and emits
-   only a small ranked candidate set with date, title, creator, editor, and URL from a
-   fresh unsigned browser context. Use public web research only if the adapter fails.
+   official archive and clue API, persists the complete clue list only in the local
+   ignored database, and emits a small ranked candidate set with date, title, creator,
+   editor, and URL. Use public web research only if the adapter fails.
+   For LA Times, run `npm run source:latimes -- --output .local/latimes-latest.json`
+   to read the official AmuseLabs picker metadata before any public clue research.
 2. Capture candidate clue-answer pairs with publication, date, and clue number.
 3. Treat every newly verifiable publication/date as routine daily coverage. Same-day
    publishing does not wait for or depend on keyword and trend data.

@@ -15,6 +15,7 @@
     "outreach:send": "node scripts/send-outreach.mjs",
     "seo:audit-production": "node scripts/audit-production-seo.mjs",
     "source:usatoday": "node scripts/usatoday-source-adapter.mjs",
+    "source:latimes": "node scripts/latimes-source-adapter.mjs",
     "source:stats": "node scripts/source-intelligence-report.mjs",
     "production:configure": "node scripts/configure-production.mjs",
     "qa:url": "node scripts/create-qa-url.mjs",

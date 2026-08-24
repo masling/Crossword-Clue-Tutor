@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-23T21:58:38+08:00",
+  "updatedAt": "2026-08-24T08:36:37+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -272,6 +272,21 @@
       "USA TODAY Crossword": "2026-08-23"
     },
     "officialSourceDiscovery": {
+      "LA Times Crossword": {
+        "adapter": "latimes-official-metadata-v1",
+        "command": "npm run source:latimes -- --output .local/latimes-latest.json",
+        "checkedAt": "2026-08-24T00:36:32.291Z",
+        "latestOfficialDate": "2026-08-23",
+        "sourceId": "tca260823",
+        "latestTitle": "L. A. Times, Sun, Aug 23, 2026 - \"GENERATION X\"",
+        "theme": "GENERATION X",
+        "creator": "Yijing Chen",
+        "editor": "Patti Varol",
+        "officialClueCount": 144,
+        "accessMode": "Official AmuseLabs picker metadata without login",
+        "contentBoundary": "Reads only official picker metadata; puzzle payload, solution, Reveal controls, and logged-in archive are excluded",
+        "selectedPairStatus": "Official August 23 date verified; selected exact clue-answer pairs remain pending separate verification"
+      },
       "USA TODAY Crossword": {
         "adapter": "usatoday-official-candidates-v1",
         "command": "npm run source:usatoday -- --limit 6 --output .local/usatoday-latest.json",

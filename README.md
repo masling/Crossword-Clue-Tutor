@@ -80,6 +80,7 @@ Cloudflare deployment tooling is a development dependency.
 | `npm run content:publish -- <intake.json>` | Publish a reviewed clue batch locally |
 | `npm run seo:audit-production` | Audit every production Sitemap URL |
 | `npm run source:usatoday -- --output .local/usatoday-latest.json` | Read official current USA TODAY metadata and at most six ranked clue candidates without logging in or requesting solutions |
+| `npm run source:latimes -- --output .local/latimes-latest.json` | Read the latest official LA Times date, puzzle ID, creator, editor, theme, and clue count without opening the puzzle payload |
 | `npm run source:stats` | Summarize the ignored local source-intelligence database without printing raw clue rows |
 | `npm run qa:url -- <run-name>` | Generate an analytics-tagged operator QA entry URL |
 | `npm run email:check-dns` | Verify Cloudflare/Zoho mail authentication records |
