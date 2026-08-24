@@ -1,10 +1,10 @@
 {
-  "reviewedAt": "2026-08-22",
+  "reviewedAt": "2026-08-24",
   "sender": {
     "name": "Crossword Clue Tutor",
     "email": "hello@crosswordcluetutor.com"
   },
-  "status": "outreach_expansion_partial",
+  "status": "outreach_expansion_ready",
   "datasetEvidence": {
     "clueFamilies": 15,
     "reviewedCandidates": 328,
@@ -177,6 +177,56 @@
       "approvalRequired": true,
       "sentAt": "2026-08-22T22:03:12+08:00",
       "messageId": "1a029c821a4d2bda"
+    },
+    {
+      "id": "larry-ferlazzo-resource",
+      "target": "Larry Ferlazzo's Websites of the Day",
+      "channel": "email",
+      "recipient": "MrFerlazzo@aol.com",
+      "subject": "Free crossword-clue vocabulary routine for ELL classrooms",
+      "textFile": "messages/larry-ferlazzo-resource.txt",
+      "gmailDraftStatus": "local_draft_ready",
+      "gmailDraftCreatedAt": null,
+      "approvalRequired": true,
+      "sentAt": null,
+      "sourcePage": "https://larryferlazzo.edublogs.org/contact-me/"
+    },
+    {
+      "id": "otan-teaching-technology",
+      "target": "OTAN Teaching with Technology",
+      "channel": "email",
+      "recipient": "support@otan.us",
+      "subject": "Teaching with Technology resource: crossword clue inference",
+      "textFile": "messages/otan-teaching-technology.txt",
+      "gmailDraftStatus": "local_draft_ready",
+      "gmailDraftCreatedAt": null,
+      "approvalRequired": true,
+      "sentAt": null,
+      "sourcePage": "https://web.otan.us/Resources/TeachingWithTechnology"
+    },
+    {
+      "id": "freetech4teachers-resource",
+      "target": "FreeTech4Teachers classroom resources",
+      "channel": "form",
+      "formUrl": "https://freetech4teachers.weebly.com/",
+      "payloadFile": "forms/freetech4teachers-resource.json",
+      "approvalRequired": true,
+      "submittedAt": null,
+      "submissionStatus": "pending",
+      "preparedAt": "2026-08-24T08:55:00+08:00"
+    },
+    {
+      "id": "rex-parker-ambiguity-data",
+      "target": "Rex Parker crossword blog",
+      "channel": "email",
+      "recipient": "rexparker@icloud.com",
+      "subject": "A small dataset on ambiguous crossword clues and crossings",
+      "textFile": "messages/rex-parker-ambiguity-data.txt",
+      "gmailDraftStatus": "local_draft_ready",
+      "gmailDraftCreatedAt": null,
+      "approvalRequired": true,
+      "sentAt": null,
+      "sourcePage": "https://rexwordpuzzle.blogspot.com/p/how-to-send-tangible-mail-to-rex-parker.html"
     }
   ]
 }

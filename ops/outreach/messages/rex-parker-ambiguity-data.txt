@@ -1,0 +1,17 @@
+Hi Rex,
+
+I maintain Crossword Clue Tutor and thought one small research resource might interest you because of your writing about Naticks, ambiguity, and the solver experience.
+
+The project has a downloadable dataset showing why short one-word clues rarely have one universal answer: 328 reviewed candidates across 15 recurring clue families, grouped by answer length and exact sense. For example, Light, Sharp, Pitch, Charge, Nipping, and Path branch into different parts of speech and meanings before crossings settle the fill.
+
+Research page and downloads:
+https://crosswordcluetutor.com/research/ambiguous-crossword-clues/
+
+The page documents its editorial method and limitations. It is not a publisher puzzle archive and contains no reproduced grid or complete answer key.
+
+Full disclosure: I maintain Crossword Clue Tutor. I am sharing this as a potentially useful reference rather than asking for coverage of a daily answer site. If the data is ever relevant to a discussion of clue fairness or ambiguous fill, you are welcome to cite, critique, or ignore it as you see fit.
+
+Best,
+Masling
+Crossword Clue Tutor
+https://crosswordcluetutor.com/

@@ -1,0 +1,23 @@
+Hello OTAN team,
+
+I maintain Crossword Clue Tutor and would like to suggest a free lesson-ready resource for OTAN's Teaching with Technology collection.
+
+The resource uses crossword clues to practice vocabulary inference. Learners identify grammar, punctuation, abbreviations, and clue meaning; propose candidate answers; add trusted crossing letters; request a hint; and explain the evidence for the final word. The 20-minute guide includes supports for emerging learners, extensions for advanced learners, assessment prompts, and a printable worksheet with original clues and a separate instructor key.
+
+Teacher guide:
+https://crosswordcluetutor.com/guides/crossword-clues-for-vocabulary-learning/
+
+Printable worksheet:
+https://crosswordcluetutor.com/educators/crossword-vocabulary-worksheet/
+
+Classroom solver:
+https://crosswordcluetutor.com/classroom-solver/
+
+It can support ABE, ESL, and high-school-equivalency vocabulary work. No learner account is required, clue matching stays in the browser, and the classroom pages omit Google Analytics. The materials do not copy a commercial grid or complete answer key.
+
+Full disclosure: I maintain Crossword Clue Tutor. If this fits OTAN's lesson-plan review process, I would be glad to provide any additional instructional or accessibility details your team needs.
+
+Best,
+Masling
+Crossword Clue Tutor
+https://crosswordcluetutor.com/
