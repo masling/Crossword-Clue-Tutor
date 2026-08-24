@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import { pathToFileURL } from "node:url";
-import { normalizeClue } from "../src/solver.mjs";
+import { normalizeClue, solveClues } from "../src/solver.mjs";
 
 const scalableMetadataFields = [
   "conceptId", "variantGroupId", "subject", "sourceUrl", "sourceLicense",
@@ -12,7 +12,36 @@ function counts(values) {
   return Object.fromEntries([...new Set(values)].sort().map((value) => [value, values.filter((item) => item === value).length]));
 }
 
-export function summarizeClassroomCorpus(records) {
+export function evaluateBlindBenchmark(records, benchmarkCases = []) {
+  if (!benchmarkCases.length) return { status: "not_measured", cases: 0, top1Rate: null, top3Rate: null, failures: [], bySkill: {} };
+  const results = benchmarkCases.map((item) => {
+    const matches = solveClues(records, { clue: item.clue, length: item.length }).slice(0, 10);
+    const index = matches.findIndex((match) => match.answer === item.expectedAnswer);
+    return { ...item, rank: index === -1 ? null : index + 1, candidates: matches.slice(0, 3).map((match) => match.answer) };
+  });
+  const top1 = results.filter((item) => item.rank === 1).length;
+  const top3 = results.filter((item) => item.rank !== null && item.rank <= 3).length;
+  const skills = [...new Set(results.map((item) => item.skill))].sort();
+  const bySkill = Object.fromEntries(skills.map((skill) => {
+    const items = results.filter((item) => item.skill === skill);
+    return [skill, {
+      cases: items.length,
+      top1Rate: items.filter((item) => item.rank === 1).length / items.length,
+      top3Rate: items.filter((item) => item.rank !== null && item.rank <= 3).length / items.length
+    }];
+  }));
+  return {
+    status: "measured",
+    cases: results.length,
+    top1Rate: top1 / results.length,
+    top3Rate: top3 / results.length,
+    nonTop1: results.filter((item) => item.rank !== 1),
+    failures: results.filter((item) => item.rank === null || item.rank > 3),
+    bySkill
+  };
+}
+
+export function summarizeClassroomCorpus(records, { benchmarkCases = [] } = {}) {
   const concepts = new Map();
   const pairKeys = new Map();
   const duplicatePairs = [];
@@ -40,6 +69,7 @@ export function summarizeClassroomCorpus(records) {
   const completeMetadataRecords = records.length - metadataGaps.length;
   const noCriticalIssues = duplicatePairs.length === 0 && hintLeaks.length === 0;
 
+  const blindBenchmark = evaluateBlindBenchmark(records, benchmarkCases);
   const gates = {
     directoryReviewDemo: {
       recordTarget: 30,
@@ -48,17 +78,20 @@ export function summarizeClassroomCorpus(records) {
     controlledTeacherPilot: {
       recordTarget: 500,
       conceptTarget: 250,
-      passed: records.length >= 500 && uniqueConcepts >= 250 && completeMetadataRecords === records.length && noCriticalIssues
+      benchmarkCaseTarget: 250,
+      passed: records.length >= 500 && uniqueConcepts >= 250 && completeMetadataRecords === records.length && noCriticalIssues && blindBenchmark.cases >= 250 && blindBenchmark.top3Rate >= 0.85
     },
     selfDirectedClassroomBeta: {
       recordTarget: 3000,
       conceptTarget: 1000,
-      passed: records.length >= 3000 && uniqueConcepts >= 1000 && conceptsWithMultipleVariants >= 500 && completeMetadataRecords === records.length && noCriticalIssues
+      benchmarkCaseTarget: 1000,
+      passed: records.length >= 3000 && uniqueConcepts >= 1000 && conceptsWithMultipleVariants >= 500 && completeMetadataRecords === records.length && noCriticalIssues && blindBenchmark.cases >= 1000 && blindBenchmark.top3Rate >= 0.85
     },
     strongMultiSubjectProduct: {
       recordTarget: 10000,
       conceptTarget: 3000,
-      passed: records.length >= 10000 && uniqueConcepts >= 3000 && conceptsWithMultipleVariants >= 2000 && completeMetadataRecords === records.length && noCriticalIssues
+      benchmarkCaseTarget: 2000,
+      passed: records.length >= 10000 && uniqueConcepts >= 3000 && conceptsWithMultipleVariants >= 2000 && completeMetadataRecords === records.length && noCriticalIssues && blindBenchmark.cases >= 2000 && blindBenchmark.top3Rate >= 0.9
     }
   };
 
@@ -77,7 +110,7 @@ export function summarizeClassroomCorpus(records) {
       representativeGaps: metadataGaps.slice(0, 5)
     },
     quality: { duplicatePairs, hintLeaks, noCriticalIssues },
-    blindBenchmark: { status: "not_measured", requirement: "Hold-out teacher/student paraphrases must not be copied into the production corpus." },
+    blindBenchmark,
     gates
   };
 }
@@ -85,5 +118,7 @@ export function summarizeClassroomCorpus(records) {
 const isDirectRun = process.argv[1] && pathToFileURL(path.resolve(process.argv[1])).href === import.meta.url;
 if (isDirectRun) {
   const records = JSON.parse(await readFile(path.resolve("data/classroom-clues.json"), "utf8"));
-  console.log(JSON.stringify(summarizeClassroomCorpus(records), null, 2));
+  let benchmarkCases = [];
+  try { benchmarkCases = JSON.parse(await readFile(path.resolve("test/fixtures/classroom-blind-benchmark.json"), "utf8")); } catch { /* benchmark remains explicitly unmeasured */ }
+  console.log(JSON.stringify(summarizeClassroomCorpus(records, { benchmarkCases }), null, 2));
 }

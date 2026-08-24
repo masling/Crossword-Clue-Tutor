@@ -292,17 +292,18 @@ if (!vocabularyGuide.includes("How to use crossword clues for vocabulary learnin
 if (!vocabularyGuide.includes("/solver/") || !vocabularyGuide.includes("/research/ambiguous-crossword-clues/")) errors.push("vocabulary guide is missing its teaching assets");
 if (!vocabularyGuide.includes('"learningResourceType":"Lesson plan"')) errors.push("vocabulary guide is missing learning-resource structured data");
 if (!vocabularyGuide.includes("/classroom-solver/") || !vocabularyGuide.includes("/educators/crossword-vocabulary-worksheet/")) errors.push("vocabulary guide is missing classroom tool links");
-if (!vocabularyGuide.includes("30 original, reviewed practice clues")) errors.push("vocabulary guide is missing the reviewed classroom library evidence");
+if (!vocabularyGuide.includes("a growing library of original, reviewed practice clues")) errors.push("vocabulary guide is missing the reviewed classroom library evidence");
 const classroomSolverPage = await readFile(path.join(dist, "classroom-solver/index.html"), "utf8");
 if (!classroomSolverPage.includes('content="minimal"') || classroomSolverPage.includes("googletagmanager.com") || !classroomSolverPage.includes("app.pageview.app")) errors.push("classroom solver is not in cookie-free minimal analytics mode");
-if (!classroomSolverPage.includes('data-tool-context="classroom"') || !classroomSolverPage.includes("data-classroom-example") || !classroomSolverPage.includes("30 original, reviewed clues") || !classroomSolverPage.includes('"learningResourceType":"Interactive tool"')) errors.push("classroom solver is missing its classroom-scoped tool, reviewed clue picker, or learning-resource data");
+const classroomSkills = [...new Set(classroomClues.map((item) => item.skill))].sort();
+if (!classroomSolverPage.includes('data-tool-context="classroom"') || !classroomSolverPage.includes("data-classroom-example") || !classroomSolverPage.includes(`${classroomClues.length} original, reviewed clues`) || !classroomSolverPage.includes(`${classroomSkills.length} vocabulary and reasoning skills`) || !classroomSolverPage.includes('"learningResourceType":"Interactive tool"')) errors.push("classroom solver is missing its classroom-scoped tool, reviewed clue count, skill count, or learning-resource data");
 const worksheetPage = await readFile(path.join(dist, "educators/crossword-vocabulary-worksheet/index.html"), "utf8");
 if (!worksheetPage.includes('content="minimal"') || worksheetPage.includes("googletagmanager.com") || !worksheetPage.includes("app.pageview.app")) errors.push("worksheet is not in cookie-free minimal analytics mode");
 for (const answer of ["CONNOTATION", "EASE", "RELIABLE", "CONTEXT", "ANTONYM"]) if (!worksheetPage.includes(answer)) errors.push(`worksheet is missing original answer ${answer}`);
 if (!worksheetPage.includes("data-print-page") || !worksheetPage.includes('"learningResourceType":"Worksheet"')) errors.push("worksheet is missing print control or learning-resource data");
 const classroomPackHub = await readFile(path.join(dist, "educators/crossword-vocabulary-packs/index.html"), "utf8");
-if (!classroomPackHub.includes("Six crossword vocabulary practice packs") || !classroomPackHub.includes('"@type":"ItemList"') || !classroomPackHub.includes('content="minimal"')) errors.push("classroom pack hub is missing its six-pack promise, ItemList data, or reduced analytics mode");
-for (const skill of ["context-and-meaning", "word-structure", "academic-language", "science-vocabulary", "language-arts", "precision-and-revision"]) {
+if (!classroomPackHub.includes(`${classroomSkills.length} crossword vocabulary practice packs`) || !classroomPackHub.includes('"@type":"ItemList"') || !classroomPackHub.includes('content="minimal"')) errors.push("classroom pack hub is missing its pack count, ItemList data, or reduced analytics mode");
+for (const skill of classroomSkills) {
   const packPage = await readFile(path.join(dist, `educators/crossword-vocabulary-packs/${skill}/index.html`), "utf8");
   const expectedItems = classroomClues.filter((item) => item.skill === skill);
   if (!sitemap.includes(`/educators/crossword-vocabulary-packs/${skill}/`)) errors.push(`${skill} classroom pack is missing from the sitemap`);

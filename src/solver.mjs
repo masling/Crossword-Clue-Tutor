@@ -21,9 +21,15 @@ export function normalizeClue(value = "") {
 }
 
 export function tokenizeClue(value = "") {
-  return normalizeClue(value)
+  return [...new Set(normalizeClue(value)
     .split(" ")
-    .filter((token) => token && !STOP_WORDS.has(token));
+    .filter((token) => token && !STOP_WORDS.has(token)))];
+}
+
+function relatedToken(token, term) {
+  if (token === term || token.startsWith(term) || term.startsWith(token)) return "strong";
+  if (token.length >= 5 && term.length >= 5 && token.slice(0, 4) === term.slice(0, 4)) return "stem";
+  return null;
 }
 
 export function patternToRegExp(value = "") {
@@ -51,12 +57,13 @@ export function scoreClueMatch(item, query = "") {
 
   for (const term of queryTokens) {
     if (clueTokens.includes(term)) score += 60;
-    else if (clueTokens.some((token) => token.startsWith(term) || term.startsWith(token))) score += 25;
+    else if (clueTokens.some((token) => relatedToken(token, term) === "strong")) score += 25;
+    else if (clueTokens.some((token) => relatedToken(token, term) === "stem")) score += 18;
     else if (supportingText.includes(term)) score += 12;
   }
 
   const matchedTerms = queryTokens.filter((term) =>
-    clueTokens.some((token) => token === term || token.startsWith(term) || term.startsWith(token))
+    clueTokens.some((token) => relatedToken(token, term))
   ).length;
   if (queryTokens.length && matchedTerms === queryTokens.length) score += 80;
 

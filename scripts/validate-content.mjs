@@ -116,8 +116,9 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
     }
   }
 
-  const classroomSkills = new Set(["context-and-meaning", "word-structure", "academic-language", "science-vocabulary", "language-arts", "precision-and-revision"]);
+  const classroomSkills = new Set(["context-and-meaning", "word-structure", "academic-language", "science-vocabulary", "language-arts", "precision-and-revision", "mathematics-language", "social-studies"]);
   const classroomDifficulties = new Set(["introductory", "intermediate", "advanced"]);
+  const classroomSourceKinds = new Set(["original-classroom", "reference-informed-original", "licensed-seed-original"]);
   const classroomScaleFields = ["conceptId", "variantGroupId", "subject", "sourceUrl", "sourceLicense", "requiredAttribution", "reviewStatus", "contentVersion"];
   const classroomSlugs = new Set();
   if (!Array.isArray(classroomClues) || classroomClues.length < 5) {
@@ -141,7 +142,7 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
       if (!Array.isArray(clue.gradeBands) || !clue.gradeBands.includes("6-8") || !clue.gradeBands.includes("9-12")) errors.push(`${label} must support grades 6-8 and 9-12`);
       if (!classroomSkills.has(clue.skill)) errors.push(`${label} has unsupported skill ${clue.skill}`);
       if (!classroomDifficulties.has(clue.difficulty)) errors.push(`${label} has unsupported difficulty ${clue.difficulty}`);
-      if (clue.sourceKind !== "original-classroom") errors.push(`${label} must be original-classroom content`);
+      if (!classroomSourceKinds.has(clue.sourceKind)) errors.push(`${label} has unsupported classroom sourceKind ${clue.sourceKind}`);
       if (!/^[a-z0-9]+(?:[.-][a-z0-9]+)*$/.test(clue.conceptId ?? "") || !/^[a-z0-9]+(?:[.-][a-z0-9]+)*$/.test(clue.variantGroupId ?? "")) errors.push(`${label} has invalid concept or variant identifiers`);
       try { new URL(clue.sourceUrl); } catch { errors.push(`${label} sourceUrl must be absolute`); }
       if (clue.reviewStatus !== "materially-reviewed") errors.push(`${label} must be materially reviewed`);

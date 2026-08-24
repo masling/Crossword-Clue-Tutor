@@ -17,9 +17,13 @@ test("classroom beta has six balanced skill packs and meaningful difficulty cove
   const bySkill = groupBy(classroomClues, "skill");
   const byDifficulty = groupBy(classroomClues, "difficulty");
 
-  assert.equal(classroomClues.length, 30);
-  assert.equal(bySkill.size, 6);
-  for (const items of bySkill.values()) assert.equal(items.length, 5);
+  assert.ok(classroomClues.length >= 30);
+  assert.ok(bySkill.size >= 6);
+  for (const skill of ["context-and-meaning", "word-structure", "academic-language", "science-vocabulary", "language-arts", "precision-and-revision"]) assert.ok((bySkill.get(skill) ?? []).length >= 5);
+  if (classroomClues.length >= 100) {
+    assert.ok((bySkill.get("mathematics-language") ?? []).length >= 20);
+    assert.ok((bySkill.get("social-studies") ?? []).length >= 20);
+  }
   assert.ok((byDifficulty.get("introductory") ?? []).length >= 10);
   assert.ok((byDifficulty.get("intermediate") ?? []).length >= 5);
   assert.ok((byDifficulty.get("advanced") ?? []).length >= 5);
