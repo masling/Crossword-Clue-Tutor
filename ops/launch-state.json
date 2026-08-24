@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T13:14:21+08:00",
+  "updatedAt": "2026-08-24T13:18:21+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -75,7 +75,7 @@
     }
   },
   "content": {
-    "indexablePages": 331,
+    "indexablePages": 332,
     "reviewedClues": 137,
     "answerMeaningPages": 110,
     "dictionaryExpansion": {
@@ -112,7 +112,7 @@
     "solverHubCandidates": 328,
     "solverCandidatePool": 414,
     "linkableGuides": 4,
-    "classroomResources": 34,
+    "classroomResources": 35,
     "classroomProductReadiness": {
       "status": "Controlled-pilot data readiness passed; independent teacher validation remains outstanding",
       "originalReviewedClues": 500,
@@ -149,6 +149,17 @@
         "coverage": "Goals, materials, preparation, timed procedure, assessment, differentiation, extension, observation prompts, privacy boundary, and structured feedback handoff",
         "externalUse": "Prepared as a complete original Grades 6-12 lesson plan for educator recruitment and editorial resource submission"
       },
+      "classroomCorpus": {
+        "route": "/research/classroom-crossword-vocabulary-corpus/",
+        "records": 500,
+        "uniqueConcepts": 500,
+        "skills": 29,
+        "formats": ["JSON", "CSV"],
+        "status": "Ready for production deployment",
+        "schema": "Schema.org Dataset with DataDownload distributions",
+        "useBoundary": "Free classroom use and limited attributed research excerpts; bulk commercial mirroring is not granted",
+        "qualityDisclosure": "Complete field documentation, review method, engineering-test limitation, teacher-evidence boundary, and source boundary are visible"
+      },
       "pricingStatus": "Deferred until data and experience gates are met",
       "controlledPilotTarget": 500,
       "selfDirectedBetaTarget": 3000,
@@ -175,7 +186,7 @@
     },
     "classroomAnalyticsMode": "Cookie-free Pageview retained; GA4 omitted on Teacher guide, Classroom Solver, and printable worksheet",
     "visibleFeedSubscription": true,
-    "linkableResearchPages": 1,
+    "linkableResearchPages": 2,
     "datasetDownloadFormats": [
       "JSON",
       "CSV"
@@ -186,6 +197,13 @@
         "route": "/assets/onelook-dictionary.txt",
         "entries": 110,
         "format": "One absolute definition link per line"
+      },
+      {
+        "name": "Classroom crossword vocabulary corpus",
+        "route": "/research/classroom-crossword-vocabulary-corpus/",
+        "entries": 500,
+        "formats": ["JSON", "CSV"],
+        "purpose": "Linkable original classroom dataset with documented fields, quality controls, and reuse boundaries"
       }
     ],
     "dictionaryStructuredData": {
