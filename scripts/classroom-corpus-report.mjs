@@ -96,6 +96,7 @@ export function summarizeClassroomCorpus(records, { benchmarkCases = [] } = {}) 
   const noCriticalIssues = duplicatePairs.length === 0 && hintLeaks.length === 0 && clueLeaks.length === 0 && templateDuplicates.length === 0;
 
   const blindBenchmark = evaluateBlindBenchmark(records, benchmarkCases);
+  const controlledPilotDataReady = records.length >= 500 && uniqueConcepts >= 250 && completeMetadataRecords === records.length && noCriticalIssues && blindBenchmark.cases >= 250 && blindBenchmark.top3Rate >= 0.85;
   const gates = {
     directoryReviewDemo: {
       recordTarget: 30,
@@ -105,7 +106,10 @@ export function summarizeClassroomCorpus(records, { benchmarkCases = [] } = {}) 
       recordTarget: 500,
       conceptTarget: 250,
       benchmarkCaseTarget: 250,
-      passed: records.length >= 500 && uniqueConcepts >= 250 && completeMetadataRecords === records.length && noCriticalIssues && blindBenchmark.cases >= 250 && blindBenchmark.top3Rate >= 0.85
+      teacherFeedbackTarget: 5,
+      dataReadinessPassed: controlledPilotDataReady,
+      externalTeacherEvidence: "not_measured_by_corpus_report",
+      passed: false
     },
     selfDirectedClassroomBeta: {
       recordTarget: 3000,

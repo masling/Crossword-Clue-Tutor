@@ -13,8 +13,8 @@ These levels must not be described as if they are the same.
 
 ## Current beta evidence
 
-- 360 original classroom clues written for Grades 6–12.
-- Twenty-two skill packs:
+- 500 original classroom clues written for Grades 6–12.
+- Twenty-nine skill packs:
   - Context and meaning
   - Word structure and morphology
   - Academic language
@@ -37,12 +37,19 @@ These levels must not be described as if they are the same.
   - Geography language
   - Civics and government
   - Reading analysis
+  - Algebra language
+  - World history
+  - Economics vocabulary
+  - Ecology vocabulary
+  - Writing and rhetoric
+  - Computer science
+  - Health and wellness
 - Introductory, intermediate, and advanced difficulty labels.
 - Every classroom clue includes answer length, part of speech, hint, definition, clue signal, explanation, grade bands, skill, difficulty, and original-content provenance.
 - The five printable worksheet clues resolve to the intended reviewed answer in the classroom Solver.
-- The classroom picker makes all 360 clues directly testable without guessing what the database contains.
-- Twenty-two printable skill packs turn the complete classroom library into ready-to-use student sheets with separate teacher keys.
-- A 236-case independently worded engineering hold-out benchmark currently returns the intended answer at rank 1 in 225 cases and within the top 3 in all 236 cases when the selected classroom skill is supplied. This is retrieval evidence, not a substitute for the 250 teacher-written cases required by Gate B.
+- The classroom picker makes all 500 clues directly testable without guessing what the database contains.
+- Twenty-nine printable skill packs turn the complete classroom library into ready-to-use student sheets with separate teacher keys.
+- A 376-case independently worded engineering hold-out benchmark currently returns the intended answer at rank 1 in 365 cases and within the top 3 in all 376 cases when the selected classroom skill is supplied. This exceeds the engineering retrieval target but is not a substitute for teacher-written cases and real classroom feedback required by Gate B.
 - No student account is required; classroom pages omit GA4 and retain only cookie-free Pageview measurement.
 
 ## Fixed critical gap
@@ -55,10 +62,10 @@ This is now a permanent acceptance test: every worksheet clue must rank its inte
 
 - A TeachersFirst reviewer to test the guide, worksheet, and classroom Solver as one coherent activity.
 - A teacher to run one or several 20-minute, teacher-directed vocabulary sessions.
-- A teacher to print twenty-two distinct skill-focused sessions without assembling materials manually.
+- A teacher to print twenty-nine distinct skill-focused sessions without assembling materials manually.
 - Demonstrating hint-before-answer reasoning, grammar signals, answer length, crossings, and written explanation.
-- A small beta that gathers feedback about clarity, usefulness, and which skill packs teachers want next.
-- A first retrieval-quality measurement across all twenty-two skills; the sample is not teacher-authored, so it does not satisfy the controlled-pilot gate.
+- A structured controlled pilot that gathers feedback about clarity, usefulness, reviewed-answer matching, reuse intent, and which skill packs teachers want next.
+- A retrieval-quality measurement across all twenty-nine skills; the engineering data gate is satisfied, while independent teacher evidence is still outstanding.
 
 ## What this is not yet sufficient for
 
@@ -121,4 +128,4 @@ Pricing is considered only after these experience and data gates, not before the
 
 ## Next data iteration
 
-Treat the current 360 records as an expanded controlled-pilot corpus, not a broad-coverage claim. Expand next from 360 to 500 original classroom clues through reviewed batches with explicit concept IDs, subject, grade band, difficulty, provenance, review status, and variant grouping. Increase the engineering hold-out set from 236 to at least 250 while separately gathering teacher-written cases and structured feedback; only the latter can establish the full controlled teacher pilot. Every batch must ship with exact-solve tests, paraphrase benchmarks, difficulty distribution checks, and printable practice sets before its count is used in product copy. After the 500-record controlled pilot, scale toward 3,000 for a usable self-directed classroom beta and 10,000 for strong multi-subject coverage.
+The 500-record corpus and engineering retrieval data gate are now satisfied. Do not describe that as a completed controlled teacher pilot. The next iteration is external validation: recruit at least five educators, have each complete two sessions, collect teacher-written clue phrasings and structured feedback through the dedicated pilot form, and measure confirmed incorrect-answer reports. Keep correcting and versioning the 500-record corpus during that pilot. Scale toward 3,000 only after this evidence supports a usable self-directed classroom beta, and toward 10,000 only after broader multi-subject validation.

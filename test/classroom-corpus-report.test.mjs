@@ -17,6 +17,8 @@ test("reports the current classroom corpus honestly as a demonstration, not broa
   assert.equal(report.scalableMetadata.completeRecords, report.records);
   assert.equal(report.scalableMetadata.recordsWithGaps, 0);
   assert.equal(report.gates.controlledTeacherPilot.passed, false);
+  assert.equal(typeof report.gates.controlledTeacherPilot.dataReadinessPassed, "boolean");
+  assert.equal(report.gates.controlledTeacherPilot.externalTeacherEvidence, "not_measured_by_corpus_report");
   assert.equal(report.gates.selfDirectedClassroomBeta.passed, false);
   assert.equal(report.gates.strongMultiSubjectProduct.passed, false);
   assert.equal(report.blindBenchmark.status, "measured");
