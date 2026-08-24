@@ -2624,5 +2624,203 @@
     "publication": "LA Times Crossword",
     "sourceDate": "2026-08-23",
     "clueNumber": "114-Across"
+  },
+  {
+    "slug": "animal-orange-humans-green-deer-nyt-mini",
+    "clue": "Animal that appears orange to human eyes, but as a camouflaged green to deer",
+    "answer": "TIGER",
+    "date": "2026-08-24",
+    "popularity": 100,
+    "definition": "A tiger is a large striped Asian cat whose orange coat can blend into vegetation for prey with dichromatic vision.",
+    "explanation": "TIGER fits because humans see its coat as orange, while deer have different color vision that makes the same coat less distinct against green vegetation.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "animal",
+      "color vision",
+      "camouflage"
+    ],
+    "clueType": "factoid",
+    "signal": "The long descriptive contrast asks for an animal identified through a surprising fact about how two viewers perceive its coat.",
+    "hint": "Look for a five-letter striped big cat whose prey does not perceive its orange coat the way humans do.",
+    "reviewedAt": "2026-08-24",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "1-Across"
+  },
+  {
+    "slug": "get-a-smile-or-laugh-from-nyt-mini",
+    "clue": "Get a smile or laugh from",
+    "answer": "AMUSE",
+    "date": "2026-08-24",
+    "popularity": 90,
+    "definition": "To amuse someone is to entertain that person or cause a smile or laugh.",
+    "explanation": "AMUSE fits as a five-letter base-form verb meaning to entertain someone enough to produce the smile or laugh described by the clue.",
+    "partOfSpeech": "verb",
+    "tags": [
+      "entertainment",
+      "emotion",
+      "direct definition"
+    ],
+    "clueType": "direct-definition",
+    "signal": "The base-form verb “Get” requires another action word, while “a smile or laugh” states the intended effect.",
+    "hint": "Think of a five-letter verb meaning to entertain or make someone laugh.",
+    "reviewedAt": "2026-08-24",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "6-Across"
+  },
+  {
+    "slug": "dating-app-curvy-h-logo-nyt-mini",
+    "clue": "Dating app with a curvy \"H\" logo",
+    "answer": "HINGE",
+    "date": "2026-08-24",
+    "popularity": 95,
+    "definition": "Hinge is a dating application whose brand mark stylizes the opening letter of its name.",
+    "explanation": "HINGE fits because it is the five-letter dating app identified by the clue's visual description of its distinctive curved H logo.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "dating app",
+      "logo",
+      "brand"
+    ],
+    "clueType": "proper-noun",
+    "signal": "“Dating app” establishes the entity category, and the quoted logo letter supplies a visual brand identifier.",
+    "hint": "Name the five-letter relationship app whose logo stylizes the first letter of its name.",
+    "reviewedAt": "2026-08-24",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "8-Across"
+  },
+  {
+    "slug": "actress-zellweger-nyt-mini",
+    "clue": "Actress Zellweger",
+    "answer": "RENEE",
+    "date": "2026-08-24",
+    "popularity": 92,
+    "definition": "Renée Zellweger is an American actress known for films including Bridget Jones's Diary and Judy.",
+    "explanation": "RENEE fits because it is Zellweger's five-letter first name, entered without the accent mark that appears in the standard spelling Renée.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "actress",
+      "film",
+      "first name"
+    ],
+    "clueType": "proper-noun",
+    "signal": "A profession followed by a surname conventionally asks for the person's first name.",
+    "hint": "Her five-letter first name belongs to the star of the Bridget Jones films.",
+    "reviewedAt": "2026-08-24",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "5-Down"
+  },
+  {
+    "slug": "apex-nyt-daily",
+    "clue": "Apex",
+    "answer": "ACME",
+    "date": "2026-08-24",
+    "popularity": 85,
+    "definition": "Acme means the highest point, peak, or most developed stage of something.",
+    "explanation": "ACME fits because the four-letter noun is a direct synonym for an apex or highest point, independent of its familiar use as a fictional brand name.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "peak",
+      "highest point",
+      "direct definition"
+    ],
+    "clueType": "direct-definition",
+    "signal": "The single noun offers a concise direct definition and requires a noun answer of the same sense.",
+    "hint": "Look for a four-letter word meaning the highest point, also familiar as a cartoon company name.",
+    "reviewedAt": "2026-08-24",
+    "publication": "The New York Times Crossword",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "1-Across"
+  },
+  {
+    "slug": "criminals-sphere-nyt-daily",
+    "clue": "Criminals' sphere",
+    "answer": "UNDERWORLD",
+    "date": "2026-08-24",
+    "popularity": 92,
+    "definition": "The underworld can mean the community, organizations, and activities associated with criminals.",
+    "explanation": "UNDERWORLD fits because the possessive clue uses “sphere” figuratively for the criminal realm or society, not for a literal geometric object.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "criminal society",
+      "figurative definition",
+      "realm"
+    ],
+    "clueType": "wordplay",
+    "signal": "The possessive noun and broad word “sphere” invite a figurative term for a criminal realm.",
+    "hint": "Think of a ten-letter term for organized criminal society that can also name a mythic realm below.",
+    "reviewedAt": "2026-08-24",
+    "publication": "The New York Times Crossword",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "17-Across"
+  },
+  {
+    "slug": "stop-in-the-afterlife-nyt-daily",
+    "clue": "Stop in the afterlife",
+    "answer": "PURGATORY",
+    "date": "2026-08-24",
+    "popularity": 94,
+    "definition": "Purgatory is an intermediate state after death associated in Catholic doctrine with purification before heaven.",
+    "explanation": "PURGATORY fits because “Stop” frames it as an intermediate destination in the afterlife, giving the theological term a playful travel-itinerary reading.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "afterlife",
+      "theology",
+      "playful definition"
+    ],
+    "clueType": "wordplay",
+    "signal": "“Stop” is used nonliterally as an intermediate destination, while “in the afterlife” fixes the theological setting.",
+    "hint": "Look for a nine-letter intermediate state associated with purification after death.",
+    "reviewedAt": "2026-08-24",
+    "publication": "The New York Times Crossword",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "50-Across"
+  },
+  {
+    "slug": "natural-wonder-in-venezuela-nyt-daily",
+    "clue": "Natural wonder in Venezuela",
+    "answer": "ANGELFALLS",
+    "date": "2026-08-24",
+    "popularity": 96,
+    "definition": "Angel Falls is a Venezuelan waterfall in Canaima National Park and the world's tallest uninterrupted waterfall.",
+    "explanation": "ANGELFALLS fits because the named natural wonder is located in Venezuela; the two-word name is entered as one ten-letter crossword answer.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Venezuela",
+      "waterfall",
+      "geography"
+    ],
+    "clueType": "factoid",
+    "signal": "The location and category “Natural wonder” ask for a specific geographic landmark.",
+    "hint": "This Venezuelan waterfall is the world's tallest uninterrupted one; enter its two-word name without a space.",
+    "reviewedAt": "2026-08-24",
+    "publication": "The New York Times Crossword",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "60-Across"
+  },
+  {
+    "slug": "caitlin-clarks-league-nyt-daily",
+    "clue": "Caitlin Clark's league",
+    "answer": "WNBA",
+    "date": "2026-08-24",
+    "popularity": 100,
+    "definition": "The WNBA is the Women's National Basketball Association, the professional league in which Caitlin Clark plays for the Indiana Fever.",
+    "explanation": "WNBA fits because Caitlin Clark plays for the Indiana Fever in that four-letter professional basketball league.",
+    "partOfSpeech": "proper noun abbreviation",
+    "tags": [
+      "Caitlin Clark",
+      "basketball",
+      "sports league"
+    ],
+    "clueType": "factoid",
+    "signal": "The possessive clue asks for the named athlete's professional league rather than her team.",
+    "hint": "Name the four-letter professional league that includes the Indiana Fever.",
+    "reviewedAt": "2026-08-24",
+    "publication": "The New York Times Crossword",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "27-Down"
   }
 ]

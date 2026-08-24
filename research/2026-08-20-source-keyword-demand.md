@@ -310,3 +310,30 @@ Evidence:
 - https://one-piece.com/
 - https://www.fundeu.es/consulta/pero-1689/
 - https://www.britannica.com/topic/Charon-Greek-mythology
+
+## 2026-08-24 10:15 SGT freshness run
+
+Both NYT Mini and the full New York Times Crossword advanced from the recorded August
+23 source date to August 24. Four selected Mini pairs were published from a public clue
+reference: the deer-vision camouflage animal (`TIGER`), getting a smile or laugh
+(`AMUSE`), the dating app with a curvy H logo (`HINGE`), and actress Zellweger's first
+name (`RENEE`). The unusual tiger clue was independently checked against reporting on
+the underlying color-vision research; the entity and definition clues were separately
+reviewed for exact sense and spelling.
+
+Five selected full-size NYT pairs were published from the public XWord Info page with
+visible clue numbers: apex (`ACME`), criminals' sphere (`UNDERWORLD`), an afterlife stop
+(`PURGATORY`), Venezuela's natural wonder (`ANGELFALLS`), and Caitlin Clark's league
+(`WNBA`). The WNBA relationship was checked against Indiana Fever material, while the
+geography and theology senses were independently verified. Every public page contains
+an original hint, definition, clue signal, and explanation. No complete puzzle, grid,
+or answer list was reproduced.
+
+Evidence:
+
+- https://www.technobezz.com/news/nyt-mini-crossword-cb6e8d4a1810f169-hints-clues-and-answers
+- https://www.xwordinfo.com/Crossword
+- https://www.earth.com/animals/why-tigers-have-stripes/
+- https://fever.wnba.com/news/game-recap-fever-wings-260814
+- https://www.merriam-webster.com/dictionary/purgatory
+- https://en.wikipedia.org/wiki/Angel_Falls

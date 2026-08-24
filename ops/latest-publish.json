@@ -1,15 +1,20 @@
 {
-  "publishedAt": "2026-08-24T00:41:58.530Z",
-  "input": "ops/intake/2026-08-23-la-times-official-backfill.json",
+  "publishedAt": "2026-08-24T02:19:29.888Z",
+  "input": "ops/intake/2026-08-24-nyt-sources-routine.json",
   "urls": [
-    "/explainers/one-piece-medium-la-times/",
-    "/explainers/k9-of-doctor-who-for-one-la-times/",
-    "/explainers/spanish-but-la-times/",
-    "/explainers/charon-question-mark-la-times/"
+    "/explainers/animal-orange-humans-green-deer-nyt-mini/",
+    "/explainers/get-a-smile-or-laugh-from-nyt-mini/",
+    "/explainers/dating-app-curvy-h-logo-nyt-mini/",
+    "/explainers/actress-zellweger-nyt-mini/",
+    "/explainers/apex-nyt-daily/",
+    "/explainers/criminals-sphere-nyt-daily/",
+    "/explainers/stop-in-the-afterlife-nyt-daily/",
+    "/explainers/natural-wonder-in-venezuela-nyt-daily/",
+    "/explainers/caitlin-clarks-league-nyt-daily/"
   ],
   "answerUrls": [],
   "clinicUrls": [
-    "/daily-clue-clinic/2026-08-23/"
+    "/daily-clue-clinic/2026-08-24/"
   ],
   "hubUrls": [
     "/",
@@ -19,6 +24,7 @@
     "/crossword-answers-by-length/",
     "/crossword-answers/5-letters/",
     "/crossword-answers/4-letters/",
-    "/la-times-crossword-answers/"
+    "/nyt-mini-crossword-clues/",
+    "/nyt-crossword-clues/"
   ]
 }

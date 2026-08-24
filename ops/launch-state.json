@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T10:09:58+08:00",
+  "updatedAt": "2026-08-24T10:19:50+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -75,8 +75,8 @@
     }
   },
   "content": {
-    "indexablePages": 289,
-    "reviewedClues": 120,
+    "indexablePages": 299,
+    "reviewedClues": 129,
     "answerMeaningPages": 110,
     "dictionaryExpansion": {
       "profilesAdded": 74,
@@ -91,8 +91,8 @@
     },
     "samePuzzleInternalLinking": {
       "enabledAt": "2026-08-24T09:34:03+08:00",
-      "linkedExplainerPages": 101,
-      "publicationDateGroups": 21,
+      "linkedExplainerPages": 110,
+      "publicationDateGroups": 23,
       "maximumSiblingLinksPerPage": 4,
       "userValue": "Continue through selected independently explained clues from the same publisher puzzle date",
       "rightsBoundary": "Selected reviewed pages only; no complete puzzle or answer list",
@@ -308,8 +308,8 @@
       "USA TODAY Crossword"
     ],
     "lastPublishedSourceDates": {
-      "NYT Mini": "2026-08-23",
-      "The New York Times Crossword": "2026-08-23",
+      "NYT Mini": "2026-08-24",
+      "The New York Times Crossword": "2026-08-24",
       "LA Times Crossword": "2026-08-23",
       "USA TODAY Crossword": "2026-08-23"
     },
@@ -345,10 +345,13 @@
       }
     },
     "latestFreshnessBatch": {
-      "publication": "LA Times Crossword",
-      "sourceDate": "2026-08-23",
-      "selectedClues": 4,
-      "selectionReason": "Official picker date verified first; selected exact pairs independently checked for entity, language, and wordplay accuracy",
+      "sourceDate": "2026-08-24",
+      "selectedClues": 9,
+      "publications": [
+        { "publication": "NYT Mini", "selectedClues": 4, "confidence": "Medium exact-source confidence plus independent fact/entity review" },
+        { "publication": "The New York Times Crossword", "selectedClues": 5, "confidence": "High; public clue numbers and pairs visible on XWord Info" }
+      ],
+      "selectionReason": "Distinctive facts, entities, wordplay, and concise definitions likely to produce same-day exact-query demand",
       "rightsBoundary": "Selected clues only; no grid or complete answer list"
     }
   },
