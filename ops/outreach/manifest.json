@@ -4,7 +4,7 @@
     "name": "Crossword Clue Tutor",
     "email": "hello@crosswordcluetutor.com"
   },
-  "status": "outreach_expansion_ready",
+  "status": "outreach_sent",
   "datasetEvidence": {
     "clueFamilies": 15,
     "reviewedCandidates": 328,
@@ -240,10 +240,11 @@
       "recipient": "submit@teachthought.com",
       "subject": "Article idea: crossword clues as evidence-based vocabulary practice",
       "textFile": "messages/teachthought-article-idea.txt",
-      "gmailDraftStatus": "local_draft_ready",
+      "gmailDraftStatus": "sent",
       "gmailDraftCreatedAt": null,
       "approvalRequired": true,
-      "sentAt": null,
+      "sentAt": "2026-08-24T09:20:41+08:00",
+      "messageId": "1a0315afc2475330",
       "sourcePage": "https://www.teachthought.com/submit-article-teachthought/"
     },
     {
@@ -253,10 +254,11 @@
       "recipient": "xwordguy99@gmail.com",
       "subject": "Free clue-ambiguity dataset for constructor resources",
       "textFile": "messages/cruciverb-ambiguity-resource.txt",
-      "gmailDraftStatus": "local_draft_ready",
+      "gmailDraftStatus": "sent",
       "gmailDraftCreatedAt": null,
       "approvalRequired": true,
-      "sentAt": null,
+      "sentAt": "2026-08-24T09:20:56+08:00",
+      "messageId": "1a0315b393de0502",
       "sourcePage": "https://cruciverb.com/index.php?action=ezportal%3Bsa%3Dpage%3Bp%3D7"
     }
   ]

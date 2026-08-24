@@ -1,8 +1,15 @@
 {
-  "updatedAt": "2026-08-24T09:16:59+08:00",
+  "updatedAt": "2026-08-24T09:24:46+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
+    "twoWeekUniqueVisitorTarget": {
+      "minimum": 500,
+      "stretch": 1000,
+      "windowStart": "2026-08-19T09:23:00+08:00",
+      "deadline": "2026-09-02T09:23:00+08:00",
+      "measurement": "Non-operator unique visitors in Pageview or GA4; GSC clicks are acquisition evidence but are not assumed unique"
+    },
     "deadline": "2026-09-02T09:23:00+08:00",
     "currentNetHumanSessions": 1,
     "measurementRule": "Count only non-operator sessions with a verified external search referrer; direct and unknown traffic remains unverified.",
@@ -321,38 +328,65 @@
     "googleIndexedPagesEvidence": "Minimum confirmed by URL Inspection; aggregate Pages report is still processing",
     "googleHomepageIndexStatus": "URL is on Google; page is indexed; HTTPS valid",
     "googleDiffuseIndexStatus": "URL unknown to Google; no crawl yet; no referring sitemap detected in URL Inspection",
-    "googlePerformanceLastUpdate": "2026-08-20T11:53:00+08:00",
-    "googlePerformanceCheckedAt": "2026-08-22T15:48:30+08:00",
+    "googlePerformanceLastUpdate": "2026-08-24T02:00:00+08:00",
+    "googlePerformanceCheckedAt": "2026-08-24T09:24:46+08:00",
     "googlePerformanceDashboardFreshness": "User-supplied GSC latest-24-hours workbook export",
     "googleQueryEvidence": [
       {
         "period": "Latest 24 hours",
-        "query": "tutor crossword clue",
-        "impressions": 1,
-        "averagePosition": 26,
+        "query": "blank dixon line",
+        "impressions": 49,
+        "averagePosition": 5.16,
         "clicks": 0,
-        "country": "Not attributable from dimension-separated export",
-        "recordedAt": "2026-08-22T15:48:30+08:00",
-        "source": "crosswordcluetutor.com-Performance-on-Search-2026-08-22.xlsx"
+        "recordedAt": "2026-08-24T09:24:46+08:00",
+        "source": "crosswordcluetutor.com-Performance-on-Search-2026-08-24.xlsx"
+      },
+      {
+        "period": "Latest 24 hours",
+        "query": "japanese for folding paper nyt",
+        "impressions": 44,
+        "averagePosition": 10,
+        "clicks": 0,
+        "recordedAt": "2026-08-24T09:24:46+08:00",
+        "source": "crosswordcluetutor.com-Performance-on-Search-2026-08-24.xlsx"
+      },
+      {
+        "period": "Latest 24 hours",
+        "query": "paper and pencil game nyt",
+        "impressions": 30,
+        "averagePosition": 8.1,
+        "clicks": 0,
+        "recordedAt": "2026-08-24T09:24:46+08:00",
+        "source": "crosswordcluetutor.com-Performance-on-Search-2026-08-24.xlsx"
       }
     ],
     "googlePerformanceSnapshot": {
       "period": "Latest 24 hours",
       "searchType": "Web",
-      "landingPage": "https://crosswordcluetutor.com/",
-      "impressions": 4,
-      "clicks": 0,
-      "averagePosition": 18,
+      "window": "2026-08-23T03:00:00+08:00 through 2026-08-24T02:59:59+08:00",
+      "impressions": 872,
+      "clicks": 4,
+      "clickThroughRate": 0.004587,
+      "averagePosition": 8.34,
       "countries": {
-        "United Kingdom": { "impressions": 2, "averagePosition": 17 },
-        "United States": { "impressions": 1, "averagePosition": 9 },
-        "Hong Kong": { "impressions": 1, "averagePosition": 29 }
+        "United States": { "clicks": 2, "impressions": 675, "clickThroughRate": 0.003, "averagePosition": 8.45 },
+        "Canada": { "clicks": 0, "impressions": 70, "clickThroughRate": 0, "averagePosition": 6.87 },
+        "Australia": { "clicks": 1, "impressions": 25, "clickThroughRate": 0.04, "averagePosition": 6.92 },
+        "Switzerland": { "clicks": 1, "impressions": 2, "clickThroughRate": 0.5, "averagePosition": 3.5 }
       },
       "devices": {
-        "Mobile": { "impressions": 3, "averagePosition": 15.33 },
-        "Desktop": { "impressions": 1, "averagePosition": 26 }
+        "Mobile": { "clicks": 4, "impressions": 667, "clickThroughRate": 0.006, "averagePosition": 8.06 },
+        "Desktop": { "clicks": 0, "impressions": 165, "clickThroughRate": 0, "averagePosition": 9.46 },
+        "Tablet": { "clicks": 0, "impressions": 40, "clickThroughRate": 0, "averagePosition": 8.4 }
       },
-      "decision": "Evidence is too sparse for a title rewrite or new exact-query page; continue current coverage and wait for a larger query sample."
+      "topLandingPages": [
+        { "route": "/explainers/paper-and-pencil-game-missing-ps-nyt-mini/", "clicks": 3, "impressions": 118, "clickThroughRate": 0.0254, "averagePosition": 6.08 },
+        { "route": "/explainers/like-someone-who-unplugs-completely-usa-today/", "clicks": 1, "impressions": 45, "clickThroughRate": 0.0222, "averagePosition": 7.2 },
+        { "route": "/explainers/blank-dixon-line-nyt-mini/", "clicks": 0, "impressions": 138, "clickThroughRate": 0, "averagePosition": 6.17 },
+        { "route": "/explainers/japanese-for-folding-paper-nyt-mini/", "clicks": 0, "impressions": 97, "clickThroughRate": 0, "averagePosition": 9.39 }
+      ],
+      "settledSevenDayContext": { "impressions": 15, "clicks": 0, "source": "User-supplied dashboard reading; standard report may lag the latest 24-hour preview" },
+      "decision": "Keep exact daily clue pages as the acquisition wedge. The visibility jump is real but most rankings are positions 5-11. Unique clue-led descriptions were deployed after this window, so do not rewrite titles again before 2026-08-27; first measure recrawl and CTR by landing page."
     },
     "googleIndexingReportStatus": "Processing data; check again in a day or so",
     "googleLinksReportStatus": "Processing data; check again in a day or so",
@@ -430,8 +464,8 @@
       "dryRun": "TRAFFIC_DRY_RUN=1",
       "verifiedAt": "2026-08-21T07:55:28+08:00"
     },
-    "searchImpressions": 4,
-    "searchClicks": 0,
+    "searchImpressions": 872,
+    "searchClicks": 4,
     "indexNowSubmittedUrls": 543,
     "indexNowBackfill": {
       "status": "Completed",
@@ -455,9 +489,9 @@
     "lastDeployStatus": "Success"
   },
   "outreach": {
-    "verifiedAt": "2026-08-24T09:16:59+08:00",
-    "readyForApproval": 2,
-    "sent": 10,
+    "verifiedAt": "2026-08-24T09:24:46+08:00",
+    "readyForApproval": 0,
+    "sent": 12,
     "formsSubmitted": 4,
     "formsBlocked": 1,
     "educationFormsBlocked": 1,
@@ -468,21 +502,18 @@
     "liveExternalListings": 0,
     "outreachRepliesSent": 1,
     "nextListingCheckNotBefore": "2026-08-25T13:24:04+08:00",
-    "readyTargets": [
-      "TeachThought editorial submissions",
-      "Cruciverb constructor resource center"
-    ],
+    "readyTargets": [],
     "executionAssets": {
       "manifest": "ops/outreach/manifest.json",
       "individualEmailDrafts": 12,
       "gmailDraftsReadyForReview": 0,
-      "localEmailDraftsReadyForReview": 2,
+      "localEmailDraftsReadyForReview": 0,
       "structuredFormPayloads": 6,
       "validationCommand": "npm run outreach:check",
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 110 meaning entries",
-      "transmissionStatus": "Ten unique email targets were sent and four forms were submitted. Two new tailored local drafts for TeachThought and Cruciverb are reviewed but not transmitted. The FreeTech4Teachers legacy Weebly form was attempted but is not counted because its email field cleared and no receipt appeared. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
+      "transmissionStatus": "Twelve unique email targets were sent and four forms were submitted. TeachThought and Cruciverb were sent with user confirmation on August 24. The FreeTech4Teachers legacy Weebly form was attempted but is not counted because its email field cleared and no receipt appeared. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
     },
-    "approvalNeeded": "Fresh approval to send the reviewed TeachThought and Cruciverb emails",
+    "approvalNeeded": null,
     "senderSetup": {
       "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
       "inboundDestination": "masling@gmail.com",
