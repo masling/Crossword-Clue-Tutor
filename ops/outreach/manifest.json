@@ -39,7 +39,11 @@
       "sentAt": "2026-08-20T23:11:07+08:00",
       "messageId": "1a01fb9d74c939b8",
       "duplicateSentAt": "2026-08-22T09:43:57+08:00",
-      "duplicateMessageId": "1a027239164e5f17"
+      "duplicateMessageId": "1a027239164e5f17",
+      "responseReceivedAt": "2026-08-24T07:18:32+08:00",
+      "responseMessageId": "1a030eb366d7ea8e",
+      "replyStatus": "declined_not_a_fit",
+      "followUpStatus": "do_not_contact"
     },
     {
       "id": "onelook-dictionary",
@@ -126,7 +130,13 @@
       "submissionStatus": "submitted_user_confirmed",
       "phoneOmitted": true,
       "preparedAt": "2026-08-22T19:42:53+08:00",
-      "submissionEvidence": "The user manually completed the image reCAPTCHA and confirmed the form submission; the phone field remained blank."
+      "submissionEvidence": "The user manually completed the image reCAPTCHA and confirmed the form submission; the phone field remained blank.",
+      "responseReceivedAt": "2026-08-24T09:05:05+08:00",
+      "responseMessageId": "1a0314ce06d0e0bd",
+      "replyStatus": "forwarded_to_review_team",
+      "listingStatus": "under_consideration",
+      "expectedReviewWindow": "One to two months; TeachersFirst does not notify creators when a review is published.",
+      "reviewDiscoveryUrl": "https://www.teachersfirst.com/new.cfm"
     },
     {
       "id": "ateal-resource-library",

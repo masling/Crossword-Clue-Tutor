@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T09:44:44+08:00",
+  "updatedAt": "2026-08-24T10:02:09+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -113,6 +113,18 @@
     "solverCandidatePool": 406,
     "linkableGuides": 3,
     "classroomResources": 3,
+    "classroomProductReadiness": {
+      "status": "Directory-review beta",
+      "originalReviewedClues": 30,
+      "skillPacks": 6,
+      "cluesPerSkillPack": 5,
+      "worksheetExactSolveRate": "5/5 rank 1",
+      "difficultyLevels": ["introductory", "intermediate", "advanced"],
+      "gradeBands": ["6-8", "9-12"],
+      "studentAccountRequired": false,
+      "pricingStatus": "Deferred until data and experience gates are met",
+      "readinessReview": "research/2026-08-24-student-product-readiness.md"
+    },
     "classroomAnalyticsMode": "Cookie-free Pageview retained; GA4 omitted on Teacher guide, Classroom Solver, and printable worksheet",
     "visibleFeedSubscription": true,
     "linkableResearchPages": 1,
@@ -514,8 +526,10 @@
     "educationFormsBlocked": 1,
     "educationFormsSkipped": 1,
     "educationFormsPendingManual": 0,
-    "responses": 1,
+    "responses": 3,
     "listingCommitments": 1,
+    "directoryReviewsUnderConsideration": 1,
+    "declinedTargets": 1,
     "liveExternalListings": 0,
     "outreachRepliesSent": 1,
     "nextListingCheckNotBefore": "2026-08-25T13:24:04+08:00",
@@ -537,7 +551,7 @@
       "validationCommand": "npm run outreach:check",
       "followUpReportCommand": "npm run outreach:followups",
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 110 meaning entries",
-      "transmissionStatus": "Twelve unique email targets were sent and four forms were submitted. TeachThought and Cruciverb were sent with user confirmation on August 24. The FreeTech4Teachers legacy Weebly form was attempted but is not counted because its email field cleared and no receipt appeared. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
+      "transmissionStatus": "Twelve unique email targets were sent and four forms were submitted. TeachersFirst forwarded the resource to its review team for consideration; XWord Info declined and is marked do-not-contact. TeachThought and Cruciverb were sent with user confirmation on August 24. The FreeTech4Teachers legacy Weebly form was attempted but is not counted because its email field cleared and no receipt appeared. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
     },
     "approvalNeeded": null,
     "senderSetup": {

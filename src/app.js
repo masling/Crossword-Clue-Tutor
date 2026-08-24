@@ -3,10 +3,11 @@ import { clueHubCandidates, normalizeClue, normalizePattern, solveClues } from "
 const dataPromise = Promise.all([
   fetch("/assets/clues.json").then((response) => response.json()),
   fetch("/assets/answers.json").then((response) => response.json()),
-  fetch("/assets/clue-hubs.json").then((response) => response.json())
-]).then(([clues, answers, clueHubs]) => {
+  fetch("/assets/clue-hubs.json").then((response) => response.json()),
+  fetch("/assets/classroom-clues.json").then((response) => response.json())
+]).then(([clues, answers, clueHubs, classroomClues]) => {
   const hubClues = clueHubCandidates(clueHubs);
-  return { clues, answers, clueHubs, hubClues, solverClues: [...clues, ...hubClues] };
+  return { clues, answers, clueHubs, classroomClues, hubClues, solverClues: [...clues, ...hubClues] };
 });
 
 for (const link of document.querySelectorAll(".primary-nav a")) {
@@ -31,6 +32,7 @@ setupSavedCluesPage();
 setupAnswerReveals();
 setupRecentClues();
 setupDailyPractice();
+setupClassroomExamples();
 setupTrackedLinks();
 setupFeedbackForm();
 setupPrintButtons();
@@ -217,6 +219,25 @@ function setupDailyPractice() {
     try { localStorage.setItem(dailyPracticeKey, JSON.stringify(next)); } catch { /* private browsing may disable storage */ }
     render(next);
     trackProductEvent("daily_clinic_complete", { clinic_date: clinicDate, streak_days: next.streak });
+  });
+}
+
+async function setupClassroomExamples() {
+  const select = document.querySelector("[data-classroom-example]");
+  const root = document.querySelector('[data-tool-context="classroom"]');
+  const form = root?.querySelector("[data-solve-form]");
+  if (!select || !root || !form) return;
+
+  const { classroomClues } = await dataPromise;
+  const bySlug = new Map(classroomClues.map((item) => [item.slug, item]));
+  select.addEventListener("change", () => {
+    const item = bySlug.get(select.value);
+    if (!item) return;
+    form.elements.namedItem("clue").value = item.clue;
+    form.elements.namedItem("pattern").value = "";
+    form.elements.namedItem("length").value = item.answer.length;
+    trackProductEvent("classroom_example_select", { skill: item.skill, difficulty: item.difficulty });
+    root.scrollIntoView({ block: "start" });
   });
 }
 
@@ -526,8 +547,9 @@ function setupSolveForm(root) {
       has_pattern: Boolean(pattern),
       has_length: Boolean(length)
     });
-    const { solverClues } = await dataPromise;
-    const matches = solveClues(solverClues, { clue, pattern, length }).slice(0, 5);
+    const { solverClues, classroomClues } = await dataPromise;
+    const candidatePool = context === "classroom" ? [...classroomClues, ...solverClues] : solverClues;
+    const matches = solveClues(candidatePool, { clue, pattern, length }).slice(0, 5);
     renderSolveResults(results, matches, { clue, pattern, length, context });
   });
 }
@@ -550,7 +572,9 @@ function setupExplainForm(root) {
     }
     trackProductEvent("explanation_submit", { tool_context: root.dataset.toolContext || "standalone" });
     const data = await dataPromise;
-    const candidates = solveClues(data.solverClues, { clue, length: answer.length }).filter((item) => item.answer === answer);
+    const context = root.dataset.toolContext || "standalone";
+    const candidatePool = context === "classroom" ? [...data.classroomClues, ...data.solverClues] : data.solverClues;
+    const candidates = solveClues(candidatePool, { clue, length: answer.length }).filter((item) => item.answer === answer);
     const exact = candidates.find((item) => normalizeClue(item.clue) === normalizeClue(clue));
     const close = candidates[0];
     const profile = data.answers.find((item) => item.answer === answer);

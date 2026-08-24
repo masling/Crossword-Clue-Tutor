@@ -77,7 +77,7 @@ for (const [description, files] of indexableDescriptions) {
   if (files.length > 1) errors.push(`duplicate meta description across ${files.join(", ")}: ${description}`);
 }
 
-for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/social-card.png", "assets/logo-192.png", "assets/logo-512.png", "assets/clues.json", "assets/answers.json", "assets/clue-hubs.json", "assets/clue-hubs.csv", "assets/onelook-dictionary.txt", "favicon.svg", "favicon-32x32.png", "favicon-16x16.png", "apple-touch-icon.png", "manifest.webmanifest", "robots.txt", "sitemap.xml", "feed.xml"]) {
+for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/social-card.png", "assets/logo-192.png", "assets/logo-512.png", "assets/clues.json", "assets/classroom-clues.json", "assets/answers.json", "assets/clue-hubs.json", "assets/clue-hubs.csv", "assets/onelook-dictionary.txt", "favicon.svg", "favicon-32x32.png", "favicon-16x16.png", "apple-touch-icon.png", "manifest.webmanifest", "robots.txt", "sitemap.xml", "feed.xml"]) {
   try {
     await access(path.join(dist, asset));
   } catch {
@@ -88,6 +88,7 @@ for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "
 const appScript = await readFile(path.join(dist, "assets/app.js"), "utf8");
 const solverScript = await readFile(path.join(dist, "assets/solver.mjs"), "utf8");
 if (!appScript.includes('fetch("/assets/clue-hubs.json")') || !appScript.includes("solverClues")) errors.push("solver app is not loading the multi-answer clue hub candidate pool");
+if (!appScript.includes('fetch("/assets/classroom-clues.json")') || !appScript.includes("classroom_example_select") || !appScript.includes('namedItem("length")')) errors.push("solver app is missing the original classroom clue library, example interaction, or safe length-field binding");
 if (!appScript.includes("beforeinstallprompt") || !appScript.includes("pwa_install_choice")) errors.push("app script is missing the install-app interaction");
 if (!solverScript.includes("clueHubCandidates")) errors.push("solver module is missing the clue-hub adapter");
 
@@ -290,9 +291,10 @@ if (!vocabularyGuide.includes("How to use crossword clues for vocabulary learnin
 if (!vocabularyGuide.includes("/solver/") || !vocabularyGuide.includes("/research/ambiguous-crossword-clues/")) errors.push("vocabulary guide is missing its teaching assets");
 if (!vocabularyGuide.includes('"learningResourceType":"Lesson plan"')) errors.push("vocabulary guide is missing learning-resource structured data");
 if (!vocabularyGuide.includes("/classroom-solver/") || !vocabularyGuide.includes("/educators/crossword-vocabulary-worksheet/")) errors.push("vocabulary guide is missing classroom tool links");
+if (!vocabularyGuide.includes("30 original, reviewed practice clues")) errors.push("vocabulary guide is missing the reviewed classroom library evidence");
 const classroomSolverPage = await readFile(path.join(dist, "classroom-solver/index.html"), "utf8");
 if (!classroomSolverPage.includes('content="minimal"') || classroomSolverPage.includes("googletagmanager.com") || !classroomSolverPage.includes("app.pageview.app")) errors.push("classroom solver is not in cookie-free minimal analytics mode");
-if (!classroomSolverPage.includes("data-tool-root") || !classroomSolverPage.includes('"learningResourceType":"Interactive tool"')) errors.push("classroom solver is missing its tool or learning-resource data");
+if (!classroomSolverPage.includes('data-tool-context="classroom"') || !classroomSolverPage.includes("data-classroom-example") || !classroomSolverPage.includes("30 original, reviewed clues") || !classroomSolverPage.includes('"learningResourceType":"Interactive tool"')) errors.push("classroom solver is missing its classroom-scoped tool, reviewed clue picker, or learning-resource data");
 const worksheetPage = await readFile(path.join(dist, "educators/crossword-vocabulary-worksheet/index.html"), "utf8");
 if (!worksheetPage.includes('content="minimal"') || worksheetPage.includes("googletagmanager.com") || !worksheetPage.includes("app.pageview.app")) errors.push("worksheet is not in cookie-free minimal analytics mode");
 for (const answer of ["CONNOTATION", "EASE", "RELIABLE", "CONTEXT", "ANTONYM"]) if (!worksheetPage.includes(answer)) errors.push(`worksheet is missing original answer ${answer}`);

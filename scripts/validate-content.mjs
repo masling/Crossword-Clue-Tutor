@@ -6,7 +6,7 @@ const REQUIRED_CLUE_FIELDS = [
   "tags", "clueType", "signal", "hint", "reviewedAt"
 ];
 
-export function validateContent({ clues, answers, clueTypes, publications, clueHubs, config }) {
+export function validateContent({ clues, answers, clueTypes, publications, clueHubs, classroomClues = [], config }) {
   const errors = [];
   const warnings = [];
   const clueSlugs = new Set();
@@ -116,6 +116,32 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
     }
   }
 
+  const classroomSkills = new Set(["context-and-meaning", "word-structure", "academic-language", "science-vocabulary", "language-arts", "precision-and-revision"]);
+  const classroomDifficulties = new Set(["introductory", "intermediate", "advanced"]);
+  const classroomSlugs = new Set();
+  if (!Array.isArray(classroomClues) || classroomClues.length < 5) {
+    errors.push("classroomClues must contain at least five original reviewed clues");
+  } else {
+    for (const [index, clue] of classroomClues.entries()) {
+      const label = `classroomClues[${index}]`;
+      for (const field of REQUIRED_CLUE_FIELDS) {
+        if (clue[field] === undefined || clue[field] === "") errors.push(`${label} is missing ${field}`);
+      }
+      if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(clue.slug ?? "")) errors.push(`${label} has an invalid slug`);
+      if (classroomSlugs.has(clue.slug) || clueSlugs.has(clue.slug)) errors.push(`duplicate classroom clue slug: ${clue.slug}`);
+      classroomSlugs.add(clue.slug);
+      if (!/^[A-Z]+$/.test(clue.answer ?? "")) errors.push(`${label} answer must contain uppercase A-Z only`);
+      if ((clue.explanation ?? "").length < 55) errors.push(`${label} explanation is too short to be useful`);
+      if ((clue.hint ?? "").toUpperCase().includes(clue.answer ?? "__NO_ANSWER__")) errors.push(`${label} hint reveals the answer`);
+      if (!Array.isArray(clue.tags) || clue.tags.length < 2) errors.push(`${label} needs at least two tags`);
+      if (!Array.isArray(clue.gradeBands) || !clue.gradeBands.includes("6-8") || !clue.gradeBands.includes("9-12")) errors.push(`${label} must support grades 6-8 and 9-12`);
+      if (!classroomSkills.has(clue.skill)) errors.push(`${label} has unsupported skill ${clue.skill}`);
+      if (!classroomDifficulties.has(clue.difficulty)) errors.push(`${label} has unsupported difficulty ${clue.difficulty}`);
+      if (clue.sourceKind !== "original-classroom") errors.push(`${label} must be original-classroom content`);
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(clue.reviewedAt ?? "")) errors.push(`${label} reviewedAt must be YYYY-MM-DD`);
+    }
+  }
+
   if (config?.contentUpdatedAt && !/^\d{4}-\d{2}-\d{2}$/.test(config.contentUpdatedAt)) {
     errors.push("contentUpdatedAt must be YYYY-MM-DD");
   }
@@ -171,22 +197,23 @@ async function readJson(path) {
 }
 
 async function main() {
-  const [clues, answers, clueTypes, publications, clueHubs, config] = await Promise.all([
+  const [clues, answers, clueTypes, publications, clueHubs, classroomClues, config] = await Promise.all([
     readJson("data/clues.json"),
     readJson("data/answers.json"),
     readJson("data/clue-types.json"),
     readJson("data/publications.json"),
     readJson("data/clue-hubs.json"),
+    readJson("data/classroom-clues.json"),
     readJson("site.config.json")
   ]);
-  const result = validateContent({ clues, answers, clueTypes, publications, clueHubs, config });
+  const result = validateContent({ clues, answers, clueTypes, publications, clueHubs, classroomClues, config });
   for (const warning of result.warnings) console.warn(`warning: ${warning}`);
   if (result.errors.length) {
     for (const error of result.errors) console.error(`error: ${error}`);
     process.exitCode = 1;
     return;
   }
-  console.log(`Content valid: ${clues.length} clues, ${answers.length} answers, ${clueTypes.length} clue types.`);
+  console.log(`Content valid: ${clues.length} clues, ${classroomClues.length} classroom clues, ${answers.length} answers, ${clueTypes.length} clue types.`);
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
