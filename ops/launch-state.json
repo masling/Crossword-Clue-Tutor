@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T13:11:32+08:00",
+  "updatedAt": "2026-08-24T13:14:21+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -132,13 +132,20 @@
         "migration": "0002_add_teacher_pilot_feedback.sql applied successfully to crossword-clue-tutor-feedback at 2026-08-24T12:44:00+08:00 with Cloudflare automatic backup",
         "evidenceFields": ["educator role", "grade band", "sessions completed", "skill pack", "reviewed-answer match rating", "classroom usefulness rating", "reuse intent", "comments", "optional follow-up email"],
         "privacyBoundary": "No student names or student work requested; no raw IP address or user agent stored; optional email is only for clarifying the submitted report",
-        "pilotProofBoundary": "Engineering hold-outs remain separate; full controlled-pilot proof requires five distinct educators to complete two sessions and submit structured feedback. Only reports with a normalized optional email can count as distinct verified participants; anonymous reports remain qualitative evidence."
+        "pilotProofBoundary": "Engineering hold-outs remain separate; full controlled-pilot proof requires five distinct educators to complete two sessions and submit structured feedback. Only reports with a normalized optional email can count as distinct verified participants; anonymous reports remain qualitative evidence.",
+        "latestAggregate": {
+          "recordedAt": "2026-08-24T13:12:21+08:00",
+          "totalTeacherReports": 0,
+          "reportsWithTwoSessions": 0,
+          "verifiedDistinctEducators": 0,
+          "privacy": "Aggregate-only query; no email addresses or message text were read or recorded"
+        }
       },
       "teacherPilotKit": {
         "route": "/educators/crossword-vocabulary-pilot/",
         "sessions": 2,
         "minutesPerSession": 20,
-        "status": "Production verified; participant-verification copy update included in the pending commit",
+        "status": "Production verified, indexed in sitemap, and linked from the classroom solver, skill-pack hub, feedback page, and footer",
         "coverage": "Goals, materials, preparation, timed procedure, assessment, differentiation, extension, observation prompts, privacy boundary, and structured feedback handoff",
         "externalUse": "Prepared as a complete original Grades 6-12 lesson plan for educator recruitment and editorial resource submission"
       },
@@ -276,12 +283,12 @@
       "visualQa": "Verified at 1280x900 and 390x844"
     },
     "internalLinkAudit": {
-      "verifiedAt": "2026-08-24T11:31:32+08:00",
+      "verifiedAt": "2026-08-24T13:09:10+08:00",
       "orphanPages": 0,
       "unreachableFromHome": 0,
       "maximumClickDepth": 3,
       "buildGate": "Fail when any indexable page has no inbound HTML link, is unreachable from home, or exceeds depth 3.",
-      "productionEvidence": "305/305 sitemap URLs crawled; 0 orphans; 0 unreachable; maximum depth 3"
+      "productionEvidence": "331/331 sitemap URLs accounted for; 0 orphans; 0 unreachable; maximum depth 3. The only full-crawl fetch failure, /explain/, passed an immediate focused HTTP and metadata retry."
     },
     "selectionPolicy": "Routine same-day coverage is independent of trends and historical keyword volume. Use Bing, Google Trends, and Search Console afterward to backfill missed dates and expand materially undercovered queries or topics.",
     "latestDemandBackfill": {
@@ -492,10 +499,10 @@
     "bingSiteScanRemediation": "Generated titles are capped at 70 characters. A full production crawl verified 0 long-title pages; Bing rescan remains unavailable until its page quota resets.",
     "bingSiteScanRescanStatus": "Start-new-scan form reports 0 pages of quota remaining",
     "productionSeoAudit": {
-      "auditedAt": "2026-08-24T11:31:32+08:00",
+      "auditedAt": "2026-08-24T13:09:10+08:00",
       "command": "npm run seo:audit-production",
-      "sitemapUrls": 305,
-      "pagesAudited": 305,
+      "sitemapUrls": 331,
+      "pagesAudited": 331,
       "pagesWithErrors": 0,
       "duplicateSitemapUrls": 0,
       "invalidLastmod": 0,
@@ -508,6 +515,7 @@
       "titleTooLong": 0,
       "longestTitleCharacters": 70,
       "longestTitleRoute": "/educators/crossword-vocabulary-packs/digital-literacy/",
+      "transientRetry": "/explain/ initially returned fetch failed during the full crawl; focused retry returned HTTP 200 with the expected canonical, title, description, and H1, so it is not counted as a production page error.",
       "checks": [
         "HTTP 200 and HTML content type",
         "Canonical URL",
