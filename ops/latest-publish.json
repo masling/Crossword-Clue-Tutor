@@ -1,16 +1,15 @@
 {
-  "publishedAt": "2026-08-24T02:19:29.888Z",
-  "input": "ops/intake/2026-08-24-nyt-sources-routine.json",
+  "publishedAt": "2026-08-24T04:19:30.723Z",
+  "input": "ops/intake/2026-08-24-lat-usa-routine.json",
   "urls": [
-    "/explainers/animal-orange-humans-green-deer-nyt-mini/",
-    "/explainers/get-a-smile-or-laugh-from-nyt-mini/",
-    "/explainers/dating-app-curvy-h-logo-nyt-mini/",
-    "/explainers/actress-zellweger-nyt-mini/",
-    "/explainers/apex-nyt-daily/",
-    "/explainers/criminals-sphere-nyt-daily/",
-    "/explainers/stop-in-the-afterlife-nyt-daily/",
-    "/explainers/natural-wonder-in-venezuela-nyt-daily/",
-    "/explainers/caitlin-clarks-league-nyt-daily/"
+    "/explainers/dancing-queen-pop-group-la-times/",
+    "/explainers/copperhead-road-singer-steve-la-times/",
+    "/explainers/respect-singer-franklin-la-times/",
+    "/explainers/teenage-dream-singer-perry-la-times/",
+    "/explainers/lady-marmalade-singer-labelle-usa-today/",
+    "/explainers/lost-star-daniel-kim-usa-today/",
+    "/explainers/art-of-creative-knotting-title-usa-today/",
+    "/explainers/work-with-a-singer-usa-today/"
   ],
   "answerUrls": [],
   "clinicUrls": [
@@ -22,9 +21,11 @@
     "/daily-clue-clinic/",
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
-    "/crossword-answers/5-letters/",
     "/crossword-answers/4-letters/",
-    "/nyt-mini-crossword-clues/",
-    "/nyt-crossword-clues/"
+    "/crossword-answers/5-letters/",
+    "/crossword-answers/6-letters/",
+    "/crossword-answers/3-letters/",
+    "/la-times-crossword-answers/",
+    "/usa-today-crossword-answers/"
   ]
 }

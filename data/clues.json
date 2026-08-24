@@ -2822,5 +2822,181 @@
     "publication": "The New York Times Crossword",
     "sourceDate": "2026-08-24",
     "clueNumber": "27-Down"
+  },
+  {
+    "slug": "dancing-queen-pop-group-la-times",
+    "clue": "\"Dancing Queen\" pop group",
+    "answer": "ABBA",
+    "date": "2026-08-24",
+    "popularity": 100,
+    "definition": "ABBA is a Swedish pop group whose 1976 hit \"Dancing Queen\" became one of its signature songs.",
+    "explanation": "ABBA fits because the four-letter Swedish group recorded and released \"Dancing Queen,\" the song named directly in the clue.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Dancing Queen",
+      "Swedish pop",
+      "music group"
+    ],
+    "clueType": "proper-noun",
+    "signal": "A quoted song title followed by an entity category asks for the group associated with that recording.",
+    "hint": "Think of a four-letter Swedish pop quartet whose name reads the same forward and backward.",
+    "reviewedAt": "2026-08-24",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "1-Across"
+  },
+  {
+    "slug": "copperhead-road-singer-steve-la-times",
+    "clue": "\"Copperhead Road\" singer Steve",
+    "answer": "EARLE",
+    "date": "2026-08-24",
+    "popularity": 97,
+    "definition": "Steve Earle is an American singer-songwriter who wrote and recorded the 1988 song \"Copperhead Road.\"",
+    "explanation": "EARLE fits because it is the five-letter surname of Steve Earle, the singer-songwriter identified by the quoted song title.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Steve Earle",
+      "Copperhead Road",
+      "singer-songwriter"
+    ],
+    "clueType": "proper-noun",
+    "signal": "The clue supplies a first name and a well-known song title, so the missing information is the performer's surname.",
+    "hint": "Supply the five-letter surname of the singer-songwriter whose 1988 hit became a Tennessee state song.",
+    "reviewedAt": "2026-08-24",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "21-Across"
+  },
+  {
+    "slug": "respect-singer-franklin-la-times",
+    "clue": "\"Respect\" singer Franklin",
+    "answer": "ARETHA",
+    "date": "2026-08-24",
+    "popularity": 100,
+    "definition": "Aretha Franklin was an American singer whose 1967 recording of \"Respect\" became a defining hit.",
+    "explanation": "ARETHA fits because it is Franklin's six-letter first name, and \"Respect\" identifies the singer known as the Queen of Soul.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Aretha Franklin",
+      "Respect",
+      "soul music"
+    ],
+    "clueType": "proper-noun",
+    "signal": "A quoted song title plus surname conventionally asks for the performer's first name.",
+    "hint": "Enter the six-letter first name of the singer widely called the Queen of Soul.",
+    "reviewedAt": "2026-08-24",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "4-Down"
+  },
+  {
+    "slug": "teenage-dream-singer-perry-la-times",
+    "clue": "\"Teenage Dream\" singer Perry",
+    "answer": "KATY",
+    "date": "2026-08-24",
+    "popularity": 100,
+    "definition": "Katy Perry is an American pop singer whose album and title song are both named \"Teenage Dream.\"",
+    "explanation": "KATY fits because it is Perry's four-letter first name, while the quoted title points specifically to her pop recording and album.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Katy Perry",
+      "Teenage Dream",
+      "pop music"
+    ],
+    "clueType": "proper-noun",
+    "signal": "The surname and quoted song title identify a performer and ask for her first name.",
+    "hint": "Look for the four-letter first name of the pop singer whose candy-colored 2010 album shares this title.",
+    "reviewedAt": "2026-08-24",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "26-Down"
+  },
+  {
+    "slug": "lady-marmalade-singer-labelle-usa-today",
+    "clue": "\"Lady Marmalade\" singer LaBelle",
+    "answer": "PATTI",
+    "date": "2026-08-24",
+    "popularity": 100,
+    "definition": "Patti LaBelle is an American singer who performed the original hit version of \"Lady Marmalade\" with the group Labelle.",
+    "explanation": "PATTI fits because it is LaBelle's five-letter first name, and the quoted song title identifies her signature 1974 recording with Labelle.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Patti LaBelle",
+      "Lady Marmalade",
+      "soul music"
+    ],
+    "clueType": "proper-noun",
+    "signal": "A song title followed by a surname asks for the singer's first name.",
+    "hint": "Enter the five-letter first name of the vocalist who fronted the group Labelle.",
+    "reviewedAt": "2026-08-24",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "29-Across"
+  },
+  {
+    "slug": "lost-star-daniel-kim-usa-today",
+    "clue": "\"Lost\" star Daniel ___ Kim",
+    "answer": "DAE",
+    "date": "2026-08-24",
+    "popularity": 98,
+    "definition": "Daniel Dae Kim is a Korean American actor known for playing Jin-Soo Kwon on the television series \"Lost.\"",
+    "explanation": "DAE fits because it is the actor's three-letter middle name, completing Daniel Dae Kim as requested by the blank.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Daniel Dae Kim",
+      "Lost",
+      "television actor"
+    ],
+    "clueType": "fill-in-blank",
+    "signal": "The quoted series title identifies the actor, and the blank sits between his first and last names.",
+    "hint": "The blank is the actor's three-letter middle name, not the name of his character Jin.",
+    "reviewedAt": "2026-08-24",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "24-Down"
+  },
+  {
+    "slug": "art-of-creative-knotting-title-usa-today",
+    "clue": "\"___: The Art of Creative Knotting\"",
+    "answer": "MACRAME",
+    "date": "2026-08-24",
+    "popularity": 94,
+    "definition": "Macramé is a textile craft that creates decorative objects by tying cords into patterns of knots.",
+    "explanation": "MACRAME fits because \"Macramé: The Art of Creative Knotting\" is the complete title; the accent is omitted in the seven-letter crossword entry.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "macrame",
+      "creative knotting",
+      "textile craft"
+    ],
+    "clueType": "fill-in-blank",
+    "signal": "The colon and subtitle show that the blank is the main title, while \"Creative Knotting\" defines the craft.",
+    "hint": "Name the seven-letter decorative knotting craft; crossword entries normally omit its accent mark.",
+    "reviewedAt": "2026-08-24",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "30-Across"
+  },
+  {
+    "slug": "work-with-a-singer-usa-today",
+    "clue": "Work with a Singer",
+    "answer": "SEW",
+    "date": "2026-08-24",
+    "popularity": 96,
+    "definition": "To sew is to join or decorate fabric by passing thread through it with a needle or sewing machine.",
+    "explanation": "SEW fits because Singer is capitalized as the sewing-machine brand; the three-letter verb describes the work done with one of its machines.",
+    "partOfSpeech": "verb",
+    "tags": [
+      "Singer",
+      "sewing machine",
+      "brand wordplay"
+    ],
+    "clueType": "wordplay",
+    "signal": "The unexpected capital letter turns an ordinary occupation into a brand-name reference.",
+    "hint": "Read the capitalized word as a machine brand and name the three-letter fabric-and-thread task performed with it.",
+    "reviewedAt": "2026-08-24",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-24",
+    "clueNumber": "28-Down"
   }
 ]
