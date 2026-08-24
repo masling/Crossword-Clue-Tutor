@@ -376,6 +376,15 @@ function setupTrackedLinks() {
       if (link) trackProductEvent("related_clue_click", { page_path: location.pathname });
     });
   }
+  for (const section of document.querySelectorAll("[data-same-puzzle-clues]")) {
+    section.addEventListener("click", (event) => {
+      const link = event.target.closest("a[href]");
+      if (link) trackProductEvent("same_puzzle_clue_click", {
+        page_path: location.pathname,
+        destination_path: link.pathname
+      });
+    });
+  }
 }
 
 function setupSavedClueButtons() {

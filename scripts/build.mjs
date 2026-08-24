@@ -595,7 +595,7 @@ for (const clue of clues) {
     ? `<section class="source-context"><h2>Where this clue appeared</h2><p>${escapeHtml(clue.clueNumber)} in ${escapeHtml(clue.publication)} puzzle for ${escapeHtml(formatDate(clue.sourceDate))}.</p>${publicationHub ? `<a class="text-link" href="${publicationHub.route}">Browse selected ${escapeHtml(clue.publication)} clues →</a>` : ""}</section>`
     : "";
   const samePuzzleContext = samePuzzle.length
-    ? `<section class="same-puzzle-clues"><h2>More selected clues from ${escapeHtml(clue.publication)} · ${escapeHtml(formatDate(clue.sourceDate))}</h2><p>Continue with independently explained clues from the same puzzle date. This is a selected learning set, not a complete answer list.</p>${clueRows(samePuzzle)}</section>`
+    ? `<section class="same-puzzle-clues" data-same-puzzle-clues><h2>More selected clues from ${escapeHtml(clue.publication)} · ${escapeHtml(formatDate(clue.sourceDate))}</h2><p>Continue with independently explained clues from the same puzzle date. This is a selected learning set, not a complete answer list.</p>${clueRows(samePuzzle)}</section>`
     : "";
   sourceContext += samePuzzleContext;
   const contentKind = clue.publication

@@ -96,7 +96,8 @@
       "maximumSiblingLinksPerPage": 4,
       "userValue": "Continue through selected independently explained clues from the same publisher puzzle date",
       "rightsBoundary": "Selected reviewed pages only; no complete puzzle or answer list",
-      "structuredRelationship": "Each published Article identifies its publication hub with Schema.org isPartOf"
+      "structuredRelationship": "Each published Article identifies its publication hub with Schema.org isPartOf",
+      "measurementEvent": "same_puzzle_clue_click"
     },
     "evergreenClueHubs": 15,
     "evergreenClueHubCandidates": 328,
