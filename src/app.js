@@ -22,6 +22,7 @@ for (const root of document.querySelectorAll("[data-tool-root]")) {
 
 const savedCluesKey = "crossword-clue-tutor:saved-clues";
 const recentCluesKey = "crossword-clue-tutor:recent-clues";
+const dailyPracticeKey = "crossword-clue-tutor:daily-practice:v1";
 const analyticsConsentKey = "crossword-clue-tutor:ga4-consent:v1";
 const pendingProductEvents = [];
 
@@ -29,6 +30,7 @@ setupSavedClueButtons();
 setupSavedCluesPage();
 setupAnswerReveals();
 setupRecentClues();
+setupDailyPractice();
 setupTrackedLinks();
 setupFeedbackForm();
 setupPrintButtons();
@@ -167,6 +169,55 @@ function setupPrintButtons() {
   for (const control of document.querySelectorAll("[data-print-page]")) {
     control.addEventListener("click", () => window.print());
   }
+}
+
+function setupDailyPractice() {
+  const root = document.querySelector("[data-daily-practice]");
+  const button = root?.querySelector("[data-daily-practice-complete]");
+  const title = root?.querySelector("[data-daily-practice-title]");
+  const status = root?.querySelector("[data-daily-practice-status]");
+  const clinicDate = root?.dataset.clinicDate;
+  if (!root || !button || !title || !status || !/^\d{4}-\d{2}-\d{2}$/.test(clinicDate ?? "")) return;
+
+  const readState = () => {
+    try {
+      const value = JSON.parse(localStorage.getItem(dailyPracticeKey) ?? "null");
+      if (!value || !/^\d{4}-\d{2}-\d{2}$/.test(value.lastDate ?? "")) return { lastDate: null, streak: 0, completions: 0 };
+      return { lastDate: value.lastDate, streak: Math.max(0, Number(value.streak) || 0), completions: Math.max(0, Number(value.completions) || 0) };
+    } catch {
+      return { lastDate: null, streak: 0, completions: 0 };
+    }
+  };
+
+  const daysBetween = (from, to) => Math.round((Date.parse(`${to}T00:00:00Z`) - Date.parse(`${from}T00:00:00Z`)) / 86_400_000);
+  const render = (state) => {
+    if (state.lastDate === clinicDate) {
+      title.textContent = `${state.streak}-day practice streak`;
+      status.textContent = `${state.completions} clinic${state.completions === 1 ? "" : "s"} completed on this device. Return for the next reviewed set.`;
+      button.textContent = "Clinic completed";
+      button.disabled = true;
+      return;
+    }
+    if (state.streak > 0) {
+      title.textContent = `Continue your ${state.streak}-day practice streak.`;
+      status.textContent = "Complete this latest clinic to keep the routine moving. Practice history stays only in this browser.";
+    }
+  };
+
+  render(readState());
+  button.addEventListener("click", () => {
+    const previous = readState();
+    if (previous.lastDate === clinicDate) return;
+    const difference = previous.lastDate ? daysBetween(previous.lastDate, clinicDate) : null;
+    const next = {
+      lastDate: clinicDate,
+      streak: difference === 1 ? previous.streak + 1 : 1,
+      completions: previous.completions + 1
+    };
+    try { localStorage.setItem(dailyPracticeKey, JSON.stringify(next)); } catch { /* private browsing may disable storage */ }
+    render(next);
+    trackProductEvent("daily_clinic_complete", { clinic_date: clinicDate, streak_days: next.streak });
+  });
 }
 
 function feedbackHref({ mode = "general", pagePath = location.pathname, clue = "", answer = "" } = {}) {

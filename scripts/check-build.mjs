@@ -3,6 +3,7 @@ import path from "node:path";
 
 const dist = path.resolve("dist");
 const errors = [];
+const indexableDescriptions = new Map();
 const htmlFiles = await walk(dist, (file) => file.endsWith(".html"));
 
 if (htmlFiles.length < 10) errors.push(`expected a multi-page build, found only ${htmlFiles.length} HTML files`);
@@ -16,6 +17,11 @@ for (const file of htmlFiles) {
   if (!title) errors.push(`${relative}: missing title`);
   else if (title.replace(/&(?:amp|quot|#039|lt|gt);/g, "x").length > 70) errors.push(`${relative}: title exceeds 70 characters`);
   if (!/<meta name="description" content="[^"]+">/.test(html)) errors.push(`${relative}: missing meta description`);
+  const description = html.match(/<meta name="description" content="([^"]+)">/)?.[1];
+  if (description && html.includes('content="index,follow')) {
+    if (!indexableDescriptions.has(description)) indexableDescriptions.set(description, []);
+    indexableDescriptions.get(description).push(relative);
+  }
   if (!/<link rel="canonical" href="https:\/\/[^\"]+">/.test(html)) errors.push(`${relative}: missing absolute canonical`);
   if (!/<link rel="icon" href="\/favicon-32x32\.png" type="image\/png" sizes="32x32">/.test(html)) errors.push(`${relative}: missing 32px PNG favicon`);
   if (!/<link rel="apple-touch-icon" href="\/apple-touch-icon\.png" sizes="180x180">/.test(html)) errors.push(`${relative}: missing Apple touch icon`);
@@ -65,6 +71,10 @@ for (const file of htmlFiles) {
       errors.push(`${relative}: broken internal link ${href}`);
     }
   }
+}
+
+for (const [description, files] of indexableDescriptions) {
+  if (files.length > 1) errors.push(`duplicate meta description across ${files.join(", ")}: ${description}`);
 }
 
 for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/social-card.png", "assets/logo-192.png", "assets/logo-512.png", "assets/clues.json", "assets/answers.json", "assets/clue-hubs.json", "assets/clue-hubs.csv", "assets/onelook-dictionary.txt", "favicon.svg", "favicon-32x32.png", "favicon-16x16.png", "apple-touch-icon.png", "manifest.webmanifest", "robots.txt", "sitemap.xml", "feed.xml"]) {
@@ -342,7 +352,7 @@ const privacyPage = await readFile(path.join(dist, "privacy/index.html"), "utf8"
 if (!privacyPage.includes("Cloudflare Web Analytics")) errors.push("privacy page is missing the production analytics disclosure");
 if (!privacyPage.includes("app.pageview.app")) errors.push("privacy page is missing the Pageview analytics disclosure");
 if (!privacyPage.includes("Google Analytics 4") || !privacyPage.includes("G-HVMXR2YN3N")) errors.push("privacy page is missing the GA4 analytics disclosure");
-if (!privacyPage.includes("Saved clues") || !privacyPage.includes("local storage")) errors.push("privacy page is missing the local saved-clue disclosure");
+if (!privacyPage.includes("Saved clues") || !privacyPage.includes("practice streaks") || !privacyPage.includes("local storage")) errors.push("privacy page is missing the local saved-clue or practice-history disclosure");
 if (!privacyPage.includes("When you submit feedback") || !privacyPage.includes("Email is optional") || !privacyPage.includes("raw IP address")) errors.push("privacy page is missing the feedback data disclosure");
 if (!privacyPage.includes("Reduced-analytics classroom pages") || !privacyPage.includes("cookie-free Pageview") || !privacyPage.includes("omit Google Analytics 4")) errors.push("privacy page is missing the classroom analytics disclosure");
 if (!privacyPage.includes("Google Analytics consent") || !privacyPage.includes("Google-certified TCF consent management platform")) errors.push("privacy page is missing regional consent or future AdSense CMP disclosure");
@@ -378,13 +388,16 @@ const savedCluesPage = await readFile(path.join(dist, "saved-clues/index.html"),
 if (!savedCluesPage.includes("data-saved-clues-root")) errors.push("saved clues page is missing its local rendering root");
 if (!savedCluesPage.includes("noindex,nofollow")) errors.push("saved clues page must remain out of the search index");
 if (sitemap.includes("/saved-clues/")) errors.push("sitemap must not include the personalized saved clues page");
+const latestClinicDate = clues.map((clue) => clue.date).sort().reverse()[0];
+const latestClinicPage = await readFile(path.join(dist, `daily-clue-clinic/${latestClinicDate}/index.html`), "utf8");
+if (!latestClinicPage.includes("data-daily-practice") || !latestClinicPage.includes("Mark this clinic complete")) errors.push("latest daily clinic is missing its local practice-streak control");
 const cluePage = await readFile(path.join(dist, "explainers/scientists-workplace-nyt-mini/index.html"), "utf8");
 if (!cluePage.includes("data-save-clue")) errors.push("reviewed clue pages are missing the save-clue control");
 if (!cluePage.includes("data-answer-reveal") || !cluePage.includes("data-nosnippet")) errors.push("reviewed clue pages are missing the spoiler-light answer reveal or snippet protection");
 if (!cluePage.includes('data-tool-context="explainer"') || !cluePage.includes("Solve the next clue here")) errors.push("reviewed clue pages are missing the next-clue solver continuation");
 if (!cluePage.includes("data-recent-clues") || !cluePage.includes("data-return-link")) errors.push("reviewed clue pages are missing local return paths");
 if (cluePage.includes("The answer is LAB")) errors.push("reviewed clue metadata must not reveal the answer in search snippets");
-for (const eventName of ["answer_reveal", "solver_submit", "save_clue", "clue_revisit", "return_path_click"]) {
+for (const eventName of ["answer_reveal", "solver_submit", "save_clue", "clue_revisit", "return_path_click", "daily_clinic_complete"]) {
   if (!appScript.includes(eventName)) errors.push(`app script is missing the ${eventName} product event`);
 }
 

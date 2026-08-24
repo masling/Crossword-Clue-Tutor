@@ -398,6 +398,11 @@ p { text-wrap: pretty; }
 .freshness-subscribe h2 { margin-bottom: 8px; font-size: clamp(1.55rem, 3vw, 2.25rem); }
 .freshness-subscribe p { max-width: 62ch; margin: 0; color: var(--muted); }
 .freshness-subscribe .button { flex: 0 0 auto; }
+.daily-practice-card { display: flex; align-items: center; justify-content: space-between; gap: 42px; margin-bottom: 44px; padding: 24px 28px; border: 1px solid var(--line-strong); border-radius: var(--radius); background: var(--accent-soft); }
+.daily-practice-card h2 { margin-bottom: 7px; font-size: clamp(1.35rem, 2.5vw, 1.85rem); }
+.daily-practice-card p { max-width: 66ch; margin-bottom: 0; color: var(--muted); }
+.daily-practice-card .content-kind { margin-bottom: 5px; color: var(--primary-dark); }
+.daily-practice-card .button { flex: 0 0 auto; background: var(--surface-elevated); }
 .classroom-hero { padding-bottom: 28px; }
 .classroom-tool { margin-bottom: 56px; }
 .classroom-notes { max-width: 820px; margin-bottom: 100px; padding-block: 30px; border-block: 1px solid var(--line-strong); }
@@ -511,6 +516,7 @@ p { text-wrap: pretty; }
   .analytics-consent { right: 12px; bottom: 12px; left: 12px; grid-template-columns: 1fr; width: auto; gap: 18px; padding: 18px; }
   .analytics-consent-actions { justify-content: flex-start; }
   .freshness-subscribe { align-items: flex-start; flex-direction: column; gap: 22px; }
+  .daily-practice-card { align-items: flex-start; flex-direction: column; gap: 20px; padding: 22px 18px; }
   .worksheet-meta { flex-direction: column; gap: 8px; }
   .student-sheet table, .student-sheet tbody, .student-sheet tr, .student-sheet th, .student-sheet td { display: block; width: 100%; }
   .student-sheet thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
