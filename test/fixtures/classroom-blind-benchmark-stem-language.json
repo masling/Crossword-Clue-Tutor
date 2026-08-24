@@ -1,0 +1,702 @@
+[
+  {
+    "id": "classroom-blind-stem-001",
+    "clue": "Grammar term for the phrase in My brother, the pilot, waved",
+    "expectedAnswer": "APPOSITIVE",
+    "length": 10,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-002",
+    "clue": "Noun that a later pronoun gets its meaning from",
+    "expectedAnswer": "ANTECEDENT",
+    "length": 10,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-003",
+    "clue": "Describing word group that narrows another sentence part",
+    "expectedAnswer": "MODIFIER",
+    "length": 8,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-004",
+    "clue": "An ing word naming an activity, as in Running helps",
+    "expectedAnswer": "GERUND",
+    "length": 6,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-005",
+    "clue": "Verb-based form used in phrases like broken glass",
+    "expectedAnswer": "PARTICIPLE",
+    "length": 10,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-006",
+    "clue": "Untensed verb form in a phrase such as to compare",
+    "expectedAnswer": "INFINITIVE",
+    "length": 10,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-007",
+    "clue": "Part of a sentence that contains the verb and says something about the subject",
+    "expectedAnswer": "PREDICATE",
+    "length": 9,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-008",
+    "clue": "Subject-plus-verb word group, independent or dependent",
+    "expectedAnswer": "CLAUSE",
+    "length": 6,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-009",
+    "clue": "Related words acting together without a full subject-verb structure",
+    "expectedAnswer": "PHRASE",
+    "length": 6,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-010",
+    "clue": "Part of speech that connects items with words like and or although",
+    "expectedAnswer": "CONJUNCTION",
+    "length": 11,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-011",
+    "clue": "Part of speech that starts a group like after lunch or beyond the fence",
+    "expectedAnswer": "PREPOSITION",
+    "length": 11,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-012",
+    "clue": "Brief exclamatory part of speech, as in wow or alas",
+    "expectedAnswer": "INTERJECTION",
+    "length": 12,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-013",
+    "clue": "Correct matching of subject with verb or pronoun with reference noun",
+    "expectedAnswer": "AGREEMENT",
+    "length": 9,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-014",
+    "clue": "Using matching grammatical forms for equal items in a series",
+    "expectedAnswer": "PARALLELISM",
+    "length": 11,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-015",
+    "clue": "Mood used in formal wishes, demands, or if I were statements",
+    "expectedAnswer": "SUBJUNCTIVE",
+    "length": 11,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-016",
+    "clue": "Said of a verb whose action reaches a direct object",
+    "expectedAnswer": "TRANSITIVE",
+    "length": 10,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-017",
+    "clue": "Said of a verb that completes its idea without a direct object",
+    "expectedAnswer": "INTRANSITIVE",
+    "length": 12,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-018",
+    "clue": "Small punctuation mark used after an introductory phrase",
+    "expectedAnswer": "COMMA",
+    "length": 5,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-019",
+    "clue": "Punctuation mark that can join two complete, closely related thoughts",
+    "expectedAnswer": "SEMICOLON",
+    "length": 9,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-020",
+    "clue": "Two-dot punctuation mark used before an explanation or list",
+    "expectedAnswer": "COLON",
+    "length": 5,
+    "skill": "grammar-and-usage"
+  },
+  {
+    "id": "classroom-blind-stem-021",
+    "clue": "Division process that makes two matching body cells",
+    "expectedAnswer": "MITOSIS",
+    "length": 7,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-022",
+    "clue": "Special cell division that creates sperm or egg cells",
+    "expectedAnswer": "MEIOSIS",
+    "length": 7,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-023",
+    "clue": "Condensed DNA structure visible during cell division",
+    "expectedAnswer": "CHROMOSOME",
+    "length": 10,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-024",
+    "clue": "Hereditary DNA segment that can influence one characteristic",
+    "expectedAnswer": "GENE",
+    "length": 4,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-025",
+    "clue": "Alternative form of a hereditary unit, such as B or b",
+    "expectedAnswer": "ALLELE",
+    "length": 6,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-026",
+    "clue": "Letter-pair makeup shown as TT, Tt, or tt",
+    "expectedAnswer": "GENOTYPE",
+    "length": 8,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-027",
+    "clue": "Trait appearance that results from genes and environment",
+    "expectedAnswer": "PHENOTYPE",
+    "length": 9,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-028",
+    "clue": "Cellular machine that joins amino acids according to RNA instructions",
+    "expectedAnswer": "RIBOSOME",
+    "length": 8,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-029",
+    "clue": "Green plant-cell structure where light energy helps make sugar",
+    "expectedAnswer": "CHLOROPLAST",
+    "length": 11,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-030",
+    "clue": "Singular name for the organelle that produces much of a cell's ATP",
+    "expectedAnswer": "MITOCHONDRION",
+    "length": 13,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-031",
+    "clue": "Eukaryotic cell compartment where chromosomes are stored",
+    "expectedAnswer": "NUCLEUS",
+    "length": 7,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-032",
+    "clue": "Particle spreading from crowded areas toward less crowded areas",
+    "expectedAnswer": "DIFFUSION",
+    "length": 9,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-033",
+    "clue": "General term for moving materials into, out of, or around cells",
+    "expectedAnswer": "TRANSPORT",
+    "length": 9,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-034",
+    "clue": "Protein catalyst that helps cellular reactions run faster",
+    "expectedAnswer": "ENZYME",
+    "length": 6,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-035",
+    "clue": "Folded amino-acid chain used for structure, signaling, or catalysis",
+    "expectedAnswer": "PROTEIN",
+    "length": 7,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-036",
+    "clue": "Hydrophobic biomolecule class that includes fats and oils",
+    "expectedAnswer": "LIPID",
+    "length": 5,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-037",
+    "clue": "Biological molecule class that includes glucose, starch, and cellulose",
+    "expectedAnswer": "CARBOHYDRATE",
+    "length": 12,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-038",
+    "clue": "Cellular energy-release process that breaks down glucose",
+    "expectedAnswer": "RESPIRATION",
+    "length": 11,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-039",
+    "clue": "Anaerobic ATP-support process used by yeast and some muscle cells",
+    "expectedAnswer": "FERMENTATION",
+    "length": 12,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-040",
+    "clue": "Inherited feature that can help an organism survive in its habitat",
+    "expectedAnswer": "ADAPTATION",
+    "length": 10,
+    "skill": "biology-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-041",
+    "clue": "Periodic-table substance defined by its number of protons",
+    "expectedAnswer": "ELEMENT",
+    "length": 7,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-042",
+    "clue": "Smallest bonded particle of water or carbon dioxide",
+    "expectedAnswer": "MOLECULE",
+    "length": 8,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-043",
+    "clue": "Charged atom after gaining or losing electrons",
+    "expectedAnswer": "ION",
+    "length": 3,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-044",
+    "clue": "Same element with a different neutron count",
+    "expectedAnswer": "ISOTOPE",
+    "length": 7,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-045",
+    "clue": "Positive subatomic particle that sets atomic number",
+    "expectedAnswer": "PROTON",
+    "length": 6,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-046",
+    "clue": "Uncharged nuclear particle that changes mass number",
+    "expectedAnswer": "NEUTRON",
+    "length": 7,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-047",
+    "clue": "Negative subatomic particle involved in chemical bonding",
+    "expectedAnswer": "ELECTRON",
+    "length": 8,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-048",
+    "clue": "Outer-electron capacity that influences bonding behavior",
+    "expectedAnswer": "VALENCE",
+    "length": 7,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-049",
+    "clue": "Starting material written before the arrow in a chemical equation",
+    "expectedAnswer": "REACTANT",
+    "length": 8,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-050",
+    "clue": "Material written after the arrow in a chemical equation",
+    "expectedAnswer": "PRODUCT",
+    "length": 7,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-051",
+    "clue": "Homogeneous mixture formed when salt dissolves in water",
+    "expectedAnswer": "SOLUTION",
+    "length": 8,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-052",
+    "clue": "Liquid component that dissolves salt in salt water",
+    "expectedAnswer": "SOLVENT",
+    "length": 7,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-053",
+    "clue": "Dissolved substance in a homogeneous mixture, such as salt",
+    "expectedAnswer": "SOLUTE",
+    "length": 6,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-054",
+    "clue": "Insoluble solid that appears when dissolved chemicals react",
+    "expectedAnswer": "PRECIPITATE",
+    "length": 11,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-055",
+    "clue": "Proton donor with pH below 7 in many lab examples",
+    "expectedAnswer": "ACID",
+    "length": 4,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-056",
+    "clue": "Proton acceptor with pH above 7 in many lab examples",
+    "expectedAnswer": "BASE",
+    "length": 4,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-057",
+    "clue": "Acid-base reaction that often yields water and a salt",
+    "expectedAnswer": "NEUTRALIZATION",
+    "length": 14,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-058",
+    "clue": "Redox process remembered by the phrase losing electrons",
+    "expectedAnswer": "OXIDATION",
+    "length": 9,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-059",
+    "clue": "Redox process remembered by the phrase gaining electrons",
+    "expectedAnswer": "REDUCTION",
+    "length": 9,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-060",
+    "clue": "Dynamic reaction state where opposite rates are equal",
+    "expectedAnswer": "EQUILIBRIUM",
+    "length": 11,
+    "skill": "chemistry-vocabulary"
+  },
+  {
+    "id": "classroom-blind-stem-061",
+    "clue": "Quartz-like natural solid with ordered crystals",
+    "expectedAnswer": "MINERAL",
+    "length": 7,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-062",
+    "clue": "Geologic material such as granite, sandstone, or marble",
+    "expectedAnswer": "ROCK",
+    "length": 4,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-063",
+    "clue": "Evidence of ancient life preserved in stone",
+    "expectedAnswer": "FOSSIL",
+    "length": 6,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-064",
+    "clue": "Loose sand, silt, or clay deposited by water or wind",
+    "expectedAnswer": "SEDIMENT",
+    "length": 8,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-065",
+    "clue": "Molten material below ground before an eruption",
+    "expectedAnswer": "MAGMA",
+    "length": 5,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-066",
+    "clue": "Molten material flowing on the surface after eruption",
+    "expectedAnswer": "LAVA",
+    "length": 4,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-067",
+    "clue": "Outermost solid shell beneath our feet",
+    "expectedAnswer": "CRUST",
+    "length": 5,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-068",
+    "clue": "Hot rocky layer located below the outer shell",
+    "expectedAnswer": "MANTLE",
+    "length": 6,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-069",
+    "clue": "Innermost Earth region made mostly of iron and nickel",
+    "expectedAnswer": "CORE",
+    "length": 4,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-070",
+    "clue": "Landform or opening that can erupt ash and molten material",
+    "expectedAnswer": "VOLCANO",
+    "length": 7,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-071",
+    "clue": "Sudden shaking caused by released stress in Earth's rocks",
+    "expectedAnswer": "EARTHQUAKE",
+    "length": 10,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-072",
+    "clue": "Break in bedrock where the sides have shifted",
+    "expectedAnswer": "FAULT",
+    "length": 5,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-073",
+    "clue": "Map point directly above where a quake begins underground",
+    "expectedAnswer": "EPICENTER",
+    "length": 9,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-074",
+    "clue": "Adjective for waves recorded by an earthquake instrument",
+    "expectedAnswer": "SEISMIC",
+    "length": 7,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-075",
+    "clue": "Moving slab whose edges can create quakes and volcanoes",
+    "expectedAnswer": "PLATE",
+    "length": 5,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-076",
+    "clue": "Process that breaks stone down before erosion carries pieces away",
+    "expectedAnswer": "WEATHERING",
+    "length": 10,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-077",
+    "clue": "Geologic layers stacked like pages in a cliff face",
+    "expectedAnswer": "STRATA",
+    "length": 6,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-078",
+    "clue": "Slow river of ice that can carve a valley",
+    "expectedAnswer": "GLACIER",
+    "length": 7,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-079",
+    "clue": "Warm-ocean cyclone with winds strong enough for a named category scale",
+    "expectedAnswer": "HURRICANE",
+    "length": 9,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-080",
+    "clue": "Weather measure of water vapor in the air",
+    "expectedAnswer": "HUMIDITY",
+    "length": 8,
+    "skill": "earth-science"
+  },
+  {
+    "id": "classroom-blind-stem-081",
+    "clue": "Three-sided figure in a plane",
+    "expectedAnswer": "TRIANGLE",
+    "length": 8,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-082",
+    "clue": "Four-sided polygon family that includes kites and rectangles",
+    "expectedAnswer": "QUADRILATERAL",
+    "length": 13,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-083",
+    "clue": "Flat closed shape formed only from line segments",
+    "expectedAnswer": "POLYGON",
+    "length": 7,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-084",
+    "clue": "Point where two rays form an angle",
+    "expectedAnswer": "VERTEX",
+    "length": 6,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-085",
+    "clue": "Distance from the center of a circle to any point on it",
+    "expectedAnswer": "RADIUS",
+    "length": 6,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-086",
+    "clue": "Longest chord of a circle, passing through the center",
+    "expectedAnswer": "DIAMETER",
+    "length": 8,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-087",
+    "clue": "Perimeter-like measurement around a round figure",
+    "expectedAnswer": "CIRCUMFERENCE",
+    "length": 13,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-088",
+    "clue": "Segment joining two points on a circle",
+    "expectedAnswer": "CHORD",
+    "length": 5,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-089",
+    "clue": "Line touching a circle once and not cutting through it",
+    "expectedAnswer": "TANGENT",
+    "length": 7,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-090",
+    "clue": "Line that cuts a circle in exactly two places",
+    "expectedAnswer": "SECANT",
+    "length": 6,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-091",
+    "clue": "Curved section along the boundary of a circle",
+    "expectedAnswer": "ARC",
+    "length": 3,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-092",
+    "clue": "Describing figures that match exactly after a rigid motion",
+    "expectedAnswer": "CONGRUENT",
+    "length": 9,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-093",
+    "clue": "Describing figures with equal angles and proportional sides",
+    "expectedAnswer": "SIMILAR",
+    "length": 7,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-094",
+    "clue": "Property shown when a shape matches itself after a flip or turn",
+    "expectedAnswer": "SYMMETRY",
+    "length": 8,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-095",
+    "clue": "Turn of a figure around a fixed point",
+    "expectedAnswer": "ROTATION",
+    "length": 8,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-096",
+    "clue": "Mirror-image transformation across a line",
+    "expectedAnswer": "REFLECTION",
+    "length": 10,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-097",
+    "clue": "Slide that moves every point the same distance and direction",
+    "expectedAnswer": "TRANSLATION",
+    "length": 11,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-098",
+    "clue": "Resize transformation controlled by a scale factor",
+    "expectedAnswer": "DILATION",
+    "length": 8,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-099",
+    "clue": "Divider that cuts an angle or segment into equal halves",
+    "expectedAnswer": "BISECTOR",
+    "length": 8,
+    "skill": "geometry-language"
+  },
+  {
+    "id": "classroom-blind-stem-100",
+    "clue": "Describing lines in one plane that stay equidistant and do not intersect",
+    "expectedAnswer": "PARALLEL",
+    "length": 8,
+    "skill": "geometry-language"
+  }
+]
