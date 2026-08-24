@@ -4,7 +4,7 @@
     "name": "Crossword Clue Tutor",
     "email": "hello@crosswordcluetutor.com"
   },
-  "status": "outreach_expansion_partial",
+  "status": "outreach_expansion_ready",
   "datasetEvidence": {
     "clueFamilies": 15,
     "reviewedCandidates": 328,
@@ -232,6 +232,32 @@
       "sentAt": "2026-08-24T09:00:00+08:00",
       "messageId": "1a03148c41ff1507",
       "sourcePage": "https://rexwordpuzzle.blogspot.com/p/how-to-send-tangible-mail-to-rex-parker.html"
+    },
+    {
+      "id": "teachthought-article-idea",
+      "target": "TeachThought editorial submissions",
+      "channel": "email",
+      "recipient": "submit@teachthought.com",
+      "subject": "Article idea: crossword clues as evidence-based vocabulary practice",
+      "textFile": "messages/teachthought-article-idea.txt",
+      "gmailDraftStatus": "local_draft_ready",
+      "gmailDraftCreatedAt": null,
+      "approvalRequired": true,
+      "sentAt": null,
+      "sourcePage": "https://www.teachthought.com/submit-article-teachthought/"
+    },
+    {
+      "id": "cruciverb-ambiguity-resource",
+      "target": "Cruciverb constructor resource center",
+      "channel": "email",
+      "recipient": "xwordguy99@gmail.com",
+      "subject": "Free clue-ambiguity dataset for constructor resources",
+      "textFile": "messages/cruciverb-ambiguity-resource.txt",
+      "gmailDraftStatus": "local_draft_ready",
+      "gmailDraftCreatedAt": null,
+      "approvalRequired": true,
+      "sentAt": null,
+      "sourcePage": "https://cruciverb.com/index.php?action=ezportal%3Bsa%3Dpage%3Bp%3D7"
     }
   ]
 }

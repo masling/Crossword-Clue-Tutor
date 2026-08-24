@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T09:04:18+08:00",
+  "updatedAt": "2026-08-24T09:16:59+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -451,12 +451,12 @@
     "workflow": ".github/workflows/ci.yml",
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
-    "lastVerifiedCommit": "796672b",
+    "lastVerifiedCommit": "9dc960c",
     "lastDeployStatus": "Success"
   },
   "outreach": {
-    "verifiedAt": "2026-08-24T09:04:18+08:00",
-    "readyForApproval": 0,
+    "verifiedAt": "2026-08-24T09:16:59+08:00",
+    "readyForApproval": 2,
     "sent": 10,
     "formsSubmitted": 4,
     "formsBlocked": 1,
@@ -468,18 +468,21 @@
     "liveExternalListings": 0,
     "outreachRepliesSent": 1,
     "nextListingCheckNotBefore": "2026-08-25T13:24:04+08:00",
-    "readyTargets": [],
+    "readyTargets": [
+      "TeachThought editorial submissions",
+      "Cruciverb constructor resource center"
+    ],
     "executionAssets": {
       "manifest": "ops/outreach/manifest.json",
-      "individualEmailDrafts": 10,
+      "individualEmailDrafts": 12,
       "gmailDraftsReadyForReview": 0,
-      "localEmailDraftsReadyForReview": 0,
+      "localEmailDraftsReadyForReview": 2,
       "structuredFormPayloads": 6,
       "validationCommand": "npm run outreach:check",
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 110 meaning entries",
-      "transmissionStatus": "Ten unique email targets were sent and four forms were submitted. Larry Ferlazzo, OTAN, and Rex Parker were sent on August 24. The FreeTech4Teachers legacy Weebly form was attempted but is not counted because its email field cleared and no receipt appeared. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
+      "transmissionStatus": "Ten unique email targets were sent and four forms were submitted. Two new tailored local drafts for TeachThought and Cruciverb are reviewed but not transmitted. The FreeTech4Teachers legacy Weebly form was attempted but is not counted because its email field cleared and no receipt appeared. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
     },
-    "approvalNeeded": null,
+    "approvalNeeded": "Fresh approval to send the reviewed TeachThought and Cruciverb emails",
     "senderSetup": {
       "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
       "inboundDestination": "masling@gmail.com",

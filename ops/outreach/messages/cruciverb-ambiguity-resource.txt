@@ -1,0 +1,17 @@
+Hi Kevin,
+
+I maintain Crossword Clue Tutor and wanted to suggest one free, constructor-relevant resource for Cruciverb’s Other Sites or resource listings.
+
+The project publishes a small downloadable ambiguity dataset: 328 reviewed clue-answer possibilities across 15 recurring clue families, grouped by exact sense, part of speech, and answer length. Families such as Light, Sharp, Pitch, Charge, Path, and Nipping show how crossings and clue grammar distinguish plausible fills.
+
+Research page with JSON and CSV downloads:
+https://crosswordcluetutor.com/research/ambiguous-crossword-clues/
+
+The dataset is independently reviewed and intentionally bounded. It is not copied from the Cruciverb database, does not reproduce a publisher grid, and does not contain complete daily answer lists. The accompanying page documents its method and limitations.
+
+Full disclosure: I maintain Crossword Clue Tutor. If this is useful to constructors thinking about clue ambiguity or solver fairness, please feel free to evaluate it for an Other Sites or resource link. I would also welcome corrections from the Cruciverb community.
+
+Best,
+Masling
+Crossword Clue Tutor
+https://crosswordcluetutor.com/
