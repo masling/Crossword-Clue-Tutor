@@ -118,6 +118,7 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
 
   const classroomSkills = new Set(["context-and-meaning", "word-structure", "academic-language", "science-vocabulary", "language-arts", "precision-and-revision"]);
   const classroomDifficulties = new Set(["introductory", "intermediate", "advanced"]);
+  const classroomScaleFields = ["conceptId", "variantGroupId", "subject", "sourceUrl", "sourceLicense", "requiredAttribution", "reviewStatus", "contentVersion"];
   const classroomSlugs = new Set();
   if (!Array.isArray(classroomClues) || classroomClues.length < 5) {
     errors.push("classroomClues must contain at least five original reviewed clues");
@@ -126,6 +127,9 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
       const label = `classroomClues[${index}]`;
       for (const field of REQUIRED_CLUE_FIELDS) {
         if (clue[field] === undefined || clue[field] === "") errors.push(`${label} is missing ${field}`);
+      }
+      for (const field of classroomScaleFields) {
+        if (clue[field] === undefined || clue[field] === "") errors.push(`${label} is missing scalable metadata ${field}`);
       }
       if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(clue.slug ?? "")) errors.push(`${label} has an invalid slug`);
       if (classroomSlugs.has(clue.slug) || clueSlugs.has(clue.slug)) errors.push(`duplicate classroom clue slug: ${clue.slug}`);
@@ -138,6 +142,10 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
       if (!classroomSkills.has(clue.skill)) errors.push(`${label} has unsupported skill ${clue.skill}`);
       if (!classroomDifficulties.has(clue.difficulty)) errors.push(`${label} has unsupported difficulty ${clue.difficulty}`);
       if (clue.sourceKind !== "original-classroom") errors.push(`${label} must be original-classroom content`);
+      if (!/^[a-z0-9]+(?:[.-][a-z0-9]+)*$/.test(clue.conceptId ?? "") || !/^[a-z0-9]+(?:[.-][a-z0-9]+)*$/.test(clue.variantGroupId ?? "")) errors.push(`${label} has invalid concept or variant identifiers`);
+      try { new URL(clue.sourceUrl); } catch { errors.push(`${label} sourceUrl must be absolute`); }
+      if (clue.reviewStatus !== "materially-reviewed") errors.push(`${label} must be materially reviewed`);
+      if (!Number.isInteger(clue.contentVersion) || clue.contentVersion < 1) errors.push(`${label} contentVersion must be a positive integer`);
       if (!/^\d{4}-\d{2}-\d{2}$/.test(clue.reviewedAt ?? "")) errors.push(`${label} reviewedAt must be YYYY-MM-DD`);
     }
   }

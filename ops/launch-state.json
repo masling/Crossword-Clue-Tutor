@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T10:19:50+08:00",
+  "updatedAt": "2026-08-24T10:26:34+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -129,6 +129,17 @@
       "controlledPilotTarget": 500,
       "selfDirectedBetaTarget": 3000,
       "strongMultiSubjectTarget": 10000,
+      "corpusInfrastructure": {
+        "reportCommand": "npm run classroom:report",
+        "recordsWithCompleteScaleMetadata": 30,
+        "recordsWithMetadataGaps": 0,
+        "uniqueConcepts": 30,
+        "conceptsWithMultipleVariants": 0,
+        "blindBenchmarkStatus": "Not measured",
+        "intakeTemplate": "ops/classroom-intake/template.json",
+        "sourcePolicy": "Licensed sources may seed formal batches; unclear or non-commercial sources may inform internal concepts, facts, difficulty, and priority while all student-facing wording remains original",
+        "sourceReview": "research/2026-08-24-classroom-corpus-sources.md"
+      },
       "readinessReview": "research/2026-08-24-student-product-readiness.md"
     },
     "classroomAnalyticsMode": "Cookie-free Pageview retained; GA4 omitted on Teacher guide, Classroom Solver, and printable worksheet",

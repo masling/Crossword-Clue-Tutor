@@ -7,16 +7,31 @@
     "definition": "Context is the surrounding language or situation that helps establish meaning.",
     "explanation": "CONTEXT fits because surrounding words and sentences provide the evidence a reader uses to interpret an unfamiliar term.",
     "partOfSpeech": "noun",
-    "tags": ["vocabulary", "context clues", "reading inference"],
+    "tags": [
+      "vocabulary",
+      "context clues",
+      "reading inference"
+    ],
     "clueType": "direct-definition",
     "signal": "The noun phrase asks for the surrounding evidence used during reading.",
     "hint": "Think about the words and sentences around the unknown term.",
     "reviewedAt": "2026-08-24",
     "popularity": 90,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "context-and-meaning",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.context-and-meaning.context",
+    "variantGroupId": "classroom.context-and-meaning.context.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-connotation-emotional-association",
@@ -26,16 +41,31 @@
     "definition": "Connotation is the feeling or association suggested by a word beyond its literal definition.",
     "explanation": "CONNOTATION is the eleven-letter noun for the emotional or cultural association a word carries in addition to its dictionary meaning.",
     "partOfSpeech": "noun",
-    "tags": ["vocabulary", "word meaning", "association"],
+    "tags": [
+      "vocabulary",
+      "word meaning",
+      "association"
+    ],
     "clueType": "direct-definition",
     "signal": "The possessive construction asks for a noun naming an association attached to a word.",
     "hint": "Look beyond the dictionary definition to the feeling a word suggests.",
     "reviewedAt": "2026-08-24",
     "popularity": 88,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "advanced",
     "skill": "context-and-meaning",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.context-and-meaning.connotation",
+    "variantGroupId": "classroom.context-and-meaning.connotation.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-antonym-opposite-meaning",
@@ -45,16 +75,31 @@
     "definition": "An antonym is a word whose meaning contrasts with another word.",
     "explanation": "ANTONYM fits because it names a word that expresses the opposite meaning, such as cold in relation to hot.",
     "partOfSpeech": "noun",
-    "tags": ["vocabulary", "meaning relationship", "opposites"],
+    "tags": [
+      "vocabulary",
+      "meaning relationship",
+      "opposites"
+    ],
     "clueType": "direct-definition",
     "signal": "The phrase “opposite meaning” directly identifies a vocabulary relationship.",
     "hint": "Recall the vocabulary term paired with “synonym” in many lessons.",
     "reviewedAt": "2026-08-24",
     "popularity": 86,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "context-and-meaning",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.context-and-meaning.antonym",
+    "variantGroupId": "classroom.context-and-meaning.antonym.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-synonym-similar-meaning",
@@ -64,16 +109,31 @@
     "definition": "A synonym is a word that has the same or nearly the same meaning as another word.",
     "explanation": "SYNONYM is the seven-letter noun for a word with a similar meaning, such as rapid in relation to fast.",
     "partOfSpeech": "noun",
-    "tags": ["vocabulary", "meaning relationship", "similarity"],
+    "tags": [
+      "vocabulary",
+      "meaning relationship",
+      "similarity"
+    ],
     "clueType": "direct-definition",
     "signal": "The phrase “similar meaning” directly identifies a common vocabulary relationship.",
     "hint": "Think of the counterpart to an opposite-meaning word.",
     "reviewedAt": "2026-08-24",
     "popularity": 84,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "context-and-meaning",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.context-and-meaning.synonym",
+    "variantGroupId": "classroom.context-and-meaning.synonym.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-inference-conclusion-from-evidence",
@@ -83,16 +143,31 @@
     "definition": "An inference is a conclusion reached by reasoning from evidence rather than from an explicit statement.",
     "explanation": "INFERENCE fits because readers draw this kind of conclusion by combining textual evidence with what they already know.",
     "partOfSpeech": "noun",
-    "tags": ["reading", "evidence", "reasoning"],
+    "tags": [
+      "reading",
+      "evidence",
+      "reasoning"
+    ],
     "clueType": "direct-definition",
     "signal": "The past-participle phrase “drawn from evidence” asks for the result of reasoning.",
     "hint": "Name the conclusion a reader makes when the text does not state it directly.",
     "reviewedAt": "2026-08-24",
     "popularity": 82,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "advanced",
     "skill": "context-and-meaning",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.context-and-meaning.inference",
+    "variantGroupId": "classroom.context-and-meaning.inference.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-prefix-word-beginning",
@@ -102,16 +177,31 @@
     "definition": "A prefix is a meaningful element attached to the beginning of a word or root.",
     "explanation": "PREFIX fits because this word part is added before a base or root, as re- is added to write in rewrite.",
     "partOfSpeech": "noun",
-    "tags": ["morphology", "word parts", "vocabulary"],
+    "tags": [
+      "morphology",
+      "word parts",
+      "vocabulary"
+    ],
     "clueType": "direct-definition",
     "signal": "The clue specifies a word beginning and an added element, pointing to a morphology term.",
     "hint": "Think of the word part that comes before a base or root.",
     "reviewedAt": "2026-08-24",
     "popularity": 80,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "word-structure",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.word-structure.prefix",
+    "variantGroupId": "classroom.word-structure.prefix.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-suffix-word-ending",
@@ -121,16 +211,31 @@
     "definition": "A suffix is a meaningful element attached to the end of a word or root.",
     "explanation": "SUFFIX fits because this word part follows a base or root, as -less follows hope in hopeless.",
     "partOfSpeech": "noun",
-    "tags": ["morphology", "word parts", "vocabulary"],
+    "tags": [
+      "morphology",
+      "word parts",
+      "vocabulary"
+    ],
     "clueType": "direct-definition",
     "signal": "The clue specifies a word ending and an added element, pointing to a morphology term.",
     "hint": "Think of the word part that comes after a base or root.",
     "reviewedAt": "2026-08-24",
     "popularity": 79,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "word-structure",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.word-structure.suffix",
+    "variantGroupId": "classroom.word-structure.suffix.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-root-core-word-part",
@@ -140,16 +245,31 @@
     "definition": "A root is the central word element that carries the primary lexical meaning.",
     "explanation": "ROOT fits because it is the core meaningful part to which prefixes or suffixes can be attached.",
     "partOfSpeech": "noun",
-    "tags": ["morphology", "word parts", "meaning"],
+    "tags": [
+      "morphology",
+      "word parts",
+      "meaning"
+    ],
     "clueType": "direct-definition",
     "signal": "“Core word part” asks for the base meaning-bearing element studied in morphology.",
     "hint": "Picture the central part from which related words grow.",
     "reviewedAt": "2026-08-24",
     "popularity": 78,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "word-structure",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.word-structure.root",
+    "variantGroupId": "classroom.word-structure.root.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-morpheme-smallest-meaningful-unit",
@@ -159,16 +279,31 @@
     "definition": "A morpheme is the smallest linguistic unit that carries meaning or a grammatical function.",
     "explanation": "MORPHEME fits because a unit such as un-, help, or -ful contributes meaning even when it is not a complete word by itself.",
     "partOfSpeech": "noun",
-    "tags": ["morphology", "linguistics", "word parts"],
+    "tags": [
+      "morphology",
+      "linguistics",
+      "word parts"
+    ],
     "clueType": "direct-definition",
     "signal": "The superlative “smallest” and adjective “meaningful” identify a precise linguistic unit.",
     "hint": "Look for an eight-letter linguistics term smaller than many complete words.",
     "reviewedAt": "2026-08-24",
     "popularity": 76,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "advanced",
     "skill": "word-structure",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.word-structure.morpheme",
+    "variantGroupId": "classroom.word-structure.morpheme.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-compound-two-complete-words",
@@ -178,16 +313,31 @@
     "definition": "A compound is a word created by joining two independent words into one expression.",
     "explanation": "COMPOUND fits because words such as sunlight and notebook combine two complete words to form a new lexical unit.",
     "partOfSpeech": "noun",
-    "tags": ["morphology", "word formation", "vocabulary"],
+    "tags": [
+      "morphology",
+      "word formation",
+      "vocabulary"
+    ],
     "clueType": "direct-definition",
     "signal": "The phrase “combining two complete words” identifies a word-formation category.",
     "hint": "Think of the category containing words such as rainfall and classroom.",
     "reviewedAt": "2026-08-24",
     "popularity": 75,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "intermediate",
     "skill": "word-structure",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.word-structure.compound",
+    "variantGroupId": "classroom.word-structure.compound.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-analyze-examine-parts",
@@ -197,16 +347,31 @@
     "definition": "To analyze is to examine something closely by considering its components and relationships.",
     "explanation": "ANALYZE fits because the verb describes breaking information into parts so its structure, evidence, or meaning can be understood.",
     "partOfSpeech": "verb",
-    "tags": ["academic language", "analysis", "thinking skill"],
+    "tags": [
+      "academic language",
+      "analysis",
+      "thinking skill"
+    ],
     "clueType": "direct-definition",
     "signal": "The base-form verbs “examine” and “separating” call for another action word.",
     "hint": "Name the academic action used before explaining how the parts work together.",
     "reviewedAt": "2026-08-24",
     "popularity": 74,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "intermediate",
     "skill": "academic-language",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.academic-language.analyze",
+    "variantGroupId": "classroom.academic-language.analyze.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-evidence-facts-support-claim",
@@ -216,16 +381,31 @@
     "definition": "Evidence consists of facts, details, examples, or observations used to support a conclusion or claim.",
     "explanation": "EVIDENCE fits because writers and researchers use relevant facts or details to justify what they claim is true.",
     "partOfSpeech": "noun",
-    "tags": ["academic language", "argument", "research"],
+    "tags": [
+      "academic language",
+      "argument",
+      "research"
+    ],
     "clueType": "direct-definition",
     "signal": "The plural idea “facts” is defined by its function of supporting a claim.",
     "hint": "Think of what a writer cites to prove a point.",
     "reviewedAt": "2026-08-24",
     "popularity": 73,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "academic-language",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.academic-language.evidence",
+    "variantGroupId": "classroom.academic-language.evidence.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-contrast-show-differences",
@@ -235,16 +415,31 @@
     "definition": "To contrast is to identify or emphasize differences between two or more things.",
     "explanation": "CONTRAST fits because this academic verb asks a student to explain differences rather than similarities.",
     "partOfSpeech": "verb",
-    "tags": ["academic language", "comparison", "writing"],
+    "tags": [
+      "academic language",
+      "comparison",
+      "writing"
+    ],
     "clueType": "direct-definition",
     "signal": "The base-form verb “show” requires an action word, and “differ” supplies its purpose.",
     "hint": "This is the second action in the instruction “compare and ___.”",
     "reviewedAt": "2026-08-24",
     "popularity": 72,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "academic-language",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.academic-language.contrast",
+    "variantGroupId": "classroom.academic-language.contrast.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-summarize-main-ideas-briefly",
@@ -254,16 +449,31 @@
     "definition": "To summarize is to express the central ideas of a longer text in a concise form.",
     "explanation": "SUMMARIZE fits because the task keeps the main ideas while omitting many supporting details and examples.",
     "partOfSpeech": "verb",
-    "tags": ["academic language", "reading", "writing"],
+    "tags": [
+      "academic language",
+      "reading",
+      "writing"
+    ],
     "clueType": "direct-definition",
     "signal": "The base-form verb and adverb “briefly” point to a concise academic action.",
     "hint": "Name the action that produces a short account of a longer text.",
     "reviewedAt": "2026-08-24",
     "popularity": 71,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "intermediate",
     "skill": "academic-language",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.academic-language.summarize",
+    "variantGroupId": "classroom.academic-language.summarize.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-cite-name-source",
@@ -273,16 +483,31 @@
     "definition": "To cite is to identify a source as evidence, authority, or attribution.",
     "explanation": "CITE fits because academic writers name the source of a quotation, fact, or idea to support their work and give credit.",
     "partOfSpeech": "verb",
-    "tags": ["academic language", "sources", "writing"],
+    "tags": [
+      "academic language",
+      "sources",
+      "writing"
+    ],
     "clueType": "direct-definition",
     "signal": "The base-form verb “name” and phrase “as support” indicate an academic source action.",
     "hint": "Think of the four-letter verb used when giving a source credit.",
     "reviewedAt": "2026-08-24",
     "popularity": 70,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "academic-language",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.academic-language.cite",
+    "variantGroupId": "classroom.academic-language.cite.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-osmosis-water-membrane",
@@ -292,16 +517,31 @@
     "definition": "Osmosis is the movement of water across a selectively permeable membrane toward a region of higher solute concentration.",
     "explanation": "OSMOSIS fits because it specifically describes water moving across a selectively permeable membrane as concentrations balance.",
     "partOfSpeech": "noun",
-    "tags": ["science", "biology", "cell transport"],
+    "tags": [
+      "science",
+      "biology",
+      "cell transport"
+    ],
     "clueType": "direct-definition",
     "signal": "The combination of “water” and “membrane” points to a specific biological transport process.",
     "hint": "Name the seven-letter cell-transport process involving water rather than any particle.",
     "reviewedAt": "2026-08-24",
     "popularity": 69,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "advanced",
     "skill": "science-vocabulary",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.science-vocabulary.osmosis",
+    "variantGroupId": "classroom.science-vocabulary.osmosis.primary",
+    "subject": "science",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-ecosystem-organisms-environment",
@@ -311,16 +551,31 @@
     "definition": "An ecosystem is a community of living organisms interacting with one another and with the nonliving environment.",
     "explanation": "ECOSYSTEM fits because it includes both the organisms in a community and the physical environment with which they interact.",
     "partOfSpeech": "noun",
-    "tags": ["science", "ecology", "environment"],
+    "tags": [
+      "science",
+      "ecology",
+      "environment"
+    ],
     "clueType": "direct-definition",
     "signal": "The clue joins a biological community with its environment, defining an ecological system.",
     "hint": "Think of the nine-letter unit containing living and nonliving parts.",
     "reviewedAt": "2026-08-24",
     "popularity": 68,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "science-vocabulary",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.science-vocabulary.ecosystem",
+    "variantGroupId": "classroom.science-vocabulary.ecosystem.primary",
+    "subject": "science",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-atom-smallest-element-unit",
@@ -330,16 +585,31 @@
     "definition": "An atom is the smallest unit that retains the chemical properties of an element.",
     "explanation": "ATOM fits because this four-letter unit still behaves chemically as the element even though it can contain smaller particles.",
     "partOfSpeech": "noun",
-    "tags": ["science", "chemistry", "matter"],
+    "tags": [
+      "science",
+      "chemistry",
+      "matter"
+    ],
     "clueType": "direct-definition",
     "signal": "The superlative “smallest” and noun “element” identify a basic chemistry unit.",
     "hint": "Name the four-letter unit built from protons, neutrons, and electrons.",
     "reviewedAt": "2026-08-24",
     "popularity": 67,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "science-vocabulary",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.science-vocabulary.atom",
+    "variantGroupId": "classroom.science-vocabulary.atom.primary",
+    "subject": "science",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-gravity-pulls-earth",
@@ -349,16 +619,31 @@
     "definition": "Gravity is the attractive force between masses, experienced near Earth as a downward pull.",
     "explanation": "GRAVITY fits because Earth's mass attracts objects toward its center, producing the familiar downward force described by the clue.",
     "partOfSpeech": "noun",
-    "tags": ["science", "physics", "force"],
+    "tags": [
+      "science",
+      "physics",
+      "force"
+    ],
     "clueType": "direct-definition",
     "signal": "The clue names a force and its familiar effect near Earth.",
     "hint": "Think of the seven-letter force that gives objects weight.",
     "reviewedAt": "2026-08-24",
     "popularity": 66,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "science-vocabulary",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.science-vocabulary.gravity",
+    "variantGroupId": "classroom.science-vocabulary.gravity.primary",
+    "subject": "science",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-variable-experiment-factor",
@@ -368,16 +653,31 @@
     "definition": "A variable is a factor or condition that can take different values in an investigation.",
     "explanation": "VARIABLE fits because experiments change, control, or measure factors to test how one condition affects another.",
     "partOfSpeech": "noun",
-    "tags": ["science", "experiment", "research"],
+    "tags": [
+      "science",
+      "experiment",
+      "research"
+    ],
     "clueType": "direct-definition",
     "signal": "The noun “factor” and phrase “can change” define an experimental quantity.",
     "hint": "Name the eight-letter factor researchers manipulate, control, or measure.",
     "reviewedAt": "2026-08-24",
     "popularity": 65,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "intermediate",
     "skill": "science-vocabulary",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.science-vocabulary.variable",
+    "variantGroupId": "classroom.science-vocabulary.variable.primary",
+    "subject": "science",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-metaphor-says-one-is-another",
@@ -387,16 +687,31 @@
     "definition": "A metaphor is a figurative comparison that identifies one thing as another without using like or as.",
     "explanation": "METAPHOR fits because this comparison directly says one thing is another, as in “time is a thief.”",
     "partOfSpeech": "noun",
-    "tags": ["language arts", "figurative language", "comparison"],
+    "tags": [
+      "language arts",
+      "figurative language",
+      "comparison"
+    ],
     "clueType": "direct-definition",
     "signal": "The wording distinguishes a direct figurative comparison from one using like or as.",
     "hint": "Think of the eight-letter device in the sentence “The classroom was a zoo.”",
     "reviewedAt": "2026-08-24",
     "popularity": 64,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "language-arts",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.language-arts.metaphor",
+    "variantGroupId": "classroom.language-arts.metaphor.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-simile-using-like-as",
@@ -406,16 +721,31 @@
     "definition": "A simile is a figurative comparison that explicitly uses like or as.",
     "explanation": "SIMILE fits because this six-letter device compares unlike things with wording such as “quiet as a mouse.”",
     "partOfSpeech": "noun",
-    "tags": ["language arts", "figurative language", "comparison"],
+    "tags": [
+      "language arts",
+      "figurative language",
+      "comparison"
+    ],
     "clueType": "direct-definition",
     "signal": "The explicit words “like or as” identify a standard figurative-language device.",
     "hint": "Recall the device used in “the water shone like glass.”",
     "reviewedAt": "2026-08-24",
     "popularity": 63,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "language-arts",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.language-arts.simile",
+    "variantGroupId": "classroom.language-arts.simile.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-narrator-voice-tells-story",
@@ -425,16 +755,31 @@
     "definition": "A narrator is the voice or persona through which a story is told.",
     "explanation": "NARRATOR fits because this is the storytelling voice, which may be a character or an observer outside the events.",
     "partOfSpeech": "noun",
-    "tags": ["language arts", "fiction", "point of view"],
+    "tags": [
+      "language arts",
+      "fiction",
+      "point of view"
+    ],
     "clueType": "direct-definition",
     "signal": "The noun “voice” is defined by its storytelling function rather than by sound quality.",
     "hint": "Name the eight-letter voice that may speak in first or third person.",
     "reviewedAt": "2026-08-24",
     "popularity": 62,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "language-arts",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.language-arts.narrator",
+    "variantGroupId": "classroom.language-arts.narrator.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-theme-central-message",
@@ -444,16 +789,31 @@
     "definition": "A theme is a central idea or message developed across a literary work.",
     "explanation": "THEME fits because it is the broader message a reader infers from characters, conflicts, events, and patterns in a text.",
     "partOfSpeech": "noun",
-    "tags": ["language arts", "literature", "central idea"],
+    "tags": [
+      "language arts",
+      "literature",
+      "central idea"
+    ],
     "clueType": "direct-definition",
     "signal": "The clue asks for a singular literary term naming a text's central message.",
     "hint": "Think of the five-letter idea a story develops rather than its plot events.",
     "reviewedAt": "2026-08-24",
     "popularity": 61,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "intermediate",
     "skill": "language-arts",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.language-arts.theme",
+    "variantGroupId": "classroom.language-arts.theme.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-irony-expectation-reality",
@@ -463,16 +823,31 @@
     "definition": "Irony is an incongruity between what is expected, said, or intended and what actually occurs or is meant.",
     "explanation": "IRONY fits because the clue describes the gap between an expectation and the reality that contradicts it.",
     "partOfSpeech": "noun",
-    "tags": ["language arts", "literary device", "contrast"],
+    "tags": [
+      "language arts",
+      "literary device",
+      "contrast"
+    ],
     "clueType": "direct-definition",
     "signal": "The abstract contrast between expectation and reality defines a literary concept.",
     "hint": "Name the five-letter device often discussed as situational, verbal, or dramatic.",
     "reviewedAt": "2026-08-24",
     "popularity": 60,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "advanced",
     "skill": "language-arts",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.language-arts.irony",
+    "variantGroupId": "classroom.language-arts.irony.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-reliable-able-trusted",
@@ -482,16 +857,31 @@
     "definition": "Reliable describes a person, source, or result that can be trusted to be accurate or consistent.",
     "explanation": "RELIABLE fits because the adjective directly describes something dependable enough to be trusted.",
     "partOfSpeech": "adjective",
-    "tags": ["precision", "source evaluation", "adjective"],
+    "tags": [
+      "precision",
+      "source evaluation",
+      "adjective"
+    ],
     "clueType": "direct-definition",
     "signal": "“Able to be” signals an adjective describing a trustworthy quality.",
     "hint": "Look for an eight-letter adjective meaning dependable.",
     "reviewedAt": "2026-08-24",
     "popularity": 59,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "precision-and-revision",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.precision-and-revision.reliable",
+    "variantGroupId": "classroom.precision-and-revision.reliable.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-ease-make-less-severe",
@@ -501,16 +891,31 @@
     "definition": "To ease is to reduce the severity, intensity, or difficulty of something.",
     "explanation": "EASE fits because the four-letter verb means to lessen pain, pressure, difficulty, or another severe condition.",
     "partOfSpeech": "verb",
-    "tags": ["precision", "verb", "degree"],
+    "tags": [
+      "precision",
+      "verb",
+      "degree"
+    ],
     "clueType": "direct-definition",
     "signal": "The base-form verb “make” requires another action word, and “less severe” supplies its meaning.",
     "hint": "Think of a four-letter verb that can mean relieve or lessen.",
     "reviewedAt": "2026-08-24",
     "popularity": 58,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "precision-and-revision",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.precision-and-revision.ease",
+    "variantGroupId": "classroom.precision-and-revision.ease.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-revise-improve-writing-changing",
@@ -520,16 +925,31 @@
     "definition": "To revise is to reconsider and change writing in order to improve its meaning, structure, or clarity.",
     "explanation": "REVISE fits because writers perform this action when they change ideas, organization, or wording to improve a draft.",
     "partOfSpeech": "verb",
-    "tags": ["precision", "writing process", "revision"],
+    "tags": [
+      "precision",
+      "writing process",
+      "revision"
+    ],
     "clueType": "direct-definition",
     "signal": "The base-form verb “improve” and method “by changing” identify a writing-process action.",
     "hint": "Name the six-letter action that comes after drafting and before editing.",
     "reviewedAt": "2026-08-24",
     "popularity": 57,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "introductory",
     "skill": "precision-and-revision",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.precision-and-revision.revise",
+    "variantGroupId": "classroom.precision-and-revision.revise.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-precise-exact-carefully-stated",
@@ -539,16 +959,31 @@
     "definition": "Precise describes language, measurement, or reasoning that is exact and clearly specified.",
     "explanation": "PRECISE fits because this adjective describes wording or measurement that avoids vagueness and states details exactly.",
     "partOfSpeech": "adjective",
-    "tags": ["precision", "academic language", "adjective"],
+    "tags": [
+      "precision",
+      "academic language",
+      "adjective"
+    ],
     "clueType": "direct-definition",
     "signal": "The paired adjectives “exact” and “carefully stated” define another adjective.",
     "hint": "Look for a seven-letter adjective meaning exact rather than vague.",
     "reviewedAt": "2026-08-24",
     "popularity": 56,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "intermediate",
     "skill": "precision-and-revision",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.precision-and-revision.precise",
+    "variantGroupId": "classroom.precision-and-revision.precise.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   },
   {
     "slug": "classroom-justify-support-choice-reasons",
@@ -558,15 +993,30 @@
     "definition": "To justify is to provide reasons or evidence showing that a choice, claim, or conclusion is reasonable.",
     "explanation": "JUSTIFY fits because students perform this action when they defend a choice by connecting it to reasons or evidence.",
     "partOfSpeech": "verb",
-    "tags": ["precision", "reasoning", "evidence"],
+    "tags": [
+      "precision",
+      "reasoning",
+      "evidence"
+    ],
     "clueType": "direct-definition",
     "signal": "The base-form verb “support” and phrase “with reasons” define an evidence-based action.",
     "hint": "Name the seven-letter verb teachers use when asking you to explain why your answer is valid.",
     "reviewedAt": "2026-08-24",
     "popularity": 55,
-    "gradeBands": ["6-8", "9-12"],
+    "gradeBands": [
+      "6-8",
+      "9-12"
+    ],
     "difficulty": "intermediate",
     "skill": "precision-and-revision",
-    "sourceKind": "original-classroom"
+    "sourceKind": "original-classroom",
+    "conceptId": "classroom.precision-and-revision.justify",
+    "variantGroupId": "classroom.precision-and-revision.justify.primary",
+    "subject": "english-language-arts",
+    "sourceUrl": "https://crosswordcluetutor.com/assets/classroom-clues.json",
+    "sourceLicense": "original-rights-reserved",
+    "requiredAttribution": "Crossword Clue Tutor",
+    "reviewStatus": "materially-reviewed",
+    "contentVersion": 1
   }
 ]

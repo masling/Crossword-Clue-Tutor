@@ -1,0 +1,39 @@
+{
+  "batchId": "YYYY-MM-DD-subject-skill-001",
+  "sourceManifest": {
+    "sourceKind": "licensed-seed-or-reference-only",
+    "sourceUrl": "https://example.com/source",
+    "sourceLicense": "license-or-unconfirmed-reference",
+    "requiredAttribution": "Attribution text or none",
+    "useBoundary": "Concept/fact reference only; all student-facing wording is original"
+  },
+  "clues": [
+    {
+      "slug": "stable-original-clue-slug",
+      "conceptId": "subject.concept",
+      "variantGroupId": "subject.concept.v1",
+      "answer": "ANSWER",
+      "subject": "language-arts",
+      "skill": "context-and-meaning",
+      "gradeBands": ["6-8", "9-12"],
+      "difficulty": "intermediate",
+      "partOfSpeech": "noun",
+      "clue": "Original clue wording",
+      "hint": "Original spoiler-safe hint",
+      "definition": "Original exact-sense definition",
+      "signal": "Original explanation of the clue signal",
+      "explanation": "Original explanation of why the answer fits",
+      "tags": ["curriculum", "concept"],
+      "clueType": "direct-definition",
+      "sourceKind": "reference-informed-original",
+      "sourceUrl": "https://example.com/source",
+      "sourceLicense": "license-or-unconfirmed-reference",
+      "requiredAttribution": "Attribution text or none",
+      "reviewStatus": "materially-reviewed",
+      "reviewedAt": "YYYY-MM-DD",
+      "contentVersion": 1,
+      "date": "YYYY-MM-DD",
+      "popularity": 50
+    }
+  ]
+}

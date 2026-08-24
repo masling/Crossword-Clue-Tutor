@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "check": "node scripts/check-build.mjs",
+    "classroom:report": "node scripts/classroom-corpus-report.mjs",
     "content:publish": "node scripts/publish-clue-batch.mjs",
     "deploy": "npm run build && wrangler pages deploy dist --project-name crossword-clue-tutor --branch main",
     "dev": "node scripts/serve.mjs",
