@@ -49,6 +49,8 @@ if (validation.errors.length) throw new Error(validation.errors.join("\n"));
 for (const warning of validation.warnings) console.warn(`warning: ${warning}`);
 
 const report = summarizeClassroomCorpus(merged);
+if (!report.quality.noCriticalIssues) throw new Error(`Classroom corpus quality gate failed: ${JSON.stringify(report.quality)}`);
+if (report.scalableMetadata.completeRecords !== merged.length) throw new Error("Classroom corpus contains incomplete scalable metadata");
 const publishRecord = {
   batchId: input.batchId,
   publishedAt: new Date().toISOString(),

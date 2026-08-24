@@ -15,7 +15,7 @@ function counts(values) {
 export function evaluateBlindBenchmark(records, benchmarkCases = []) {
   if (!benchmarkCases.length) return { status: "not_measured", cases: 0, top1Rate: null, top3Rate: null, failures: [], bySkill: {} };
   const results = benchmarkCases.map((item) => {
-    const matches = solveClues(records, { clue: item.clue, length: item.length }).slice(0, 10);
+    const matches = solveClues(records, { clue: item.clue, length: item.length, skill: item.skill }).slice(0, 10);
     const index = matches.findIndex((match) => match.answer === item.expectedAnswer);
     return { ...item, rank: index === -1 ? null : index + 1, candidates: matches.slice(0, 3).map((match) => match.answer) };
   });
@@ -46,7 +46,9 @@ export function summarizeClassroomCorpus(records, { benchmarkCases = [] } = {}) 
   const pairKeys = new Map();
   const duplicatePairs = [];
   const hintLeaks = [];
+  const clueLeaks = [];
   const metadataGaps = [];
+  const templateGroups = new Map();
 
   for (const record of records) {
     if (!concepts.has(record.answer)) concepts.set(record.answer, []);
@@ -57,6 +59,16 @@ export function summarizeClassroomCorpus(records, { benchmarkCases = [] } = {}) 
     else pairKeys.set(pairKey, record.slug);
 
     if ((record.hint ?? "").toUpperCase().includes(record.answer ?? "__NO_ANSWER__")) hintLeaks.push(record.slug);
+    const clueWords = (record.clue ?? "").toUpperCase().replace(/[^A-Z]+/g, " ").trim().split(/\s+/);
+    if (clueWords.includes(record.answer ?? "__NO_ANSWER__")) clueLeaks.push(record.slug);
+    for (const field of ["clue", "definition", "signal", "explanation"]) {
+      const answer = (record.answer ?? "").toLowerCase();
+      const skeleton = normalizeClue(record[field] ?? "").split(" ").filter((token) => token !== answer).join(" ");
+      if (!skeleton) continue;
+      const key = `${field}|${skeleton}`;
+      if (!templateGroups.has(key)) templateGroups.set(key, []);
+      templateGroups.get(key).push(record.slug);
+    }
     const missing = scalableMetadataFields.filter((field) => record[field] === undefined || record[field] === "");
     if (missing.length) metadataGaps.push({ slug: record.slug, missing });
   }
@@ -67,7 +79,8 @@ export function summarizeClassroomCorpus(records, { benchmarkCases = [] } = {}) 
   const difficulties = counts(records.map((record) => record.difficulty));
   const gradeBands = counts(records.flatMap((record) => record.gradeBands ?? []));
   const completeMetadataRecords = records.length - metadataGaps.length;
-  const noCriticalIssues = duplicatePairs.length === 0 && hintLeaks.length === 0;
+  const templateDuplicates = [...templateGroups.entries()].filter(([, slugs]) => slugs.length >= 3).map(([template, slugs]) => ({ template, slugs }));
+  const noCriticalIssues = duplicatePairs.length === 0 && hintLeaks.length === 0 && clueLeaks.length === 0 && templateDuplicates.length === 0;
 
   const blindBenchmark = evaluateBlindBenchmark(records, benchmarkCases);
   const gates = {
@@ -109,7 +122,7 @@ export function summarizeClassroomCorpus(records, { benchmarkCases = [] } = {}) 
       recordsWithGaps: metadataGaps.length,
       representativeGaps: metadataGaps.slice(0, 5)
     },
-    quality: { duplicatePairs, hintLeaks, noCriticalIssues },
+    quality: { duplicatePairs, hintLeaks, clueLeaks, templateDuplicates, noCriticalIssues },
     blindBenchmark,
     gates
   };
@@ -119,6 +132,8 @@ const isDirectRun = process.argv[1] && pathToFileURL(path.resolve(process.argv[1
 if (isDirectRun) {
   const records = JSON.parse(await readFile(path.resolve("data/classroom-clues.json"), "utf8"));
   let benchmarkCases = [];
-  try { benchmarkCases = JSON.parse(await readFile(path.resolve("test/fixtures/classroom-blind-benchmark.json"), "utf8")); } catch { /* benchmark remains explicitly unmeasured */ }
+  for (const filename of ["classroom-blind-benchmark.json", "classroom-blind-benchmark-digital-media.json"]) {
+    try { benchmarkCases.push(...JSON.parse(await readFile(path.resolve("test/fixtures", filename), "utf8"))); } catch { /* unavailable benchmark shards are omitted */ }
+  }
   console.log(JSON.stringify(summarizeClassroomCorpus(records, { benchmarkCases }), null, 2));
 }

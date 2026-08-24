@@ -13,8 +13,8 @@ These levels must not be described as if they are the same.
 
 ## Current beta evidence
 
-- 100 original classroom clues written for Grades 6–12.
-- Eight skill packs:
+- 120 original classroom clues written for Grades 6–12.
+- Ten skill packs:
   - Context and meaning
   - Word structure and morphology
   - Academic language
@@ -23,12 +23,14 @@ These levels must not be described as if they are the same.
   - Precision and revision
   - Mathematics language
   - Social studies
+  - Digital literacy
+  - Media literacy
 - Introductory, intermediate, and advanced difficulty labels.
 - Every classroom clue includes answer length, part of speech, hint, definition, clue signal, explanation, grade bands, skill, difficulty, and original-content provenance.
 - The five printable worksheet clues resolve to the intended reviewed answer in the classroom Solver.
-- The classroom picker makes all 100 clues directly testable without guessing what the database contains.
-- Eight printable skill packs turn the complete classroom library into ready-to-use student sheets with separate teacher keys.
-- A 24-case held-out paraphrase benchmark, written without access to production clue wording, currently returns the intended answer at rank 1 in all 24 cases and within the top 3 in all 24 cases.
+- The classroom picker makes all 120 clues directly testable without guessing what the database contains.
+- Ten printable skill packs turn the complete classroom library into ready-to-use student sheets with separate teacher keys.
+- A 30-case held-out paraphrase benchmark, written without access to production clue wording, currently returns the intended answer at rank 1 in all 30 cases and within the top 3 in all 30 cases when the selected classroom skill is supplied.
 - No student account is required; classroom pages omit GA4 and retain only cookie-free Pageview measurement.
 
 ## Fixed critical gap
@@ -41,7 +43,7 @@ This is now a permanent acceptance test: every worksheet clue must rank its inte
 
 - A TeachersFirst reviewer to test the guide, worksheet, and classroom Solver as one coherent activity.
 - A teacher to run one or several 20-minute, teacher-directed vocabulary sessions.
-- A teacher to print eight distinct skill-focused sessions without assembling materials manually.
+- A teacher to print ten distinct skill-focused sessions without assembling materials manually.
 - Demonstrating hint-before-answer reasoning, grammar signals, answer length, crossings, and written explanation.
 - A small beta that gathers feedback about clarity, usefulness, and which skill packs teachers want next.
 - A first retrieval-quality measurement across all eight skills; the sample is intentionally too small to satisfy the 500-record pilot gate.
@@ -107,4 +109,4 @@ Pricing is considered only after these experience and data gates, not before the
 
 ## Next data iteration
 
-Treat the current 100 records as an expanded mode demonstration, not a broad-coverage claim. Expand next from 100 to 500 original classroom clues through reviewed batches with explicit concept IDs, subject, grade band, difficulty, provenance, review status, and variant grouping. Every batch must ship with exact-solve tests, paraphrase benchmarks, difficulty distribution checks, and printable practice sets before its count is used in product copy. After the 500-record controlled pilot, scale toward 3,000 for a usable self-directed classroom beta and 10,000 for strong multi-subject coverage.
+Treat the current 120 records as an expanded mode demonstration, not a broad-coverage claim. Expand next from 120 to 500 original classroom clues through reviewed batches with explicit concept IDs, subject, grade band, difficulty, provenance, review status, and variant grouping. Every batch must ship with exact-solve tests, paraphrase benchmarks, difficulty distribution checks, and printable practice sets before its count is used in product copy. After the 500-record controlled pilot, scale toward 3,000 for a usable self-directed classroom beta and 10,000 for strong multi-subject coverage.

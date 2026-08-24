@@ -5,7 +5,10 @@ import { summarizeClassroomCorpus } from "../scripts/classroom-corpus-report.mjs
 
 test("reports the current classroom corpus honestly as a demonstration, not broad coverage", async () => {
   const records = JSON.parse(await readFile(new URL("../data/classroom-clues.json", import.meta.url), "utf8"));
-  const benchmarkCases = JSON.parse(await readFile(new URL("./fixtures/classroom-blind-benchmark.json", import.meta.url), "utf8"));
+  const benchmarkCases = [
+    ...JSON.parse(await readFile(new URL("./fixtures/classroom-blind-benchmark.json", import.meta.url), "utf8")),
+    ...JSON.parse(await readFile(new URL("./fixtures/classroom-blind-benchmark-digital-media.json", import.meta.url), "utf8"))
+  ];
   const report = summarizeClassroomCorpus(records, { benchmarkCases });
 
   assert.ok(report.records >= 30);
@@ -20,7 +23,7 @@ test("reports the current classroom corpus honestly as a demonstration, not broa
   assert.equal(report.gates.selfDirectedClassroomBeta.passed, false);
   assert.equal(report.gates.strongMultiSubjectProduct.passed, false);
   assert.equal(report.blindBenchmark.status, "measured");
-  assert.equal(report.blindBenchmark.cases, 24);
+  assert.equal(report.blindBenchmark.cases, 30);
   assert.equal(report.blindBenchmark.top1Rate, 1);
   assert.equal(report.blindBenchmark.top3Rate, 1);
 });
@@ -40,5 +43,6 @@ test("blocks scale gates when duplicates, answer leaks, or metadata gaps remain"
   assert.equal(report.quality.noCriticalIssues, false);
   assert.equal(report.quality.duplicatePairs.length, 1);
   assert.equal(report.quality.hintLeaks.length, 2);
+  assert.equal(report.quality.clueLeaks.length, 0);
   assert.equal(report.scalableMetadata.recordsWithGaps, 2);
 });

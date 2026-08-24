@@ -88,7 +88,7 @@ for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "
 const appScript = await readFile(path.join(dist, "assets/app.js"), "utf8");
 const solverScript = await readFile(path.join(dist, "assets/solver.mjs"), "utf8");
 if (!appScript.includes('fetch("/assets/clue-hubs.json")') || !appScript.includes("solverClues")) errors.push("solver app is not loading the multi-answer clue hub candidate pool");
-if (!appScript.includes('fetch("/assets/classroom-clues.json")') || !appScript.includes("classroom_example_select") || !appScript.includes('namedItem("length")')) errors.push("solver app is missing the original classroom clue library, example interaction, or safe length-field binding");
+if (!appScript.includes('fetch("/assets/classroom-clues.json")') || !appScript.includes("classroom_example_select") || !appScript.includes("classroom_skill_select") || !appScript.includes('namedItem("length")') || !appScript.includes("data-classroom-skill-filter")) errors.push("solver app is missing the original classroom clue library, example interaction, skill filtering, or safe length-field binding");
 if (!appScript.includes("beforeinstallprompt") || !appScript.includes("pwa_install_choice")) errors.push("app script is missing the install-app interaction");
 if (!solverScript.includes("clueHubCandidates")) errors.push("solver module is missing the clue-hub adapter");
 
@@ -296,7 +296,7 @@ if (!vocabularyGuide.includes("a growing library of original, reviewed practice 
 const classroomSolverPage = await readFile(path.join(dist, "classroom-solver/index.html"), "utf8");
 if (!classroomSolverPage.includes('content="minimal"') || classroomSolverPage.includes("googletagmanager.com") || !classroomSolverPage.includes("app.pageview.app")) errors.push("classroom solver is not in cookie-free minimal analytics mode");
 const classroomSkills = [...new Set(classroomClues.map((item) => item.skill))].sort();
-if (!classroomSolverPage.includes('data-tool-context="classroom"') || !classroomSolverPage.includes("data-classroom-example") || !classroomSolverPage.includes(`${classroomClues.length} original, reviewed clues`) || !classroomSolverPage.includes(`${classroomSkills.length} vocabulary and reasoning skills`) || !classroomSolverPage.includes('"learningResourceType":"Interactive tool"')) errors.push("classroom solver is missing its classroom-scoped tool, reviewed clue count, skill count, or learning-resource data");
+if (!classroomSolverPage.includes('data-tool-context="classroom"') || !classroomSolverPage.includes("data-classroom-example") || !classroomSolverPage.includes("data-classroom-skill-filter") || !classroomSolverPage.includes(`${classroomClues.length} original, reviewed clues`) || !classroomSolverPage.includes(`${classroomSkills.length} vocabulary and reasoning skills`) || !classroomSolverPage.includes('"learningResourceType":"Interactive tool"')) errors.push("classroom solver is missing its classroom-scoped tool, reviewed clue count, skill filter, skill count, or learning-resource data");
 const worksheetPage = await readFile(path.join(dist, "educators/crossword-vocabulary-worksheet/index.html"), "utf8");
 if (!worksheetPage.includes('content="minimal"') || worksheetPage.includes("googletagmanager.com") || !worksheetPage.includes("app.pageview.app")) errors.push("worksheet is not in cookie-free minimal analytics mode");
 for (const answer of ["CONNOTATION", "EASE", "RELIABLE", "CONTEXT", "ANTONYM"]) if (!worksheetPage.includes(answer)) errors.push(`worksheet is missing original answer ${answer}`);

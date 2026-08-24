@@ -1,0 +1,44 @@
+[
+  {
+    "id": "digital-media-01",
+    "clue": "What is the safety method that scrambles information so only someone with the right key can read it?",
+    "expectedAnswer": "ENCRYPTION",
+    "length": 10,
+    "skill": "digital-literacy"
+  },
+  {
+    "id": "digital-media-02",
+    "clue": "What do you call a deceptive message that pretends to be from a trusted source and tries to trick you into sharing private information?",
+    "expectedAnswer": "PHISHING",
+    "length": 8,
+    "skill": "digital-literacy"
+  },
+  {
+    "id": "digital-media-03",
+    "clue": "Which security barrier checks network traffic and blocks connections that do not meet its rules?",
+    "expectedAnswer": "FIREWALL",
+    "length": 8,
+    "skill": "digital-literacy"
+  },
+  {
+    "id": "digital-media-04",
+    "clue": "A news story gives much more attention to one political viewpoint than to others. What media-literacy term describes that slant?",
+    "expectedAnswer": "BIAS",
+    "length": 4,
+    "skill": "media-literacy"
+  },
+  {
+    "id": "digital-media-05",
+    "clue": "Before sharing a viral claim, what quality should you judge by checking the source, evidence, and author?",
+    "expectedAnswer": "CREDIBILITY",
+    "length": 11,
+    "skill": "media-literacy"
+  },
+  {
+    "id": "digital-media-06",
+    "clue": "What kind of humorous work imitates people, institutions, or events to expose their flaws or make a point?",
+    "expectedAnswer": "SATIRE",
+    "length": 6,
+    "skill": "media-literacy"
+  }
+]

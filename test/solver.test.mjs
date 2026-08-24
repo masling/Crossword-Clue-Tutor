@@ -37,6 +37,15 @@ test("filters by answer length when no pattern is supplied", () => {
   assert.deepEqual(results.map((item) => item.answer), ["SAFE"]);
 });
 
+test("filters classroom candidates by selected skill", () => {
+  const candidates = [
+    { clue: "Process that forms a new word from an existing base", answer: "DERIVATION", skill: "word-structure", popularity: 40 },
+    { clue: "Process that turns readable data into coded form", answer: "ENCRYPTION", skill: "digital-literacy", popularity: 90 }
+  ];
+  const results = solveClues(candidates, { clue: "A process involving an existing word or root", length: 10, skill: "word-structure" });
+  assert.deepEqual(results.map((item) => item.answer), ["DERIVATION"]);
+});
+
 test("returns popular matches first", () => {
   const results = solveClues(clues, { pattern: "S???" });
   assert.deepEqual(results.map((item) => item.answer), ["SPEC", "SEAR", "SAFE"]);

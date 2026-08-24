@@ -407,7 +407,7 @@ p { text-wrap: pretty; }
 .daily-practice-card .content-kind { margin-bottom: 5px; color: var(--primary-dark); }
 .daily-practice-card .button { flex: 0 0 auto; background: var(--surface-elevated); }
 .classroom-hero { padding-bottom: 28px; }
-.classroom-example-picker { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 390px); align-items: end; gap: 48px; margin-bottom: 28px; padding-block: 28px; border-block: 1px solid var(--line-strong); }
+.classroom-example-picker { display: grid; grid-template-columns: minmax(0, 1fr) minmax(200px, 260px) minmax(280px, 360px); align-items: end; gap: 28px; margin-bottom: 28px; padding-block: 28px; border-block: 1px solid var(--line-strong); }
 .classroom-example-picker h2 { margin-bottom: 7px; font-size: clamp(1.4rem, 2.5vw, 1.9rem); }
 .classroom-example-picker p { max-width: 62ch; margin: 0; color: var(--muted); }
 .classroom-tool { margin-bottom: 56px; }
@@ -469,6 +469,8 @@ p { text-wrap: pretty; }
   .explanation-grid { grid-template-columns: 1fr; }
   .explanation-grid section, .explanation-grid section:first-child { padding: 18px 0; border-right: 0; border-bottom: 1px solid var(--line); }
   .explanation-grid section:last-child { border-bottom: 0; }
+  .classroom-example-picker { grid-template-columns: 1fr 1fr; }
+  .classroom-example-picker > div:first-child { grid-column: 1 / -1; }
 }
 
 @media (max-width: 620px) {
@@ -532,6 +534,7 @@ p { text-wrap: pretty; }
   .freshness-subscribe { align-items: flex-start; flex-direction: column; gap: 22px; }
   .daily-practice-card { align-items: flex-start; flex-direction: column; gap: 20px; padding: 22px 18px; }
   .classroom-example-picker { grid-template-columns: 1fr; align-items: stretch; gap: 20px; }
+  .classroom-example-picker > div:first-child { grid-column: auto; }
   .worksheet-meta { flex-direction: column; gap: 8px; }
   .student-sheet table, .student-sheet tbody, .student-sheet tr, .student-sheet th, .student-sheet td { display: block; width: 100%; }
   .student-sheet thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }

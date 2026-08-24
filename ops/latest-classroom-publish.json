@@ -1,14 +1,16 @@
 {
-  "batchId": "2026-08-24-foundation-070",
-  "publishedAt": "2026-08-24T02:38:47.725Z",
-  "input": "ops/classroom-intake/2026-08-24-foundation-070.json",
-  "addedRecords": 70,
-  "totalRecords": 100,
-  "uniqueConcepts": 100,
-  "metadataCompleteRecords": 100,
+  "batchId": "2026-08-24-digital-media-020",
+  "publishedAt": "2026-08-24T02:55:21.387Z",
+  "input": "ops/classroom-intake/2026-08-24-digital-media-020.json",
+  "addedRecords": 20,
+  "totalRecords": 120,
+  "uniqueConcepts": 120,
+  "metadataCompleteRecords": 120,
   "quality": {
     "duplicatePairs": [],
     "hintLeaks": [],
+    "clueLeaks": [],
+    "templateDuplicates": [],
     "noCriticalIssues": true
   },
   "gates": {
@@ -19,16 +21,19 @@
     "controlledTeacherPilot": {
       "recordTarget": 500,
       "conceptTarget": 250,
+      "benchmarkCaseTarget": 250,
       "passed": false
     },
     "selfDirectedClassroomBeta": {
       "recordTarget": 3000,
       "conceptTarget": 1000,
+      "benchmarkCaseTarget": 1000,
       "passed": false
     },
     "strongMultiSubjectProduct": {
       "recordTarget": 10000,
       "conceptTarget": 3000,
+      "benchmarkCaseTarget": 2000,
       "passed": false
     }
   }

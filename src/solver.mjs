@@ -70,12 +70,13 @@ export function scoreClueMatch(item, query = "") {
   return score;
 }
 
-export function solveClues(clues, { pattern = "", clue = "", length } = {}) {
+export function solveClues(clues, { pattern = "", clue = "", length, skill = "" } = {}) {
   const matcher = patternToRegExp(pattern);
   const numericLength = Number.parseInt(length, 10);
   const hasLength = Number.isFinite(numericLength) && numericLength > 0;
 
   return clues
+    .filter((item) => !skill || item.skill === skill)
     .filter((item) => !matcher || matcher.test(item.answer))
     .filter((item) => !hasLength || answerCells(item.answer).length === numericLength)
     .map((item) => ({ item, relevance: scoreClueMatch(item, clue) }))

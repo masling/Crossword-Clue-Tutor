@@ -116,7 +116,7 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
     }
   }
 
-  const classroomSkills = new Set(["context-and-meaning", "word-structure", "academic-language", "science-vocabulary", "language-arts", "precision-and-revision", "mathematics-language", "social-studies"]);
+  const classroomSkills = new Set(["context-and-meaning", "word-structure", "academic-language", "science-vocabulary", "language-arts", "precision-and-revision", "mathematics-language", "social-studies", "digital-literacy", "media-literacy"]);
   const classroomDifficulties = new Set(["introductory", "intermediate", "advanced"]);
   const classroomSourceKinds = new Set(["original-classroom", "reference-informed-original", "licensed-seed-original"]);
   const classroomScaleFields = ["conceptId", "variantGroupId", "subject", "sourceUrl", "sourceLicense", "requiredAttribution", "reviewStatus", "contentVersion"];
@@ -138,6 +138,8 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
       if (!/^[A-Z]+$/.test(clue.answer ?? "")) errors.push(`${label} answer must contain uppercase A-Z only`);
       if ((clue.explanation ?? "").length < 55) errors.push(`${label} explanation is too short to be useful`);
       if ((clue.hint ?? "").toUpperCase().includes(clue.answer ?? "__NO_ANSWER__")) errors.push(`${label} hint reveals the answer`);
+      const clueWords = (clue.clue ?? "").toUpperCase().replace(/[^A-Z]+/g, " ").trim().split(/\s+/);
+      if (clueWords.includes(clue.answer ?? "__NO_ANSWER__")) errors.push(`${label} clue reveals the answer`);
       if (!Array.isArray(clue.tags) || clue.tags.length < 2) errors.push(`${label} needs at least two tags`);
       if (!Array.isArray(clue.gradeBands) || !clue.gradeBands.includes("6-8") || !clue.gradeBands.includes("9-12")) errors.push(`${label} must support grades 6-8 and 9-12`);
       if (!classroomSkills.has(clue.skill)) errors.push(`${label} has unsupported skill ${clue.skill}`);

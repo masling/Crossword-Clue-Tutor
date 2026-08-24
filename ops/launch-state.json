@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T10:44:08+08:00",
+  "updatedAt": "2026-08-24T10:59:17+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -75,7 +75,7 @@
     }
   },
   "content": {
-    "indexablePages": 301,
+    "indexablePages": 303,
     "reviewedClues": 129,
     "answerMeaningPages": 110,
     "dictionaryExpansion": {
@@ -112,14 +112,14 @@
     "solverHubCandidates": 328,
     "solverCandidatePool": 406,
     "linkableGuides": 3,
-    "classroomResources": 12,
+    "classroomResources": 14,
     "classroomProductReadiness": {
       "status": "Expanded directory-review beta; controlled pilot gate not yet met",
-      "originalReviewedClues": 100,
-      "scaleAssessment": "One hundred clues across eight ready-to-use packs demonstrate broader classroom value but do not establish arbitrary-clue or long-term self-directed coverage",
-      "skillPacks": 8,
-      "skillDistribution": { "context-and-meaning": 10, "word-structure": 10, "academic-language": 10, "science-vocabulary": 10, "language-arts": 10, "precision-and-revision": 10, "mathematics-language": 20, "social-studies": 20 },
-      "printableSkillPacks": 8,
+      "originalReviewedClues": 120,
+      "scaleAssessment": "One hundred twenty clues across ten ready-to-use packs demonstrate broader classroom value but do not establish arbitrary-clue or long-term self-directed coverage",
+      "skillPacks": 10,
+      "skillDistribution": { "context-and-meaning": 10, "word-structure": 10, "academic-language": 10, "science-vocabulary": 10, "language-arts": 10, "precision-and-revision": 10, "mathematics-language": 20, "social-studies": 20, "digital-literacy": 10, "media-literacy": 10 },
+      "printableSkillPacks": 10,
       "printablePackStructure": "Student sheet, evidence prompt, reflection, and separate teacher key for every skill group",
       "worksheetExactSolveRate": "5/5 rank 1",
       "difficultyLevels": ["introductory", "intermediate", "advanced"],
@@ -131,14 +131,14 @@
       "strongMultiSubjectTarget": 10000,
       "corpusInfrastructure": {
         "reportCommand": "npm run classroom:report",
-        "recordsWithCompleteScaleMetadata": 100,
+        "recordsWithCompleteScaleMetadata": 120,
         "recordsWithMetadataGaps": 0,
-        "uniqueConcepts": 100,
+        "uniqueConcepts": 120,
         "conceptsWithMultipleVariants": 0,
-        "blindBenchmarkStatus": "24 independently worded hold-out clues measured",
+        "blindBenchmarkStatus": "30 independently worded hold-out clues measured",
         "blindBenchmarkTop1Rate": 1,
         "blindBenchmarkTop3Rate": 1,
-        "blindBenchmarkCoverage": "Three cases for each of eight skills; larger stratified benchmark still required for the 500-record gate",
+        "blindBenchmarkCoverage": "Three cases for each of ten skills; larger stratified benchmark still required for the 500-record gate",
         "intakeTemplate": "ops/classroom-intake/template.json",
         "sourcePolicy": "Licensed sources may seed formal batches; unclear or non-commercial sources may inform internal concepts, facts, difficulty, and priority while all student-facing wording remains original",
         "sourceReview": "research/2026-08-24-classroom-corpus-sources.md",
