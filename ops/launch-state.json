@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T08:54:57+08:00",
+  "updatedAt": "2026-08-24T09:04:18+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -455,12 +455,12 @@
     "lastDeployStatus": "Success"
   },
   "outreach": {
-    "verifiedAt": "2026-08-24T08:50:34+08:00",
-    "readyForApproval": 4,
-    "sent": 7,
+    "verifiedAt": "2026-08-24T09:04:18+08:00",
+    "readyForApproval": 0,
+    "sent": 10,
     "formsSubmitted": 4,
-    "formsBlocked": 0,
-    "educationFormsBlocked": 0,
+    "formsBlocked": 1,
+    "educationFormsBlocked": 1,
     "educationFormsSkipped": 1,
     "educationFormsPendingManual": 0,
     "responses": 1,
@@ -468,23 +468,18 @@
     "liveExternalListings": 0,
     "outreachRepliesSent": 1,
     "nextListingCheckNotBefore": "2026-08-25T13:24:04+08:00",
-    "readyTargets": [
-      "Larry Ferlazzo's Websites of the Day",
-      "OTAN Teaching with Technology",
-      "FreeTech4Teachers classroom resources",
-      "Rex Parker crossword blog"
-    ],
+    "readyTargets": [],
     "executionAssets": {
       "manifest": "ops/outreach/manifest.json",
       "individualEmailDrafts": 10,
       "gmailDraftsReadyForReview": 0,
-      "localEmailDraftsReadyForReview": 3,
+      "localEmailDraftsReadyForReview": 0,
       "structuredFormPayloads": 6,
       "validationCommand": "npm run outreach:check",
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 110 meaning entries",
-      "transmissionStatus": "Seven unique email targets were sent and four forms were submitted. Three new reviewed email drafts for Larry Ferlazzo, OTAN, and Rex Parker plus one FreeTech4Teachers form payload are prepared but not transmitted. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
+      "transmissionStatus": "Ten unique email targets were sent and four forms were submitted. Larry Ferlazzo, OTAN, and Rex Parker were sent on August 24. The FreeTech4Teachers legacy Weebly form was attempted but is not counted because its email field cleared and no receipt appeared. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
     },
-    "approvalNeeded": "Fresh approval to send three reviewed emails and submit one public contact form",
+    "approvalNeeded": null,
     "senderSetup": {
       "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
       "inboundDestination": "masling@gmail.com",
