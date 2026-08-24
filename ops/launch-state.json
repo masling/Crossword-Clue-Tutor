@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T11:28:36+08:00",
+  "updatedAt": "2026-08-24T11:31:32+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -257,18 +257,12 @@
       "visualQa": "Verified at 1280x900 and 390x844"
     },
     "internalLinkAudit": {
-      "verifiedAt": "2026-08-20T23:03:13+08:00",
+      "verifiedAt": "2026-08-24T11:31:32+08:00",
       "orphanPages": 0,
       "unreachableFromHome": 0,
       "maximumClickDepth": 3,
-      "depthDistribution": {
-        "0": 1,
-        "1": 42,
-        "2": 96,
-        "3": 21
-      },
       "buildGate": "Fail when any indexable page has no inbound HTML link, is unreachable from home, or exceeds depth 3.",
-      "productionEvidence": "160/160 sitemap URLs crawled; 0 orphans; 0 unreachable; maximum depth 3"
+      "productionEvidence": "305/305 sitemap URLs crawled; 0 orphans; 0 unreachable; maximum depth 3"
     },
     "selectionPolicy": "Routine same-day coverage is independent of trends and historical keyword volume. Use Bing, Google Trends, and Search Console afterward to backfill missed dates and expand materially undercovered queries or topics.",
     "latestDemandBackfill": {
@@ -479,10 +473,10 @@
     "bingSiteScanRemediation": "Generated titles are capped at 70 characters. A full production crawl verified 0 long-title pages; Bing rescan remains unavailable until its page quota resets.",
     "bingSiteScanRescanStatus": "Start-new-scan form reports 0 pages of quota remaining",
     "productionSeoAudit": {
-      "auditedAt": "2026-08-22T20:59:16+08:00",
+      "auditedAt": "2026-08-24T11:31:32+08:00",
       "command": "npm run seo:audit-production",
-      "sitemapUrls": 257,
-      "pagesAudited": 257,
+      "sitemapUrls": 305,
+      "pagesAudited": 305,
       "pagesWithErrors": 0,
       "duplicateSitemapUrls": 0,
       "invalidLastmod": 0,
@@ -494,7 +488,7 @@
       "maximumClickDepth": 3,
       "titleTooLong": 0,
       "longestTitleCharacters": 70,
-      "longestTitleRoute": "/clue-types/question-marks/",
+      "longestTitleRoute": "/educators/crossword-vocabulary-packs/digital-literacy/",
       "checks": [
         "HTTP 200 and HTML content type",
         "Canonical URL",
