@@ -116,7 +116,7 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
     }
   }
 
-  const classroomSkills = new Set(["context-and-meaning", "word-structure", "academic-language", "science-vocabulary", "language-arts", "precision-and-revision", "mathematics-language", "social-studies", "digital-literacy", "media-literacy", "financial-literacy", "environmental-literacy", "grammar-and-usage", "biology-vocabulary", "chemistry-vocabulary", "earth-science", "geometry-language", "statistics-and-data", "physics-vocabulary", "geography-language", "civics-and-government", "reading-analysis"]);
+  const classroomSkills = new Set(["context-and-meaning", "word-structure", "academic-language", "science-vocabulary", "language-arts", "precision-and-revision", "mathematics-language", "social-studies", "digital-literacy", "media-literacy", "financial-literacy", "environmental-literacy", "grammar-and-usage", "biology-vocabulary", "chemistry-vocabulary", "earth-science", "geometry-language", "statistics-and-data", "physics-vocabulary", "geography-language", "civics-and-government", "reading-analysis", "algebra-language", "world-history", "economics-vocabulary", "ecology-vocabulary", "writing-and-rhetoric", "computer-science", "health-and-wellness"]);
   const classroomDifficulties = new Set(["introductory", "intermediate", "advanced"]);
   const classroomSourceKinds = new Set(["original-classroom", "reference-informed-original", "licensed-seed-original"]);
   const classroomScaleFields = ["conceptId", "variantGroupId", "subject", "sourceUrl", "sourceLicense", "requiredAttribution", "reviewStatus", "contentVersion"];

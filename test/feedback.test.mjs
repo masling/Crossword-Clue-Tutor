@@ -61,7 +61,38 @@ test("stores anonymous feedback with prepared values", async () => {
     "Example clue",
     "TEST",
     "The second sentence does not explain the abbreviation signal.",
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
     null
+  ]);
+});
+
+test("stores structured teacher-pilot evidence separately from issue reports", async () => {
+  const database = mockDatabase();
+  const response = await onRequestPost(context({
+    issueType: "teacher-pilot",
+    pagePath: "/educators/teacher-pilot-feedback/",
+    mode: "classroom",
+    clue: "",
+    answer: "",
+    educatorRole: "classroom-teacher",
+    gradeBand: "6-8",
+    sessionsCompleted: "2",
+    skillUsed: "biology-vocabulary",
+    matchRating: "4",
+    usefulnessRating: "5",
+    reuseIntent: "yes",
+    message: "Students used the hints before revealing the reviewed answers.",
+    email: "teacher@example.com"
+  }, { database }));
+  assert.equal(response.status, 201);
+  assert.deepEqual(database.state.values.slice(8), [
+    "classroom-teacher", "6-8", 2, "biology-vocabulary", 4, 5, "yes"
   ]);
 });
 
@@ -69,7 +100,7 @@ test("keeps optional email only for a valid follow-up address", async () => {
   const database = mockDatabase();
   const response = await onRequestPost(context({ ...validFeedback, email: " Solver@Example.com " }, { database }));
   assert.equal(response.status, 201);
-  assert.equal(database.state.values.at(-1), "solver@example.com");
+  assert.equal(database.state.values[7], "solver@example.com");
 
   const invalid = await onRequestPost(context({ ...validFeedback, email: "not-an-email" }));
   assert.equal(invalid.status, 400);

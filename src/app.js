@@ -272,15 +272,17 @@ function setupFeedbackForm() {
 
   const params = new URLSearchParams(location.search);
   const context = form.querySelector("[data-feedback-context]");
-  const pagePath = params.get("page")?.startsWith("/") && !params.get("page").startsWith("//") ? params.get("page") : "/feedback/";
-  const mode = ["solver", "explain", "clue", "answer", "hub", "general"].includes(params.get("mode")) ? params.get("mode") : "general";
+  const defaultPagePath = form.elements.pagePath.value?.startsWith("/") ? form.elements.pagePath.value : "/feedback/";
+  const defaultMode = ["solver", "explain", "clue", "answer", "hub", "general", "classroom"].includes(form.elements.mode.value) ? form.elements.mode.value : "general";
+  const pagePath = params.get("page")?.startsWith("/") && !params.get("page").startsWith("//") ? params.get("page") : defaultPagePath;
+  const mode = ["solver", "explain", "clue", "answer", "hub", "general", "classroom"].includes(params.get("mode")) ? params.get("mode") : defaultMode;
   const clue = params.get("clue")?.slice(0, 300) ?? "";
   const answer = params.get("answer")?.replace(/[^A-Za-z]/g, "").toUpperCase().slice(0, 50) ?? "";
 
   form.elements.pagePath.value = pagePath;
   form.elements.mode.value = mode;
-  form.elements.clue.value = clue;
-  form.elements.answer.value = answer;
+  if (form.elements.clue) form.elements.clue.value = clue;
+  if (form.elements.answer) form.elements.answer.value = answer;
   if (pagePath !== "/feedback/" || clue || answer) {
     const details = [pagePath, clue ? `Clue: ${clue}` : "", answer ? `Answer: ${answer}` : ""].filter(Boolean);
     context.textContent = `Attached context · ${details.join(" · ")}`;

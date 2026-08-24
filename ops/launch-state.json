@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T12:24:25+08:00",
+  "updatedAt": "2026-08-24T12:44:55+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -125,6 +125,14 @@
       "difficultyLevels": ["introductory", "intermediate", "advanced"],
       "gradeBands": ["6-8", "9-12"],
       "studentAccountRequired": false,
+      "teacherPilotFeedback": {
+        "route": "/educators/teacher-pilot-feedback/",
+        "status": "Production D1 migration and schema verification succeeded; application deployment included in the pending commit",
+        "migration": "0002_add_teacher_pilot_feedback.sql applied successfully to crossword-clue-tutor-feedback at 2026-08-24T12:44:00+08:00 with Cloudflare automatic backup",
+        "evidenceFields": ["educator role", "grade band", "sessions completed", "skill pack", "reviewed-answer match rating", "classroom usefulness rating", "reuse intent", "comments", "optional follow-up email"],
+        "privacyBoundary": "No student names or student work requested; no raw IP address or user agent stored; optional email is only for clarifying the submitted report",
+        "pilotProofBoundary": "Engineering hold-outs remain separate; full controlled-pilot proof still requires five educators to complete two sessions and submit structured feedback"
+      },
       "pricingStatus": "Deferred until data and experience gates are met",
       "controlledPilotTarget": 500,
       "selfDirectedBetaTarget": 3000,
