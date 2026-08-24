@@ -4,7 +4,7 @@
     "name": "Crossword Clue Tutor",
     "email": "hello@crosswordcluetutor.com"
   },
-  "status": "outreach_sent",
+  "status": "outreach_expansion_ready",
   "datasetEvidence": {
     "clueFamilies": 15,
     "reviewedCandidates": 328,
@@ -295,6 +295,20 @@
       "submissionEvidence": "The form redirected to /knowledge-base/directory/submit-success and displayed Submission Received. The team will review the resource and notify the project when approved.",
       "phoneOmitted": true,
       "publicContactEmailOmitted": true
+    },
+    {
+      "id": "clerna-teacher-pilot",
+      "target": "Clerna lesson plan library",
+      "channel": "email",
+      "recipient": "info@clerna.org",
+      "subject": "Lesson Plan Submission – Grades 6–12 – Crossword Vocabulary Evidence",
+      "textFile": "messages/clerna-teacher-pilot.txt",
+      "gmailDraftStatus": "local_draft_ready",
+      "gmailDraftCreatedAt": null,
+      "approvalRequired": true,
+      "sentAt": null,
+      "sourcePage": "https://clerna.org/submit-a-lesson-plan/",
+      "preparedAt": "2026-08-24T13:02:00+08:00"
     }
   ]
 }

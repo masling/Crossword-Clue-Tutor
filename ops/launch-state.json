@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T12:52:52+08:00",
+  "updatedAt": "2026-08-24T13:01:26+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -75,7 +75,7 @@
     }
   },
   "content": {
-    "indexablePages": 330,
+    "indexablePages": 331,
     "reviewedClues": 137,
     "answerMeaningPages": 110,
     "dictionaryExpansion": {
@@ -111,8 +111,8 @@
     "solverReviewedClueCandidates": 110,
     "solverHubCandidates": 328,
     "solverCandidatePool": 414,
-    "linkableGuides": 3,
-    "classroomResources": 33,
+    "linkableGuides": 4,
+    "classroomResources": 34,
     "classroomProductReadiness": {
       "status": "Controlled-pilot data readiness passed; independent teacher validation remains outstanding",
       "originalReviewedClues": 500,
@@ -133,6 +133,14 @@
         "evidenceFields": ["educator role", "grade band", "sessions completed", "skill pack", "reviewed-answer match rating", "classroom usefulness rating", "reuse intent", "comments", "optional follow-up email"],
         "privacyBoundary": "No student names or student work requested; no raw IP address or user agent stored; optional email is only for clarifying the submitted report",
         "pilotProofBoundary": "Engineering hold-outs remain separate; full controlled-pilot proof still requires five educators to complete two sessions and submit structured feedback"
+      },
+      "teacherPilotKit": {
+        "route": "/educators/crossword-vocabulary-pilot/",
+        "sessions": 2,
+        "minutesPerSession": 20,
+        "status": "Ready for production deployment",
+        "coverage": "Goals, materials, preparation, timed procedure, assessment, differentiation, extension, observation prompts, privacy boundary, and structured feedback handoff",
+        "externalUse": "Prepared as a complete original Grades 6-12 lesson plan for educator recruitment and editorial resource submission"
       },
       "pricingStatus": "Deferred until data and experience gates are met",
       "controlledPilotTarget": 500,
@@ -551,8 +559,8 @@
     "lastDeployStatus": "Success"
   },
   "outreach": {
-    "verifiedAt": "2026-08-24T11:42:47+08:00",
-    "readyForApproval": 0,
+    "verifiedAt": "2026-08-24T13:01:26+08:00",
+    "readyForApproval": 1,
     "sent": 12,
     "formsSubmitted": 6,
     "formsBlocked": 1,
@@ -574,19 +582,27 @@
       "sendBoundary": "Report only; every follow-up still requires fresh user approval",
       "suppression": "Do not follow up when a reply, active listing, prior follow-up, skip, or do-not-contact status exists"
     },
-    "readyTargets": [],
+    "readyTargets": [
+      {
+        "id": "clerna-teacher-pilot",
+        "target": "Clerna lesson plan library",
+        "channel": "email",
+        "asset": "Two-session crossword vocabulary teacher pilot",
+        "status": "local_draft_ready"
+      }
+    ],
     "executionAssets": {
       "manifest": "ops/outreach/manifest.json",
-      "individualEmailDrafts": 12,
+      "individualEmailDrafts": 13,
       "gmailDraftsReadyForReview": 0,
-      "localEmailDraftsReadyForReview": 0,
+      "localEmailDraftsReadyForReview": 1,
       "structuredFormPayloads": 8,
       "validationCommand": "npm run outreach:check",
       "followUpReportCommand": "npm run outreach:followups",
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 110 meaning entries",
-      "transmissionStatus": "Twelve unique email targets were sent and six forms were submitted. On August 24, puzzled.online accepted Daily Clue Clinic for verification and Learning Corner accepted the classroom resource for directory review; neither submission required a phone number, public contact email, paid listing, or reciprocal badge. TeachersFirst forwarded the resource to its review team for consideration; XWord Info declined and is marked do-not-contact. TeachThought and Cruciverb were sent with user confirmation on August 24. The FreeTech4Teachers legacy Weebly form was attempted but is not counted because its email field cleared and no receipt appeared. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
+      "transmissionStatus": "Twelve unique email targets were sent and six forms were submitted. A thirteenth email to Clerna is prepared but not sent; it submits the complete two-session teacher pilot as an original Grades 6-12 lesson plan, without payment, attachment, reciprocal link, or sponsored-placement request. On August 24, puzzled.online accepted Daily Clue Clinic for verification and Learning Corner accepted the classroom resource for directory review. TeachersFirst forwarded the resource to its review team for consideration; XWord Info declined and is marked do-not-contact. The FreeTech4Teachers legacy Weebly form was attempted but is not counted because its email field cleared and no receipt appeared. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
     },
-    "approvalNeeded": null,
+    "approvalNeeded": "Approve or reject sending clerna-teacher-pilot to info@clerna.org after the production pilot-kit URL is verified",
     "senderSetup": {
       "proposedIdentity": "Crossword Clue Tutor <hello@crosswordcluetutor.com>",
       "inboundDestination": "masling@gmail.com",
