@@ -116,6 +116,7 @@ if (config.indexNowKey) {
 
 const sitemap = await readFile(path.join(dist, "sitemap.xml"), "utf8");
 const clues = JSON.parse(await readFile(path.resolve("data/clues.json"), "utf8"));
+const classroomClues = JSON.parse(await readFile(path.resolve("data/classroom-clues.json"), "utf8"));
 const answers = JSON.parse(await readFile(path.resolve("data/answers.json"), "utf8"));
 const publications = JSON.parse(await readFile(path.resolve("data/publications.json"), "utf8"));
 const clueHubs = JSON.parse(await readFile(path.resolve("data/clue-hubs.json"), "utf8"));
@@ -299,6 +300,19 @@ const worksheetPage = await readFile(path.join(dist, "educators/crossword-vocabu
 if (!worksheetPage.includes('content="minimal"') || worksheetPage.includes("googletagmanager.com") || !worksheetPage.includes("app.pageview.app")) errors.push("worksheet is not in cookie-free minimal analytics mode");
 for (const answer of ["CONNOTATION", "EASE", "RELIABLE", "CONTEXT", "ANTONYM"]) if (!worksheetPage.includes(answer)) errors.push(`worksheet is missing original answer ${answer}`);
 if (!worksheetPage.includes("data-print-page") || !worksheetPage.includes('"learningResourceType":"Worksheet"')) errors.push("worksheet is missing print control or learning-resource data");
+const classroomPackHub = await readFile(path.join(dist, "educators/crossword-vocabulary-packs/index.html"), "utf8");
+if (!classroomPackHub.includes("Six crossword vocabulary practice packs") || !classroomPackHub.includes('"@type":"ItemList"') || !classroomPackHub.includes('content="minimal"')) errors.push("classroom pack hub is missing its six-pack promise, ItemList data, or reduced analytics mode");
+for (const skill of ["context-and-meaning", "word-structure", "academic-language", "science-vocabulary", "language-arts", "precision-and-revision"]) {
+  const packPage = await readFile(path.join(dist, `educators/crossword-vocabulary-packs/${skill}/index.html`), "utf8");
+  const expectedItems = classroomClues.filter((item) => item.skill === skill);
+  if (!sitemap.includes(`/educators/crossword-vocabulary-packs/${skill}/`)) errors.push(`${skill} classroom pack is missing from the sitemap`);
+  if (!packPage.includes("data-print-page") || !packPage.includes('"learningResourceType":"Worksheet"') || !packPage.includes('content="minimal"') || packPage.includes("googletagmanager.com")) errors.push(`${skill} classroom pack is missing print, LearningResource, or reduced-analytics boundaries`);
+  for (const item of expectedItems) {
+    const escapedClue = item.clue.replaceAll("&", "&amp;").replaceAll('"', "&quot;").replaceAll("'", "&#039;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
+    if (!packPage.includes(escapedClue) || !packPage.includes(item.answer)) errors.push(`${skill} classroom pack is missing reviewed clue or key for ${item.answer}`);
+  }
+}
+if (!sitemap.includes("/educators/crossword-vocabulary-packs/")) errors.push("classroom pack hub is missing from the sitemap");
 if (!homePage.includes("Subscribe to fresh clue feed") || !homePage.includes("/feed.xml")) errors.push("homepage is missing the visible feed subscription");
 const ambiguityResearchPage = await readFile(path.join(dist, "research/ambiguous-crossword-clues/index.html"), "utf8");
 if (!ambiguityResearchPage.includes("Ambiguous crossword clues by answer length and meaning")) errors.push("ambiguity research page is missing its primary target");
