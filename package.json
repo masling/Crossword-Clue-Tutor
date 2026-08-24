@@ -12,6 +12,7 @@
     "email:check-dns": "node scripts/check-mail-dns.mjs",
     "indexnow:submit": "node scripts/submit-indexnow.mjs",
     "outreach:check": "node scripts/validate-outreach.mjs",
+    "outreach:followups": "node scripts/outreach-followups.mjs",
     "outreach:send": "node scripts/send-outreach.mjs",
     "seo:audit-production": "node scripts/audit-production-seo.mjs",
     "source:usatoday": "node scripts/usatoday-source-adapter.mjs",

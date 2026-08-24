@@ -512,6 +512,14 @@
     "liveExternalListings": 0,
     "outreachRepliesSent": 1,
     "nextListingCheckNotBefore": "2026-08-25T13:24:04+08:00",
+    "followUpPolicy": {
+      "waitDays": 8,
+      "allowedWindowDays": "7–10",
+      "firstFollowUpNotBefore": "2026-08-30T09:43:52+08:00",
+      "command": "npm run outreach:followups",
+      "sendBoundary": "Report only; every follow-up still requires fresh user approval",
+      "suppression": "Do not follow up when a reply, active listing, prior follow-up, skip, or do-not-contact status exists"
+    },
     "readyTargets": [],
     "executionAssets": {
       "manifest": "ops/outreach/manifest.json",
@@ -520,6 +528,7 @@
       "localEmailDraftsReadyForReview": 0,
       "structuredFormPayloads": 6,
       "validationCommand": "npm run outreach:check",
+      "followUpReportCommand": "npm run outreach:followups",
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 110 meaning entries",
       "transmissionStatus": "Twelve unique email targets were sent and four forms were submitted. TeachThought and Cruciverb were sent with user confirmation on August 24. The FreeTech4Teachers legacy Weebly form was attempted but is not counted because its email field cleared and no receipt appeared. Teach Arcade remains skipped after repeated site network errors; Daily Crossword Links and XWord Blog each received one accidental duplicate."
     },
