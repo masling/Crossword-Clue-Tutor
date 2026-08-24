@@ -55,6 +55,16 @@ so never request that field, sign in, or automate Reveal Puzzle. Verify answers 
 the small selected set before preparing an intake batch. Run `npm run source:stats` for
 an aggregate report without printing the stored raw clue rows.
 
+When a publisher exposes clue text only inside its public browser player, collect a
+normalized DOM snapshot with publication, source date, source ID, title, creator,
+editor, source URL, and Across/Down clue number and text. Do not collect Reveal data,
+answers, filled cells, cookies, or account state. Import it with
+`npm run source:import -- --input .local/source-snapshot.json --output .local/source-candidates.json`.
+The importer rejects answer-bearing snapshots, stores the complete clue list only in
+the ignored SQLite database, and emits a model-facing JSON file capped at ten ranked
+candidates. This deterministic browser-to-database path is preferred to sending a full
+clue list through a language model.
+
 ## Daily coverage rule
 
 Every monitored source/date must receive selected clue coverage once exact clue-answer
