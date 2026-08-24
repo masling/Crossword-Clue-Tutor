@@ -262,6 +262,9 @@ p { text-wrap: pretty; }
 .mechanism-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 38px; }
 .mechanism-grid > div { border-top: 1px solid var(--line-strong); padding-top: 18px; }
 .mechanism-grid h2 { font-size: 1.15rem !important; }
+.same-puzzle-clues { padding-top: 28px; border-top: 1px solid var(--line-strong); }
+.same-puzzle-clues > p { margin-bottom: 20px; color: var(--muted); }
+.same-puzzle-clues .clue-row { min-height: 70px; }
 .save-clue-control { display: grid; gap: 7px; margin-top: 22px; }
 .save-clue-button { width: 100%; }
 .save-clue-button[aria-pressed="true"] { border-color: var(--primary-dark); background: var(--primary-pale); }

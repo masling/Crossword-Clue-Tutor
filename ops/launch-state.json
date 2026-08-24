@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T09:24:46+08:00",
+  "updatedAt": "2026-08-24T09:34:03+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -88,6 +88,15 @@
       "answers": ["AMPLE", "ANIME", "DOVE", "MASON", "NET", "PERO", "RAD", "ROBOT", "SIP", "TET"],
       "sourceClues": ["More than enough", "One Piece medium", "Peace symbol", "___-Dixon line", "Part of a ping-pong table", "Spanish but", "Awesome!", "K9 of Doctor Who, for one", "Mini-gulp", "Vietnamese for festival"],
       "internalLinking": "Every matching explainer now links to a durable meaning page with pronunciation, alternate senses, and recurring clue patterns"
+    },
+    "samePuzzleInternalLinking": {
+      "enabledAt": "2026-08-24T09:34:03+08:00",
+      "linkedExplainerPages": 101,
+      "publicationDateGroups": 21,
+      "maximumSiblingLinksPerPage": 4,
+      "userValue": "Continue through selected independently explained clues from the same publisher puzzle date",
+      "rightsBoundary": "Selected reviewed pages only; no complete puzzle or answer list",
+      "structuredRelationship": "Each published Article identifies its publication hub with Schema.org isPartOf"
     },
     "evergreenClueHubs": 15,
     "evergreenClueHubCandidates": 328,

@@ -582,11 +582,22 @@ await writePage(answersTodayRoute, pageTemplate({ title: "Crossword puzzle answe
 for (const clue of clues) {
   const route = `/explainers/${clue.slug}/`;
   const profile = answerByValue.get(clue.answer);
-  const related = clues.filter((item) => item.slug !== clue.slug && (item.answer === clue.answer || item.tags.some((tag) => clue.tags.includes(tag)))).slice(0, 4);
+  const samePuzzle = clue.publication && clue.sourceDate
+    ? clues
+      .filter((item) => item.slug !== clue.slug && item.publication === clue.publication && item.sourceDate === clue.sourceDate)
+      .sort((a, b) => b.popularity - a.popularity)
+      .slice(0, 4)
+    : [];
+  const samePuzzleSlugs = new Set(samePuzzle.map((item) => item.slug));
+  const related = clues.filter((item) => item.slug !== clue.slug && !samePuzzleSlugs.has(item.slug) && (item.answer === clue.answer || item.tags.some((tag) => clue.tags.includes(tag)))).slice(0, 4);
   const publicationHub = publicationHubFor(clue.publication);
-  const sourceContext = clue.publication
+  let sourceContext = clue.publication
     ? `<section class="source-context"><h2>Where this clue appeared</h2><p>${escapeHtml(clue.clueNumber)} in ${escapeHtml(clue.publication)} puzzle for ${escapeHtml(formatDate(clue.sourceDate))}.</p>${publicationHub ? `<a class="text-link" href="${publicationHub.route}">Browse selected ${escapeHtml(clue.publication)} clues →</a>` : ""}</section>`
     : "";
+  const samePuzzleContext = samePuzzle.length
+    ? `<section class="same-puzzle-clues"><h2>More selected clues from ${escapeHtml(clue.publication)} · ${escapeHtml(formatDate(clue.sourceDate))}</h2><p>Continue with independently explained clues from the same puzzle date. This is a selected learning set, not a complete answer list.</p>${clueRows(samePuzzle)}</section>`
+    : "";
+  sourceContext += samePuzzleContext;
   const contentKind = clue.publication
     ? `${clue.publication} · ${clue.clueNumber} · ${clue.answer.length} letters`
     : `Reviewed crossword explanation · ${clue.answer.length} letters`;
@@ -607,7 +618,7 @@ for (const clue of clues) {
     ? `${config.name} is not affiliated with or endorsed by ${clue.publication} or its publisher.`
     : "It is not an official answer key from a crossword publisher.";
   const body = `<article class="shell article-layout clue-article" data-current-clue="${clue.slug}"><div class="article-main">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Explanations", href: "/daily-clue-clinic/" }, { label: clue.clue }])}<header><p class="content-kind">${escapeHtml(contentKind)}</p><h1>${pageHeading}</h1><p class="review-date">Editorially reviewed ${escapeHtml(formatDate(clue.reviewedAt))}</p></header><section class="answer-stage" aria-labelledby="answer-stage-${clue.slug}"><div class="answer-stage-heading"><div><p>Start spoiler-light</p><h2 id="answer-stage-${clue.slug}">Need a nudge first?</h2></div><span class="length-badge">${clue.answer.length} letters</span></div><p class="clue-hint">${escapeHtml(clue.hint)}</p><details class="answer-reveal" data-answer-reveal data-nosnippet><summary><span>Show the answer and explanation</span><small>One click · no signup</small></summary><div class="answer-reveal-content"><p class="answer-label">Answer</p><div class="answer-cells" aria-label="${clue.answer.split("").join(" ")}">${[...clue.answer].map((letter) => `<span>${letter}</span>`).join("")}</div><h3>Why it fits</h3><p>${escapeHtml(clue.explanation)}</p></div></details></section><section class="mechanism-grid"><div><h2>Clue signal</h2><p>${escapeHtml(clue.signal)}</p></div><div><h2>Answer meaning</h2><p>${escapeHtml(clue.definition)}</p></div></section>${sourceContext}${profile ? `<p data-nosnippet><a class="text-link" href="/crosswordese/${profile.slug}/">See ${profile.answer} meaning and common clue patterns →</a></p>` : ""}${related.length ? `<section data-related-clues><h2>Related reviewed clues</h2>${clueRows(related)}</section>` : ""}<section class="continuation-tool"><div class="continuation-heading"><div><h2>Solve the next clue here.</h2><p>Paste another clue, add the letters you trust, and keep solving without returning to search.</p></div><a class="text-link" href="/saved-clues/" data-return-link="saved">Open saved clues →</a></div>${toolShell("solve", true, "explainer")}</section><nav class="return-paths" aria-label="Keep solving"><a href="/crossword-answers-today/" data-return-link="today"><strong>Today’s selected clues</strong><span>Continue with the latest reviewed puzzles</span></a><a href="/saved-clues/" data-return-link="saved"><strong>Your saved clues</strong><span>Pick up where you left off on this device</span></a></nav><p class="source-note">This independently written explanation is for learning and clue analysis. ${escapeHtml(affiliationNote)}</p></div><aside class="article-aside return-aside"><p>Keep this useful</p><div class="save-clue-control"><button class="button button-outline save-clue-button" type="button" data-save-clue data-clue-slug="${clue.slug}" aria-pressed="false">Save clue</button><span class="save-clue-status" data-save-clue-status aria-live="polite"></span></div><a class="aside-all" href="/crossword-answers-today/" data-return-link="today">Browse today’s clues →</a><a class="aside-all" href="/solver/" data-return-link="solver">Open the full solver →</a><section class="recent-clues" data-recent-clues hidden><h2>Recently viewed</h2><div data-recent-clue-items></div></section><a class="aside-all" href="${feedbackUrl({ mode: "clue", pagePath: route, clue: clue.clue, answer: clue.answer })}">Report an issue →</a></aside></article>`;
-  const articleLd = { "@context": "https://schema.org", "@type": "Article", headline: `${clue.clue} crossword clue answered`, description: pageDescription, datePublished: clue.reviewedAt, dateModified: config.contentUpdatedAt, mainEntityOfPage: canonicalUrl(route), author: organizationEntity, publisher: organizationEntity };
+  const articleLd = { "@context": "https://schema.org", "@type": "Article", headline: `${clue.clue} crossword clue answered`, description: pageDescription, datePublished: clue.reviewedAt, dateModified: config.contentUpdatedAt, mainEntityOfPage: canonicalUrl(route), author: organizationEntity, publisher: organizationEntity, ...(publicationHub ? { isPartOf: { "@type": "CollectionPage", "@id": canonicalUrl(publicationHub.route), name: publicationHub.name } } : {}) };
   await writePage(route, pageTemplate({ title: pageTitle, description: pageDescription, route, body, bodyClass: "article-page", jsonLd: [articleLd] }), false, config.contentUpdatedAt);
 }
 

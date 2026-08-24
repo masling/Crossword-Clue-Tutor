@@ -397,6 +397,8 @@ if (!cluePage.includes("data-answer-reveal") || !cluePage.includes("data-nosnipp
 if (!cluePage.includes('data-tool-context="explainer"') || !cluePage.includes("Solve the next clue here")) errors.push("reviewed clue pages are missing the next-clue solver continuation");
 if (!cluePage.includes("data-recent-clues") || !cluePage.includes("data-return-link")) errors.push("reviewed clue pages are missing local return paths");
 if (cluePage.includes("The answer is LAB")) errors.push("reviewed clue metadata must not reveal the answer in search snippets");
+const samePuzzleClusterPage = await readFile(path.join(dist, "explainers/japanese-for-folding-paper-nyt-mini/index.html"), "utf8");
+if (!samePuzzleClusterPage.includes("More selected clues from NYT Mini") || !samePuzzleClusterPage.includes("/explainers/paper-and-pencil-game-missing-ps-nyt-mini/") || !samePuzzleClusterPage.includes("/explainers/sunny-part-of-breakfast-order-nyt-mini/") || !samePuzzleClusterPage.includes('"isPartOf":{"@type":"CollectionPage"')) errors.push("published clue pages are missing same-puzzle selected links or CollectionPage relationship");
 for (const eventName of ["answer_reveal", "solver_submit", "save_clue", "clue_revisit", "return_path_click", "daily_clinic_complete"]) {
   if (!appScript.includes(eventName)) errors.push(`app script is missing the ${eventName} product event`);
 }
