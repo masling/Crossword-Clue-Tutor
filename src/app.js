@@ -32,7 +32,43 @@ setupRecentClues();
 setupTrackedLinks();
 setupFeedbackForm();
 setupPrintButtons();
+setupInstallApp();
 setupGoogleAnalytics();
+
+function setupInstallApp() {
+  const controls = [...document.querySelectorAll("[data-install-app]")];
+  if (!controls.length) return;
+
+  let installPrompt = null;
+  const setVisible = (visible) => {
+    for (const control of controls) control.hidden = !visible;
+  };
+
+  window.addEventListener("beforeinstallprompt", (event) => {
+    event.preventDefault();
+    installPrompt = event;
+    setVisible(true);
+    trackProductEvent("pwa_install_available", { page_path: location.pathname });
+  });
+
+  for (const control of controls) {
+    control.addEventListener("click", async () => {
+      if (!installPrompt) return;
+      trackProductEvent("pwa_install_prompt", { page_path: location.pathname });
+      await installPrompt.prompt();
+      const choice = await installPrompt.userChoice;
+      trackProductEvent("pwa_install_choice", { outcome: choice.outcome, page_path: location.pathname });
+      installPrompt = null;
+      setVisible(false);
+    });
+  }
+
+  window.addEventListener("appinstalled", () => {
+    installPrompt = null;
+    setVisible(false);
+    trackProductEvent("pwa_installed", { page_path: location.pathname });
+  });
+}
 
 async function setupGoogleAnalytics() {
   const measurementId = document.querySelector('meta[name="google-analytics-measurement-id"]')?.content;

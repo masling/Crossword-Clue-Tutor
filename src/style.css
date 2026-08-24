@@ -64,6 +64,8 @@ p { text-wrap: pretty; }
 .primary-nav a { display: inline-flex; min-height: 44px; align-items: center; padding: 8px 12px; border-radius: 8px; color: var(--muted); font-size: 0.9rem; font-weight: 680; text-decoration: none; transition: background-color 170ms var(--ease-out), color 170ms var(--ease-out); }
 .primary-nav a:hover, .primary-nav a[aria-current="page"] { background: var(--surface); color: var(--primary-dark); }
 .primary-nav a:active { background: var(--surface-strong); }
+.install-app-button { min-height: 40px; flex: 0 0 auto; border: 1px solid var(--primary); border-radius: 8px; background: var(--surface-elevated); color: var(--primary-dark); padding: 7px 12px; font-size: 0.82rem; font-weight: 760; cursor: pointer; transition: background-color 170ms var(--ease-out), border-color 170ms var(--ease-out); }
+.install-app-button:hover { border-color: var(--primary-dark); background: var(--primary-pale); }
 
 .hero { display: grid; grid-template-columns: minmax(0, 1fr) 320px; align-items: center; gap: 76px; padding-block: 78px 48px; }
 .hero-copy { max-width: 820px; }
@@ -434,6 +436,7 @@ p { text-wrap: pretty; }
   .header-inner { min-height: 62px; }
   .primary-nav { overflow-x: auto; margin-right: -15px; padding-right: 15px; }
   .primary-nav a { min-height: 44px; padding: 9px 10px; font-size: 0.82rem; }
+  .install-app-button { display: none; }
   .hero { grid-template-columns: 1fr; gap: 35px; padding-top: 60px; }
   .today-note { max-width: 420px; }
   .popular-clue-list a { grid-template-columns: minmax(200px, 1fr) 140px minmax(150px, 0.8fr) 28px; }

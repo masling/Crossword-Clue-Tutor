@@ -1,0 +1,43 @@
+{
+  "id": "/",
+  "name": "Crossword Clue Tutor",
+  "short_name": "Clue Tutor",
+  "description": "Solve crossword clues with patterns, progressive hints, and clear answer explanations.",
+  "start_url": "/?utm_source=installed_app&utm_medium=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7faf9",
+  "theme_color": "#176b79",
+  "categories": ["education", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/assets/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Solve a clue",
+      "short_name": "Solver",
+      "url": "/solver/?utm_source=installed_app&utm_medium=pwa_shortcut"
+    },
+    {
+      "name": "Today's crossword clues",
+      "short_name": "Today",
+      "url": "/crossword-answers-today/?utm_source=installed_app&utm_medium=pwa_shortcut"
+    },
+    {
+      "name": "Saved clues",
+      "short_name": "Saved",
+      "url": "/saved-clues/?utm_source=installed_app&utm_medium=pwa_shortcut"
+    }
+  ]
+}

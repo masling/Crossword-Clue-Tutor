@@ -92,6 +92,7 @@ function header() {
         <a href="/clue-types/">Clue types</a>
         <a href="/saved-clues/">Saved</a>
       </nav>
+      <button class="install-app-button" type="button" data-install-app hidden>Install app</button>
     </div>
   </header>`;
 }
@@ -108,6 +109,7 @@ function footer() {
         <a href="/editorial-policy/">Editorial policy</a>
         <a href="/privacy/">Privacy</a>
         <button type="button" data-analytics-settings>Analytics choices</button>
+        <button type="button" data-install-app hidden>Install app</button>
         <a href="/feedback/">Feedback</a>
         <a href="/crossword-answers-today/">Puzzle answers today</a>
         <a href="/saved-clues/">Saved clues</a>
@@ -189,6 +191,11 @@ function pageTemplate({ title, description, route, body, bodyClass = "", noindex
   <meta name="twitter:image" content="${socialImageUrl}">
   <meta name="twitter:image:alt" content="${escapeHtml(config.name)} — hints first, answers when you want them">
   <meta name="theme-color" content="oklch(0.48 0.09 210)">
+  <meta name="application-name" content="${escapeHtml(config.name)}">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="/manifest.webmanifest">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
   <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
@@ -626,7 +633,9 @@ await Promise.all([
   cp(path.join(root, "src/app.js"), path.join(dist, "assets/app.js")),
   cp(path.join(root, "src/solver.mjs"), path.join(dist, "assets/solver.mjs")),
   cp(path.join(root, "src/social-card.png"), path.join(dist, "assets/social-card.png")),
+  cp(path.join(root, "src/logo-192.png"), path.join(dist, "assets/logo-192.png")),
   cp(path.join(root, "src/logo-512.png"), path.join(dist, "assets/logo-512.png")),
+  cp(path.join(root, "src/manifest.webmanifest"), path.join(dist, "manifest.webmanifest")),
   cp(path.join(root, "src/favicon.svg"), path.join(dist, "favicon.svg")),
   cp(path.join(root, "src/favicon-32x32.png"), path.join(dist, "favicon-32x32.png")),
   cp(path.join(root, "src/favicon-16x16.png"), path.join(dist, "favicon-16x16.png")),
