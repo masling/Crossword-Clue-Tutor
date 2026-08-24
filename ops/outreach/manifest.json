@@ -305,7 +305,10 @@
       "linkTarget": "https://crosswordcluetutor.com/classroom-solver/",
       "linkAttributes": ["nofollow", "noopener", "noreferrer"],
       "listingContentStatus": "Live listing still says 160 original reviewed clues across 12 skill areas; current production evidence is 500 clues across 29 skill areas.",
-      "updateRequestStatus": "prepared_pending_user_approval"
+      "updateRequestStatus": "sent",
+      "updateRequestSentAt": "2026-08-24T19:41:53+08:00",
+      "updateRequestMessageId": "1a0339391c55b00e",
+      "updateRequestThreadId": "1a03316aae797f51"
     },
     {
       "id": "clerna-teacher-pilot",
