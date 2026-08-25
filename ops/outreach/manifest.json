@@ -324,6 +324,24 @@
       "messageId": "1a0322e26aecc3ad",
       "sourcePage": "https://clerna.org/submit-a-lesson-plan/",
       "preparedAt": "2026-08-24T13:02:00+08:00"
+    },
+    {
+      "id": "colorado-cde-media-literacy",
+      "target": "Colorado Department of Education Media Literacy Resource Bank",
+      "channel": "email",
+      "recipient": "hurley_j@cde.state.co.us",
+      "subject": "Free Grades 6–12 media literacy vocabulary practice pack",
+      "textFile": "messages/colorado-cde-media-literacy.txt",
+      "gmailDraftStatus": "sent",
+      "gmailDraftCreatedAt": null,
+      "approvalRequired": true,
+      "directSendAuthorizedByGoal": true,
+      "sentAt": "2026-08-25T21:21:41+08:00",
+      "messageId": "1a039154ffbd4231",
+      "threadId": "1a039154ffbd4231",
+      "sourcePage": "https://www.cde.state.co.us/medialiteracy/media-literacy-resource-bank/detail/kqedteach",
+      "preparedAt": "2026-08-25T21:18:00+08:00",
+      "duplicateSentCheck": "No sent message to hurley_j@cde.state.co.us as of 2026-08-25T21:18:00+08:00"
     }
   ]
 }
