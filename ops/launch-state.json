@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T22:15:00+08:00",
+  "updatedAt": "2026-08-26T00:15:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -691,6 +691,31 @@
       "lastExecutedAt": "2026-08-25T21:21:41+08:00",
       "lastTarget": "Colorado Department of Education Media Literacy Resource Bank",
       "minimumQualityGate": "A stable public channel and explicit resource-submission invitation are required; exclude paid, reciprocal, adult, guest-post-farm, do-not-contact, replied, and duplicate targets"
+    },
+    "directoryPilot": {
+      "campaignId": "crossword-clue-tutor-directory-pilot-2026-08-25",
+      "mode": "quality",
+      "entries": 5,
+      "statusCounts": {
+        "blocked": 4,
+        "outcomeUnknown": 1,
+        "submitted": 0,
+        "public": 0,
+        "linkVerified": 0
+      },
+      "targets": [
+        "Startup Buffer",
+        "Launching Next",
+        "Startup Stash",
+        "SaaSHub",
+        "Uneed"
+      ],
+      "cost": 0,
+      "paidOptionsSelected": false,
+      "lastAuditedAt": "2026-08-26T00:15:00+08:00",
+      "nextReviewAt": "2026-08-27T12:00:00+08:00",
+      "shareableSummary": "ops/outreach/2026-08-26-directory-pilot.md",
+      "localLedgerPolicy": "Append-only canonical ledger remains under the Git-ignored .backlink-outreach directory"
     },
     "readyTargets": [],
     "executionAssets": {

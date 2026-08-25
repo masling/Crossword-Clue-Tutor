@@ -21,3 +21,4 @@ ops/exports/
 *.dump
 *.sql.gz
 ops/submission-log.json
+.backlink-outreach/
