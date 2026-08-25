@@ -609,7 +609,10 @@
         "AdSense Sites dashboard ownership/review status"
       ],
       "audit": "research/2026-08-25-adsense-readiness-audit.md",
-      "requirementCoverage": "73 of 73 checklist IDs, zero missing and zero duplicates"
+      "requirementCoverage": "73 of 73 checklist IDs, zero missing and zero duplicates",
+      "productionVerifiedAt": "2026-08-25T21:35:00+08:00",
+      "workflowRun": 32855472342,
+      "productionEvidence": "ads.txt exact seller line; robots explicitly allows Mediapartners-Google; homepage contains the account meta and official loader; Privacy and Classroom Solver omit the loader"
     }
   },
   "outreach": {

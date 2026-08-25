@@ -27,6 +27,8 @@ The owner confirmed that the Google-certified CMP for EEA, UK, and Switzerland i
 
 ## Deployment evidence
 
+- Production deployment: GitHub Actions run `32855472342` completed successfully after commit `228cc20`.
+- Production verification: `/ads.txt`, `/robots.txt`, homepage account meta/loader, Privacy disclosures, and Classroom Solver exclusion were fetched and verified after deployment.
 - Generated HTML pages: 362.
 - Indexable pages: 357.
 - Pages with the AdSense loader: 321 eligible standard content pages.
@@ -50,7 +52,7 @@ The owner confirmed that the Google-certified CMP for EEA, UK, and Switzerland i
 | ADS-OWN-03 | Pass | Static HTML renders normally and JavaScript powers optional analytics and tools without breaking document structure. | Monitor production console after deployment. |
 | ADS-SITE-01 | Unknown | The site artifact is ready, but AdSense dashboard review status is external. | Add/verify the domain and wait for AdSense Sites to show Ready. |
 | ADS-SITE-02 | Pass | Official loader, `google-adsense-account` meta, and `ads.txt` all use the supplied publisher account. | Use the method shown in the AdSense review flow. |
-| ADS-TXT-01 | Pass | Generated `/ads.txt` contains the exact Google DIRECT seller line. | Verify HTTP 200 in production after deployment. |
+| ADS-TXT-01 | Pass | Production `/ads.txt` returns the exact Google DIRECT seller line after deployment. | Keep record synchronized with the AdSense account. |
 | ADS-TXT-02 | Pass | `ads.txt` is part of the required build assets and validated exactly. | Keep it at the domain root. |
 | ADS-CONTENT-01 | Pass | Original solver, 161 reviewed explanations, 110 meanings, 500 original classroom clues, guides, and datasets provide user value. | Continue human/material review for new pages. |
 | ADS-CONTENT-02 | Pass | Selected publisher clues receive independent hints, definitions, signal analysis, and explanations; complete grids and answer lists are excluded. | Preserve selected-use boundary. |
@@ -66,7 +68,7 @@ The owner confirmed that the Google-certified CMP for EEA, UK, and Switzerland i
 | ADS-UX-04 | Pass | No forced downloads, popunders, malware flow, or unexpected redirects; optional analytics controls are reversible. | Recheck after ad units appear. |
 | ADS-UX-05 | Pass | About, Editorial policy, Privacy, Feedback/contact, email, ownership, independence, and reuse boundaries are public. | Keep footer links visible. |
 | ADS-UX-06 | Pass | No ad-like placeholders or unlabeled ad blocks exist before approval. | Label future placements neutrally as Advertisement if manually inserted. |
-| ADS-CRAWL-01 | Pass | Production representative pages were already HTTP 200; generated artifact contains all sitemap routes. | Verify new `ads.txt` and loader URLs after deploy. |
+| ADS-CRAWL-01 | Pass | Production representative pages, `ads.txt`, robots, homepage loader, and privacy page were fetched successfully after deploy. | Continue uptime monitoring. |
 | ADS-CRAWL-02 | Pass | Public static pages require no login; robots explicitly allows Mediapartners-Google and wildcard crawlers. | Avoid WAF rules that challenge the AdSense crawler. |
 | ADS-CRAWL-03 | Pass | Ad-eligible pages are GET-rendered static HTML; POST feedback utility is noindex and receives no AdSense loader. | Keep ad-bearing pages independent of POST state. |
 | ADS-CRAWL-04 | Pass | Stable canonical URLs and no fragile session/cookie redirect dependency. | Monitor redirect changes. |
