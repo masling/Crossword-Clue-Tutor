@@ -248,6 +248,8 @@ if (!latestDailyPage.includes("Private sleeping accommodations? The New York Tim
 if (!latestDailyPage.includes("Why it fits") || !latestDailyPage.includes('aria-label="C O T S"')) errors.push("latest daily explainer is missing its reviewed answer or explanation");
 const miniHub = await readFile(path.join(dist, "nyt-mini-crossword-clues/index.html"), "utf8");
 if (!miniHub.includes("It’s in a pickle")) errors.push("NYT Mini hub is missing the latest selected clue");
+const midiHub = await readFile(path.join(dist, "nyt-midi-crossword-clues/index.html"), "utf8");
+if (!midiHub.includes("Where a Hindu woman wears a bichiya") || !midiHub.includes("Some pretzel shapes")) errors.push("NYT Midi hub is missing its demand-backed August 25 clues");
 const dailyHub = await readFile(path.join(dist, "nyt-crossword-clues/index.html"), "utf8");
 if (!dailyHub.includes("Private sleeping accommodations?")) errors.push("NYT daily hub is missing the latest selected clue");
 const latHub = await readFile(path.join(dist, "la-times-crossword-answers/index.html"), "utf8");
@@ -335,7 +337,7 @@ if (!ambiguityCsv.startsWith("clue,answer,length,sense,reviewed_at\n")) errors.p
 if (ambiguityCsv.trimEnd().split("\n").length !== clueHubCandidateCount + 1) errors.push(`ambiguity CSV must contain one header plus ${clueHubCandidateCount} reviewed rows`);
 const answersTodayPage = await readFile(path.join(dist, "crossword-answers-today/index.html"), "utf8");
 if (!answersTodayPage.includes("Crossword puzzle answers today — selected clues")) errors.push("answers-today hub is missing its demand-backed search target");
-for (const publication of ["NYT Mini", "The New York Times Crossword", "LA Times Crossword", "USA TODAY Crossword"]) {
+for (const publication of ["NYT Mini", "NYT Midi Crossword", "The New York Times Crossword", "LA Times Crossword", "USA TODAY Crossword"]) {
   if (!answersTodayPage.includes(publication)) errors.push(`answers-today hub is missing ${publication}`);
 }
 if (!answersTodayPage.includes('"@type":"ItemList"')) errors.push("answers-today hub is missing ItemList structured data");

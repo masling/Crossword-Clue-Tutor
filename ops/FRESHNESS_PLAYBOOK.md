@@ -7,7 +7,8 @@ Discover, review, publish, deploy, and submit high-intent clue pages on the same
 ## Daily operating loop
 
 1. Check official puzzle releases and visible daily discussion/search activity for
-   NYT Mini, The New York Times Crossword, LA Times Crossword, and USA TODAY Crossword.
+   NYT Mini, NYT Midi Crossword, The New York Times Crossword, LA Times Crossword,
+   and USA TODAY Crossword.
    For USA TODAY, run `npm run source:usatoday -- --output .local/usatoday-latest.json`
    first. This deterministic adapter discovers the current unlocked puzzle from the
    official archive and clue API, persists the complete clue list only in the local
@@ -84,6 +85,23 @@ coverage to find:
 
 Trend and search-volume work is a backfill and expansion loop, not the daily publishing
 gate. Evidence-backed gap pages may be added after the current-date batch is complete.
+
+Every local day after routine coverage, open the public Google Trends comparison for
+`crossword` over the past one day, Worldwide:
+
+`https://trends.google.com/trends/explore?date=now%201-d&q=crossword`
+
+Review Related queries → Rising. Treat Breakout as a discovery signal, not absolute
+search volume. Classify every candidate before publishing:
+
+- publish exact crossword-clue queries only after the source date, publication, clue,
+  and answer are publicly verified;
+- use ambiguous roots such as `bichiya` only when the crossword query family and exact
+  current clue are also visible;
+- exclude Connections, generic dictionary, shopping, entertainment, and unrelated
+  intent from Clue Tutor;
+- if the public Trends page is throttled or presents a CAPTCHA, use an operator-exported
+  CSV and do not bypass the restriction.
 
 ## Tool-query consolidation rule
 
@@ -175,7 +193,8 @@ production page directly when the visit is part of QA.
 
 ## Daily target during launch
 
-- Six reviewed fresh clue pages per monitored publication (24 total while four publications are active).
+- Six reviewed fresh clue pages per monitored publication (30 total while five publications are active).
+- Add a small number of separately verified Breakout gap pages after the routine 30 when the daily Trends pass identifies missing exact clue queries.
 - If fewer than six exact pairs are reliably verifiable, publish the verified subset and keep the source/date pending until the gap is filled.
 - 1 answer-meaning page when a new answer has durable evergreen value.
 - All pages deployed within 60 minutes of review completion.

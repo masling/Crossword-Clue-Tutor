@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-25T21:21:41+08:00",
+  "updatedAt": "2026-08-25T22:15:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -357,17 +357,27 @@
     ],
     "monitoredPublications": [
       "NYT Mini",
+      "NYT Midi Crossword",
       "The New York Times Crossword",
       "LA Times Crossword",
       "USA TODAY Crossword"
     ],
     "lastPublishedSourceDates": {
       "NYT Mini": "2026-08-25",
+      "NYT Midi Crossword": "2026-08-25",
       "The New York Times Crossword": "2026-08-25",
       "LA Times Crossword": "2026-08-25",
       "USA TODAY Crossword": "2026-08-25"
     },
     "officialSourceDiscovery": {
+      "NYT Midi Crossword": {
+        "adapter": "read-only-public-research",
+        "checkedAt": "2026-08-25T14:12:00Z",
+        "latestOfficialDate": "2026-08-25",
+        "accessMode": "Public same-day clue-answer pages without NYT login or access-control bypass",
+        "selectedPairStatus": "Six selected August 25 pairs published: TOE, ROBOTS, EID, JAVASCRIPT, JIA, and RODS; four were directly observed as Google Trends Breakout query families",
+        "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
+      },
       "LA Times Crossword": {
         "adapter": "latimes-official-metadata-v1",
         "command": "npm run source:latimes -- --output .local/latimes-latest.json",
@@ -403,18 +413,42 @@
     },
     "latestFreshnessBatch": {
       "sourceDate": "2026-08-25",
-      "selectedClues": 24,
+      "selectedClues": 32,
       "publications": [
         { "publication": "NYT Mini", "selectedClues": 6, "confidence": "High; exact public clue-answer pairs cross-checked across independent same-day sources without NYT login" },
-        { "publication": "The New York Times Crossword", "selectedClues": 6, "confidence": "High; exact public clue-answer pairs cross-checked across independent same-day sources without NYT login" },
+        { "publication": "NYT Midi Crossword", "selectedClues": 6, "confidence": "High; exact same-day pairs publicly verified, with four query families observed as Google Trends Breakout" },
+        { "publication": "The New York Times Crossword", "selectedClues": 8, "confidence": "High; six routine pairs plus two exact Trends Breakout gaps publicly verified without NYT login" },
         { "publication": "LA Times Crossword", "selectedClues": 6, "confidence": "High; official date metadata plus exact selected pairs from a public same-day review" },
         { "publication": "USA TODAY Crossword", "selectedClues": 6, "confidence": "High; official public clue API candidates plus independent answer verification" }
       ],
-      "selectionReason": "Routine same-day selected coverage emphasizing exact-query demand, distinctive entities, visual wordplay, a seasonal astronomy term, and a theme revealer",
+      "selectionReason": "Six routine selected clues per monitored publication plus a daily Google Trends crossword-root gap pass; Connections and non-crossword intent were excluded",
       "rightsBoundary": "Selected clues only; no grid or complete answer list"
     }
   },
   "search": {
+    "dailyTrendsGap": {
+      "root": "crossword",
+      "window": "Past 1 day",
+      "geo": "Worldwide",
+      "url": "https://trends.google.com/trends/explore?date=now%201-d&q=crossword",
+      "lastReviewedAt": "2026-08-25T22:15:00+08:00",
+      "evidenceFile": "relatedQueries (1).csv (user-supplied Google Trends export)",
+      "breakoutQueries": 25,
+      "coverageBeforeGapPass": "1 of 25 Rising/Breakout queries matched an existing page",
+      "publishedGaps": [
+        "where a Hindu woman wears a bichiya = TOE",
+        "post-Ramadan festival that translates to festival = EID",
+        "Trick Mirror author Tolentino = JIA",
+        "some pretzel shapes = RODS",
+        "tiny biting insect = NOSEEUM",
+        "Wowza! = OHDAMN"
+      ],
+      "supportingMidiSelections": [
+        "Waymo cars, e.g. = ROBOTS",
+        "Language behind much dynamic web content = JAVASCRIPT"
+      ],
+      "excludedExample": "Harlem Shake was driven by NYT Connections intent, not a current crossword clue query"
+    },
     "seoReviewCadence": {
       "intervalHours": 72,
       "lastReviewedAt": "2026-08-24T09:24:46+08:00",
@@ -697,6 +731,6 @@
   },
   "nextAction": {
     "notBefore": "2026-08-26T10:15:00+08:00",
-    "action": "All four monitored sources have six selected clue pages for August 25, and the August 25 daily outreach target is complete. At the next source-timed cycle, use the official adapters and local database first; do not recheck a completed source/date."
+    "action": "All five monitored sources have at least six selected clue pages for August 25, the daily crossword-root Trends gap pass is complete, and the August 25 outreach target is complete. At the next source-timed cycle, use official adapters and public verification first; do not recheck a completed source/date."
   }
 }

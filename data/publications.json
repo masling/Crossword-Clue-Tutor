@@ -10,6 +10,16 @@
     "linkLabel": "NYT Mini clue hints"
   },
   {
+    "name": "NYT Midi Crossword",
+    "route": "/nyt-midi-crossword-clues/",
+    "title": "NYT Midi crossword clues: daily hints and explanations",
+    "heading": "Selected NYT Midi crossword clues, explained",
+    "description": "Get spoiler-light hints and original explanations for selected high-demand NYT Midi crossword clues, organized by puzzle date.",
+    "maxPerDate": 6,
+    "titleSuffix": "NYT Midi Crossword Answer",
+    "linkLabel": "NYT Midi clue hints"
+  },
+  {
     "name": "The New York Times Crossword",
     "route": "/nyt-crossword-clues/",
     "title": "NYT crossword clues: selected daily hints and explanations",
