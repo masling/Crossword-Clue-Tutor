@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-24T19:41:53+08:00",
+  "updatedAt": "2026-08-25T20:56:49+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -362,53 +362,55 @@
       "USA TODAY Crossword"
     ],
     "lastPublishedSourceDates": {
-      "NYT Mini": "2026-08-24",
-      "The New York Times Crossword": "2026-08-24",
-      "LA Times Crossword": "2026-08-24",
-      "USA TODAY Crossword": "2026-08-24"
+      "NYT Mini": "2026-08-25",
+      "The New York Times Crossword": "2026-08-25",
+      "LA Times Crossword": "2026-08-25",
+      "USA TODAY Crossword": "2026-08-25"
     },
     "officialSourceDiscovery": {
       "LA Times Crossword": {
         "adapter": "latimes-official-metadata-v1",
         "command": "npm run source:latimes -- --output .local/latimes-latest.json",
         "browserSnapshotImporter": "npm run source:import -- --input .local/latimes-browser-YYYY-MM-DD.json --output .local/latimes-browser-candidates-YYYY-MM-DD.json --limit 6",
-        "checkedAt": "2026-08-24T04:15:10.310Z",
-        "latestOfficialDate": "2026-08-24",
-        "sourceId": "tca260824",
-        "latestTitle": "L. A. Times, Mon, Aug 24, 2026",
+        "checkedAt": "2026-08-25T12:53:34.372Z",
+        "latestOfficialDate": "2026-08-25",
+        "sourceId": "tca260825",
+        "latestTitle": "L. A. Times, Tue, Aug 25, 2026",
         "theme": null,
-        "creator": "Janice Luttrell",
+        "creator": "Victor Fleming",
         "editor": "Patti Varol",
         "officialClueCount": 78,
         "accessMode": "Official AmuseLabs picker metadata plus public browser DOM without login",
         "localDatabase": ".local/source-intelligence.sqlite",
         "localDatabaseEvidence": "August 24 browser DOM snapshot imported 78 clue texts: 35 Across and 43 Down; no answer or solution fields. Local database now holds 222 LA Times clue rows across two dates.",
         "contentBoundary": "The metadata adapter excludes the puzzle payload. When the public player is used, only visible clue number, direction, and text are imported; Reveal, filled cells, solutions, cookies, and account state remain excluded. Full rows stay Git-ignored and model-facing output is capped at six candidates.",
-        "selectedPairStatus": "Four selected August 24 pairs published: ABBA, EARLE, ARETHA, and KATY"
+        "selectedPairStatus": "Two selected August 25 pairs published: PANAMAHAT and AHAMOMENT; exact pairs independently verified from a public same-day review"
       },
       "USA TODAY Crossword": {
         "adapter": "usatoday-official-candidates-v1",
         "command": "npm run source:usatoday -- --limit 6 --output .local/usatoday-latest.json",
-        "checkedAt": "2026-08-24T04:15:13.638Z",
-        "latestOfficialDate": "2026-08-24",
-        "latestTitle": "Power Through",
-        "creator": "Heather Grearan & Paul Gearan",
-        "editor": "Amie Walker",
+        "checkedAt": "2026-08-25T12:53:37.707Z",
+        "latestOfficialDate": "2026-08-25",
+        "latestTitle": "Mars Rover",
+        "creator": "Emily Biegas",
+        "editor": "Amanda Rafkin",
         "accessMode": "Official public HTML and clue API without login",
         "localDatabase": ".local/source-intelligence.sqlite",
         "statsCommand": "npm run source:stats",
         "contentBoundary": "Stores the complete official public clue list only in the Git-ignored local SQLite database for future analysis; model-facing JSON remains capped at six candidates, and the query explicitly excludes the hidden solution field, login, and Reveal controls",
-        "selectedPairStatus": "Four independently verified selected pairs published: PATTI, DAE, MACRAME, and SEW; local database now holds 154 USA TODAY clue rows across two dates"
+        "selectedPairStatus": "Two independently verified August 25 pairs published: YOSHI and ACHOO; local database now holds 231 USA TODAY clue rows across three dates"
       }
     },
     "latestFreshnessBatch": {
-      "sourceDate": "2026-08-24",
+      "sourceDate": "2026-08-25",
       "selectedClues": 8,
       "publications": [
-        { "publication": "LA Times Crossword", "selectedClues": 4, "confidence": "High; exact clue numbers from the official public player plus independent entity verification" },
-        { "publication": "USA TODAY Crossword", "selectedClues": 4, "confidence": "High; exact clue numbers from the official public clue API plus independent entity, title, language, and wordplay verification" }
+        { "publication": "NYT Mini", "selectedClues": 2, "confidence": "High; exact public clue-answer pairs cross-checked across independent same-day sources without NYT login" },
+        { "publication": "The New York Times Crossword", "selectedClues": 2, "confidence": "High; exact public clue-answer pairs cross-checked across independent same-day sources without NYT login" },
+        { "publication": "LA Times Crossword", "selectedClues": 2, "confidence": "High; official date metadata plus exact selected pairs from a public same-day review" },
+        { "publication": "USA TODAY Crossword", "selectedClues": 2, "confidence": "High; official public clue API candidates plus independent answer verification" }
       ],
-      "selectionReason": "Demand-ranked official candidates emphasizing named entities, quoted titles, distinctive fill-ins, and searchable wordplay",
+      "selectionReason": "Routine same-day selected coverage emphasizing exact-query demand, distinctive entities, visual wordplay, a seasonal astronomy term, and a theme revealer",
       "rightsBoundary": "Selected clues only; no grid or complete answer list"
     }
   },

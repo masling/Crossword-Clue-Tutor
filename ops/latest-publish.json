@@ -1,19 +1,19 @@
 {
-  "publishedAt": "2026-08-24T04:19:30.723Z",
-  "input": "ops/intake/2026-08-24-lat-usa-routine.json",
+  "publishedAt": "2026-08-25T12:56:16.583Z",
+  "input": "ops/intake/2026-08-25-routine.json",
   "urls": [
-    "/explainers/dancing-queen-pop-group-la-times/",
-    "/explainers/copperhead-road-singer-steve-la-times/",
-    "/explainers/respect-singer-franklin-la-times/",
-    "/explainers/teenage-dream-singer-perry-la-times/",
-    "/explainers/lady-marmalade-singer-labelle-usa-today/",
-    "/explainers/lost-star-daniel-kim-usa-today/",
-    "/explainers/art-of-creative-knotting-title-usa-today/",
-    "/explainers/work-with-a-singer-usa-today/"
+    "/explainers/cohort-born-between-1965-and-1980-nyt-mini/",
+    "/explainers/winning-line-in-tic-tac-toe-nyt-mini/",
+    "/explainers/one-named-senegalese-american-singer-nyt/",
+    "/explainers/summer-meteor-shower-mythological-hero-nyt/",
+    "/explainers/broad-brimmed-topper-made-of-straw-la-times/",
+    "/explainers/puzzle-solvers-breakthrough-la-times/",
+    "/explainers/dinosaur-introduced-in-super-mario-world-usa-today/",
+    "/explainers/sound-sometimes-followed-by-gesundheit-usa-today/"
   ],
   "answerUrls": [],
   "clinicUrls": [
-    "/daily-clue-clinic/2026-08-24/"
+    "/daily-clue-clinic/2026-08-25/"
   ],
   "hubUrls": [
     "/",
@@ -22,9 +22,10 @@
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
     "/crossword-answers/4-letters/",
-    "/crossword-answers/5-letters/",
-    "/crossword-answers/6-letters/",
     "/crossword-answers/3-letters/",
+    "/crossword-answers/5-letters/",
+    "/nyt-mini-crossword-clues/",
+    "/nyt-crossword-clues/",
     "/la-times-crossword-answers/",
     "/usa-today-crossword-answers/"
   ]

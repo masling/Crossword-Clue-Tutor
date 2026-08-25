@@ -2998,5 +2998,181 @@
     "publication": "USA TODAY Crossword",
     "sourceDate": "2026-08-24",
     "clueNumber": "28-Down"
+  },
+  {
+    "slug": "cohort-born-between-1965-and-1980-nyt-mini",
+    "clue": "Cohort born between 1965 and 1980, for short",
+    "answer": "GENX",
+    "date": "2026-08-25",
+    "popularity": 100,
+    "definition": "Gen X, short for Generation X, is the demographic cohort commonly defined as people born from 1965 through 1980.",
+    "explanation": "GENX fits because the clue gives the standard birth-year range for Generation X and signals the compact four-letter form with “for short.”",
+    "partOfSpeech": "proper noun abbreviation",
+    "tags": [
+      "Generation X",
+      "demographic cohort",
+      "abbreviation"
+    ],
+    "clueType": "abbreviation",
+    "signal": "The date range identifies a named generation, while “for short” requires its abbreviated crossword form.",
+    "hint": "Combine the common three-letter shortening of “generation” with the cohort's identifying letter.",
+    "reviewedAt": "2026-08-25",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-25",
+    "clueNumber": "1-Across"
+  },
+  {
+    "slug": "winning-line-in-tic-tac-toe-nyt-mini",
+    "clue": "Winning line in tic-tac-toe",
+    "answer": "XXX",
+    "date": "2026-08-25",
+    "popularity": 98,
+    "definition": "In tic-tac-toe, a player wins by placing three matching marks in a horizontal, vertical, or diagonal line.",
+    "explanation": "XXX fits because three X marks in a row form one possible winning line; the entry represents the marks themselves rather than naming the game.",
+    "partOfSpeech": "symbol sequence",
+    "tags": [
+      "tic-tac-toe",
+      "visual clue",
+      "game"
+    ],
+    "clueType": "visual-wordplay",
+    "signal": "“Line” is literal here: the answer visually shows the three identical marks that can win the game.",
+    "hint": "Write the same mark three times—the mark used by the player who moves first in the usual version of the game.",
+    "reviewedAt": "2026-08-25",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-25",
+    "clueNumber": "4-Down"
+  },
+  {
+    "slug": "one-named-senegalese-american-singer-nyt",
+    "clue": "One-named Senegalese American singer with the #1 hits \"I Wanna Love You\" and \"Don't Matter\"",
+    "answer": "AKON",
+    "date": "2026-08-25",
+    "popularity": 100,
+    "definition": "Akon is a Senegalese American singer and producer known for 2000s hits including “I Wanna Love You” and “Don't Matter.”",
+    "explanation": "AKON fits because both quoted Billboard Hot 100 hits were recorded by the four-letter mononymous singer described in the clue.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Akon",
+      "Don't Matter",
+      "I Wanna Love You"
+    ],
+    "clueType": "proper-noun",
+    "signal": "“One-named” asks for a mononym, and the two quoted hit titles uniquely identify the performer.",
+    "hint": "Think of the four-letter stage name of the artist who also recorded “Lonely” and “Smack That.”",
+    "reviewedAt": "2026-08-25",
+    "publication": "The New York Times Crossword",
+    "sourceDate": "2026-08-25",
+    "clueNumber": "4-Across"
+  },
+  {
+    "slug": "summer-meteor-shower-mythological-hero-nyt",
+    "clue": "Summer meteor shower named for a mythological hero",
+    "answer": "PERSEIDS",
+    "date": "2026-08-25",
+    "popularity": 100,
+    "definition": "The Perseids are an annual meteor shower whose apparent radiant lies in the constellation Perseus, named for the Greek mythological hero.",
+    "explanation": "PERSEIDS fits because this prominent summer meteor shower appears to radiate from Perseus, directly connecting the astronomical event to the hero named in the clue.",
+    "partOfSpeech": "proper noun plural",
+    "tags": [
+      "meteor shower",
+      "Perseus",
+      "astronomy"
+    ],
+    "clueType": "factoid",
+    "signal": "The season, astronomical category, and mythological naming clue point to a specific annual shower rather than a constellation alone.",
+    "hint": "Use the eight-letter plural name of the August shower associated with the constellation named after Medusa's slayer.",
+    "reviewedAt": "2026-08-25",
+    "publication": "The New York Times Crossword",
+    "sourceDate": "2026-08-25",
+    "clueNumber": "16-Across"
+  },
+  {
+    "slug": "broad-brimmed-topper-made-of-straw-la-times",
+    "clue": "*Broad-brimmed topper made of straw",
+    "answer": "PANAMAHAT",
+    "date": "2026-08-25",
+    "popularity": 98,
+    "definition": "A Panama hat is a lightweight, broad-brimmed hat traditionally woven from toquilla straw in Ecuador.",
+    "explanation": "PANAMAHAT fits the description of a broad-brimmed straw topper; the two-word name is entered without a space in the nine-letter grid answer.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "Panama hat",
+      "straw hat",
+      "clothing"
+    ],
+    "clueType": "direct-definition",
+    "signal": "“Topper” means a hat, while “broad-brimmed” and “made of straw” narrow the style to a familiar two-word name.",
+    "hint": "Name the nine-letter hat style famously associated with a Central American country, although it is traditionally made in Ecuador.",
+    "reviewedAt": "2026-08-25",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-25",
+    "clueNumber": "17-Across"
+  },
+  {
+    "slug": "puzzle-solvers-breakthrough-la-times",
+    "clue": "Puzzle solver's breakthrough, or what the answers to the starred clues have in common",
+    "answer": "AHAMOMENT",
+    "date": "2026-08-25",
+    "popularity": 100,
+    "definition": "An aha moment is a sudden realization in which a previously unclear idea or solution becomes understandable.",
+    "explanation": "AHAMOMENT fits the first definition as a solver's sudden breakthrough and also names the theme: each starred answer contains the adjacent sound pattern “A-HA.”",
+    "partOfSpeech": "noun phrase",
+    "tags": [
+      "aha moment",
+      "theme revealer",
+      "insight"
+    ],
+    "clueType": "theme-revealer",
+    "signal": "The phrase after “or” announces a revealer: the answer must both define a breakthrough and explain a repeated feature in starred entries.",
+    "hint": "Think of a nine-letter phrase for the instant when the solution suddenly clicks; enter it without a space.",
+    "reviewedAt": "2026-08-25",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-25",
+    "clueNumber": "61-Across"
+  },
+  {
+    "slug": "dinosaur-introduced-in-super-mario-world-usa-today",
+    "clue": "Dinosaur introduced in \"Super Mario World\"",
+    "answer": "YOSHI",
+    "date": "2026-08-25",
+    "popularity": 100,
+    "definition": "Yoshi is a dinosaur-like Nintendo character who debuted as Mario's companion in the 1990 video game “Super Mario World.”",
+    "explanation": "YOSHI fits because the five-letter Nintendo character was introduced in the game named directly in the clue and is commonly described as Mario's dinosaur companion.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Yoshi",
+      "Super Mario World",
+      "Nintendo"
+    ],
+    "clueType": "proper-noun",
+    "signal": "The quoted game title and character category ask for a specific franchise character introduced in that installment.",
+    "hint": "Name Mario's five-letter green companion who can swallow enemies and turn them into eggs.",
+    "reviewedAt": "2026-08-25",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-25",
+    "clueNumber": "5-Down"
+  },
+  {
+    "slug": "sound-sometimes-followed-by-gesundheit-usa-today",
+    "clue": "Sound sometimes followed by \"Gesundheit\"",
+    "answer": "ACHOO",
+    "date": "2026-08-25",
+    "popularity": 98,
+    "definition": "Achoo is an imitation of the sound of a sneeze.",
+    "explanation": "ACHOO fits because “Gesundheit” is conventionally said after someone sneezes, and the five-letter entry spells the sound of that sneeze.",
+    "partOfSpeech": "interjection",
+    "tags": [
+      "sneeze",
+      "onomatopoeia",
+      "Gesundheit"
+    ],
+    "clueType": "sound-word",
+    "signal": "The word spoken afterward identifies the preceding event, while “Sound” asks for an onomatopoeic spelling rather than the noun “sneeze.”",
+    "hint": "Use the conventional five-letter comic-book spelling of a sneeze sound.",
+    "reviewedAt": "2026-08-25",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-25",
+    "clueNumber": "14-Across"
   }
 ]
