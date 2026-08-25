@@ -415,6 +415,13 @@
     }
   },
   "search": {
+    "seoReviewCadence": {
+      "intervalHours": 72,
+      "lastReviewedAt": "2026-08-24T09:24:46+08:00",
+      "nextReviewNotBefore": "2026-08-27T09:24:46+08:00",
+      "evidenceSource": "User-supplied Pageview and Google Search Console values or exports; analytics dashboards are not opened by automation",
+      "changeGate": "Do not change page metadata from aggregate or isolated-hour data. Review a landing page only after at least 20 impressions; prioritize CTR changes at average position 8 or better and internal-authority/content changes at positions 9–15."
+    },
     "googleSitemapStatus": "Success",
     "googleSitemapDiscoveredPages": 94,
     "googleSitemapLastRead": "2026-08-20",

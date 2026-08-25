@@ -182,3 +182,11 @@ production page directly when the visit is part of QA.
 - Top five pages checked in Search Console within 24 hours.
 
 For data-only intake updates, run the intake dry-run and the publisher's content/build/link checks. Run the full local test suite only when code, templates, adapters, or test-sensitive behavior changed; GitHub Actions remains the full-suite deployment gate.
+
+## SEO review cadence during launch
+
+- Review Pageview and Google Search Console evidence every 72 hours, measured from the last evidence-backed review.
+- Request the values or export from the operator; automated runs do not open signed-in analytics dashboards.
+- Do not refresh between review windows unless the operator supplies materially new evidence.
+- Change page metadata only for a landing page with at least 20 impressions. At average position 8 or better with zero or weak clicks, review title and description for search intent; at positions 9–15, strengthen content coverage and internal authority first.
+- Use entry pages, engagement time, bounce, and returning-visitor evidence to choose interaction and retention work; do not redesign the homepage from aggregate traffic alone.
