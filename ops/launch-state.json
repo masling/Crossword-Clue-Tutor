@@ -591,7 +591,26 @@
     "productionBranch": "main",
     "tokenExpiresOn": "2027-08-20",
     "lastVerifiedCommit": "9dc960c",
-    "lastDeployStatus": "Success"
+    "lastDeployStatus": "Success",
+    "adsenseReview": {
+      "preparedAt": "2026-08-25T21:30:00+08:00",
+      "publisherId": "pub-6270716742372057",
+      "clientId": "ca-pub-6270716742372057",
+      "siteVerification": "Official AdSense loader plus google-adsense-account meta on eligible indexable standard pages",
+      "adsTxt": "google.com, pub-6270716742372057, DIRECT, f08c47fec0942fa0",
+      "crawlerPolicy": "Mediapartners-Google explicitly allowed",
+      "excludedPages": "Privacy, noindex utilities, and reduced-analytics classroom pages omit the AdSense loader",
+      "privacyDisclosure": "Google advertising data use, third-party cookies/web beacons, partner-sites disclosure, Business Data Responsibility, My Ad Center, and CMP boundary",
+      "cmpStatus": "Owner confirmed a Google-certified CMP for EEA, UK, and Switzerland is configured in AdSense",
+      "readinessDecision": "Ready after account confirmations",
+      "accountConfirmationsOutstanding": [
+        "Applicant/payee eligibility and age",
+        "No duplicate AdSense account for the same publisher",
+        "AdSense Sites dashboard ownership/review status"
+      ],
+      "audit": "research/2026-08-25-adsense-readiness-audit.md",
+      "requirementCoverage": "73 of 73 checklist IDs, zero missing and zero duplicates"
+    }
   },
   "outreach": {
     "verifiedAt": "2026-08-25T21:21:41+08:00",

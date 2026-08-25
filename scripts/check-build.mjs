@@ -39,6 +39,11 @@ for (const file of htmlFiles) {
   const expectedGa4Ids = analyticsMode === "minimal" ? 0 : 1;
   if (googleAnalyticsIds.length !== expectedGa4Ids) errors.push(`${relative}: expected ${expectedGa4Ids} GA4 measurement IDs`);
   if (googleAnalyticsLoaders.length !== 0 || googleAnalyticsConfigs.length !== 0) errors.push(`${relative}: GA4 must be loaded only after the consent decision`);
+  const adsenseAccountIds = html.match(/<meta name="google-adsense-account" content="ca-pub-6270716742372057">/g) ?? [];
+  if (adsenseAccountIds.length !== 1) errors.push(`${relative}: expected one AdSense account meta tag`);
+  const adsenseScripts = html.match(/<script async src="https:\/\/pagead2\.googlesyndication\.com\/pagead\/js\/adsbygoogle\.js\?client=ca-pub-6270716742372057" crossorigin="anonymous"><\/script>/g) ?? [];
+  const expectsAdsenseScript = html.includes('content="index,follow') && analyticsMode === "standard" && relative !== "privacy/index.html";
+  if (adsenseScripts.length !== (expectsAdsenseScript ? 1 : 0)) errors.push(`${relative}: unexpected AdSense verification script count ${adsenseScripts.length}`);
   if (/crossword crossword clue/i.test(html)) errors.push(`${relative}: duplicated “crossword” in clue target`);
   if (/\bin the The\b/.test(html)) errors.push(`${relative}: duplicated article in publication context`);
   if (/<h1>“[“”]/.test(html)) errors.push(`${relative}: duplicated quotation marks in heading`);
@@ -77,13 +82,18 @@ for (const [description, files] of indexableDescriptions) {
   if (files.length > 1) errors.push(`duplicate meta description across ${files.join(", ")}: ${description}`);
 }
 
-for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/social-card.png", "assets/logo-192.png", "assets/logo-512.png", "assets/clues.json", "assets/classroom-clues.json", "assets/answers.json", "assets/clue-hubs.json", "assets/clue-hubs.csv", "assets/onelook-dictionary.txt", "favicon.svg", "favicon-32x32.png", "favicon-16x16.png", "apple-touch-icon.png", "manifest.webmanifest", "robots.txt", "sitemap.xml", "feed.xml"]) {
+for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/social-card.png", "assets/logo-192.png", "assets/logo-512.png", "assets/clues.json", "assets/classroom-clues.json", "assets/answers.json", "assets/clue-hubs.json", "assets/clue-hubs.csv", "assets/onelook-dictionary.txt", "favicon.svg", "favicon-32x32.png", "favicon-16x16.png", "apple-touch-icon.png", "manifest.webmanifest", "robots.txt", "ads.txt", "sitemap.xml", "feed.xml"]) {
   try {
     await access(path.join(dist, asset));
   } catch {
     errors.push(`missing build asset: ${asset}`);
   }
 }
+
+const adsTxt = await readFile(path.join(dist, "ads.txt"), "utf8");
+if (adsTxt !== "google.com, pub-6270716742372057, DIRECT, f08c47fec0942fa0\n") errors.push("ads.txt does not contain the exact authorized Google seller record");
+const robotsTxt = await readFile(path.join(dist, "robots.txt"), "utf8");
+if (!robotsTxt.includes("User-agent: Mediapartners-Google\nAllow: /")) errors.push("robots.txt does not explicitly allow Mediapartners-Google");
 
 const appScript = await readFile(path.join(dist, "assets/app.js"), "utf8");
 const solverScript = await readFile(path.join(dist, "assets/solver.mjs"), "utf8");
@@ -374,7 +384,9 @@ if (!privacyPage.includes("Google Analytics 4") || !privacyPage.includes("G-HVMX
 if (!privacyPage.includes("Saved clues") || !privacyPage.includes("practice streaks") || !privacyPage.includes("local storage")) errors.push("privacy page is missing the local saved-clue or practice-history disclosure");
 if (!privacyPage.includes("When you submit feedback") || !privacyPage.includes("Email is optional") || !privacyPage.includes("raw IP address")) errors.push("privacy page is missing the feedback data disclosure");
 if (!privacyPage.includes("Reduced-analytics classroom pages") || !privacyPage.includes("cookie-free Pageview") || !privacyPage.includes("omit Google Analytics 4")) errors.push("privacy page is missing the classroom analytics disclosure");
-if (!privacyPage.includes("Google Analytics consent") || !privacyPage.includes("Google-certified TCF consent management platform")) errors.push("privacy page is missing regional consent or future AdSense CMP disclosure");
+if (!privacyPage.includes("Google Analytics consent") || !privacyPage.includes("Google-certified consent management platform") || !privacyPage.includes("IAB Transparency and Consent Framework")) errors.push("privacy page is missing regional consent or AdSense CMP disclosure");
+if (!privacyPage.includes("Advertising and Google AdSense") || !privacyPage.includes("Third parties may place or read cookies") || !privacyPage.includes("business.safety.google/privacy") || !privacyPage.includes("My Ad Center")) errors.push("privacy page is missing AdSense data, cookie, or control disclosures");
+if (privacyPage.includes("pagead2.googlesyndication.com")) errors.push("privacy page must not load the AdSense verification script");
 if (!appScript.includes("/api/analytics-region") || !appScript.includes("data-ga4-loader") || !appScript.includes("analytics_storage")) errors.push("app script is missing consent-aware GA4 loading");
 if (!privacyPage.includes("mailto:hello@crosswordcluetutor.com") || !privacyPage.includes("processed by our email providers")) errors.push("privacy page is missing the direct-email disclosure");
 const feedbackPage = await readFile(path.join(dist, "feedback/index.html"), "utf8");

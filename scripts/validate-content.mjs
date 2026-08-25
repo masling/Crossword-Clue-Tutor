@@ -168,6 +168,17 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
       errors.push("Pageview analytics requires a valid domain and absolute scriptSrc URL");
     }
   }
+  if (config?.adsense) {
+    const adsense = config.adsense;
+    if (!/^pub-\d{16}$/.test(adsense.publisherId ?? "")) errors.push("AdSense publisherId must use pub- followed by 16 digits");
+    if (adsense.clientId !== `ca-${adsense.publisherId}`) errors.push("AdSense clientId must match the configured publisherId");
+    try {
+      const scriptUrl = new URL(adsense.scriptSrc);
+      if (scriptUrl.protocol !== "https:" || scriptUrl.hostname !== "pagead2.googlesyndication.com" || scriptUrl.pathname !== "/pagead/js/adsbygoogle.js") errors.push("AdSense scriptSrc must use the official HTTPS loader");
+    } catch {
+      errors.push("AdSense requires a valid absolute scriptSrc URL");
+    }
+  }
 
   for (const [index, answer] of answers.entries()) {
     const label = `answers[${index}]`;

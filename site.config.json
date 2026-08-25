@@ -17,5 +17,10 @@
       "domain": "crosswordcluetutor.com",
       "scriptSrc": "https://app.pageview.app/js/script.js"
     }
+  },
+  "adsense": {
+    "publisherId": "pub-6270716742372057",
+    "clientId": "ca-pub-6270716742372057",
+    "scriptSrc": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
   }
 }
