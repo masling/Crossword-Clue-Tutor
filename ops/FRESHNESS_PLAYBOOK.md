@@ -175,7 +175,10 @@ production page directly when the visit is part of QA.
 
 ## Daily target during launch
 
-- 5–10 reviewed fresh clue pages.
+- Six reviewed fresh clue pages per monitored publication (24 total while four publications are active).
+- If fewer than six exact pairs are reliably verifiable, publish the verified subset and keep the source/date pending until the gap is filled.
 - 1 answer-meaning page when a new answer has durable evergreen value.
 - All pages deployed within 60 minutes of review completion.
 - Top five pages checked in Search Console within 24 hours.
+
+For data-only intake updates, run the intake dry-run and the publisher's content/build/link checks. Run the full local test suite only when code, templates, adapters, or test-sensitive behavior changed; GitHub Actions remains the full-suite deployment gate.
