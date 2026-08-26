@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T00:30:00+08:00",
+  "updatedAt": "2026-08-26T08:19:19+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -688,8 +688,8 @@
     "dailyCadence": {
       "targetPerDay": "1–2 new high-fit submissions or due follow-ups",
       "directSendAuthorized": true,
-      "lastExecutedAt": "2026-08-25T21:21:41+08:00",
-      "lastTarget": "Colorado Department of Education Media Literacy Resource Bank",
+      "lastExecutedAt": "2026-08-26T08:19:19+08:00",
+      "lastTarget": "SaaSHub free product submission",
       "minimumQualityGate": "A stable public channel and explicit resource-submission invitation are required; exclude paid, reciprocal, adult, guest-post-farm, do-not-contact, replied, and duplicate targets"
     },
     "directoryPilot": {
@@ -699,8 +699,8 @@
       "statusCounts": {
         "blocked": 3,
         "outcomeUnknown": 1,
-        "submissionFailed": 1,
-        "submitted": 0,
+        "submissionFailed": 0,
+        "submitted": 1,
         "public": 0,
         "linkVerified": 0
       },
@@ -713,7 +713,7 @@
       ],
       "cost": 0,
       "paidOptionsSelected": false,
-      "lastAuditedAt": "2026-08-26T00:30:00+08:00",
+      "lastAuditedAt": "2026-08-26T08:19:19+08:00",
       "nextReviewAt": "2026-08-27T12:00:00+08:00",
       "shareableSummary": "ops/outreach/2026-08-26-directory-pilot.md",
       "localLedgerPolicy": "Append-only canonical ledger remains under the Git-ignored .backlink-outreach directory"
