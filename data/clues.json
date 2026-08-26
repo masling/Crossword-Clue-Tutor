@@ -3702,5 +3702,137 @@
     "publication": "The New York Times Crossword",
     "sourceDate": "2026-08-25",
     "clueNumber": "6-Down"
+  },
+  {
+    "slug": "mystical-magical-singer-benson-usa-today",
+    "clue": "\"Mystical Magical\" singer Benson",
+    "answer": "BOONE",
+    "date": "2026-08-26",
+    "popularity": 100,
+    "definition": "Benson Boone is an American singer-songwriter who released the song \"Mystical Magical.\"",
+    "explanation": "BOONE fits because it is the five-letter surname of singer Benson Boone, identified by the quoted song title.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Benson Boone",
+      "Mystical Magical",
+      "singer"
+    ],
+    "clueType": "proper-noun",
+    "signal": "A quoted song title followed by a first name asks for the performer's surname.",
+    "hint": "Supply the five-letter surname of the singer who also recorded \"Beautiful Things.\"",
+    "reviewedAt": "2026-08-26",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-26",
+    "clueNumber": "18-Across"
+  },
+  {
+    "slug": "fear-of-flying-author-jong-usa-today",
+    "clue": "\"Fear of Flying\" author Jong",
+    "answer": "ERICA",
+    "date": "2026-08-26",
+    "popularity": 100,
+    "definition": "Erica Jong is an American writer whose 1973 novel is titled \"Fear of Flying.\"",
+    "explanation": "ERICA fits because it is Jong's five-letter first name, while the quoted novel identifies the author precisely.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Erica Jong",
+      "Fear of Flying",
+      "author"
+    ],
+    "clueType": "proper-noun",
+    "signal": "A quoted book title plus surname conventionally asks for the author's first name.",
+    "hint": "Enter the five-letter first name of novelist Jong.",
+    "reviewedAt": "2026-08-26",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-26",
+    "clueNumber": "27-Down"
+  },
+  {
+    "slug": "woodwind-instrument-kiss-from-a-rose-usa-today",
+    "clue": "Woodwind instrument featured in \"Kiss From a Rose\"",
+    "answer": "OBOE",
+    "date": "2026-08-26",
+    "popularity": 98,
+    "definition": "An oboe is a double-reed woodwind instrument with a clear, penetrating tone.",
+    "explanation": "OBOE fits because the four-letter woodwind is featured in the arrangement of Seal's song \"Kiss From a Rose.\"",
+    "partOfSpeech": "noun",
+    "tags": [
+      "oboe",
+      "Kiss From a Rose",
+      "woodwind"
+    ],
+    "clueType": "factoid",
+    "signal": "The instrument family and quoted recording ask for a specific four-letter woodwind.",
+    "hint": "Think of a four-letter double-reed instrument rather than a flute or clarinet.",
+    "reviewedAt": "2026-08-26",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-26",
+    "clueNumber": "9-Across"
+  },
+  {
+    "slug": "big-mistakes-character-mark-ivanir-usa-today",
+    "clue": "\"Big Mistakes\" character played by Mark Ivanir",
+    "answer": "IVAN",
+    "date": "2026-08-26",
+    "popularity": 96,
+    "definition": "Ivan is the character portrayed by actor Mark Ivanir in \"Big Mistakes.\"",
+    "explanation": "IVAN fits because the four-letter character name is the role played by Mark Ivanir in the work named by the clue.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Mark Ivanir",
+      "Big Mistakes",
+      "character"
+    ],
+    "clueType": "proper-noun",
+    "signal": "The quoted title and actor identify a role, so the answer is the character's first name.",
+    "hint": "The four-letter role shares its opening letters with the actor's surname.",
+    "reviewedAt": "2026-08-26",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-26",
+    "clueNumber": "34-Across"
+  },
+  {
+    "slug": "lovely-blank-beatles-song-usa-today",
+    "clue": "\"Lovely ___\" (Beatles song)",
+    "answer": "RITA",
+    "date": "2026-08-26",
+    "popularity": 100,
+    "definition": "\"Lovely Rita\" is a Beatles song released on the 1967 album \"Sgt. Pepper's Lonely Hearts Club Band.\"",
+    "explanation": "RITA fits because it completes the exact two-word Beatles song title supplied by the fill-in-the-blank clue.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Lovely Rita",
+      "The Beatles",
+      "song title"
+    ],
+    "clueType": "fill-in-the-blank",
+    "signal": "Quotation marks and the parenthetical artist identify a fixed song title.",
+    "hint": "Complete the title with the four-letter woman's name sung before \"meter maid.\"",
+    "reviewedAt": "2026-08-26",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-26",
+    "clueNumber": "42-Across"
+  },
+  {
+    "slug": "on-my-to-do-blank-usa-today",
+    "clue": "\"It's on my to-do ___\" (\"I haven't forgotten about that\")",
+    "answer": "LIST",
+    "date": "2026-08-26",
+    "popularity": 98,
+    "definition": "A to-do list is a written or mental record of tasks that remain to be completed.",
+    "explanation": "LIST fits because \"It's on my to-do list\" is the standard phrase meaning the task has been remembered and remains pending.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "to-do list",
+      "task list",
+      "fixed phrase"
+    ],
+    "clueType": "fill-in-the-blank",
+    "signal": "The quoted sentence and parenthetical paraphrase ask for the final word of a familiar expression.",
+    "hint": "Complete the phrase with a four-letter noun for an ordered set of pending tasks.",
+    "reviewedAt": "2026-08-26",
+    "publication": "USA TODAY Crossword",
+    "sourceDate": "2026-08-26",
+    "clueNumber": "66-Across"
   }
 ]

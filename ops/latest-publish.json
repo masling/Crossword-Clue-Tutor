@@ -1,19 +1,17 @@
 {
-  "publishedAt": "2026-08-25T14:12:48.749Z",
-  "input": "ops/intake/2026-08-25-nyt-midi-trends-gap.json",
+  "publishedAt": "2026-08-26T04:32:26.596Z",
+  "input": "ops/intake/2026-08-26-usa-today-routine.json",
   "urls": [
-    "/explainers/where-hindu-woman-wears-bichiya-nyt-midi/",
-    "/explainers/waymo-cars-eg-nyt-midi/",
-    "/explainers/post-ramadan-festival-translates-to-festival-nyt-midi/",
-    "/explainers/language-behind-dynamic-web-content-nyt-midi/",
-    "/explainers/trick-mirror-author-tolentino-nyt-midi/",
-    "/explainers/some-pretzel-shapes-nyt-midi/",
-    "/explainers/tiny-biting-insect-nyt-crossword/",
-    "/explainers/wowza-nyt-crossword/"
+    "/explainers/mystical-magical-singer-benson-usa-today/",
+    "/explainers/fear-of-flying-author-jong-usa-today/",
+    "/explainers/woodwind-instrument-kiss-from-a-rose-usa-today/",
+    "/explainers/big-mistakes-character-mark-ivanir-usa-today/",
+    "/explainers/lovely-blank-beatles-song-usa-today/",
+    "/explainers/on-my-to-do-blank-usa-today/"
   ],
   "answerUrls": [],
   "clinicUrls": [
-    "/daily-clue-clinic/2026-08-25/"
+    "/daily-clue-clinic/2026-08-26/"
   ],
   "hubUrls": [
     "/",
@@ -21,10 +19,8 @@
     "/daily-clue-clinic/",
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
-    "/crossword-answers/3-letters/",
-    "/crossword-answers/6-letters/",
+    "/crossword-answers/5-letters/",
     "/crossword-answers/4-letters/",
-    "/nyt-midi-crossword-clues/",
-    "/nyt-crossword-clues/"
+    "/usa-today-crossword-answers/"
   ]
 }
