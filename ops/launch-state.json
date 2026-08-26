@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T00:15:00+08:00",
+  "updatedAt": "2026-08-26T00:30:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -697,8 +697,9 @@
       "mode": "quality",
       "entries": 5,
       "statusCounts": {
-        "blocked": 4,
+        "blocked": 3,
         "outcomeUnknown": 1,
+        "submissionFailed": 1,
         "submitted": 0,
         "public": 0,
         "linkVerified": 0
@@ -712,7 +713,7 @@
       ],
       "cost": 0,
       "paidOptionsSelected": false,
-      "lastAuditedAt": "2026-08-26T00:15:00+08:00",
+      "lastAuditedAt": "2026-08-26T00:30:00+08:00",
       "nextReviewAt": "2026-08-27T12:00:00+08:00",
       "shareableSummary": "ops/outreach/2026-08-26-directory-pilot.md",
       "localLedgerPolicy": "Append-only canonical ledger remains under the Git-ignored .backlink-outreach directory"
