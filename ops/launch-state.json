@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T12:34:00+08:00",
+  "updatedAt": "2026-08-26T14:25:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -363,25 +363,38 @@
       "USA TODAY Crossword"
     ],
     "lastPublishedSourceDates": {
-      "NYT Mini": "2026-08-25",
-      "NYT Midi Crossword": "2026-08-25",
-      "The New York Times Crossword": "2026-08-25",
+      "NYT Mini": "2026-08-26",
+      "NYT Midi Crossword": "2026-08-26",
+      "The New York Times Crossword": "2026-08-26",
       "LA Times Crossword": "2026-08-25",
       "USA TODAY Crossword": "2026-08-26"
     },
     "pendingSourceDates": {
-      "NYT Mini": "2026-08-26",
-      "NYT Midi Crossword": "2026-08-26",
-      "The New York Times Crossword": "2026-08-26",
       "LA Times Crossword": "2026-08-26"
     },
     "officialSourceDiscovery": {
+      "NYT Mini": {
+        "adapter": "read-only-public-research",
+        "checkedAt": "2026-08-26T06:21:00Z",
+        "latestOfficialDate": "2026-08-26",
+        "accessMode": "Public same-day clue-answer pages without NYT login or access-control bypass",
+        "selectedPairStatus": "Six selected August 26 pairs published: TIN, DONUT, OUTRO, TOUR, INTEL, and NURSE",
+        "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
+      },
       "NYT Midi Crossword": {
         "adapter": "read-only-public-research",
-        "checkedAt": "2026-08-25T14:12:00Z",
-        "latestOfficialDate": "2026-08-25",
+        "checkedAt": "2026-08-26T06:21:00Z",
+        "latestOfficialDate": "2026-08-26",
         "accessMode": "Public same-day clue-answer pages without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 25 pairs published: TOE, ROBOTS, EID, JAVASCRIPT, JIA, and RODS; four were directly observed as Google Trends Breakout query families",
+        "selectedPairStatus": "Six selected August 26 pairs published: TIA, DUEL, BOOP, OBOE, LORE, and SAKE",
+        "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
+      },
+      "The New York Times Crossword": {
+        "adapter": "read-only-public-research",
+        "checkedAt": "2026-08-26T06:21:00Z",
+        "latestOfficialDate": "2026-08-26",
+        "accessMode": "Public same-day clue-answer pages without NYT login or access-control bypass",
+        "selectedPairStatus": "Six selected August 26 pairs published: MOPE, AVON, REND, BAR, WARY, and IDSAY",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "LA Times Crossword": {
@@ -400,7 +413,7 @@
         "localDatabase": ".local/source-intelligence.sqlite",
         "localDatabaseEvidence": "August 24 browser DOM snapshot imported 78 clue texts: 35 Across and 43 Down; no answer or solution fields. Local database now holds 222 LA Times clue rows across two dates.",
         "contentBoundary": "The metadata adapter excludes the puzzle payload. When the public player is used, only visible clue number, direction, and text are imported; Reveal, filled cells, solutions, cookies, and account state remain excluded. Full rows stay Git-ignored and model-facing output is capped at six candidates.",
-        "selectedPairStatus": "Official August 26 puzzle metadata advanced, but six exact public clue-answer pairs are not yet reliably verifiable; source/date remains pending"
+        "selectedPairStatus": "Official August 26 puzzle metadata advanced. Two pairs were publicly identified, but their clue numbers and four additional pairs were not reliably verifiable; no pages published and source/date remains pending"
       },
       "USA TODAY Crossword": {
         "adapter": "usatoday-official-candidates-v1",
@@ -419,11 +432,14 @@
     },
     "latestFreshnessBatch": {
       "sourceDate": "2026-08-26",
-      "selectedClues": 6,
+      "selectedClues": 24,
       "publications": [
+        { "publication": "NYT Mini", "selectedClues": 6, "confidence": "High; exact public clue-answer pairs cross-checked across same-day public sources without NYT login" },
+        { "publication": "NYT Midi Crossword", "selectedClues": 6, "confidence": "High; exact public clue-answer pairs cross-checked across same-day public sources without NYT login" },
+        { "publication": "The New York Times Crossword", "selectedClues": 6, "confidence": "High; exact public clue-answer pairs cross-checked across same-day public sources without NYT login" },
         { "publication": "USA TODAY Crossword", "selectedClues": 6, "confidence": "High; official public clue API candidates plus independent answer verification" }
       ],
-      "selectionReason": "Six same-day routine selections from the official public USA TODAY clue feed, independently fact-checked before publication",
+      "selectionReason": "Six same-day routine selections for each completed monitored publication; LA Times remains pending because the full six exact pairs and required clue numbering were not reliably public",
       "rightsBoundary": "Selected clues only; no grid or complete answer list"
     }
   },
@@ -759,7 +775,7 @@
     }
   },
   "nextAction": {
-    "notBefore": "2026-08-26T14:15:00+08:00",
-    "action": "USA TODAY has six selected clue pages for August 26. NYT Mini, NYT Midi Crossword, The New York Times Crossword, and LA Times Crossword remain pending for exact publicly verifiable pairs; at 14:15 recheck only those pending sources and do not recheck USA TODAY August 26."
+    "notBefore": "2026-08-27T10:15:00+08:00",
+    "action": "NYT Mini, NYT Midi Crossword, The New York Times Crossword, and USA TODAY each have six selected clue pages for August 26. LA Times August 26 remains pending because only two pairs were found without reliable clue numbers and four more pairs remain unverified. At the next source-timed cycle, do not recheck completed August 26 sources; carry LA Times pending into the 12:15/14:15 branch."
   }
 }

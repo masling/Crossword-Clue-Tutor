@@ -1,15 +1,29 @@
 {
-  "publishedAt": "2026-08-26T04:32:26.596Z",
-  "input": "ops/intake/2026-08-26-usa-today-routine.json",
+  "publishedAt": "2026-08-26T06:23:56.485Z",
+  "input": "ops/intake/2026-08-26-pending-sources.json",
   "urls": [
-    "/explainers/mystical-magical-singer-benson-usa-today/",
-    "/explainers/fear-of-flying-author-jong-usa-today/",
-    "/explainers/woodwind-instrument-kiss-from-a-rose-usa-today/",
-    "/explainers/big-mistakes-character-mark-ivanir-usa-today/",
-    "/explainers/lovely-blank-beatles-song-usa-today/",
-    "/explainers/on-my-to-do-blank-usa-today/"
+    "/explainers/only-three-letter-element-nyt-mini/",
+    "/explainers/hole-food-nyt-mini/",
+    "/explainers/section-at-end-of-song-nyt-mini/",
+    "/explainers/visit-as-a-college-nyt-mini/",
+    "/explainers/something-gathered-by-a-spy-nyt-mini/",
+    "/explainers/sip-slowly-nyt-mini/",
+    "/explainers/aunt-in-spanish-nyt-midi/",
+    "/explainers/engagement-at-end-of-hamilton-nyt-midi/",
+    "/explainers/playful-tap-on-the-nose-nyt-midi/",
+    "/explainers/skinny-woodwind-instrument-nyt-midi/",
+    "/explainers/traditional-stories-nyt-midi/",
+    "/explainers/japanese-rice-wine-nyt-midi/",
+    "/explainers/act-all-teenagerly-say-nyt/",
+    "/explainers/river-by-royal-shakespeare-theatre-nyt/",
+    "/explainers/rip-apart-nyt/",
+    "/explainers/something-to-belly-up-to-nyt/",
+    "/explainers/cautious-nyt-august-26/",
+    "/explainers/my-guess-is-nyt/"
   ],
-  "answerUrls": [],
+  "answerUrls": [
+    "/crosswordese/intel/"
+  ],
   "clinicUrls": [
     "/daily-clue-clinic/2026-08-26/"
   ],
@@ -19,8 +33,11 @@
     "/daily-clue-clinic/",
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
+    "/crossword-answers/3-letters/",
     "/crossword-answers/5-letters/",
     "/crossword-answers/4-letters/",
-    "/usa-today-crossword-answers/"
+    "/nyt-mini-crossword-clues/",
+    "/nyt-midi-crossword-clues/",
+    "/nyt-crossword-clues/"
   ]
 }
