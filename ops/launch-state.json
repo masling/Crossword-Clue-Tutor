@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T08:19:19+08:00",
+  "updatedAt": "2026-08-26T08:39:45+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -713,10 +713,11 @@
       ],
       "cost": 0,
       "paidOptionsSelected": false,
-      "lastAuditedAt": "2026-08-26T08:19:19+08:00",
+      "lastAuditedAt": "2026-08-26T08:39:45+08:00",
       "nextReviewAt": "2026-08-27T12:00:00+08:00",
       "shareableSummary": "ops/outreach/2026-08-26-directory-pilot.md",
-      "localLedgerPolicy": "Append-only canonical ledger remains under the Git-ignored .backlink-outreach directory"
+      "localLedgerPolicy": "Append-only canonical ledger remains under the Git-ignored .backlink-outreach directory",
+      "browserHandoffPolicy": "One tab per unresolved domain; preserve only real filled or server-side state; do not reopen blank forms for outcome-unknown entries; final browser action must mark all unresolved tabs for handoff"
     },
     "readyTargets": [],
     "executionAssets": {

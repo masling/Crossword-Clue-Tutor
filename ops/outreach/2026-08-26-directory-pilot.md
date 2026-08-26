@@ -24,7 +24,7 @@ The local append-only campaign ledger and approved product profile are kept in t
 
 | Directory | Current route | Fit and current evidence | Status | Next action |
 | --- | --- | --- | --- | --- |
-| Startup Buffer | `https://startupbuffer.com/site/submit` | Public startup/side-project directory; reviewed profile includes description, screenshot, category, and tags. | `blocked` | On resume the site presented a Cloudflare human-verification page before the saved form. Manual completion is required; no bypass was attempted. |
+| Startup Buffer | `https://startupbuffer.com/site/submit` | Public startup/side-project directory; reviewed profile includes description, screenshot, category, and tags. | `blocked` | Cloudflare checkpoint cleared. Basic details and both descriptions were restored in one unique tab; the form is waiting at required screenshot upload. |
 | Launching Next | `https://www.launchingnext.com/submit/` | Free, manually reviewed side-project submission; optional paid acceleration was not selected. | `outcome_unknown` | The submit action returned the same form without a receipt. Gmail, public search, and available backend checks found no confirmation. Recheck on 2026-08-27; do not retry before then. |
 | Startup Stash | `https://startupstash.com/add-listing/` | Curated tool directory with public Typeform and documented editorial review. | `blocked` | Project-name identity and business-domain email were accepted; product copy, URL, and Learning category were completed. Required logo upload still cannot open the Chrome file chooser. |
 | SaaSHub | `https://www.saashub.com/services/submit` | Software marketplace with Education, Language Learning, Kids Education, and Educational Games categories. | `submitted` | Explicit success page confirmed the free submission. Five relevant categories and three real comparison products were selected. Listing remains pending approval; review can take up to 32 days. |
@@ -44,6 +44,14 @@ The local append-only campaign ledger and approved product profile are kept in t
 
 No entry will advance to `public` or `link_verified` without observing a real public page and checking the exact href, anchor, and `rel` attributes.
 
+## Browser handoff standard
+
+- Keep at most one live tab per unresolved domain.
+- Do not reopen a blank form for `outcome_unknown`; use mailbox/backend/public checks instead.
+- Preserve only a real current state: Startup Buffer screenshot upload, Startup Stash logo upload, and Uneed server-side draft.
+- Apply handoff marks only after filling and verification are complete, in the final browser operation of the turn.
+- Submitted or completed targets do not require a retained form tab.
+
 ## Source and freshness
 
 - Seed discovery: bundled Web.Cafe and Flaq observations collected/reviewed 2026-08-19 through 2026-08-24; treated only as leads.
@@ -52,7 +60,7 @@ No entry will advance to `public` or `link_verified` without observing a real pu
 
 ## Next review
 
-- 2026-08-26: user must complete Startup Buffer's native Cloudflare human verification before the saved form can resume.
+- Startup Buffer is ready at screenshot upload in the preserved tab.
 - Startup Stash requires a working Chrome file chooser; extension/browser restart may be needed after enabling file URL access.
 - SaaSHub: review public listing status by 2026-09-27; do not call it a backlink before approval and href verification.
 - Uneed: product draft remains saved locally on the platform; no action while free submissions are closed and payment remains prohibited.
