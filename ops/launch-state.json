@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T19:05:00+08:00",
+  "updatedAt": "2026-08-26T19:08:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -124,7 +124,9 @@
       "contentBoundary": "Adult and sexual senses are filtered; dictionary candidates never become indexed clue pages automatically.",
       "licensePage": "/data-sources/",
       "licenseFile": "/licenses/wordnet-license.txt",
-      "status": "Locally verified; production deployment pending"
+      "status": "Production verified",
+      "verifiedAt": "2026-08-26T19:08:00+08:00",
+      "productionEvidence": "Quick/Tutor modes, local solve session, data-source legend, 139,207-candidate manifest, and a representative 4-letter/S extended shard all returned successfully after GitHub Actions deployment. HTTP-only checks did not execute analytics JavaScript."
     },
     "linkableGuides": 4,
     "classroomResources": 35,
