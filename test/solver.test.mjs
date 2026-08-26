@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
-import { clueHubCandidates, normalizeClue, normalizePattern, patternToRegExp, scoreClueMatch, solveClues } from "../src/solver.mjs";
+import { candidateEvidence, clueHubCandidates, lexicalCandidates, normalizeClue, normalizePattern, patternToRegExp, scoreClueMatch, solveClues, uniqueAnswerCandidates } from "../src/solver.mjs";
 
 const clues = [
   { answer: "SPEC", clue: "Contractor's detail, for short", definition: "A specification", tags: ["work"], popularity: 10 },
@@ -49,6 +49,31 @@ test("filters classroom candidates by selected skill", () => {
 test("returns popular matches first", () => {
   const results = solveClues(clues, { pattern: "S???" });
   assert.deepEqual(results.map((item) => item.answer), ["SPEC", "SEAR", "SAFE"]);
+});
+
+test("adapts licensed lexical records without presenting them as reviewed pairs", () => {
+  const candidates = lexicalCandidates({
+    licensePath: "/licenses/wordnet-license.txt",
+    candidates: [{ answer: "SEAR", definition: "burn the surface of something", partOfSpeech: "verb", synonyms: ["scorch"], popularity: 10 }]
+  });
+  assert.equal(candidates[0].sourceKind, "wordnet");
+  assert.match(candidates[0].signal, /not an exact reviewed/i);
+  assert.equal(solveClues(candidates, { clue: "Burn the surface", pattern: "S?A?" })[0].answer, "SEAR");
+});
+
+test("describes exact and dictionary candidate evidence without fake numeric confidence", () => {
+  assert.deepEqual(candidateEvidence(clues[0], { clue: clues[0].clue, pattern: "S?E?", length: 4 }), {
+    label: "Reviewed exact",
+    tier: "exact",
+    reasons: ["Matches S?E?", "4 letters", "Exact reviewed clue-answer pair"]
+  });
+  const lexical = lexicalCandidates({ candidates: [{ answer: "SEAR", definition: "burn the surface", partOfSpeech: "verb", synonyms: [], popularity: 1 }] })[0];
+  assert.equal(candidateEvidence(lexical, { clue: "Burn", length: 4 }).tier, "lexical");
+});
+
+test("deduplicates answers while preserving the higher-trust first result", () => {
+  const lexical = { ...clues[0], sourceKind: "wordnet" };
+  assert.deepEqual(uniqueAnswerCandidates([clues[0], lexical, clues[1]]).map((item) => item.answer), ["SPEC", "SEAR"]);
 });
 
 test("turns a multi-answer clue hub into solver candidates", () => {

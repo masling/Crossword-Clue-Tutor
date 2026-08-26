@@ -1,6 +1,7 @@
 import { cp, mkdir, readFile, rm, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { validateContent } from "./validate-content.mjs";
+import { buildWordNetSolverCorpus } from "./wordnet-solver-corpus.mjs";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
@@ -23,6 +24,38 @@ const [config, clues, answers, clueTypes, publications, clueHubs, classroomClues
 const validation = validateContent({ clues, answers, clueTypes, publications, clueHubs, classroomClues, config });
 for (const warning of validation.warnings) console.warn(`warning: ${warning}`);
 if (validation.errors.length) throw new Error(validation.errors.join("\n"));
+
+const solverCorpus = await buildWordNetSolverCorpus({ reviewedCount: clues.length });
+const solverPrimaryCandidates = solverCorpus.candidates.slice(0, 20_000);
+const solverExtendedCandidates = solverCorpus.candidates.slice(20_000);
+const solverPrimaryShards = new Map();
+const solverExtendedShards = new Map();
+for (const candidate of solverPrimaryCandidates) {
+  const length = candidate.answer.length;
+  if (!solverPrimaryShards.has(length)) solverPrimaryShards.set(length, []);
+  solverPrimaryShards.get(length).push(candidate);
+}
+for (const candidate of solverExtendedCandidates) {
+  const key = `${candidate.answer.length}/${candidate.answer[0]}`;
+  if (!solverExtendedShards.has(key)) solverExtendedShards.set(key, []);
+  solverExtendedShards.get(key).push(candidate);
+}
+const { candidates: _solverCandidates, ...solverCorpusMetadata } = solverCorpus;
+const solverCorpusManifest = {
+  ...solverCorpusMetadata,
+  primaryCount: solverPrimaryCandidates.length,
+  extendedCount: solverExtendedCandidates.length,
+  lengths: Object.fromEntries([...solverPrimaryShards].sort(([a], [b]) => a - b).map(([length, items]) => {
+    const extended = Object.fromEntries([...solverExtendedShards]
+      .filter(([key]) => key.startsWith(`${length}/`))
+      .sort(([a], [b]) => a.localeCompare(b))
+      .map(([key, candidates]) => {
+        const initial = key.split("/")[1];
+        return [initial, { count: candidates.length, url: `/assets/solver-lexicon/extended/${length}/${initial}.json` }];
+      }));
+    return [length, { primary: { count: items.length, url: `/assets/solver-lexicon/${length}.json` }, extended }];
+  }))
+};
 
 const answerBySlug = new Map(answers.map((answer) => [answer.slug, answer]));
 const answerByValue = new Map(answers.map((answer) => [answer.answer, answer]));
@@ -120,6 +153,7 @@ function footer() {
       <nav aria-label="Footer navigation">
         <a href="/about/">About</a>
         <a href="/editorial-policy/">Editorial policy</a>
+        <a href="/data-sources/">Data sources &amp; licenses</a>
         <a href="/privacy/">Privacy</a>
         <button type="button" data-analytics-settings>Analytics choices</button>
         <button type="button" data-install-app hidden>Install app</button>
@@ -263,12 +297,18 @@ function toolShell(initialTab = "solve", compact = false, context = "standalone"
           <input id="solve-length" name="length" type="number" min="2" max="30" inputmode="numeric" placeholder="4">
           <small>Optional if the pattern sets it.</small>
         </div>
+        <fieldset class="solve-mode field-wide" data-solve-mode>
+          <legend>How much help?</legend>
+          <label><input name="helpMode" type="radio" value="quick" checked><span><strong>Quick answer</strong><small>Show ranked fills immediately</small></span></label>
+          <label><input name="helpMode" type="radio" value="tutor"><span><strong>Hint first</strong><small>Keep the answer hidden</small></span></label>
+        </fieldset>
         <div class="form-actions field-wide">
-          <button class="button button-primary" type="submit">Find a helpful hint</button>
+          <button class="button button-primary" type="submit">Find ranked answers</button>
           <button class="example-button" type="button" data-example="solve">Try the SPEC example</button>
         </div>
         <p class="form-error field-wide" data-solve-error role="alert" hidden></p>
       </form>
+      <section class="solve-session" data-solve-session hidden><div><strong>Recent solve session</strong><small>Stored only in this browser</small></div><div data-solve-session-items></div></section>
       <div class="tool-results" data-solve-results aria-live="polite"></div>
     </div>
     <div class="tool-panel" id="explain-panel" role="tabpanel" aria-labelledby="explain-tab" ${initialTab !== "explain" ? "hidden" : ""}>
@@ -723,7 +763,7 @@ for (const clue of clues) {
     ? `${config.name} is not affiliated with or endorsed by ${clue.publication} or its publisher.`
     : "It is not an official answer key from a crossword publisher.";
   const explainerModifiedAt = [clue.reviewedAt, explainerTemplateUpdatedAt].sort().reverse()[0];
-  const body = `<article class="shell article-layout clue-article" data-current-clue="${clue.slug}"><div class="article-main">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Explanations", href: "/daily-clue-clinic/" }, { label: clue.clue }])}<header><p class="content-kind">${escapeHtml(contentKind)}</p><h1>${pageHeading}</h1><p class="review-date">Editorially reviewed ${escapeHtml(formatDate(clue.reviewedAt))}</p></header><section class="answer-stage" aria-labelledby="answer-stage-${clue.slug}"><div class="answer-stage-heading"><div><p>Start spoiler-light</p><h2 id="answer-stage-${clue.slug}">Need a nudge first?</h2></div><span class="length-badge">${clue.answer.length} letters</span></div><p class="clue-hint">${escapeHtml(clue.hint)}</p><details class="answer-reveal" data-answer-reveal data-nosnippet><summary><span>Show the answer and explanation</span><small>One click · no signup</small></summary><div class="answer-reveal-content"><p class="answer-label">Answer</p><div class="answer-cells" aria-label="${clue.answer.split("").join(" ")}">${[...clue.answer].map((letter) => `<span>${letter}</span>`).join("")}</div><h3>Why it fits</h3><p>${escapeHtml(clue.explanation)}</p></div></details></section><section class="mechanism-grid"><div><h2>Clue signal</h2><p>${escapeHtml(clue.signal)}</p></div><div><h2>Answer meaning</h2><p>${escapeHtml(clue.definition)}</p></div></section>${sourceContext}${profile ? `<p data-nosnippet><a class="text-link" href="/crosswordese/${profile.slug}/">See ${profile.answer} meaning and common clue patterns →</a></p>` : ""}${related.length ? `<section data-related-clues><h2>Related reviewed clues</h2>${clueRows(related)}</section>` : ""}<section class="continuation-tool"><div class="continuation-heading"><div><h2>Solve the next clue here.</h2><p>Paste another clue, add the letters you trust, and keep solving without returning to search.</p></div><a class="text-link" href="/saved-clues/" data-return-link="saved">Open saved clues →</a></div>${toolShell("solve", true, "explainer")}</section><nav class="return-paths" aria-label="Keep solving"><a href="/crossword-answers-today/" data-return-link="today"><strong>Today’s selected clues</strong><span>Continue with the latest reviewed puzzles</span></a><a href="/saved-clues/" data-return-link="saved"><strong>Your saved clues</strong><span>Pick up where you left off on this device</span></a></nav><p class="source-note">This independently written explanation is for learning and clue analysis. ${escapeHtml(affiliationNote)}</p></div><aside class="article-aside return-aside"><p>Keep this useful</p><div class="save-clue-control"><button class="button button-outline save-clue-button" type="button" data-save-clue data-clue-slug="${clue.slug}" aria-pressed="false">Save clue</button><span class="save-clue-status" data-save-clue-status aria-live="polite"></span></div><a class="aside-all" href="/crossword-answers-today/" data-return-link="today">Browse today’s clues →</a><a class="aside-all" href="/solver/" data-return-link="solver">Open the full solver →</a><section class="recent-clues" data-recent-clues hidden><h2>Recently viewed</h2><div data-recent-clue-items></div></section><a class="aside-all" href="${feedbackUrl({ mode: "clue", pagePath: route, clue: clue.clue, answer: clue.answer })}">Report an issue →</a></aside></article>`;
+  const body = `<article class="shell article-layout clue-article" data-current-clue="${clue.slug}"><div class="article-main">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Explanations", href: "/daily-clue-clinic/" }, { label: clue.clue }])}<header><p class="content-kind">${escapeHtml(contentKind)}</p><h1>${pageHeading}</h1><p class="review-date">Editorially reviewed ${escapeHtml(formatDate(clue.reviewedAt))}</p></header><section class="answer-stage" aria-labelledby="answer-stage-${clue.slug}"><div class="answer-stage-heading"><div><p>Choose your pace</p><h2 id="answer-stage-${clue.slug}">Answer now or take a hint.</h2></div><span class="length-badge">${clue.answer.length} letters</span></div><div class="answer-choice"><button class="button button-primary" type="button" data-quick-answer>Show answer now</button><span>or use the spoiler-light hint below</span></div><p class="clue-hint">${escapeHtml(clue.hint)}</p><details class="answer-reveal" data-answer-reveal data-nosnippet><summary><span>Show the answer and explanation</span><small>One click · no signup</small></summary><div class="answer-reveal-content"><p class="answer-label">Answer</p><div class="answer-cells" aria-label="${clue.answer.split("").join(" ")}">${[...clue.answer].map((letter) => `<span>${letter}</span>`).join("")}</div><h3>Why it fits</h3><p>${escapeHtml(clue.explanation)}</p></div></details></section><section class="mechanism-grid"><div><h2>Clue signal</h2><p>${escapeHtml(clue.signal)}</p></div><div><h2>Answer meaning</h2><p>${escapeHtml(clue.definition)}</p></div></section>${sourceContext}${profile ? `<p data-nosnippet><a class="text-link" href="/crosswordese/${profile.slug}/">See ${profile.answer} meaning and common clue patterns →</a></p>` : ""}${related.length ? `<section data-related-clues><h2>Related reviewed clues</h2>${clueRows(related)}</section>` : ""}<section class="continuation-tool"><div class="continuation-heading"><div><h2>Solve the next clue here.</h2><p>Paste another clue, add the letters you trust, and keep solving without returning to search.</p></div><a class="text-link" href="/saved-clues/" data-return-link="saved">Open saved clues →</a></div>${toolShell("solve", true, "explainer")}</section><nav class="return-paths" aria-label="Keep solving"><a href="/crossword-answers-today/" data-return-link="today"><strong>Today’s selected clues</strong><span>Continue with the latest reviewed puzzles</span></a><a href="/saved-clues/" data-return-link="saved"><strong>Your saved clues</strong><span>Pick up where you left off on this device</span></a></nav><p class="source-note">This independently written explanation is for learning and clue analysis. ${escapeHtml(affiliationNote)}</p></div><aside class="article-aside return-aside"><p>Keep this useful</p><div class="save-clue-control"><button class="button button-outline save-clue-button" type="button" data-save-clue data-clue-slug="${clue.slug}" aria-pressed="false">Save clue</button><span class="save-clue-status" data-save-clue-status aria-live="polite"></span></div><a class="aside-all" href="/crossword-answers-today/" data-return-link="today">Browse today’s clues →</a><a class="aside-all" href="/solver/" data-return-link="solver">Open the full solver →</a><section class="recent-clues" data-recent-clues hidden><h2>Recently viewed</h2><div data-recent-clue-items></div></section><a class="aside-all" href="${feedbackUrl({ mode: "clue", pagePath: route, clue: clue.clue, answer: clue.answer })}">Report an issue →</a></aside></article>`;
   const articleLd = { "@context": "https://schema.org", "@type": "Article", headline: `${clue.clue} crossword clue answered`, description: pageDescription, datePublished: clue.reviewedAt, dateModified: explainerModifiedAt, mainEntityOfPage: canonicalUrl(route), author: organizationEntity, publisher: organizationEntity, ...(publicationHub ? { isPartOf: { "@type": "CollectionPage", "@id": canonicalUrl(publicationHub.route), name: publicationHub.name } } : {}) };
   await writePage(route, pageTemplate({ title: pageTitle, description: pageDescription, route, body, bodyClass: "article-page", jsonLd: [articleLd] }), false, explainerModifiedAt);
 }
@@ -751,6 +791,10 @@ const teacherPilotBody = `<section class="shell feedback-page">${breadcrumbs([{ 
 const teacherPilotBodyWithVerification = teacherPilotBody.replace("Used only to clarify this pilot report. It is not added to a mailing list.", "Include this to count as a distinct verified pilot participant. It is used only to avoid double-counting and ask one clarification question, never for a mailing list.");
 await writePage(teacherPilotRoute, pageTemplate({ title: "Teacher pilot feedback", description: "Share structured educator feedback after using Crossword Clue Tutor in a Grades 6–12 classroom session.", route: teacherPilotRoute, body: teacherPilotBodyWithVerification, bodyClass: "feedback-page-body", noindex: true }), true);
 
+const dataSourcesRoute = "/data-sources/";
+const dataSourcesBody = `<article class="shell prose-page data-sources-page">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Data sources & licenses" }])}<header><h1>Data sources, confidence marks, and licenses</h1><p>Clue Tutor separates exact editorial work from broad lexical candidates so that a useful suggestion is never presented as an exact reviewed answer.</p></header><h2>Candidate marks</h2><div class="candidate-legend"><div><span class="candidate-status candidate-status-exact" aria-hidden="true">✓</span><p><strong>Reviewed exact.</strong> The exact clue-answer pair has an editorially reviewed hint and explanation.</p></div><div><span class="candidate-status candidate-status-reviewed" aria-hidden="true">R</span><p><strong>Reviewed related.</strong> A reviewed clue or recurring clue family is relevant, but crossings still decide the exact fill.</p></div><div><span class="candidate-status candidate-status-lexical" aria-hidden="true">D</span><p><strong>Dictionary candidate.</strong> The fill comes from licensed lexical matching rather than an exact reviewed clue-answer pair.</p></div></div><h2>Three data tiers</h2><ul><li><strong>Reviewed editorial pairs:</strong> ${clues.length} selected clue pages with original or materially reviewed hints, definitions, signals, and explanations.</li><li><strong>Licensed lexical candidates:</strong> ${solverCorpus.count.toLocaleString()} pattern and meaning candidates generated from Princeton WordNet 3.1. They help the private solver but do not become indexed clue pages automatically.</li><li><strong>Source intelligence:</strong> Git-ignored local records used for freshness, ranking, and coverage analysis. Full publisher grids and answer lists are not published.</li></ul><h2>Princeton WordNet</h2><p>WordNet groups English nouns, verbs, adjectives, and adverbs into related senses with definitions and semantic relationships. Clue Tutor filters the licensed data for answer length, usable definitions, and the site's non-adult content boundary.</p><p>The WordNet license permits use, copying, modification, and distribution for any purpose without fee or royalty, provided its copyright and disclaimer remain with distributed copies.</p><p><a class="text-link" href="/licenses/wordnet-license.txt">Read the complete WordNet license →</a></p><h2>Publication boundary</h2><p>A dictionary candidate is never automatically converted into a public explanation page. Public clue pages require a verified clue-answer relationship and an independent editorial review. Use the <a href="/feedback/">feedback form</a> when a candidate or explanation is wrong or unclear.</p></article>`;
+await writePage(dataSourcesRoute, pageTemplate({ title: "Data sources and licenses", description: "How Crossword Clue Tutor separates reviewed clues, licensed WordNet candidates, local source intelligence, and confidence marks.", route: dataSourcesRoute, body: dataSourcesBody, bodyClass: "prose-page-body" }), false, config.contentUpdatedAt);
+
 const aboutBody = `<article class="shell prose-page about-page">${breadcrumbs([{ label: "Home", href: "/" }, { label: "About" }])}<header><h1>Crossword help that teaches the clue, not just the answer.</h1><p>Crossword Clue Tutor is an independent, hint-first solving tool for the moment when the crossings stop helping. It narrows possibilities with the letters you know, gives you control over how much to reveal, and explains the mechanism after the fill makes sense.</p></header><h2>Why this exists</h2><p>Most crossword answer sites optimize for the fastest possible spoiler. That can finish a square, but it does not help with the next abbreviation, question-mark clue, proper name, or ambiguous one-word definition. Clue Tutor is built around a different outcome: get unstuck now and become a more confident solver over time.</p><h2>How it helps you solve</h2><ol><li><strong>Start with the clue as written.</strong> Punctuation, tense, abbreviations, and small qualifiers often carry the mechanism.</li><li><strong>Add only letters you trust.</strong> Answer length and confirmed crossings remove more noise than a long synonym list.</li><li><strong>Take a hint before the answer.</strong> Reveal semantic or clue-type guidance without ending the solve early.</li><li><strong>Check why the fill works.</strong> Read the exact definition, signal, fact, or wordplay instead of memorizing an unexplained answer.</li></ol><p><a class="button button-primary" href="/solver/">Try the hint-first solver</a> <a class="button button-outline" href="/explain/">Explain an answer</a></p><h2>What we publish</h2><p>The current library contains <strong>${clues.length} reviewed clue explanations</strong>, <strong>${answers.length} answer-meaning pages</strong>, and <strong>${clueHubs.length} recurring clue families</strong> with ${ambiguityCandidateCount} possible fills organized by length and sense. It also includes clue-reading guides, selected current-puzzle explanations, and downloadable editorial research.</p><p>Daily coverage is intentionally selective. We publish a small set of clues that benefit from a hint or explanation; we do not mirror a publisher's grid or release a complete answer list.</p><h2>How the content is reviewed</h2><p>An indexed explanation needs a verifiable clue-answer relationship, an original or materially reviewed hint and definition, a specific account of why the answer fits, and a visible review date. Low-confidence suggestions and private tool searches are not turned into public pages automatically.</p><p><a href="/editorial-policy/">Read the editorial policy →</a></p><h2>Independent by design</h2><p>Crossword Clue Tutor is not affiliated with, sponsored by, or endorsed by The New York Times, the Los Angeles Times, USA TODAY, or another crossword publisher. Publication names and selected clue text identify the puzzle being discussed; the hints, definitions, explanations, tools, and data model are independently produced.</p><h2>Open software, protected editorial work</h2><p>The software source is available on <a href="https://github.com/masling/Crossword-Clue-Tutor">GitHub</a> under the MIT License. Original explanations, reviewed datasets, research, branding, and site copy are separately rights-reserved. Permitted excerpts require clear credit and a standard follow link to the source.</p><p>The public repository contains no live feedback records, mailbox data, credentials, or database exports. Solver input is processed in the browser; see the <a href="/privacy/">privacy page</a> for the full data boundary.</p><h2>Where the project is going</h2><p>The roadmap is practical: cover useful current clues sooner, deepen answer meanings and ambiguous clue families when real search demand appears, improve the Solver with reviewed data, and use corrections to make the library more trustworthy. Growth should come from a better reference and solving experience, not from empty landing pages.</p><section id="contact"><h2>Contact</h2><p>Use the <a href="/feedback/">feedback form</a> for a wrong answer, missing possibility, unclear explanation, or tool problem. For editorial questions, directory listings, reuse permission, or a conversation that needs a reply, email <a href="mailto:${contactEmail}">${contactEmail}</a>.</p><p>Clue Tutor does not operate a marketing mailing list. Messages are used only to handle the request or conversation you start.</p></section></article>`;
 const aboutDescription = "How Crossword Clue Tutor uses hints, crossing patterns, reviewed explanations, and clear editorial boundaries to help people become better crossword solvers.";
 const aboutLd = { "@context": "https://schema.org", "@type": "AboutPage", name: "About Crossword Clue Tutor", description: aboutDescription, url: canonicalUrl("/about/"), dateModified: config.contentUpdatedAt, mainEntity: { "@id": organizationId } };
@@ -768,6 +812,9 @@ await writePage("/404.html", pageTemplate({ title: "Page not found", description
 
 const oneLookDictionaryIndex = `${answers.map((answer) => `<a href="${canonicalUrl(`/crosswordese/${answer.slug}/`)}">${escapeHtml(answer.answer)}</a>`).join("\n")}\n`;
 await mkdir(path.join(dist, "assets"), { recursive: true });
+await mkdir(path.join(dist, "assets/solver-lexicon"), { recursive: true });
+await Promise.all([...new Set([...solverExtendedShards.keys()].map((key) => key.split("/")[0]))].map((length) => mkdir(path.join(dist, `assets/solver-lexicon/extended/${length}`), { recursive: true })));
+await mkdir(path.join(dist, "licenses"), { recursive: true });
 await Promise.all([
   cp(path.join(root, "src/style.css"), path.join(dist, "assets/style.css")),
   cp(path.join(root, "src/app.js"), path.join(dist, "assets/app.js")),
@@ -786,7 +833,11 @@ await Promise.all([
   writeFile(path.join(dist, "assets/answers.json"), JSON.stringify(answers)),
   writeFile(path.join(dist, "assets/onelook-dictionary.txt"), oneLookDictionaryIndex),
   writeFile(path.join(dist, "assets/clue-hubs.json"), JSON.stringify(clueHubs, null, 2)),
-  writeFile(path.join(dist, "assets/clue-hubs.csv"), ambiguityCsv)
+  writeFile(path.join(dist, "assets/clue-hubs.csv"), ambiguityCsv),
+  writeFile(path.join(dist, "assets/solver-lexicon/manifest.json"), JSON.stringify(solverCorpusManifest)),
+  ...[...solverPrimaryShards].map(([length, items]) => writeFile(path.join(dist, `assets/solver-lexicon/${length}.json`), JSON.stringify({ tier: "primary", length, count: items.length, candidates: items }))),
+  ...[...solverExtendedShards].map(([key, items]) => writeFile(path.join(dist, `assets/solver-lexicon/extended/${key}.json`), JSON.stringify({ tier: "extended", length: Number(key.split("/")[0]), initial: key.split("/")[1], count: items.length, candidates: items }))),
+  cp(path.join(root, "node_modules/wordnet-db/LICENSE"), path.join(dist, "licenses/wordnet-license.txt"))
 ]);
 
 const indexablePages = pages.filter((page) => !page.noindex);

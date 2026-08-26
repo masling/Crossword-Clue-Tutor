@@ -82,7 +82,7 @@ for (const [description, files] of indexableDescriptions) {
   if (files.length > 1) errors.push(`duplicate meta description across ${files.join(", ")}: ${description}`);
 }
 
-for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/social-card.png", "assets/logo-192.png", "assets/logo-512.png", "assets/clues.json", "assets/classroom-clues.json", "assets/answers.json", "assets/clue-hubs.json", "assets/clue-hubs.csv", "assets/onelook-dictionary.txt", "favicon.svg", "favicon-32x32.png", "favicon-16x16.png", "apple-touch-icon.png", "manifest.webmanifest", "robots.txt", "ads.txt", "sitemap.xml", "feed.xml"]) {
+for (const asset of ["assets/style.css", "assets/app.js", "assets/solver.mjs", "assets/social-card.png", "assets/logo-192.png", "assets/logo-512.png", "assets/clues.json", "assets/classroom-clues.json", "assets/answers.json", "assets/clue-hubs.json", "assets/clue-hubs.csv", "assets/onelook-dictionary.txt", "assets/solver-lexicon/manifest.json", "licenses/wordnet-license.txt", "favicon.svg", "favicon-32x32.png", "favicon-16x16.png", "apple-touch-icon.png", "manifest.webmanifest", "robots.txt", "ads.txt", "sitemap.xml", "feed.xml"]) {
   try {
     await access(path.join(dist, asset));
   } catch {
@@ -98,6 +98,7 @@ if (!robotsTxt.includes("User-agent: Mediapartners-Google\nAllow: /")) errors.pu
 const appScript = await readFile(path.join(dist, "assets/app.js"), "utf8");
 const solverScript = await readFile(path.join(dist, "assets/solver.mjs"), "utf8");
 if (!appScript.includes('fetch("/assets/clue-hubs.json")') || !appScript.includes("solverClues")) errors.push("solver app is not loading the multi-answer clue hub candidate pool");
+if (!appScript.includes('fetch("/assets/solver-lexicon/manifest.json")') || !appScript.includes("solverLexiconShardPromises") || !appScript.includes("lexicalCandidates") || !appScript.includes("solve_session_restore")) errors.push("solver app is missing the length-sharded licensed corpus or local solve-session loop");
 if (!appScript.includes('fetch("/assets/classroom-clues.json")') || !appScript.includes("classroom_example_select") || !appScript.includes("classroom_skill_select") || !appScript.includes('namedItem("length")') || !appScript.includes("data-classroom-skill-filter")) errors.push("solver app is missing the original classroom clue library, example interaction, skill filtering, or safe length-field binding");
 if (!appScript.includes("beforeinstallprompt") || !appScript.includes("pwa_install_choice")) errors.push("app script is missing the install-app interaction");
 if (!solverScript.includes("clueHubCandidates")) errors.push("solver module is missing the clue-hub adapter");
@@ -126,6 +127,25 @@ if (config.indexNowKey) {
 
 const sitemap = await readFile(path.join(dist, "sitemap.xml"), "utf8");
 const clues = JSON.parse(await readFile(path.resolve("data/clues.json"), "utf8"));
+const solverCorpus = JSON.parse(await readFile(path.join(dist, "assets/solver-lexicon/manifest.json"), "utf8"));
+const solverShardEntries = Object.entries(solverCorpus.lengths ?? {});
+let solverShardTotal = 0;
+for (const [length, metadata] of solverShardEntries) {
+  const shard = JSON.parse(await readFile(path.join(dist, `assets/solver-lexicon/${length}.json`), "utf8"));
+  if (shard.tier !== "primary" || shard.length !== Number(length) || shard.count !== metadata.primary?.count || shard.count !== shard.candidates?.length) errors.push(`solver corpus primary shard ${length} is invalid`);
+  if (!shard.candidates?.every((item) => item.answer.length === Number(length) && item.sourceKind === "wordnet" && item.definition)) errors.push(`solver corpus shard ${length} has invalid candidate fields`);
+  solverShardTotal += shard.count;
+  for (const [initial, extendedMetadata] of Object.entries(metadata.extended ?? {})) {
+    const extended = JSON.parse(await readFile(path.join(dist, `assets/solver-lexicon/extended/${length}/${initial}.json`), "utf8"));
+    if (extended.tier !== "extended" || extended.length !== Number(length) || extended.initial !== initial || extended.count !== extendedMetadata.count || extended.count !== extended.candidates?.length) errors.push(`solver corpus extended shard ${length}/${initial} is invalid`);
+    if (!extended.candidates?.every((item) => item.answer.length === Number(length) && item.answer.startsWith(initial) && item.sourceKind === "wordnet" && item.definition)) errors.push(`solver corpus extended shard ${length}/${initial} has invalid candidate fields`);
+    solverShardTotal += extended.count;
+  }
+}
+if (solverCorpus.source !== "Princeton WordNet 3.1" || solverCorpus.count !== solverShardTotal) errors.push("solver corpus manifest count does not match its length shards");
+if (solverCorpus.primaryCount !== 20_000 || solverCorpus.extendedCount !== solverCorpus.count - solverCorpus.primaryCount) errors.push("solver corpus primary/extended counts are invalid");
+if (solverCorpus.count < clues.length * 100) errors.push(`solver corpus must contain at least 100x the ${clues.length} reviewed clues`);
+if (!solverCorpus.licensePath) errors.push("solver corpus is missing its license path");
 const classroomClues = JSON.parse(await readFile(path.resolve("data/classroom-clues.json"), "utf8"));
 const answers = JSON.parse(await readFile(path.resolve("data/answers.json"), "utf8"));
 const publications = JSON.parse(await readFile(path.resolve("data/publications.json"), "utf8"));
@@ -427,6 +447,7 @@ if (!latestClinicPage.includes("data-daily-practice") || !latestClinicPage.inclu
 const cluePage = await readFile(path.join(dist, "explainers/scientists-workplace-nyt-mini/index.html"), "utf8");
 if (!cluePage.includes("data-save-clue")) errors.push("reviewed clue pages are missing the save-clue control");
 if (!cluePage.includes("data-answer-reveal") || !cluePage.includes("data-nosnippet")) errors.push("reviewed clue pages are missing the spoiler-light answer reveal or snippet protection");
+if (!cluePage.includes("data-quick-answer") || !cluePage.includes("Answer now or take a hint")) errors.push("reviewed clue pages are missing the quick-answer path");
 if (!cluePage.includes('data-tool-context="explainer"') || !cluePage.includes("Solve the next clue here")) errors.push("reviewed clue pages are missing the next-clue solver continuation");
 if (!cluePage.includes("data-recent-clues") || !cluePage.includes("data-return-link")) errors.push("reviewed clue pages are missing local return paths");
 if (cluePage.includes("The answer is LAB")) errors.push("reviewed clue metadata must not reveal the answer in search snippets");
@@ -434,7 +455,9 @@ const establishedExplainerPage = await readFile(path.join(dist, "explainers/cont
 if (!establishedExplainerPage.includes('"datePublished":"2026-08-18"') || !establishedExplainerPage.includes('"dateModified":"2026-08-24"')) errors.push("established explainer Article dates do not preserve publication and template modification history");
 const samePuzzleClusterPage = await readFile(path.join(dist, "explainers/japanese-for-folding-paper-nyt-mini/index.html"), "utf8");
 if (!samePuzzleClusterPage.includes("data-same-puzzle-clues") || !samePuzzleClusterPage.includes("More selected clues from NYT Mini") || !samePuzzleClusterPage.includes("/explainers/paper-and-pencil-game-missing-ps-nyt-mini/") || !samePuzzleClusterPage.includes("/explainers/sunny-part-of-breakfast-order-nyt-mini/") || !samePuzzleClusterPage.includes('"isPartOf":{"@type":"CollectionPage"')) errors.push("published clue pages are missing same-puzzle selected links or CollectionPage relationship");
-for (const eventName of ["answer_reveal", "solver_submit", "save_clue", "clue_revisit", "return_path_click", "daily_clinic_complete", "same_puzzle_clue_click"]) {
+const dataSourcesPage = await readFile(path.join(dist, "data-sources/index.html"), "utf8");
+if (!dataSourcesPage.includes("Princeton WordNet 3.1") || !dataSourcesPage.includes("Dictionary candidate") || !dataSourcesPage.includes("/licenses/wordnet-license.txt")) errors.push("data sources page is missing the WordNet license, candidate legend, or data boundary");
+for (const eventName of ["answer_reveal", "quick_answer_click", "solver_submit", "solver_mode_change", "candidate_status_open", "second_solver_submit", "save_clue", "clue_revisit", "return_path_click", "daily_clinic_complete", "same_puzzle_clue_click"]) {
   if (!appScript.includes(eventName)) errors.push(`app script is missing the ${eventName} product event`);
 }
 

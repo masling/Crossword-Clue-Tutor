@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-26T14:25:00+08:00",
+  "updatedAt": "2026-08-26T19:05:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -75,8 +75,8 @@
     }
   },
   "content": {
-    "indexablePages": 332,
-    "reviewedClues": 137,
+    "indexablePages": 392,
+    "reviewedClues": 193,
     "answerMeaningPages": 110,
     "dictionaryExpansion": {
       "profilesAdded": 74,
@@ -108,9 +108,24 @@
     },
     "evergreenClueHubs": 15,
     "evergreenClueHubCandidates": 328,
-    "solverReviewedClueCandidates": 110,
+    "solverReviewedClueCandidates": 193,
     "solverHubCandidates": 328,
-    "solverCandidatePool": 414,
+    "solverCandidatePool": 139728,
+    "licensedSolverCorpus": {
+      "source": "Princeton WordNet 3.1",
+      "candidates": 139207,
+      "reviewedBaselineMultiplier": 721.28,
+      "answerLengthRange": "2-20 letters",
+      "partsOfSpeech": 4,
+      "primaryCandidates": 20000,
+      "extendedCandidates": 119207,
+      "loadingPolicy": "No global corpus load. The primary layer is sharded by answer length; the extended layer is sharded by answer length plus known first letter and is fetched only during a solver action.",
+      "repositoryBoundary": "Full generated JSON and SQLite records remain under .local and Git-ignored; CI regenerates deployable shards from the pinned wordnet-db dependency.",
+      "contentBoundary": "Adult and sexual senses are filtered; dictionary candidates never become indexed clue pages automatically.",
+      "licensePage": "/data-sources/",
+      "licenseFile": "/licenses/wordnet-license.txt",
+      "status": "Locally verified; production deployment pending"
+    },
     "linkableGuides": 4,
     "classroomResources": 35,
     "classroomProductReadiness": {
@@ -254,6 +269,9 @@
       "Atom feed discovery",
       "Crossword Answers Today return hub",
       "Browser-local saved clues",
+      "Browser-local five-query solve session with one-click restore",
+      "Quick Answer and Hint First solver modes stored as a local preference",
+      "Clickable confidence marks for exact, reviewed-related, and dictionary candidates",
       "Hub-powered multi-answer Solver and Explain flows",
       "Contextual feedback and correction flow",
       "Clue-to-answer meaning links for continued reading",

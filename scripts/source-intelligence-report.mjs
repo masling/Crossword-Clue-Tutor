@@ -8,7 +8,8 @@ const queries = {
   totals: "SELECT COUNT(*) AS puzzles, COALESCE(SUM(official_clue_count),0) AS clues_observed, COALESCE(SUM(selected_candidate_count),0) AS candidates_selected FROM source_puzzles;",
   publications: "SELECT publication, COUNT(*) AS puzzle_dates, SUM(official_clue_count) AS clues_observed, MAX(source_date) AS latest_source_date FROM source_puzzles GROUP BY publication ORDER BY publication;",
   repeatedClues: "SELECT clue_text, COUNT(*) AS appearances, MIN(source_date) AS first_seen, MAX(source_date) AS last_seen FROM source_clues GROUP BY lower(clue_text) HAVING COUNT(*) > 1 ORDER BY appearances DESC, clue_text LIMIT 20;",
-  selectedReasons: "SELECT selection_reasons_json AS reasons, COUNT(*) AS candidates FROM source_clues WHERE selected_candidate=1 GROUP BY selection_reasons_json ORDER BY candidates DESC LIMIT 20;"
+  selectedReasons: "SELECT selection_reasons_json AS reasons, COUNT(*) AS candidates FROM source_clues WHERE selected_candidate=1 GROUP BY selection_reasons_json ORDER BY candidates DESC LIMIT 20;",
+  lexicalCorpus: "SELECT source, COUNT(*) AS candidates, MIN(LENGTH(answer)) AS minimum_length, MAX(LENGTH(answer)) AS maximum_length, COUNT(DISTINCT part_of_speech) AS parts_of_speech, MAX(imported_at) AS imported_at FROM solver_lexicon_v2 GROUP BY source;"
 };
 
 const report = { database: dbPath, generatedAt: new Date().toISOString() };

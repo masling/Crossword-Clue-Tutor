@@ -1,4 +1,4 @@
-import { clueHubCandidates, normalizeClue, normalizePattern, solveClues } from "/assets/solver.mjs";
+import { candidateEvidence, clueHubCandidates, lexicalCandidates, normalizeClue, normalizePattern, solveClues, uniqueAnswerCandidates } from "/assets/solver.mjs";
 
 const dataPromise = Promise.all([
   fetch("/assets/clues.json").then((response) => response.json()),
@@ -10,9 +10,50 @@ const dataPromise = Promise.all([
   return { clues, answers, clueHubs, classroomClues, hubClues, solverClues: [...clues, ...hubClues] };
 });
 
+let solverLexiconManifestPromise;
+const solverLexiconShardPromises = new Map();
+function loadSolverLexicon(answerLength, pattern = "") {
+  solverLexiconManifestPromise ??= fetch("/assets/solver-lexicon/manifest.json")
+    .then((response) => {
+      if (!response.ok) throw new Error(`Solver corpus manifest failed with ${response.status}`);
+      return response.json();
+    });
+  return solverLexiconManifestPromise.then((manifest) => {
+    const lengthShards = manifest.lengths?.[answerLength];
+    if (!lengthShards?.primary?.url) return { corpus: manifest, candidates: [], shardCount: 0, extended: false };
+    const normalizedPattern = normalizePattern(pattern);
+    const initial = /^[A-Z]/.test(normalizedPattern) ? normalizedPattern[0] : null;
+    const sources = [{ key: `primary:${answerLength}`, url: lengthShards.primary.url }];
+    if (initial && lengthShards.extended?.[initial]?.url) sources.push({ key: `extended:${answerLength}:${initial}`, url: lengthShards.extended[initial].url });
+    const loads = sources.map(({ key, url }) => {
+      if (!solverLexiconShardPromises.has(key)) {
+        solverLexiconShardPromises.set(key, fetch(url)
+          .then((response) => {
+            if (!response.ok) throw new Error(`Solver corpus shard failed with ${response.status}`);
+            return response.json();
+          })
+          .then((payload) => lexicalCandidates({ ...manifest, candidates: payload.candidates })));
+      }
+      return solverLexiconShardPromises.get(key);
+    });
+    return Promise.all(loads).then((groups) => {
+      const candidates = groups.flat();
+      return { corpus: manifest, candidates, shardCount: candidates.length, extended: sources.length > 1 };
+    });
+  });
+}
+
 for (const link of document.querySelectorAll(".primary-nav a")) {
   if (link.pathname !== "/" && location.pathname.startsWith(link.pathname)) link.setAttribute("aria-current", "page");
 }
+
+const savedCluesKey = "crossword-clue-tutor:saved-clues";
+const recentCluesKey = "crossword-clue-tutor:recent-clues";
+const dailyPracticeKey = "crossword-clue-tutor:daily-practice:v1";
+const solveSessionKey = "crossword-clue-tutor:solve-session:v1";
+const solveModeKey = "crossword-clue-tutor:solve-mode:v1";
+const analyticsConsentKey = "crossword-clue-tutor:ga4-consent:v1";
+const pendingProductEvents = [];
 
 for (const root of document.querySelectorAll("[data-tool-root]")) {
   setupTabs(root);
@@ -21,15 +62,10 @@ for (const root of document.querySelectorAll("[data-tool-root]")) {
   setupExplainForm(root);
 }
 
-const savedCluesKey = "crossword-clue-tutor:saved-clues";
-const recentCluesKey = "crossword-clue-tutor:recent-clues";
-const dailyPracticeKey = "crossword-clue-tutor:daily-practice:v1";
-const analyticsConsentKey = "crossword-clue-tutor:ga4-consent:v1";
-const pendingProductEvents = [];
-
 setupSavedClueButtons();
 setupSavedCluesPage();
 setupAnswerReveals();
+setupSolveSessions();
 setupRecentClues();
 setupDailyPractice();
 setupClassroomExamples();
@@ -359,9 +395,71 @@ function writeRecentClues(slugs) {
   }
 }
 
+function readSolveSession() {
+  try {
+    const value = JSON.parse(localStorage.getItem(solveSessionKey) ?? "[]");
+    if (!Array.isArray(value)) return [];
+    return value.filter((item) => item && typeof item.clue === "string" && typeof item.pattern === "string" && typeof item.length === "string").slice(0, 5);
+  } catch {
+    return [];
+  }
+}
+
+function recordSolveSession(query) {
+  const entry = {
+    clue: String(query.clue ?? "").slice(0, 300),
+    pattern: String(query.pattern ?? "").slice(0, 30),
+    length: String(query.length ?? "").slice(0, 2),
+    helpMode: query.helpMode === "tutor" ? "tutor" : "quick"
+  };
+  const key = `${normalizeClue(entry.clue)}|${entry.pattern}|${entry.length}`;
+  const next = [entry, ...readSolveSession().filter((item) => `${normalizeClue(item.clue)}|${item.pattern}|${item.length}` !== key)].slice(0, 5);
+  try { localStorage.setItem(solveSessionKey, JSON.stringify(next)); } catch { /* local history is optional */ }
+  renderSolveSessions();
+  return next.length;
+}
+
+function setupSolveSessions() {
+  renderSolveSessions();
+}
+
+function renderSolveSessions() {
+  const entries = readSolveSession();
+  for (const root of document.querySelectorAll("[data-solve-session]")) {
+    const container = root.querySelector("[data-solve-session-items]");
+    if (!container) continue;
+    container.replaceChildren();
+    for (const entry of entries) {
+      const control = button(entry.clue || entry.pattern || `${entry.length} letters`, "solve-session-item");
+      const detail = [entry.pattern, entry.length ? `${entry.length} letters` : ""].filter(Boolean).join(" · ");
+      if (detail) control.append(element("small", "", detail));
+      control.addEventListener("click", () => {
+        const tool = root.closest("[data-tool-root]");
+        const form = tool?.querySelector("[data-solve-form]");
+        if (!form) return;
+        form.elements.namedItem("clue").value = entry.clue;
+        form.elements.namedItem("pattern").value = entry.pattern;
+        form.elements.namedItem("length").value = entry.length;
+        const mode = form.querySelector(`[name="helpMode"][value="${entry.helpMode}"]`);
+        if (mode) mode.checked = true;
+        trackProductEvent("solve_session_restore", { has_pattern: Boolean(entry.pattern), has_length: Boolean(entry.length) });
+        form.requestSubmit();
+      });
+      container.append(control);
+    }
+    root.hidden = entries.length === 0;
+  }
+}
+
 function setupAnswerReveals() {
   for (const reveal of document.querySelectorAll("[data-answer-reveal]")) {
     let tracked = false;
+    const quick = reveal.closest(".answer-stage")?.querySelector("[data-quick-answer]");
+    quick?.addEventListener("click", () => {
+      reveal.open = true;
+      reveal.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      trackProductEvent("quick_answer_click", { page_path: location.pathname, content_type: "clue_explainer" });
+    });
     reveal.addEventListener("toggle", () => {
       if (!reveal.open || tracked) return;
       tracked = true;
@@ -544,6 +642,18 @@ function setupSolveForm(root) {
   if (!form) return;
   const results = root.querySelector("[data-solve-results]");
   const error = root.querySelector("[data-solve-error]");
+  const submit = form.querySelector('button[type="submit"]');
+  try {
+    const savedMode = localStorage.getItem(solveModeKey);
+    const savedControl = form.querySelector(`[name="helpMode"][value="${savedMode}"]`);
+    if (savedControl) savedControl.checked = true;
+  } catch { /* mode preference is optional */ }
+  for (const control of form.querySelectorAll('[name="helpMode"]')) {
+    control.addEventListener("change", () => {
+      try { localStorage.setItem(solveModeKey, control.value); } catch { /* mode preference is optional */ }
+      trackProductEvent("solver_mode_change", { help_mode: control.value });
+    });
+  }
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -552,6 +662,7 @@ function setupSolveForm(root) {
     const clue = String(values.get("clue") ?? "").trim();
     const pattern = normalizePattern(String(values.get("pattern") ?? ""));
     const length = String(values.get("length") ?? "").trim();
+    const helpMode = values.get("helpMode") === "tutor" ? "tutor" : "quick";
     if (!clue && !pattern && !length) {
       showError(error, "Enter a clue, known letters, or an answer length to begin.");
       return;
@@ -567,12 +678,43 @@ function setupSolveForm(root) {
       has_clue: Boolean(clue),
       has_pattern: Boolean(pattern),
       has_length: Boolean(length),
+      help_mode: helpMode,
       skill: skill || "all"
     });
-    const { solverClues, classroomClues } = await dataPromise;
-    const candidatePool = context === "classroom" ? [...classroomClues, ...solverClues] : solverClues;
-    const matches = solveClues(candidatePool, { clue, pattern, length, skill }).slice(0, 5);
-    renderSolveResults(results, matches, { clue, pattern, length, context });
+    const previousSessionLength = readSolveSession().length;
+    recordSolveSession({ clue, pattern, length, helpMode });
+    if (previousSessionLength > 0) trackProductEvent("second_solver_submit", { tool_context: context });
+    submit.disabled = true;
+    submit.textContent = context === "classroom" ? "Checking reviewed clues…" : "Ranking candidates…";
+    try {
+      const { solverClues, classroomClues } = await dataPromise;
+      let candidatePool = context === "classroom" ? [...classroomClues, ...solverClues] : solverClues;
+      let corpusCount = 0;
+      let shardCount = 0;
+      let extendedLexicon = false;
+      const explicitLength = Number.parseInt(length, 10);
+      const inferredLength = Number.isFinite(explicitLength) && explicitLength > 0
+        ? explicitLength
+        : pattern && !pattern.includes("*") ? pattern.length : null;
+      if (context !== "classroom") {
+        if (inferredLength) {
+          try {
+            const lexicon = await loadSolverLexicon(inferredLength, pattern);
+            candidatePool = [...solverClues, ...lexicon.candidates];
+            corpusCount = lexicon.corpus.count;
+            shardCount = lexicon.shardCount;
+            extendedLexicon = lexicon.extended;
+          } catch {
+            trackProductEvent("solver_corpus_error", { tool_context: context });
+          }
+        }
+      }
+      const matches = uniqueAnswerCandidates(solveClues(candidatePool, { clue, pattern, length, skill })).slice(0, 5);
+      renderSolveResults(results, matches, { clue, pattern, length, context, helpMode, corpusCount, shardCount, extendedLexicon, needsLengthForLexicon: context !== "classroom" && !inferredLength });
+    } finally {
+      submit.disabled = false;
+      submit.textContent = "Find ranked answers";
+    }
   });
 }
 
@@ -607,14 +749,21 @@ function setupExplainForm(root) {
 
 function renderSolveResults(container, matches, query) {
   container.replaceChildren();
-  trackProductEvent("solver_results", { tool_context: query.context, result_count: matches.length });
+  const lexicalCount = matches.filter((item) => item.sourceKind === "wordnet").length;
+  trackProductEvent("solver_results", {
+    tool_context: query.context,
+    result_count: matches.length,
+    lexical_count: lexicalCount,
+    help_mode: query.helpMode
+  });
   if (!matches.length) {
     const state = emptyState(
-      "No reviewed match yet",
-      "Try fewer clue words or remove one uncertain crossing letter. This validation build does not invent an answer when its reviewed set has no fit."
+      "No confident match yet",
+      "Try fewer clue words, confirm the answer length, or remove one uncertain crossing letter. We do not invent a fill when the reviewed and licensed candidate layers have no fit."
     );
     const report = element("a", "text-link", "Report a missing answer →");
     report.href = feedbackHref({ mode: "solver", clue: query.clue });
+    if (query.needsLengthForLexicon) state.append(element("p", "solver-length-note", "Add the answer length or a fixed-length pattern to search the licensed dictionary without loading its full corpus."));
     state.append(report);
     container.append(state);
     return;
@@ -622,30 +771,60 @@ function renderSolveResults(container, matches, query) {
 
   const heading = element("div", "results-heading");
   heading.append(
-    element("p", "", `${matches.length} reviewed ${matches.length === 1 ? "match" : "matches"}`),
-    element("span", "", query.pattern ? `Pattern ${query.pattern}` : query.length ? `${query.length} letters` : "Ranked by clue fit")
+    element("p", "", `${matches.length} ranked ${matches.length === 1 ? "candidate" : "candidates"}`),
+    element("span", "", query.corpusCount ? `${query.shardCount.toLocaleString()} ${query.length || query.pattern.length}-letter candidates searched${query.extendedLexicon ? " · extended by first letter" : ""}` : "Reviewed explanations")
   );
   container.append(heading);
-  for (const [index, item] of matches.entries()) container.append(solveResult(item, index, query.context));
+  if (query.needsLengthForLexicon) {
+    container.append(element("p", "solver-length-note", "Add the answer length or a fixed-length pattern to search the licensed dictionary without loading its full corpus."));
+  }
+  for (const [index, item] of matches.entries()) container.append(solveResult(item, index, query));
 }
 
-function solveResult(item, index, context = "standalone") {
+function solveResult(item, index, query) {
+  const evidence = candidateEvidence(item, query);
+  const quick = query.helpMode === "quick";
+  const lexical = item.sourceKind === "wordnet";
   const article = element("article", "solve-result");
   const head = element("div", "solve-result-head");
-  const meta = element("span", "result-rank", `Match ${index + 1}`);
-  const title = element("h3", "", item.clue);
+  const meta = element("div", "result-meta");
+  const rank = element("span", "result-rank", `Match ${index + 1}`);
+  const statusIcon = evidence.tier === "exact" ? "✓" : evidence.tier === "lexical" ? "D" : "R";
+  const status = button(statusIcon, `candidate-status candidate-status-${evidence.tier}`);
+  status.setAttribute("aria-label", evidence.label);
+  status.setAttribute("aria-expanded", "false");
+  const statusNote = element(
+    "p",
+    "candidate-status-note",
+    evidence.tier === "exact"
+      ? "Exact clue-answer pair with an editorially reviewed explanation."
+      : evidence.tier === "lexical"
+        ? "Licensed dictionary candidate, not an exact reviewed pairing. Confirm it with the clue and crossings."
+        : "Related reviewed clue or clue family; confirm the exact sense with crossings."
+  );
+  statusNote.hidden = true;
+  status.addEventListener("click", () => {
+    statusNote.hidden = !statusNote.hidden;
+    status.setAttribute("aria-expanded", String(!statusNote.hidden));
+    if (!statusNote.hidden) trackProductEvent("candidate_status_open", { result_tier: evidence.tier });
+  });
+  meta.append(rank, status);
+  const title = element("h3", "", lexical ? item.definition : item.clue);
   const length = element("span", "length-badge", String(item.answer.length));
   head.append(meta, title, length);
+
+  const evidenceList = element("ul", "match-evidence");
+  for (const reason of evidence.reasons) evidenceList.append(element("li", "", reason));
 
   const signal = element("div", "hint-line");
   signal.append(element("span", "hint-label", "Clue signal"), element("p", "", item.signal));
 
   const hint = element("div", "hint-line hint-secondary");
-  hint.hidden = true;
+  hint.hidden = quick;
   hint.append(element("span", "hint-label", "Semantic hint"), element("p", "", item.hint));
 
   const answerBlock = element("div", "result-answer");
-  answerBlock.hidden = true;
+  answerBlock.hidden = !quick;
   answerBlock.append(element("span", "hint-label", "Answer"), answerCells(item.answer));
 
   const why = element("div", "result-why");
@@ -655,11 +834,13 @@ function solveResult(item, index, context = "standalone") {
   const actions = element("div", "result-actions");
   const nextHint = button("Show another hint", "button button-quiet");
   const reveal = button("Reveal answer", "button button-outline");
-  const explain = button("Explain the answer", "button button-quiet");
+  const explain = button(lexical ? "Why this candidate" : "Explain the answer", "button button-quiet");
   const report = element("a", "text-link result-feedback-link", "Report this result →");
-  report.href = feedbackHref({ mode: "solver", clue: item.clue, answer: item.answer });
-  report.hidden = true;
-  explain.hidden = true;
+  report.href = feedbackHref({ mode: "solver", clue: query.clue, answer: item.answer });
+  report.hidden = !quick;
+  explain.hidden = !quick;
+  nextHint.hidden = quick;
+  reveal.hidden = quick;
   actions.append(nextHint, reveal, explain, report);
 
   nextHint.addEventListener("click", () => {
@@ -673,14 +854,14 @@ function solveResult(item, index, context = "standalone") {
     reveal.hidden = true;
     explain.hidden = false;
     report.hidden = false;
-    trackProductEvent("solver_answer_reveal", { tool_context: context, result_rank: index + 1 });
+    trackProductEvent("solver_answer_reveal", { tool_context: query.context, result_rank: index + 1, result_tier: evidence.tier });
   });
   explain.addEventListener("click", () => {
     why.hidden = false;
     explain.hidden = true;
   });
 
-  article.append(head, signal, hint, answerBlock, why, actions);
+  article.append(head, statusNote, evidenceList, signal, hint, answerBlock, why, actions);
   if (item.hubSlug) {
     const compare = element("a", "text-link hub-result-link", `Compare all ${item.clue} answers by length →`);
     compare.href = `/crossword-clues/${item.hubSlug}/`;
