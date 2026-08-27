@@ -1,42 +1,17 @@
 {
-  "publishedAt": "2026-08-27T04:27:53.085Z",
-  "input": "ops/intake/2026-08-27-routine-and-la-backfill.json",
+  "publishedAt": "2026-08-27T06:19:52.119Z",
+  "input": "ops/intake/2026-08-27-la-times-routine.json",
   "urls": [
-    "/explainers/watched-one-never-boils-nyt-mini/",
-    "/explainers/see-ya-later-nyt-mini/",
-    "/explainers/sea-blank-animal-builds-conch-shell-nyt-mini/",
-    "/explainers/airplane-seating-choice-nyt-mini/",
-    "/explainers/leaning-tower-city-nyt-mini/",
-    "/explainers/something-that-can-be-airdropped-nyt-mini/",
-    "/explainers/sci-fi-saga-with-sandworms-nyt-midi/",
-    "/explainers/high-maintenance-headliner-nyt-midi/",
-    "/explainers/gadget-pitched-thousand-songs-pocket-nyt-midi/",
-    "/explainers/spy-within-an-organization-nyt-midi/",
-    "/explainers/entry-level-volkswagen-sedan-nyt-midi/",
-    "/explainers/discredit-nyt-midi-august-27/",
-    "/explainers/open-with-ones-teeth-nyt-daily/",
-    "/explainers/network-launched-1994-scent-of-a-woman-nyt-daily/",
-    "/explainers/bed-threads-nyt-daily/",
-    "/explainers/pre-inca-civilization-aqueducts-geoglyphs-nyt-daily/",
-    "/explainers/november-birthstone-nyt-daily/",
-    "/explainers/cnbc-subject-nyt-daily/",
-    "/explainers/emerged-la-times-august-26/",
-    "/explainers/korean-american-grocery-store-la-times/",
-    "/explainers/dim-sum-brew-la-times/",
-    "/explainers/little-solo-break-la-times/",
-    "/explainers/camels-watering-hole-la-times/",
-    "/explainers/thatll-leave-a-mark-la-times/",
-    "/explainers/margos-got-money-troubles-actress-fanning-usa-today/",
-    "/explainers/shrinking-actor-harrison-usa-today/",
-    "/explainers/bugonia-star-stone-usa-today/",
-    "/explainers/actress-priyanka-usa-today/",
-    "/explainers/blank-the-judge-of-that-usa-today/",
-    "/explainers/word-before-clash-or-cure-usa-today/"
+    "/explainers/mister-rogers-neighborhood-network-la-times/",
+    "/explainers/collision-sound-la-times/",
+    "/explainers/hill-partner-textbook-publishing-country-music-la-times/",
+    "/explainers/could-there-possibly-be-good-explanation-la-times/",
+    "/explainers/skating-jumps-similar-to-toe-loops-la-times/",
+    "/explainers/gold-at-milano-cortina-olympics-la-times/"
   ],
   "answerUrls": [],
   "clinicUrls": [
-    "/daily-clue-clinic/2026-08-27/",
-    "/daily-clue-clinic/2026-08-26/"
+    "/daily-clue-clinic/2026-08-27/"
   ],
   "hubUrls": [
     "/",
@@ -45,13 +20,7 @@
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
     "/crossword-answers/3-letters/",
-    "/crossword-answers/5-letters/",
-    "/crossword-answers/4-letters/",
     "/crossword-answers/6-letters/",
-    "/nyt-mini-crossword-clues/",
-    "/nyt-midi-crossword-clues/",
-    "/nyt-crossword-clues/",
-    "/la-times-crossword-answers/",
-    "/usa-today-crossword-answers/"
+    "/la-times-crossword-answers/"
   ]
 }
