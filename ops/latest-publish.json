@@ -1,30 +1,41 @@
 {
-  "publishedAt": "2026-08-26T06:23:56.485Z",
-  "input": "ops/intake/2026-08-26-pending-sources.json",
+  "publishedAt": "2026-08-27T04:27:53.085Z",
+  "input": "ops/intake/2026-08-27-routine-and-la-backfill.json",
   "urls": [
-    "/explainers/only-three-letter-element-nyt-mini/",
-    "/explainers/hole-food-nyt-mini/",
-    "/explainers/section-at-end-of-song-nyt-mini/",
-    "/explainers/visit-as-a-college-nyt-mini/",
-    "/explainers/something-gathered-by-a-spy-nyt-mini/",
-    "/explainers/sip-slowly-nyt-mini/",
-    "/explainers/aunt-in-spanish-nyt-midi/",
-    "/explainers/engagement-at-end-of-hamilton-nyt-midi/",
-    "/explainers/playful-tap-on-the-nose-nyt-midi/",
-    "/explainers/skinny-woodwind-instrument-nyt-midi/",
-    "/explainers/traditional-stories-nyt-midi/",
-    "/explainers/japanese-rice-wine-nyt-midi/",
-    "/explainers/act-all-teenagerly-say-nyt/",
-    "/explainers/river-by-royal-shakespeare-theatre-nyt/",
-    "/explainers/rip-apart-nyt/",
-    "/explainers/something-to-belly-up-to-nyt/",
-    "/explainers/cautious-nyt-august-26/",
-    "/explainers/my-guess-is-nyt/"
+    "/explainers/watched-one-never-boils-nyt-mini/",
+    "/explainers/see-ya-later-nyt-mini/",
+    "/explainers/sea-blank-animal-builds-conch-shell-nyt-mini/",
+    "/explainers/airplane-seating-choice-nyt-mini/",
+    "/explainers/leaning-tower-city-nyt-mini/",
+    "/explainers/something-that-can-be-airdropped-nyt-mini/",
+    "/explainers/sci-fi-saga-with-sandworms-nyt-midi/",
+    "/explainers/high-maintenance-headliner-nyt-midi/",
+    "/explainers/gadget-pitched-thousand-songs-pocket-nyt-midi/",
+    "/explainers/spy-within-an-organization-nyt-midi/",
+    "/explainers/entry-level-volkswagen-sedan-nyt-midi/",
+    "/explainers/discredit-nyt-midi-august-27/",
+    "/explainers/open-with-ones-teeth-nyt-daily/",
+    "/explainers/network-launched-1994-scent-of-a-woman-nyt-daily/",
+    "/explainers/bed-threads-nyt-daily/",
+    "/explainers/pre-inca-civilization-aqueducts-geoglyphs-nyt-daily/",
+    "/explainers/november-birthstone-nyt-daily/",
+    "/explainers/cnbc-subject-nyt-daily/",
+    "/explainers/emerged-la-times-august-26/",
+    "/explainers/korean-american-grocery-store-la-times/",
+    "/explainers/dim-sum-brew-la-times/",
+    "/explainers/little-solo-break-la-times/",
+    "/explainers/camels-watering-hole-la-times/",
+    "/explainers/thatll-leave-a-mark-la-times/",
+    "/explainers/margos-got-money-troubles-actress-fanning-usa-today/",
+    "/explainers/shrinking-actor-harrison-usa-today/",
+    "/explainers/bugonia-star-stone-usa-today/",
+    "/explainers/actress-priyanka-usa-today/",
+    "/explainers/blank-the-judge-of-that-usa-today/",
+    "/explainers/word-before-clash-or-cure-usa-today/"
   ],
-  "answerUrls": [
-    "/crosswordese/intel/"
-  ],
+  "answerUrls": [],
   "clinicUrls": [
+    "/daily-clue-clinic/2026-08-27/",
     "/daily-clue-clinic/2026-08-26/"
   ],
   "hubUrls": [
@@ -36,8 +47,11 @@
     "/crossword-answers/3-letters/",
     "/crossword-answers/5-letters/",
     "/crossword-answers/4-letters/",
+    "/crossword-answers/6-letters/",
     "/nyt-mini-crossword-clues/",
     "/nyt-midi-crossword-clues/",
-    "/nyt-crossword-clues/"
+    "/nyt-crossword-clues/",
+    "/la-times-crossword-answers/",
+    "/usa-today-crossword-answers/"
   ]
 }
