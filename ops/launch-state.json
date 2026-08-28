@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T17:04:00+08:00",
+  "updatedAt": "2026-08-28T17:07:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -163,7 +163,11 @@
       "profilesBefore": 137,
       "profilesAfter": 162,
       "remainingReviewedGaps": 107,
-      "status": "Prepared for deployment",
+      "status": "Production verified",
+      "deployedAt": "2026-08-28T17:06:00+08:00",
+      "deploymentCommit": "f8cf84e8b25a0c7b81d703c5ac6e4d846fe03e33",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33157797255",
+      "productionVerification": "AJA, DHL, I hope not, Swipe right, and Who knew returned HTTP 200 with one canonical Definition & Meaning page. Sitemap contains 512 URLs; the full production audit found zero errors, duplicate metadata/canonicals, or orphans and maximum click depth 3.",
       "selectionReason": "Every August 28 reviewed answer still missing a canonical page; the current lane exactly met the daily target, so no historical filler was used"
     },
     "samePuzzleInternalLinking": {
