@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T16:43:00+08:00",
+  "updatedAt": "2026-08-28T16:47:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -130,8 +130,12 @@
       "reason": "Add durable meaning and clue-pattern support for two demonstrated high-impression exact-query pages in the CTR treatment cohort"
     },
     "definitionMeaningExpansion": {
-      "status": "Prepared for deployment",
+      "status": "Production verified",
       "preparedAt": "2026-08-28T16:15:00+08:00",
+      "deployedAt": "2026-08-28T16:44:35+08:00",
+      "deploymentCommit": "01dbabea4f03128b8c12f93b860f2933d24a6e88",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33156483390",
+      "productionVerification": "Five representative new pages returned HTTP 200 with one canonical, reviewed Definition & Meaning metadata, and a Solver continuation. Sitemap contains 487 URLs; the full production audit found zero errors, duplicate titles/descriptions/canonicals, or orphans, with maximum click depth 3.",
       "batch": "ops/answer-intake/2026-08-28-definition-meaning-25.json",
       "profilesAdded": 25,
       "totalProfiles": 137,
