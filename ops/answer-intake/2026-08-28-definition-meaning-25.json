@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-28",
+  "selectionReason": "First one-answer-one-page Definition & Meaning cohort: verified non-adult answers with strong crossword learning value, multiple senses, abbreviations, foreign-language use, wordplay, or current reviewed demand.",
+  "profiles": [
+    { "answer": "ACME", "slug": "acme", "pronunciation": "AK-mee", "related": [] },
+    { "answer": "ACHOO", "slug": "achoo", "pronunciation": "uh-CHOO", "related": [] },
+    { "answer": "AGILE", "slug": "agile", "pronunciation": "AJ-uhl", "related": [] },
+    { "answer": "AHAMOMENT", "displayTerm": "Aha moment", "slug": "aha-moment", "pronunciation": "ah-HAH MOH-muhnt", "related": [] },
+    { "answer": "AISLE", "slug": "aisle", "pronunciation": "yle", "related": [] },
+    { "answer": "BAR", "slug": "bar", "pronunciation": "bar", "related": [] },
+    { "answer": "BOOP", "slug": "boop", "pronunciation": "boop", "related": [] },
+    { "answer": "CHA", "slug": "cha", "pronunciation": "chah", "related": [] },
+    { "answer": "CULTURE", "slug": "culture", "pronunciation": "KUL-chur", "related": [] },
+    { "answer": "DAREIASK", "displayTerm": "Dare I ask", "slug": "dare-i-ask", "pronunciation": "dair eye ask", "related": [] },
+    { "answer": "DEMEAN", "slug": "demean", "pronunciation": "dih-MEEN", "related": [] },
+    { "answer": "DIVA", "slug": "diva", "pronunciation": "DEE-vuh", "related": [] },
+    { "answer": "DONUT", "slug": "donut", "pronunciation": "DOH-nuht", "related": [] },
+    { "answer": "DROOL", "slug": "drool", "pronunciation": "drool", "related": [] },
+    { "answer": "DUEL", "slug": "duel", "pronunciation": "DYOO-uhl", "related": [] },
+    { "answer": "EID", "slug": "eid", "pronunciation": "eed", "related": ["tet"] },
+    { "answer": "FILE", "slug": "file", "pronunciation": "fyle", "related": [] },
+    { "answer": "GRR", "slug": "grr", "pronunciation": "gur", "related": [] },
+    { "answer": "HAFT", "slug": "haft", "pronunciation": "haft", "related": [] },
+    { "answer": "HOWTO", "displayTerm": "How-to", "slug": "how-to", "pronunciation": "how too", "related": [] },
+    { "answer": "MOLE", "slug": "mole", "pronunciation": "mohl", "related": [] },
+    { "answer": "NOSEEUM", "displayTerm": "No-see-um", "slug": "no-see-um", "pronunciation": "noh-see-uhm", "related": [] },
+    { "answer": "NURSE", "slug": "nurse", "pronunciation": "nurs", "related": [] },
+    { "answer": "OASIS", "slug": "oasis", "pronunciation": "oh-AY-sis", "related": [] },
+    { "answer": "OUTRO", "slug": "outro", "pronunciation": "OUT-roh", "related": [] }
+  ]
+}

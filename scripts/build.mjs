@@ -123,6 +123,13 @@ function seoDescription(subject, suffix) {
   return `${fittedSubject}${separator}${suffix}`;
 }
 
+function fitMetaDescription(value) {
+  const clean = String(value).replace(/\s+/g, " ").trim();
+  if (clean.length <= 160) return clean;
+  const shortened = clean.slice(0, 159).replace(/\s+\S*$/, "").trimEnd();
+  return `${shortened || clean.slice(0, 159).trimEnd()}…`;
+}
+
 function logo() {
   return `<span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>`;
 }
@@ -641,22 +648,25 @@ for (const answer of answers) {
   const relatedClues = clues.filter((clue) => clue.answer === answer.answer);
   const relatedAnswers = (answer.related ?? []).map((slug) => answerBySlug.get(slug)).filter(Boolean);
   const route = `/crosswordese/${answer.slug}/`;
-  const title = `${answer.answer} in crosswords: meaning, definition and clue patterns`;
+  const displayTerm = answer.displayTerm ?? answer.answer;
+  const title = `${displayTerm} Definition & Meaning in Crosswords`;
   const body = `<article class="shell article-layout">
     <div class="article-main">
       ${breadcrumbs([{ label: "Home", href: "/" }, { label: "Crosswordese", href: "/crosswordese/" }, { label: answer.answer }])}
-      <header class="answer-header"><div><p class="content-kind">Crossword answer · ${answer.answer.length} letters</p><h1>${answer.answer}</h1><p class="pronunciation">${escapeHtml(answer.pronunciation)} · ${escapeHtml(answer.partOfSpeech)}</p></div><div class="answer-cells" aria-label="${answer.answer.split("").join(" ")}">${[...answer.answer].map((letter) => `<span>${letter}</span>`).join("")}</div></header>
-      <section><h2>What does ${answer.answer} mean in a crossword?</h2><p>${escapeHtml(answer.meaning)}</p><p>${escapeHtml(answer.crosswordUse)}</p></section>
+      <header class="answer-header"><div><p class="content-kind">Crossword answer · ${answer.answer.length} letters</p><h1>${escapeHtml(displayTerm)} definition and meaning</h1><p class="pronunciation">${escapeHtml(answer.pronunciation)} · ${escapeHtml(answer.partOfSpeech)}</p></div><div class="answer-cells" aria-label="${answer.answer.split("").join(" ")}">${[...answer.answer].map((letter) => `<span>${letter}</span>`).join("")}</div></header>
+      <section><h2>What does ${escapeHtml(displayTerm)} mean?</h2><p>${escapeHtml(answer.meaning)}</p><h2>What does ${answer.answer} mean in a crossword?</h2><p>${escapeHtml(answer.crosswordUse)}</p></section>
       <section><h2>Why is ${answer.answer} useful to learn?</h2><p>${escapeHtml(answer.whyCommon)}</p></section>
       <section><h2>Common clue patterns</h2><ul class="pattern-list">${answer.cluePatterns.map((pattern) => `<li>${escapeHtml(pattern)}</li>`).join("")}</ul><p class="source-note">These are editorially written pattern summaries, not a reproduced puzzle archive.</p></section>
       <section><h2>Other meanings to watch</h2><p>${escapeHtml(answer.otherMeanings)}</p></section>
-      ${relatedClues.length ? `<section><h2>Reviewed explanation</h2>${clueRows(relatedClues)}</section>` : ""}
+      ${relatedClues.length ? `<section><h2>${answer.answer} in reviewed crossword clues</h2>${clueRows(relatedClues)}</section>` : ""}
+      <p><a class="button button-primary" href="/solver/" data-return-link="solver">Use ${answer.answer} in the crossword solver</a></p>
     </div>
     <aside class="article-aside"><p>Related crosswordese</p>${relatedAnswers.map((item) => `<a href="/crosswordese/${item.slug}/"><strong>${item.answer}</strong><span>${escapeHtml(item.meaning)}</span></a>`).join("")}<a class="aside-all" href="/crosswordese/">View all terms →</a><a class="aside-all" href="${feedbackUrl({ mode: "answer", pagePath: route, answer: answer.answer })}">Report an issue →</a></aside>
   </article>`;
-  const definedTermLd = { "@context": "https://schema.org", "@type": "DefinedTerm", name: answer.answer, description: answer.meaning, url: canonicalUrl(route), inDefinedTermSet: canonicalUrl("/crosswordese/") };
+  const definedTermLd = { "@context": "https://schema.org", "@type": "DefinedTerm", name: displayTerm, ...(displayTerm !== answer.answer ? { alternateName: answer.answer } : {}), description: answer.meaning, url: canonicalUrl(route), inDefinedTermSet: canonicalUrl("/crosswordese/") };
   const answerLastmod = relatedClues.map((clue) => clue.reviewedAt).sort().reverse()[0] ?? config.contentUpdatedAt;
-  await writePage(route, pageTemplate({ title, description: `${answer.answer} means ${answer.meaning} Learn why it appears in crossword puzzles and the clue patterns that point to it.`, route, body, bodyClass: "article-page", jsonLd: [definedTermLd] }), false, answerLastmod);
+  const description = fitMetaDescription(`${displayTerm} definition and meaning: ${answer.meaning} See its crossword use and common clue patterns.`);
+  await writePage(route, pageTemplate({ title, description, route, body, bodyClass: "article-page", jsonLd: [definedTermLd] }), false, answerLastmod);
 }
 
 const typesIndexBody = `<section class="shell page-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Clue types" }])}<h1>Read the clue before you solve it.</h1><p>Small signals reveal the answer's grammar, format, and intended sense. Learn the patterns setters use most often.</p></section><section class="shell type-directory">${clueTypes.map((type) => `<a href="/clue-types/${type.slug}/"><span>${escapeHtml(type.title)}</span><p>${escapeHtml(type.summary)}</p><b>Learn this clue type <i aria-hidden="true">→</i></b></a>`).join("")}</section>`;

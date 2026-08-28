@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T15:50:00+08:00",
+  "updatedAt": "2026-08-28T16:43:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -110,9 +110,9 @@
     }
   },
   "content": {
-    "indexablePages": 462,
+    "indexablePages": 487,
     "reviewedClues": 259,
-    "answerMeaningPages": 112,
+    "answerMeaningPages": 137,
     "dictionaryExpansion": {
       "profilesAdded": 74,
       "reviewedAt": "2026-08-24",
@@ -128,6 +128,17 @@
       "reviewedAt": "2026-08-28",
       "answers": ["TIGER", "UNDERWORLD"],
       "reason": "Add durable meaning and clue-pattern support for two demonstrated high-impression exact-query pages in the CTR treatment cohort"
+    },
+    "definitionMeaningExpansion": {
+      "status": "Prepared for deployment",
+      "preparedAt": "2026-08-28T16:15:00+08:00",
+      "batch": "ops/answer-intake/2026-08-28-definition-meaning-25.json",
+      "profilesAdded": 25,
+      "totalProfiles": 137,
+      "answers": ["ACME", "ACHOO", "AGILE", "AHAMOMENT", "AISLE", "BAR", "BOOP", "CHA", "CULTURE", "DAREIASK", "DEMEAN", "DIVA", "DONUT", "DROOL", "DUEL", "EID", "FILE", "GRR", "HAFT", "HOWTO", "MOLE", "NOSEEUM", "NURSE", "OASIS", "OUTRO"],
+      "canonicalPolicy": "One answer, one canonical page covering Definition, Meaning, Define, pronunciation, crossword use, alternate senses, clue patterns, and reviewed clue links; no separate definition and meaning URLs",
+      "selectionBoundary": "Only answers with an existing reviewed clue-answer relationship; pure-name expansion was deferred",
+      "competitorGap": "Combines dictionary-style definition and pronunciation with crossword-specific length, clue signal, exact reviewed use, alternate senses, and continuation into the solver"
     },
     "samePuzzleInternalLinking": {
       "enabledAt": "2026-08-24T09:34:03+08:00",
@@ -252,7 +263,7 @@
       {
         "name": "OneLook dictionary headword index",
         "route": "/assets/onelook-dictionary.txt",
-        "entries": 112,
+        "entries": 137,
         "format": "One absolute definition link per line"
       },
       {
@@ -266,7 +277,7 @@
     "dictionaryStructuredData": {
       "type": "DefinedTermSet",
       "route": "/crosswordese/",
-      "members": 112,
+      "members": 137,
       "productionStatus": "Verified"
     },
     "structuredDataPages": 165,
@@ -860,7 +871,7 @@
       "structuredFormPayloads": 8,
       "validationCommand": "npm run outreach:check",
       "followUpReportCommand": "npm run outreach:followups",
-      "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 112 meaning entries",
+      "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 137 meaning entries",
       "transmissionStatus": "Fourteen unique email targets were sent and six forms were submitted. On August 25, the Colorado Department of Education Media Literacy Resource Bank received a free Grades 6-12 media-literacy vocabulary pack suggestion after a zero-result sent-mail duplicate check. Learning Corner approved and published the first verified live external listing; it links to the Classroom Solver with nofollow, noopener, and noreferrer. A concise factual count update from 160/12 to 500/29 was sent in the approval thread. Clerna received the complete two-session teacher pilot as an original Grades 6-12 lesson plan through the Gmail connector, without payment, attachment, reciprocal link, or sponsored-placement request. Puzzled.online is awaiting verification; TeachersFirst forwarded the resource to its review team; XWord Info declined and is marked do-not-contact. The FreeTech4Teachers legacy form was not counted after no receipt; Teach Arcade remains skipped."
     },
     "approvalNeeded": null,

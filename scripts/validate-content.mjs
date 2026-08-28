@@ -192,6 +192,7 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
     if (answerSlugs.has(answer.slug)) errors.push(`duplicate answer slug: ${answer.slug}`);
     answerSlugs.add(answer.slug);
     if (!/^[A-Z]+$/.test(answer.answer ?? "")) errors.push(`${label} answer must contain uppercase A-Z only`);
+    if (answer.displayTerm !== undefined && (typeof answer.displayTerm !== "string" || answer.displayTerm.trim().length < 2 || answer.displayTerm.trim().length > 60)) errors.push(`${label} displayTerm must be 2-60 characters when provided`);
     for (const field of ["meaning", "crosswordUse", "whyCommon", "otherMeanings"]) {
       if ((answer[field] ?? "").length < 35) errors.push(`${label} ${field} is too short`);
     }

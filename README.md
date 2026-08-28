@@ -18,7 +18,7 @@ not reproduce complete commercial grids or full answer lists.
 - **Hints before spoilers** — reveal help progressively instead of jumping to the fill.
 - **Explain my answer** — understand the definition, grammar, abbreviation, fact, or
   wordplay that makes an answer fit.
-- **Crossword dictionary** — 112 reviewed meanings, pronunciations, and clue patterns
+- **Crossword dictionary** — 137 reviewed meanings, pronunciations, and clue patterns
   drawn from the same editorial source as the live explanations.
 - **Ambiguous clue guides** — compare possible answers by length and exact sense.
 - **Selected daily coverage** — current explanations for a small set of useful clues

@@ -175,6 +175,13 @@ if (oneLookLines.length !== answers.length) errors.push(`OneLook dictionary inde
 for (const answer of answers) {
   const expected = `<a href="https://crosswordcluetutor.com/crosswordese/${answer.slug}/">${answer.answer}</a>`;
   if (!oneLookLines.includes(expected)) errors.push(`OneLook dictionary index is missing ${answer.answer}`);
+  const profilePage = await readFile(path.join(dist, "crosswordese", answer.slug, "index.html"), "utf8");
+  const profileTitle = decodeEntities(profilePage.match(/<title>([^<]+)<\/title>/)?.[1] ?? "");
+  const displayTerm = answer.displayTerm ?? answer.answer;
+  if (!profileTitle.startsWith(`${displayTerm} Definition & Meaning in Crosswords`)) errors.push(`${answer.answer}: answer page is missing the Definition & Meaning title target`);
+  if (!profilePage.includes(`<h1>${displayTerm} definition and meaning</h1>`)) errors.push(`${answer.answer}: answer page is missing its single-answer Definition & Meaning heading`);
+  const canonicalCount = (profilePage.match(new RegExp(`<link rel="canonical" href="https://crosswordcluetutor\\.com/crosswordese/${answer.slug}/">`, "g")) ?? []).length;
+  if (canonicalCount !== 1) errors.push(`${answer.answer}: expected exactly one canonical answer page`);
 }
 const answerIndexPage = await readFile(path.join(dist, "crosswordese/index.html"), "utf8");
 if (!answerIndexPage.includes("Crossword dictionary: answer meanings and clue patterns")) errors.push("crossword dictionary index is missing its demand-backed search target");
@@ -311,7 +318,7 @@ for (const [slug, answer, target] of [
   ["allspice", "ALLSPICE", "aromatic spice made from dried unripe berries"]
 ]) {
   const answerPage = await readFile(path.join(dist, `crosswordese/${slug}/index.html`), "utf8");
-  if (!answerPage.includes(`${answer} in crosswords`) || !answerPage.includes(target) || !answerPage.includes('"@type":"DefinedTerm"')) errors.push(`${answer} answer page is missing its meaning target or DefinedTerm data`);
+  if (!answerPage.includes(`<h1>${answer} definition and meaning</h1>`) || !answerPage.includes(target) || !answerPage.includes('"@type":"DefinedTerm"')) errors.push(`${answer} answer page is missing its Definition & Meaning target or DefinedTerm data`);
 }
 const diffuseHub = await readFile(path.join(dist, "crossword-clues/diffuse/index.html"), "utf8");
 if (!diffuseHub.includes("Diffuse crossword clue")) errors.push("Diffuse clue hub is missing its search target");
