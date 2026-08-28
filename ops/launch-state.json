@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T15:35:00+08:00",
+  "updatedAt": "2026-08-28T15:50:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -537,8 +537,12 @@
       "changeGate": "Do not change page metadata from aggregate or isolated-hour data. Review a landing page only after at least 20 impressions; prioritize CTR changes at average position 8 or better and internal-authority/content changes at positions 9–15."
     },
     "ctrExperiment": {
-      "status": "Prepared for deployment; cohort baseline frozen pending recrawl and post-change evidence",
+      "status": "Production verified; cohort baseline frozen pending recrawl and post-change evidence",
       "startedAt": "2026-08-28T15:35:00+08:00",
+      "deployedAt": "2026-08-28T15:47:48+08:00",
+      "deploymentCommit": "68a4325ae83178a925d5e33b05c3261b85f64059",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33152758875",
+      "productionVerification": "All six treatment pages and TIGER/UNDERWORLD meaning pages returned HTTP 200 with reviewed metadata; Pageview custom-event bridge is live. Full production audit covered 462 sitemap pages with zero errors, duplicates, or orphans and maximum click depth 3.",
       "dataThrough": "2026-08-25",
       "evaluationGate": "Evaluate after either 100 new impressions per page or seven complete post-recrawl days; do not change a treatment page twice inside the same window",
       "siteBaseline": { "clicks": 24, "impressions": 5574, "ctrPercent": 0.4, "position": 8.6 },
