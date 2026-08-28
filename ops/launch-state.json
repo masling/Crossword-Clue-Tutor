@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T14:21:00+08:00",
+  "updatedAt": "2026-08-28T14:40:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -35,7 +35,42 @@
     },
     "pageviewConfiguredAt": "2026-08-19T11:24:00+08:00",
     "pageviewStatus": "Verified",
+    "pageviewOpenCliAdapter": {
+      "installedAt": "2026-08-28T14:36:00+08:00",
+      "profile": "girl",
+      "strategy": "UI_SELECTOR",
+      "commands": ["pageview summary", "pageview breakdown"],
+      "breakdownDimensions": ["source", "page", "entryPage"],
+      "customDateRanges": true,
+      "returningVisitorsAvailable": false,
+      "verification": "Both commands pass strict OpenCLI fixtures with local site memory; no cookies, tokens, account identity, or dashboard HTML are stored in Git",
+      "sourceFiles": "ops/opencli/pageview/"
+    },
     "pageviewOperatorQaBaseline": 1,
+    "latestOpenCliPageviewSnapshot": {
+      "recordedAt": "2026-08-28T14:36:00+08:00",
+      "period": "Last 7 days",
+      "uniqueVisitors": 94,
+      "visits": 96,
+      "pageviews": 125,
+      "viewsPerVisit": 1.3,
+      "bounceRatePercent": 85,
+      "visitDurationSeconds": 40,
+      "sourceVisitors": {
+        "Google": 47,
+        "Direct / None": 45,
+        "DuckDuckGo": 1,
+        "GitHub": 1,
+        "puzzled.online": 1
+      },
+      "topEntryPages": {
+        "/": 37,
+        "/explainers/cnbc-subject-nyt-daily/": 18,
+        "/explainers/paper-and-pencil-game-missing-ps-nyt-mini/": 13,
+        "/explainers/lost-star-daniel-kim-usa-today/": 4
+      },
+      "goalAccounting": "Not yet added to verified search-human sessions because the adapter report does not itself exclude operator QA and the matching GSC review is pending"
+    },
     "latestAnalyticsSnapshot": {
       "recordedAt": "2026-08-21T07:55:28+08:00",
       "cloudflarePeriod": "Cumulative from 2026-08-19T09:20:00+08:00",
@@ -490,7 +525,10 @@
       "intervalHours": 72,
       "lastReviewedAt": "2026-08-24T09:24:46+08:00",
       "nextReviewNotBefore": "2026-08-27T09:24:46+08:00",
-      "evidenceSource": "User-supplied Pageview and Google Search Console values or exports; analytics dashboards are not opened by automation",
+      "partialReviewedAt": "2026-08-28T14:36:00+08:00",
+      "pageviewReviewStatus": "Complete through the verified OpenCLI adapter",
+      "gscReviewStatus": "Pending explicit approval to read private Search Console data through its existing OpenCLI adapter",
+      "evidenceSource": "OpenCLI Pageview adapter plus an approved Search Console adapter read or user-supplied export",
       "changeGate": "Do not change page metadata from aggregate or isolated-hour data. Review a landing page only after at least 20 impressions; prioritize CTR changes at average position 8 or better and internal-authority/content changes at positions 9–15."
     },
     "googleSitemapStatus": "Success",

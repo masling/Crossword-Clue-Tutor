@@ -1,0 +1,28 @@
+{
+  "args": {
+    "site": "crosswordcluetutor.com",
+    "period": "7d",
+    "dimension": "source",
+    "limit": 5
+  },
+  "expect": {
+    "rowCount": { "min": 1, "max": 5 },
+    "columns": ["dimension", "range", "rank", "site", "sourceUrl", "value", "visitors"],
+    "types": {
+      "dimension": "string",
+      "range": "string",
+      "rank": "number",
+      "site": "string",
+      "sourceUrl": "string",
+      "value": "string",
+      "visitors": "number"
+    },
+    "patterns": {
+      "dimension": "^source$",
+      "site": "^crosswordcluetutor\\.com$",
+      "sourceUrl": "^https://app\\.pageview\\.app/crosswordcluetutor\\.com\\?"
+    },
+    "notEmpty": ["dimension", "range", "site", "sourceUrl", "value"],
+    "mustBeTruthy": ["rank", "visitors"]
+  }
+}

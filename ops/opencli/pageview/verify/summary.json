@@ -1,0 +1,39 @@
+{
+  "args": {
+    "site": "crosswordcluetutor.com",
+    "period": "7d"
+  },
+  "expect": {
+    "rowCount": { "min": 1, "max": 1 },
+    "columns": [
+      "bounceRatePct",
+      "currentVisitors",
+      "range",
+      "site",
+      "sourceUrl",
+      "totalPageviews",
+      "totalVisits",
+      "uniqueVisitors",
+      "viewsPerVisit",
+      "visitDurationSeconds"
+    ],
+    "types": {
+      "bounceRatePct": "number",
+      "currentVisitors": "number",
+      "range": "string",
+      "site": "string",
+      "sourceUrl": "string",
+      "totalPageviews": "number",
+      "totalVisits": "number",
+      "uniqueVisitors": "number",
+      "viewsPerVisit": "number",
+      "visitDurationSeconds": "number"
+    },
+    "patterns": {
+      "site": "^crosswordcluetutor\\.com$",
+      "sourceUrl": "^https://app\\.pageview\\.app/crosswordcluetutor\\.com\\?"
+    },
+    "notEmpty": ["site", "range", "sourceUrl"],
+    "mustBeTruthy": ["uniqueVisitors", "totalVisits", "totalPageviews", "viewsPerVisit"]
+  }
+}
