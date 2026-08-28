@@ -1,30 +1,14 @@
 {
-  "publishedAt": "2026-08-28T04:23:30.787Z",
-  "input": "ops/intake/2026-08-28-partial-routine.json",
+  "publishedAt": "2026-08-28T06:19:29.846Z",
+  "input": "ops/intake/2026-08-28-pending-completion.json",
   "urls": [
-    "/explainers/household-items-that-come-with-remotes-nyt-mini/",
-    "/explainers/string-of-saliva-nyt-mini/",
-    "/explainers/self-help-book-genre-nyt-mini/",
-    "/explainers/powerball-or-mega-millions-nyt-mini/",
-    "/explainers/group-of-girl-scouts-nyt-mini/",
-    "/explainers/frittata-ingredients-nyt-midi/",
-    "/explainers/fortunetellers-card-nyt-midi/",
-    "/explainers/blank-bunny-bugs-bunny-love-interest-nyt-midi/",
-    "/explainers/state-license-plate-potato-nyt-midi/",
-    "/explainers/spark-relationship-on-tinder-nyt-midi/",
-    "/explainers/instruction-on-gumball-machine-nyt-midi/",
-    "/explainers/oh-what-the-hell-nyt-daily/",
-    "/explainers/mythical-figure-in-doctor-faustus-nyt-daily/",
-    "/explainers/worriers-words-nyt-daily/",
-    "/explainers/like-a-parkour-practitioner-nyt-daily/",
-    "/explainers/politicians-response-maybe-nyt-daily/",
-    "/explainers/step-in-the-shower-nyt-daily/",
-    "/explainers/fire-island-actor-margaret-usa-today/",
-    "/explainers/music-for-airports-artist-brian-usa-today/",
-    "/explainers/gift-of-the-blank-o-henry-story-usa-today/",
-    "/explainers/whodve-thunk-it-usa-today/",
-    "/explainers/having-fun-goofys-sky-school-usa-today/",
-    "/explainers/thats-my-bone-sound-usa-today/"
+    "/explainers/big-name-in-shipping-logistics-nyt-mini/",
+    "/explainers/thurman-red-white-royal-blue-la-times/",
+    "/explainers/most-unexpected-la-times/",
+    "/explainers/axe-handle-la-times/",
+    "/explainers/drummer-in-electric-mayhem-la-times/",
+    "/explainers/lessons-in-chemistry-actress-naomi-king-la-times/",
+    "/explainers/a-complete-unknown-subject-la-times/"
   ],
   "answerUrls": [],
   "clinicUrls": [
@@ -37,11 +21,10 @@
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
     "/crossword-answers/3-letters/",
-    "/crossword-answers/5-letters/",
+    "/crossword-answers/6-letters/",
     "/crossword-answers/4-letters/",
+    "/crossword-answers/5-letters/",
     "/nyt-mini-crossword-clues/",
-    "/nyt-midi-crossword-clues/",
-    "/nyt-crossword-clues/",
-    "/usa-today-crossword-answers/"
+    "/la-times-crossword-answers/"
   ]
 }

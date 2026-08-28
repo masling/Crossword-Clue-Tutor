@@ -5528,5 +5528,159 @@
     "publication": "USA TODAY Crossword",
     "sourceDate": "2026-08-28",
     "clueNumber": "24-Across"
+  },
+  {
+    "slug": "big-name-in-shipping-logistics-nyt-mini",
+    "clue": "Big name in shipping logistics",
+    "answer": "DHL",
+    "date": "2026-08-28",
+    "popularity": 100,
+    "definition": "DHL is an international courier and logistics company known for parcel and freight delivery.",
+    "explanation": "DHL fits because the three-letter global brand is a major name in shipping, delivery, and logistics services.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "DHL",
+      "shipping logistics",
+      "courier"
+    ],
+    "clueType": "proper-noun",
+    "signal": "The phrase \"big name\" asks for a prominent company rather than a generic service.",
+    "hint": "Think of a three-letter courier brand with red-and-yellow branding.",
+    "reviewedAt": "2026-08-28",
+    "publication": "NYT Mini",
+    "sourceDate": "2026-08-28",
+    "clueNumber": "4-Down"
+  },
+  {
+    "slug": "thurman-red-white-royal-blue-la-times",
+    "clue": "Thurman of \"Red, White & Royal Blue\"",
+    "answer": "UMA",
+    "date": "2026-08-28",
+    "popularity": 100,
+    "definition": "Uma Thurman appears in the film \"Red, White & Royal Blue.\"",
+    "explanation": "UMA fits because the clue gives actor Thurman's surname and identifies her through the quoted film title.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Uma Thurman",
+      "Red White and Royal Blue",
+      "actor"
+    ],
+    "clueType": "proper-noun",
+    "signal": "A surname followed by a quoted title asks for the performer's first name.",
+    "hint": "Enter Thurman's three-letter first name.",
+    "reviewedAt": "2026-08-28",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-28",
+    "clueNumber": "1-Across"
+  },
+  {
+    "slug": "most-unexpected-la-times",
+    "clue": "Most unexpected",
+    "answer": "ODDEST",
+    "date": "2026-08-28",
+    "popularity": 98,
+    "definition": "Oddest is the superlative form of odd and can mean most unusual or unexpected.",
+    "explanation": "ODDEST matches both the superlative grammar of \"most\" and the sense of something especially unexpected.",
+    "partOfSpeech": "adjective",
+    "tags": [
+      "oddest",
+      "unexpected",
+      "superlative"
+    ],
+    "clueType": "definition",
+    "signal": "The word \"Most\" requires a superlative adjective ending in -est.",
+    "hint": "Use a six-letter superlative meaning most unusual.",
+    "reviewedAt": "2026-08-28",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-28",
+    "clueNumber": "4-Across"
+  },
+  {
+    "slug": "axe-handle-la-times",
+    "clue": "Axe handle",
+    "answer": "HAFT",
+    "date": "2026-08-28",
+    "popularity": 100,
+    "definition": "A haft is the handle of a tool or weapon such as an axe, knife, or spear.",
+    "explanation": "HAFT is the precise four-letter noun for the handle into which an axe head is fitted.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "haft",
+      "axe handle",
+      "tool"
+    ],
+    "clueType": "definition",
+    "signal": "The short clue asks for a specialized four-letter vocabulary term.",
+    "hint": "Use the four-letter tool-handle word beginning with H.",
+    "reviewedAt": "2026-08-28",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-28",
+    "clueNumber": "10-Across"
+  },
+  {
+    "slug": "drummer-in-electric-mayhem-la-times",
+    "clue": "Drummer in the Electric Mayhem",
+    "answer": "ANIMAL",
+    "date": "2026-08-28",
+    "popularity": 100,
+    "definition": "Animal is the wild-haired Muppet drummer for the band Dr. Teeth and the Electric Mayhem.",
+    "explanation": "ANIMAL fits because he is the six-letter Muppet character who plays drums in the fictional band.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Animal",
+      "Electric Mayhem",
+      "Muppets"
+    ],
+    "clueType": "proper-noun",
+    "signal": "The capitalized band name identifies a specific fictional musician.",
+    "hint": "Think of the energetic six-letter Muppet behind the drum kit.",
+    "reviewedAt": "2026-08-28",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-28",
+    "clueNumber": "24-Across"
+  },
+  {
+    "slug": "lessons-in-chemistry-actress-naomi-king-la-times",
+    "clue": "\"Lessons in Chemistry\" actress __ Naomi King",
+    "answer": "AJA",
+    "date": "2026-08-28",
+    "popularity": 100,
+    "definition": "Aja Naomi King is an actress in the television series \"Lessons in Chemistry.\"",
+    "explanation": "AJA completes actress Aja Naomi King's name, with the quoted series confirming the intended performer.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Aja Naomi King",
+      "Lessons in Chemistry",
+      "actress"
+    ],
+    "clueType": "fill-in-the-blank",
+    "signal": "The blank precedes two supplied name parts, so the answer is the actress's first name.",
+    "hint": "Enter the three-letter first name before Naomi King.",
+    "reviewedAt": "2026-08-28",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-28",
+    "clueNumber": "26-Across"
+  },
+  {
+    "slug": "a-complete-unknown-subject-la-times",
+    "clue": "\"A Complete Unknown\" subject",
+    "answer": "DYLAN",
+    "date": "2026-08-28",
+    "popularity": 100,
+    "definition": "Bob Dylan is the musician portrayed at the center of the biographical film \"A Complete Unknown.\"",
+    "explanation": "DYLAN fits because the five-letter surname names the film's real-life musical subject.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Bob Dylan",
+      "A Complete Unknown",
+      "biographical film"
+    ],
+    "clueType": "proper-noun",
+    "signal": "A quoted biographical title followed by \"subject\" asks for the person depicted.",
+    "hint": "Use the five-letter surname of the singer-songwriter portrayed in the film.",
+    "reviewedAt": "2026-08-28",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-08-28",
+    "clueNumber": "37-Across"
   }
 ]
