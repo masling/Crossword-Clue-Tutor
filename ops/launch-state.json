@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T14:40:00+08:00",
+  "updatedAt": "2026-08-28T14:56:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -37,7 +37,7 @@
     "pageviewStatus": "Verified",
     "pageviewOpenCliAdapter": {
       "installedAt": "2026-08-28T14:36:00+08:00",
-      "profile": "girl",
+      "profilePolicy": "Selected by the current project/session; neither the adapter nor the global skill binds a Chrome profile",
       "strategy": "UI_SELECTOR",
       "commands": ["pageview summary", "pageview breakdown"],
       "breakdownDimensions": ["source", "page", "entryPage"],
@@ -523,13 +523,39 @@
     },
     "seoReviewCadence": {
       "intervalHours": 72,
-      "lastReviewedAt": "2026-08-24T09:24:46+08:00",
-      "nextReviewNotBefore": "2026-08-27T09:24:46+08:00",
+      "lastReviewedAt": "2026-08-28T14:55:00+08:00",
+      "nextReviewNotBefore": "2026-08-31T14:55:00+08:00",
       "partialReviewedAt": "2026-08-28T14:36:00+08:00",
       "pageviewReviewStatus": "Complete through the verified OpenCLI adapter",
-      "gscReviewStatus": "Pending explicit approval to read private Search Console data through its existing OpenCLI adapter",
-      "evidenceSource": "OpenCLI Pageview adapter plus an approved Search Console adapter read or user-supplied export",
+      "gscReviewStatus": "Complete through the explicitly approved OpenCLI Search Console adapter; page-dimension stale-table handling was repaired and verified",
+      "evidenceSource": "OpenCLI Pageview and Search Console adapters using the profile selected by the current session; the global skill does not bind a Chrome profile",
       "changeGate": "Do not change page metadata from aggregate or isolated-hour data. Review a landing page only after at least 20 impressions; prioritize CTR changes at average position 8 or better and internal-authority/content changes at positions 9–15."
+    },
+    "latestOpenCliGscSnapshot": {
+      "recordedAt": "2026-08-28T14:55:00+08:00",
+      "period": "Last 7 days",
+      "dataThrough": "2026-08-25",
+      "totalClicks": 24,
+      "totalImpressions": 5574,
+      "averageCtrPercent": 0.4,
+      "averagePosition": 8.6,
+      "topPages": [
+        { "url": "/explainers/paper-and-pencil-game-missing-ps-nyt-mini/", "clicks": 12, "impressions": 350, "ctrPercent": 3.4, "position": 6.2 },
+        { "url": "/explainers/lost-star-daniel-kim-usa-today/", "clicks": 3, "impressions": 45, "ctrPercent": 6.7, "position": 5.1 },
+        { "url": "/explainers/criminals-sphere-nyt-daily/", "clicks": 2, "impressions": 418, "ctrPercent": 0.5, "position": 6.7 },
+        { "url": "/explainers/blank-dixon-line-nyt-mini/", "clicks": 1, "impressions": 357, "ctrPercent": 0.3, "position": 6.3 },
+        { "url": "/explainers/leader-in-a-kasaya-robe-nyt/", "clicks": 1, "impressions": 234, "ctrPercent": 0.4, "position": 8.9 }
+      ],
+      "queryGaps": [
+        { "query": "is canned nyt", "clicks": 0, "impressions": 316, "position": 8.8 },
+        { "query": "criminals sphere nyt", "clicks": 0, "impressions": 165, "position": 8.2 },
+        { "query": "apex nyt", "clicks": 0, "impressions": 66, "position": 5.9 },
+        { "query": "animal that appears orange to humans", "clicks": 0, "impressions": 55, "position": 5.5 },
+        { "query": "sunny part of a breakfast order", "clicks": 0, "impressions": 51, "position": 5.6 },
+        { "query": "like someone who unplugs completely", "clicks": 0, "impressions": 35, "position": 4.1 }
+      ],
+      "decision": "No metadata change in the adapter-setup turn. High-impression low-CTR page cohorts are now identified for a focused SERP and page-intent review; current daily publishing continues unchanged.",
+      "rawDataBoundary": "Only aggregate rows needed for decisions were recorded; traces and private dashboard output remain outside Git"
     },
     "googleSitemapStatus": "Success",
     "googleSitemapDiscoveredPages": 94,
@@ -678,8 +704,8 @@
       "dryRun": "TRAFFIC_DRY_RUN=1",
       "verifiedAt": "2026-08-21T07:55:28+08:00"
     },
-    "searchImpressions": 872,
-    "searchClicks": 4,
+    "searchImpressions": 5574,
+    "searchClicks": 24,
     "indexNowSubmittedUrls": 543,
     "indexNowBackfill": {
       "status": "Completed",
