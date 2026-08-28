@@ -178,12 +178,25 @@ function loadGoogleAnalytics(measurementId) {
 }
 
 function trackProductEvent(name, parameters = {}) {
+  trackPageviewEvent(name, parameters);
   if (!document.querySelector('meta[name="google-analytics-measurement-id"]')) return;
   if (typeof window.gtag !== "function" || !document.querySelector("script[data-ga4-loader]")) {
     pendingProductEvents.push([name, parameters]);
     return;
   }
   window.gtag("event", name, parameters);
+}
+
+function trackPageviewEvent(name, parameters = {}) {
+  const script = document.querySelector('script[data-domain][src*="pageview.app"]');
+  if (!script) return;
+  window.plausible = window.plausible || function plausible() {
+    (window.plausible.q = window.plausible.q || []).push(arguments);
+  };
+  const props = Object.fromEntries(Object.entries(parameters)
+    .filter(([, value]) => ["string", "number", "boolean"].includes(typeof value))
+    .map(([key, value]) => [key, String(value).slice(0, 120)]));
+  window.plausible(name, { props });
 }
 
 function readAnalyticsChoice() {

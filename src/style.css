@@ -285,6 +285,10 @@ p { text-wrap: pretty; }
 .answer-reveal-content .answer-cells { margin: 12px 0 25px; }
 .answer-reveal-content h3 { margin-bottom: 9px; font-size: 1.08rem; }
 .answer-reveal-content > p:last-child { max-width: 68ch; margin-bottom: 0; }
+.answer-next-step { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--primary-dark); text-decoration: none; }
+.answer-next-step strong { flex: 0 0 auto; font-size: 0.82rem; }
+.answer-next-step span { overflow-wrap: anywhere; font-size: 0.86rem; font-weight: 720; text-align: right; }
+.answer-next-step:hover span, .answer-next-step:focus-visible span { text-decoration: underline; text-underline-offset: 3px; }
 .mechanism-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 38px; }
 .mechanism-grid > div { border-top: 1px solid var(--line-strong); padding-top: 18px; }
 .mechanism-grid h2 { font-size: 1.15rem !important; }
@@ -539,6 +543,8 @@ p { text-wrap: pretty; }
   .answer-reveal summary { align-items: flex-start; flex-wrap: wrap; }
   .answer-reveal summary small { order: 3; width: 100%; }
   .answer-reveal-content { padding: 21px 16px; }
+  .answer-next-step { align-items: flex-start; flex-direction: column; gap: 4px; }
+  .answer-next-step span { text-align: left; }
   .section-split { gap: 30px; }
   .section-heading { align-items: flex-start; flex-direction: column; }
   .clue-row { min-height: 84px; }

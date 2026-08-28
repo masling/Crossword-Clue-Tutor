@@ -1768,5 +1768,37 @@
     ],
     "otherMeanings": "Tết can be part of names for several Vietnamese festivals, but without another qualifier it most often refers to Tết Nguyên Đán, the Lunar New Year holiday.",
     "related": ["asia", "origami"]
+  },
+  {
+    "slug": "tiger",
+    "answer": "TIGER",
+    "pronunciation": "TY-gur",
+    "partOfSpeech": "noun",
+    "meaning": "A tiger is a large Asian cat with a striped coat, powerful build, and primarily solitary hunting behavior.",
+    "crosswordUse": "TIGER may be clued as a striped big cat, an orange animal, a jungle hunter, or through a fact about how prey perceive its camouflage.",
+    "whyCommon": "The familiar five-letter animal supports direct, visual, scientific, geographic, and wordplay clues without relying on an obscure spelling.",
+    "cluePatterns": [
+      "Striped big cat",
+      "Animal that looks orange to humans but green to deer",
+      "Solitary Asian hunter"
+    ],
+    "otherMeanings": "Tiger also appears figuratively for a fierce or determined person and in names, mascots, brands, and sports teams. Crossings and capitalization help distinguish those uses from the animal.",
+    "related": []
+  },
+  {
+    "slug": "underworld",
+    "answer": "UNDERWORLD",
+    "pronunciation": "UN-dur-wurld",
+    "partOfSpeech": "noun",
+    "meaning": "The underworld is the community and activity associated with organized crime, or a mythic realm of the dead.",
+    "crosswordUse": "UNDERWORLD can answer clues about criminals' sphere, organized crime, a shadowy realm, or the land of the dead in mythology.",
+    "whyCommon": "Its two established senses let constructors use a direct criminal meaning, a mythological meaning, or wording that deliberately plays between them.",
+    "cluePatterns": [
+      "Criminals' sphere",
+      "Realm of organized crime",
+      "Mythic land of the dead"
+    ],
+    "otherMeanings": "In crime reporting, underworld refers to people and networks involved in illegal activity. In religion and mythology, it names a realm below or a destination of the dead rather than a criminal organization.",
+    "related": ["hades"]
   }
 ]

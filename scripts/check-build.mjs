@@ -6,6 +6,15 @@ const errors = [];
 const indexableDescriptions = new Map();
 const htmlFiles = await walk(dist, (file) => file.endsWith(".html"));
 
+function decodeEntities(value = "") {
+  return value
+    .replaceAll("&quot;", '"')
+    .replaceAll("&#039;", "'")
+    .replaceAll("&amp;", "&")
+    .replaceAll("&lt;", "<")
+    .replaceAll("&gt;", ">");
+}
+
 if (htmlFiles.length < 10) errors.push(`expected a multi-page build, found only ${htmlFiles.length} HTML files`);
 
 for (const file of htmlFiles) {
@@ -101,6 +110,7 @@ if (!appScript.includes('fetch("/assets/clue-hubs.json")') || !appScript.include
 if (!appScript.includes('fetch("/assets/solver-lexicon/manifest.json")') || !appScript.includes("solverLexiconShardPromises") || !appScript.includes("lexicalCandidates") || !appScript.includes("solve_session_restore")) errors.push("solver app is missing the length-sharded licensed corpus or local solve-session loop");
 if (!appScript.includes('fetch("/assets/classroom-clues.json")') || !appScript.includes("classroom_example_select") || !appScript.includes("classroom_skill_select") || !appScript.includes('namedItem("length")') || !appScript.includes("data-classroom-skill-filter")) errors.push("solver app is missing the original classroom clue library, example interaction, skill filtering, or safe length-field binding");
 if (!appScript.includes("beforeinstallprompt") || !appScript.includes("pwa_install_choice")) errors.push("app script is missing the install-app interaction");
+if (!appScript.includes("trackPageviewEvent") || !appScript.includes("window.plausible(name, { props })")) errors.push("app script is missing Pageview custom product events");
 if (!solverScript.includes("clueHubCandidates")) errors.push("solver module is missing the clue-hub adapter");
 
 for (const [asset, expectedWidth, expectedHeight] of [["assets/social-card.png", 1200, 630], ["assets/logo-192.png", 192, 192], ["assets/logo-512.png", 512, 512], ["favicon-32x32.png", 32, 32], ["favicon-16x16.png", 16, 16], ["apple-touch-icon.png", 180, 180]]) {
@@ -127,6 +137,13 @@ if (config.indexNowKey) {
 
 const sitemap = await readFile(path.join(dist, "sitemap.xml"), "utf8");
 const clues = JSON.parse(await readFile(path.resolve("data/clues.json"), "utf8"));
+for (const clue of clues.filter((item) => item.seoTitle || item.seoDescription)) {
+  const html = await readFile(path.join(dist, "explainers", clue.slug, "index.html"), "utf8");
+  const title = decodeEntities(html.match(/<title>([^<]+)<\/title>/)?.[1] ?? "");
+  const description = decodeEntities(html.match(/<meta name="description" content="([^"]+)">/)?.[1] ?? "");
+  if (!title.startsWith(clue.seoTitle)) errors.push(`${clue.slug}: built title does not preserve the reviewed SEO override`);
+  if (description !== clue.seoDescription) errors.push(`${clue.slug}: built description does not preserve the reviewed SEO override`);
+}
 const solverCorpus = JSON.parse(await readFile(path.join(dist, "assets/solver-lexicon/manifest.json"), "utf8"));
 const solverShardEntries = Object.entries(solverCorpus.lengths ?? {});
 let solverShardTotal = 0;
@@ -229,7 +246,7 @@ for (const answer of ["mia", "una", "goya"]) {
 if (!sitemap.includes("/explainers/contractors-detail-for-short/")) errors.push("sitemap is missing the reviewed SPEC explainer");
 if (!sitemap.includes("<lastmod>")) errors.push("sitemap is missing lastmod metadata for fresh content");
 const establishedExplainerEntry = sitemap.match(/<url><loc>https:\/\/crosswordcluetutor\.com\/explainers\/contractors-detail-for-short\/<\/loc><lastmod>([^<]+)<\/lastmod><\/url>/);
-if (establishedExplainerEntry?.[1] !== "2026-08-24") errors.push("established explainers must use the reviewed template date instead of inheriting every future global content date");
+if (establishedExplainerEntry?.[1] !== "2026-08-28") errors.push("established explainers must use the reviewed template date instead of inheriting every future global content date");
 if (!sitemap.includes("/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/")) errors.push("sitemap is missing the current NYT Mini batch");
 if (!sitemap.includes("/explainers/forfends-nyt-daily/")) errors.push("sitemap is missing the selected current NYT Daily batch");
 if (!sitemap.includes("/explainers/private-sleeping-accommodations-nyt-daily/")) errors.push("sitemap is missing the latest NYT Daily batch");
@@ -447,12 +464,12 @@ if (!latestClinicPage.includes("data-daily-practice") || !latestClinicPage.inclu
 const cluePage = await readFile(path.join(dist, "explainers/scientists-workplace-nyt-mini/index.html"), "utf8");
 if (!cluePage.includes("data-save-clue")) errors.push("reviewed clue pages are missing the save-clue control");
 if (!cluePage.includes("data-answer-reveal") || !cluePage.includes("data-nosnippet")) errors.push("reviewed clue pages are missing the spoiler-light answer reveal or snippet protection");
-if (!cluePage.includes("data-quick-answer") || !cluePage.includes("Answer now or take a hint")) errors.push("reviewed clue pages are missing the quick-answer path");
+if (!cluePage.includes("data-quick-answer") || !cluePage.includes("Get the exact answer or take one hint")) errors.push("reviewed clue pages are missing the quick-answer path");
 if (!cluePage.includes('data-tool-context="explainer"') || !cluePage.includes("Solve the next clue here")) errors.push("reviewed clue pages are missing the next-clue solver continuation");
 if (!cluePage.includes("data-recent-clues") || !cluePage.includes("data-return-link")) errors.push("reviewed clue pages are missing local return paths");
 if (cluePage.includes("The answer is LAB")) errors.push("reviewed clue metadata must not reveal the answer in search snippets");
 const establishedExplainerPage = await readFile(path.join(dist, "explainers/contractors-detail-for-short/index.html"), "utf8");
-if (!establishedExplainerPage.includes('"datePublished":"2026-08-18"') || !establishedExplainerPage.includes('"dateModified":"2026-08-24"')) errors.push("established explainer Article dates do not preserve publication and template modification history");
+if (!establishedExplainerPage.includes('"datePublished":"2026-08-18"') || !establishedExplainerPage.includes('"dateModified":"2026-08-28"')) errors.push("established explainer Article dates do not preserve publication and template modification history");
 const samePuzzleClusterPage = await readFile(path.join(dist, "explainers/japanese-for-folding-paper-nyt-mini/index.html"), "utf8");
 if (!samePuzzleClusterPage.includes("data-same-puzzle-clues") || !samePuzzleClusterPage.includes("More selected clues from NYT Mini") || !samePuzzleClusterPage.includes("/explainers/paper-and-pencil-game-missing-ps-nyt-mini/") || !samePuzzleClusterPage.includes("/explainers/sunny-part-of-breakfast-order-nyt-mini/") || !samePuzzleClusterPage.includes('"isPartOf":{"@type":"CollectionPage"')) errors.push("published clue pages are missing same-puzzle selected links or CollectionPage relationship");
 const dataSourcesPage = await readFile(path.join(dist, "data-sources/index.html"), "utf8");

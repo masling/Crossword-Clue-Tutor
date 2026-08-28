@@ -107,6 +107,12 @@ export function validateContent({ clues, answers, clueTypes, publications, clueH
     if ((clue.hint ?? "").toUpperCase().includes(clue.answer ?? "__NO_ANSWER__")) {
       errors.push(`${label} hint reveals the answer`);
     }
+    if (clue.seoTitle !== undefined && (typeof clue.seoTitle !== "string" || clue.seoTitle.trim().length < 20 || clue.seoTitle.trim().length > 70)) {
+      errors.push(`${label} seoTitle must be 20-70 characters when provided`);
+    }
+    if (clue.seoDescription !== undefined && (typeof clue.seoDescription !== "string" || clue.seoDescription.trim().length < 80 || clue.seoDescription.trim().length > 160)) {
+      errors.push(`${label} seoDescription must be 80-160 characters when provided`);
+    }
     if (!Array.isArray(clue.tags) || clue.tags.length === 0) errors.push(`${label} needs at least one tag`);
     if (!/^\d{4}-\d{2}-\d{2}$/.test(clue.reviewedAt ?? "")) errors.push(`${label} reviewedAt must be YYYY-MM-DD`);
     if (clue.publication) {
