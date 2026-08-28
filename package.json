@@ -6,6 +6,7 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "answer:publish": "node scripts/publish-answer-profile-batch.mjs",
+    "answer:gaps": "node scripts/plan-answer-profile-gaps.mjs",
     "check": "node scripts/check-build.mjs",
     "classroom:report": "node scripts/classroom-corpus-report.mjs",
     "classroom:publish": "node scripts/publish-classroom-batch.mjs",

@@ -22,10 +22,12 @@ Discover, review, publish, deploy, and submit high-intent clue pages on the same
 4. Write an original hint, clue signal, definition, and explanation.
 5. Run a dry review: `npm run content:publish -- ops/intake/<file>.json --dry-run`.
 6. Publish the reviewed batch: `npm run content:publish -- ops/intake/<file>.json`.
-7. Deploy the newly built `dist/` directory.
-8. Notify IndexNow: `INDEXNOW_KEY=... npm run indexnow:submit`.
-9. In Google Search Console, submit the sitemap once and request URL Inspection indexing only for the top few new pages. Do not use Google’s Indexing API for crossword pages; it is restricted to job-posting and livestream pages.
-10. Record discovery, publish, deploy, submission, indexing, and traffic timestamps.
+7. Plan new answer profiles for the source date without historical filler: `npm run answer:gaps -- --date YYYY-MM-DD --current-only --output .local/answer-profile-current.json`.
+8. Create and publish one reviewed answer intake for every current-date candidate. After all five sources are complete, run the planner again with `--target 25` and fill the remaining daily capacity from the historical-backfill lane. Dry-run each intake before publishing it.
+9. Deploy the newly built `dist/` directory.
+10. Notify IndexNow: `INDEXNOW_KEY=... npm run indexnow:submit`.
+11. In Google Search Console, submit the sitemap once and request URL Inspection indexing only for the top few new pages. Do not use Google’s Indexing API for crossword pages; it is restricted to job-posting and livestream pages.
+12. Record discovery, publish, deploy, submission, indexing, and traffic timestamps.
 
 The publishing command records new explainer URLs, matching answer-meaning pages,
 the daily clinic, and changed hub pages. IndexNow submits that complete update set
@@ -72,6 +74,30 @@ Every monitored source/date must receive selected clue coverage once exact clue-
 pairs are publicly verifiable. Historical keyword volume is irrelevant to the same-day
 decision because the exact queries do not exist before publication. Explanation quality
 and the no-complete-puzzle boundary remain publishing requirements.
+
+## Daily Definition & Meaning rule
+
+After the reviewed clue batch is published, create one canonical Definition & Meaning
+page for every unique current-date answer that does not already have an entry in
+`data/answers.json`. Current-date answers are mandatory and are not capped at 25. When
+the current batch produces fewer than 25 missing answers, fill the remaining daily
+capacity from reviewed historical clues that still lack an answer page. If no verified
+gaps remain, publish nothing rather than creating filler.
+
+After each source batch, use `npm run answer:gaps -- --date YYYY-MM-DD --current-only`
+so later source releases on the same day are never skipped. Once all five sources are
+complete, run `npm run answer:gaps -- --date YYYY-MM-DD --target 25` once for the daily
+historical backfill. The output is a bounded editorial plan, not publishable content.
+The main agent must review or write the natural display term, pronunciation, definition,
+crossword-specific use, alternate sense explanation, and clue patterns before running
+`answer:publish`.
+
+One answer maps to one canonical `/crosswordese/<slug>/` page that jointly covers
+`[answer] definition`, `[answer] meaning`, `define [answer]`, and `[answer] crossword`.
+Never create separate Definition and Meaning URLs. Proper names in the current batch
+need an exact identity and source-backed description; historical pure-name candidates
+are lower priority than words, phrases, abbreviations, foreign terms, and multi-sense
+answers.
 
 ## Coverage-gap research
 
@@ -196,7 +222,7 @@ production page directly when the visit is part of QA.
 - Six reviewed fresh clue pages per monitored publication (30 total while five publications are active).
 - Add a small number of separately verified Breakout gap pages after the routine 30 when the daily Trends pass identifies missing exact clue queries.
 - If fewer than six exact pairs are reliably verifiable, publish the verified subset and keep the source/date pending until the gap is filled.
-- 1 answer-meaning page when a new answer has durable evergreen value.
+- Every missing unique current-date answer gets one Definition & Meaning page. If fewer than 25 are new, backfill reviewed historical gaps until the daily answer-page total reaches 25.
 - All pages deployed within 60 minutes of review completion.
 - Top five pages checked in Search Console within 24 hours.
 

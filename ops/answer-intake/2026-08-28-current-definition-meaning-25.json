@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-28",
+  "selectionReason": "First daily current-answer run: every unique August 28 reviewed answer still missing a canonical Definition & Meaning page; no historical backfill was needed.",
+  "profiles": [
+    { "answer": "AJA", "displayTerm": "Aja", "slug": "aja", "pronunciation": "AH-zhuh", "related": [] },
+    { "answer": "ANIMAL", "displayTerm": "Animal", "slug": "animal", "pronunciation": "AN-uh-muhl", "related": [] },
+    { "answer": "CHO", "displayTerm": "Cho", "slug": "cho", "pronunciation": "choh", "related": [] },
+    { "answer": "DHL", "slug": "dhl", "pronunciation": "dee aych el", "related": [] },
+    { "answer": "DYLAN", "displayTerm": "Dylan", "slug": "dylan", "pronunciation": "DIL-uhn", "related": [] },
+    { "answer": "EGGS", "displayTerm": "Eggs", "slug": "eggs", "pronunciation": "egz", "related": [] },
+    { "answer": "ENO", "displayTerm": "Eno", "slug": "eno", "pronunciation": "EE-noh", "related": [] },
+    { "answer": "HELEN", "displayTerm": "Helen", "slug": "helen", "pronunciation": "HEL-uhn", "related": [] },
+    { "answer": "IDAHO", "displayTerm": "Idaho", "slug": "idaho", "pronunciation": "EYE-duh-hoh", "related": [] },
+    { "answer": "IHOPENOT", "displayTerm": "I hope not", "slug": "i-hope-not", "pronunciation": "eye HOHP not", "related": [] },
+    { "answer": "LOLA", "displayTerm": "Lola", "slug": "lola", "pronunciation": "LOH-luh", "related": [] },
+    { "answer": "LOTTO", "displayTerm": "Lotto", "slug": "lotto", "pronunciation": "LOT-oh", "related": [] },
+    { "answer": "MAGI", "displayTerm": "Magi", "slug": "magi", "pronunciation": "MAY-jye", "related": [] },
+    { "answer": "NONANSWER", "displayTerm": "Nonanswer", "slug": "nonanswer", "pronunciation": "non-AN-sur", "related": [] },
+    { "answer": "RINSE", "displayTerm": "Rinse", "slug": "rinse", "pronunciation": "rins", "related": [] },
+    { "answer": "SCREWIT", "displayTerm": "Screw it", "slug": "screw-it", "pronunciation": "skroo it", "related": [] },
+    { "answer": "SWIPERIGHT", "displayTerm": "Swipe right", "slug": "swipe-right", "pronunciation": "swipe rite", "related": [] },
+    { "answer": "TAROT", "displayTerm": "Tarot", "slug": "tarot", "pronunciation": "TAIR-oh", "related": [] },
+    { "answer": "TROOP", "displayTerm": "Troop", "slug": "troop", "pronunciation": "troop", "related": [] },
+    { "answer": "TVS", "displayTerm": "TVs", "slug": "tvs", "pronunciation": "tee-veez", "related": [] },
+    { "answer": "UMA", "displayTerm": "Uma", "slug": "uma", "pronunciation": "OO-muh", "related": [] },
+    { "answer": "WHEE", "displayTerm": "Whee", "slug": "whee", "pronunciation": "wee", "related": [] },
+    { "answer": "WHOKNEW", "displayTerm": "Who knew", "slug": "who-knew", "pronunciation": "hoo noo", "related": [] },
+    { "answer": "INSERTHERE", "displayTerm": "Insert here", "slug": "insert-here", "pronunciation": "in-SURT thair", "related": [] },
+    { "answer": "ODDEST", "displayTerm": "Oddest", "slug": "oddest", "pronunciation": "OD-ist", "related": [] }
+  ]
+}

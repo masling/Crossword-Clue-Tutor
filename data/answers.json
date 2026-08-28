@@ -2206,5 +2206,429 @@
     ],
     "otherMeanings": "OUTRO directly names the closing musical section, contrasting with an intro at the beginning. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
     "related": []
+  },
+  {
+    "slug": "aja",
+    "answer": "AJA",
+    "displayTerm": "Aja",
+    "pronunciation": "AH-zhuh",
+    "partOfSpeech": "proper noun",
+    "meaning": "Aja Naomi King is an actress in the television series \"Lessons in Chemistry.\"",
+    "crosswordUse": "AJA answers the reviewed clue “\"Lessons in Chemistry\" actress __ Naomi King.” The blank precedes two supplied name parts, so the answer is the actress's first name.",
+    "whyCommon": "AJA is useful to learn because this reviewed clue depends on fill in the blank, exact grammar, and a 3-letter grid entry.",
+    "cluePatterns": [
+      "\"Lessons in Chemistry\" actress __ Naomi King",
+      "Enter the three-letter first name before Naomi King.",
+      "3-letter fill in the blank answer confirmed by crossings"
+    ],
+    "otherMeanings": "AJA completes actress Aja Naomi King's name, with the quoted series confirming the intended performer. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "animal",
+    "answer": "ANIMAL",
+    "displayTerm": "Animal",
+    "pronunciation": "AN-uh-muhl",
+    "partOfSpeech": "proper noun",
+    "meaning": "Animal is the wild-haired Muppet drummer for the band Dr. Teeth and the Electric Mayhem.",
+    "crosswordUse": "ANIMAL answers the reviewed clue “Drummer in the Electric Mayhem.” The capitalized band name identifies a specific fictional musician.",
+    "whyCommon": "ANIMAL is useful to learn because this reviewed clue depends on proper noun, exact grammar, and a 6-letter grid entry.",
+    "cluePatterns": [
+      "Drummer in the Electric Mayhem",
+      "Think of the energetic six-letter Muppet behind the drum kit.",
+      "6-letter proper noun answer confirmed by crossings"
+    ],
+    "otherMeanings": "ANIMAL fits because he is the six-letter Muppet character who plays drums in the fictional band. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "cho",
+    "answer": "CHO",
+    "displayTerm": "Cho",
+    "pronunciation": "choh",
+    "partOfSpeech": "proper noun",
+    "meaning": "Margaret Cho appears in the film \"Fire Island.\"",
+    "crosswordUse": "CHO answers the reviewed clue “\"Fire Island\" actor Margaret.” A quoted title plus first name asks for the performer's surname.",
+    "whyCommon": "CHO is useful to learn because this reviewed clue depends on proper noun, exact grammar, and a 3-letter grid entry.",
+    "cluePatterns": [
+      "\"Fire Island\" actor Margaret",
+      "Enter Margaret's three-letter family name.",
+      "3-letter proper noun answer confirmed by crossings"
+    ],
+    "otherMeanings": "CHO fits because it is actor Margaret Cho's three-letter surname, with the quoted film identifying her. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "dhl",
+    "answer": "DHL",
+    "pronunciation": "dee aych el",
+    "partOfSpeech": "proper noun",
+    "meaning": "DHL is an international courier and logistics company known for parcel and freight delivery.",
+    "crosswordUse": "DHL answers the reviewed clue “Big name in shipping logistics.” The phrase \"big name\" asks for a prominent company rather than a generic service.",
+    "whyCommon": "DHL is useful to learn because this reviewed clue depends on proper noun, exact grammar, and a 3-letter grid entry.",
+    "cluePatterns": [
+      "Big name in shipping logistics",
+      "Think of a three-letter courier brand with red-and-yellow branding.",
+      "3-letter proper noun answer confirmed by crossings"
+    ],
+    "otherMeanings": "DHL fits because the three-letter global brand is a major name in shipping, delivery, and logistics services. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "dylan",
+    "answer": "DYLAN",
+    "displayTerm": "Dylan",
+    "pronunciation": "DIL-uhn",
+    "partOfSpeech": "proper noun",
+    "meaning": "Bob Dylan is the musician portrayed at the center of the biographical film \"A Complete Unknown.\"",
+    "crosswordUse": "DYLAN answers the reviewed clue “\"A Complete Unknown\" subject.” A quoted biographical title followed by \"subject\" asks for the person depicted.",
+    "whyCommon": "DYLAN is useful to learn because this reviewed clue depends on proper noun, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "\"A Complete Unknown\" subject",
+      "Use the five-letter surname of the singer-songwriter portrayed in the film.",
+      "5-letter proper noun answer confirmed by crossings"
+    ],
+    "otherMeanings": "DYLAN fits because the five-letter surname names the film's real-life musical subject. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "eggs",
+    "answer": "EGGS",
+    "displayTerm": "Eggs",
+    "pronunciation": "egz",
+    "partOfSpeech": "plural noun",
+    "meaning": "Eggs form the cooked base of a frittata.",
+    "crosswordUse": "EGGS answers the reviewed clue “Frittata ingredients.” The dish name asks for its essential plural ingredient.",
+    "whyCommon": "EGGS is useful to learn because this reviewed clue depends on definition, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Frittata ingredients",
+      "Think of the protein whisked before a frittata is cooked.",
+      "4-letter definition answer confirmed by crossings"
+    ],
+    "otherMeanings": "EGGS fits because a frittata is fundamentally an egg dish, and the plural clue requires the four-letter plural. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "eno",
+    "answer": "ENO",
+    "displayTerm": "Eno",
+    "pronunciation": "EE-noh",
+    "partOfSpeech": "proper noun",
+    "meaning": "Brian Eno created the ambient album \"Ambient 1: Music for Airports.\"",
+    "crosswordUse": "ENO answers the reviewed clue “\"Music for Airports\" artist Brian.” The quoted work and first name request the artist's surname.",
+    "whyCommon": "ENO is useful to learn because this reviewed clue depends on proper noun, exact grammar, and a 3-letter grid entry.",
+    "cluePatterns": [
+      "\"Music for Airports\" artist Brian",
+      "Use the three-letter surname of an ambient-music pioneer.",
+      "3-letter proper noun answer confirmed by crossings"
+    ],
+    "otherMeanings": "ENO fits because the clue gives musician Brian Eno's first name and identifies him through the album title. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "helen",
+    "answer": "HELEN",
+    "displayTerm": "Helen",
+    "pronunciation": "HEL-uhn",
+    "partOfSpeech": "proper noun",
+    "meaning": "Helen of Troy is the legendary Greek figure whose apparition appears in Christopher Marlowe's \"Doctor Faustus.\"",
+    "crosswordUse": "HELEN answers the reviewed clue “Mythical figure in \"Doctor Faustus\".” The quoted play title asks for a mythological character appearing in it.",
+    "whyCommon": "HELEN is useful to learn because this reviewed clue depends on literature, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "Mythical figure in \"Doctor Faustus\"",
+      "Think of the five-letter first name of the face that launched a thousand ships.",
+      "5-letter literature answer confirmed by crossings"
+    ],
+    "otherMeanings": "HELEN fits because Faustus summons the famous beauty associated with Troy in the play's final portion. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "idaho",
+    "answer": "IDAHO",
+    "displayTerm": "Idaho",
+    "pronunciation": "EYE-duh-hoh",
+    "partOfSpeech": "proper noun",
+    "meaning": "Idaho is strongly associated with potato farming and has used potato imagery in state branding.",
+    "crosswordUse": "IDAHO answers the reviewed clue “State whose standard license plate once had an image of a potato on it.” The distinctive plate image identifies a state famous for the pictured crop.",
+    "whyCommon": "IDAHO is useful to learn because this reviewed clue depends on factoid, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "State whose standard license plate once had an image of a potato on it",
+      "Think of the five-letter northwestern state known for potatoes.",
+      "5-letter factoid answer confirmed by crossings"
+    ],
+    "otherMeanings": "IDAHO fits because the five-letter state is famous for potatoes and once pictured one on its standard plate. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "i-hope-not",
+    "answer": "IHOPENOT",
+    "displayTerm": "I hope not",
+    "pronunciation": "eye HOHP not",
+    "partOfSpeech": "phrase",
+    "meaning": "\"I hope not\" expresses anxiety that an undesirable possibility will not occur.",
+    "crosswordUse": "IHOPENOT answers the reviewed clue “Worrier's words.” The possessive and plural \"words\" ask for a short quotation-like phrase.",
+    "whyCommon": "IHOPENOT is useful to learn because this reviewed clue depends on spoken reaction, exact grammar, and a 8-letter grid entry.",
+    "cluePatterns": [
+      "Worrier's words",
+      "Use an eight-letter grid phrase opposing a feared possibility.",
+      "8-letter spoken reaction answer confirmed by crossings"
+    ],
+    "otherMeanings": "IHOPENOT fits because it is a natural phrase from someone worrying about a possible bad outcome. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "lola",
+    "answer": "LOLA",
+    "displayTerm": "Lola",
+    "pronunciation": "LOH-luh",
+    "partOfSpeech": "proper noun",
+    "meaning": "Lola Bunny is a Looney Tunes character and Bugs Bunny's romantic interest.",
+    "crosswordUse": "LOLA answers the reviewed clue “___ Bunny (Bugs Bunny's love interest).” The blank precedes a surname-like character name, while the parenthetical identifies her.",
+    "whyCommon": "LOLA is useful to learn because this reviewed clue depends on fill in the blank, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "___ Bunny (Bugs Bunny's love interest)",
+      "Enter the four-letter first name of the basketball-playing bunny.",
+      "4-letter fill in the blank answer confirmed by crossings"
+    ],
+    "otherMeanings": "LOLA completes the character name Lola Bunny identified by the parenthetical relationship. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "lotto",
+    "answer": "LOTTO",
+    "displayTerm": "Lotto",
+    "pronunciation": "LOT-oh",
+    "partOfSpeech": "noun",
+    "meaning": "Lotto is a lottery game in which players choose numbers for a prize drawing.",
+    "crosswordUse": "LOTTO answers the reviewed clue “Powerball or Mega Millions.” The word \"or\" presents two examples and asks for their shared category.",
+    "whyCommon": "LOTTO is useful to learn because this reviewed clue depends on category example, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "Powerball or Mega Millions",
+      "Use a five-letter term for a number-drawing lottery game.",
+      "5-letter category example answer confirmed by crossings"
+    ],
+    "otherMeanings": "LOTTO fits because Powerball and Mega Millions are both large number-drawing lottery games. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "magi",
+    "answer": "MAGI",
+    "displayTerm": "Magi",
+    "pronunciation": "MAY-jye",
+    "partOfSpeech": "proper noun",
+    "meaning": "\"The Gift of the Magi\" is O. Henry's short story about sacrificial gift-giving.",
+    "crosswordUse": "MAGI answers the reviewed clue “\"The Gift of the ___\" (O. Henry story).” Quotation marks and the author note identify a fixed literary title.",
+    "whyCommon": "MAGI is useful to learn because this reviewed clue depends on fill in the blank, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "\"The Gift of the ___\" (O. Henry story)",
+      "Complete the title with the four-letter plural name for the biblical wise men.",
+      "4-letter fill in the blank answer confirmed by crossings"
+    ],
+    "otherMeanings": "MAGI completes the exact four-word story title supplied by the fill-in-the-blank clue. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "nonanswer",
+    "answer": "NONANSWER",
+    "displayTerm": "Nonanswer",
+    "pronunciation": "non-AN-sur",
+    "partOfSpeech": "noun",
+    "meaning": "A nonanswer is a response that avoids giving the requested information.",
+    "crosswordUse": "NONANSWER answers the reviewed clue “Politician's response, maybe.” The qualifier \"maybe\" signals a humorous stereotype rather than a literal job definition.",
+    "whyCommon": "NONANSWER is useful to learn because this reviewed clue depends on wordplay, exact grammar, and a 9-letter grid entry.",
+    "cluePatterns": [
+      "Politician's response, maybe",
+      "Use a nine-letter noun for an evasive reply.",
+      "9-letter wordplay answer confirmed by crossings"
+    ],
+    "otherMeanings": "NONANSWER fits the clue's wry suggestion that a politician's response may sound responsive while evading the question. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "rinse",
+    "answer": "RINSE",
+    "displayTerm": "Rinse",
+    "pronunciation": "rins",
+    "partOfSpeech": "noun",
+    "meaning": "To rinse is to wash away soap or residue with clean water.",
+    "crosswordUse": "RINSE answers the reviewed clue “Step in the shower?.” The question mark redirects \"step\" from walking to a stage in a process.",
+    "whyCommon": "RINSE is useful to learn because this reviewed clue depends on wordplay, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "Step in the shower?",
+      "Think of the five-letter stage after applying soap or shampoo.",
+      "5-letter wordplay answer confirmed by crossings"
+    ],
+    "otherMeanings": "RINSE fits because it is a procedural step during a shower, while the question mark signals that \"step\" is not a footstep. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "screw-it",
+    "answer": "SCREWIT",
+    "displayTerm": "Screw it",
+    "pronunciation": "skroo it",
+    "partOfSpeech": "phrase",
+    "meaning": "\"Screw it\" is an informal expression of resignation or a decision to stop worrying about consequences.",
+    "crosswordUse": "SCREWIT answers the reviewed clue “\"Oh, what the hell\".” Quotation marks call for a colloquial spoken expression with the same dismissive tone.",
+    "whyCommon": "SCREWIT is useful to learn because this reviewed clue depends on phrase equivalence, exact grammar, and a 7-letter grid entry.",
+    "cluePatterns": [
+      "\"Oh, what the hell\"",
+      "Use a seven-letter two-word dismissal entered continuously.",
+      "7-letter phrase equivalence answer confirmed by crossings"
+    ],
+    "otherMeanings": "SCREWIT matches the quoted sentiment as a seven-letter grid phrase entered without its space. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "swipe-right",
+    "answer": "SWIPERIGHT",
+    "displayTerm": "Swipe right",
+    "pronunciation": "swipe rite",
+    "partOfSpeech": "verb phrase",
+    "meaning": "To swipe right is to indicate interest in a profile on a dating app such as Tinder.",
+    "crosswordUse": "SWIPERIGHT answers the reviewed clue “Spark a relationship on Tinder, say.” The app name turns \"spark\" into a specific interface gesture.",
+    "whyCommon": "SWIPERIGHT is useful to learn because this reviewed clue depends on technology, exact grammar, and a 10-letter grid entry.",
+    "cluePatterns": [
+      "Spark a relationship on Tinder, say",
+      "Use the ten-letter grid form of the favorable dating-app gesture.",
+      "10-letter technology answer confirmed by crossings"
+    ],
+    "otherMeanings": "SWIPERIGHT fits because that gesture expresses interest and may begin a match or relationship. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "tarot",
+    "answer": "TAROT",
+    "displayTerm": "Tarot",
+    "pronunciation": "TAIR-oh",
+    "partOfSpeech": "noun",
+    "meaning": "A tarot card belongs to a deck often used for divination and symbolic readings.",
+    "crosswordUse": "TAROT answers the reviewed clue “Fortuneteller's card.” The possessive context asks for the type of card associated with divination.",
+    "whyCommon": "TAROT is useful to learn because this reviewed clue depends on definition, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "Fortuneteller's card",
+      "Name the five-letter illustrated deck used in readings.",
+      "5-letter definition answer confirmed by crossings"
+    ],
+    "otherMeanings": "TAROT fits because a fortuneteller may interpret cards from a five-letter tarot deck. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "troop",
+    "answer": "TROOP",
+    "displayTerm": "Troop",
+    "pronunciation": "troop",
+    "partOfSpeech": "noun",
+    "meaning": "A troop is a local organized group of Girl Scouts led by adult volunteers.",
+    "crosswordUse": "TROOP answers the reviewed clue “Group of Girl Scouts.” The organization name selects its conventional term for a local group.",
+    "whyCommon": "TROOP is useful to learn because this reviewed clue depends on definition, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "Group of Girl Scouts",
+      "Use the same five-letter group word associated with scouting generally.",
+      "5-letter definition answer confirmed by crossings"
+    ],
+    "otherMeanings": "TROOP is the standard five-letter name for a local group of Girl Scouts. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "tvs",
+    "answer": "TVS",
+    "displayTerm": "TVs",
+    "pronunciation": "tee-veez",
+    "partOfSpeech": "plural noun",
+    "meaning": "TVs are television sets, household devices commonly operated with remote controls.",
+    "crosswordUse": "TVS answers the reviewed clue “Household items that come with remotes.” The plural grammar and familiar remote-control pairing point to a three-letter plural.",
+    "whyCommon": "TVS is useful to learn because this reviewed clue depends on definition, exact grammar, and a 3-letter grid entry.",
+    "cluePatterns": [
+      "Household items that come with remotes",
+      "Think of screens commonly found in a living room.",
+      "3-letter definition answer confirmed by crossings"
+    ],
+    "otherMeanings": "TVS fits because television sets routinely come with remotes, and the plural clue requires a plural answer. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "uma",
+    "answer": "UMA",
+    "displayTerm": "Uma",
+    "pronunciation": "OO-muh",
+    "partOfSpeech": "proper noun",
+    "meaning": "Uma Thurman appears in the film \"Red, White & Royal Blue.\"",
+    "crosswordUse": "UMA answers the reviewed clue “Thurman of \"Red, White & Royal Blue\".” A surname followed by a quoted title asks for the performer's first name.",
+    "whyCommon": "UMA is useful to learn because this reviewed clue depends on proper noun, exact grammar, and a 3-letter grid entry.",
+    "cluePatterns": [
+      "Thurman of \"Red, White & Royal Blue\"",
+      "Enter Thurman's three-letter first name.",
+      "3-letter proper noun answer confirmed by crossings"
+    ],
+    "otherMeanings": "UMA fits because the clue gives actor Thurman's surname and identifies her through the quoted film title. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "whee",
+    "answer": "WHEE",
+    "displayTerm": "Whee",
+    "pronunciation": "wee",
+    "partOfSpeech": "interjection",
+    "meaning": "Whee is an exclamation of excitement or delight, especially during fast movement.",
+    "crosswordUse": "WHEE answers the reviewed clue “\"I am having so much fun on Goofy's Sky School!\".” The quotation and exclamation point ask for a sound of delighted excitement.",
+    "whyCommon": "WHEE is useful to learn because this reviewed clue depends on spoken reaction, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "\"I am having so much fun on Goofy's Sky School!\"",
+      "Use a four-letter cry associated with an exhilarating ride.",
+      "4-letter spoken reaction answer confirmed by crossings"
+    ],
+    "otherMeanings": "WHEE fits as the joyful four-letter cry a rider might make on the Disney attraction named in the clue. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "who-knew",
+    "answer": "WHOKNEW",
+    "displayTerm": "Who knew",
+    "pronunciation": "hoo noo",
+    "partOfSpeech": "phrase",
+    "meaning": "\"Who knew?\" is an expression of surprise at an unexpected fact or outcome.",
+    "crosswordUse": "WHOKNEW answers the reviewed clue “\"Who'd've thunk it?\".” The quotation and question mark ask for another short expression of surprise.",
+    "whyCommon": "WHOKNEW is useful to learn because this reviewed clue depends on phrase equivalence, exact grammar, and a 7-letter grid entry.",
+    "cluePatterns": [
+      "\"Who'd've thunk it?\"",
+      "Use a seven-letter grid phrase beginning with an interrogative pronoun.",
+      "7-letter phrase equivalence answer confirmed by crossings"
+    ],
+    "otherMeanings": "WHOKNEW matches the quoted surprised reaction and is entered without its space or question mark. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "insert-here",
+    "answer": "INSERTHERE",
+    "displayTerm": "Insert here",
+    "pronunciation": "in-SURT thair",
+    "partOfSpeech": "imperative phrase",
+    "meaning": "\"Insert here\" directs a user to place a coin into a marked opening.",
+    "crosswordUse": "INSERTHERE answers the reviewed clue “Instruction on a gumball machine.” The machine context asks for short imperative wording printed beside a slot.",
+    "whyCommon": "INSERTHERE is useful to learn because this reviewed clue depends on phrase equivalence, exact grammar, and a 10-letter grid entry.",
+    "cluePatterns": [
+      "Instruction on a gumball machine",
+      "Think of a ten-letter grid phrase telling where to place a coin.",
+      "10-letter phrase equivalence answer confirmed by crossings"
+    ],
+    "otherMeanings": "INSERTHERE fits because a gumball machine commonly labels the coin slot with this instruction, entered without a space. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "oddest",
+    "answer": "ODDEST",
+    "displayTerm": "Oddest",
+    "pronunciation": "OD-ist",
+    "partOfSpeech": "adjective",
+    "meaning": "Oddest is the superlative form of odd and can mean most unusual or unexpected.",
+    "crosswordUse": "ODDEST answers the reviewed clue “Most unexpected.” The word \"Most\" requires a superlative adjective ending in -est.",
+    "whyCommon": "ODDEST is useful to learn because this reviewed clue depends on definition, exact grammar, and a 6-letter grid entry.",
+    "cluePatterns": [
+      "Most unexpected",
+      "Use a six-letter superlative meaning most unusual.",
+      "6-letter definition answer confirmed by crossings"
+    ],
+    "otherMeanings": "ODDEST matches both the superlative grammar of \"most\" and the sense of something especially unexpected. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
   }
 ]
