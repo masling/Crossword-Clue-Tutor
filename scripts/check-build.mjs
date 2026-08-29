@@ -65,6 +65,10 @@ for (const file of htmlFiles) {
         if (structuredData.author?.["@type"] !== "Organization" || !structuredData.author?.name || !structuredData.author?.url) errors.push(`${relative}: Article author entity is incomplete`);
         if (structuredData.publisher?.["@type"] !== "Organization" || !structuredData.publisher?.name || !structuredData.publisher?.logo?.url) errors.push(`${relative}: Article publisher entity is incomplete`);
       }
+      if (structuredData["@type"] === "Dataset") {
+        const licenseUrl = typeof structuredData.license === "string" ? structuredData.license : structuredData.license?.url;
+        if (!licenseUrl?.startsWith("https://crosswordcluetutor.com/content-license/")) errors.push(`${relative}: Dataset is missing the versioned public content license`);
+      }
     } catch {
       errors.push(`${relative}: invalid JSON-LD block`);
     }
@@ -481,6 +485,12 @@ const samePuzzleClusterPage = await readFile(path.join(dist, "explainers/japanes
 if (!samePuzzleClusterPage.includes("data-same-puzzle-clues") || !samePuzzleClusterPage.includes("More selected clues from NYT Mini") || !samePuzzleClusterPage.includes("/explainers/paper-and-pencil-game-missing-ps-nyt-mini/") || !samePuzzleClusterPage.includes("/explainers/sunny-part-of-breakfast-order-nyt-mini/") || !samePuzzleClusterPage.includes('"isPartOf":{"@type":"CollectionPage"')) errors.push("published clue pages are missing same-puzzle selected links or CollectionPage relationship");
 const dataSourcesPage = await readFile(path.join(dist, "data-sources/index.html"), "utf8");
 if (!dataSourcesPage.includes("Princeton WordNet 3.1") || !dataSourcesPage.includes("Dictionary candidate") || !dataSourcesPage.includes("/licenses/wordnet-license.txt")) errors.push("data sources page is missing the WordNet license, candidate legend, or data boundary");
+const contentLicensePage = await readFile(path.join(dist, "content-license/index.html"), "utf8");
+if (!contentLicensePage.includes('id="classroom-corpus"') || !contentLicensePage.includes('id="ambiguity-dataset"') || !contentLicensePage.includes("Version 1.0")) errors.push("content license page is missing its versioned dataset grants");
+for (const [route, anchor] of [["research/classroom-crossword-vocabulary-corpus", "classroom-corpus"], ["research/ambiguous-crossword-clues", "ambiguity-dataset"]]) {
+  const datasetPage = await readFile(path.join(dist, route, "index.html"), "utf8");
+  if (!datasetPage.includes(`\"license\":{\"@type\":\"CreativeWork\"`) || !datasetPage.includes(`https://crosswordcluetutor.com/content-license/#${anchor}`)) errors.push(`${route}: Dataset JSON-LD is missing its custom license object`);
+}
 for (const eventName of ["answer_reveal", "quick_answer_click", "solver_submit", "solver_mode_change", "candidate_status_open", "second_solver_submit", "save_clue", "clue_revisit", "return_path_click", "daily_clinic_complete", "same_puzzle_clue_click"]) {
   if (!appScript.includes(eventName)) errors.push(`app script is missing the ${eventName} product event`);
 }

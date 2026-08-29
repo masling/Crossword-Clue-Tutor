@@ -1,5 +1,8 @@
 # Editorial content and data rights
 
+The public, versioned copy of these terms is available at
+`https://crosswordcluetutor.com/content-license/`.
+
 The MIT License in `LICENSE` applies to the software source code only.
 
 Unless a file states otherwise, the following are **not** included in the MIT license:

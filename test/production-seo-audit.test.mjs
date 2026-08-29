@@ -30,6 +30,13 @@ test("detects long titles, canonical drift, and h1 duplication", () => {
   assert.match(result.errors.join(" "), /expected one h1/);
 });
 
+test("requires a specific public license URL on Dataset structured data", () => {
+  const withoutLicense = html().replace('{"@context":"https://schema.org","@type":"WebPage"}', '{"@context":"https://schema.org","@type":"Dataset","name":"Test data","description":"A sufficiently useful test dataset description for validation."}');
+  const withLicense = html().replace('{"@context":"https://schema.org","@type":"WebPage"}', '{"@context":"https://schema.org","@type":"Dataset","name":"Test data","description":"A sufficiently useful test dataset description for validation.","license":{"@type":"CreativeWork","name":"Custom License 1.0","url":"https://crosswordcluetutor.com/content-license/"}}');
+  assert.match(auditHtml({ html: withoutLicense, url: "https://crosswordcluetutor.com/test/" }).errors.join(" "), /missing an absolute HTTPS license URL/);
+  assert.deepEqual(auditHtml({ html: withLicense, url: "https://crosswordcluetutor.com/test/" }).errors, []);
+});
+
 test("allows AI-specific blocks while keeping wildcard search crawling open", () => {
   const robots = `User-agent: *\nAllow: /\n\nUser-agent: GPTBot\nDisallow: /\n\nSitemap: https://crosswordcluetutor.com/sitemap.xml\n`;
   assert.deepEqual(auditRobots(robots, "https://crosswordcluetutor.com/sitemap.xml"), []);

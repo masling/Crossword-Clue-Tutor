@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-28T17:07:00+08:00",
+  "updatedAt": "2026-08-29T09:47:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -110,7 +110,7 @@
     }
   },
   "content": {
-    "indexablePages": 512,
+    "indexablePages": 513,
     "reviewedClues": 259,
     "answerMeaningPages": 162,
     "dictionaryExpansion": {
@@ -169,6 +169,17 @@
       "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33157797255",
       "productionVerification": "AJA, DHL, I hope not, Swipe right, and Who knew returned HTTP 200 with one canonical Definition & Meaning page. Sitemap contains 512 URLs; the full production audit found zero errors, duplicate metadata/canonicals, or orphans and maximum click depth 3.",
       "selectionReason": "Every August 28 reviewed answer still missing a canonical page; the current lane exactly met the daily target, so no historical filler was used"
+    },
+    "datasetLicenseEnhancement": {
+      "status": "Prepared for deployment; local validation passed",
+      "reviewedAt": "2026-08-29",
+      "licenseVersion": "1.0",
+      "licenseRoute": "/content-license/",
+      "datasetRoutes": ["/research/classroom-crossword-vocabulary-corpus/", "/research/ambiguous-crossword-clues/"],
+      "structuredData": "Each Dataset and DataDownload now carries a CreativeWork license object with an absolute HTTPS URL to the relevant versioned custom-license section",
+      "rightsBoundary": "Preserves classroom-print and limited attributed-reference permissions without falsely declaring the rights-reserved editorial datasets as CC0 or CC BY",
+      "searchConsoleIssue": "Resolves the non-critical missing license field reported for the classroom corpus Dataset",
+      "validation": "70 tests passed; build generated 518 pages (513 indexable); build and IndexNow record checks passed"
     },
     "samePuzzleInternalLinking": {
       "enabledAt": "2026-08-24T09:34:03+08:00",

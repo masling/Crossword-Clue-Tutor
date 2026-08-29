@@ -1,23 +1,9 @@
 {
-  "recordedAt": "2026-08-23T09:42:07+08:00",
-  "reason": "Priority recrawl after search-title, non-spoiler snippet, answer-reveal, next-clue solver, and return-path improvements on clue explainers already receiving impressions.",
+  "recordedAt": "2026-08-29T09:47:00+08:00",
+  "reason": "Priority recrawl after adding a versioned public license and license structured data to both downloadable Dataset pages.",
   "urls": [
-    "/",
-    "/crossword-answers-today/",
-    "/nyt-mini-crossword-clues/",
-    "/nyt-crossword-clues/",
-    "/la-times-crossword-answers/",
-    "/usa-today-crossword-answers/",
-    "/explainers/paper-and-pencil-game-missing-ps-nyt-mini/",
-    "/explainers/sunny-part-of-breakfast-order-nyt-mini/",
-    "/explainers/italian-hero-question-mark-nyt/",
-    "/explainers/like-someone-who-unplugs-completely-usa-today/",
-    "/explainers/japanese-for-folding-paper-nyt-mini/",
-    "/explainers/ethan-of-the-before-trilogy-la-times/",
-    "/explainers/some-malty-offerings-nyt/",
-    "/explainers/high-end-private-jet-familiarly-nyt-daily/",
-    "/explainers/looking-for-a-fight-informally-nyt-mini/",
-    "/explainers/el-perro-painter-francisco-usa-today/",
-    "/explainers/stuffed-cornmeal-cake-usa-today/"
+    "/content-license/",
+    "/research/classroom-crossword-vocabulary-corpus/",
+    "/research/ambiguous-crossword-clues/"
   ]
 }

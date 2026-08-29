@@ -172,6 +172,8 @@ Source code is licensed under the [MIT License](LICENSE). Original editorial con
 reviewed datasets, research, operational materials, branding, and media are excluded
 from the MIT grant and remain rights-reserved as described in
 [CONTENT-LICENSE.md](CONTENT-LICENSE.md).
+The public versioned dataset terms are available on the
+[Content and dataset license](https://crosswordcluetutor.com/content-license/) page.
 
 Permitted small excerpts of original editorial material must credit Crossword Clue
 Tutor and include a visible standard **follow link** to the exact source page or to

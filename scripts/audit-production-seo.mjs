@@ -45,7 +45,19 @@ export function auditHtml({ html, url }) {
   if (googleAnalyticsConfigCount !== 0) errors.push(`expected consent-delayed GA4 config, found ${googleAnalyticsConfigCount} static configs`);
   if (jsonLdBlocks.length === 0) errors.push("missing JSON-LD");
   for (const block of jsonLdBlocks) {
-    try { JSON.parse(block[1]); } catch { errors.push("invalid JSON-LD"); }
+    try {
+      const data = JSON.parse(block[1]);
+      if (data["@type"] === "Dataset") {
+        const licenseUrl = typeof data.license === "string" ? data.license : data.license?.url;
+        try {
+          if (!licenseUrl || new URL(licenseUrl).protocol !== "https:") errors.push("Dataset is missing an absolute HTTPS license URL");
+        } catch {
+          errors.push("Dataset has an invalid license URL");
+        }
+      }
+    } catch {
+      errors.push("invalid JSON-LD");
+    }
   }
 
   return { url, title, titleLength: title.length, description, h1Count, canonical, hrefs, jsonLdBlocks: jsonLdBlocks.length, errors };
