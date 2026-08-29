@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T10:29:00+08:00",
+  "updatedAt": "2026-08-29T12:30:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -110,9 +110,9 @@
     }
   },
   "content": {
-    "indexablePages": 537,
-    "reviewedClues": 271,
-    "answerMeaningPages": 173,
+    "indexablePages": 572,
+    "reviewedClues": 289,
+    "answerMeaningPages": 190,
     "dictionaryExpansion": {
       "profilesAdded": 74,
       "reviewedAt": "2026-08-24",
@@ -146,10 +146,11 @@
     },
     "dailyDefinitionMeaningPolicy": {
       "enabledAt": "2026-08-28T17:00:00+08:00",
-      "lastBackfillDate": "2026-08-28",
+      "lastBackfillDate": "2026-08-29",
       "lastCurrentProfileDate": "2026-08-29",
+      "currentProfilesPublishedToday": 28,
       "currentAnswerRule": "After each routine clue batch, publish one canonical Definition & Meaning page for every unique current-date answer missing from data/answers.json; current missing answers are mandatory even when they exceed the target",
-      "backfillRule": "When current missing answers are fewer than 25, fill the remainder to 25 from deterministic reviewed historical gaps; publish nothing when no verified gaps remain",
+      "backfillRule": "After all five sources are complete, subtract current profiles already published that local day from 25; backfill only the positive remainder from deterministic reviewed historical gaps and publish nothing when the remainder is zero or no verified gaps remain",
       "currentPlannerCommand": "npm run answer:gaps -- --date YYYY-MM-DD --current-only --output .local/answer-profile-current.json",
       "backfillPlannerCommand": "npm run answer:gaps -- --date YYYY-MM-DD --target 25 --output .local/answer-profile-gaps.json",
       "publisherCommand": "npm run answer:publish -- ops/answer-intake/<file>.json [--dry-run]",
@@ -181,6 +182,26 @@
       "deployedAt": "2026-08-29T10:27:54+08:00",
       "productionVerification": "GMO, Bioré, and NBA champs Definition & Meaning pages returned HTTP 200 after deployment",
       "selectionReason": "Every missing unique answer from the verified August 29 NYT Mini and NYT Daily selected-clue batches; RAD already had a reviewed profile"
+    },
+    "latestMiddayDefinitionMeaningRun": {
+      "date": "2026-08-29",
+      "intake": "ops/answer-intake/2026-08-29-midday-definition-meaning-17.json",
+      "currentProfiles": 17,
+      "cumulativeCurrentProfilesToday": 28,
+      "profilesBefore": 173,
+      "profilesAfter": 190,
+      "historicalBackfillProfiles": 0,
+      "dailyTarget": 25,
+      "status": "Prepared for deployment",
+      "selectionReason": "Every missing unique answer from the verified August 29 NYT Midi, LA Times, and USA TODAY selected-clue batches; LOLA already had a reviewed profile"
+    },
+    "latestDailyDefinitionMeaningBackfill": {
+      "date": "2026-08-29",
+      "currentProfilesPublished": 28,
+      "dailyTarget": 25,
+      "remainingCapacity": 0,
+      "historicalProfilesPublished": 0,
+      "status": "Complete without historical backfill because current answer coverage exceeded the daily target"
     },
     "datasetLicenseEnhancement": {
       "status": "Production verified",
@@ -492,18 +513,12 @@
     ],
     "lastPublishedSourceDates": {
       "NYT Mini": "2026-08-29",
-      "NYT Midi Crossword": "2026-08-28",
+      "NYT Midi Crossword": "2026-08-29",
       "The New York Times Crossword": "2026-08-29",
-      "LA Times Crossword": "2026-08-28",
-      "USA TODAY Crossword": "2026-08-28"
+      "LA Times Crossword": "2026-08-29",
+      "USA TODAY Crossword": "2026-08-29"
     },
-    "pendingSourceDates": {
-      "NYT Midi Crossword": {
-        "expectedDate": "2026-08-29",
-        "status": "pending exact public clue-answer evidence",
-        "checkedAt": "2026-08-29T02:20:00Z"
-      }
-    },
+    "pendingSourceDates": {},
     "latestMorningFreshnessRun": {
       "sourceDate": "2026-08-29",
       "publishedAt": "2026-08-29T10:25:00+08:00",
@@ -521,6 +536,21 @@
       "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33228979151",
       "productionVerification": "Four representative clue pages and three new answer pages returned HTTP 200; production sitemap contains 537 URLs"
     },
+    "latestMiddayFreshnessRun": {
+      "sourceDate": "2026-08-29",
+      "publishedAt": "2026-08-29T12:30:00+08:00",
+      "publications": [
+        { "publication": "NYT Midi Crossword", "selectedClues": 6, "answers": ["TOSS", "TAS", "IMIN", "COME", "MAMA", "AMID"], "confidence": "Medium-high; exact public same-day clue-answer pages verified without NYT login" },
+        { "publication": "LA Times Crossword", "selectedClues": 6, "answers": ["APRESSKI", "PEAR", "GOESINON", "GATWA", "APPSTORE", "WANTON"], "confidence": "Medium; official TCA metadata plus matching bounded public syndicated clue-answer evidence" },
+        { "publication": "USA TODAY Crossword", "selectedClues": 6, "answers": ["ARIE", "SOO", "LOLA", "HOW", "TAMI", "MEN"], "confidence": "Medium-high; candidates came only from the official no-solution adapter and answers were independently verified through public pair/entity evidence" }
+      ],
+      "clueIntake": "ops/intake/2026-08-29-midi-lat-usa-routine.json",
+      "answerIntake": "ops/answer-intake/2026-08-29-midday-definition-meaning-17.json",
+      "currentAnswerProfiles": 17,
+      "historicalBackfillProfiles": 0,
+      "rightsBoundary": "Six selected clue pages per publication; no grid or complete answer list",
+      "status": "Prepared for deployment"
+    },
     "officialSourceDiscovery": {
       "NYT Mini": {
         "adapter": "read-only-public-research",
@@ -532,10 +562,10 @@
       },
       "NYT Midi Crossword": {
         "adapter": "read-only-public-research",
-        "checkedAt": "2026-08-29T02:20:00Z",
-        "latestOfficialDate": "2026-08-28",
-        "accessMode": "Public check found no exact August 29 clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "August 29 remains pending; August 28 is the latest completed date",
+        "checkedAt": "2026-08-29T04:20:00Z",
+        "latestOfficialDate": "2026-08-29",
+        "accessMode": "Bounded public same-day clue-answer pages without NYT login or access-control bypass",
+        "selectedPairStatus": "Six selected August 29 pairs published: TOSS, TAS, IMIN, COME, MAMA, and AMID",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "The New York Times Crossword": {
@@ -550,33 +580,33 @@
         "adapter": "latimes-official-metadata-v1",
         "command": "npm run source:latimes -- --output .local/latimes-latest.json",
         "browserSnapshotImporter": "npm run source:import -- --input .local/latimes-browser-YYYY-MM-DD.json --output .local/latimes-browser-candidates-YYYY-MM-DD.json --limit 6",
-        "checkedAt": "2026-08-28T04:16:55.831Z",
-        "latestOfficialDate": "2026-08-28",
-        "sourceId": "tca260828",
-        "latestTitle": "L. A. Times, Fri, Aug 28, 2026",
+        "checkedAt": "2026-08-29T04:17:26.615Z",
+        "latestOfficialDate": "2026-08-29",
+        "sourceId": "tca260829",
+        "latestTitle": "L. A. Times, Sat, Aug 29, 2026",
         "theme": null,
-        "creator": "Patti Varol",
+        "creator": "Geoffrey Schorkopf & Rafael Musa",
         "editor": "Patti Varol",
-        "officialClueCount": 76,
+        "officialClueCount": 68,
         "accessMode": "Official AmuseLabs picker metadata plus public browser DOM without login",
         "localDatabase": ".local/source-intelligence.sqlite",
         "localDatabaseEvidence": "August 24 browser DOM snapshot imported 78 clue texts: 35 Across and 43 Down; no answer or solution fields. Local database now holds 222 LA Times clue rows across two dates.",
         "contentBoundary": "The metadata adapter excludes the puzzle payload. When the public player is used, only visible clue number, direction, and text are imported; Reveal, filled cells, solutions, cookies, and account state remain excluded. Full rows stay Git-ignored and model-facing output is capped at six candidates.",
-        "selectedPairStatus": "Six August 28 pairs published after numbered public evidence became available: UMA, ODDEST, HAFT, ANIMAL, AJA, and DYLAN"
+        "selectedPairStatus": "Six August 29 pairs published after official metadata and matching syndicated evidence: APRESSKI, PEAR, GOESINON, GATWA, APPSTORE, and WANTON"
       },
       "USA TODAY Crossword": {
         "adapter": "usatoday-official-candidates-v1",
         "command": "npm run source:usatoday -- --limit 6 --output .local/usatoday-latest.json",
-        "checkedAt": "2026-08-28T04:16:59.106Z",
-        "latestOfficialDate": "2026-08-28",
-        "latestTitle": "That Doesn't Sound Like Enough",
-        "creator": "Mike Graczyk",
-        "editor": "Amie Walker",
+        "checkedAt": "2026-08-29T04:17:30.354Z",
+        "latestOfficialDate": "2026-08-29",
+        "latestTitle": "The Old-Fashioned Way (Freestyle)",
+        "creator": "Jess Rucks",
+        "editor": "Amanda Rafkin",
         "accessMode": "Official public HTML and clue API without login",
         "localDatabase": ".local/source-intelligence.sqlite",
         "statsCommand": "npm run source:stats",
         "contentBoundary": "Stores the complete official public clue list only in the Git-ignored local SQLite database for future analysis; model-facing JSON remains capped at six candidates, and the query explicitly excludes the hidden solution field, login, and Reveal controls",
-        "selectedPairStatus": "Six independently verified August 28 pairs published: CHO, ENO, MAGI, WHOKNEW, WHEE, and GRR; complete official clue rows remain only in the local Git-ignored database"
+        "selectedPairStatus": "Six official-candidate August 29 pairs independently verified and published: ARIE, SOO, LOLA, HOW, TAMI, and MEN; complete official clue rows remain only in the local Git-ignored database"
       }
     },
     "latestFreshnessBatch": {
@@ -951,7 +981,7 @@
       "structuredFormPayloads": 8,
       "validationCommand": "npm run outreach:check",
       "followUpReportCommand": "npm run outreach:followups",
-      "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 173 meaning entries",
+      "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 190 meaning entries",
       "transmissionStatus": "Fourteen unique email targets were sent and six forms were submitted. On August 25, the Colorado Department of Education Media Literacy Resource Bank received a free Grades 6-12 media-literacy vocabulary pack suggestion after a zero-result sent-mail duplicate check. Learning Corner approved and published the first verified live external listing; it links to the Classroom Solver with nofollow, noopener, and noreferrer. A concise factual count update from 160/12 to 500/29 was sent in the approval thread. Clerna received the complete two-session teacher pilot as an original Grades 6-12 lesson plan through the Gmail connector, without payment, attachment, reciprocal link, or sponsored-placement request. Puzzled.online is awaiting verification; TeachersFirst forwarded the resource to its review team; XWord Info declined and is marked do-not-contact. The FreeTech4Teachers legacy form was not counted after no receipt; Teach Arcade remains skipped."
     },
     "approvalNeeded": null,

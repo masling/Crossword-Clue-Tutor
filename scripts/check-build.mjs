@@ -183,7 +183,7 @@ for (const answer of answers) {
   const profileTitle = decodeEntities(profilePage.match(/<title>([^<]+)<\/title>/)?.[1] ?? "");
   const displayTerm = answer.displayTerm ?? answer.answer;
   if (!profileTitle.startsWith(`${displayTerm} Definition & Meaning in Crosswords`)) errors.push(`${answer.answer}: answer page is missing the Definition & Meaning title target`);
-  if (!profilePage.includes(`<h1>${displayTerm} definition and meaning</h1>`)) errors.push(`${answer.answer}: answer page is missing its single-answer Definition & Meaning heading`);
+  if (!decodeEntities(profilePage).includes(`<h1>${displayTerm} definition and meaning</h1>`)) errors.push(`${answer.answer}: answer page is missing its single-answer Definition & Meaning heading`);
   const canonicalCount = (profilePage.match(new RegExp(`<link rel="canonical" href="https://crosswordcluetutor\\.com/crosswordese/${answer.slug}/">`, "g")) ?? []).length;
   if (canonicalCount !== 1) errors.push(`${answer.answer}: expected exactly one canonical answer page`);
 }

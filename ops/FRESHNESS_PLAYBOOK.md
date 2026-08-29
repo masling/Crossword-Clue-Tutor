@@ -86,8 +86,11 @@ gaps remain, publish nothing rather than creating filler.
 
 After each source batch, use `npm run answer:gaps -- --date YYYY-MM-DD --current-only`
 so later source releases on the same day are never skipped. Once all five sources are
-complete, run `npm run answer:gaps -- --date YYYY-MM-DD --target 25` once for the daily
-historical backfill. The output is a bounded editorial plan, not publishable content.
+complete, subtract the number of current-answer profiles already published that local
+day from 25. If the remainder is zero, record the daily backfill as complete with no
+historical pages. Otherwise run `npm run answer:gaps -- --date YYYY-MM-DD --target
+<remainder>` once for exactly that historical capacity. The output is a bounded
+editorial plan, not publishable content.
 The main agent must review or write the natural display term, pronunciation, definition,
 crossword-specific use, alternate sense explanation, and clue patterns before running
 `answer:publish`.

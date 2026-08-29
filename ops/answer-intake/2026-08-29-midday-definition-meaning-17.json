@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-29",
+  "selectionReason": "Every unique answer from the verified August 29 NYT Midi, LA Times, and USA TODAY selected-clue batches that still lacked a canonical Definition & Meaning page; LOLA already had a reviewed profile.",
+  "profiles": [
+    { "answer": "APPSTORE", "displayTerm": "App store", "slug": "app-store", "pronunciation": "app stor", "related": [] },
+    { "answer": "ARIE", "displayTerm": "Arie", "slug": "arie", "pronunciation": "AR-ee", "related": [] },
+    { "answer": "GATWA", "displayTerm": "Gatwa", "slug": "gatwa", "pronunciation": "GAT-wah", "related": [] },
+    { "answer": "IMIN", "displayTerm": "I'm in", "slug": "im-in", "pronunciation": "eye'm in", "related": [] },
+    { "answer": "MEN", "displayTerm": "Men", "slug": "men", "pronunciation": "men", "related": [] },
+    { "answer": "PEAR", "displayTerm": "Pear", "slug": "pear", "pronunciation": "pair", "related": [] },
+    { "answer": "SOO", "displayTerm": "Soo", "slug": "soo", "pronunciation": "soo", "related": [] },
+    { "answer": "TAS", "displayTerm": "TAs", "slug": "tas", "pronunciation": "tee ayz", "related": [] },
+    { "answer": "APRESSKI", "displayTerm": "Après-ski", "slug": "apres-ski", "pronunciation": "ah-pray SKEE", "related": [] },
+    { "answer": "MAMA", "displayTerm": "Mama", "slug": "mama", "pronunciation": "MAH-mah", "related": [] },
+    { "answer": "TAMI", "displayTerm": "Tami", "slug": "tami", "pronunciation": "TAM-ee", "related": [] },
+    { "answer": "COME", "displayTerm": "Come", "slug": "come", "pronunciation": "kum", "related": [] },
+    { "answer": "HOW", "displayTerm": "How", "slug": "how", "pronunciation": "how", "related": [] },
+    { "answer": "WANTON", "displayTerm": "Wanton", "slug": "wanton", "pronunciation": "WON-tuhn", "related": [] },
+    { "answer": "GOESINON", "displayTerm": "Goes in on", "slug": "goes-in-on", "pronunciation": "gohz in on", "related": [] },
+    { "answer": "TOSS", "displayTerm": "Toss", "slug": "toss", "pronunciation": "taws", "related": [] },
+    { "answer": "AMID", "displayTerm": "Amid", "slug": "amid", "pronunciation": "uh-MID", "related": [] }
+  ]
+}
