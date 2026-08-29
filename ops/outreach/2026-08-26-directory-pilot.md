@@ -27,7 +27,7 @@ The local append-only campaign ledger and approved product profile are kept in t
 | Startup Buffer | `https://startupbuffer.com/site/submit` | Public startup/side-project directory; reviewed profile includes description, screenshot, category, and tags. | `blocked` | Cloudflare checkpoint cleared. Basic details and both descriptions were restored in one unique tab; the form is waiting at required screenshot upload. |
 | Launching Next | `https://www.launchingnext.com/submit/` | Free, manually reviewed side-project submission; optional paid acceleration was not selected. | `outcome_unknown` | The submit action returned the same form without a receipt. Gmail, public search, and available backend checks found no confirmation. Recheck on 2026-08-27; do not retry before then. |
 | Startup Stash | `https://startupstash.com/add-listing/` | Curated tool directory with public Typeform and documented editorial review. | `blocked` | Project-name identity and business-domain email were accepted; product copy, URL, and Learning category were completed. Required logo upload still cannot open the Chrome file chooser. |
-| SaaSHub | `https://www.saashub.com/services/submit` | Software marketplace with Education, Language Learning, Kids Education, and Educational Games categories. | `submitted` | Explicit success page confirmed the free submission. Five relevant categories and three real comparison products were selected. Listing remains pending approval; review can take up to 32 days. |
+| SaaSHub | `https://www.saashub.com/crossword-clue-tutor-alternatives` | Software marketplace with Education, Language Learning, Kids Education, and Educational Games categories. | `link_verified` | Approval and verification emails arrived 2026-08-29. The verification link completed successfully; the public page links to `https://crosswordcluetutor.com/` with anchor “Visit website” and an empty `rel` attribute, so this is a verified standard follow backlink. |
 | Uneed | `https://www.uneed.best/submit-a-tool` | Moderated tech-product launch directory with free queue and optional paid acceleration. | `blocked` | Google OAuth account and product draft were created successfully. The free waiting line is closed; only $14.99/$29.99 paid launch options remain, so no launch was scheduled. |
 
 ## Evidence discipline
@@ -37,8 +37,8 @@ The local append-only campaign ledger and approved product profile are kept in t
 - Submission validation failures: 0 current; the corrected SaaSHub retry succeeded.
 - Prepared forms with saved progress: 2.
 - Correct product drafts/previews generated: 1.
-- Public listings: 0.
-- Verified backlinks: 0.
+- Public listings: 1.
+- Verified backlinks: 1.
 - Paid actions: 0.
 - Reciprocal-link actions: 0.
 
@@ -62,6 +62,6 @@ No entry will advance to `public` or `link_verified` without observing a real pu
 
 - Startup Buffer is ready at screenshot upload in the preserved tab.
 - Startup Stash requires a working Chrome file chooser; extension/browser restart may be needed after enabling file URL access.
-- SaaSHub: review public listing status by 2026-09-27; do not call it a backlink before approval and href verification.
+- SaaSHub is complete: approved, verified, public, and href/anchor/rel checked on 2026-08-29.
 - Uneed: product draft remains saved locally on the platform; no action while free submissions are closed and payment remains prohibited.
 - 2026-08-27: recheck Launching Next mailbox and public directory before considering any retry.

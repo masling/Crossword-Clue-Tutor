@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T12:31:00+08:00",
+  "updatedAt": "2026-08-29T14:20:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -287,6 +287,12 @@
           "reportsWithTwoSessions": 0,
           "verifiedDistinctEducators": 0,
           "privacy": "Aggregate-only query; no email addresses or message text were read or recorded"
+        },
+        "latestAggregateCheckAttempt": {
+          "attemptedAt": "2026-08-29T14:18:00+08:00",
+          "status": "auth_required",
+          "result": "Cloudflare D1 API rejected the configured account authorization with code 7403; no rows, email addresses, or feedback text were returned",
+          "nextAction": "Re-authenticate Wrangler for the Cloudflare account that owns crossword-clue-tutor-feedback, then rerun the aggregate-only query"
         }
       },
       "teacherPilotKit": {
@@ -628,6 +634,15 @@
       "rightsBoundary": "Selected clues only; no grid or complete answer list"
     }
   },
+  "latestDailyEvidencePass": {
+    "date": "2026-08-29",
+    "completedAt": "2026-08-29T14:20:00+08:00",
+    "gmail": { "newProjectMessages": 2, "spamMessages": 0, "result": "SaaSHub approved the listing and sent its verification link" },
+    "teacherPilotAggregate": { "status": "auth_required", "privacy": "No aggregate rows or personal data were returned" },
+    "seoAnalytics": { "status": "not_due", "nextReviewNotBefore": "2026-08-31T14:55:00+08:00" },
+    "outreach": { "action": "SaaSHub verification completed", "publicListing": true, "linkVerified": true, "cost": 0 },
+    "googleTrends": { "status": "throttled", "httpStatus": 429, "publishedGaps": 0, "operatorCsvNeeded": true }
+  },
   "search": {
     "dailyTrendsGap": {
       "root": "crossword",
@@ -635,6 +650,9 @@
       "geo": "Worldwide",
       "url": "https://trends.google.com/trends/explore?date=now%201-d&q=crossword",
       "lastReviewedAt": "2026-08-25T22:15:00+08:00",
+      "lastAttemptedAt": "2026-08-29T14:18:00+08:00",
+      "latestAttemptStatus": "Public Google Trends request returned HTTP 429; no CAPTCHA bypass or internal endpoint was attempted",
+      "operatorCsvNeeded": true,
       "evidenceFile": "relatedQueries (1).csv (user-supplied Google Trends export)",
       "breakoutQueries": 25,
       "coverageBeforeGapPass": "1 of 25 Rising/Breakout queries matched an existing page",
@@ -946,8 +964,8 @@
     "dailyCadence": {
       "targetPerDay": "1–2 new high-fit submissions or due follow-ups",
       "directSendAuthorized": true,
-      "lastExecutedAt": "2026-08-26T08:19:19+08:00",
-      "lastTarget": "SaaSHub free product submission",
+      "lastExecutedAt": "2026-08-29T14:17:00+08:00",
+      "lastTarget": "SaaSHub approval verification and public link audit",
       "minimumQualityGate": "A stable public channel and explicit resource-submission invitation are required; exclude paid, reciprocal, adult, guest-post-farm, do-not-contact, replied, and duplicate targets"
     },
     "directoryPilot": {
@@ -958,9 +976,9 @@
         "blocked": 3,
         "outcomeUnknown": 1,
         "submissionFailed": 0,
-        "submitted": 1,
-        "public": 0,
-        "linkVerified": 0
+        "submitted": 0,
+        "public": 1,
+        "linkVerified": 1
       },
       "targets": [
         "Startup Buffer",
@@ -971,8 +989,16 @@
       ],
       "cost": 0,
       "paidOptionsSelected": false,
-      "lastAuditedAt": "2026-08-26T08:39:45+08:00",
-      "nextReviewAt": "2026-08-27T12:00:00+08:00",
+      "lastAuditedAt": "2026-08-29T14:17:00+08:00",
+      "nextReviewAt": "2026-08-30T09:43:52+08:00",
+      "latestVerifiedListing": {
+        "target": "SaaSHub",
+        "publicUrl": "https://www.saashub.com/crossword-clue-tutor-alternatives",
+        "destinationUrl": "https://crosswordcluetutor.com/",
+        "anchor": "Visit website",
+        "rel": [],
+        "verifiedAt": "2026-08-29T14:17:00+08:00"
+      },
       "shareableSummary": "ops/outreach/2026-08-26-directory-pilot.md",
       "localLedgerPolicy": "Append-only canonical ledger remains under the Git-ignored .backlink-outreach directory",
       "browserHandoffPolicy": "One tab per unresolved domain; preserve only real filled or server-side state; do not reopen blank forms for outcome-unknown entries; final browser action must mark all unresolved tabs for handoff"
@@ -987,7 +1013,7 @@
       "validationCommand": "npm run outreach:check",
       "followUpReportCommand": "npm run outreach:followups",
       "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 190 meaning entries",
-      "transmissionStatus": "Fourteen unique email targets were sent and six forms were submitted. On August 25, the Colorado Department of Education Media Literacy Resource Bank received a free Grades 6-12 media-literacy vocabulary pack suggestion after a zero-result sent-mail duplicate check. Learning Corner approved and published the first verified live external listing; it links to the Classroom Solver with nofollow, noopener, and noreferrer. A concise factual count update from 160/12 to 500/29 was sent in the approval thread. Clerna received the complete two-session teacher pilot as an original Grades 6-12 lesson plan through the Gmail connector, without payment, attachment, reciprocal link, or sponsored-placement request. Puzzled.online is awaiting verification; TeachersFirst forwarded the resource to its review team; XWord Info declined and is marked do-not-contact. The FreeTech4Teachers legacy form was not counted after no receipt; Teach Arcade remains skipped."
+      "transmissionStatus": "Fourteen unique email targets were sent and six forms were submitted. Learning Corner published the first verified listing. SaaSHub approved and verified Crossword Clue Tutor on August 29; its public alternatives page contains a standard follow Visit website link to the homepage. The Colorado Department of Education received a free Grades 6-12 media-literacy pack suggestion. Clerna received the complete two-session teacher pilot. Puzzled.online is awaiting verification; TeachersFirst forwarded the resource to review; XWord Info is do-not-contact. FreeTech4Teachers was not counted after no receipt; Teach Arcade remains skipped."
     },
     "approvalNeeded": null,
     "senderSetup": {
