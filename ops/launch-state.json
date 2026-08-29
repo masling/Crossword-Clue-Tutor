@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T12:30:00+08:00",
+  "updatedAt": "2026-08-29T12:31:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -192,7 +192,9 @@
       "profilesAfter": 190,
       "historicalBackfillProfiles": 0,
       "dailyTarget": 25,
-      "status": "Prepared for deployment",
+      "status": "Production verified",
+      "deployedAt": "2026-08-29T12:28:49+08:00",
+      "productionVerification": "App store, Après-ski, and Soo Definition & Meaning pages returned HTTP 200 after deployment",
       "selectionReason": "Every missing unique answer from the verified August 29 NYT Midi, LA Times, and USA TODAY selected-clue batches; LOLA already had a reviewed profile"
     },
     "latestDailyDefinitionMeaningBackfill": {
@@ -549,7 +551,10 @@
       "currentAnswerProfiles": 17,
       "historicalBackfillProfiles": 0,
       "rightsBoundary": "Six selected clue pages per publication; no grid or complete answer list",
-      "status": "Prepared for deployment"
+      "status": "Production verified",
+      "deploymentCommit": "9c33f002439f5ef4fba60b121d0b9676af1ad767",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33233876925",
+      "productionVerification": "Representative LA Times, NYT Midi, and USA TODAY clue pages plus three new answer pages returned HTTP 200; production sitemap contains 572 URLs"
     },
     "officialSourceDiscovery": {
       "NYT Mini": {
