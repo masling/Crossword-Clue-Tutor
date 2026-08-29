@@ -1,45 +1,11 @@
 {
-  "publishedAt": "2026-08-29T04:23:16.976Z",
-  "input": "ops/intake/2026-08-29-midi-lat-usa-routine.json",
+  "publishedAt": "2026-08-29T06:40:03.232Z",
+  "input": "ops/intake/2026-08-29-trends-gap-schwas.json",
   "urls": [
-    "/explainers/chance-to-refuel-after-a-run-la-times/",
-    "/explainers/cruelty-free-target-of-poaching-la-times/",
-    "/explainers/contributes-to-la-times/",
-    "/explainers/ncuti-fifteenth-doctor-la-times/",
-    "/explainers/mobile-vendor-question-mark-la-times/",
-    "/explainers/extravagant-la-times-august-29/",
-    "/explainers/gently-throw-nyt-midi/",
-    "/explainers/graduate-student-workers-for-short-nyt-midi/",
-    "/explainers/lets-do-it-nyt-midi/",
-    "/explainers/blank-full-circle-nyt-midi/",
-    "/explainers/babys-early-word-maybe-nyt-midi/",
-    "/explainers/among-nyt-midi-august-29/",
-    "/explainers/acoustic-soul-singer-india-usa-today/",
-    "/explainers/hamilton-actress-phillipa-usa-today/",
-    "/explainers/bunny-cartoon-debut-space-jam-usa-today/",
-    "/explainers/blank-now-brown-cow-usa-today/",
-    "/explainers/reality-tv-star-roman-usa-today/",
-    "/explainers/its-raining-blank-usa-today/"
+    "/explainers/unstressed-vowel-sounds-la-times/"
   ],
   "answerUrls": [
-    "/crosswordese/lola/",
-    "/crosswordese/app-store/",
-    "/crosswordese/arie/",
-    "/crosswordese/gatwa/",
-    "/crosswordese/im-in/",
-    "/crosswordese/men/",
-    "/crosswordese/pear/",
-    "/crosswordese/soo/",
-    "/crosswordese/tas/",
-    "/crosswordese/apres-ski/",
-    "/crosswordese/mama/",
-    "/crosswordese/tami/",
-    "/crosswordese/come/",
-    "/crosswordese/how/",
-    "/crosswordese/wanton/",
-    "/crosswordese/goes-in-on/",
-    "/crosswordese/toss/",
-    "/crosswordese/amid/"
+    "/crosswordese/schwas/"
   ],
   "clinicUrls": [
     "/daily-clue-clinic/2026-08-29/"
@@ -50,12 +16,7 @@
     "/daily-clue-clinic/",
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
-    "/crossword-answers/4-letters/",
-    "/crossword-answers/5-letters/",
     "/crossword-answers/6-letters/",
-    "/crossword-answers/3-letters/",
-    "/la-times-crossword-answers/",
-    "/nyt-midi-crossword-clues/",
-    "/usa-today-crossword-answers/"
+    "/la-times-crossword-answers/"
   ]
 }

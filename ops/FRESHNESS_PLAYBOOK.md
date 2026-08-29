@@ -123,10 +123,13 @@ Every local day after routine coverage, open the public Google Trends comparison
 Review Related queries → Rising. Treat Breakout as a discovery signal, not absolute
 search volume. Classify every candidate before publishing:
 
-- never use server-side `curl`, raw HTTP, undocumented/internal Trends endpoints, or a
-  shared automation egress IP;
-- use the normal Trends page only through the Chrome/OpenCLI profile explicitly selected
-  by the current session; never bind a fixed profile in this playbook or automation;
+- load `opencli-host-execution`, run `opencli profile list` in the host layer, and
+  dynamically resolve the currently connected profile marked `default`;
+- use the installed `google-trends-ops` browser adapter with `google-trends related
+  'crossword' --date 24h --type rising --page 0 --pageSize 25`; it opens one normal
+  Trends page and passively structures only the responses that page loads itself;
+- never hardcode a profile or use server-side `curl`, raw HTTP, shared automation
+  egress, replayed/decomposed Trends requests, or undocumented/internal endpoints;
 - when no profile is explicitly available, or the visible page is throttled/CAPTCHA-
   blocked, request an operator-exported Related queries → Rising CSV once and stop;
 

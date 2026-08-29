@@ -1,0 +1,22 @@
+{
+  "clues": [
+    {
+      "slug": "unstressed-vowel-sounds-la-times",
+      "clue": "Unstressed vowel sounds",
+      "answer": "SCHWAS",
+      "date": "2026-08-29",
+      "popularity": 100,
+      "definition": "Schwas are unstressed mid-central vowel sounds, commonly represented by the symbol /ə/ in the International Phonetic Alphabet.",
+      "explanation": "SCHWAS fits because the plural clue asks for more than one unstressed vowel sound. A schwa is the reduced vowel heard in many unstressed English syllables, and its six-letter plural matches the entry.",
+      "partOfSpeech": "plural noun",
+      "tags": ["schwa", "unstressed vowels", "phonetics", "IPA"],
+      "clueType": "direct-definition",
+      "signal": "The plural noun “sounds” requires a plural answer, while “unstressed vowel” points to a specific phonetic term.",
+      "hint": "Use the six-letter plural term for reduced mid-central vowel sounds often written with /ə/.",
+      "reviewedAt": "2026-08-29",
+      "publication": "LA Times Crossword",
+      "sourceDate": "2026-08-28",
+      "clueNumber": "8-Down"
+    }
+  ]
+}

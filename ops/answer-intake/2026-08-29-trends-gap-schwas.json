@@ -1,0 +1,8 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-29",
+  "selectionReason": "Google Trends browser-adapter Rising gap: the verified LA Times August 28 clue 'Unstressed vowel sounds' and answer SCHWAS were absent from the site.",
+  "profiles": [
+    { "answer": "SCHWAS", "displayTerm": "Schwas", "slug": "schwas", "pronunciation": "shwahz", "related": [] }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T14:31:00+08:00",
+  "updatedAt": "2026-08-29T14:40:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -110,9 +110,9 @@
     }
   },
   "content": {
-    "indexablePages": 572,
-    "reviewedClues": 289,
-    "answerMeaningPages": 190,
+    "indexablePages": 574,
+    "reviewedClues": 290,
+    "answerMeaningPages": 191,
     "dictionaryExpansion": {
       "profilesAdded": 74,
       "reviewedAt": "2026-08-24",
@@ -148,7 +148,7 @@
       "enabledAt": "2026-08-28T17:00:00+08:00",
       "lastBackfillDate": "2026-08-29",
       "lastCurrentProfileDate": "2026-08-29",
-      "currentProfilesPublishedToday": 28,
+      "currentProfilesPublishedToday": 29,
       "currentAnswerRule": "After each routine clue batch, publish one canonical Definition & Meaning page for every unique current-date answer missing from data/answers.json; current missing answers are mandatory even when they exceed the target",
       "backfillRule": "After all five sources are complete, subtract current profiles already published that local day from 25; backfill only the positive remainder from deterministic reviewed historical gaps and publish nothing when the remainder is zero or no verified gaps remain",
       "currentPlannerCommand": "npm run answer:gaps -- --date YYYY-MM-DD --current-only --output .local/answer-profile-current.json",
@@ -204,6 +204,18 @@
       "remainingCapacity": 0,
       "historicalProfilesPublished": 0,
       "status": "Complete without historical backfill because current answer coverage exceeded the daily target"
+    },
+    "latestTrendsGapPublication": {
+      "date": "2026-08-29",
+      "queryFamily": ["unstressed vowel sounds", "unstressed vowel sounds crossword"],
+      "clue": "Unstressed vowel sounds",
+      "answer": "SCHWAS",
+      "publication": "LA Times Crossword",
+      "sourceDate": "2026-08-28",
+      "clueIntake": "ops/intake/2026-08-29-trends-gap-schwas.json",
+      "answerIntake": "ops/answer-intake/2026-08-29-trends-gap-schwas.json",
+      "status": "Prepared for deployment",
+      "selectionReason": "Ranks 4 and 5 in the browser-adapter Worldwide Rising list were absent from the site; exact publication, date, clue, answer, and six-letter length were publicly verified"
     },
     "datasetLicenseEnhancement": {
       "status": "Production verified",
@@ -641,7 +653,7 @@
     "teacherPilotAggregate": { "status": "success", "totalTeacherReports": 0, "reportsWithTwoSessions": 0, "verifiedDistinctEducators": 0, "privacy": "Aggregate-only result; no email address or feedback text was returned" },
     "seoAnalytics": { "status": "not_due", "nextReviewNotBefore": "2026-08-31T14:55:00+08:00" },
     "outreach": { "action": "SaaSHub verification completed", "publicListing": true, "linkVerified": true, "cost": 0 },
-    "googleTrends": { "status": "throttled", "httpStatus": 429, "publishedGaps": 0, "operatorCsvNeeded": true }
+    "googleTrends": { "status": "success", "adapter": "google-trends-ops 0.3.0 browser capture", "risingRows": 25, "publishedGaps": 1, "operatorCsvNeeded": false }
   },
   "search": {
     "dailyTrendsGap": {
@@ -649,29 +661,43 @@
       "window": "Past 1 day",
       "geo": "Worldwide",
       "url": "https://trends.google.com/trends/explore?date=now%201-d&q=crossword",
-      "lastReviewedAt": "2026-08-25T22:15:00+08:00",
-      "lastAttemptedAt": "2026-08-29T14:18:00+08:00",
-      "latestAttemptStatus": "Public Google Trends request returned HTTP 429; no CAPTCHA bypass or internal endpoint was attempted",
-      "operatorCsvNeeded": true,
+      "lastReviewedAt": "2026-08-29T14:36:00+08:00",
+      "lastAttemptedAt": "2026-08-29T14:36:00+08:00",
+      "latestAttemptStatus": "Success through the installed browser adapter using the dynamically resolved connected default profile; one normal Chrome page loaded and no adapter-generated API request was made",
+      "operatorCsvNeeded": false,
       "processCorrectedAt": "2026-08-29T14:31:00+08:00",
-      "approvedAccessProcess": "Use only the normal Trends UI through the Chrome/OpenCLI profile explicitly selected by the current session, or an operator-exported Related queries Rising CSV when no profile is selected",
+      "openCliAdapter": { "plugin": "google-trends-ops", "version": "0.3.0", "command": "google-trends related", "captureMode": "One normal Chrome page with passive response capture; zero adapter-generated API requests" },
+      "profilePolicy": "Resolve the connected OpenCLI profile marked default at run time; never hardcode or globally bind a project profile",
+      "approvedAccessProcess": "Use the installed browser adapter through the dynamically resolved default connected profile, or an operator-exported Related queries Rising CSV when no profile is connected",
       "prohibitedAccessProcess": "No server-side curl, raw HTTP, shared automation egress, undocumented endpoints, CAPTCHA bypass, or fixed globally bound Chrome profile",
       "evidenceFile": "relatedQueries (1).csv (user-supplied Google Trends export)",
       "breakoutQueries": 25,
-      "coverageBeforeGapPass": "1 of 25 Rising/Breakout queries matched an existing page",
+      "coverageBeforeGapPass": "2 of 25 Rising/Breakout rows were already covered by the Most unexpected page",
       "publishedGaps": [
         "where a Hindu woman wears a bichiya = TOE",
         "post-Ramadan festival that translates to festival = EID",
         "Trick Mirror author Tolentino = JIA",
         "some pretzel shapes = RODS",
         "tiny biting insect = NOSEEUM",
-        "Wowza! = OHDAMN"
+        "Wowza! = OHDAMN",
+        "unstressed vowel sounds = SCHWAS"
       ],
       "supportingMidiSelections": [
         "Waymo cars, e.g. = ROBOTS",
         "Language behind much dynamic web content = JAVASCRIPT"
       ],
-      "excludedExample": "Harlem Shake was driven by NYT Connections intent, not a current crossword clue query"
+      "excludedExample": "Harlem Shake was driven by NYT Connections intent, not a current crossword clue query",
+      "latestRun": {
+        "adapter": "google-trends-ops 0.3.0",
+        "resolvedProfile": "用户1 (connected default at run time)",
+        "window": "Worldwide Web Search, past 24 hours",
+        "risingRows": 25,
+        "alreadyCoveredRows": 2,
+        "publishedRows": 2,
+        "publishedPages": 1,
+        "deferredRows": 21,
+        "deferredReason": "No reliable current publication/date/unique-answer evidence, ambiguous multi-answer intent, or an unsupported new publication that should not be added from one trend spike"
+      }
     },
     "seoReviewCadence": {
       "intervalHours": 72,
