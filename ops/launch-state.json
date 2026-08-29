@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T10:26:00+08:00",
+  "updatedAt": "2026-08-29T10:29:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -177,7 +177,9 @@
       "currentProfiles": 11,
       "profilesBefore": 162,
       "profilesAfter": 173,
-      "status": "Prepared for deployment",
+      "status": "Production verified",
+      "deployedAt": "2026-08-29T10:27:54+08:00",
+      "productionVerification": "GMO, Bioré, and NBA champs Definition & Meaning pages returned HTTP 200 after deployment",
       "selectionReason": "Every missing unique answer from the verified August 29 NYT Mini and NYT Daily selected-clue batches; RAD already had a reviewed profile"
     },
     "datasetLicenseEnhancement": {
@@ -514,7 +516,10 @@
       "answerIntake": "ops/answer-intake/2026-08-29-current-definition-meaning-11.json",
       "currentAnswerProfiles": 11,
       "rightsBoundary": "Six selected clue pages per advanced source; no grid or complete answer list",
-      "status": "Prepared for deployment"
+      "status": "Production verified",
+      "deploymentCommit": "021442dc91d79199f4326ec14357330437745fa1",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33228979151",
+      "productionVerification": "Four representative clue pages and three new answer pages returned HTTP 200; production sitemap contains 537 URLs"
     },
     "officialSourceDiscovery": {
       "NYT Mini": {
