@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T14:20:00+08:00",
+  "updatedAt": "2026-08-29T14:31:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -282,17 +282,17 @@
         "privacyBoundary": "No student names or student work requested; no raw IP address or user agent stored; optional email is only for clarifying the submitted report",
         "pilotProofBoundary": "Engineering hold-outs remain separate; full controlled-pilot proof requires five distinct educators to complete two sessions and submit structured feedback. Only reports with a normalized optional email can count as distinct verified participants; anonymous reports remain qualitative evidence.",
         "latestAggregate": {
-          "recordedAt": "2026-08-24T13:12:21+08:00",
+          "recordedAt": "2026-08-29T14:30:00+08:00",
           "totalTeacherReports": 0,
           "reportsWithTwoSessions": 0,
           "verifiedDistinctEducators": 0,
           "privacy": "Aggregate-only query; no email addresses or message text were read or recorded"
         },
         "latestAggregateCheckAttempt": {
-          "attemptedAt": "2026-08-29T14:18:00+08:00",
-          "status": "auth_required",
-          "result": "Cloudflare D1 API rejected the configured account authorization with code 7403; no rows, email addresses, or feedback text were returned",
-          "nextAction": "Re-authenticate Wrangler for the Cloudflare account that owns crossword-clue-tutor-feedback, then rerun the aggregate-only query"
+          "attemptedAt": "2026-08-29T14:30:00+08:00",
+          "status": "success",
+          "result": "Wrangler OAuth was renewed through the official device flow and credentials were stored in the macOS keychain; the aggregate-only D1 query returned successfully",
+          "privacy": "Only total reports, reports with at least two sessions, and distinct normalized non-empty educator-email count were selected; no email address or feedback text was returned"
         }
       },
       "teacherPilotKit": {
@@ -638,7 +638,7 @@
     "date": "2026-08-29",
     "completedAt": "2026-08-29T14:20:00+08:00",
     "gmail": { "newProjectMessages": 2, "spamMessages": 0, "result": "SaaSHub approved the listing and sent its verification link" },
-    "teacherPilotAggregate": { "status": "auth_required", "privacy": "No aggregate rows or personal data were returned" },
+    "teacherPilotAggregate": { "status": "success", "totalTeacherReports": 0, "reportsWithTwoSessions": 0, "verifiedDistinctEducators": 0, "privacy": "Aggregate-only result; no email address or feedback text was returned" },
     "seoAnalytics": { "status": "not_due", "nextReviewNotBefore": "2026-08-31T14:55:00+08:00" },
     "outreach": { "action": "SaaSHub verification completed", "publicListing": true, "linkVerified": true, "cost": 0 },
     "googleTrends": { "status": "throttled", "httpStatus": 429, "publishedGaps": 0, "operatorCsvNeeded": true }
@@ -653,6 +653,9 @@
       "lastAttemptedAt": "2026-08-29T14:18:00+08:00",
       "latestAttemptStatus": "Public Google Trends request returned HTTP 429; no CAPTCHA bypass or internal endpoint was attempted",
       "operatorCsvNeeded": true,
+      "processCorrectedAt": "2026-08-29T14:31:00+08:00",
+      "approvedAccessProcess": "Use only the normal Trends UI through the Chrome/OpenCLI profile explicitly selected by the current session, or an operator-exported Related queries Rising CSV when no profile is selected",
+      "prohibitedAccessProcess": "No server-side curl, raw HTTP, shared automation egress, undocumented endpoints, CAPTCHA bypass, or fixed globally bound Chrome profile",
       "evidenceFile": "relatedQueries (1).csv (user-supplied Google Trends export)",
       "breakoutQueries": 25,
       "coverageBeforeGapPass": "1 of 25 Rising/Breakout queries matched an existing page",

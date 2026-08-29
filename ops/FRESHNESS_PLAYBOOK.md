@@ -123,6 +123,13 @@ Every local day after routine coverage, open the public Google Trends comparison
 Review Related queries → Rising. Treat Breakout as a discovery signal, not absolute
 search volume. Classify every candidate before publishing:
 
+- never use server-side `curl`, raw HTTP, undocumented/internal Trends endpoints, or a
+  shared automation egress IP;
+- use the normal Trends page only through the Chrome/OpenCLI profile explicitly selected
+  by the current session; never bind a fixed profile in this playbook or automation;
+- when no profile is explicitly available, or the visible page is throttled/CAPTCHA-
+  blocked, request an operator-exported Related queries → Rising CSV once and stop;
+
 - publish exact crossword-clue queries only after the source date, publication, clue,
   and answer are publicly verified;
 - use ambiguous roots such as `bichiya` only when the crossword query family and exact
