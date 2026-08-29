@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T09:51:00+08:00",
+  "updatedAt": "2026-08-29T10:26:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -110,9 +110,9 @@
     }
   },
   "content": {
-    "indexablePages": 513,
-    "reviewedClues": 259,
-    "answerMeaningPages": 162,
+    "indexablePages": 537,
+    "reviewedClues": 271,
+    "answerMeaningPages": 173,
     "dictionaryExpansion": {
       "profilesAdded": 74,
       "reviewedAt": "2026-08-24",
@@ -147,6 +147,7 @@
     "dailyDefinitionMeaningPolicy": {
       "enabledAt": "2026-08-28T17:00:00+08:00",
       "lastBackfillDate": "2026-08-28",
+      "lastCurrentProfileDate": "2026-08-29",
       "currentAnswerRule": "After each routine clue batch, publish one canonical Definition & Meaning page for every unique current-date answer missing from data/answers.json; current missing answers are mandatory even when they exceed the target",
       "backfillRule": "When current missing answers are fewer than 25, fill the remainder to 25 from deterministic reviewed historical gaps; publish nothing when no verified gaps remain",
       "currentPlannerCommand": "npm run answer:gaps -- --date YYYY-MM-DD --current-only --output .local/answer-profile-current.json",
@@ -169,6 +170,15 @@
       "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33157797255",
       "productionVerification": "AJA, DHL, I hope not, Swipe right, and Who knew returned HTTP 200 with one canonical Definition & Meaning page. Sitemap contains 512 URLs; the full production audit found zero errors, duplicate metadata/canonicals, or orphans and maximum click depth 3.",
       "selectionReason": "Every August 28 reviewed answer still missing a canonical page; the current lane exactly met the daily target, so no historical filler was used"
+    },
+    "latestCurrentDefinitionMeaningRun": {
+      "date": "2026-08-29",
+      "intake": "ops/answer-intake/2026-08-29-current-definition-meaning-11.json",
+      "currentProfiles": 11,
+      "profilesBefore": 162,
+      "profilesAfter": 173,
+      "status": "Prepared for deployment",
+      "selectionReason": "Every missing unique answer from the verified August 29 NYT Mini and NYT Daily selected-clue batches; RAD already had a reviewed profile"
     },
     "datasetLicenseEnhancement": {
       "status": "Production verified",
@@ -479,36 +489,56 @@
       "USA TODAY Crossword"
     ],
     "lastPublishedSourceDates": {
-      "NYT Mini": "2026-08-28",
+      "NYT Mini": "2026-08-29",
       "NYT Midi Crossword": "2026-08-28",
-      "The New York Times Crossword": "2026-08-28",
+      "The New York Times Crossword": "2026-08-29",
       "LA Times Crossword": "2026-08-28",
       "USA TODAY Crossword": "2026-08-28"
     },
-    "pendingSourceDates": {},
+    "pendingSourceDates": {
+      "NYT Midi Crossword": {
+        "expectedDate": "2026-08-29",
+        "status": "pending exact public clue-answer evidence",
+        "checkedAt": "2026-08-29T02:20:00Z"
+      }
+    },
+    "latestMorningFreshnessRun": {
+      "sourceDate": "2026-08-29",
+      "publishedAt": "2026-08-29T10:25:00+08:00",
+      "publications": [
+        { "publication": "NYT Mini", "selectedClues": 6, "answers": ["MAN", "GAMES", "ONMYWAY", "RAD", "GMO", "STADIUM"], "confidence": "Medium-high; exact pairs verified through bounded public third-party evidence and answer facts independently reviewed" },
+        { "publication": "The New York Times Crossword", "selectedClues": 6, "answers": ["NBACHAMPS", "BIORE", "SUSHIBOAT", "IDTAG", "ALIENSHIP", "GOTMAD"], "confidence": "Medium-high; exact pairs verified through bounded public third-party evidence and answer facts independently reviewed" }
+      ],
+      "pending": ["NYT Midi Crossword"],
+      "clueIntake": "ops/intake/2026-08-29-nyt-mini-daily-routine.json",
+      "answerIntake": "ops/answer-intake/2026-08-29-current-definition-meaning-11.json",
+      "currentAnswerProfiles": 11,
+      "rightsBoundary": "Six selected clue pages per advanced source; no grid or complete answer list",
+      "status": "Prepared for deployment"
+    },
     "officialSourceDiscovery": {
       "NYT Mini": {
         "adapter": "read-only-public-research",
-        "checkedAt": "2026-08-28T04:20:00Z",
-        "latestOfficialDate": "2026-08-28",
-        "accessMode": "Public same-day clue-answer pages without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 28 pairs published: TVS, DROOL, HOWTO, LOTTO, TROOP, and DHL",
+        "checkedAt": "2026-08-29T02:20:00Z",
+        "latestOfficialDate": "2026-08-29",
+        "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
+        "selectedPairStatus": "Six selected August 29 pairs published: MAN, GAMES, ONMYWAY, RAD, GMO, and STADIUM",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "NYT Midi Crossword": {
         "adapter": "read-only-public-research",
-        "checkedAt": "2026-08-28T04:20:00Z",
+        "checkedAt": "2026-08-29T02:20:00Z",
         "latestOfficialDate": "2026-08-28",
-        "accessMode": "Public same-day clue-answer pages without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 28 pairs published: EGGS, TAROT, LOLA, IDAHO, SWIPERIGHT, and INSERTHERE",
+        "accessMode": "Public check found no exact August 29 clue-answer evidence without NYT login or access-control bypass",
+        "selectedPairStatus": "August 29 remains pending; August 28 is the latest completed date",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "The New York Times Crossword": {
         "adapter": "read-only-public-research",
-        "checkedAt": "2026-08-28T04:20:00Z",
-        "latestOfficialDate": "2026-08-28",
-        "accessMode": "Public same-day clue-answer pages without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 28 pairs published: SCREWIT, HELEN, IHOPENOT, AGILE, NONANSWER, and RINSE",
+        "checkedAt": "2026-08-29T02:20:00Z",
+        "latestOfficialDate": "2026-08-29",
+        "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
+        "selectedPairStatus": "Six selected August 29 pairs published: NBACHAMPS, BIORE, SUSHIBOAT, IDTAG, ALIENSHIP, and GOTMAD",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "LA Times Crossword": {
@@ -916,7 +946,7 @@
       "structuredFormPayloads": 8,
       "validationCommand": "npm run outreach:check",
       "followUpReportCommand": "npm run outreach:followups",
-      "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 162 meaning entries",
+      "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 173 meaning entries",
       "transmissionStatus": "Fourteen unique email targets were sent and six forms were submitted. On August 25, the Colorado Department of Education Media Literacy Resource Bank received a free Grades 6-12 media-literacy vocabulary pack suggestion after a zero-result sent-mail duplicate check. Learning Corner approved and published the first verified live external listing; it links to the Classroom Solver with nofollow, noopener, and noreferrer. A concise factual count update from 160/12 to 500/29 was sent in the approval thread. Clerna received the complete two-session teacher pilot as an original Grades 6-12 lesson plan through the Gmail connector, without payment, attachment, reciprocal link, or sponsored-placement request. Puzzled.online is awaiting verification; TeachersFirst forwarded the resource to its review team; XWord Info declined and is marked do-not-contact. The FreeTech4Teachers legacy form was not counted after no receipt; Teach Arcade remains skipped."
     },
     "approvalNeeded": null,

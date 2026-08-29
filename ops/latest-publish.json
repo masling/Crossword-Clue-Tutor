@@ -1,18 +1,36 @@
 {
-  "publishedAt": "2026-08-28T06:19:29.846Z",
-  "input": "ops/intake/2026-08-28-pending-completion.json",
+  "publishedAt": "2026-08-29T02:24:44.586Z",
+  "input": "ops/intake/2026-08-29-nyt-mini-daily-routine.json",
   "urls": [
-    "/explainers/big-name-in-shipping-logistics-nyt-mini/",
-    "/explainers/thurman-red-white-royal-blue-la-times/",
-    "/explainers/most-unexpected-la-times/",
-    "/explainers/axe-handle-la-times/",
-    "/explainers/drummer-in-electric-mayhem-la-times/",
-    "/explainers/lessons-in-chemistry-actress-naomi-king-la-times/",
-    "/explainers/a-complete-unknown-subject-la-times/"
+    "/explainers/man-oh-man-nyt-mini/",
+    "/explainers/wordle-and-scrabble-for-two-nyt-mini/",
+    "/explainers/heading-over-now-nyt-mini/",
+    "/explainers/totally-awesome-nyt-mini/",
+    "/explainers/frankenfood-for-short-nyt-mini/",
+    "/explainers/university-of-michigan-largest-seating-nyt-mini/",
+    "/explainers/they-get-rings-for-hoops-nyt-daily/",
+    "/explainers/skin-care-brand-pore-strips-nyt-daily/",
+    "/explainers/large-restaurant-vessel-shaped-like-another-vessel-nyt-daily/",
+    "/explainers/conference-handout-nyt-daily/",
+    "/explainers/dubious-sighting-night-sky-nyt-daily/",
+    "/explainers/started-to-boil-nyt-daily/"
   ],
-  "answerUrls": [],
+  "answerUrls": [
+    "/crosswordese/rad/",
+    "/crosswordese/alien-ship/",
+    "/crosswordese/biore/",
+    "/crosswordese/games/",
+    "/crosswordese/gmo/",
+    "/crosswordese/got-mad/",
+    "/crosswordese/nba-champs/",
+    "/crosswordese/on-my-way/",
+    "/crosswordese/stadium/",
+    "/crosswordese/sushi-boat/",
+    "/crosswordese/id-tag/",
+    "/crosswordese/man/"
+  ],
   "clinicUrls": [
-    "/daily-clue-clinic/2026-08-28/"
+    "/daily-clue-clinic/2026-08-29/"
   ],
   "hubUrls": [
     "/",
@@ -21,10 +39,9 @@
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
     "/crossword-answers/3-letters/",
-    "/crossword-answers/6-letters/",
-    "/crossword-answers/4-letters/",
     "/crossword-answers/5-letters/",
+    "/crossword-answers/6-letters/",
     "/nyt-mini-crossword-clues/",
-    "/la-times-crossword-answers/"
+    "/nyt-crossword-clues/"
   ]
 }

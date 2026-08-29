@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-29",
+  "selectionReason": "Every unique answer from the verified August 29 NYT Mini and NYT Daily selected-clue batches that still lacked a canonical Definition & Meaning page; RAD already had a reviewed profile.",
+  "profiles": [
+    { "answer": "ALIENSHIP", "displayTerm": "Alien ship", "slug": "alien-ship", "pronunciation": "AY-lee-uhn ship", "related": [] },
+    { "answer": "BIORE", "displayTerm": "Bioré", "slug": "biore", "pronunciation": "bee-or-AY", "related": [] },
+    { "answer": "GAMES", "displayTerm": "Games", "slug": "games", "pronunciation": "gaymz", "related": [] },
+    { "answer": "GMO", "slug": "gmo", "pronunciation": "gee em oh", "related": [] },
+    { "answer": "GOTMAD", "displayTerm": "Got mad", "slug": "got-mad", "pronunciation": "got mad", "related": [] },
+    { "answer": "NBACHAMPS", "displayTerm": "NBA champs", "slug": "nba-champs", "pronunciation": "en bee ay champs", "related": [] },
+    { "answer": "ONMYWAY", "displayTerm": "On my way", "slug": "on-my-way", "pronunciation": "on my way", "related": [] },
+    { "answer": "STADIUM", "displayTerm": "Stadium", "slug": "stadium", "pronunciation": "STAY-dee-uhm", "related": [] },
+    { "answer": "SUSHIBOAT", "displayTerm": "Sushi boat", "slug": "sushi-boat", "pronunciation": "SOO-shee boht", "related": [] },
+    { "answer": "IDTAG", "displayTerm": "ID tag", "slug": "id-tag", "pronunciation": "eye dee tag", "related": [] },
+    { "answer": "MAN", "displayTerm": "Man", "slug": "man", "pronunciation": "man", "related": [] }
+  ]
+}
