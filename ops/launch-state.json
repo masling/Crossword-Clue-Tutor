@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T14:40:00+08:00",
+  "updatedAt": "2026-08-29T14:43:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -214,7 +214,9 @@
       "sourceDate": "2026-08-28",
       "clueIntake": "ops/intake/2026-08-29-trends-gap-schwas.json",
       "answerIntake": "ops/answer-intake/2026-08-29-trends-gap-schwas.json",
-      "status": "Prepared for deployment",
+      "status": "Production verified",
+      "deploymentCommit": "2f602cb",
+      "productionVerification": "The SCHWAS clue and Definition & Meaning pages returned HTTP 200; production sitemap contains 574 URLs",
       "selectionReason": "Ranks 4 and 5 in the browser-adapter Worldwide Rising list were absent from the site; exact publication, date, clue, answer, and six-letter length were publicly verified"
     },
     "datasetLicenseEnhancement": {
