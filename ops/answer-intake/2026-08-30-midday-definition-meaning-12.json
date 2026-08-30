@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-30",
+  "selectionReason": "Every unique answer from the verified August 30 LA Times and USA TODAY selected-clue batches still lacked a canonical Definition & Meaning page.",
+  "profiles": [
+    { "answer": "ABCS", "displayTerm": "ABCs", "slug": "abcs", "pronunciation": "ay bee seez", "related": [] },
+    { "answer": "ALI", "displayTerm": "Ali", "slug": "ali", "pronunciation": "AL-ee", "related": [] },
+    { "answer": "AROMA", "displayTerm": "Aroma", "slug": "aroma", "pronunciation": "uh-ROH-muh", "related": [] },
+    { "answer": "EMMA", "displayTerm": "Emma", "slug": "emma", "pronunciation": "EM-uh", "related": [] },
+    { "answer": "ISLE", "displayTerm": "Isle", "slug": "isle", "pronunciation": "yle", "related": [] },
+    { "answer": "LETS", "displayTerm": "Let's", "slug": "lets", "pronunciation": "lets", "related": [] },
+    { "answer": "MOREL", "displayTerm": "Morel", "slug": "morel", "pronunciation": "muh-REL", "related": [] },
+    { "answer": "ORBS", "displayTerm": "Orbs", "slug": "orbs", "pronunciation": "orbz", "related": [] },
+    { "answer": "PERU", "displayTerm": "Peru", "slug": "peru", "pronunciation": "puh-ROO", "related": [] },
+    { "answer": "SITCOM", "displayTerm": "Sitcom", "slug": "sitcom", "pronunciation": "SIT-kom", "related": [] },
+    { "answer": "YESYOU", "displayTerm": "Yes, you", "slug": "yes-you", "pronunciation": "yes yoo", "related": [] },
+    { "answer": "SNAP", "displayTerm": "Snap", "slug": "snap", "pronunciation": "snap", "related": [] }
+  ]
+}
