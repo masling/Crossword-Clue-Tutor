@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T10:25:00+08:00",
+  "updatedAt": "2026-08-30T10:26:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -178,7 +178,11 @@
       "currentProfiles": 18,
       "profilesBefore": 191,
       "profilesAfter": 209,
-      "status": "Validated locally; deployment pending",
+      "status": "Production verified",
+      "deployedAt": "2026-08-30T10:25:00+08:00",
+      "deploymentCommit": "14bcf50ae858eb6aa4a02e41ede4e7b8a522fcd1",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33287878192",
+      "productionVerification": "Harp, Street map, and NBA Definition & Meaning pages returned HTTP 200 after deployment",
       "selectionReason": "Every missing unique answer from the verified August 30 NYT Mini, NYT Midi, and NYT Daily selected-clue batches"
     },
     "latestMiddayDefinitionMeaningRun": {
@@ -552,7 +556,10 @@
       "answerIntake": "ops/answer-intake/2026-08-30-current-definition-meaning-18.json",
       "currentAnswerProfiles": 18,
       "rightsBoundary": "Six selected clue pages per advanced source; no grid or complete answer list",
-      "status": "Validated locally; deployment pending"
+      "status": "Production verified",
+      "deploymentCommit": "14bcf50ae858eb6aa4a02e41ede4e7b8a522fcd1",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33287878192",
+      "productionVerification": "Representative NYT Mini, Midi, and Daily clue pages plus three answer pages returned HTTP 200; production sitemap contains 611 URLs"
     },
     "latestMiddayFreshnessRun": {
       "sourceDate": "2026-08-29",
@@ -578,7 +585,7 @@
         "checkedAt": "2026-08-30T02:20:00Z",
         "latestOfficialDate": "2026-08-30",
         "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 30 pairs prepared: HARP, IVIED, PEPSI, COKE, NYT, and DIET",
+        "selectedPairStatus": "Six selected August 30 pairs published: HARP, IVIED, PEPSI, COKE, NYT, and DIET",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "NYT Midi Crossword": {
@@ -586,7 +593,7 @@
         "checkedAt": "2026-08-30T02:20:00Z",
         "latestOfficialDate": "2026-08-30",
         "accessMode": "Bounded public same-day clue-answer pages without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 30 pairs prepared: LIP, GABS, IOU, RETRO, STREETMAP, and TARSAL",
+        "selectedPairStatus": "Six selected August 30 pairs published: LIP, GABS, IOU, RETRO, STREETMAP, and TARSAL",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "The New York Times Crossword": {
@@ -594,7 +601,7 @@
         "checkedAt": "2026-08-30T02:20:00Z",
         "latestOfficialDate": "2026-08-30",
         "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 30 pairs prepared: JAFAR, SOLD, IBET, NBA, ARUBA, and KABOOM",
+        "selectedPairStatus": "Six selected August 30 pairs published: JAFAR, SOLD, IBET, NBA, ARUBA, and KABOOM",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "LA Times Crossword": {
