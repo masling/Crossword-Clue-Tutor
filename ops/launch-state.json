@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-30T12:27:00+08:00",
+  "updatedAt": "2026-08-30T14:21:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -146,7 +146,7 @@
     },
     "dailyDefinitionMeaningPolicy": {
       "enabledAt": "2026-08-28T17:00:00+08:00",
-      "lastBackfillDate": "2026-08-29",
+      "lastBackfillDate": "2026-08-30",
       "lastCurrentProfileDate": "2026-08-30",
       "currentProfilesPublishedToday": 30,
       "currentAnswerRule": "After each routine clue batch, publish one canonical Definition & Meaning page for every unique current-date answer missing from data/answers.json; current missing answers are mandatory even when they exceed the target",
@@ -202,8 +202,8 @@
       "selectionReason": "Every missing unique answer from the verified August 30 LA Times and USA TODAY selected-clue batches"
     },
     "latestDailyDefinitionMeaningBackfill": {
-      "date": "2026-08-29",
-      "currentProfilesPublished": 28,
+      "date": "2026-08-30",
+      "currentProfilesPublished": 30,
       "dailyTarget": 25,
       "remainingCapacity": 0,
       "historicalProfilesPublished": 0,
@@ -653,13 +653,13 @@
     }
   },
   "latestDailyEvidencePass": {
-    "date": "2026-08-29",
-    "completedAt": "2026-08-29T14:20:00+08:00",
-    "gmail": { "newProjectMessages": 2, "spamMessages": 0, "result": "SaaSHub approved the listing and sent its verification link" },
-    "teacherPilotAggregate": { "status": "success", "totalTeacherReports": 0, "reportsWithTwoSessions": 0, "verifiedDistinctEducators": 0, "privacy": "Aggregate-only result; no email address or feedback text was returned" },
+    "date": "2026-08-30",
+    "completedAt": "2026-08-30T14:21:00+08:00",
+    "gmail": { "newProjectMessages": 0, "spamMessages": 0, "result": "No new project reply; one Zoho promotional message was excluded from project evidence" },
+    "teacherPilotAggregate": { "status": "success", "totalTeacherReports": 0, "reportsWithTwoSessions": 0, "verifiedDistinctEducators": 0, "privacy": "Aggregate-only result; no email address or feedback text was selected" },
     "seoAnalytics": { "status": "not_due", "nextReviewNotBefore": "2026-08-31T14:55:00+08:00" },
-    "outreach": { "action": "SaaSHub verification completed", "publicListing": true, "linkVerified": true, "cost": 0 },
-    "googleTrends": { "status": "success", "adapter": "google-trends-ops 0.3.0 browser capture", "risingRows": 25, "publishedGaps": 1, "operatorCsvNeeded": false }
+    "outreach": { "action": "One due follow-up sent to Daily Crossword Links", "channel": "email", "assetUrl": "https://crosswordcluetutor.com/research/ambiguous-crossword-clues/", "messageId": "1a051530a6c1eb98", "duplicateAndReplyCheck": "Gmail contained two prior sent messages and no recipient reply", "cost": 0 },
+    "googleTrends": { "status": "success", "adapter": "google-trends-ops 0.3.0 browser capture", "risingRows": 25, "alreadyCoveredRows": 1, "publishedGaps": 0, "operatorCsvNeeded": false }
   },
   "search": {
     "dailyTrendsGap": {
@@ -667,8 +667,8 @@
       "window": "Past 1 day",
       "geo": "Worldwide",
       "url": "https://trends.google.com/trends/explore?date=now%201-d&q=crossword",
-      "lastReviewedAt": "2026-08-29T14:36:00+08:00",
-      "lastAttemptedAt": "2026-08-29T14:36:00+08:00",
+      "lastReviewedAt": "2026-08-30T14:21:00+08:00",
+      "lastAttemptedAt": "2026-08-30T14:21:00+08:00",
       "latestAttemptStatus": "Success through the installed browser adapter using the dynamically resolved connected default profile; one normal Chrome page loaded and no adapter-generated API request was made",
       "operatorCsvNeeded": false,
       "processCorrectedAt": "2026-08-29T14:31:00+08:00",
@@ -678,7 +678,7 @@
       "prohibitedAccessProcess": "No server-side curl, raw HTTP, shared automation egress, undocumented endpoints, CAPTCHA bypass, or fixed globally bound Chrome profile",
       "evidenceFile": "relatedQueries (1).csv (user-supplied Google Trends export)",
       "breakoutQueries": 25,
-      "coverageBeforeGapPass": "2 of 25 Rising/Breakout rows were already covered by the Most unexpected page",
+      "coverageBeforeGapPass": "1 of 25 Rising/Breakout rows was already covered by today's Ankle-related = TARSAL clue and answer pages",
       "publishedGaps": [
         "where a Hindu woman wears a bichiya = TOE",
         "post-Ramadan festival that translates to festival = EID",
@@ -698,11 +698,11 @@
         "resolvedProfile": "用户1 (connected default at run time)",
         "window": "Worldwide Web Search, past 24 hours",
         "risingRows": 25,
-        "alreadyCoveredRows": 2,
-        "publishedRows": 2,
-        "publishedPages": 1,
-        "deferredRows": 21,
-        "deferredReason": "No reliable current publication/date/unique-answer evidence, ambiguous multi-answer intent, or an unsupported new publication that should not be added from one trend spike"
+        "alreadyCoveredRows": 1,
+        "publishedRows": 0,
+        "publishedPages": 0,
+        "deferredRows": 24,
+        "deferredReason": "The remaining rows lacked a verified monitored publication and source date, were ambiguous multi-answer historical queries, or belonged to unsupported publication families; no filler page was created"
       }
     },
     "seoReviewCadence": {
@@ -986,7 +986,7 @@
         "contentUpdate": "Current listing is live but still states 160 clues across 12 skills; a factual update request for 500/29 was sent in the original approval thread at 2026-08-24T19:41:53+08:00"
       }
     ],
-    "outreachRepliesSent": 2,
+    "outreachRepliesSent": 3,
     "nextListingCheckNotBefore": "2026-08-25T13:24:04+08:00",
     "followUpPolicy": {
       "waitDays": 8,
@@ -999,8 +999,8 @@
     "dailyCadence": {
       "targetPerDay": "1–2 new high-fit submissions or due follow-ups",
       "directSendAuthorized": true,
-      "lastExecutedAt": "2026-08-29T14:17:00+08:00",
-      "lastTarget": "SaaSHub approval verification and public link audit",
+      "lastExecutedAt": "2026-08-30T14:21:00+08:00",
+      "lastTarget": "Daily Crossword Links one-time follow-up after duplicate and reply verification",
       "minimumQualityGate": "A stable public channel and explicit resource-submission invitation are required; exclude paid, reciprocal, adult, guest-post-farm, do-not-contact, replied, and duplicate targets"
     },
     "directoryPilot": {

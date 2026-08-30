@@ -24,7 +24,12 @@
       "sentAt": "2026-08-20T23:11:14+08:00",
       "messageId": "1a01fb9f04ac6441",
       "duplicateSentAt": "2026-08-22T09:43:52+08:00",
-      "duplicateMessageId": "1a027237ca058a49"
+      "duplicateMessageId": "1a027237ca058a49",
+      "followUpStatus": "sent",
+      "followUpSentAt": "2026-08-30T14:21:00+08:00",
+      "followUpMessageId": "1a051530a6c1eb98",
+      "followUpAssetUrl": "https://crosswordcluetutor.com/research/ambiguous-crossword-clues/",
+      "followUpEvidence": "One individually reviewed reply was sent after Gmail showed only the two prior sent messages and no recipient reply; the message explicitly requests no further action if the resource is not a fit."
     },
     {
       "id": "xword-blog",
