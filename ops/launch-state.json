@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-29T14:43:00+08:00",
+  "updatedAt": "2026-08-30T10:25:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -147,8 +147,8 @@
     "dailyDefinitionMeaningPolicy": {
       "enabledAt": "2026-08-28T17:00:00+08:00",
       "lastBackfillDate": "2026-08-29",
-      "lastCurrentProfileDate": "2026-08-29",
-      "currentProfilesPublishedToday": 29,
+      "lastCurrentProfileDate": "2026-08-30",
+      "currentProfilesPublishedToday": 18,
       "currentAnswerRule": "After each routine clue batch, publish one canonical Definition & Meaning page for every unique current-date answer missing from data/answers.json; current missing answers are mandatory even when they exceed the target",
       "backfillRule": "After all five sources are complete, subtract current profiles already published that local day from 25; backfill only the positive remainder from deterministic reviewed historical gaps and publish nothing when the remainder is zero or no verified gaps remain",
       "currentPlannerCommand": "npm run answer:gaps -- --date YYYY-MM-DD --current-only --output .local/answer-profile-current.json",
@@ -173,15 +173,13 @@
       "selectionReason": "Every August 28 reviewed answer still missing a canonical page; the current lane exactly met the daily target, so no historical filler was used"
     },
     "latestCurrentDefinitionMeaningRun": {
-      "date": "2026-08-29",
-      "intake": "ops/answer-intake/2026-08-29-current-definition-meaning-11.json",
-      "currentProfiles": 11,
-      "profilesBefore": 162,
-      "profilesAfter": 173,
-      "status": "Production verified",
-      "deployedAt": "2026-08-29T10:27:54+08:00",
-      "productionVerification": "GMO, Bioré, and NBA champs Definition & Meaning pages returned HTTP 200 after deployment",
-      "selectionReason": "Every missing unique answer from the verified August 29 NYT Mini and NYT Daily selected-clue batches; RAD already had a reviewed profile"
+      "date": "2026-08-30",
+      "intake": "ops/answer-intake/2026-08-30-current-definition-meaning-18.json",
+      "currentProfiles": 18,
+      "profilesBefore": 191,
+      "profilesAfter": 209,
+      "status": "Validated locally; deployment pending",
+      "selectionReason": "Every missing unique answer from the verified August 30 NYT Mini, NYT Midi, and NYT Daily selected-clue batches"
     },
     "latestMiddayDefinitionMeaningRun": {
       "date": "2026-08-29",
@@ -534,29 +532,27 @@
       "USA TODAY Crossword"
     ],
     "lastPublishedSourceDates": {
-      "NYT Mini": "2026-08-29",
-      "NYT Midi Crossword": "2026-08-29",
-      "The New York Times Crossword": "2026-08-29",
+      "NYT Mini": "2026-08-30",
+      "NYT Midi Crossword": "2026-08-30",
+      "The New York Times Crossword": "2026-08-30",
       "LA Times Crossword": "2026-08-29",
       "USA TODAY Crossword": "2026-08-29"
     },
     "pendingSourceDates": {},
     "latestMorningFreshnessRun": {
-      "sourceDate": "2026-08-29",
-      "publishedAt": "2026-08-29T10:25:00+08:00",
+      "sourceDate": "2026-08-30",
+      "publishedAt": "2026-08-30T10:25:00+08:00",
       "publications": [
-        { "publication": "NYT Mini", "selectedClues": 6, "answers": ["MAN", "GAMES", "ONMYWAY", "RAD", "GMO", "STADIUM"], "confidence": "Medium-high; exact pairs verified through bounded public third-party evidence and answer facts independently reviewed" },
-        { "publication": "The New York Times Crossword", "selectedClues": 6, "answers": ["NBACHAMPS", "BIORE", "SUSHIBOAT", "IDTAG", "ALIENSHIP", "GOTMAD"], "confidence": "Medium-high; exact pairs verified through bounded public third-party evidence and answer facts independently reviewed" }
+        { "publication": "NYT Mini", "selectedClues": 6, "answers": ["HARP", "IVIED", "PEPSI", "COKE", "NYT", "DIET"], "confidence": "High; exact same-day pairs verified through bounded public third-party evidence and editorially reviewed" },
+        { "publication": "NYT Midi Crossword", "selectedClues": 6, "answers": ["LIP", "GABS", "IOU", "RETRO", "STREETMAP", "TARSAL"], "confidence": "High; exact same-day pairs verified through bounded public third-party evidence and editorially reviewed" },
+        { "publication": "The New York Times Crossword", "selectedClues": 6, "answers": ["JAFAR", "SOLD", "IBET", "NBA", "ARUBA", "KABOOM"], "confidence": "Medium-high; multiple bounded public sources corroborated the same-day pairs and answers were editorially reviewed" }
       ],
-      "pending": ["NYT Midi Crossword"],
-      "clueIntake": "ops/intake/2026-08-29-nyt-mini-daily-routine.json",
-      "answerIntake": "ops/answer-intake/2026-08-29-current-definition-meaning-11.json",
-      "currentAnswerProfiles": 11,
+      "pending": [],
+      "clueIntake": "ops/intake/2026-08-30-nyt-mini-midi-daily-routine.json",
+      "answerIntake": "ops/answer-intake/2026-08-30-current-definition-meaning-18.json",
+      "currentAnswerProfiles": 18,
       "rightsBoundary": "Six selected clue pages per advanced source; no grid or complete answer list",
-      "status": "Production verified",
-      "deploymentCommit": "021442dc91d79199f4326ec14357330437745fa1",
-      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33228979151",
-      "productionVerification": "Four representative clue pages and three new answer pages returned HTTP 200; production sitemap contains 537 URLs"
+      "status": "Validated locally; deployment pending"
     },
     "latestMiddayFreshnessRun": {
       "sourceDate": "2026-08-29",
@@ -579,26 +575,26 @@
     "officialSourceDiscovery": {
       "NYT Mini": {
         "adapter": "read-only-public-research",
-        "checkedAt": "2026-08-29T02:20:00Z",
-        "latestOfficialDate": "2026-08-29",
+        "checkedAt": "2026-08-30T02:20:00Z",
+        "latestOfficialDate": "2026-08-30",
         "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 29 pairs published: MAN, GAMES, ONMYWAY, RAD, GMO, and STADIUM",
+        "selectedPairStatus": "Six selected August 30 pairs prepared: HARP, IVIED, PEPSI, COKE, NYT, and DIET",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "NYT Midi Crossword": {
         "adapter": "read-only-public-research",
-        "checkedAt": "2026-08-29T04:20:00Z",
-        "latestOfficialDate": "2026-08-29",
+        "checkedAt": "2026-08-30T02:20:00Z",
+        "latestOfficialDate": "2026-08-30",
         "accessMode": "Bounded public same-day clue-answer pages without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 29 pairs published: TOSS, TAS, IMIN, COME, MAMA, and AMID",
+        "selectedPairStatus": "Six selected August 30 pairs prepared: LIP, GABS, IOU, RETRO, STREETMAP, and TARSAL",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "The New York Times Crossword": {
         "adapter": "read-only-public-research",
-        "checkedAt": "2026-08-29T02:20:00Z",
-        "latestOfficialDate": "2026-08-29",
+        "checkedAt": "2026-08-30T02:20:00Z",
+        "latestOfficialDate": "2026-08-30",
         "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 29 pairs published: NBACHAMPS, BIORE, SUSHIBOAT, IDTAG, ALIENSHIP, and GOTMAD",
+        "selectedPairStatus": "Six selected August 30 pairs prepared: JAFAR, SOLD, IBET, NBA, ARUBA, and KABOOM",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "LA Times Crossword": {

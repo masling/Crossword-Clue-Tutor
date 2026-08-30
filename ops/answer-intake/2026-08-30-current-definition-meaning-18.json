@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-30",
+  "selectionReason": "Every unique answer from the verified August 30 NYT Mini, NYT Midi, and NYT Daily selected-clue batches still lacked a canonical Definition & Meaning page.",
+  "profiles": [
+    { "answer": "ARUBA", "displayTerm": "Aruba", "slug": "aruba", "pronunciation": "uh-ROO-buh", "related": [] },
+    { "answer": "COKE", "displayTerm": "Coke", "slug": "coke", "pronunciation": "kohk", "related": [] },
+    { "answer": "DIET", "displayTerm": "Diet", "slug": "diet", "pronunciation": "DY-uht", "related": [] },
+    { "answer": "GABS", "displayTerm": "Gabs", "slug": "gabs", "pronunciation": "gabz", "related": [] },
+    { "answer": "HARP", "displayTerm": "Harp", "slug": "harp", "pronunciation": "harp", "related": [] },
+    { "answer": "IBET", "displayTerm": "I bet", "slug": "i-bet", "pronunciation": "eye bet", "related": [] },
+    { "answer": "IOU", "displayTerm": "IOU", "slug": "iou", "pronunciation": "eye oh yoo", "related": [] },
+    { "answer": "JAFAR", "displayTerm": "Jafar", "slug": "jafar", "pronunciation": "juh-FAR", "related": [] },
+    { "answer": "KABOOM", "displayTerm": "Kaboom", "slug": "kaboom", "pronunciation": "kuh-BOOM", "related": [] },
+    { "answer": "NBA", "displayTerm": "NBA", "slug": "nba", "pronunciation": "en bee ay", "related": [] },
+    { "answer": "NYT", "displayTerm": "NYT", "slug": "nyt", "pronunciation": "en why tee", "related": [] },
+    { "answer": "PEPSI", "displayTerm": "Pepsi", "slug": "pepsi", "pronunciation": "PEP-see", "related": [] },
+    { "answer": "RETRO", "displayTerm": "Retro", "slug": "retro", "pronunciation": "RET-roh", "related": [] },
+    { "answer": "STREETMAP", "displayTerm": "Street map", "slug": "street-map", "pronunciation": "street map", "related": [] },
+    { "answer": "TARSAL", "displayTerm": "Tarsal", "slug": "tarsal", "pronunciation": "TAR-suhl", "related": [] },
+    { "answer": "IVIED", "displayTerm": "Ivied", "slug": "ivied", "pronunciation": "EYE-veed", "related": [] },
+    { "answer": "LIP", "displayTerm": "Lip", "slug": "lip", "pronunciation": "lip", "related": [] },
+    { "answer": "SOLD", "displayTerm": "Sold", "slug": "sold", "pronunciation": "sohld", "related": [] }
+  ]
+}
