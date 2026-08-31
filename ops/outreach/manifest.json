@@ -85,7 +85,12 @@
       "gmailDraftCreatedAt": null,
       "approvalRequired": true,
       "sentAt": "2026-08-22T09:44:00+08:00",
-      "messageId": "1a027239c4d9f1e6"
+      "messageId": "1a027239c4d9f1e6",
+      "followUpStatus": "sent",
+      "followUpSentAt": "2026-08-31T14:19:00+08:00",
+      "followUpMessageId": "1a05678238c40e15",
+      "followUpAssetUrl": "https://crosswordcluetutor.com/solver/",
+      "followUpEvidence": "One individually reviewed reply was sent after Gmail showed only the original sent message and no recipient reply; the message explicitly requests no further follow-up if the resource is not a fit."
     },
     {
       "id": "the-puzzle-solver",
