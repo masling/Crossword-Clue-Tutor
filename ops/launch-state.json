@@ -178,7 +178,11 @@
       "currentProfiles": 16,
       "profilesBefore": 221,
       "profilesAfter": 237,
-      "status": "Validated locally; deployment pending",
+      "status": "Production verified",
+      "deployedAt": "2026-08-31T10:23:00+08:00",
+      "deploymentCommit": "732344cd66b7dc9454e3ae01b735455728f8b59f",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33350430542",
+      "productionVerification": "Beau and Yoko Definition & Meaning pages returned HTTP 200 after deployment",
       "selectionReason": "Every missing unique answer from the verified August 31 NYT Mini, NYT Midi, and NYT Daily selected-clue batches; TEARS and NASA already had reviewed profiles"
     },
     "latestMiddayDefinitionMeaningRun": {
@@ -554,7 +558,10 @@
       "answerIntake": "ops/answer-intake/2026-08-31-current-definition-meaning-16.json",
       "currentAnswerProfiles": 16,
       "rightsBoundary": "Six selected clue pages per advanced source; no grid or complete answer list",
-      "status": "Validated locally; deployment pending"
+      "status": "Production verified",
+      "deploymentCommit": "732344cd66b7dc9454e3ae01b735455728f8b59f",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33350430542",
+      "productionVerification": "Representative NYT Mini, Midi, and Daily clue pages plus two new answer pages returned HTTP 200; production sitemap contains 670 URLs"
     },
     "latestMiddayFreshnessRun": {
       "sourceDate": "2026-08-30",
@@ -579,7 +586,7 @@
         "checkedAt": "2026-08-31T02:18:00Z",
         "latestOfficialDate": "2026-08-31",
         "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 31 pairs prepared: WEB, BEAU, TEARS, EARLY, CRY, and WEARY",
+        "selectedPairStatus": "Six selected August 31 pairs published: WEB, BEAU, TEARS, EARLY, CRY, and WEARY",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "NYT Midi Crossword": {
@@ -587,7 +594,7 @@
         "checkedAt": "2026-08-31T02:18:00Z",
         "latestOfficialDate": "2026-08-31",
         "accessMode": "Bounded public same-day clue-answer pages without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 31 pairs prepared: NASA, ECON, YOKO, VALE, RUTS, and AKA",
+        "selectedPairStatus": "Six selected August 31 pairs published: NASA, ECON, YOKO, VALE, RUTS, and AKA",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "The New York Times Crossword": {
@@ -595,7 +602,7 @@
         "checkedAt": "2026-08-31T02:18:00Z",
         "latestOfficialDate": "2026-08-31",
         "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 31 pairs prepared: STEP, UCLA, TIPSY, LUXE, BAIT, and AGREE",
+        "selectedPairStatus": "Six selected August 31 pairs published: STEP, UCLA, TIPSY, LUXE, BAIT, and AGREE",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "LA Times Crossword": {
