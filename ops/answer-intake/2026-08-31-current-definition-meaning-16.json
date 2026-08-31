@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-31",
+  "selectionReason": "Every unique answer from the verified August 31 NYT Mini, NYT Midi, and NYT Daily selected-clue batches still lacking a canonical Definition & Meaning page; TEARS and NASA already had reviewed profiles.",
+  "profiles": [
+    { "answer": "AGREE", "displayTerm": "Agree", "slug": "agree", "pronunciation": "uh-GREE", "related": [] },
+    { "answer": "AKA", "displayTerm": "AKA", "slug": "aka", "pronunciation": "ay kay ay", "related": [] },
+    { "answer": "BAIT", "displayTerm": "Bait", "slug": "bait", "pronunciation": "bayt", "related": [] },
+    { "answer": "BEAU", "displayTerm": "Beau", "slug": "beau", "pronunciation": "boh", "related": [] },
+    { "answer": "CRY", "displayTerm": "Cry", "slug": "cry", "pronunciation": "kry", "related": [] },
+    { "answer": "EARLY", "displayTerm": "Early", "slug": "early", "pronunciation": "UR-lee", "related": [] },
+    { "answer": "ECON", "displayTerm": "Econ", "slug": "econ", "pronunciation": "EE-kon", "related": [] },
+    { "answer": "LUXE", "displayTerm": "Luxe", "slug": "luxe", "pronunciation": "luhks", "related": [] },
+    { "answer": "RUTS", "displayTerm": "Ruts", "slug": "ruts", "pronunciation": "ruhts", "related": [] },
+    { "answer": "STEP", "displayTerm": "Step", "slug": "step", "pronunciation": "step", "related": [] },
+    { "answer": "TIPSY", "displayTerm": "Tipsy", "slug": "tipsy", "pronunciation": "TIP-see", "related": [] },
+    { "answer": "UCLA", "displayTerm": "UCLA", "slug": "ucla", "pronunciation": "yoo see el ay", "related": [] },
+    { "answer": "VALE", "displayTerm": "Vale", "slug": "vale", "pronunciation": "vayl", "related": [] },
+    { "answer": "WEARY", "displayTerm": "Weary", "slug": "weary", "pronunciation": "WEER-ee", "related": [] },
+    { "answer": "WEB", "displayTerm": "Web", "slug": "web", "pronunciation": "web", "related": [] },
+    { "answer": "YOKO", "displayTerm": "Yoko", "slug": "yoko", "pronunciation": "YOH-koh", "related": [] }
+  ]
+}
