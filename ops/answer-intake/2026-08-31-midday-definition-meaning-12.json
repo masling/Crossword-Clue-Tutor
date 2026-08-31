@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-31",
+  "selectionReason": "Every unique answer from the verified August 31 LA Times and USA TODAY selected-clue batches still lacked a canonical Definition & Meaning page.",
+  "profiles": [
+    { "answer": "ADMIT", "displayTerm": "Admit", "slug": "admit", "pronunciation": "ad-MIT", "related": [] },
+    { "answer": "BCCED", "displayTerm": "BCCed", "slug": "bcced", "pronunciation": "bee-see-seed", "related": [] },
+    { "answer": "GIVE", "displayTerm": "Give", "slug": "give", "pronunciation": "giv", "related": [] },
+    { "answer": "HOWL", "displayTerm": "Howl", "slug": "howl", "pronunciation": "howl", "related": [] },
+    { "answer": "IMAMESS", "displayTerm": "I'm a mess", "slug": "im-a-mess", "pronunciation": "eye-m uh mess", "related": [] },
+    { "answer": "ISA", "displayTerm": "Isa", "slug": "isa", "pronunciation": "EE-suh", "related": [] },
+    { "answer": "LEACH", "displayTerm": "Leach", "slug": "leach", "pronunciation": "leech", "related": [] },
+    { "answer": "MOI", "displayTerm": "Moi", "slug": "moi", "pronunciation": "mwah", "related": [] },
+    { "answer": "OMNI", "displayTerm": "Omni-", "slug": "omni", "pronunciation": "OM-nee", "related": [] },
+    { "answer": "SYNE", "displayTerm": "Syne", "slug": "syne", "pronunciation": "syn", "related": [] },
+    { "answer": "TURKEYVULTURES", "displayTerm": "Turkey vultures", "slug": "turkey-vultures", "pronunciation": "TUR-kee VUL-churz", "related": [] },
+    { "answer": "TVSET", "displayTerm": "TV set", "slug": "tv-set", "pronunciation": "tee vee set", "related": [] }
+  ]
+}
