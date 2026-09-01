@@ -4108,5 +4108,464 @@
     ],
     "otherMeanings": "TVSET first answers the literal living-room screen. It also serves as the puzzle's revealer: the referenced entries can be understood as a themed “TV set,” or collection connected to television. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
     "related": []
+  },
+  {
+    "slug": "aces",
+    "answer": "ACES",
+    "displayTerm": "Aces",
+    "pronunciation": "AY-siz",
+    "partOfSpeech": "plural noun",
+    "meaning": "Aces are the rank-one cards that typically begin foundation piles in solitaire games.",
+    "crosswordUse": "ACES answers the reviewed clue “Important cards in solitaire.” The named card game points to the rank used to start its foundation piles.",
+    "whyCommon": "ACES is useful to learn because this reviewed clue depends on game factoid, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Important cards in solitaire",
+      "Name the four lowest-rank cards that begin the foundation piles.",
+      "4-letter game factoid answer confirmed by crossings"
+    ],
+    "otherMeanings": "ACES are important in common solitaire variants because each suit's foundation is built upward starting from its ace. The clue and answer are both plural. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "act-as",
+    "answer": "ACTAS",
+    "displayTerm": "Act as",
+    "pronunciation": "akt az",
+    "partOfSpeech": "verb phrase",
+    "meaning": "To act as something is to perform its function or serve in its role.",
+    "crosswordUse": "ACTAS answers the reviewed clue “Fill the role of.” The clue paraphrases a two-word verb phrase whose grid form removes the space.",
+    "whyCommon": "ACTAS is useful to learn because this reviewed clue depends on phrase equivalence, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "Fill the role of",
+      "Use a two-word five-letter phrase meaning serve as.",
+      "5-letter phrase equivalence answer confirmed by crossings"
+    ],
+    "otherMeanings": "ACTAS is the five-letter grid form of the phrase meaning “fill the role of.” Its space is omitted in the crossword entry. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "alma",
+    "answer": "ALMA",
+    "displayTerm": "Alma",
+    "pronunciation": "AL-muh",
+    "partOfSpeech": "phrase component",
+    "meaning": "Alma mater is a Latin phrase used for a school, college, or university one attended.",
+    "crosswordUse": "ALMA answers the reviewed clue “___ mater.” The supplied second word belongs to a fixed two-word Latin expression.",
+    "whyCommon": "ALMA is useful to learn because this reviewed clue depends on fill in the blank, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "___ mater",
+      "Complete the four-letter first word of the phrase for one's former school.",
+      "4-letter fill in the blank answer confirmed by crossings"
+    ],
+    "otherMeanings": "ALMA completes the fixed phrase “alma mater.” The four-letter Latin word precedes mater in the familiar term for a former school. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "aloha",
+    "answer": "ALOHA",
+    "displayTerm": "Aloha",
+    "pronunciation": "uh-LOH-hah",
+    "partOfSpeech": "interjection",
+    "meaning": "Aloha is a Hawaiian greeting used for hello, welcome, affection, and farewell.",
+    "crosswordUse": "ALOHA answers the reviewed clue “\"Welcome to Waikiki!\".” The quoted welcome and Hawaiian location point to the best-known local greeting.",
+    "whyCommon": "ALOHA is useful to learn because this reviewed clue depends on cultural phrase, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "\"Welcome to Waikiki!\"",
+      "Use the five-letter Hawaiian word for hello or welcome.",
+      "5-letter cultural phrase answer confirmed by crossings"
+    ],
+    "otherMeanings": "ALOHA is the five-letter Hawaiian greeting suited to welcoming someone to Waikiki. The location makes the language and cultural context explicit. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "arlo",
+    "answer": "ARLO",
+    "displayTerm": "Arlo",
+    "pronunciation": "AR-loh",
+    "partOfSpeech": "proper noun",
+    "meaning": "Arlo Parks is a British singer-songwriter and poet known for introspective indie-pop music.",
+    "crosswordUse": "ARLO answers the reviewed clue “Singer Parks.” A profession and surname ask for the performer's first name.",
+    "whyCommon": "ARLO is useful to learn because this reviewed clue depends on proper noun, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Singer Parks",
+      "Use Parks's four-letter first name, also shared by folk singer Guthrie.",
+      "4-letter proper noun answer confirmed by crossings"
+    ],
+    "otherMeanings": "ARLO is the four-letter first name in the professional name Arlo Parks. The occupation plus surname identifies the singer. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "atl",
+    "answer": "ATL",
+    "displayTerm": "ATL",
+    "pronunciation": "ay tee el",
+    "partOfSpeech": "abbreviation",
+    "meaning": "ATL is a common abbreviation for Atlanta, Georgia, where The Coca-Cola Company is headquartered.",
+    "crosswordUse": "ATL answers the reviewed clue “Locale of Coca-Cola's headquarters: Abbr..” A company-headquarters fact identifies the city, while the abbreviation marker fixes the answer form.",
+    "whyCommon": "ATL is useful to learn because this reviewed clue depends on abbreviation factoid, exact grammar, and a 3-letter grid entry.",
+    "cluePatterns": [
+      "Locale of Coca-Cola's headquarters: Abbr.",
+      "Use the three-letter shorthand for Georgia's capital.",
+      "3-letter abbreviation factoid answer confirmed by crossings"
+    ],
+    "otherMeanings": "ATL fits because Coca-Cola's headquarters are in Atlanta. The clue's “Abbr.” explicitly requests the city's three-letter shorthand. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "best",
+    "answer": "BEST",
+    "displayTerm": "Best",
+    "pronunciation": "best",
+    "partOfSpeech": "closing formula",
+    "meaning": "Best is a common concise email closing meaning best wishes or regards.",
+    "crosswordUse": "BEST answers the reviewed clue “Email sign-off.” The communication context asks for a conventional closing rather than the superlative adjective sense.",
+    "whyCommon": "BEST is useful to learn because this reviewed clue depends on usage definition, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Email sign-off",
+      "Use a four-letter closing that can stand for warm regards.",
+      "4-letter usage definition answer confirmed by crossings"
+    ],
+    "otherMeanings": "BEST fits as a four-letter professional email sign-off, often used as a shortened form of “Best regards” or “Best wishes.” Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "blew-on",
+    "answer": "BLEWON",
+    "displayTerm": "Blew on",
+    "pronunciation": "bloo on",
+    "partOfSpeech": "verb phrase",
+    "meaning": "Blew on means directed one's breath toward something, often to help it cool.",
+    "crosswordUse": "BLEWON answers the reviewed clue “Tried to cool down, as hot soup.” The hot-soup example identifies a specific breath-based cooling action in the past tense.",
+    "whyCommon": "BLEWON is useful to learn because this reviewed clue depends on descriptive definition, exact grammar, and a 6-letter grid entry.",
+    "cluePatterns": [
+      "Tried to cool down, as hot soup",
+      "Use a six-letter two-word past-tense phrase involving one's breath.",
+      "6-letter descriptive definition answer confirmed by crossings"
+    ],
+    "otherMeanings": "BLEWON describes the familiar action of blowing on hot soup to cool it. The six-letter grid entry combines the two-word past-tense phrase. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "buy-in",
+    "answer": "BUYIN",
+    "displayTerm": "Buy-in",
+    "pronunciation": "BY-in",
+    "partOfSpeech": "noun",
+    "meaning": "Buy-in is agreement with, acceptance of, or active support for a proposal or plan.",
+    "crosswordUse": "BUYIN answers the reviewed clue “Support, as for a corporate plan.” The corporate context points to organizational acceptance rather than financial assistance.",
+    "whyCommon": "BUYIN is useful to learn because this reviewed clue depends on business definition, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "Support, as for a corporate plan",
+      "Think of a hyphenated business term for stakeholder acceptance.",
+      "5-letter business definition answer confirmed by crossings"
+    ],
+    "otherMeanings": "BUYIN names the support a corporate plan needs from employees or stakeholders. The hyphen is omitted in the five-letter grid entry. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "cache",
+    "answer": "CACHE",
+    "displayTerm": "Cache",
+    "pronunciation": "kash",
+    "partOfSpeech": "noun",
+    "meaning": "A cache is a hidden or stored collection of supplies, valuables, or data.",
+    "crosswordUse": "CACHE answers the reviewed clue “Stash.” The short clue permits several senses; the five-letter fill selects a stored or hidden collection.",
+    "whyCommon": "CACHE is useful to learn because this reviewed clue depends on straight definition, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "Stash",
+      "Use a five-letter word for hidden supplies that also appears in computing.",
+      "5-letter straight definition answer confirmed by crossings"
+    ],
+    "otherMeanings": "CACHE matches the noun sense of “stash”: a stored collection kept for later use, often concealed. The five-letter answer can also be a verb, but the noun reading is most direct here. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "cue-tips",
+    "answer": "CUETIPS",
+    "displayTerm": "Cue tips",
+    "pronunciation": "kyoo tips",
+    "partOfSpeech": "plural noun phrase",
+    "meaning": "Cue tips are the leather ends of billiard cues where chalk is applied before a shot.",
+    "crosswordUse": "CUETIPS answers the reviewed clue “Targets of pool chalk ... and a phonetic hint to the starts of 8-, 9-, 25- and 26-Across and 9-Down.” The ellipsis and numbered references announce both a literal billiards answer and a puzzle-wide sound pattern.",
+    "whyCommon": "CUETIPS is useful to learn because this reviewed clue depends on theme revealer, exact grammar, and a 7-letter grid entry.",
+    "cluePatterns": [
+      "Targets of pool chalk ... and a phonetic hint to the starts of 8-, 9-, 25- and 26-Across and 9-Down",
+      "Name the two-word plural for the chalked ends of billiard sticks.",
+      "7-letter theme revealer answer confirmed by crossings"
+    ],
+    "otherMeanings": "CUETIPS answers the literal pool-chalk clue and acts as a phonetic theme revealer: the referenced entries begin with sounds that can be heard as “cue tips.” The two-word plural is entered without a space. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "eased-in",
+    "answer": "EASEDIN",
+    "displayTerm": "Eased in",
+    "pronunciation": "eezd in",
+    "partOfSpeech": "verb phrase",
+    "meaning": "Eased in means began or entered slowly and gradually rather than abruptly.",
+    "crosswordUse": "EASEDIN answers the reviewed clue “Began gradually.” The past-tense clue calls for a past-tense two-word phrase indicating a gentle start.",
+    "whyCommon": "EASEDIN is useful to learn because this reviewed clue depends on phrase equivalence, exact grammar, and a 7-letter grid entry.",
+    "cluePatterns": [
+      "Began gradually",
+      "Use a seven-letter two-word phrase meaning entered slowly.",
+      "7-letter phrase equivalence answer confirmed by crossings"
+    ],
+    "otherMeanings": "EASEDIN is the seven-letter grid form of “eased in.” The phrase describes starting gradually, with its space omitted in the entry. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "eyes",
+    "answer": "EYES",
+    "displayTerm": "Eyes",
+    "pronunciation": "eyez",
+    "partOfSpeech": "plural noun",
+    "meaning": "Eyes are the paired organs of sight used to look closely or peer.",
+    "crosswordUse": "EYES answers the reviewed clue “Peering pair.” “Pair” requires a plural answer, while “Peering” identifies the organs doing the looking.",
+    "whyCommon": "EYES is useful to learn because this reviewed clue depends on descriptive wordplay, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Peering pair",
+      "Name the four-letter pair used for sight.",
+      "4-letter descriptive wordplay answer confirmed by crossings"
+    ],
+    "otherMeanings": "EYES fits because a person peers with a pair of eyes. The alliterative two-word clue describes both their number and their action. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "fads",
+    "answer": "FADS",
+    "displayTerm": "Fads",
+    "pronunciation": "fadz",
+    "partOfSpeech": "plural noun",
+    "meaning": "Fads are practices, products, or interests that become intensely popular for a relatively short time.",
+    "crosswordUse": "FADS answers the reviewed clue “Fidget spinners and Labubu dolls, for two.” Two named examples followed by “for two” request their shared plural classification.",
+    "whyCommon": "FADS is useful to learn because this reviewed clue depends on category example, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Fidget spinners and Labubu dolls, for two",
+      "Use a four-letter plural for short-lived popular crazes.",
+      "4-letter category example answer confirmed by crossings"
+    ],
+    "otherMeanings": "FADS is the shared plural category for fidget spinners and Labubu dolls as rapidly popular consumer crazes. “For two” asks for the broader category containing both examples. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "faq",
+    "answer": "FAQ",
+    "displayTerm": "FAQ",
+    "pronunciation": "ef ay kyoo",
+    "partOfSpeech": "initialism",
+    "meaning": "FAQ stands for frequently asked questions, a website section answering common user questions.",
+    "crosswordUse": "FAQ answers the reviewed clue “Website's help section, for short.” The phrase “for short” requires an abbreviated web term.",
+    "whyCommon": "FAQ is useful to learn because this reviewed clue depends on abbreviation, exact grammar, and a 3-letter grid entry.",
+    "cluePatterns": [
+      "Website's help section, for short",
+      "Use the initials of “frequently asked questions.”",
+      "3-letter abbreviation answer confirmed by crossings"
+    ],
+    "otherMeanings": "FAQ is the familiar three-letter name for a site's help section. “For short” explicitly requests the initialism rather than the expanded phrase. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "i-dos",
+    "answer": "IDOS",
+    "displayTerm": "I dos",
+    "pronunciation": "eye dooz",
+    "partOfSpeech": "plural noun phrase",
+    "meaning": "I dos are the affirmative responses traditionally exchanged during a wedding ceremony.",
+    "crosswordUse": "IDOS answers the reviewed clue “Words exchanged at the wedding altar.” The plural “Words” and wedding setting point to the couple's repeated affirmative response.",
+    "whyCommon": "IDOS is useful to learn because this reviewed clue depends on phrase equivalence, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Words exchanged at the wedding altar",
+      "Use the two-word plural phrase for each partner's affirmative vow response.",
+      "4-letter phrase equivalence answer confirmed by crossings"
+    ],
+    "otherMeanings": "IDOS is the grid form of the plural phrase “I dos.” The clue asks for the two matching words spoken by the couple at the altar. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "ions",
+    "answer": "IONS",
+    "displayTerm": "Ions",
+    "pronunciation": "EYE-onz",
+    "partOfSpeech": "plural noun",
+    "meaning": "Ions are atoms or molecules carrying a positive or negative electric charge.",
+    "crosswordUse": "IONS answers the reviewed clue “+ or - particles.” The mathematical symbols are being used as signs of electrical charge rather than arithmetic operations.",
+    "whyCommon": "IONS is useful to learn because this reviewed clue depends on science wordplay, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "+ or - particles",
+      "Think of four-letter charged particles in chemistry.",
+      "4-letter science wordplay answer confirmed by crossings"
+    ],
+    "otherMeanings": "IONS fits because an ion may be positively charged or negatively charged, matching the plus and minus symbols. The plural clue requires the four-letter plural. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "nile",
+    "answer": "NILE",
+    "displayTerm": "Nile",
+    "pronunciation": "nyle",
+    "partOfSpeech": "proper noun",
+    "meaning": "The Nile is the major river of northeastern Africa associated with the biblical account of the infant Moses.",
+    "crosswordUse": "NILE answers the reviewed clue “River in which baby Moses was found.” The named biblical figure and river setting identify a specific Egyptian waterway.",
+    "whyCommon": "NILE is useful to learn because this reviewed clue depends on cultural reference, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "River in which baby Moses was found",
+      "Name the four-letter river flowing through Egypt.",
+      "4-letter cultural reference answer confirmed by crossings"
+    ],
+    "otherMeanings": "NILE is the four-letter river named by the biblical setting. The story places the infant Moses in a basket among reeds along the river in Egypt. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "quay",
+    "answer": "QUAY",
+    "displayTerm": "Quay",
+    "pronunciation": "kee",
+    "partOfSpeech": "noun",
+    "meaning": "A quay is a solid waterside platform where ships load or unload cargo and passengers.",
+    "crosswordUse": "QUAY answers the reviewed clue “Platform for unloading cargo ships.” The cargo-ship context identifies a built waterfront platform rather than a floating vessel.",
+    "whyCommon": "QUAY is useful to learn because this reviewed clue depends on straight definition, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Platform for unloading cargo ships",
+      "Use the four-letter waterfront structure pronounced like “key.”",
+      "4-letter straight definition answer confirmed by crossings"
+    ],
+    "otherMeanings": "QUAY is the four-letter harbor platform described by the clue. Its spelling is less predictable than its usual pronunciation, “key.” Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "quit",
+    "answer": "QUIT",
+    "displayTerm": "Quit",
+    "pronunciation": "kwit",
+    "partOfSpeech": "verb",
+    "meaning": "To quit a job is to leave or resign from it, usually permanently.",
+    "crosswordUse": "QUIT answers the reviewed clue “Leave a job for good.” The idiom “for good” supplies the permanent-resignation sense.",
+    "whyCommon": "QUIT is useful to learn because this reviewed clue depends on phrase equivalence, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Leave a job for good",
+      "Use a four-letter verb meaning resign permanently.",
+      "4-letter phrase equivalence answer confirmed by crossings"
+    ],
+    "otherMeanings": "QUIT fits because “for good” means permanently, not beneficially. The four-letter base-form verb matches “Leave.” Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "sec",
+    "answer": "SEC",
+    "displayTerm": "Sec.",
+    "pronunciation": "sek",
+    "partOfSpeech": "abbreviation",
+    "meaning": "Sec. is a common abbreviation for second, a short unit of time.",
+    "crosswordUse": "SEC answers the reviewed clue “Short time?.” The question mark indicates that “short” describes both the duration and the abbreviated answer form.",
+    "whyCommon": "SEC is useful to learn because this reviewed clue depends on wordplay abbreviation, exact grammar, and a 3-letter grid entry.",
+    "cluePatterns": [
+      "Short time?",
+      "Use the three-letter abbreviation for a single unit on a clock.",
+      "3-letter wordplay abbreviation answer confirmed by crossings"
+    ],
+    "otherMeanings": "SEC answers both parts of the wordplay: it is a short form of “second,” and a second is a short time. The question mark signals the double use of “short.” Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "seth-meyers",
+    "answer": "SETHMEYERS",
+    "displayTerm": "Seth Meyers",
+    "pronunciation": "seth MY-urz",
+    "partOfSpeech": "proper noun",
+    "meaning": "Seth Meyers is an American comedian and television host who co-anchored Saturday Night Live's Weekend Update with Amy Poehler.",
+    "crosswordUse": "SETHMEYERS answers the reviewed clue “Amy Poehler's onetime partner on \"Weekend Update\".” The named performer and television segment identify a specific former co-anchor.",
+    "whyCommon": "SETHMEYERS is useful to learn because this reviewed clue depends on proper noun, exact grammar, and a 10-letter grid entry.",
+    "cluePatterns": [
+      "Amy Poehler's onetime partner on \"Weekend Update\"",
+      "Name the ten-letter former SNL co-anchor who later hosted Late Night.",
+      "10-letter proper noun answer confirmed by crossings"
+    ],
+    "otherMeanings": "SETHMEYERS is the former Weekend Update co-anchor requested by the clue. His first and last names form the ten-letter grid entry without a space. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "shops",
+    "answer": "SHOPS",
+    "displayTerm": "Shops",
+    "pronunciation": "shops",
+    "partOfSpeech": "verb",
+    "meaning": "Shops means visits stores to browse or buy goods.",
+    "crosswordUse": "SHOPS answers the reviewed clue “Hits the mall.” “Hits” is informal for visits, and the mall setting supplies the activity.",
+    "whyCommon": "SHOPS is useful to learn because this reviewed clue depends on informal definition, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "Hits the mall",
+      "Use a five-letter third-person verb for browsing or buying in stores.",
+      "5-letter informal definition answer confirmed by crossings"
+    ],
+    "otherMeanings": "SHOPS is the five-letter verb for what someone does after hitting the mall. The answer matches the clue's third-person singular present tense. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "to-go",
+    "answer": "TOGO",
+    "displayTerm": "To go",
+    "pronunciation": "tuh goh",
+    "partOfSpeech": "adverbial phrase",
+    "meaning": "To go describes food or drink prepared for takeaway rather than consumption on the premises.",
+    "crosswordUse": "TOGO answers the reviewed clue “\"For here\" alternative.” The quoted service phrase asks for the standard contrasting choice at a restaurant counter.",
+    "whyCommon": "TOGO is useful to learn because this reviewed clue depends on opposite phrase, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "\"For here\" alternative",
+      "Use the four-letter two-word ordering option for takeaway.",
+      "4-letter opposite phrase answer confirmed by crossings"
+    ],
+    "otherMeanings": "TOGO is the restaurant-ordering alternative to “for here.” The two-word phrase becomes a four-letter grid entry without a space. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "told",
+    "answer": "TOLD",
+    "displayTerm": "Told",
+    "pronunciation": "tohld",
+    "partOfSpeech": "verb",
+    "meaning": "Told means communicated information to someone or made that person aware.",
+    "crosswordUse": "TOLD answers the reviewed clue “Informed.” The four-letter past-tense answer selects the action sense rather than the adjective sense.",
+    "whyCommon": "TOLD is useful to learn because this reviewed clue depends on straight definition, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Informed",
+      "Use the four-letter past tense of a common communication verb.",
+      "4-letter straight definition answer confirmed by crossings"
+    ],
+    "otherMeanings": "TOLD matches the past-tense verb sense of “informed,” as in “she told him the news.” It does not use the adjective sense meaning knowledgeable. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "xoxo",
+    "answer": "XOXO",
+    "displayTerm": "XOXO",
+    "pronunciation": "eks oh eks oh",
+    "partOfSpeech": "symbolic expression",
+    "meaning": "XOXO is an informal written sign-off representing hugs and kisses.",
+    "crosswordUse": "XOXO answers the reviewed clue “\"Hugs and kisses\" sign-off.” Quotation marks supply the phrase to be converted into its familiar written symbols.",
+    "whyCommon": "XOXO is useful to learn because this reviewed clue depends on symbolic equivalence, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "\"Hugs and kisses\" sign-off",
+      "Use the alternating four-character shorthand seen at the end of affectionate notes.",
+      "4-letter symbolic equivalence answer confirmed by crossings"
+    ],
+    "otherMeanings": "XOXO is the conventional four-character shorthand for hugs and kisses. It commonly closes affectionate notes, texts, or emails. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "yo-yos",
+    "answer": "YOYOS",
+    "displayTerm": "Yo-yos",
+    "pronunciation": "YOH-yohz",
+    "partOfSpeech": "plural noun",
+    "meaning": "Yo-yos are toys consisting of a grooved spool attached to a string and made to move up and down.",
+    "crosswordUse": "YOYOS answers the reviewed clue “Toys on strings.” The plural clue asks for a familiar toy category whose defining mechanism is a wound string.",
+    "whyCommon": "YOYOS is useful to learn because this reviewed clue depends on straight definition, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "Toys on strings",
+      "Name the five-letter plural of the up-and-down spool toy.",
+      "5-letter straight definition answer confirmed by crossings"
+    ],
+    "otherMeanings": "YOYOS are the plural toys controlled by strings. The hyphen and apostrophe sometimes seen in prose disappear in the five-letter grid form. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
   }
 ]

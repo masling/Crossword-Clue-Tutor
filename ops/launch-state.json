@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-08-31T14:19:00+08:00",
+  "updatedAt": "2026-09-01T12:28:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -147,8 +147,8 @@
     "dailyDefinitionMeaningPolicy": {
       "enabledAt": "2026-08-28T17:00:00+08:00",
       "lastBackfillDate": "2026-08-31",
-      "lastCurrentProfileDate": "2026-08-31",
-      "currentProfilesPublishedToday": 28,
+      "lastCurrentProfileDate": "2026-09-01",
+      "currentProfilesPublishedToday": 27,
       "currentAnswerRule": "After each routine clue batch, publish one canonical Definition & Meaning page for every unique current-date answer missing from data/answers.json; current missing answers are mandatory even when they exceed the target",
       "backfillRule": "After all five sources are complete, subtract current profiles already published that local day from 25; backfill only the positive remainder from deterministic reviewed historical gaps and publish nothing when the remainder is zero or no verified gaps remain",
       "currentPlannerCommand": "npm run answer:gaps -- --date YYYY-MM-DD --current-only --output .local/answer-profile-current.json",
@@ -173,17 +173,13 @@
       "selectionReason": "Every August 28 reviewed answer still missing a canonical page; the current lane exactly met the daily target, so no historical filler was used"
     },
     "latestCurrentDefinitionMeaningRun": {
-      "date": "2026-08-31",
-      "intake": "ops/answer-intake/2026-08-31-current-definition-meaning-16.json",
-      "currentProfiles": 16,
-      "profilesBefore": 221,
-      "profilesAfter": 237,
-      "status": "Production verified",
-      "deployedAt": "2026-08-31T10:23:00+08:00",
-      "deploymentCommit": "732344cd66b7dc9454e3ae01b735455728f8b59f",
-      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33350430542",
-      "productionVerification": "Beau and Yoko Definition & Meaning pages returned HTTP 200 after deployment",
-      "selectionReason": "Every missing unique answer from the verified August 31 NYT Mini, NYT Midi, and NYT Daily selected-clue batches; TEARS and NASA already had reviewed profiles"
+      "date": "2026-09-01",
+      "intake": "ops/answer-intake/2026-09-01-current-definition-meaning-27.json",
+      "currentProfiles": 27,
+      "profilesBefore": 249,
+      "profilesAfter": 276,
+      "status": "Validated locally; deployment pending",
+      "selectionReason": "Every missing unique answer from all five verified September 1 selected-clue batches; MEN, RAD, and GRR already had reviewed profiles"
     },
     "latestMiddayDefinitionMeaningRun": {
       "date": "2026-08-31",
@@ -538,104 +534,98 @@
       "USA TODAY Crossword"
     ],
     "lastPublishedSourceDates": {
-      "NYT Mini": "2026-08-31",
-      "NYT Midi Crossword": "2026-08-31",
-      "The New York Times Crossword": "2026-08-31",
-      "LA Times Crossword": "2026-08-31",
-      "USA TODAY Crossword": "2026-08-31"
+      "NYT Mini": "2026-09-01",
+      "NYT Midi Crossword": "2026-09-01",
+      "The New York Times Crossword": "2026-09-01",
+      "LA Times Crossword": "2026-09-01",
+      "USA TODAY Crossword": "2026-09-01"
     },
     "pendingSourceDates": {},
     "latestMorningFreshnessRun": {
-      "sourceDate": "2026-08-31",
-      "publishedAt": "2026-08-31T10:23:00+08:00",
+      "sourceDate": "2026-09-01",
+      "publishedAt": "2026-09-01T12:28:00+08:00",
       "publications": [
-        { "publication": "NYT Mini", "selectedClues": 6, "answers": ["WEB", "BEAU", "TEARS", "EARLY", "CRY", "WEARY"], "confidence": "High; exact same-day pairs verified through bounded public third-party evidence and editorially reviewed" },
-        { "publication": "NYT Midi Crossword", "selectedClues": 6, "answers": ["NASA", "ECON", "YOKO", "VALE", "RUTS", "AKA"], "confidence": "High; exact same-day pairs verified through bounded public third-party evidence and editorially reviewed; a potentially unsafe query-family candidate was replaced" },
-        { "publication": "The New York Times Crossword", "selectedClues": 6, "answers": ["STEP", "UCLA", "TIPSY", "LUXE", "BAIT", "AGREE"], "confidence": "High; exact same-day pairs verified through bounded public third-party evidence and editorially reviewed" }
+        { "publication": "NYT Mini", "selectedClues": 6, "answers": ["EYES", "XOXO", "BUYIN", "IDOS", "BEST", "YOYOS"], "confidence": "High; exact same-day pairs verified through bounded public clue pages and editorially reviewed" },
+        { "publication": "NYT Midi Crossword", "selectedClues": 6, "answers": ["ALMA", "CUETIPS", "QUAY", "FAQ", "SHOPS", "QUIT"], "confidence": "High; exact same-day pairs and numbered evidence verified through bounded public clue pages and editorially reviewed" },
+        { "publication": "The New York Times Crossword", "selectedClues": 6, "answers": ["ACTAS", "TOLD", "NILE", "ATL", "SETHMEYERS", "FADS"], "confidence": "High; exact same-day pairs verified through bounded public clue pages and editorially reviewed" }
       ],
       "pending": [],
-      "clueIntake": "ops/intake/2026-08-31-nyt-mini-midi-daily-routine.json",
-      "answerIntake": "ops/answer-intake/2026-08-31-current-definition-meaning-16.json",
-      "currentAnswerProfiles": 16,
+      "clueIntake": "ops/intake/2026-09-01-nyt-mini-midi-daily-routine.json",
+      "answerIntake": "ops/answer-intake/2026-09-01-current-definition-meaning-27.json",
+      "currentAnswerProfiles": 27,
       "rightsBoundary": "Six selected clue pages per advanced source; no grid or complete answer list",
-      "status": "Production verified",
-      "deploymentCommit": "732344cd66b7dc9454e3ae01b735455728f8b59f",
-      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33350430542",
-      "productionVerification": "Representative NYT Mini, Midi, and Daily clue pages plus two new answer pages returned HTTP 200; production sitemap contains 670 URLs"
+      "status": "Validated locally; deployment pending"
     },
     "latestMiddayFreshnessRun": {
-      "sourceDate": "2026-08-31",
-      "publishedAt": "2026-08-31T12:28:00+08:00",
+      "sourceDate": "2026-09-01",
+      "publishedAt": "2026-09-01T12:28:00+08:00",
       "publications": [
-        { "publication": "LA Times Crossword", "selectedClues": 6, "answers": ["ADMIT", "HOWL", "TURKEYVULTURES", "LEACH", "BCCED", "TVSET"], "confidence": "High; official date metadata plus matching bounded public same-date clue-answer evidence" },
-        { "publication": "USA TODAY Crossword", "selectedClues": 6, "answers": ["ISA", "SYNE", "MOI", "GIVE", "IMAMESS", "OMNI"], "confidence": "Medium-high; candidates came only from the official no-solution adapter and answers were independently verified through public exact-clue and authoritative entity/language evidence" }
+        { "publication": "LA Times Crossword", "selectedClues": 6, "answers": ["IONS", "CACHE", "EASEDIN", "SEC", "BLEWON", "ACES"], "confidence": "High; official date metadata plus matching bounded public same-date clue-answer evidence" },
+        { "publication": "USA TODAY Crossword", "selectedClues": 6, "answers": ["MEN", "ARLO", "RAD", "TOGO", "GRR", "ALOHA"], "confidence": "Medium-high; candidates came only from the official no-solution adapter and answers were independently verified through public exact-clue and authoritative entity/language evidence" }
       ],
-      "clueIntake": "ops/intake/2026-08-31-la-times-usa-today-routine.json",
-      "answerIntake": "ops/answer-intake/2026-08-31-midday-definition-meaning-12.json",
-      "currentAnswerProfiles": 12,
+      "clueIntake": "ops/intake/2026-09-01-la-times-usa-today-routine.json",
+      "answerIntake": "ops/answer-intake/2026-09-01-current-definition-meaning-27.json",
+      "currentAnswerProfiles": 27,
       "historicalBackfillProfiles": 0,
       "rightsBoundary": "Six selected clue pages per publication; no grid or complete answer list",
-      "status": "Production verified",
-      "deploymentCommit": "b51c048a8f0502b0c06afdb0666dd6418988941e",
-      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33357040979",
-      "productionVerification": "Representative LA Times and USA TODAY clue pages plus two new answer pages returned HTTP 200; production sitemap contains 694 URLs"
+      "status": "Validated locally; deployment pending"
     },
     "officialSourceDiscovery": {
       "NYT Mini": {
         "adapter": "read-only-public-research",
-        "checkedAt": "2026-08-31T02:18:00Z",
-        "latestOfficialDate": "2026-08-31",
+        "checkedAt": "2026-09-01T04:20:00Z",
+        "latestOfficialDate": "2026-09-01",
         "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 31 pairs published: WEB, BEAU, TEARS, EARLY, CRY, and WEARY",
+        "selectedPairStatus": "Six selected September 1 pairs prepared: EYES, XOXO, BUYIN, IDOS, BEST, and YOYOS",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "NYT Midi Crossword": {
         "adapter": "read-only-public-research",
-        "checkedAt": "2026-08-31T02:18:00Z",
-        "latestOfficialDate": "2026-08-31",
+        "checkedAt": "2026-09-01T04:20:00Z",
+        "latestOfficialDate": "2026-09-01",
         "accessMode": "Bounded public same-day clue-answer pages without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 31 pairs published: NASA, ECON, YOKO, VALE, RUTS, and AKA",
+        "selectedPairStatus": "Six selected September 1 pairs prepared: ALMA, CUETIPS, QUAY, FAQ, SHOPS, and QUIT",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "The New York Times Crossword": {
         "adapter": "read-only-public-research",
-        "checkedAt": "2026-08-31T02:18:00Z",
-        "latestOfficialDate": "2026-08-31",
+        "checkedAt": "2026-09-01T04:20:00Z",
+        "latestOfficialDate": "2026-09-01",
         "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected August 31 pairs published: STEP, UCLA, TIPSY, LUXE, BAIT, and AGREE",
+        "selectedPairStatus": "Six selected September 1 pairs prepared: ACTAS, TOLD, NILE, ATL, SETHMEYERS, and FADS",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "LA Times Crossword": {
         "adapter": "latimes-official-metadata-v1",
         "command": "npm run source:latimes -- --output .local/latimes-latest.json",
         "browserSnapshotImporter": "npm run source:import -- --input .local/latimes-browser-YYYY-MM-DD.json --output .local/latimes-browser-candidates-YYYY-MM-DD.json --limit 6",
-        "checkedAt": "2026-08-31T04:17:30.618Z",
-        "latestOfficialDate": "2026-08-31",
-        "sourceId": "tca260831",
-        "latestTitle": "L. A. Times, Mon, Aug 31, 2026",
+        "checkedAt": "2026-09-01T04:16:12.805Z",
+        "latestOfficialDate": "2026-09-01",
+        "sourceId": "tca260901",
+        "latestTitle": "L. A. Times, Tue, Sep 1, 2026",
         "theme": null,
-        "creator": "Justin Werfel",
+        "creator": "Derek Hinsey",
         "editor": "Patti Varol",
         "officialClueCount": 76,
         "accessMode": "Official AmuseLabs picker metadata plus public browser DOM without login",
         "localDatabase": ".local/source-intelligence.sqlite",
         "localDatabaseEvidence": "August 24 browser DOM snapshot imported 78 clue texts: 35 Across and 43 Down; no answer or solution fields. Local database now holds 222 LA Times clue rows across two dates.",
         "contentBoundary": "The metadata adapter excludes the puzzle payload. When the public player is used, only visible clue number, direction, and text are imported; Reveal, filled cells, solutions, cookies, and account state remain excluded. Full rows stay Git-ignored and model-facing output is capped at six candidates.",
-        "selectedPairStatus": "Six August 31 pairs published after official metadata and matching public same-date evidence: ADMIT, HOWL, TURKEYVULTURES, LEACH, BCCED, and TVSET"
+        "selectedPairStatus": "Six September 1 pairs prepared after official metadata and matching public same-date evidence: IONS, CACHE, EASEDIN, SEC, BLEWON, and ACES"
       },
       "USA TODAY Crossword": {
         "adapter": "usatoday-official-candidates-v1",
         "command": "npm run source:usatoday -- --limit 6 --output .local/usatoday-latest.json",
-        "checkedAt": "2026-08-31T04:17:35.038Z",
-        "latestOfficialDate": "2026-08-31",
-        "latestTitle": "There Are Two Sides to Every Story",
-        "creator": "Max Schlenker",
-        "editor": "Amanda Rafkin",
+        "checkedAt": "2026-09-01T04:16:16.156Z",
+        "latestOfficialDate": "2026-09-01",
+        "latestTitle": "Oh, I Don't Drink",
+        "creator": "Ricky Sirois",
+        "editor": "Amie Walker",
         "accessMode": "Official public HTML and clue API without login",
         "localDatabase": ".local/source-intelligence.sqlite",
         "statsCommand": "npm run source:stats",
         "contentBoundary": "Stores the complete official public clue list only in the Git-ignored local SQLite database for future analysis; model-facing JSON remains capped at six candidates, and the query explicitly excludes the hidden solution field, login, and Reveal controls",
-        "selectedPairStatus": "Six official-candidate August 31 pairs independently verified and published: ISA, SYNE, MOI, GIVE, IMAMESS, and OMNI; complete official clue rows remain only in the local Git-ignored database"
+        "selectedPairStatus": "Six official-candidate September 1 pairs independently verified and prepared: MEN, ARLO, RAD, TOGO, GRR, and ALOHA; complete official clue rows remain only in the local Git-ignored database"
       }
     },
     "latestFreshnessBatch": {
