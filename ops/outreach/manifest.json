@@ -90,7 +90,12 @@
       "followUpSentAt": "2026-08-31T14:19:00+08:00",
       "followUpMessageId": "1a05678238c40e15",
       "followUpAssetUrl": "https://crosswordcluetutor.com/solver/",
-      "followUpEvidence": "One individually reviewed reply was sent after Gmail showed only the original sent message and no recipient reply; the message explicitly requests no further follow-up if the resource is not a fit."
+      "followUpEvidence": "One individually reviewed reply was sent after Gmail showed only the original sent message and no recipient reply; the message explicitly requests no further follow-up if the resource is not a fit.",
+      "responseReceivedAt": "2026-09-01T00:39:23+08:00",
+      "responseMessageId": "1a058b0e03c9010b",
+      "responseStatus": "queued_for_site_revamp",
+      "listingStatus": "planned_after_site_revamp",
+      "responseSummary": "The curator said the solver looks cool and is in the inclusion list, but the whole site is being revamped so publication may take a while. No further follow-up is needed."
     },
     {
       "id": "the-puzzle-solver",
@@ -170,7 +175,12 @@
       "gmailDraftCreatedAt": null,
       "approvalRequired": true,
       "sentAt": "2026-08-22T19:58:21+08:00",
-      "messageId": "1a02955bf090da8f"
+      "messageId": "1a02955bf090da8f",
+      "followUpStatus": "sent",
+      "followUpSentAt": "2026-09-01T14:25:00+08:00",
+      "followUpMessageId": "1a05ba055c9e7610",
+      "followUpAssetUrl": "https://crosswordcluetutor.com/guides/crossword-clues-for-vocabulary-learning/",
+      "followUpEvidence": "One individually reviewed reply was sent after Gmail showed only the original sent message and no recipient reply; the message explicitly requests no further follow-up if the activity is not a fit."
     },
     {
       "id": "ateq-ela-resource",

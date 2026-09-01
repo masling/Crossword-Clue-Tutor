@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-01T12:28:00+08:00",
+  "updatedAt": "2026-09-01T14:25:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -8,10 +8,12 @@
       "stretch": 1000,
       "windowStart": "2026-08-19T09:23:00+08:00",
       "deadline": "2026-09-02T09:23:00+08:00",
-      "measurement": "Non-operator unique visitors in Pageview or GA4; GSC clicks are acquisition evidence but are not assumed unique"
+      "measurement": "Non-operator unique visitors in Pageview or GA4; GSC clicks are acquisition evidence but are not assumed unique",
+      "verifiedSearchReferredProgress": 75,
+      "unadjustedPageviewUniqueVisitorsLast7Days": 189
     },
     "deadline": "2026-09-02T09:23:00+08:00",
-    "currentNetHumanSessions": 1,
+    "currentNetHumanSessions": 75,
     "measurementRule": "Count only non-operator sessions with a verified external search referrer; direct and unknown traffic remains unverified.",
     "operatorQaBaseline": 4,
     "analyticsFilter": "excludeBots=Yes",
@@ -37,7 +39,7 @@
     "pageviewStatus": "Verified",
     "pageviewOpenCliAdapter": {
       "installedAt": "2026-08-28T14:36:00+08:00",
-      "profilePolicy": "Selected by the current project/session; neither the adapter nor the global skill binds a Chrome profile",
+      "profilePolicy": "This project is explicitly bound to the OpenCLI Chrome profile `girl`; every Pageview, Search Console, and Google Trends command passes --profile girl while the global OpenCLI default remains unchanged",
       "strategy": "UI_SELECTOR",
       "commands": ["pageview summary", "pageview breakdown"],
       "breakdownDimensions": ["source", "page", "entryPage"],
@@ -48,28 +50,31 @@
     },
     "pageviewOperatorQaBaseline": 1,
     "latestOpenCliPageviewSnapshot": {
-      "recordedAt": "2026-08-28T14:36:00+08:00",
+      "recordedAt": "2026-09-01T14:25:00+08:00",
       "period": "Last 7 days",
-      "uniqueVisitors": 94,
-      "visits": 96,
-      "pageviews": 125,
-      "viewsPerVisit": 1.3,
-      "bounceRatePercent": 85,
-      "visitDurationSeconds": 40,
+      "uniqueVisitors": 189,
+      "visits": 191,
+      "pageviews": 234,
+      "viewsPerVisit": 1.23,
+      "bounceRatePercent": 68,
+      "visitDurationSeconds": 30,
       "sourceVisitors": {
-        "Google": 47,
-        "Direct / None": 45,
-        "DuckDuckGo": 1,
-        "GitHub": 1,
-        "puzzled.online": 1
+        "Google": 63,
+        "Bing": 9,
+        "DuckDuckGo": 2,
+        "Ecosia": 1,
+        "Direct / None": 114
       },
       "topEntryPages": {
-        "/": 37,
-        "/explainers/cnbc-subject-nyt-daily/": 18,
-        "/explainers/paper-and-pencil-game-missing-ps-nyt-mini/": 13,
-        "/explainers/lost-star-daniel-kim-usa-today/": 4
+        "/explainers/cnbc-subject-nyt-daily/": 29,
+        "/": 22,
+        "/explainers/post-ramadan-festival-translates-to-festival-nyt-midi/": 17,
+        "/explainers/big-name-in-shipping-logistics-nyt-mini/": 15,
+        "/explainers/household-items-that-come-with-remotes-nyt-mini/": 12
       },
-      "goalAccounting": "Not yet added to verified search-human sessions because the adapter report does not itself exclude operator QA and the matching GSC review is pending"
+      "goalAccounting": "75 visitors carried a verified external-search referrer (Google 63, Bing 9, DuckDuckGo 2, Ecosia 1). The source table contained no operator_qa campaign value and all 114 direct/unknown visitors were excluded, so 75 count toward the strict search-referred goal.",
+      "returningVisitors": "Unavailable in the Pageview dashboard",
+      "adapterLimitation": "Two lower-ranked page labels were visually truncated or contaminated by markup; they were excluded from recorded top-page evidence rather than repaired or guessed"
     },
     "latestAnalyticsSnapshot": {
       "recordedAt": "2026-08-21T07:55:28+08:00",
@@ -110,9 +115,9 @@
     }
   },
   "content": {
-    "indexablePages": 574,
-    "reviewedClues": 290,
-    "answerMeaningPages": 191,
+    "indexablePages": 752,
+    "reviewedClues": 380,
+    "answerMeaningPages": 276,
     "dictionaryExpansion": {
       "profilesAdded": 74,
       "reviewedAt": "2026-08-24",
@@ -146,7 +151,7 @@
     },
     "dailyDefinitionMeaningPolicy": {
       "enabledAt": "2026-08-28T17:00:00+08:00",
-      "lastBackfillDate": "2026-08-31",
+      "lastBackfillDate": "2026-09-01",
       "lastCurrentProfileDate": "2026-09-01",
       "currentProfilesPublishedToday": 27,
       "currentAnswerRule": "After each routine clue batch, publish one canonical Definition & Meaning page for every unique current-date answer missing from data/answers.json; current missing answers are mandatory even when they exceed the target",
@@ -202,8 +207,8 @@
       "selectionReason": "Every missing unique answer from the verified August 31 LA Times and USA TODAY selected-clue batches"
     },
     "latestDailyDefinitionMeaningBackfill": {
-      "date": "2026-08-31",
-      "currentProfilesPublished": 28,
+      "date": "2026-09-01",
+      "currentProfilesPublished": 27,
       "dailyTarget": 25,
       "remainingCapacity": 0,
       "historicalProfilesPublished": 0,
@@ -653,22 +658,29 @@
     }
   },
   "latestDailyEvidencePass": {
-    "date": "2026-08-31",
-    "completedAt": "2026-08-31T14:19:00+08:00",
-    "gmail": { "newProjectMessages": 0, "spamMessages": 0, "result": "No new labeled project reply and no labeled spam message" },
-    "teacherPilotAggregate": { "status": "success", "totalTeacherReports": 0, "reportsWithTwoSessions": 0, "verifiedDistinctEducators": 0, "privacy": "Aggregate-only result; no email address or feedback text was selected" },
-    "seoAnalytics": { "status": "not_due", "nextReviewNotBefore": "2026-08-31T14:55:00+08:00" },
-    "outreach": { "action": "One due follow-up sent to Signals / Mystery League tools directory", "channel": "email", "assetUrl": "https://crosswordcluetutor.com/solver/", "messageId": "1a05678238c40e15", "duplicateAndReplyCheck": "Gmail contained only the original sent message and no recipient reply", "cost": 0 },
-    "googleTrends": { "status": "success", "adapter": "google-trends-ops 0.3.0 browser capture", "risingRows": 25, "alreadyCoveredRows": 0, "publishedGaps": 0, "operatorCsvNeeded": false }
+    "date": "2026-09-01",
+    "completedAt": "2026-09-01T14:25:00+08:00",
+    "gmail": { "newProjectMessages": 1, "spamMessages": 0, "result": "Mystery League placed the solver in its post-revamp inclusion list; no reply was sent automatically" },
+    "teacherPilotAggregate": { "status": "auth_required", "lastKnownTotalTeacherReports": 0, "lastKnownReportsWithTwoSessions": 0, "lastKnownVerifiedDistinctEducators": 0, "privacy": "The read-only aggregate query did not run because Wrangler lacked a host API token; no email address or feedback text was selected" },
+    "seoAnalytics": { "status": "success", "profile": "girl", "pageviewUniqueVisitors": 189, "pageviewSearchReferredVisitors": 75, "gscClicks": 60, "gscImpressions": 24028, "gscCtrPercent": 0.2, "gscAveragePosition": 9, "nextReviewNotBefore": "2026-09-04T14:25:00+08:00" },
+    "outreach": { "action": "Recorded Mystery League's future-listing response and sent one due follow-up to ESLActive", "channel": "email", "assetUrl": "https://crosswordcluetutor.com/guides/crossword-clues-for-vocabulary-learning/", "messageId": "1a05ba055c9e7610", "duplicateAndReplyCheck": "Gmail contained only the original ESLActive sent message and no recipient reply", "cost": 0 },
+    "googleTrends": { "status": "success", "adapter": "google-trends-ops 0.3.0 browser capture", "profile": "girl", "risingRows": 25, "alreadyCoveredRows": 0, "publishedGaps": 0, "operatorCsvNeeded": false }
   },
   "search": {
+    "openCliProfileBinding": {
+      "profile": "girl",
+      "scope": "Crossword Clue Tutor project and clue-tutor-daily-freshness automation only",
+      "setAt": "2026-09-01T14:25:00+08:00",
+      "commandPolicy": "Pass --profile girl to every Pageview, Search Console, and Google Trends command",
+      "globalDefaultChanged": false
+    },
     "dailyTrendsGap": {
       "root": "crossword",
       "window": "Past 1 day",
       "geo": "Worldwide",
       "url": "https://trends.google.com/trends/explore?date=now%201-d&q=crossword",
-      "lastReviewedAt": "2026-08-31T14:19:00+08:00",
-      "lastAttemptedAt": "2026-08-31T14:19:00+08:00",
+      "lastReviewedAt": "2026-09-01T14:25:00+08:00",
+      "lastAttemptedAt": "2026-09-01T14:25:00+08:00",
       "latestAttemptStatus": "Success through the installed browser adapter using the dynamically resolved connected default profile; one normal Chrome page loaded and no adapter-generated API request was made",
       "operatorCsvNeeded": false,
       "processCorrectedAt": "2026-08-29T14:31:00+08:00",
@@ -695,24 +707,24 @@
       "excludedExample": "Harlem Shake was driven by NYT Connections intent, not a current crossword clue query",
       "latestRun": {
         "adapter": "google-trends-ops 0.3.0",
-        "resolvedProfile": "用户1 (connected default at run time)",
+        "resolvedProfile": "girl (project-bound; global default unchanged)",
         "window": "Worldwide Web Search, past 24 hours",
         "risingRows": 25,
         "alreadyCoveredRows": 0,
         "publishedRows": 0,
         "publishedPages": 0,
         "deferredRows": 25,
-        "deferredReason": "The rows lacked a verified monitored publication and source date, were ambiguous multi-answer or historical queries, or belonged to unsupported publication families; spot checks showed older LA Times Mini and 2013 Ink Well examples rather than current monitored clues, so no filler page was created"
+        "deferredReason": "The rows lacked a verified monitored publication and source date, were ambiguous multi-answer or historical queries, or belonged to unsupported publication families; spot checks identified Times Concise, Mirror Quiz, and other non-monitored historical examples, so no filler page was created"
       }
     },
     "seoReviewCadence": {
       "intervalHours": 72,
-      "lastReviewedAt": "2026-08-28T14:55:00+08:00",
-      "nextReviewNotBefore": "2026-08-31T14:55:00+08:00",
+      "lastReviewedAt": "2026-09-01T14:25:00+08:00",
+      "nextReviewNotBefore": "2026-09-04T14:25:00+08:00",
       "partialReviewedAt": "2026-08-28T14:36:00+08:00",
       "pageviewReviewStatus": "Complete through the verified OpenCLI adapter",
       "gscReviewStatus": "Complete through the explicitly approved OpenCLI Search Console adapter; page-dimension stale-table handling was repaired and verified",
-      "evidenceSource": "OpenCLI Pageview and Search Console adapters using the profile selected by the current session; the global skill does not bind a Chrome profile",
+      "evidenceSource": "OpenCLI Pageview and Search Console adapters using the project-bound `girl` Chrome profile; every command passes --profile girl and the global OpenCLI default remains unchanged",
       "changeGate": "Do not change page metadata from aggregate or isolated-hour data. Review a landing page only after at least 20 impressions; prioritize CTR changes at average position 8 or better and internal-authority/content changes at positions 9–15."
     },
     "ctrExperiment": {
@@ -742,29 +754,29 @@
       "targets": { "siteCtrPercent14d": 1.2, "stretchCtrPercent14d": 2.0, "activationPercent": 25, "continuationPercent": 15, "bounceRatePercentMax": 75, "durationSecondsMin": 60 }
     },
     "latestOpenCliGscSnapshot": {
-      "recordedAt": "2026-08-28T14:55:00+08:00",
+      "recordedAt": "2026-09-01T14:25:00+08:00",
       "period": "Last 7 days",
-      "dataThrough": "2026-08-25",
-      "totalClicks": 24,
-      "totalImpressions": 5574,
-      "averageCtrPercent": 0.4,
-      "averagePosition": 8.6,
+      "dataThrough": "Latest settled date exposed by the Search Console 7-day report; exact date was not returned by the adapter",
+      "totalClicks": 60,
+      "totalImpressions": 24028,
+      "averageCtrPercent": 0.2,
+      "averagePosition": 9,
       "topPages": [
-        { "url": "/explainers/paper-and-pencil-game-missing-ps-nyt-mini/", "clicks": 12, "impressions": 350, "ctrPercent": 3.4, "position": 6.2 },
-        { "url": "/explainers/lost-star-daniel-kim-usa-today/", "clicks": 3, "impressions": 45, "ctrPercent": 6.7, "position": 5.1 },
-        { "url": "/explainers/criminals-sphere-nyt-daily/", "clicks": 2, "impressions": 418, "ctrPercent": 0.5, "position": 6.7 },
-        { "url": "/explainers/blank-dixon-line-nyt-mini/", "clicks": 1, "impressions": 357, "ctrPercent": 0.3, "position": 6.3 },
-        { "url": "/explainers/leader-in-a-kasaya-robe-nyt/", "clicks": 1, "impressions": 234, "ctrPercent": 0.4, "position": 8.9 }
+        { "url": "/explainers/cnbc-subject-nyt-daily/", "clicks": 26, "impressions": 309, "ctrPercent": 8.4, "position": 6.4 },
+        { "url": "/explainers/lost-star-daniel-kim-usa-today/", "clicks": 5, "impressions": 64, "ctrPercent": 7.8, "position": 4.6 },
+        { "url": "/explainers/discredit-nyt-midi-august-27/", "clicks": 4, "impressions": 1438, "ctrPercent": 0.3, "position": 4.4 },
+        { "url": "/explainers/paper-and-pencil-game-missing-ps-nyt-mini/", "clicks": 4, "impressions": 97, "ctrPercent": 4.1, "position": 5.7 },
+        { "url": "/explainers/network-launched-1994-scent-of-a-woman-nyt-daily/", "clicks": 2, "impressions": 1748, "ctrPercent": 0.1, "position": 7.9 }
       ],
       "queryGaps": [
-        { "query": "is canned nyt", "clicks": 0, "impressions": 316, "position": 8.8 },
-        { "query": "criminals sphere nyt", "clicks": 0, "impressions": 165, "position": 8.2 },
-        { "query": "apex nyt", "clicks": 0, "impressions": 66, "position": 5.9 },
-        { "query": "animal that appears orange to humans", "clicks": 0, "impressions": 55, "position": 5.5 },
-        { "query": "sunny part of a breakfast order", "clicks": 0, "impressions": 51, "position": 5.6 },
-        { "query": "like someone who unplugs completely", "clicks": 0, "impressions": 35, "position": 4.1 }
+        { "query": "pre inca civilization nyt", "clicks": 0, "impressions": 1453, "position": 9.9 },
+        { "query": "bed threads nyt", "clicks": 0, "impressions": 762, "position": 9.1 },
+        { "query": "tiny biting insect nyt", "clicks": 0, "impressions": 724, "position": 9.6 },
+        { "query": "entry level volkswagen sedan", "clicks": 0, "impressions": 672, "position": 8.8 },
+        { "query": "dubious sighting in the night sky", "clicks": 0, "impressions": 608, "position": 7.1 },
+        { "query": "cruelty free target of poaching", "clicks": 0, "impressions": 413, "position": 7.7 }
       ],
-      "decision": "No metadata change in the adapter-setup turn. High-impression low-CTR page cohorts are now identified for a focused SERP and page-intent review; current daily publishing continues unchanged.",
+      "decision": "Visibility expanded sharply from 5,574 to 24,028 impressions and clicks rose from 24 to 60, while aggregate CTR fell from 0.4% to 0.2%. CNBC subject and Lost star demonstrate strong snippets. No metadata was rewritten because this seven-day window straddles earlier treatment deployment and recrawl; rank-9-to-10 pages need authority/internal linking, while the next focused snippet review should start with Discredit, the 1994 network clue, the conch-shell clue, and the cruelty-free poaching clue after a clean post-treatment window.",
       "rawDataBoundary": "Only aggregate rows needed for decisions were recorded; traces and private dashboard output remain outside Git"
     },
     "googleSitemapStatus": "Success",
@@ -914,8 +926,8 @@
       "dryRun": "TRAFFIC_DRY_RUN=1",
       "verifiedAt": "2026-08-21T07:55:28+08:00"
     },
-    "searchImpressions": 5574,
-    "searchClicks": 24,
+    "searchImpressions": 24028,
+    "searchClicks": 60,
     "indexNowSubmittedUrls": 543,
     "indexNowBackfill": {
       "status": "Completed",
@@ -969,9 +981,9 @@
     "educationFormsBlocked": 1,
     "educationFormsSkipped": 1,
     "educationFormsPendingManual": 0,
-    "responses": 4,
+    "responses": 5,
     "listingCommitments": 1,
-    "directoryReviewsUnderConsideration": 1,
+    "directoryReviewsUnderConsideration": 2,
     "declinedTargets": 1,
     "liveExternalListings": 1,
     "liveListings": [
@@ -986,7 +998,7 @@
         "contentUpdate": "Current listing is live but still states 160 clues across 12 skills; a factual update request for 500/29 was sent in the original approval thread at 2026-08-24T19:41:53+08:00"
       }
     ],
-    "outreachRepliesSent": 4,
+    "outreachRepliesSent": 5,
     "nextListingCheckNotBefore": "2026-08-25T13:24:04+08:00",
     "followUpPolicy": {
       "waitDays": 8,
@@ -999,8 +1011,8 @@
     "dailyCadence": {
       "targetPerDay": "1–2 new high-fit submissions or due follow-ups",
       "directSendAuthorized": true,
-      "lastExecutedAt": "2026-08-31T14:19:00+08:00",
-      "lastTarget": "Signals / Mystery League one-time follow-up after duplicate and reply verification",
+      "lastExecutedAt": "2026-09-01T14:25:00+08:00",
+      "lastTarget": "Recorded Mystery League future-listing response and sent ESLActive one-time follow-up",
       "minimumQualityGate": "A stable public channel and explicit resource-submission invitation are required; exclude paid, reciprocal, adult, guest-post-farm, do-not-contact, replied, and duplicate targets"
     },
     "directoryPilot": {
@@ -1047,7 +1059,7 @@
       "structuredFormPayloads": 8,
       "validationCommand": "npm run outreach:check",
       "followUpReportCommand": "npm run outreach:followups",
-      "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 190 meaning entries",
+      "validationStatus": "Passed against 328 reviewed candidates, 15 clue families, and 276 meaning entries",
       "transmissionStatus": "Fourteen unique email targets were sent and six forms were submitted. Learning Corner published the first verified listing. SaaSHub approved and verified Crossword Clue Tutor on August 29; its public alternatives page contains a standard follow Visit website link to the homepage. The Colorado Department of Education received a free Grades 6-12 media-literacy pack suggestion. Clerna received the complete two-session teacher pilot. Puzzled.online is awaiting verification; TeachersFirst forwarded the resource to review; XWord Info is do-not-contact. FreeTech4Teachers was not counted after no receipt; Teach Arcade remains skipped."
     },
     "approvalNeeded": null,
