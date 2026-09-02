@@ -187,7 +187,11 @@
       "cumulativeCurrentProfilesToday": 29,
       "profilesBefore": 288,
       "profilesAfter": 305,
-      "status": "Validated locally; deployment pending",
+      "status": "Production verified",
+      "deployedAt": "2026-09-02T14:31:00+08:00",
+      "deploymentCommit": "b345061f3dbb6099fbf170ef6f0c0779ab90a829",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33599141554",
+      "productionVerification": "Torah Definition & Meaning page and representative new answer pages returned HTTP 200 after deployment",
       "selectionReason": "Every missing unique answer from the verified September 2 NYT Mini, NYT Midi, and NYT Daily selected-clue batches; ASIA already had a reviewed profile"
     },
     "latestMiddayDefinitionMeaningRun": {
@@ -563,7 +567,10 @@
       "answerIntake": "ops/answer-intake/2026-09-02-nyt-definition-meaning-17.json",
       "currentAnswerProfiles": 17,
       "rightsBoundary": "Six selected clue pages per advanced source; no grid or complete answer list",
-      "status": "Validated locally; deployment pending"
+      "status": "Production verified",
+      "deploymentCommit": "b345061f3dbb6099fbf170ef6f0c0779ab90a829",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33599141554",
+      "productionVerification": "Representative NYT Mini, Midi, and Daily clue pages plus the Torah answer page returned HTTP 200; production sitemap contains 812 URLs"
     },
     "latestMiddayFreshnessRun": {
       "sourceDate": "2026-09-02",
@@ -588,7 +595,7 @@
         "checkedAt": "2026-09-02T06:20:00Z",
         "latestOfficialDate": "2026-09-02",
         "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected September 2 pairs prepared: FILM, VIDEO, REEFS, BRATS, OILY, and IDEAL",
+        "selectedPairStatus": "Six selected September 2 pairs published: FILM, VIDEO, REEFS, BRATS, OILY, and IDEAL",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "NYT Midi Crossword": {
@@ -596,7 +603,7 @@
         "checkedAt": "2026-09-02T06:20:00Z",
         "latestOfficialDate": "2026-09-02",
         "accessMode": "Bounded public same-day clue-answer pages without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected September 2 pairs prepared: ABBOT, ROB, TORAH, NSA, ALPINESKI, and EBAY",
+        "selectedPairStatus": "Six selected September 2 pairs published: ABBOT, ROB, TORAH, NSA, ALPINESKI, and EBAY",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "The New York Times Crossword": {
@@ -604,7 +611,7 @@
         "checkedAt": "2026-09-02T06:20:00Z",
         "latestOfficialDate": "2026-09-02",
         "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected September 2 pairs prepared: MANDMS, PAD, BATH, MATRON, ASIA, and RICOCHET",
+        "selectedPairStatus": "Six selected September 2 pairs published: MANDMS, PAD, BATH, MATRON, ASIA, and RICOCHET",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "LA Times Crossword": {
