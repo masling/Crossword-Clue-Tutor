@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-02",
+  "selectionReason": "Every unique answer from the verified September 2 LA Times and USA TODAY selected-clue batches still lacked a canonical Definition & Meaning page.",
+  "profiles": [
+    { "answer": "AGRA", "displayTerm": "Agra", "slug": "agra", "pronunciation": "AH-gruh", "related": [] },
+    { "answer": "ALTAR", "displayTerm": "Altar", "slug": "altar", "pronunciation": "AWL-tur", "related": [] },
+    { "answer": "CLUE", "displayTerm": "Clue", "slug": "clue", "pronunciation": "kloo", "related": [] },
+    { "answer": "CROAK", "displayTerm": "Croak", "slug": "croak", "pronunciation": "krohk", "related": [] },
+    { "answer": "ELI", "displayTerm": "Eli", "slug": "eli", "pronunciation": "EE-lye", "related": [] },
+    { "answer": "ENCORE", "displayTerm": "Encore", "slug": "encore", "pronunciation": "ON-kor", "related": [] },
+    { "answer": "ROAN", "displayTerm": "Roan", "slug": "roan", "pronunciation": "rohn", "related": [] },
+    { "answer": "ROLE", "displayTerm": "Role", "slug": "role", "pronunciation": "rohl", "related": [] },
+    { "answer": "SAKS", "displayTerm": "Saks", "slug": "saks", "pronunciation": "saks", "related": [] },
+    { "answer": "TONI", "displayTerm": "Toni", "slug": "toni", "pronunciation": "TOH-nee", "related": [] },
+    { "answer": "WAND", "displayTerm": "Wand", "slug": "wand", "pronunciation": "wond", "related": [] },
+    { "answer": "YAM", "displayTerm": "Yam", "slug": "yam", "pronunciation": "yam", "related": [] }
+  ]
+}
