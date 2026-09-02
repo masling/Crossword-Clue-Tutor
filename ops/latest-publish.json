@@ -1,6 +1,6 @@
 {
-  "publishedAt": "2026-09-02T04:23:05.465Z",
-  "input": "ops/intake/2026-09-02-la-times-usa-today-routine.json",
+  "publishedAt": "2026-09-02T06:22:35.826Z",
+  "input": "ops/intake/2026-09-02-nyt-mini-midi-daily-routine.json",
   "urls": [
     "/explainers/fifth-avenue-retailer-la-times/",
     "/explainers/game-with-secret-passages-la-times/",
@@ -13,9 +13,28 @@
     "/explainers/sound-similar-to-ribbit-usa-today/",
     "/explainers/part-for-an-actor-usa-today/",
     "/explainers/play-another-one-usa-today/",
-    "/explainers/spot-to-say-i-do-usa-today/"
+    "/explainers/spot-to-say-i-do-usa-today/",
+    "/explainers/odyssey-2026-or-odd-couple-1968-nyt-mini/",
+    "/explainers/youtube-posting-nyt-mini/",
+    "/explainers/endangered-marine-ecosystems-nyt-mini/",
+    "/explainers/spoiled-kids-nyt-mini/",
+    "/explainers/greasy-nyt-mini/",
+    "/explainers/ten-out-of-ten-nyt-mini/",
+    "/explainers/leader-of-a-monastery-nyt-midi/",
+    "/explainers/burgle-nyt-midi/",
+    "/explainers/sacred-text-read-at-bar-mitzvah-nyt-midi/",
+    "/explainers/org-founded-classified-presidential-directive-1952-nyt-midi/",
+    "/explainers/equipment-for-super-g-racer-nyt-midi/",
+    "/explainers/electronics-cars-fashion-collectibles-site-nyt-midi/",
+    "/explainers/melts-in-your-mouth-candies-theme-nyt-daily/",
+    "/explainers/mattress-or-memo-follower-nyt-daily/",
+    "/explainers/maine-city-near-mouth-of-kennebec-river-nyt-daily/",
+    "/explainers/mama-morton-of-chicago-for-one-nyt-daily/",
+    "/explainers/marco-polo-made-way-across-it-nyt-daily/",
+    "/explainers/meet-and-glance-off-bumper-pool-ball-nyt-daily/"
   ],
   "answerUrls": [
+    "/crosswordese/asia/",
     "/crosswordese/agra/",
     "/crosswordese/altar/",
     "/crosswordese/clue/",
@@ -27,7 +46,24 @@
     "/crosswordese/saks/",
     "/crosswordese/toni/",
     "/crosswordese/wand/",
-    "/crosswordese/yam/"
+    "/crosswordese/yam/",
+    "/crosswordese/abbot/",
+    "/crosswordese/alpine-ski/",
+    "/crosswordese/bath/",
+    "/crosswordese/brats/",
+    "/crosswordese/ebay/",
+    "/crosswordese/film/",
+    "/crosswordese/ideal/",
+    "/crosswordese/m-and-ms/",
+    "/crosswordese/matron/",
+    "/crosswordese/nsa/",
+    "/crosswordese/oily/",
+    "/crosswordese/pad/",
+    "/crosswordese/reefs/",
+    "/crosswordese/ricochet/",
+    "/crosswordese/rob/",
+    "/crosswordese/torah/",
+    "/crosswordese/video/"
   ],
   "clinicUrls": [
     "/daily-clue-clinic/2026-09-02/"
@@ -39,9 +75,12 @@
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
     "/crossword-answers/4-letters/",
-    "/crossword-answers/3-letters/",
     "/crossword-answers/5-letters/",
+    "/crossword-answers/3-letters/",
     "/crossword-answers/6-letters/",
+    "/nyt-mini-crossword-clues/",
+    "/nyt-midi-crossword-clues/",
+    "/nyt-crossword-clues/",
     "/la-times-crossword-answers/",
     "/usa-today-crossword-answers/"
   ]

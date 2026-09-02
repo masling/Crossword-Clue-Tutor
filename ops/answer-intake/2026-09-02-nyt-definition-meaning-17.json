@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-02",
+  "selectionReason": "Every unique answer from the verified September 2 NYT Mini, NYT Midi, and NYT Daily selected-clue batches still lacking a canonical Definition & Meaning page; ASIA already had a reviewed profile.",
+  "profiles": [
+    { "answer": "ABBOT", "displayTerm": "Abbot", "slug": "abbot", "pronunciation": "AB-uht", "related": [] },
+    { "answer": "ALPINESKI", "displayTerm": "Alpine ski", "slug": "alpine-ski", "pronunciation": "AL-pyne skee", "related": [] },
+    { "answer": "BATH", "displayTerm": "Bath", "slug": "bath", "pronunciation": "bath", "related": [] },
+    { "answer": "BRATS", "displayTerm": "Brats", "slug": "brats", "pronunciation": "brats", "related": [] },
+    { "answer": "EBAY", "displayTerm": "eBay", "slug": "ebay", "pronunciation": "EE-bay", "related": [] },
+    { "answer": "FILM", "displayTerm": "Film", "slug": "film", "pronunciation": "film", "related": [] },
+    { "answer": "IDEAL", "displayTerm": "Ideal", "slug": "ideal", "pronunciation": "eye-DEE-uhl", "related": [] },
+    { "answer": "MANDMS", "displayTerm": "M&M's", "slug": "m-and-ms", "pronunciation": "em and emz", "related": [] },
+    { "answer": "MATRON", "displayTerm": "Matron", "slug": "matron", "pronunciation": "MAY-truhn", "related": [] },
+    { "answer": "NSA", "displayTerm": "NSA", "slug": "nsa", "pronunciation": "en ess ay", "related": [] },
+    { "answer": "OILY", "displayTerm": "Oily", "slug": "oily", "pronunciation": "OY-lee", "related": [] },
+    { "answer": "PAD", "displayTerm": "Pad", "slug": "pad", "pronunciation": "pad", "related": [] },
+    { "answer": "REEFS", "displayTerm": "Reefs", "slug": "reefs", "pronunciation": "reefs", "related": [] },
+    { "answer": "RICOCHET", "displayTerm": "Ricochet", "slug": "ricochet", "pronunciation": "RIK-uh-shay", "related": [] },
+    { "answer": "ROB", "displayTerm": "Rob", "slug": "rob", "pronunciation": "rob", "related": [] },
+    { "answer": "TORAH", "displayTerm": "Torah", "slug": "torah", "pronunciation": "TOR-uh", "related": [] },
+    { "answer": "VIDEO", "displayTerm": "Video", "slug": "video", "pronunciation": "VID-ee-oh", "related": [] }
+  ]
+}

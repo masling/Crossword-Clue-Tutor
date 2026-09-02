@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-02T12:27:00+08:00",
+  "updatedAt": "2026-09-02T14:27:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -10,7 +10,10 @@
       "deadline": "2026-09-02T09:23:00+08:00",
       "measurement": "Non-operator unique visitors in Pageview or GA4; GSC clicks are acquisition evidence but are not assumed unique",
       "verifiedSearchReferredProgress": 75,
-      "unadjustedPageviewUniqueVisitorsLast7Days": 189
+      "unadjustedPageviewUniqueVisitorsLast7Days": 189,
+      "status": "Deadline passed below minimum",
+      "outcomeRecordedAt": "2026-09-02T14:27:00+08:00",
+      "minimumMet": false
     },
     "deadline": "2026-09-02T09:23:00+08:00",
     "currentNetHumanSessions": 75,
@@ -115,9 +118,9 @@
     }
   },
   "content": {
-    "indexablePages": 777,
-    "reviewedClues": 392,
-    "answerMeaningPages": 288,
+    "indexablePages": 812,
+    "reviewedClues": 410,
+    "answerMeaningPages": 305,
     "dictionaryExpansion": {
       "profilesAdded": 74,
       "reviewedAt": "2026-08-24",
@@ -153,7 +156,7 @@
       "enabledAt": "2026-08-28T17:00:00+08:00",
       "lastBackfillDate": "2026-09-01",
       "lastCurrentProfileDate": "2026-09-02",
-      "currentProfilesPublishedToday": 12,
+      "currentProfilesPublishedToday": 29,
       "currentAnswerRule": "After each routine clue batch, publish one canonical Definition & Meaning page for every unique current-date answer missing from data/answers.json; current missing answers are mandatory even when they exceed the target",
       "backfillRule": "After all five sources are complete, subtract current profiles already published that local day from 25; backfill only the positive remainder from deterministic reviewed historical gaps and publish nothing when the remainder is zero or no verified gaps remain",
       "currentPlannerCommand": "npm run answer:gaps -- --date YYYY-MM-DD --current-only --output .local/answer-profile-current.json",
@@ -179,10 +182,23 @@
     },
     "latestCurrentDefinitionMeaningRun": {
       "date": "2026-09-02",
+      "intake": "ops/answer-intake/2026-09-02-nyt-definition-meaning-17.json",
+      "currentProfiles": 17,
+      "cumulativeCurrentProfilesToday": 29,
+      "profilesBefore": 288,
+      "profilesAfter": 305,
+      "status": "Validated locally; deployment pending",
+      "selectionReason": "Every missing unique answer from the verified September 2 NYT Mini, NYT Midi, and NYT Daily selected-clue batches; ASIA already had a reviewed profile"
+    },
+    "latestMiddayDefinitionMeaningRun": {
+      "date": "2026-09-02",
       "intake": "ops/answer-intake/2026-09-02-current-definition-meaning-12.json",
       "currentProfiles": 12,
+      "cumulativeCurrentProfilesToday": 12,
       "profilesBefore": 276,
       "profilesAfter": 288,
+      "historicalBackfillProfiles": 0,
+      "dailyTarget": 25,
       "status": "Production verified",
       "deployedAt": "2026-09-02T12:29:00+08:00",
       "deploymentCommit": "e12d51dacc692e3007c69d022ae196c312bcbb45",
@@ -190,25 +206,9 @@
       "productionVerification": "Agra and Roan Definition & Meaning pages returned HTTP 200 after deployment",
       "selectionReason": "Every missing unique answer from the verified September 2 LA Times and USA TODAY selected-clue batches"
     },
-    "latestMiddayDefinitionMeaningRun": {
-      "date": "2026-08-31",
-      "intake": "ops/answer-intake/2026-08-31-midday-definition-meaning-12.json",
-      "currentProfiles": 12,
-      "cumulativeCurrentProfilesToday": 28,
-      "profilesBefore": 237,
-      "profilesAfter": 249,
-      "historicalBackfillProfiles": 0,
-      "dailyTarget": 25,
-      "status": "Production verified",
-      "deployedAt": "2026-08-31T12:29:00+08:00",
-      "deploymentCommit": "b51c048a8f0502b0c06afdb0666dd6418988941e",
-      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33357040979",
-      "productionVerification": "Turkey vultures and Omni- Definition & Meaning pages returned HTTP 200 after deployment",
-      "selectionReason": "Every missing unique answer from the verified August 31 LA Times and USA TODAY selected-clue batches"
-    },
     "latestDailyDefinitionMeaningBackfill": {
-      "date": "2026-09-01",
-      "currentProfilesPublished": 27,
+      "date": "2026-09-02",
+      "currentProfilesPublished": 29,
       "dailyTarget": 25,
       "remainingCapacity": 0,
       "historicalProfilesPublished": 0,
@@ -543,34 +543,27 @@
       "USA TODAY Crossword"
     ],
     "lastPublishedSourceDates": {
-      "NYT Mini": "2026-09-01",
-      "NYT Midi Crossword": "2026-09-01",
-      "The New York Times Crossword": "2026-09-01",
+      "NYT Mini": "2026-09-02",
+      "NYT Midi Crossword": "2026-09-02",
+      "The New York Times Crossword": "2026-09-02",
       "LA Times Crossword": "2026-09-02",
       "USA TODAY Crossword": "2026-09-02"
     },
-    "pendingSourceDates": {
-      "NYT Mini": "2026-09-02",
-      "NYT Midi Crossword": "2026-09-02",
-      "The New York Times Crossword": "2026-09-02"
-    },
+    "pendingSourceDates": {},
     "latestMorningFreshnessRun": {
-      "sourceDate": "2026-09-01",
-      "publishedAt": "2026-09-01T12:28:00+08:00",
+      "sourceDate": "2026-09-02",
+      "publishedAt": "2026-09-02T14:27:00+08:00",
       "publications": [
-        { "publication": "NYT Mini", "selectedClues": 6, "answers": ["EYES", "XOXO", "BUYIN", "IDOS", "BEST", "YOYOS"], "confidence": "High; exact same-day pairs verified through bounded public clue pages and editorially reviewed" },
-        { "publication": "NYT Midi Crossword", "selectedClues": 6, "answers": ["ALMA", "CUETIPS", "QUAY", "FAQ", "SHOPS", "QUIT"], "confidence": "High; exact same-day pairs and numbered evidence verified through bounded public clue pages and editorially reviewed" },
-        { "publication": "The New York Times Crossword", "selectedClues": 6, "answers": ["ACTAS", "TOLD", "NILE", "ATL", "SETHMEYERS", "FADS"], "confidence": "High; exact same-day pairs verified through bounded public clue pages and editorially reviewed" }
+        { "publication": "NYT Mini", "selectedClues": 6, "answers": ["FILM", "VIDEO", "REEFS", "BRATS", "OILY", "IDEAL"], "confidence": "High; exact same-day pairs verified through bounded public clue pages and editorially reviewed" },
+        { "publication": "NYT Midi Crossword", "selectedClues": 6, "answers": ["ABBOT", "ROB", "TORAH", "NSA", "ALPINESKI", "EBAY"], "confidence": "High; exact same-day pairs verified through bounded public clue pages and editorially reviewed" },
+        { "publication": "The New York Times Crossword", "selectedClues": 6, "answers": ["MANDMS", "PAD", "BATH", "MATRON", "ASIA", "RICOCHET"], "confidence": "High; exact same-day pairs verified through bounded public clue pages and editorially reviewed" }
       ],
       "pending": [],
-      "clueIntake": "ops/intake/2026-09-01-nyt-mini-midi-daily-routine.json",
-      "answerIntake": "ops/answer-intake/2026-09-01-current-definition-meaning-27.json",
-      "currentAnswerProfiles": 27,
+      "clueIntake": "ops/intake/2026-09-02-nyt-mini-midi-daily-routine.json",
+      "answerIntake": "ops/answer-intake/2026-09-02-nyt-definition-meaning-17.json",
+      "currentAnswerProfiles": 17,
       "rightsBoundary": "Six selected clue pages per advanced source; no grid or complete answer list",
-      "status": "Production verified",
-      "deploymentCommit": "58e06fc64f4c5b991f54283b59b925197abe80cc",
-      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33469837118",
-      "productionVerification": "Representative NYT Mini, Midi, and Daily clue pages returned HTTP 200; shared production sitemap contains 752 URLs"
+      "status": "Validated locally; deployment pending"
     },
     "latestMiddayFreshnessRun": {
       "sourceDate": "2026-09-02",
@@ -592,26 +585,26 @@
     "officialSourceDiscovery": {
       "NYT Mini": {
         "adapter": "read-only-public-research",
-        "checkedAt": "2026-09-01T04:20:00Z",
-        "latestOfficialDate": "2026-09-01",
+        "checkedAt": "2026-09-02T06:20:00Z",
+        "latestOfficialDate": "2026-09-02",
         "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected September 1 pairs published: EYES, XOXO, BUYIN, IDOS, BEST, and YOYOS",
+        "selectedPairStatus": "Six selected September 2 pairs prepared: FILM, VIDEO, REEFS, BRATS, OILY, and IDEAL",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "NYT Midi Crossword": {
         "adapter": "read-only-public-research",
-        "checkedAt": "2026-09-01T04:20:00Z",
-        "latestOfficialDate": "2026-09-01",
+        "checkedAt": "2026-09-02T06:20:00Z",
+        "latestOfficialDate": "2026-09-02",
         "accessMode": "Bounded public same-day clue-answer pages without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected September 1 pairs published: ALMA, CUETIPS, QUAY, FAQ, SHOPS, and QUIT",
+        "selectedPairStatus": "Six selected September 2 pairs prepared: ABBOT, ROB, TORAH, NSA, ALPINESKI, and EBAY",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "The New York Times Crossword": {
         "adapter": "read-only-public-research",
-        "checkedAt": "2026-09-01T04:20:00Z",
-        "latestOfficialDate": "2026-09-01",
+        "checkedAt": "2026-09-02T06:20:00Z",
+        "latestOfficialDate": "2026-09-02",
         "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected September 1 pairs published: ACTAS, TOLD, NILE, ATL, SETHMEYERS, and FADS",
+        "selectedPairStatus": "Six selected September 2 pairs prepared: MANDMS, PAD, BATH, MATRON, ASIA, and RICOCHET",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "LA Times Crossword": {
@@ -662,13 +655,13 @@
     }
   },
   "latestDailyEvidencePass": {
-    "date": "2026-09-01",
-    "completedAt": "2026-09-01T14:25:00+08:00",
-    "gmail": { "newProjectMessages": 1, "spamMessages": 0, "result": "Mystery League placed the solver in its post-revamp inclusion list; no reply was sent automatically" },
-    "teacherPilotAggregate": { "status": "auth_required", "lastKnownTotalTeacherReports": 0, "lastKnownReportsWithTwoSessions": 0, "lastKnownVerifiedDistinctEducators": 0, "privacy": "The read-only aggregate query did not run because Wrangler lacked a host API token; no email address or feedback text was selected" },
-    "seoAnalytics": { "status": "success", "profile": "girl", "pageviewUniqueVisitors": 189, "pageviewSearchReferredVisitors": 75, "gscClicks": 60, "gscImpressions": 24028, "gscCtrPercent": 0.2, "gscAveragePosition": 9, "nextReviewNotBefore": "2026-09-04T14:25:00+08:00" },
-    "outreach": { "action": "Recorded Mystery League's future-listing response and sent one due follow-up to ESLActive", "channel": "email", "assetUrl": "https://crosswordcluetutor.com/guides/crossword-clues-for-vocabulary-learning/", "messageId": "1a05ba055c9e7610", "duplicateAndReplyCheck": "Gmail contained only the original ESLActive sent message and no recipient reply", "cost": 0 },
-    "googleTrends": { "status": "success", "adapter": "google-trends-ops 0.3.0 browser capture", "profile": "girl", "risingRows": 25, "alreadyCoveredRows": 0, "publishedGaps": 0, "operatorCsvNeeded": false }
+    "date": "2026-09-02",
+    "completedAt": "2026-09-02T14:27:00+08:00",
+    "gmail": { "newProjectMessages": 0, "spamMessages": 0, "result": "One Zoho promotional message was excluded from project evidence" },
+    "teacherPilotAggregate": { "status": "auth_required", "lastKnownTotalTeacherReports": 0, "lastKnownReportsWithTwoSessions": 0, "lastKnownVerifiedDistinctEducators": 0, "privacy": "Cloudflare host authorization was still unavailable; no query was repeated and no new zero was invented" },
+    "seoAnalytics": { "status": "not_due", "profile": "girl", "nextReviewNotBefore": "2026-09-04T14:25:00+08:00" },
+    "outreach": { "action": "One due follow-up sent to ATEQ teacher resources", "channel": "email", "assetUrl": "https://crosswordcluetutor.com/guides/crossword-clues-for-vocabulary-learning/", "messageId": "1a060cac51577ef1", "duplicateAndReplyCheck": "Gmail contained only the original ATEQ sent message and no recipient reply", "cost": 0 },
+    "googleTrends": { "status": "empty_output", "adapter": "google-trends-ops browser capture", "profile": "girl", "publishedGaps": 0, "operatorCsvNeeded": false, "note": "The single allowed command completed without structured rows; it was not retried and no filler page was created" }
   },
   "search": {
     "openCliProfileBinding": {
@@ -684,8 +677,8 @@
       "geo": "Worldwide",
       "url": "https://trends.google.com/trends/explore?date=now%201-d&q=crossword",
       "lastReviewedAt": "2026-09-01T14:25:00+08:00",
-      "lastAttemptedAt": "2026-09-01T14:25:00+08:00",
-      "latestAttemptStatus": "Success through the installed browser adapter using the dynamically resolved connected default profile; one normal Chrome page loaded and no adapter-generated API request was made",
+      "lastAttemptedAt": "2026-09-02T14:27:00+08:00",
+      "latestAttemptStatus": "The single project-bound girl-profile adapter command completed without structured rows; no retry, raw request replay, or filler publication was attempted",
       "operatorCsvNeeded": false,
       "processCorrectedAt": "2026-08-29T14:31:00+08:00",
       "openCliAdapter": { "plugin": "google-trends-ops", "version": "0.3.0", "command": "google-trends related", "captureMode": "One normal Chrome page with passive response capture; zero adapter-generated API requests" },
@@ -1002,7 +995,7 @@
         "contentUpdate": "Current listing is live but still states 160 clues across 12 skills; a factual update request for 500/29 was sent in the original approval thread at 2026-08-24T19:41:53+08:00"
       }
     ],
-    "outreachRepliesSent": 5,
+    "outreachRepliesSent": 6,
     "nextListingCheckNotBefore": "2026-08-25T13:24:04+08:00",
     "followUpPolicy": {
       "waitDays": 8,
@@ -1015,8 +1008,8 @@
     "dailyCadence": {
       "targetPerDay": "1–2 new high-fit submissions or due follow-ups",
       "directSendAuthorized": true,
-      "lastExecutedAt": "2026-09-01T14:25:00+08:00",
-      "lastTarget": "Recorded Mystery League future-listing response and sent ESLActive one-time follow-up",
+      "lastExecutedAt": "2026-09-02T14:27:00+08:00",
+      "lastTarget": "ATEQ teacher resources one-time follow-up after duplicate and reply verification",
       "minimumQualityGate": "A stable public channel and explicit resource-submission invitation are required; exclude paid, reciprocal, adult, guest-post-farm, do-not-contact, replied, and duplicate targets"
     },
     "directoryPilot": {
