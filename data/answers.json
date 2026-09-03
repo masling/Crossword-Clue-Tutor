@@ -5451,5 +5451,107 @@
     ],
     "otherMeanings": "TORSO is the five-letter anatomical term for the body's central section. It names the trunk rather than a narrower region such as the waist. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
     "related": []
+  },
+  {
+    "slug": "gag",
+    "answer": "GAG",
+    "displayTerm": "Gag",
+    "pronunciation": "gag",
+    "partOfSpeech": "noun",
+    "meaning": "Gag forms the compounds gag order and gag reel.",
+    "crosswordUse": "GAG answers the reviewed clue “Word with order or reel.” The phrase “Word with” asks for one term that forms familiar expressions with both supplied nouns.",
+    "whyCommon": "GAG is useful to learn because this reviewed clue depends on shared word, exact grammar, and a 3-letter grid entry.",
+    "cluePatterns": [
+      "Word with order or reel",
+      "Find the three-letter word that precedes both a speech restriction and a collection of outtakes.",
+      "3-letter shared word answer confirmed by crossings"
+    ],
+    "otherMeanings": "GAG can precede both clue words: a gag order restricts speech, while a gag reel collects humorous outtakes. The shared three-letter word is the answer. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "groom",
+    "answer": "GROOM",
+    "displayTerm": "Groom",
+    "pronunciation": "groom",
+    "partOfSpeech": "noun",
+    "meaning": "A groom is a person getting married, traditionally a man, and a central member of a wedding party.",
+    "crosswordUse": "GROOM answers the reviewed clue “Wedding party member, perhaps.” “Perhaps” indicates one possible member rather than a role present at every wedding.",
+    "whyCommon": "GROOM is useful to learn because this reviewed clue depends on category example, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "Wedding party member, perhaps",
+      "Use a five-letter traditional term for the man getting married.",
+      "5-letter category example answer confirmed by crossings"
+    ],
+    "otherMeanings": "GROOM is one possible wedding party member, which explains the qualifier “perhaps.” The five-letter noun names one of the people being married. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "karma",
+    "answer": "KARMA",
+    "displayTerm": "Karma",
+    "pronunciation": "KAR-muh",
+    "partOfSpeech": "noun",
+    "meaning": "Karma farming is the practice of seeking votes or engagement mainly to increase a Reddit account's karma score.",
+    "crosswordUse": "KARMA answers the reviewed clue “__ farming: asking for upvotes on Reddit.” The Reddit and upvote context identifies a specific platform reputation term.",
+    "whyCommon": "KARMA is useful to learn because this reviewed clue depends on fill in the blank, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "__ farming: asking for upvotes on Reddit",
+      "Use the five-letter Reddit score that users can try to farm.",
+      "5-letter fill in the blank answer confirmed by crossings"
+    ],
+    "otherMeanings": "KARMA completes the platform-specific phrase “karma farming.” Asking for upvotes is the behavior described by the clue. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "naps",
+    "answer": "NAPS",
+    "displayTerm": "Naps",
+    "pronunciation": "naps",
+    "partOfSpeech": "verb",
+    "meaning": "Naps means sleeps briefly, usually during the day.",
+    "crosswordUse": "NAPS answers the reviewed clue “Catches forty winks.” The familiar sleep idiom points to a short everyday verb.",
+    "whyCommon": "NAPS is useful to learn because this reviewed clue depends on idiom equivalence, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Catches forty winks",
+      "Use a four-letter verb meaning takes a short sleep.",
+      "4-letter idiom equivalence answer confirmed by crossings"
+    ],
+    "otherMeanings": "NAPS matches the idiom “catches forty winks,” meaning takes a short sleep. The answer agrees with the clue's third-person singular verb form. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "osha",
+    "answer": "OSHA",
+    "displayTerm": "OSHA",
+    "pronunciation": "OH-shuh",
+    "partOfSpeech": "acronym",
+    "meaning": "OSHA is the U.S. Occupational Safety and Health Administration, which sets and enforces workplace safety standards.",
+    "crosswordUse": "OSHA answers the reviewed clue “On-the-job protection org..” The job-safety context and abbreviation marker point to a federal agency acronym.",
+    "whyCommon": "OSHA is useful to learn because this reviewed clue depends on abbreviation factoid, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "On-the-job protection org.",
+      "Use the four initials of the U.S. workplace-safety agency.",
+      "4-letter abbreviation factoid answer confirmed by crossings"
+    ],
+    "otherMeanings": "OSHA is the four-letter workplace protection organization requested. The abbreviated “org.” signals an agency acronym. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
+  },
+  {
+    "slug": "taboo",
+    "answer": "TABOO",
+    "displayTerm": "Taboo",
+    "pronunciation": "tuh-BOO",
+    "partOfSpeech": "proper noun",
+    "meaning": "Taboo is a party word game in which players describe a target without saying listed forbidden words.",
+    "crosswordUse": "TABOO answers the reviewed clue “Party game with forbidden words.” The unusual forbidden-word mechanic identifies a specific branded game.",
+    "whyCommon": "TABOO is useful to learn because this reviewed clue depends on game factoid, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "Party game with forbidden words",
+      "Name the five-letter game whose title itself means prohibited.",
+      "5-letter game factoid answer confirmed by crossings"
+    ],
+    "otherMeanings": "TABOO is the five-letter game whose central rule is avoiding specified words while giving clues. The clue describes its defining mechanic. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
+    "related": []
   }
 ]

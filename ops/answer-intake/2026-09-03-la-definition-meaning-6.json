@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-03",
+  "selectionReason": "Every unique answer from the verified September 3 LA Times selected-clue batch still lacked a canonical Definition & Meaning page.",
+  "profiles": [
+    { "answer": "GAG", "displayTerm": "Gag", "slug": "gag", "pronunciation": "gag", "related": [] },
+    { "answer": "GROOM", "displayTerm": "Groom", "slug": "groom", "pronunciation": "groom", "related": [] },
+    { "answer": "KARMA", "displayTerm": "Karma", "slug": "karma", "pronunciation": "KAR-muh", "related": [] },
+    { "answer": "NAPS", "displayTerm": "Naps", "slug": "naps", "pronunciation": "naps", "related": [] },
+    { "answer": "OSHA", "displayTerm": "OSHA", "slug": "osha", "pronunciation": "OH-shuh", "related": [] },
+    { "answer": "TABOO", "displayTerm": "Taboo", "slug": "taboo", "pronunciation": "tuh-BOO", "related": [] }
+  ]
+}

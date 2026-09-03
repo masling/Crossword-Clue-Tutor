@@ -1,6 +1,6 @@
 {
-  "publishedAt": "2026-09-03T04:22:02.567Z",
-  "input": "ops/intake/2026-09-03-nyt-and-usa-today-routine.json",
+  "publishedAt": "2026-09-03T06:19:28.602Z",
+  "input": "ops/intake/2026-09-03-la-times-routine.json",
   "urls": [
     "/explainers/leave-alone-nyt-mini/",
     "/explainers/vehemently-dislike-nyt-mini/",
@@ -25,7 +25,13 @@
     "/explainers/blank-carter-2005-sports-film-usa-today/",
     "/explainers/that-blank-has-sailed-usa-today/",
     "/explainers/youll-blank-the-day-usa-today/",
-    "/explainers/love-blank-neighbor-usa-today/"
+    "/explainers/love-blank-neighbor-usa-today/",
+    "/explainers/word-with-order-or-reel-la-times/",
+    "/explainers/blank-farming-asking-for-upvotes-reddit-la-times/",
+    "/explainers/catches-forty-winks-la-times/",
+    "/explainers/on-the-job-protection-org-la-times/",
+    "/explainers/party-game-with-forbidden-words-la-times/",
+    "/explainers/wedding-party-member-perhaps-la-times/"
   ],
   "answerUrls": [
     "/crosswordese/ego/",
@@ -51,7 +57,13 @@
     "/crosswordese/siri/",
     "/crosswordese/tent/",
     "/crosswordese/thy/",
-    "/crosswordese/torso/"
+    "/crosswordese/torso/",
+    "/crosswordese/gag/",
+    "/crosswordese/groom/",
+    "/crosswordese/karma/",
+    "/crosswordese/naps/",
+    "/crosswordese/osha/",
+    "/crosswordese/taboo/"
   ],
   "clinicUrls": [
     "/daily-clue-clinic/2026-09-03/"
@@ -62,13 +74,13 @@
     "/daily-clue-clinic/",
     "/crossword-answers-today/",
     "/crossword-answers-by-length/",
-    "/crossword-answers/5-letters/",
     "/crossword-answers/3-letters/",
+    "/crossword-answers/5-letters/",
     "/crossword-answers/4-letters/",
-    "/crossword-answers/6-letters/",
     "/nyt-mini-crossword-clues/",
     "/nyt-midi-crossword-clues/",
     "/nyt-crossword-clues/",
-    "/usa-today-crossword-answers/"
+    "/usa-today-crossword-answers/",
+    "/la-times-crossword-answers/"
   ]
 }

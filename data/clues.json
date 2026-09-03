@@ -9581,5 +9581,137 @@
     "publication": "USA TODAY Crossword",
     "sourceDate": "2026-09-03",
     "clueNumber": "12-Down"
+  },
+  {
+    "slug": "word-with-order-or-reel-la-times",
+    "clue": "Word with order or reel",
+    "answer": "GAG",
+    "date": "2026-09-03",
+    "popularity": 100,
+    "definition": "Gag forms the compounds gag order and gag reel.",
+    "explanation": "GAG can precede both clue words: a gag order restricts speech, while a gag reel collects humorous outtakes. The shared three-letter word is the answer.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "gag order",
+      "gag reel",
+      "shared word"
+    ],
+    "clueType": "shared-word",
+    "signal": "The phrase “Word with” asks for one term that forms familiar expressions with both supplied nouns.",
+    "hint": "Find the three-letter word that precedes both a speech restriction and a collection of outtakes.",
+    "reviewedAt": "2026-09-03",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-09-03",
+    "clueNumber": "1-Across"
+  },
+  {
+    "slug": "blank-farming-asking-for-upvotes-reddit-la-times",
+    "clue": "__ farming: asking for upvotes on Reddit",
+    "answer": "KARMA",
+    "date": "2026-09-03",
+    "popularity": 100,
+    "definition": "Karma farming is the practice of seeking votes or engagement mainly to increase a Reddit account's karma score.",
+    "explanation": "KARMA completes the platform-specific phrase “karma farming.” Asking for upvotes is the behavior described by the clue.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "karma farming",
+      "Reddit",
+      "upvotes"
+    ],
+    "clueType": "fill-in-the-blank",
+    "signal": "The Reddit and upvote context identifies a specific platform reputation term.",
+    "hint": "Use the five-letter Reddit score that users can try to farm.",
+    "reviewedAt": "2026-09-03",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-09-03",
+    "clueNumber": "4-Across"
+  },
+  {
+    "slug": "catches-forty-winks-la-times",
+    "clue": "Catches forty winks",
+    "answer": "NAPS",
+    "date": "2026-09-03",
+    "popularity": 100,
+    "definition": "Naps means sleeps briefly, usually during the day.",
+    "explanation": "NAPS matches the idiom “catches forty winks,” meaning takes a short sleep. The answer agrees with the clue's third-person singular verb form.",
+    "partOfSpeech": "verb",
+    "tags": [
+      "naps",
+      "forty winks",
+      "short sleep"
+    ],
+    "clueType": "idiom-equivalence",
+    "signal": "The familiar sleep idiom points to a short everyday verb.",
+    "hint": "Use a four-letter verb meaning takes a short sleep.",
+    "reviewedAt": "2026-09-03",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-09-03",
+    "clueNumber": "9-Across"
+  },
+  {
+    "slug": "on-the-job-protection-org-la-times",
+    "clue": "On-the-job protection org.",
+    "answer": "OSHA",
+    "date": "2026-09-03",
+    "popularity": 100,
+    "definition": "OSHA is the U.S. Occupational Safety and Health Administration, which sets and enforces workplace safety standards.",
+    "explanation": "OSHA is the four-letter workplace protection organization requested. The abbreviated “org.” signals an agency acronym.",
+    "partOfSpeech": "acronym",
+    "tags": [
+      "OSHA",
+      "workplace safety",
+      "organization"
+    ],
+    "clueType": "abbreviation-factoid",
+    "signal": "The job-safety context and abbreviation marker point to a federal agency acronym.",
+    "hint": "Use the four initials of the U.S. workplace-safety agency.",
+    "reviewedAt": "2026-09-03",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-09-03",
+    "clueNumber": "16-Across"
+  },
+  {
+    "slug": "party-game-with-forbidden-words-la-times",
+    "clue": "Party game with forbidden words",
+    "answer": "TABOO",
+    "date": "2026-09-03",
+    "popularity": 100,
+    "definition": "Taboo is a party word game in which players describe a target without saying listed forbidden words.",
+    "explanation": "TABOO is the five-letter game whose central rule is avoiding specified words while giving clues. The clue describes its defining mechanic.",
+    "partOfSpeech": "proper noun",
+    "tags": [
+      "Taboo",
+      "party game",
+      "forbidden words"
+    ],
+    "clueType": "game-factoid",
+    "signal": "The unusual forbidden-word mechanic identifies a specific branded game.",
+    "hint": "Name the five-letter game whose title itself means prohibited.",
+    "reviewedAt": "2026-09-03",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-09-03",
+    "clueNumber": "20-Across"
+  },
+  {
+    "slug": "wedding-party-member-perhaps-la-times",
+    "clue": "Wedding party member, perhaps",
+    "answer": "GROOM",
+    "date": "2026-09-03",
+    "popularity": 100,
+    "definition": "A groom is a person getting married, traditionally a man, and a central member of a wedding party.",
+    "explanation": "GROOM is one possible wedding party member, which explains the qualifier “perhaps.” The five-letter noun names one of the people being married.",
+    "partOfSpeech": "noun",
+    "tags": [
+      "groom",
+      "wedding party",
+      "marriage"
+    ],
+    "clueType": "category-example",
+    "signal": "“Perhaps” indicates one possible member rather than a role present at every wedding.",
+    "hint": "Use a five-letter traditional term for the man getting married.",
+    "reviewedAt": "2026-09-03",
+    "publication": "LA Times Crossword",
+    "sourceDate": "2026-09-03",
+    "clueNumber": "36-Across"
   }
 ]

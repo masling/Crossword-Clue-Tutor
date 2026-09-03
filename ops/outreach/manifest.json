@@ -8,7 +8,7 @@
   "datasetEvidence": {
     "clueFamilies": 15,
     "reviewedCandidates": 328,
-    "meaningEntries": 328
+    "meaningEntries": 334
   },
   "items": [
     {
@@ -211,7 +211,12 @@
       "gmailDraftCreatedAt": null,
       "approvalRequired": true,
       "sentAt": "2026-08-22T22:03:12+08:00",
-      "messageId": "1a029c821a4d2bda"
+      "messageId": "1a029c821a4d2bda",
+      "followUpStatus": "sent",
+      "followUpSentAt": "2026-09-03T14:27:00+08:00",
+      "followUpMessageId": "1a065ed9fbb0bd6d",
+      "followUpAssetUrl": "https://crosswordcluetutor.com/guides/crossword-clues-for-vocabulary-learning/",
+      "followUpEvidence": "One individually reviewed reply was sent after Gmail showed only the original sent message and no recipient reply; the message explicitly requests no further follow-up if the resource is not a fit."
     },
     {
       "id": "larry-ferlazzo-resource",
