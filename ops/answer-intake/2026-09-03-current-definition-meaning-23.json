@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-03",
+  "selectionReason": "Every unique answer from the verified September 3 NYT Mini, NYT Midi, NYT Daily, and USA TODAY selected-clue batches still lacking a canonical Definition & Meaning page; EGO already had a reviewed profile.",
+  "profiles": [
+    { "answer": "ABHOR", "displayTerm": "Abhor", "slug": "abhor", "pronunciation": "ab-HOR", "related": [] },
+    { "answer": "ACTRESS", "displayTerm": "Actress", "slug": "actress", "pronunciation": "AK-tris", "related": [] },
+    { "answer": "APPS", "displayTerm": "Apps", "slug": "apps", "pronunciation": "aps", "related": [] },
+    { "answer": "COACH", "displayTerm": "Coach", "slug": "coach", "pronunciation": "kohch", "related": [] },
+    { "answer": "DEARLY", "displayTerm": "Dearly", "slug": "dearly", "pronunciation": "DEER-lee", "related": [] },
+    { "answer": "EBONY", "displayTerm": "Ebony", "slug": "ebony", "pronunciation": "EB-uh-nee", "related": [] },
+    { "answer": "ENABLE", "displayTerm": "Enable", "slug": "enable", "pronunciation": "en-AY-buhl", "related": [] },
+    { "answer": "ENSUED", "displayTerm": "Ensued", "slug": "ensued", "pronunciation": "en-SOOD", "related": [] },
+    { "answer": "EYE", "displayTerm": "Eye", "slug": "eye", "pronunciation": "eye", "related": [] },
+    { "answer": "FREON", "displayTerm": "Freon", "slug": "freon", "pronunciation": "FREE-on", "related": [] },
+    { "answer": "HER", "displayTerm": "Her", "slug": "her", "pronunciation": "hur", "related": [] },
+    { "answer": "LATKE", "displayTerm": "Latke", "slug": "latke", "pronunciation": "LOT-kuh", "related": [] },
+    { "answer": "LETBE", "displayTerm": "Let be", "slug": "let-be", "pronunciation": "let bee", "related": [] },
+    { "answer": "NIT", "displayTerm": "Nit", "slug": "nit", "pronunciation": "nit", "related": [] },
+    { "answer": "PITCH", "displayTerm": "Pitch", "slug": "pitch", "pronunciation": "pitch", "related": [] },
+    { "answer": "ROEBUCK", "displayTerm": "Roebuck", "slug": "roebuck", "pronunciation": "ROH-buk", "related": [] },
+    { "answer": "ROWBOATS", "displayTerm": "Rowboats", "slug": "rowboats", "pronunciation": "ROH-bohts", "related": [] },
+    { "answer": "RUE", "displayTerm": "Rue", "slug": "rue", "pronunciation": "roo", "related": [] },
+    { "answer": "SHIP", "displayTerm": "Ship", "slug": "ship", "pronunciation": "ship", "related": [] },
+    { "answer": "SIRI", "displayTerm": "Siri", "slug": "siri", "pronunciation": "SEER-ee", "related": [] },
+    { "answer": "TENT", "displayTerm": "Tent", "slug": "tent", "pronunciation": "tent", "related": [] },
+    { "answer": "THY", "displayTerm": "Thy", "slug": "thy", "pronunciation": "thye", "related": [] },
+    { "answer": "TORSO", "displayTerm": "Torso", "slug": "torso", "pronunciation": "TOR-soh", "related": [] }
+  ]
+}
