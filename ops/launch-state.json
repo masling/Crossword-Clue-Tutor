@@ -186,7 +186,11 @@
       "currentProfiles": 23,
       "profilesBefore": 305,
       "profilesAfter": 328,
-      "status": "Validated locally; deployment pending",
+      "status": "Production verified",
+      "deployedAt": "2026-09-03T12:29:00+08:00",
+      "deploymentCommit": "f2949202e19e2c70535fb5cc9777fbc548679e5c",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33714917340",
+      "productionVerification": "Latke Definition & Meaning page and representative answer pages returned HTTP 200 after deployment",
       "selectionReason": "Every missing unique answer from the verified September 3 NYT Mini, NYT Midi, NYT Daily, and USA TODAY selected-clue batches; EGO already had a reviewed profile"
     },
     "latestMiddayDefinitionMeaningRun": {
@@ -564,7 +568,10 @@
       "answerIntake": "ops/answer-intake/2026-09-03-current-definition-meaning-23.json",
       "currentAnswerProfiles": 23,
       "rightsBoundary": "Six selected clue pages per advanced source; no grid or complete answer list",
-      "status": "Validated locally; deployment pending"
+      "status": "Production verified",
+      "deploymentCommit": "f2949202e19e2c70535fb5cc9777fbc548679e5c",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33714917340",
+      "productionVerification": "Representative NYT Mini, Midi, and Daily clue pages returned HTTP 200; shared production sitemap contains 860 URLs"
     },
     "latestMiddayFreshnessRun": {
       "sourceDate": "2026-09-03",
@@ -577,7 +584,10 @@
       "currentAnswerProfiles": 23,
       "historicalBackfillProfiles": 0,
       "rightsBoundary": "Six selected clue pages per publication; no grid or complete answer list",
-      "status": "Validated locally; deployment pending",
+      "status": "Production verified",
+      "deploymentCommit": "f2949202e19e2c70535fb5cc9777fbc548679e5c",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33714917340",
+      "productionVerification": "Representative USA TODAY clue page returned HTTP 200; shared production sitemap contains 860 URLs",
       "pending": ["LA Times Crossword"]
     },
     "officialSourceDiscovery": {
@@ -586,7 +596,7 @@
         "checkedAt": "2026-09-03T04:20:00Z",
         "latestOfficialDate": "2026-09-03",
         "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected September 3 pairs prepared: LETBE, ABHOR, TORSO, EYE, LATKE, and EBONY",
+        "selectedPairStatus": "Six selected September 3 pairs published: LETBE, ABHOR, TORSO, EYE, LATKE, and EBONY",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "NYT Midi Crossword": {
@@ -594,7 +604,7 @@
         "checkedAt": "2026-09-03T04:20:00Z",
         "latestOfficialDate": "2026-09-03",
         "accessMode": "Bounded public same-day clue-answer pages without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected September 3 pairs prepared: NIT, EGO, TENT, ROWBOATS, FREON, and ROEBUCK",
+        "selectedPairStatus": "Six selected September 3 pairs published: NIT, EGO, TENT, ROWBOATS, FREON, and ROEBUCK",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "The New York Times Crossword": {
@@ -602,7 +612,7 @@
         "checkedAt": "2026-09-03T04:20:00Z",
         "latestOfficialDate": "2026-09-03",
         "accessMode": "Bounded public same-day clue-answer evidence without NYT login or access-control bypass",
-        "selectedPairStatus": "Six selected September 3 pairs prepared: APPS, HER, PITCH, SIRI, ENSUED, and ENABLE",
+        "selectedPairStatus": "Six selected September 3 pairs published: APPS, HER, PITCH, SIRI, ENSUED, and ENABLE",
         "contentBoundary": "Six selected clue pages only; no grid or complete answer list"
       },
       "LA Times Crossword": {
@@ -635,7 +645,7 @@
         "localDatabase": ".local/source-intelligence.sqlite",
         "statsCommand": "npm run source:stats",
         "contentBoundary": "Stores the complete official public clue list only in the Git-ignored local SQLite database for future analysis; model-facing JSON remains capped at six candidates, and the query explicitly excludes the hidden solution field, login, and Reveal controls",
-        "selectedPairStatus": "Six official-candidate September 3 pairs independently verified and prepared: ACTRESS, DEARLY, COACH, SHIP, RUE, and THY; complete official clue rows remain only in the local Git-ignored database"
+        "selectedPairStatus": "Six official-candidate September 3 pairs independently verified and published: ACTRESS, DEARLY, COACH, SHIP, RUE, and THY; complete official clue rows remain only in the local Git-ignored database"
       }
     },
     "latestFreshnessBatch": {
