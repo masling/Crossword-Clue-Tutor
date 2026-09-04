@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-04",
+  "selectionReason": "All fifteen missing unique current NYT answers; MAN, EYES and LUXE already have canonical profiles. Linked entries are explained with their companion clue context, not treated as independent dictionary headwords.",
+  "profiles": [
+    {
+      "answer": "ACED",
+      "displayTerm": "Aced",
+      "slug": "aced",
+      "pronunciation": "ayst",
+      "related": []
+    },
+    {
+      "answer": "ATE",
+      "displayTerm": "Ate",
+      "slug": "ate",
+      "pronunciation": "ayt",
+      "related": []
+    },
+    {
+      "answer": "ATTED",
+      "displayTerm": "Atted",
+      "slug": "atted",
+      "pronunciation": "AT-id",
+      "related": []
+    },
+    {
+      "answer": "ENAMORS",
+      "displayTerm": "Enamors",
+      "slug": "enamors",
+      "pronunciation": "en-AM-erz",
+      "related": []
+    },
+    {
+      "answer": "INAUGURATE",
+      "displayTerm": "Inaugurate",
+      "slug": "inaugurate",
+      "pronunciation": "in-AW-gyuh-rayt",
+      "related": []
+    },
+    {
+      "answer": "INTHE",
+      "displayTerm": "In the",
+      "slug": "in-the",
+      "pronunciation": "in thuh",
+      "related": []
+    },
+    {
+      "answer": "IRIS",
+      "displayTerm": "Iris",
+      "slug": "iris",
+      "pronunciation": "EYE-ris",
+      "related": []
+    },
+    {
+      "answer": "JENGATOWER",
+      "displayTerm": "Jenga tower",
+      "slug": "jenga-tower",
+      "pronunciation": "JENG-guh TOW-er",
+      "related": []
+    },
+    {
+      "answer": "LAX",
+      "displayTerm": "LAX",
+      "slug": "lax",
+      "pronunciation": "el ay eks",
+      "related": []
+    },
+    {
+      "answer": "LOOSE",
+      "displayTerm": "Loose",
+      "slug": "loose",
+      "pronunciation": "loos",
+      "related": []
+    },
+    {
+      "answer": "MOON",
+      "displayTerm": "Moon",
+      "slug": "moon",
+      "pronunciation": "moon",
+      "related": []
+    },
+    {
+      "answer": "MOTTO",
+      "displayTerm": "Motto",
+      "slug": "motto",
+      "pronunciation": "MOT-oh",
+      "related": []
+    },
+    {
+      "answer": "SOJOURNER",
+      "displayTerm": "Sojourner",
+      "slug": "sojourner",
+      "pronunciation": "SOH-jur-ner",
+      "related": []
+    },
+    {
+      "answer": "TAXI",
+      "displayTerm": "Taxi",
+      "slug": "taxi",
+      "pronunciation": "TAK-see",
+      "related": []
+    },
+    {
+      "answer": "UMP",
+      "displayTerm": "Ump",
+      "slug": "ump",
+      "pronunciation": "ump",
+      "related": []
+    }
+  ]
+}

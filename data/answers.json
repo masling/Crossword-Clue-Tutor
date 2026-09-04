@@ -5553,5 +5553,345 @@
     ],
     "otherMeanings": "TABOO is the five-letter game whose central rule is avoiding specified words while giving clues. The clue describes its defining mechanic. Other clues may use a different sense, so solvers should confirm the grammar, source context, answer length, and crossing letters.",
     "related": []
+  },
+  {
+    "slug": "psy",
+    "answer": "PSY",
+    "displayTerm": "PSY",
+    "pronunciation": "sigh",
+    "partOfSpeech": "proper noun",
+    "meaning": "PSY is the stage name of South Korean singer and rapper Park Jae-sang, who recorded Gangnam Style.",
+    "crosswordUse": "PSY answers the reviewed clue “\"Gangnam Style\" singer.” A quoted song title calls for its performer, whose stage name is the grid entry.",
+    "whyCommon": "PSY is useful to learn because this reviewed clue depends on proper noun, exact grammar, and a 3-letter grid entry.",
+    "cluePatterns": [
+      "\"Gangnam Style\" singer",
+      "Think of the South Korean performer known for a horse-riding dance.",
+      "3-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "PSY is a stage name, not the similarly pronounced Greek letter psi. The song reference identifies a performer rather than a letter.",
+    "related": []
+  },
+  {
+    "slug": "kitt",
+    "answer": "KITT",
+    "displayTerm": "Kitt",
+    "pronunciation": "kit",
+    "partOfSpeech": "proper noun",
+    "meaning": "Kitt is the surname of Eartha Kitt, the singer and actress who voiced Yzma in Disney's The Emperor's New Groove.",
+    "crosswordUse": "KITT answers the reviewed clue “Eartha who voiced Yzma in \"The Emperor's New Groove\".” A first name followed by a credited role asks for the performer's surname.",
+    "whyCommon": "KITT is useful to learn because this reviewed clue depends on proper noun, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Eartha who voiced Yzma in \"The Emperor's New Groove\"",
+      "The supplied first name belongs to a singer and actress with a four-letter surname.",
+      "4-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "Kitt is a surname here. Kit, meaning a set of equipment, has one T; the first name Eartha identifies the performer.",
+    "related": []
+  },
+  {
+    "slug": "self",
+    "answer": "SELF",
+    "displayTerm": "Self",
+    "pronunciation": "self",
+    "partOfSpeech": "noun",
+    "meaning": "Self refers to one's own person or identity; a note to self is a reminder addressed to oneself.",
+    "crosswordUse": "SELF answers the reviewed clue “\"Note to ___ . . .\".” The quotation and ellipsis frame a familiar introductory phrase.",
+    "whyCommon": "SELF is useful to learn because this reviewed clue depends on fill in the blank, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "\"Note to ___ . . .\"",
+      "Complete the expression for a private reminder addressed to its writer.",
+      "4-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "Self can mean an individual's identity or character. It also appears in self-care and self-control, beyond the reminder phrase used here.",
+    "related": []
+  },
+  {
+    "slug": "lorne",
+    "answer": "LORNE",
+    "displayTerm": "Lorne",
+    "pronunciation": "lorn",
+    "partOfSpeech": "proper noun",
+    "meaning": "Lorne is the given name of Lorne Michaels, the creator and longtime producer of Saturday Night Live.",
+    "crosswordUse": "LORNE answers the reviewed clue “\"SNL\" producer Michaels.” An entertainment credit plus a supplied surname calls for the missing given name.",
+    "whyCommon": "LORNE is useful to learn because this reviewed clue depends on proper noun, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "\"SNL\" producer Michaels",
+      "His first name has five letters and begins with L.",
+      "5-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "Lorne is a given name rather than a descriptive English word. The surname Michaels and television credit determine the intended identity.",
+    "related": []
+  },
+  {
+    "slug": "tres",
+    "answer": "TRES",
+    "displayTerm": "Très",
+    "pronunciation": "treh",
+    "partOfSpeech": "adverb",
+    "meaning": "Très is the French adverb meaning very, as in très chic for very stylish.",
+    "crosswordUse": "TRES answers the reviewed clue “\"___ chic!\".” The French word chic points to a French intensifier rather than an English synonym.",
+    "whyCommon": "TRES is useful to learn because this reviewed clue depends on fill in the blank, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "\"___ chic!\"",
+      "Use the French word for very, with its accent omitted in the grid.",
+      "4-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "French très means very; Spanish tres means three. The grid omits accents, so the surrounding French expression determines this sense.",
+    "related": []
+  },
+  {
+    "slug": "aced",
+    "answer": "ACED",
+    "displayTerm": "Aced",
+    "pronunciation": "ayst",
+    "partOfSpeech": "verb",
+    "meaning": "Aced can mean served a tennis ace: a legal serve that wins the point without the receiver touching the ball.",
+    "crosswordUse": "ACED answers the reviewed clue “Hit a point of no return?.” The question mark redirects point and return into tennis vocabulary.",
+    "whyCommon": "ACED is useful to learn because this reviewed clue depends on wordplay, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Hit a point of no return?",
+      "Think of winning a tennis point directly on the serve, in the past tense.",
+      "4-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "Aced can also mean performed exceptionally well, as in aced a test. Point and return select the tennis sense here.",
+    "related": []
+  },
+  {
+    "slug": "ate",
+    "answer": "ATE",
+    "displayTerm": "Ate",
+    "pronunciation": "ayt",
+    "partOfSpeech": "verb",
+    "meaning": "Ate is the simple past tense of eat, meaning consumed food.",
+    "crosswordUse": "ATE answers the reviewed clue “Spent time in a dining hall.” The dining setting identifies an activity, and the past tense fixes its form.",
+    "whyCommon": "ATE is useful to learn because this reviewed clue depends on direct definition, exact grammar, and a 3-letter grid entry.",
+    "cluePatterns": [
+      "Spent time in a dining hall",
+      "Use the three-letter past tense of the verb for consuming food.",
+      "3-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "Ate is the past tense of eat. Informal speech can also use ate to praise a performance; the dining-hall setting selects literal eating.",
+    "related": []
+  },
+  {
+    "slug": "atted",
+    "answer": "ATTED",
+    "displayTerm": "Atted",
+    "pronunciation": "AT-id",
+    "partOfSpeech": "verb",
+    "meaning": "Atted is an informal past-tense form of at, meaning mentioned or addressed with an @ handle online.",
+    "crosswordUse": "ATTED answers the reviewed clue “Directly called out in a post, using an “@”.” The @ symbol supplies the spoken base word, while called sets the past tense.",
+    "whyCommon": "ATTED is useful to learn because this reviewed clue depends on informal definition, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "Directly called out in a post, using an “@”",
+      "Turn the spoken name of the symbol into a five-letter past-tense verb.",
+      "5-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "Atted is informal language for an @ mention. Added is a different verb; the online-post context supports the double-T spelling.",
+    "related": []
+  },
+  {
+    "slug": "enamors",
+    "answer": "ENAMORS",
+    "displayTerm": "Enamors",
+    "pronunciation": "en-AM-erz",
+    "partOfSpeech": "verb",
+    "meaning": "Enamors means charms or inspires love, admiration, or fascination in someone.",
+    "crosswordUse": "ENAMORS answers the reviewed clue “Captivates.” The -s ending in the clue must be preserved in the matching verb.",
+    "whyCommon": "ENAMORS is useful to learn because this reviewed clue depends on direct definition, exact grammar, and a 7-letter grid entry.",
+    "cluePatterns": [
+      "Captivates",
+      "Use a seven-letter verb meaning charms or inspires affection.",
+      "7-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "Enamors can imply romantic attraction or more general charm. British enamours adds a U and requires an extra square.",
+    "related": []
+  },
+  {
+    "slug": "inaugurate",
+    "answer": "INAUGURATE",
+    "displayTerm": "Inaugurate",
+    "pronunciation": "in-AW-gyuh-rayt",
+    "partOfSpeech": "verb",
+    "meaning": "To inaugurate is to formally begin, introduce, or open something.",
+    "crosswordUse": "INAUGURATE answers the reviewed clue “Kick off.” The everyday phrasal verb is replaced by a more formal single verb.",
+    "whyCommon": "INAUGURATE is useful to learn because this reviewed clue depends on phrase equivalence, exact grammar, and a 10-letter grid entry.",
+    "cluePatterns": [
+      "Kick off",
+      "Use a ten-letter verb meaning formally begin or open.",
+      "10-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "Inaugurate can mean formally install a person in office or formally begin an event or activity. Kick off selects the beginning sense, not necessarily a political ceremony.",
+    "related": []
+  },
+  {
+    "slug": "in-the",
+    "answer": "INTHE",
+    "displayTerm": "In the",
+    "pronunciation": "in thuh",
+    "partOfSpeech": "phrase",
+    "meaning": "In the is a preposition followed by the definite article, used here within the expression man in the moon.",
+    "crosswordUse": "INTHE answers the reviewed clue “See 1-Across.” A See reference borrows its meaning from the explicitly named companion clue.",
+    "whyCommon": "INTHE is useful to learn because this reviewed clue depends on cross reference, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "See 1-Across",
+      "This slot holds the two short connecting words between the person and the lunar object.",
+      "5-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "In the is a phrase fragment, not a standalone dictionary word. This entry depends on the linked expression man in the moon; another See clue may need an entirely different answer.",
+    "related": []
+  },
+  {
+    "slug": "iris",
+    "answer": "IRIS",
+    "displayTerm": "Iris",
+    "pronunciation": "EYE-ris",
+    "partOfSpeech": "noun",
+    "meaning": "The iris is the colored ring around the pupil of an eye.",
+    "crosswordUse": "IRIS answers the reviewed clue “Body part affected by heterochromia.” A technical color term and singular body part point to eye anatomy.",
+    "whyCommon": "IRIS is useful to learn because this reviewed clue depends on direct definition, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Body part affected by heterochromia",
+      "Name the colored ring surrounding the pupil.",
+      "4-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "Iris can name a flowering plant, a camera aperture, or a personal name. Eye-color wording selects the anatomical sense.",
+    "related": []
+  },
+  {
+    "slug": "jenga-tower",
+    "answer": "JENGATOWER",
+    "displayTerm": "Jenga tower",
+    "pronunciation": "JENG-guh TOW-er",
+    "partOfSpeech": "noun phrase",
+    "meaning": "A Jenga tower is the stack of wooden blocks used in the balancing game Jenga.",
+    "crosswordUse": "JENGATOWER answers the reviewed clue “Result of a tense build-up?.” The question mark reinterprets build-up as assembling a precarious game structure.",
+    "whyCommon": "JENGATOWER is useful to learn because this reviewed clue depends on wordplay, exact grammar, and a 10-letter grid entry.",
+    "cluePatterns": [
+      "Result of a tense build-up?",
+      "Think of a wooden-block game whose stack may tumble.",
+      "10-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "Jenga tower describes the wooden-block stack in Jenga, not a separate brand or every kind of tower. Suspense and stacking distinguish this use.",
+    "related": []
+  },
+  {
+    "slug": "lax",
+    "answer": "LAX",
+    "displayTerm": "LAX",
+    "pronunciation": "el ay eks",
+    "partOfSpeech": "proper noun",
+    "meaning": "LAX is the three-letter airport code commonly used for Los Angeles International Airport.",
+    "crosswordUse": "LAX answers the reviewed clue “Busiest airport on the West Coast, familiarly.” Familiarly invites the widely used short identifier for the airport.",
+    "whyCommon": "LAX is useful to learn because this reviewed clue depends on abbreviation, exact grammar, and a 3-letter grid entry.",
+    "cluePatterns": [
+      "Busiest airport on the West Coast, familiarly",
+      "Use the three-letter code for Los Angeles International Airport.",
+      "3-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "LAX is the airport identifier, commonly spoken letter by letter. The ordinary adjective lax means insufficiently strict or careful.",
+    "related": []
+  },
+  {
+    "slug": "loose",
+    "answer": "LOOSE",
+    "displayTerm": "Loose",
+    "pronunciation": "loos",
+    "partOfSpeech": "adjective",
+    "meaning": "Loose means not firmly fastened, closely fitted, or held under tension.",
+    "crosswordUse": "LOOSE answers the reviewed clue “Opposite of tight.” Opposite asks for an antonym with the same part of speech.",
+    "whyCommon": "LOOSE is useful to learn because this reviewed clue depends on direct definition, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "Opposite of tight",
+      "Think of a five-letter adjective for clothing that is not snug.",
+      "5-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "Loose can mean unattached, not snug, or not strictly interpreted. Lose is a different verb, not an alternative spelling.",
+    "related": []
+  },
+  {
+    "slug": "moon",
+    "answer": "MOON",
+    "displayTerm": "Moon",
+    "pronunciation": "moon",
+    "partOfSpeech": "noun",
+    "meaning": "The Moon is Earth's natural satellite; here it completes the expression man in the moon.",
+    "crosswordUse": "MOON answers the reviewed clue “See 1-Across.” Follow the numbered companion clue to finish a three-part expression.",
+    "whyCommon": "MOON is useful to learn because this reviewed clue depends on cross reference, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "See 1-Across",
+      "Finish the linked expression with Earth's natural satellite.",
+      "4-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "A moon can be a natural satellite of another planet. The Moon names Earth's satellite; man in the moon refers to an imagined surface pattern.",
+    "related": []
+  },
+  {
+    "slug": "motto",
+    "answer": "MOTTO",
+    "displayTerm": "Motto",
+    "pronunciation": "MOT-oh",
+    "partOfSpeech": "noun",
+    "meaning": "A motto is a short expression representing the ideals or identity of a person, group, or institution.",
+    "crosswordUse": "MOTTO answers the reviewed clue ““Eureka” for California, or “Excelsior” for New York.” Two examples point to the category they share.",
+    "whyCommon": "MOTTO is useful to learn because this reviewed clue depends on category definition, exact grammar, and a 5-letter grid entry.",
+    "cluePatterns": [
+      "“Eureka” for California, or “Excelsior” for New York",
+      "Name the five-letter term for a short statement of identity or ideals.",
+      "5-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "A motto states a guiding idea or identity. A slogan may advertise or campaign for something; these state expressions are specifically mottos.",
+    "related": []
+  },
+  {
+    "slug": "sojourner",
+    "answer": "SOJOURNER",
+    "displayTerm": "Sojourner",
+    "pronunciation": "SOH-jur-ner",
+    "partOfSpeech": "proper noun",
+    "meaning": "Sojourner was the Mars Pathfinder rover named in honor of abolitionist and women's-rights advocate Sojourner Truth.",
+    "crosswordUse": "SOJOURNER answers the reviewed clue “Mars rover named in honor of a 19th-century activist.” The historical namesake distinguishes this rover from other Mars explorers.",
+    "whyCommon": "SOJOURNER is useful to learn because this reviewed clue depends on proper noun, exact grammar, and a 9-letter grid entry.",
+    "cluePatterns": [
+      "Mars rover named in honor of a 19th-century activist",
+      "Think of the Pathfinder rover whose namesake's surname was Truth.",
+      "9-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "Sojourner is the rover's name here. The common noun sojourner means a temporary resident; the rover was named for Sojourner Truth.",
+    "related": []
+  },
+  {
+    "slug": "taxi",
+    "answer": "TAXI",
+    "displayTerm": "Taxi",
+    "pronunciation": "TAK-see",
+    "partOfSpeech": "noun",
+    "meaning": "A taxi is a vehicle hired to carry passengers to a chosen destination for a fare.",
+    "crosswordUse": "TAXI answers the reviewed clue “Cab.” A short noun clue has multiple senses; the answer selects hired transport.",
+    "whyCommon": "TAXI is useful to learn because this reviewed clue depends on direct definition, exact grammar, and a 4-letter grid entry.",
+    "cluePatterns": [
+      "Cab",
+      "Think of a four-letter vehicle you hail for a paid ride.",
+      "4-letter entry; check clue context and crossings"
+    ],
+    "otherMeanings": "Taxi can also describe an aircraft moving along the ground. Cab selects the hired-road-vehicle noun sense in this clue.",
+    "related": []
+  },
+  {
+    "slug": "ump",
+    "answer": "UMP",
+    "displayTerm": "Ump",
+    "pronunciation": "ump",
+    "partOfSpeech": "noun",
+    "meaning": "Ump is an informal shortened form of umpire, an official who makes calls in baseball and other sports.",
+    "crosswordUse": "UMP answers the reviewed clue “Official who is calling the “strikes” in this puzzle’s grid?.” Strikes selects baseball officiating; the three-letter answer is an informal shortening.",
+    "whyCommon": "UMP is useful to learn because this reviewed clue depends on abbreviation, exact grammar, and a 3-letter grid entry.",
+    "cluePatterns": [
+      "Official who is calling the “strikes” in this puzzle’s grid?",
+      "Use the short name for the official making calls behind home plate.",
+      "3-letter entry; check clue context and crossings"
+    ],
+    "related": [],
+    "otherMeanings": "Ump is the informal short form of umpire. The full word has six letters; entry length and clue tone distinguish the forms. Strikes selects baseball rather than another sport."
   }
 ]

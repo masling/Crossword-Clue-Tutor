@@ -1,0 +1,114 @@
+{
+  "clues": [
+    {
+      "slug": "gangnam-style-singer-usa-today",
+      "clue": "\"Gangnam Style\" singer",
+      "answer": "PSY",
+      "date": "2026-09-04",
+      "popularity": 100,
+      "definition": "PSY is the stage name of South Korean singer and rapper Park Jae-sang, who recorded Gangnam Style.",
+      "explanation": "The song title identifies the performer PSY, pronounced like sigh. The answer uses his three-letter stage name, not his birth name or the Seoul district named in the title.",
+      "partOfSpeech": "proper noun",
+      "tags": [
+        "psy",
+        "USA TODAY",
+        "proper-noun"
+      ],
+      "clueType": "proper-noun",
+      "signal": "A quoted song title calls for its performer, whose stage name is the grid entry.",
+      "hint": "Think of the South Korean performer known for a horse-riding dance.",
+      "reviewedAt": "2026-09-04",
+      "publication": "USA TODAY Crossword",
+      "sourceDate": "2026-09-04",
+      "clueNumber": "24-Across"
+    },
+    {
+      "slug": "eartha-voiced-yzma-emperors-new-groove-usa-today",
+      "clue": "Eartha who voiced Yzma in \"The Emperor's New Groove\"",
+      "answer": "KITT",
+      "date": "2026-09-04",
+      "popularity": 100,
+      "definition": "Kitt is the surname of Eartha Kitt, the singer and actress who voiced Yzma in Disney's The Emperor's New Groove.",
+      "explanation": "The supplied first name Eartha leaves KITT as the missing surname. Yzma is the character she voiced, not the answer requested; the role pins down which performer the clue means.",
+      "partOfSpeech": "proper noun",
+      "tags": [
+        "kitt",
+        "USA TODAY",
+        "proper-noun"
+      ],
+      "clueType": "proper-noun",
+      "signal": "A first name followed by a credited role asks for the performer's surname.",
+      "hint": "The supplied first name belongs to a singer and actress with a four-letter surname.",
+      "reviewedAt": "2026-09-04",
+      "publication": "USA TODAY Crossword",
+      "sourceDate": "2026-09-04",
+      "clueNumber": "61-Across"
+    },
+    {
+      "slug": "note-to-blank-usa-today",
+      "clue": "\"Note to ___ . . .\"",
+      "answer": "SELF",
+      "date": "2026-09-04",
+      "popularity": 100,
+      "definition": "Self refers to one's own person or identity; a note to self is a reminder addressed to oneself.",
+      "explanation": "SELF completes the familiar expression note to self. The ellipsis leaves room for the reminder that follows; it is not a separate word to translate or an instruction to put a note in the grid.",
+      "partOfSpeech": "noun",
+      "tags": [
+        "self",
+        "USA TODAY",
+        "fill-in-the-blank"
+      ],
+      "clueType": "fill-in-the-blank",
+      "signal": "The quotation and ellipsis frame a familiar introductory phrase.",
+      "hint": "Complete the expression for a private reminder addressed to its writer.",
+      "reviewedAt": "2026-09-04",
+      "publication": "USA TODAY Crossword",
+      "sourceDate": "2026-09-04",
+      "clueNumber": "01-Down"
+    },
+    {
+      "slug": "snl-producer-michaels-usa-today",
+      "clue": "\"SNL\" producer Michaels",
+      "answer": "LORNE",
+      "date": "2026-09-04",
+      "popularity": 100,
+      "definition": "Lorne is the given name of Lorne Michaels, the creator and longtime producer of Saturday Night Live.",
+      "explanation": "Michaels is already supplied, so the entry is his first name LORNE. SNL expands to Saturday Night Live and identifies the television producer rather than another person with the same surname.",
+      "partOfSpeech": "proper noun",
+      "tags": [
+        "lorne",
+        "USA TODAY",
+        "proper-noun"
+      ],
+      "clueType": "proper-noun",
+      "signal": "An entertainment credit plus a supplied surname calls for the missing given name.",
+      "hint": "His first name has five letters and begins with L.",
+      "reviewedAt": "2026-09-04",
+      "publication": "USA TODAY Crossword",
+      "sourceDate": "2026-09-04",
+      "clueNumber": "17-Across"
+    },
+    {
+      "slug": "blank-chic-usa-today",
+      "clue": "\"___ chic!\"",
+      "answer": "TRES",
+      "date": "2026-09-04",
+      "popularity": 100,
+      "definition": "Très is the French adverb meaning very, as in très chic for very stylish.",
+      "explanation": "TRES supplies the intensifier in the French expression très chic. The grid drops the grave accent. Spanish tres means three, but the surrounding French expression selects the very sense here.",
+      "partOfSpeech": "adverb",
+      "tags": [
+        "tres",
+        "USA TODAY",
+        "fill-in-the-blank"
+      ],
+      "clueType": "fill-in-the-blank",
+      "signal": "The French word chic points to a French intensifier rather than an English synonym.",
+      "hint": "Use the French word for very, with its accent omitted in the grid.",
+      "reviewedAt": "2026-09-04",
+      "publication": "USA TODAY Crossword",
+      "sourceDate": "2026-09-04",
+      "clueNumber": "32-Across"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-04",
+  "selectionReason": "Five current USA TODAY answers with official clue strings and independently verified name or language senses; the ambiguous Fred Flintstone fill remains pending.",
+  "profiles": [
+    {
+      "answer": "PSY",
+      "displayTerm": "PSY",
+      "slug": "psy",
+      "pronunciation": "sigh",
+      "related": []
+    },
+    {
+      "answer": "KITT",
+      "displayTerm": "Kitt",
+      "slug": "kitt",
+      "pronunciation": "kit",
+      "related": []
+    },
+    {
+      "answer": "SELF",
+      "displayTerm": "Self",
+      "slug": "self",
+      "pronunciation": "self",
+      "related": []
+    },
+    {
+      "answer": "LORNE",
+      "displayTerm": "Lorne",
+      "slug": "lorne",
+      "pronunciation": "lorn",
+      "related": []
+    },
+    {
+      "answer": "TRES",
+      "displayTerm": "Très",
+      "slug": "tres",
+      "pronunciation": "treh",
+      "related": []
+    }
+  ]
+}

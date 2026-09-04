@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T10:19:27+08:00",
+  "updatedAt": "2026-09-04T12:26:38+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -118,9 +118,9 @@
     }
   },
   "content": {
-    "indexablePages": 872,
-    "reviewedClues": 440,
-    "answerMeaningPages": 334,
+    "indexablePages": 916,
+    "reviewedClues": 463,
+    "answerMeaningPages": 354,
     "dictionaryExpansion": {
       "profilesAdded": 74,
       "reviewedAt": "2026-08-24",
@@ -155,8 +155,8 @@
     "dailyDefinitionMeaningPolicy": {
       "enabledAt": "2026-08-28T17:00:00+08:00",
       "lastBackfillDate": "2026-09-01",
-      "lastCurrentProfileDate": "2026-09-03",
-      "currentProfilesPublishedToday": 29,
+      "lastCurrentProfileDate": "2026-09-04",
+      "currentProfilesPublishedToday": 20,
       "currentAnswerRule": "After each routine clue batch, publish one canonical Definition & Meaning page for every unique current-date answer missing from data/answers.json; current missing answers are mandatory even when they exceed the target",
       "backfillRule": "After all five sources are complete, subtract current profiles already published that local day from 25; backfill only the positive remainder from deterministic reviewed historical gaps and publish nothing when the remainder is zero or no verified gaps remain",
       "currentPlannerCommand": "npm run answer:gaps -- --date YYYY-MM-DD --current-only --output .local/answer-profile-current.json",
@@ -546,16 +546,40 @@
       "USA TODAY Crossword"
     ],
     "lastPublishedSourceDates": {
-      "NYT Mini": "2026-09-03",
-      "NYT Midi Crossword": "2026-09-03",
-      "The New York Times Crossword": "2026-09-03",
-      "LA Times Crossword": "2026-09-03",
-      "USA TODAY Crossword": "2026-09-03"
-    },
-    "pendingSourceDates": {
       "NYT Mini": "2026-09-04",
       "NYT Midi Crossword": "2026-09-04",
-      "The New York Times Crossword": "2026-09-04"
+      "The New York Times Crossword": "2026-09-04",
+      "LA Times Crossword": "2026-09-03",
+      "USA TODAY Crossword": "2026-09-04"
+    },
+    "pendingSourceDates": {
+      "LA Times Crossword": "2026-09-04",
+      "USA TODAY Crossword": "2026-09-04"
+    },
+    "latestMiddaySourceCheck": {
+      "sourceDate": "2026-09-04",
+      "checkedAt": "2026-09-04T12:26:38+08:00",
+      "branch": "12:15 Asia/Singapore",
+      "status": "Content validation, build and check passed; GitHub Actions deployment pending",
+      "selectedClues": 23,
+      "currentProfiles": 20,
+      "historicalProfiles": 0,
+      "publications": [
+        { "publication": "NYT Mini", "published": 6, "target": 6, "status": "Complete" },
+        { "publication": "NYT Midi Crossword", "published": 6, "target": 6, "status": "Complete; Eyes emoji is the public reference's text-rendered clue" },
+        { "publication": "The New York Times Crossword", "published": 6, "target": 6, "status": "Complete" },
+        { "publication": "USA TODAY Crossword", "published": 5, "target": 6, "status": "Partial; 20-Across character identity verified, exact full-name versus first-name fill unresolved" },
+        { "publication": "LA Times Crossword", "published": 0, "target": 6, "status": "Official September 4 metadata verified; exact public pairs not verified in bounded check" }
+      ],
+      "officialMetadata": {
+        "USA TODAY Crossword": { "checkedAt": "2026-09-04T04:17:50.475Z", "sourceDate": "2026-09-04", "title": "Break Free", "creator": "Rebecca Goldstein", "editor": "Amanda Rafkin", "clueRowsStoredLocally": 76, "puzzleUrl": "https://puzzles.usatoday.com/game/af6879a4-1fa1-4733-acd6-24240cef6680" },
+        "LA Times Crossword": { "checkedAt": "2026-09-04T04:17:51.568Z", "sourceDate": "2026-09-04", "sourceId": "tca260904", "creator": "Wendy L. Brandes", "officialClueCount": 79 }
+      },
+      "clueIntakes": ["ops/intake/2026-09-04-midday-routine.json", "ops/intake/2026-09-04-nyt-routine.json"],
+      "answerIntakes": ["ops/answer-intake/2026-09-04-usa-current-5.json", "ops/answer-intake/2026-09-04-nyt-current-15.json"],
+      "evidence": "research/2026-09-04-midday-source-evidence.md",
+      "nextAction": "At 14:15 investigate only LA Times September 4 and USA TODAY 20-Across. Do not recheck completed NYT dates.",
+      "rightsBoundary": "Selected clue relationships and original editorial explanations only; complete USA TODAY source rows remain in ignored local SQLite. No login, Reveal, filled-cell extraction, or solution payload."
     },
     "latestMorningSourceCheck": {
       "sourceDate": "2026-09-04",
