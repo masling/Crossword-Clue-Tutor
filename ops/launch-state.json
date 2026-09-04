@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T12:26:38+08:00",
+  "updatedAt": "2026-09-04T12:36:52+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -560,7 +560,12 @@
       "sourceDate": "2026-09-04",
       "checkedAt": "2026-09-04T12:26:38+08:00",
       "branch": "12:15 Asia/Singapore",
-      "status": "Content validation, build and check passed; GitHub Actions deployment pending",
+      "status": "Production verified",
+      "verifiedAt": "2026-09-04T12:36:52+08:00",
+      "deploymentCommit": "9693d2281065367f05a852fb3ace65b06916beb7",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33837217367",
+      "productionEvidence": "GitHub Actions verify and deploy succeeded, including IndexNow. A new NYT Daily clue and PSY meaning page returned HTTP 200 with correct canonicals; production sitemap has 916 URLs. HTTP-only checks did not execute analytics JavaScript.",
+      "ciCorrection": "Initial CI failed because the outreach manifest meaning-entry count was stale. Updated it to the actual 354 entries; focused regression and subsequent full CI passed. No external outreach was sent.",
       "selectedClues": 23,
       "currentProfiles": 20,
       "historicalProfiles": 0,
