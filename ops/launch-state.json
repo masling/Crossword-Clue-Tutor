@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T12:34:51+08:00",
+  "updatedAt": "2026-09-05T12:39:23+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -122,7 +122,11 @@
     "reviewedClues": 474,
     "answerMeaningPages": 365,
     "adaptiveClueExperience": {
-      "status": "Full tests, content validation, build, responsive structure, visual layout, and quick-reveal interaction passed; deployment pending",
+      "status": "Production verified",
+      "deployedAt": "2026-09-05T12:39:23+08:00",
+      "deploymentCommit": "102dbfafc32cd293a8941af7966d38a8891b9cb0",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33945081800",
+      "productionVerification": "Full CI and Cloudflare deployment passed. Live wordplay and reference pages returned HTTP 200 with their correct experience routes and intent-led descriptions; the September 5 clinic returned HTTP 200 with two composition-driven lanes. HTTP checks did not execute analytics JavaScript.",
       "preparedAt": "2026-09-05T12:34:51+08:00",
       "reason": "Search Console showed 32,694 impressions and 66 clicks over seven days but only 31 impressions and zero clicks in the latest 24-hour view. The previous one-size-fits-all hint-first framing did not match the immediate-answer intent consistently.",
       "experienceRoutes": [
