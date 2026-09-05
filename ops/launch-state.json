@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-04T12:36:52+08:00",
+  "updatedAt": "2026-09-05T10:16:57+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -554,7 +554,10 @@
     },
     "pendingSourceDates": {
       "LA Times Crossword": "2026-09-04",
-      "USA TODAY Crossword": "2026-09-04"
+      "USA TODAY Crossword": "2026-09-04",
+      "NYT Mini": "2026-09-05",
+      "NYT Midi Crossword": "2026-09-05",
+      "The New York Times Crossword": "2026-09-05"
     },
     "latestMiddaySourceCheck": {
       "sourceDate": "2026-09-04",
@@ -587,33 +590,33 @@
       "rightsBoundary": "Selected clue relationships and original editorial explanations only; complete USA TODAY source rows remain in ignored local SQLite. No login, Reveal, filled-cell extraction, or solution payload."
     },
     "latestMorningSourceCheck": {
-      "sourceDate": "2026-09-04",
-      "checkedAt": "2026-09-04T10:19:27+08:00",
+      "sourceDate": "2026-09-05",
+      "checkedAt": "2026-09-05T10:16:57+08:00",
       "branch": "10:15 Asia/Singapore",
       "status": "Public verification unavailable; pending 12:15 follow-up",
       "selectedCluesPublished": 0,
       "sources": [
         {
           "publication": "NYT Mini",
-          "latestPublicReferenceDate": "2026-09-03",
+          "latestPublicReferenceDate": "2026-09-04",
           "evidenceUrls": ["https://wordfinder.yourdictionary.com/crosswords/new-york-times-mini-crossword/"],
-          "limitation": "Checked public reference still displayed September 3; no September 4 exact pairs verified."
+          "limitation": "Checked public reference still displayed September 4; no September 5 exact pairs verified."
         },
         {
           "publication": "NYT Midi Crossword",
-          "latestPublicReferenceDate": "2026-09-03",
-          "evidenceUrls": ["https://nytmidi.com/"],
-          "limitation": "Current title/content displayed September 3; a September 4 selector alone does not verify new content."
+          "latestPublicReferenceDate": "2026-09-04",
+          "evidenceUrls": ["https://www.gameanswers.com/nyt-midi-crossword-answers"],
+          "limitation": "Public reference and archive still displayed September 4; no September 5 exact pairs verified."
         },
         {
           "publication": "The New York Times Crossword",
-          "latestPublicReferenceDate": "2026-09-03",
-          "evidenceUrls": ["https://word.tips/todays-nyt-the-crossword-clues-answers-hints/", "https://crosswordnyt.com/"],
-          "limitation": "Visible reference content remained September 3 despite a September 4 selector; no new exact pairs verified."
+          "latestPublicReferenceDate": "2026-09-04",
+          "evidenceUrls": ["https://word.tips/todays-nyt-the-crossword-clues-answers-hints/"],
+          "limitation": "Public reference remained on September 4 and only indicated the next Saturday puzzle; no September 5 exact pairs verified."
         }
       ],
-      "interpretation": "This bounded public-reference check does not establish whether NYT has released its September 4 puzzles. No signed-in access, Reveal, hidden payloads, or duplicate publication used.",
-      "nextAction": "At 12:15 check LA Times and USA TODAY and include all three pending NYT sources in the same bounded fallback assignment."
+      "interpretation": "The normal publisher schedule suggests September 5 may already be available to subscribers, but exact public answer verification was unavailable. No signed-in access, Reveal, hidden payloads, or duplicate publication used.",
+      "nextAction": "At 12:15 run the LA Times and USA TODAY adapters, retain their September 4 gaps, and include all three September 5 NYT sources in one bounded fallback assignment."
     },
     "latestMorningFreshnessRun": {
       "sourceDate": "2026-09-03",
