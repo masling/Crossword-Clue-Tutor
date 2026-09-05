@@ -5,7 +5,7 @@ import { buildWordNetSolverCorpus } from "./wordnet-solver-corpus.mjs";
 
 const root = process.cwd();
 const dist = path.join(root, "dist");
-const explainerTemplateUpdatedAt = "2026-08-28";
+const explainerTemplateUpdatedAt = "2026-09-05";
 
 async function readJson(relativePath) {
   return JSON.parse(await readFile(path.join(root, relativePath), "utf8"));
@@ -351,6 +351,93 @@ function clueTypeLabel(type) {
     "proper-noun": "Name or title",
     "fill-in-the-blank": "Fill in the blank"
   })[type] ?? "Crossword clue";
+}
+
+function clueExperience(type = "") {
+  const normalized = String(type).toLowerCase();
+  if (/wordplay|question|double|cross-reference|part-whole|missing-letter|sound/.test(normalized)) {
+    return {
+      key: "wordplay",
+      label: "Decode the turn",
+      title: "Reveal the answer now—or spot the trick first.",
+      choice: "or read the clue's turning point below",
+      hintLabel: "What to notice",
+      summary: "Open the answer and unpack the wordplay",
+      whyTitle: "How the trick resolves",
+      signalTitle: "The turn in the clue",
+      meaningTitle: "The answer in plain English",
+      metaPromise: "Reveal instantly or spot the trick; see how the wordplay resolves.",
+      clinicLane: "language",
+      clinicName: "Language tricks",
+      clinicDescription: "Punctuation, double meanings, and clue turns that reward a second look."
+    };
+  }
+  if (/fill|phrase|idiom|sentence|equivalence|completion/.test(normalized)) {
+    return {
+      key: "phrase",
+      label: "Complete the phrase",
+      title: "Reveal the fill now—or finish the wording yourself.",
+      choice: "or use the phrase frame below",
+      hintLabel: "Phrase cue",
+      summary: "Open the fill and see the complete expression",
+      whyTitle: "Why these words complete it",
+      signalTitle: "The phrase frame",
+      meaningTitle: "What the completed phrase means",
+      metaPromise: "Reveal instantly or finish the phrase; see why the wording fits.",
+      clinicLane: "language",
+      clinicName: "Language tricks",
+      clinicDescription: "Punctuation, double meanings, and clue turns that reward a second look."
+    };
+  }
+  if (/proper|fact|cultural|current-reference|geograph|literature|visual-reference/.test(normalized)) {
+    return {
+      key: "reference",
+      label: "Confirm the reference",
+      title: "Reveal the name now—or narrow the reference first.",
+      choice: "or use the identity cue below",
+      hintLabel: "Identity cue",
+      summary: "Open the answer and verify the reference",
+      whyTitle: "Why this is the right reference",
+      signalTitle: "Reference to identify",
+      meaningTitle: "Who or what the answer is",
+      metaPromise: "Reveal instantly or use one identity cue; verify the reference.",
+      clinicLane: "reference",
+      clinicName: "Knowledge clues",
+      clinicDescription: "Names, titles, places, and facts where one precise detail confirms the fill."
+    };
+  }
+  if (/abbreviat|informal|initialism|contraction|slang|foreign|spoken/.test(normalized)) {
+    return {
+      key: "shorthand",
+      label: "Read the shorthand",
+      title: "Reveal the entry now—or expand the clue first.",
+      choice: "or use the form and register cue below",
+      hintLabel: "Form cue",
+      summary: "Open the answer and decode the shorthand",
+      whyTitle: "How the short form works",
+      signalTitle: "Abbreviation or register signal",
+      meaningTitle: "Expanded meaning",
+      metaPromise: "Reveal instantly or expand the shorthand; see why it fits.",
+      clinicLane: "form",
+      clinicName: "Short forms",
+      clinicDescription: "Abbreviations, informal usage, and compact entries whose form is part of the solve."
+    };
+  }
+  return {
+    key: "definition",
+    label: "Match the meaning",
+    title: "Get the exact answer or take one hint.",
+    choice: "or use the meaning cue below",
+    hintLabel: "Meaning cue",
+    summary: "Show the answer and explanation",
+    whyTitle: "Why it fits",
+    signalTitle: "What narrows the clue",
+    meaningTitle: "Answer meaning",
+    metaPromise: "Reveal instantly or take one hint; check the meaning and exact fit.",
+    clinicLane: "warmup",
+    clinicName: "Meaning warm-up",
+    clinicDescription: "Direct definitions and familiar senses to establish the day's solving rhythm."
+  };
 }
 
 function publicationClueSuffix(publication) {
@@ -775,9 +862,10 @@ for (const clue of clues) {
   const sourceLabel = clue.publication ?? "reviewed crossword";
   const metaSourceLabel = sourceLabel.replace(/^The /, "");
   const sourceDateLabel = clue.sourceDate ? ` from ${formatDate(clue.sourceDate)}` : "";
+  const experience = clueExperience(clue.clueType);
   const pageDescription = clue.seoDescription?.trim() || seoDescription(
     `“${clue.clue}” ${metaSourceLabel} clue${sourceDateLabel}`,
-    `Get a hint first, then the ${clue.answer.length}-letter answer, definition, and why it fits.`
+    `${clue.answer.length} letters. ${experience.metaPromise}`
   );
   const affiliationNote = clue.publication
     ? `${config.name} is not affiliated with or endorsed by ${clue.publication} or its publisher.`
@@ -786,7 +874,7 @@ for (const clue of clues) {
   const immediateNext = samePuzzle[0]
     ? `<a class="answer-next-step" href="/explainers/${samePuzzle[0].slug}/" data-return-link="same-puzzle"><strong>Continue this puzzle</strong><span>${escapeHtml(samePuzzle[0].clue)} →</span></a>`
     : `<a class="answer-next-step" href="/solver/" data-return-link="solver"><strong>Solve another clue</strong><span>Open the pattern-aware solver →</span></a>`;
-  const body = `<article class="shell article-layout clue-article" data-current-clue="${clue.slug}"><div class="article-main">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Explanations", href: "/daily-clue-clinic/" }, { label: clue.clue }])}<header><p class="content-kind">${escapeHtml(contentKind)}</p><h1>${pageHeading}</h1><p class="review-date">Editorially reviewed ${escapeHtml(formatDate(clue.reviewedAt))}</p></header><section class="answer-stage" aria-labelledby="answer-stage-${clue.slug}"><div class="answer-stage-heading"><div><p>Choose your pace</p><h2 id="answer-stage-${clue.slug}">Get the exact answer or take one hint.</h2></div><span class="length-badge">${clue.answer.length} letters</span></div><div class="answer-choice"><button class="button button-primary" type="button" data-quick-answer>Reveal exact answer</button><span>or use the spoiler-light hint below</span></div><p class="clue-hint">${escapeHtml(clue.hint)}</p><details class="answer-reveal" data-answer-reveal data-nosnippet><summary><span>Show the answer and explanation</span><small>One click · no signup</small></summary><div class="answer-reveal-content"><p class="answer-label">Answer</p><div class="answer-cells" aria-label="${clue.answer.split("").join(" ")}">${[...clue.answer].map((letter) => `<span>${letter}</span>`).join("")}</div><h3>Why it fits</h3><p>${escapeHtml(clue.explanation)}</p>${immediateNext}</div></details></section><section class="mechanism-grid"><div><h2>Clue signal</h2><p>${escapeHtml(clue.signal)}</p></div><div><h2>Answer meaning</h2><p>${escapeHtml(clue.definition)}</p></div></section>${sourceContext}${profile ? `<p data-nosnippet><a class="text-link" href="/crosswordese/${profile.slug}/">See ${profile.answer} meaning and common clue patterns →</a></p>` : ""}${related.length ? `<section data-related-clues><h2>Related reviewed clues</h2>${clueRows(related)}</section>` : ""}<section class="continuation-tool"><div class="continuation-heading"><div><h2>Solve the next clue here.</h2><p>Paste another clue, add the letters you trust, and keep solving without returning to search.</p></div><a class="text-link" href="/saved-clues/" data-return-link="saved">Open saved clues →</a></div>${toolShell("solve", true, "explainer")}</section><nav class="return-paths" aria-label="Keep solving"><a href="/crossword-answers-today/" data-return-link="today"><strong>Today’s selected clues</strong><span>Continue with the latest reviewed puzzles</span></a><a href="/saved-clues/" data-return-link="saved"><strong>Your saved clues</strong><span>Pick up where you left off on this device</span></a></nav><p class="source-note">This independently written explanation is for learning and clue analysis. ${escapeHtml(affiliationNote)}</p></div><aside class="article-aside return-aside"><p>Keep this useful</p><div class="save-clue-control"><button class="button button-outline save-clue-button" type="button" data-save-clue data-clue-slug="${clue.slug}" aria-pressed="false">Save clue</button><span class="save-clue-status" data-save-clue-status aria-live="polite"></span></div><a class="aside-all" href="/crossword-answers-today/" data-return-link="today">Browse today’s clues →</a><a class="aside-all" href="/solver/" data-return-link="solver">Open the full solver →</a><section class="recent-clues" data-recent-clues hidden><h2>Recently viewed</h2><div data-recent-clue-items></div></section><a class="aside-all" href="${feedbackUrl({ mode: "clue", pagePath: route, clue: clue.clue, answer: clue.answer })}">Report an issue →</a></aside></article>`;
+  const body = `<article class="shell article-layout clue-article" data-current-clue="${clue.slug}" data-experience="${experience.key}"><div class="article-main">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Explanations", href: "/daily-clue-clinic/" }, { label: clue.clue }])}<header><p class="content-kind">${escapeHtml(contentKind)}</p><h1>${pageHeading}</h1><p class="review-date">Editorially reviewed ${escapeHtml(formatDate(clue.reviewedAt))}</p></header><section class="answer-stage" aria-labelledby="answer-stage-${clue.slug}"><div class="answer-stage-heading"><div><p>${experience.label}</p><h2 id="answer-stage-${clue.slug}">${experience.title}</h2></div><span class="length-badge">${clue.answer.length} letters</span></div><div class="answer-choice"><button class="button button-primary" type="button" data-quick-answer>Reveal exact answer</button><span>${experience.choice}</span></div><p class="hint-label">${experience.hintLabel}</p><p class="clue-hint">${escapeHtml(clue.hint)}</p><details class="answer-reveal" data-answer-reveal data-nosnippet><summary><span>${experience.summary}</span><small>One click · no signup</small></summary><div class="answer-reveal-content"><p class="answer-label">Answer</p><div class="answer-cells" aria-label="${clue.answer.split("").join(" ")}">${[...clue.answer].map((letter) => `<span>${letter}</span>`).join("")}</div><h3>${experience.whyTitle}</h3><p>${escapeHtml(clue.explanation)}</p>${immediateNext}</div></details></section><section class="mechanism-grid"><div><h2>${experience.signalTitle}</h2><p>${escapeHtml(clue.signal)}</p></div><div><h2>${experience.meaningTitle}</h2><p>${escapeHtml(clue.definition)}</p></div></section>${sourceContext}${profile ? `<p data-nosnippet><a class="text-link" href="/crosswordese/${profile.slug}/">See ${profile.answer} meaning and common clue patterns →</a></p>` : ""}${related.length ? `<section data-related-clues><h2>Related reviewed clues</h2>${clueRows(related)}</section>` : ""}<section class="continuation-tool"><div class="continuation-heading"><div><h2>Solve the next clue here.</h2><p>Paste another clue, add the letters you trust, and keep solving without returning to search.</p></div><a class="text-link" href="/saved-clues/" data-return-link="saved">Open saved clues →</a></div>${toolShell("solve", true, "explainer")}</section><nav class="return-paths" aria-label="Keep solving"><a href="/crossword-answers-today/" data-return-link="today"><strong>Today’s selected clues</strong><span>Continue with the latest reviewed puzzles</span></a><a href="/saved-clues/" data-return-link="saved"><strong>Your saved clues</strong><span>Pick up where you left off on this device</span></a></nav><p class="source-note">This independently written explanation is for learning and clue analysis. ${escapeHtml(affiliationNote)}</p></div><aside class="article-aside return-aside"><p>Keep this useful</p><div class="save-clue-control"><button class="button button-outline save-clue-button" type="button" data-save-clue data-clue-slug="${clue.slug}" aria-pressed="false">Save clue</button><span class="save-clue-status" data-save-clue-status aria-live="polite"></span></div><a class="aside-all" href="/crossword-answers-today/" data-return-link="today">Browse today’s clues →</a><a class="aside-all" href="/solver/" data-return-link="solver">Open the full solver →</a><section class="recent-clues" data-recent-clues hidden><h2>Recently viewed</h2><div data-recent-clue-items></div></section><a class="aside-all" href="${feedbackUrl({ mode: "clue", pagePath: route, clue: clue.clue, answer: clue.answer })}">Report an issue →</a></aside></article>`;
   const articleLd = { "@context": "https://schema.org", "@type": "Article", headline: `${clue.clue} crossword clue answered`, description: pageDescription, datePublished: clue.reviewedAt, dateModified: explainerModifiedAt, mainEntityOfPage: canonicalUrl(route), author: organizationEntity, publisher: organizationEntity, ...(publicationHub ? { isPartOf: { "@type": "CollectionPage", "@id": canonicalUrl(publicationHub.route), name: publicationHub.name } } : {}) };
   await writePage(route, pageTemplate({ title: pageTitle, description: pageDescription, route, body, bodyClass: "article-page", jsonLd: [articleLd] }), false, explainerModifiedAt);
 }
@@ -797,10 +885,24 @@ await writePage("/daily-clue-clinic/", pageTemplate({ title: "Daily crossword cl
 for (const date of dates) {
   const items = clues.filter((clue) => clue.date === date).sort((a, b) => b.popularity - a.popularity);
   const route = `/daily-clue-clinic/${date}/`;
+  const laneOrder = ["warmup", "language", "form", "reference"];
+  const laneGroups = laneOrder.map((key) => {
+    const laneItems = items.filter((clue) => clueExperience(clue.clueType).clinicLane === key);
+    const sample = laneItems[0] ? clueExperience(laneItems[0].clueType) : null;
+    return sample ? { key, name: sample.clinicName, description: sample.clinicDescription, items: laneItems } : null;
+  }).filter(Boolean);
+  const focusLane = [...laneGroups].sort((a, b) => b.items.length - a.items.length)[0];
+  const laneSummary = laneGroups.map((lane) => `${lane.items.length} ${lane.name.toLowerCase()}`).join(" · ");
+  let clinicNumber = 0;
+  const clinicLanes = laneGroups.map((lane) => `<section class="clinic-lane" data-clinic-lane="${lane.key}"><header><div><h2>${lane.name}</h2><p>${lane.description}</p></div><span>${lane.items.length} clue${lane.items.length === 1 ? "" : "s"}</span></header><div class="clinic-list">${lane.items.map((clue) => {
+    clinicNumber += 1;
+    const experience = clueExperience(clue.clueType);
+    return `<article data-experience="${experience.key}"><div class="clinic-number">${String(clinicNumber).padStart(2, "0")}</div><div class="clinic-content"><span>${escapeHtml(clueTypeLabel(clue.clueType))} · ${clue.answer.length} letters</span><h3>${escapeHtml(clue.clue)}</h3><details><summary>${experience.hintLabel}</summary><p>${escapeHtml(clue.hint)}</p></details><a href="/explainers/${clue.slug}/">${experience.summary} →</a></div></article>`;
+  }).join("")}</div></section>`).join("");
   const practiceCard = date === latestDate
     ? `<section class="shell daily-practice-card" data-daily-practice data-clinic-date="${date}"><div><p class="content-kind">Private practice history</p><h2 data-daily-practice-title>Make this clinic part of your solving routine.</h2><p data-daily-practice-status>Finish at least one clue, then mark this set complete. Your streak stays only in this browser.</p></div><button class="button button-outline" type="button" data-daily-practice-complete>Mark this clinic complete</button></section>`
     : "";
-  const body = `<section class="shell page-hero clinic-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Daily clue clinic", href: "/daily-clue-clinic/" }, { label: formatDate(date) }])}<p class="content-kind">Independent explanations</p><h1>Clue Clinic · ${escapeHtml(formatDate(date))}</h1><p>Use the hint first, then open the reviewed explanation only when you are ready.</p></section>${practiceCard}<section class="shell clinic-list">${items.map((clue, index) => `<article><div class="clinic-number">${String(index + 1).padStart(2, "0")}</div><div class="clinic-content"><span>${escapeHtml(clueTypeLabel(clue.clueType))} · ${clue.answer.length} letters</span><h2>${escapeHtml(clue.clue)}</h2><details><summary>Show a hint</summary><p>${escapeHtml(clue.hint)}</p></details><a href="/explainers/${clue.slug}/">Reveal and understand the answer →</a></div></article>`).join("")}</section>`;
+  const body = `<section class="shell page-hero clinic-hero">${breadcrumbs([{ label: "Home", href: "/" }, { label: "Daily clue clinic", href: "/daily-clue-clinic/" }, { label: formatDate(date) }])}<p class="content-kind">A different practice route each day</p><h1>Clue Clinic · ${escapeHtml(formatDate(date))}</h1><p>Today's set is organized by how each clue works${focusLane ? `, with the largest round focused on ${focusLane.name.toLowerCase()}` : ""}. Reveal any answer immediately or use its tailored cue first.</p><p class="clinic-composition">${escapeHtml(laneSummary)}</p></section>${practiceCard}<div class="shell clinic-lanes">${clinicLanes}</div>`;
   await writePage(route, pageTemplate({ title: `Crossword clue clinic for ${formatDate(date)}`, description: `Practice ${items.length} curated crossword clues from ${formatDate(date)} with progressive hints and independently written explanations.`, route, body, bodyClass: "clinic-page" }), false, date);
 }
 

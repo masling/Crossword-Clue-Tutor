@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T12:24:43+08:00",
+  "updatedAt": "2026-09-05T12:34:51+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -121,6 +121,24 @@
     "indexablePages": 939,
     "reviewedClues": 474,
     "answerMeaningPages": 365,
+    "adaptiveClueExperience": {
+      "status": "Full tests, content validation, build, responsive structure, visual layout, and quick-reveal interaction passed; deployment pending",
+      "preparedAt": "2026-09-05T12:34:51+08:00",
+      "reason": "Search Console showed 32,694 impressions and 66 clicks over seven days but only 31 impressions and zero clicks in the latest 24-hour view. The previous one-size-fits-all hint-first framing did not match the immediate-answer intent consistently.",
+      "experienceRoutes": [
+        "Meaning match for direct definitions",
+        "Language trick for wordplay and cross-references",
+        "Phrase completion for blanks and idioms",
+        "Reference verification for names, titles, places, and facts",
+        "Short-form decoding for abbreviations and informal usage"
+      ],
+      "pageChanges": "Each route now has a distinct task heading, cue label, reveal label, explanation headings, mechanism labels, and restrained answer-stage treatment while preserving a predictable Reveal exact answer action.",
+      "clinicChanges": "Daily Clue Clinic now groups the actual day's clues into only the relevant meaning, language, shorthand, and knowledge lanes, reports the day's composition, and adapts hint/reveal language to each clue type.",
+      "snippetChanges": "Default descriptions now lead with instant reveal rather than implying that users must take a hint first; exact clue, publisher, source date, answer length, and data-nosnippet protection remain.",
+      "accessibility": "Semantic H1/H2/H3 hierarchy, native details controls, focus styles, touch targets, and reduced-motion behavior are preserved.",
+      "visualVerification": "Desktop checks confirmed the exact-answer action and tailored hint remain in the first viewport, answer expansion exposes the correct cells and type-specific explanation, and the latest clinic shows its actual composition plus first practice lane without decorative page-level randomization. Local browser checks used the operator_qa campaign tag.",
+      "evaluationGate": "Do not redesign or rewrite this treatment from isolated hours. Re-evaluate after seven complete post-recrawl days, separating clue-type cohorts and pages with at least 100 new impressions."
+    },
     "dictionaryExpansion": {
       "profilesAdded": 74,
       "reviewedAt": "2026-08-24",
@@ -822,8 +840,25 @@
       "evidenceSource": "OpenCLI Pageview and Search Console adapters using the project-bound `girl` Chrome profile; every command passes --profile girl and the global OpenCLI default remains unchanged",
       "changeGate": "Do not change page metadata from aggregate or isolated-hour data. Review a landing page only after at least 20 impressions; prioritize CTR changes at average position 8 or better and internal-authority/content changes at positions 9–15."
     },
+    "september5VisibilityDiagnostic": {
+      "reviewedAt": "2026-09-05T12:34:51+08:00",
+      "profile": "girl",
+      "gscSevenDays": { "clicks": 66, "impressions": 32694, "ctrPercent": 0.2, "averagePosition": 9.5 },
+      "gscLatest24Hours": { "clicks": 0, "impressions": 31, "ctrPercent": 0, "averagePosition": 20.4, "provisional": true },
+      "pageviewSevenDays": { "uniqueVisitors": 117, "visits": 120, "pageviews": 149, "bounceRatePercent": 53, "visitDurationSeconds": 40, "googleVisitors": 37, "directVisitors": 70 },
+      "pageviewToday": { "uniqueVisitors": 1, "source": "Direct / None", "verifiedSearchVisitors": 0 },
+      "technicalChecks": "robots.txt allows crawling, sitemap returned 939 URLs before this template deployment, representative indexed pages returned HTTP 200 with correct canonicals and no noindex.",
+      "queryEvidence": [
+        { "query": "cnbc subject", "clicks": 20, "impressions": 87, "ctrPercent": 23, "position": 3 },
+        { "query": "discredit nyt", "clicks": 4, "impressions": 1248, "ctrPercent": 0.3, "position": 4.2 },
+        { "query": "pre inca civilization nyt", "clicks": 0, "impressions": 1904, "ctrPercent": 0, "position": 9.9 }
+      ],
+      "interpretation": "The site is not uniformly classified as low value: a strong-query page still earns a 23% CTR. The abrupt decline combines short-lived daily-clue demand, a latest-window ranking drop, new-domain volatility, and widespread snippet friction. Page-dimension adapter output was not accepted because the table timed out; no values were invented.",
+      "decision": "Deploy one systemic, clue-type-aware experience and snippet treatment; preserve page-specific reviewed overrides and wait for a clean post-recrawl cohort before another metadata change."
+    },
     "ctrExperiment": {
       "status": "Production verified; cohort baseline frozen pending recrawl and post-change evidence",
+      "supersededBy": "adaptiveClueExperience treatment prepared 2026-09-05; historical page-level results remain the baseline",
       "startedAt": "2026-08-28T15:35:00+08:00",
       "deployedAt": "2026-08-28T15:47:48+08:00",
       "deploymentCommit": "68a4325ae83178a925d5e33b05c3261b85f64059",

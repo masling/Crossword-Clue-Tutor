@@ -257,7 +257,7 @@ for (const answer of ["mia", "una", "goya"]) {
 if (!sitemap.includes("/explainers/contractors-detail-for-short/")) errors.push("sitemap is missing the reviewed SPEC explainer");
 if (!sitemap.includes("<lastmod>")) errors.push("sitemap is missing lastmod metadata for fresh content");
 const establishedExplainerEntry = sitemap.match(/<url><loc>https:\/\/crosswordcluetutor\.com\/explainers\/contractors-detail-for-short\/<\/loc><lastmod>([^<]+)<\/lastmod><\/url>/);
-if (establishedExplainerEntry?.[1] !== "2026-08-28") errors.push("established explainers must use the reviewed template date instead of inheriting every future global content date");
+if (establishedExplainerEntry?.[1] !== "2026-09-05") errors.push("established explainers must use the reviewed template date instead of inheriting every future global content date");
 if (!sitemap.includes("/explainers/blue-streams-down-a-yellow-emojis-face-nyt-mini/")) errors.push("sitemap is missing the current NYT Mini batch");
 if (!sitemap.includes("/explainers/forfends-nyt-daily/")) errors.push("sitemap is missing the selected current NYT Daily batch");
 if (!sitemap.includes("/explainers/private-sleeping-accommodations-nyt-daily/")) errors.push("sitemap is missing the latest NYT Daily batch");
@@ -293,7 +293,7 @@ const freshPage = await readFile(path.join(dist, "explainers/blue-streams-down-a
 if (!freshPage.includes("NYT Mini crossword clue")) errors.push("fresh explainer does not target the publication long-tail query");
 const latestDailyPage = await readFile(path.join(dist, "explainers/private-sleeping-accommodations-nyt-daily/index.html"), "utf8");
 if (!latestDailyPage.includes("Private sleeping accommodations? The New York Times Crossword clue")) errors.push("latest daily explainer does not target the publication long-tail query");
-if (!latestDailyPage.includes("Why it fits") || !latestDailyPage.includes('aria-label="C O T S"')) errors.push("latest daily explainer is missing its reviewed answer or explanation");
+if (!latestDailyPage.includes("How the trick resolves") || !latestDailyPage.includes('aria-label="C O T S"') || !latestDailyPage.includes('data-experience="wordplay"')) errors.push("latest daily explainer is missing its tailored wordplay route, reviewed answer, or explanation");
 const miniHub = await readFile(path.join(dist, "nyt-mini-crossword-clues/index.html"), "utf8");
 if (!miniHub.includes("It’s in a pickle")) errors.push("NYT Mini hub is missing the latest selected clue");
 const midiHub = await readFile(path.join(dist, "nyt-midi-crossword-clues/index.html"), "utf8");
@@ -306,7 +306,7 @@ const usaTodayHub = await readFile(path.join(dist, "usa-today-crossword-answers/
 if (!usaTodayHub.includes("Arthur for whom the ESPYs&#039; Courage Award is named")) errors.push("USA TODAY demand hub is missing its selected current clue");
 if (!usaTodayHub.includes("&quot;Hidden Figures&quot; star Janelle") || !usaTodayHub.includes("August 20, 2026")) errors.push("USA TODAY hub is missing its August 20 selected batch");
 const latestUsaTodayPage = await readFile(path.join(dist, "explainers/hidden-figures-star-janelle-usa-today/index.html"), "utf8");
-if (!latestUsaTodayPage.includes("Why it fits") || !latestUsaTodayPage.includes('aria-label="M O N A E"') || !latestUsaTodayPage.includes("USA TODAY Crossword · 44-Across")) errors.push("latest USA TODAY explainer is missing its reviewed answer, explanation, or source context");
+if (!latestUsaTodayPage.includes("Why this is the right reference") || !latestUsaTodayPage.includes('data-experience="reference"') || !latestUsaTodayPage.includes('aria-label="M O N A E"') || !latestUsaTodayPage.includes("USA TODAY Crossword · 44-Across")) errors.push("latest USA TODAY explainer is missing its tailored reference route, reviewed answer, explanation, or source context");
 for (const [slug, answer, target] of [
   ["mia", "MIA", "missing in action"],
   ["una", "UNA", "Spanish feminine singular"],
@@ -471,16 +471,16 @@ if (!savedCluesPage.includes("noindex,nofollow")) errors.push("saved clues page 
 if (sitemap.includes("/saved-clues/")) errors.push("sitemap must not include the personalized saved clues page");
 const latestClinicDate = clues.map((clue) => clue.date).sort().reverse()[0];
 const latestClinicPage = await readFile(path.join(dist, `daily-clue-clinic/${latestClinicDate}/index.html`), "utf8");
-if (!latestClinicPage.includes("data-daily-practice") || !latestClinicPage.includes("Mark this clinic complete")) errors.push("latest daily clinic is missing its local practice-streak control");
+if (!latestClinicPage.includes("data-daily-practice") || !latestClinicPage.includes("Mark this clinic complete") || !latestClinicPage.includes("data-clinic-lane") || !latestClinicPage.includes("A different practice route each day")) errors.push("latest daily clinic is missing its adaptive clue-type route or local practice-streak control");
 const cluePage = await readFile(path.join(dist, "explainers/scientists-workplace-nyt-mini/index.html"), "utf8");
 if (!cluePage.includes("data-save-clue")) errors.push("reviewed clue pages are missing the save-clue control");
 if (!cluePage.includes("data-answer-reveal") || !cluePage.includes("data-nosnippet")) errors.push("reviewed clue pages are missing the spoiler-light answer reveal or snippet protection");
-if (!cluePage.includes("data-quick-answer") || !cluePage.includes("Get the exact answer or take one hint")) errors.push("reviewed clue pages are missing the quick-answer path");
+if (!cluePage.includes('data-experience="definition"') || !cluePage.includes("data-quick-answer") || !cluePage.includes("Get the exact answer or take one hint")) errors.push("reviewed direct-definition pages are missing their tailored quick-answer path");
 if (!cluePage.includes('data-tool-context="explainer"') || !cluePage.includes("Solve the next clue here")) errors.push("reviewed clue pages are missing the next-clue solver continuation");
 if (!cluePage.includes("data-recent-clues") || !cluePage.includes("data-return-link")) errors.push("reviewed clue pages are missing local return paths");
 if (cluePage.includes("The answer is LAB")) errors.push("reviewed clue metadata must not reveal the answer in search snippets");
 const establishedExplainerPage = await readFile(path.join(dist, "explainers/contractors-detail-for-short/index.html"), "utf8");
-if (!establishedExplainerPage.includes('"datePublished":"2026-08-18"') || !establishedExplainerPage.includes('"dateModified":"2026-08-28"')) errors.push("established explainer Article dates do not preserve publication and template modification history");
+if (!establishedExplainerPage.includes('"datePublished":"2026-08-18"') || !establishedExplainerPage.includes('"dateModified":"2026-09-05"')) errors.push("established explainer Article dates do not preserve publication and template modification history");
 const samePuzzleClusterPage = await readFile(path.join(dist, "explainers/japanese-for-folding-paper-nyt-mini/index.html"), "utf8");
 if (!samePuzzleClusterPage.includes("data-same-puzzle-clues") || !samePuzzleClusterPage.includes("More selected clues from NYT Mini") || !samePuzzleClusterPage.includes("/explainers/paper-and-pencil-game-missing-ps-nyt-mini/") || !samePuzzleClusterPage.includes("/explainers/sunny-part-of-breakfast-order-nyt-mini/") || !samePuzzleClusterPage.includes('"isPartOf":{"@type":"CollectionPage"')) errors.push("published clue pages are missing same-puzzle selected links or CollectionPage relationship");
 const dataSourcesPage = await readFile(path.join(dist, "data-sources/index.html"), "utf8");
