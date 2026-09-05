@@ -1,0 +1,246 @@
+{
+  "clues": [
+    {
+      "slug": "breaks-down-la-times-september-4",
+      "clue": "Breaks down",
+      "answer": "SOBS",
+      "date": "2026-09-04",
+      "popularity": 100,
+      "definition": "To sob is to cry with short, convulsive breaths; sobs is the third-person singular present form.",
+      "explanation": "SOBS uses breaks down in its emotional sense: someone loses composure and cries. The clue is not asking about machinery failing or a person analyzing information; the four-letter grammar points to the crying verb.",
+      "partOfSpeech": "verb",
+      "tags": [
+        "sobs",
+        "LA Times",
+        "multiple-meaning"
+      ],
+      "clueType": "multiple-meaning",
+      "signal": "The phrasal verb has several senses, and this answer selects an emotional reaction.",
+      "hint": "Think of what someone may do when overcome with emotion.",
+      "reviewedAt": "2026-09-05",
+      "publication": "LA Times Crossword",
+      "sourceDate": "2026-09-04",
+      "clueNumber": "1-Across"
+    },
+    {
+      "slug": "virginie-occidentale-et-californie-la-times",
+      "clue": "Virginie-Occidentale et Californie",
+      "answer": "ETATS",
+      "date": "2026-09-04",
+      "popularity": 100,
+      "definition": "États is the French plural noun for states; both West Virginia and California are U.S. states.",
+      "explanation": "ETATS supplies the shared category in French because the state names are written in French. Crossword entries omit the accent from États. The plural is required because two states are named.",
+      "partOfSpeech": "plural noun",
+      "tags": [
+        "etats",
+        "LA Times",
+        "foreign-language"
+      ],
+      "clueType": "foreign-language",
+      "signal": "French place names and the conjunction et signal that the category word should also be French.",
+      "hint": "Use the five-letter French plural for states, without its accent.",
+      "reviewedAt": "2026-09-05",
+      "publication": "LA Times Crossword",
+      "sourceDate": "2026-09-04",
+      "clueNumber": "5-Across"
+    },
+    {
+      "slug": "chilean-sea-blank-la-times",
+      "clue": "Chilean sea __",
+      "answer": "BASS",
+      "date": "2026-09-04",
+      "popularity": 100,
+      "definition": "Chilean sea bass is a market name used for Patagonian and Antarctic toothfish.",
+      "explanation": "BASS completes the fixed seafood name Chilean sea bass. Despite the commercial name, NOAA explains that these fish are toothfish rather than true bass; the blank asks only for the familiar name's final word.",
+      "partOfSpeech": "noun",
+      "tags": [
+        "bass",
+        "LA Times",
+        "fill-in-the-blank"
+      ],
+      "clueType": "fill-in-the-blank",
+      "signal": "The supplied words form a familiar commercial seafood name.",
+      "hint": "Complete the fish name with a four-letter word also used for a low musical range.",
+      "reviewedAt": "2026-09-05",
+      "publication": "LA Times Crossword",
+      "sourceDate": "2026-09-04",
+      "clueNumber": "10-Across"
+    },
+    {
+      "slug": "love-ya-la-times",
+      "clue": "“Love ya!”",
+      "answer": "MWAH",
+      "date": "2026-09-04",
+      "popularity": 100,
+      "definition": "Mwah is an interjection representing the sound of a kiss.",
+      "explanation": "MWAH answers the affectionate quotation with the written sound of a kiss. It is an expressive sound word rather than a synonym for love, and the unusual initial MW spelling reflects closed lips opening into the vowel.",
+      "partOfSpeech": "interjection",
+      "tags": [
+        "mwah",
+        "LA Times",
+        "sound-word"
+      ],
+      "clueType": "sound-word",
+      "signal": "Quotation marks and the exclamation point invite a conversational sound effect.",
+      "hint": "Write the four-letter sound of blowing a kiss.",
+      "reviewedAt": "2026-09-05",
+      "publication": "LA Times Crossword",
+      "sourceDate": "2026-09-04",
+      "clueNumber": "14-Across"
+    },
+    {
+      "slug": "diana-taurasi-jersey-number-la-times",
+      "clue": "Diana Taurasi’s jersey number",
+      "answer": "THREE",
+      "date": "2026-09-04",
+      "popularity": 100,
+      "definition": "Three is the number 3; Diana Taurasi wore number 3 for the Phoenix Mercury.",
+      "explanation": "THREE spells out Taurasi's jersey number rather than using a digit, as crossword grids require letters. The possessive points to a factual player-number relationship, confirmed by the WNBA's player profile.",
+      "partOfSpeech": "number word",
+      "tags": [
+        "three",
+        "LA Times",
+        "proper-noun"
+      ],
+      "clueType": "proper-noun",
+      "signal": "The athlete's name turns a general number clue into a specific biographical fact.",
+      "hint": "Spell out the single-digit number shown beside Taurasi's name on WNBA records.",
+      "reviewedAt": "2026-09-05",
+      "publication": "LA Times Crossword",
+      "sourceDate": "2026-09-04",
+      "clueNumber": "15-Across"
+    },
+    {
+      "slug": "sneakers-hopelessly-out-of-style-la-times",
+      "clue": "Concern that one’s sneakers are hopelessly out of style?",
+      "answer": "HIGHTOPANXIETY",
+      "date": "2026-09-04",
+      "popularity": 100,
+      "definition": "High-top anxiety is a punning phrase for worry about high-top sneakers, modeled on high anxiety.",
+      "explanation": "HIGHTOPANXIETY inserts TOP into HIGH ANXIETY to make the worry specifically about high-top shoes. Hopelessly out of style supplies the anxiety, while sneakers identifies the altered phrase. Spaces disappear in the grid.",
+      "partOfSpeech": "noun phrase",
+      "tags": [
+        "hightopanxiety",
+        "LA Times",
+        "wordplay"
+      ],
+      "clueType": "wordplay",
+      "signal": "The question mark signals a familiar phrase modified with sneaker terminology.",
+      "hint": "Start with the phrase for intense worry and insert the word that completes high-___ sneakers.",
+      "reviewedAt": "2026-09-05",
+      "publication": "LA Times Crossword",
+      "sourceDate": "2026-09-04",
+      "clueNumber": "20-Across"
+    },
+    {
+      "slug": "this-is-blank-drill-usa-today",
+      "clue": "“This is ___ drill!”",
+      "answer": "NOTA",
+      "date": "2026-09-05",
+      "popularity": 100,
+      "definition": "Not a is the two-word negating phrase in the warning this is not a drill.",
+      "explanation": "NOTA completes the urgent fixed expression This is not a drill, meaning the situation is real rather than a practice exercise. The two short words run together as a four-letter crossword entry.",
+      "partOfSpeech": "phrase",
+      "tags": [
+        "nota",
+        "USA TODAY",
+        "fill-in-the-blank"
+      ],
+      "clueType": "fill-in-the-blank",
+      "signal": "The quotation is a familiar warning whose missing segment contains two words.",
+      "hint": "Supply the two-word negation before drill.",
+      "reviewedAt": "2026-09-05",
+      "publication": "USA TODAY Crossword",
+      "sourceDate": "2026-09-05",
+      "clueNumber": "54-Across"
+    },
+    {
+      "slug": "blank-not-that-deep-usa-today",
+      "clue": "“___ not that deep!”",
+      "answer": "ITS",
+      "date": "2026-09-05",
+      "popularity": 100,
+      "definition": "It's is the contraction of it is; it's not that deep means the matter is not as serious or complicated as suggested.",
+      "explanation": "ITS supplies IT'S with the apostrophe omitted, as crossword grids normally do. The quotation is a casual reassurance or dismissal, and the three-letter entry represents the contraction rather than the possessive word its.",
+      "partOfSpeech": "contraction",
+      "tags": [
+        "its",
+        "USA TODAY",
+        "fill-in-the-blank"
+      ],
+      "clueType": "fill-in-the-blank",
+      "signal": "Conversational punctuation points to a contraction whose apostrophe is omitted in the grid.",
+      "hint": "Begin the casual phrase with the contraction of it is.",
+      "reviewedAt": "2026-09-05",
+      "publication": "USA TODAY Crossword",
+      "sourceDate": "2026-09-05",
+      "clueNumber": "59-Down"
+    },
+    {
+      "slug": "well-chat-soon-in-text-usa-today",
+      "clue": "“We’ll chat soon!,” in a text",
+      "answer": "TTYL",
+      "date": "2026-09-05",
+      "popularity": 100,
+      "definition": "TTYL is a texting abbreviation for talk to you later.",
+      "explanation": "TTYL compresses the promise We'll chat soon into a familiar four-letter message sign-off. The phrase is not a literal transcription of the clue; in a text signals that an initialism is wanted.",
+      "partOfSpeech": "initialism",
+      "tags": [
+        "ttyl",
+        "USA TODAY",
+        "abbreviation"
+      ],
+      "clueType": "abbreviation",
+      "signal": "In a text explicitly requests messaging shorthand.",
+      "hint": "Use the four initials of talk to you later.",
+      "reviewedAt": "2026-09-05",
+      "publication": "USA TODAY Crossword",
+      "sourceDate": "2026-09-05",
+      "clueNumber": "39-Across"
+    },
+    {
+      "slug": "beers-with-hazy-varieties-usa-today",
+      "clue": "Beers with “hazy” varieties",
+      "answer": "IPAS",
+      "date": "2026-09-05",
+      "popularity": 100,
+      "definition": "IPAs are India pale ales, a hop-forward beer family that includes juicy or hazy styles.",
+      "explanation": "IPAS is the plural answer because the clue asks for beers. Hazy in quotation marks names a recognized IPA style rather than merely describing a cloudy glass; the grid drops the periods from the abbreviation.",
+      "partOfSpeech": "plural noun",
+      "tags": [
+        "ipas",
+        "USA TODAY",
+        "abbreviation"
+      ],
+      "clueType": "abbreviation",
+      "signal": "The quoted style adjective and plural beers identify a beer-family abbreviation.",
+      "hint": "Name the three-letter beer abbreviation in its plural form.",
+      "reviewedAt": "2026-09-05",
+      "publication": "USA TODAY Crossword",
+      "sourceDate": "2026-09-05",
+      "clueNumber": "44-Across"
+    },
+    {
+      "slug": "not-my-journey-good-for-you-usa-today",
+      "clue": "“Not my journey, but good for you”",
+      "answer": "IRESPECTIT",
+      "date": "2026-09-05",
+      "popularity": 100,
+      "definition": "I respect it is a conversational expression acknowledging another person's choice without adopting it oneself.",
+      "explanation": "IRESPECTIT captures both halves of the quotation: the speaker distances themself from the choice but responds without criticism. The three-word phrase is entered without spaces or punctuation.",
+      "partOfSpeech": "sentence",
+      "tags": [
+        "irespectit",
+        "USA TODAY",
+        "phrase-equivalence"
+      ],
+      "clueType": "phrase-equivalence",
+      "signal": "The quotation calls for a tactful spoken response rather than a dictionary synonym.",
+      "hint": "Use a three-word response that acknowledges a choice without saying you share it.",
+      "reviewedAt": "2026-09-05",
+      "publication": "USA TODAY Crossword",
+      "sourceDate": "2026-09-05",
+      "clueNumber": "55-Across"
+    }
+  ]
+}

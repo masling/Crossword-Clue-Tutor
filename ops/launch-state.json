@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T10:16:57+08:00",
+  "updatedAt": "2026-09-05T12:23:00+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -118,9 +118,9 @@
     }
   },
   "content": {
-    "indexablePages": 916,
-    "reviewedClues": 463,
-    "answerMeaningPages": 354,
+    "indexablePages": 939,
+    "reviewedClues": 474,
+    "answerMeaningPages": 365,
     "dictionaryExpansion": {
       "profilesAdded": 74,
       "reviewedAt": "2026-08-24",
@@ -155,8 +155,8 @@
     "dailyDefinitionMeaningPolicy": {
       "enabledAt": "2026-08-28T17:00:00+08:00",
       "lastBackfillDate": "2026-09-01",
-      "lastCurrentProfileDate": "2026-09-04",
-      "currentProfilesPublishedToday": 20,
+      "lastCurrentProfileDate": "2026-09-05",
+      "currentProfilesPublishedToday": 5,
       "currentAnswerRule": "After each routine clue batch, publish one canonical Definition & Meaning page for every unique current-date answer missing from data/answers.json; current missing answers are mandatory even when they exceed the target",
       "backfillRule": "After all five sources are complete, subtract current profiles already published that local day from 25; backfill only the positive remainder from deterministic reviewed historical gaps and publish nothing when the remainder is zero or no verified gaps remain",
       "currentPlannerCommand": "npm run answer:gaps -- --date YYYY-MM-DD --current-only --output .local/answer-profile-current.json",
@@ -549,15 +549,37 @@
       "NYT Mini": "2026-09-04",
       "NYT Midi Crossword": "2026-09-04",
       "The New York Times Crossword": "2026-09-04",
-      "LA Times Crossword": "2026-09-03",
-      "USA TODAY Crossword": "2026-09-04"
+      "LA Times Crossword": "2026-09-04",
+      "USA TODAY Crossword": "2026-09-05"
     },
     "pendingSourceDates": {
-      "LA Times Crossword": "2026-09-04",
-      "USA TODAY Crossword": "2026-09-04",
+      "LA Times Crossword": "2026-09-05",
+      "USA TODAY Crossword": "2026-09-05",
       "NYT Mini": "2026-09-05",
       "NYT Midi Crossword": "2026-09-05",
       "The New York Times Crossword": "2026-09-05"
+    },
+    "latestSeptember5MiddayRun": {
+      "checkedAt": "2026-09-05T12:23:00+08:00",
+      "status": "Content validation, build and check passed; deployment pending",
+      "cluesPublishedLocally": 11,
+      "profilesPublishedLocally": 11,
+      "publications": [
+        { "publication": "LA Times Crossword", "sourceDate": "2026-09-04", "published": 6, "target": 6, "status": "Completed pending date" },
+        { "publication": "LA Times Crossword", "sourceDate": "2026-09-05", "published": 0, "target": 6, "status": "Official date verified; public exact pairs pending" },
+        { "publication": "USA TODAY Crossword", "sourceDate": "2026-09-05", "published": 5, "target": 6, "status": "Five official candidates resolved; low-confidence TWO inference withheld" },
+        { "publication": "NYT Mini", "sourceDate": "2026-09-05", "published": 0, "target": 6, "status": "Public verification pending" },
+        { "publication": "NYT Midi Crossword", "sourceDate": "2026-09-05", "published": 0, "target": 6, "status": "Public verification pending" },
+        { "publication": "The New York Times Crossword", "sourceDate": "2026-09-05", "published": 0, "target": 6, "status": "Public verification pending" }
+      ],
+      "officialMetadata": {
+        "USA TODAY Crossword": { "sourceDate": "2026-09-05", "title": "9 to 5 (Freestyle)", "creator": "Rafael Musa", "editor": "Amanda Rafkin", "publicClueRowsStoredLocally": 75, "puzzleUrl": "https://puzzles.usatoday.com/game/60e1b520-8b28-42f0-88ea-fb3da11e9e8b" },
+        "LA Times Crossword": { "sourceDate": "2026-09-05", "sourceId": "tca260905", "creator": "Matthew Luter", "editor": "Patti Varol", "officialClueCount": 72 }
+      },
+      "clueIntake": "ops/intake/2026-09-05-midday-routine.json",
+      "answerIntake": "ops/answer-intake/2026-09-05-current-and-pending-11.json",
+      "evidence": "research/2026-09-05-midday-source-evidence.md",
+      "rightsBoundary": "Selected clue relationships and original editorial explanations only; complete USA TODAY public clue rows remain Git-ignored. No solution payload, login, Reveal, filled cells, or complete puzzle published."
     },
     "latestMiddaySourceCheck": {
       "sourceDate": "2026-09-04",

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-09-05",
+  "selectionReason": "Six verified September 4 LA Times answers completing that pending source date and five verified September 5 USA TODAY candidates. The unsupported TWO wordplay fill remains pending.",
+  "profiles": [
+    {
+      "answer": "SOBS",
+      "displayTerm": "Sobs",
+      "slug": "sobs",
+      "pronunciation": "sobz",
+      "related": []
+    },
+    {
+      "answer": "ETATS",
+      "displayTerm": "États",
+      "slug": "etats",
+      "pronunciation": "ay-TAH",
+      "related": []
+    },
+    {
+      "answer": "BASS",
+      "displayTerm": "Bass",
+      "slug": "bass",
+      "pronunciation": "bass",
+      "related": []
+    },
+    {
+      "answer": "MWAH",
+      "displayTerm": "Mwah",
+      "slug": "mwah",
+      "pronunciation": "mwah",
+      "related": []
+    },
+    {
+      "answer": "THREE",
+      "displayTerm": "Three",
+      "slug": "three",
+      "pronunciation": "three",
+      "related": []
+    },
+    {
+      "answer": "HIGHTOPANXIETY",
+      "displayTerm": "High-top anxiety",
+      "slug": "high-top-anxiety",
+      "pronunciation": "high top ang-ZY-uh-tee",
+      "related": []
+    },
+    {
+      "answer": "NOTA",
+      "displayTerm": "Not a",
+      "slug": "not-a",
+      "pronunciation": "not uh",
+      "related": []
+    },
+    {
+      "answer": "ITS",
+      "displayTerm": "It's",
+      "slug": "its",
+      "pronunciation": "its",
+      "related": []
+    },
+    {
+      "answer": "TTYL",
+      "displayTerm": "TTYL",
+      "slug": "ttyl",
+      "pronunciation": "tee tee why ell",
+      "related": []
+    },
+    {
+      "answer": "IPAS",
+      "displayTerm": "IPAs",
+      "slug": "ipas",
+      "pronunciation": "eye pee ays",
+      "related": []
+    },
+    {
+      "answer": "IRESPECTIT",
+      "displayTerm": "I respect it",
+      "slug": "i-respect-it",
+      "pronunciation": "eye ree-SPEKT it",
+      "related": []
+    }
+  ]
+}
