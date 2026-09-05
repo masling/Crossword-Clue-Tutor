@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-05T12:23:00+08:00",
+  "updatedAt": "2026-09-05T12:24:43+08:00",
   "launchStartedAt": "2026-08-19T09:23:00+08:00",
   "trafficGoal": {
     "netHumanSessions": 100,
@@ -561,7 +561,11 @@
     },
     "latestSeptember5MiddayRun": {
       "checkedAt": "2026-09-05T12:23:00+08:00",
-      "status": "Content validation, build and check passed; deployment pending",
+      "status": "Production verified",
+      "verifiedAt": "2026-09-05T12:24:43+08:00",
+      "deploymentCommit": "4fe22ec793c7fdf7aa1bb41b01ece3f96036c3a2",
+      "workflowRun": "https://github.com/masling/Crossword-Clue-Tutor/actions/runs/33944393557",
+      "productionEvidence": "Full CI and Cloudflare Pages deployment passed, including IndexNow. A representative LA Times clue page and I respect it answer page returned HTTP 200 with correct canonicals; production sitemap has 939 URLs. HTTP-only checks did not execute analytics JavaScript.",
       "cluesPublishedLocally": 11,
       "profilesPublishedLocally": 11,
       "publications": [
